@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 8 breath techniques from Osho's Vigyan Bhairav Tantra — distilled, with practice instructions, common pitfalls, questions from the book, and modern commentary.">
+<title>The Techniques for Breath — Vigyan Bhairav Tantra</title>
+<style>
+  /* ============================================================
+     DESIGN PRINCIPLES (why each choice exists)
+     -------------------------------------------------------------
+     • Warm sepia background, not pure white  → reduces blue-light
+       activation of the SCN, lowers sympathetic arousal so the
+       reader can drop into a parasympathetic state while reading.
+     • Deep brown text, not pure black        → softer contrast
+       reduces saccadic micro-fatigue.
+     • Serif body, sans-serif UI              → serif typefaces
+       support sustained narrative reading; the visual split
+       signals "this is content" vs. "this is a control".
+     • 65 ch max line length                  → optimal saccade
+       distance per Bringhurst / Lemmens reading research.
+     • Single column, generous whitespace     → Attention
+       Restoration Theory (Kaplan): soft fascination, not directed
+       cognitive effort.
+     • Progressive disclosure (collapsibles)  → Cognitive Load
+       Theory (Sweller): show only what is needed at this moment.
+     • One primary action per technique       → Hick's Law: fewer
+       choices = faster decision = less drag on the flow state.
+     • No animation in the reading column     → preserves the
+       Default Mode Network engagement that deep reading needs.
+     • Optional breath pacer (off by default) → for those who want
+       it: 4-second in / 6-second out activates the vagus nerve
+       and entrains HRV (Lehrer et al.).
+     ============================================================ */
+
+  :root {
+    --bg:         #f4ede0;   /* warm cream — sepia paper */
+    --bg-card:    #faf4e8;
+    --bg-soft:    #ede4d2;
+    --ink:        #2d2419;   /* deep warm brown — never pure black */
+    --ink-soft:   #5a4a35;
+    --ink-faint:  #8a7958;
+    --rule:       #d9cdb2;
+    --accent:     #b8860b;   /* muted saffron */
+    --accent-soft:#e8c876;
+    --sutra-bg:   #f8efd9;
+    --shadow:     0 1px 0 rgba(60,42,15,.04), 0 8px 24px -12px rgba(60,42,15,.12);
+    --serif:      "Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;
+    --sans:       -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  html[data-theme="dark"] {
+    --bg:         #1a1612;   /* deep warm charcoal */
+    --bg-card:    #221d17;
+    --bg-soft:    #2a241c;
+    --ink:        #e8dec8;
+    --ink-soft:   #b8aa8c;
+    --ink-faint:  #7a6e58;
+    --rule:       #3a3328;
+    --accent:     #d4a13c;
+    --accent-soft:#a87c1a;
+    --sutra-bg:   #2a221a;
+    --shadow:     0 1px 0 rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:19px;
+    line-height:1.7;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    transition:background .4s ease,color .4s ease;
+    padding-bottom:6rem;
+  }
+
+  /* ----- Reading progress (Zeigarnik effect: a sense of completable progress) ----- */
+  .progress{
+    position:fixed;top:0;left:0;height:3px;width:0;
+    background:var(--accent);z-index:200;
+    transition:width .15s ease-out;
+    box-shadow:0 0 8px var(--accent-soft);
+  }
+
+  /* ----- Floating control cluster (peripheral, small — Fitts's Law for non-primary actions) ----- */
+  .controls{
+    position:fixed;top:1rem;right:1rem;z-index:100;
+    display:flex;gap:.4rem;
+    background:var(--bg-card);
+    padding:.4rem;border-radius:999px;
+    border:1px solid var(--rule);
+    box-shadow:var(--shadow);
+    font-family:var(--sans);
+  }
+  .controls button{
+    width:36px;height:36px;border-radius:999px;
+    background:transparent;border:0;cursor:pointer;
+    color:var(--ink-soft);font-size:16px;
+    display:inline-flex;align-items:center;justify-content:center;
+    transition:background .2s,color .2s;
+  }
+  .controls button:hover,.controls button[aria-pressed="true"]{
+    background:var(--bg-soft);color:var(--accent);
+  }
+  .controls button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--accent-soft)}
+
+  /* ----- Main column ----- */
+  main{
+    max-width:680px;
+    margin:0 auto;
+    padding:5rem 1.5rem 2rem;
+  }
+
+  /* ----- Header / hero ----- */
+  header.hero{
+    text-align:center;
+    padding:2rem 0 3rem;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:3rem;
+  }
+  .eyebrow{
+    font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--ink-faint);
+    margin-bottom:1rem;
+  }
+  h1{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(2rem,5vw,2.8rem);
+    line-height:1.15;letter-spacing:-.01em;
+    margin:0 0 1rem;color:var(--ink);
+  }
+  .hero .lede{
+    color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;
+    font-size:1.05rem;font-style:italic;
+  }
+  .hero .meta{
+    font-family:var(--sans);font-size:.8rem;
+    color:var(--ink-faint);letter-spacing:.04em;
+  }
+
+  /* ----- Jump-links: Hick's Law — small, scannable, finite ----- */
+  .jumplinks{
+    margin-top:2.5rem;
+    background:var(--bg-card);
+    border:1px solid var(--rule);
+    border-radius:6px;
+    padding:1.25rem 1.5rem;
+    text-align:left;
+  }
+  .jumplinks h2{
+    font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--ink-faint);
+    margin:0 0 1rem;font-weight:600;
+  }
+  .jumplinks ol{
+    margin:0;padding:0;list-style:none;
+    counter-reset:jl;
+  }
+  .jumplinks li{
+    counter-increment:jl;
+    border-top:1px solid var(--rule);
+    padding:.55rem 0;
+  }
+  .jumplinks li:first-child{border-top:0}
+  .jumplinks a{
+    text-decoration:none;color:var(--ink);
+    display:flex;align-items:baseline;gap:.7rem;
+    font-size:.95rem;
+    transition:color .15s;
+  }
+  .jumplinks a::before{
+    content:counter(jl);
+    font-family:var(--sans);font-size:.72rem;font-weight:600;
+    color:var(--ink-faint);
+    min-width:1.5rem;
+  }
+  .jumplinks a:hover{color:var(--accent)}
+  .jumplinks .sub{color:var(--ink-faint);font-style:italic;font-size:.85rem}
+
+  /* ----- Technique card — one cognitive chunk ----- */
+  article.technique{
+    background:var(--bg-card);
+    border:1px solid var(--rule);
+    border-radius:8px;
+    padding:2rem 2rem 1.75rem;
+    margin:0 0 2.5rem;
+    box-shadow:var(--shadow);
+    scroll-margin-top:5rem;
+    position:relative;
+  }
+  .technique-head{
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ink-faint);
+    margin-bottom:.4rem;
+  }
+  .fav-btn{
+    background:transparent;border:0;cursor:pointer;
+    font-size:1.3rem;color:var(--ink-faint);
+    transition:color .2s,transform .2s;
+    line-height:1;padding:.2rem;
+  }
+  .fav-btn:hover{transform:scale(1.15);color:var(--accent)}
+  .fav-btn.on{color:var(--accent)}
+  .tags{
+    font-family:var(--sans);font-size:.75rem;
+    color:var(--ink-faint);
+    margin-bottom:1.5rem;
+    letter-spacing:.02em;
+  }
+  .tags strong{color:var(--ink-soft);font-weight:600}
+
+  /* ----- The Sutra — the heart of the card. Visually the focal point. ----- */
+  blockquote.sutra{
+    margin:1rem 0 2rem;
+    padding:1.75rem 1.5rem;
+    background:var(--sutra-bg);
+    border-left:3px solid var(--accent);
+    border-radius:4px;
+    font-family:var(--serif);
+    font-size:1.18rem;
+    font-style:italic;
+    line-height:1.55;
+    color:var(--ink);
+    text-align:center;
+    quotes:"\201C" "\201D";
+  }
+  blockquote.sutra::before{content:open-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.4em;margin-right:.1em}
+  blockquote.sutra::after{content:close-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.6em;margin-left:.1em}
+
+  /* ----- Section blocks within a card ----- */
+  .section{
+    margin:1.75rem 0 0;
+    padding-top:1.25rem;
+    border-top:1px solid var(--rule);
+  }
+  .section h3{
+    font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--ink-faint);
+    margin:0 0 .9rem;font-weight:600;
+  }
+  .section p{margin:.5rem 0}
+  .section ol,.section ul{margin:.5rem 0;padding-left:1.4rem}
+  .section li{margin:.35rem 0;line-height:1.65}
+
+  /* Plain English: a reassuring, grounded paragraph */
+  .plain p{font-size:1.02rem;color:var(--ink-soft)}
+
+  /* Quick facts table — scannable at a glance */
+  .facts dl{
+    display:grid;
+    grid-template-columns:max-content 1fr;
+    gap:.45rem 1.25rem;
+    margin:0;
+    font-family:var(--sans);font-size:.92rem;
+  }
+  .facts dt{color:var(--ink-faint);font-weight:600;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase;padding-top:.15rem}
+  .facts dd{margin:0;color:var(--ink)}
+  .stars{color:var(--accent);letter-spacing:.05em}
+  .stars .off{color:var(--rule)}
+
+  /* Signs / Pitfalls — visually distinct lists */
+  .signs ul,.pitfalls ul{list-style:none;padding-left:0}
+  .signs li::before{content:"•";color:var(--accent);margin-right:.7rem;font-weight:700}
+  .pitfalls li::before{content:"\2715";color:#a83232;margin-right:.7rem;font-weight:700;font-size:.9em}
+  html[data-theme="dark"] .pitfalls li::before{color:#d96b6b}
+
+  /* Q&A — collapsed by default (progressive disclosure) */
+  .qa details{
+    border:1px solid var(--rule);
+    border-radius:5px;
+    background:var(--bg);
+    margin:.5rem 0;
+    transition:background .2s;
+  }
+  .qa details[open]{background:var(--bg-soft)}
+  .qa summary{
+    padding:.85rem 1rem;cursor:pointer;
+    font-style:italic;color:var(--ink);
+    list-style:none;
+    display:flex;align-items:flex-start;gap:.6rem;
+  }
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary::before{
+    content:"\203A";display:inline-block;
+    color:var(--accent);font-style:normal;
+    transition:transform .2s;
+    margin-top:.05em;flex-shrink:0;
+  }
+  .qa details[open] summary::before{transform:rotate(90deg)}
+  .qa-body{padding:0 1rem 1rem 2rem}
+  .qa-body .src{
+    font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-faint);
+    margin-bottom:.5rem;
+  }
+  .qa-body p{font-size:.95rem;color:var(--ink-soft);margin:.4rem 0}
+
+  /* Modern commentary — clearly labelled as AI distillation */
+  .commentary{
+    background:var(--bg);
+    border-radius:6px;
+    border:1px dashed var(--rule);
+    padding:1.25rem 1.4rem;
+  }
+  .commentary h3{display:flex;align-items:center;gap:.5rem}
+  .commentary h3::before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:999px}
+  .commentary .label{
+    font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent);
+    display:block;margin-bottom:.4rem;
+  }
+  .commentary p{font-size:.96rem;color:var(--ink-soft);margin:.6rem 0}
+  .commentary .essence{
+    margin-top:1rem;padding-top:.9rem;
+    border-top:1px solid var(--rule);
+    font-style:italic;color:var(--ink);
+    font-size:1.02rem;
+  }
+  .commentary .essence strong{
+    font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink-faint);font-style:normal;
+    display:block;margin-bottom:.3rem;font-weight:600;
+  }
+
+  /* Timer — the one primary action per technique */
+  .actions{
+    margin-top:1.75rem;display:flex;gap:.6rem;flex-wrap:wrap;
+    align-items:center;
+  }
+  .timer-btn{
+    font-family:var(--sans);font-size:.9rem;
+    background:var(--accent);color:#fff;
+    border:0;border-radius:999px;
+    padding:.7rem 1.4rem;cursor:pointer;
+    font-weight:500;letter-spacing:.02em;
+    transition:transform .15s,box-shadow .15s,background .2s;
+    box-shadow:0 4px 12px -4px var(--accent);
+  }
+  .timer-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
+  .timer-btn.running{background:#a83232}
+  html[data-theme="dark"] .timer-btn.running{background:#c44}
+  .timer-display{
+    font-family:var(--sans);font-variant-numeric:tabular-nums;
+    font-size:.95rem;color:var(--ink-faint);
+  }
+
+  /* ----- Breath pacer (optional, off by default) ----- */
+  .pacer{
+    position:fixed;left:1rem;bottom:1rem;z-index:100;
+    background:var(--bg-card);border:1px solid var(--rule);
+    border-radius:14px;padding:.9rem 1.1rem;
+    box-shadow:var(--shadow);
+    display:none;align-items:center;gap:.9rem;
+    font-family:var(--sans);font-size:.8rem;color:var(--ink-soft);
+  }
+  .pacer.on{display:flex}
+  .pacer-orb{
+    width:38px;height:38px;border-radius:999px;
+    background:radial-gradient(circle at 35% 30%,var(--accent-soft),var(--accent));
+    box-shadow:0 0 14px var(--accent-soft);
+    transform:scale(.55);
+    animation:breathe 10s ease-in-out infinite;
+  }
+  @keyframes breathe{
+    0%   {transform:scale(.55);opacity:.6}
+    40%  {transform:scale(1.15);opacity:1}    /* 4s in */
+    60%  {transform:scale(1.15);opacity:1}    /* 2s hold */
+    100% {transform:scale(.55);opacity:.6}    /* 6s out */
+  }
+  .pacer-text{display:flex;flex-direction:column;line-height:1.2}
+  .pacer-text small{color:var(--ink-faint);font-size:.7rem}
+
+  /* ----- Focus mode: dim everything except technique in viewport ----- */
+  body.focus article.technique{opacity:.25;transition:opacity .5s}
+  body.focus article.technique.in-view{opacity:1}
+
+  /* ----- Footer ----- */
+  footer{
+    text-align:center;padding:3rem 0 1rem;
+    border-top:1px solid var(--rule);
+    color:var(--ink-faint);font-family:var(--sans);font-size:.85rem;
+  }
+  footer p{margin:.4rem 0}
+
+  /* ----- Print stylesheet — clean for those who want paper ----- */
+  @media print{
+    body{background:#fff;color:#000;font-size:11pt;padding:0}
+    .controls,.pacer,.progress,.actions,.fav-btn{display:none!important}
+    article.technique{box-shadow:none;border:none;page-break-inside:avoid;padding:0;margin:0 0 1.5rem}
+    blockquote.sutra{background:#f5f5f5;border-left:2px solid #888}
+    main{max-width:none;padding:1rem}
+    .qa details{break-inside:avoid}
+    .qa details:not([open]) > *:not(summary){display:none}
+  }
+
+  /* ----- Mobile ----- */
+  @media (max-width:600px){
+    body{font-size:17px}
+    article.technique{padding:1.5rem 1.25rem}
+    .controls{top:.5rem;right:.5rem}
+    .pacer{left:.5rem;bottom:.5rem}
+    blockquote.sutra{font-size:1.05rem;padding:1.25rem 1rem}
+    .facts dl{grid-template-columns:1fr;gap:.1rem .5rem}
+    .facts dt{padding-top:.5rem}
+    main{padding:4rem 1rem 2rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="controls" aria-label="Reading controls">
+  <button id="theme-btn"  aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+  <button id="focus-btn"  aria-label="Toggle focus mode" title="Focus mode" aria-pressed="false">&#9678;</button>
+  <button id="pacer-btn"  aria-label="Toggle breath pacer" title="Breath pacer" aria-pressed="false">&#10052;</button>
+  <button id="print-btn"  aria-label="Print this page"   title="Print">&#128424;</button>
+</nav>
+
+<main>
+
+  <header class="hero">
+    <div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 1 of 15</div>
+    <h1>The Techniques for Breath</h1>
+    <p class="lede">
+      Of the 112 meditation methods Shiva gave to Devi, the first nine
+      arrive through the breath — because the breath is the one bridge
+      that touches both the body and the formless, both this moment and
+      whatever lies beyond it.
+    </p>
+    <p class="meta">8 techniques &middot; ~10 min read &middot; works fully offline</p>
+
+    <nav class="jumplinks" aria-label="Techniques in this file">
+      <h2>Techniques in this file</h2>
+      <ol>
+        <li><a href="#t1"><span>Watch the gap after the in-breath</span> <span class="sub">&middot; the easiest entry</span></a></li>
+        <li><a href="#t2"><span>Realize at both turning points</span> <span class="sub">&middot; double the doors</span></a></li>
+        <li><a href="#t3"><span>Touch the centre where in &amp; out fuse</span> <span class="sub">&middot; the navel point</span></a></li>
+        <li><a href="#t4"><span>When breath stops of itself</span> <span class="sub">&middot; the universal pause</span></a></li>
+        <li><a href="#t5"><span>Breath essence to the third eye</span> <span class="sub">&middot; Pythagoras's technique</span></a></li>
+        <li><a href="#t6"><span>The gap during daily activity</span> <span class="sub">&middot; meditation off the cushion</span></a></li>
+        <li><a href="#t7"><span>Intangible breath at the moment of sleep</span> <span class="sub">&middot; dream &amp; death</span></a></li>
+        <li><a href="#t8"><span>Both junctions, with devotion</span> <span class="sub">&middot; love-fuelled attention</span></a></li>
+      </ol>
+    </nav>
+  </header>
+
+
+  <!-- ============================ TECHNIQUE 1 ============================ -->
+  <article class="technique" id="t1" data-tech="1">
+    <div class="technique-head">
+      <span>Technique 1 of 112</span>
+      <button class="fav-btn" aria-label="Favourite" data-fav="t1">&#9825;</button>
+    </div>
+    <div class="tags"><strong>Category:</strong> Breath &middot; <strong>Tags:</strong> gap &middot; awareness &middot; pause &middot; beginner</div>
+
+    <blockquote class="sutra">
+      Radiant one, this experience may dawn between two breaths. After breath comes in &mdash; down &mdash; and just before turning up &mdash; out &mdash; the beneficence.
+    </blockquote>
+
+    <section class="section plain">
+      <h3>In Plain English</h3>
+      <p>Become aware of the small, unforced pause that happens after the in-breath ends, before the out-breath begins. In that pause, thought has not yet started; awareness is naked.</p>
+    </section>
+
+    <section class="section practice">
+      <h3>How to Practice</h3>
+      <ol>
+        <li>Sit comfortably. Spine upright, shoulders soft, eyes closed.</li>
+        <li>Don't change anything about your breath — let it be exactly as it is.</li>
+        <li>Bring attention to the moment the in-breath finishes.</li>
+        <li>Stay with the small natural pause that follows. Do not try to lengthen it.</li>
+        <li>The out-breath will start by itself. Let it.</li>
+        <li>On the next breath, do the same. Continue for 20 minutes.</li>
+        <li>If you forget, simply return — the next gap is one breath away.</li>
+      </ol>
+    </section>
+
+    <section class="section facts">
+      <h3>Quick Facts</h3>
+      <dl>
+        <dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+        <dt>Duration</dt><dd>20 min (start with 10)</dd>
+        <dt>Best time</dt><dd>Early morning, or last thing before sleep</dd>
+        <dt>Posture</dt><dd>Seated, upright, comfortable</dd>
+        <dt>Eyes</dt><dd>Closed</dd>
+        <dt>Best for</dt><dd>Anxious or restless minds; first-time meditators</dd>
+        <dt>Avoid if</dt><dd>You have severe respiratory illness or a panic disorder around breath-watching</dd>
+      </dl>
+    </section>
+
+    <section class="section signs">
+      <h3>Signs It's Working</h3>
+      <ul>
+        <li>A subtle "drop" feeling, like settling onto a deeper floor</li>
+        <li>Thoughts space out — not stopped, just less continuous</li>
+        <li>The gap feels longer than the second or two it actually is</li>
+        <li>A quiet warmth or aliveness in the chest or belly</li>
+      </ul>
+    </section>
+
+    <section class="section pitfalls">
+      <h3>Common Pitfalls</h3>
+      <ul>
+        <li>Holding the breath on purpose — the gap must come by itself, not be manufactured</li>
+        <li>Counting breaths or measuring gaps — turns meditation into arithmetic</li>
+        <li>Trying to make the gap "bigger" — extension is the mind's reflex; let it stay tiny</li>
+        <li>Treating boredom as failure — the boredom IS the doorway thinning</li>
+      </ul>
+    </section>
+
+    <section class="section qa">
+      <h3>Questions From The Book</h3>
+      <details>
+        <summary>How can simply being aware of a tiny gap in the breath lead to enlightenment?</summary>
+        <div class="qa-body">
+          <p class="src">Asked by a seeker &middot; Chapter 4, "Overcoming the Deceptions of the Mind"</p>
+          <p>Osho's answer, in essence: spirituality is not an attainment but a recognition. You are already that. So even the smallest doorway is enough — the size of the door has nothing to do with the size of what lies beyond it. A door six inches wide opens onto the same sky as a door six feet wide.</p>
+          <p>The reason such a small gap can do so much: in that gap, the mind is not. The mind is a movement, a flow forward; the gap is the only place in your day where forward motion stops without sleep, without unconsciousness. There you are awake AND mindless. Even one second of that, fully tasted, is enlightenment in miniature — and that taste, repeated, becomes the standing flavour of life.</p>
+          <p>It feels improbable only because we have been taught that big results need big effort. Tantra's discovery is the opposite: the deepest things are reached not by force but by noticing what was always already happening.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="section commentary">
+      <h3>Modern Commentary</h3>
+      <span class="label">AI-distilled, not from Osho</span>
+      <p><strong>What this is really pointing at:</strong> The mind is a continuous machine of language and prediction. The breath is the only thing that interrupts itself naturally, twice per cycle. The sutra says: in that interruption, the machine briefly halts — and what remains is what you actually are.</p>
+      <p><strong>A modern analogy:</strong> Like the silence between two notes in music. You don't hear the silence, but it's what holds the music up. The gap between two breaths is the silence that holds your aliveness up.</p>
+      <p><strong>Why neuroscience cares:</strong> The end-inhale moment correlates with a brief uptick in vagal tone and a transient quieting of the default mode network in fMRI studies. You are not imagining the stillness — there is a measurable neural pause that lines up with the breath's natural pause.</p>
+      <p class="essence"><strong>Essence</strong>The pause is not the absence of breath. It is presence without thought. Stop looking for a door — you have been walking through it 20,000 times a day.</p>
+    </section>
+
+    <div class="actions">
+      <button class="timer-btn" data-timer="20">Start a 20-min sitting</button>
+      <span class="timer-display" data-display="t1"></span>
+    </div>
+  </article>
+
+
+  <!-- ============================ TECHNIQUE 2 ============================ -->
+  <article class="technique" id="t2" data-tech="2">
+    <div class="technique-head">
+      <span>Technique 2 of 112</span>
+      <button class="fav-btn" aria-label="Favourite" data-fav="t2">&#9825;</button>
+    </div>
+    <div class="tags"><strong>Category:</strong> Breath &middot; <strong>Tags:</strong> turning point &middot; in-out &middot; out-in &middot; beginner</div>
+
+    <blockquote class="sutra">
+      As breath turns from down to up, and again as breath curves from up to down &mdash; through both these turns, realize.
+    </blockquote>
+
+    <section class="section plain">
+      <h3>In Plain English</h3>
+      <p>The first technique uses one pause per breath. This one uses both: the moment the in-breath becomes the out-breath, AND the moment the out-breath becomes the in-breath. Two doorways every cycle.</p>
+    </section>
+
+    <section class="section practice">
+      <h3>How to Practice</h3>
+      <ol>
+        <li>Same setup as Technique 1: comfortable seat, eyes closed, breath untouched.</li>
+        <li>Notice the moment the in-breath stops becoming "in" and starts becoming "out". That is the upper turn.</li>
+        <li>Notice the moment the out-breath stops becoming "out" and starts becoming "in". That is the lower turn.</li>
+        <li>You are not staying in one or the other — you are alert to whichever is arriving next.</li>
+        <li>Do this for 15 to 20 minutes.</li>
+      </ol>
+    </section>
+
+    <section class="section facts">
+      <h3>Quick Facts</h3>
+      <dl>
+        <dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Beginner+</dd>
+        <dt>Duration</dt><dd>15&ndash;20 min</dd>
+        <dt>Best time</dt><dd>Any time you feel scattered &mdash; doubles the points of return</dd>
+        <dt>Posture</dt><dd>Seated</dd>
+        <dt>Eyes</dt><dd>Closed</dd>
+        <dt>Best for</dt><dd>Those who tried Technique 1 and found one gap not enough to hold attention</dd>
+        <dt>Avoid if</dt><dd>You feel dizzy when you watch breath closely</dd>
+      </dl>
+    </section>
+
+    <section class="section signs">
+      <h3>Signs It's Working</h3>
+      <ul>
+        <li>You start to feel the breath as a wave, not as two events</li>
+        <li>The two turns begin to feel like the same point repeated</li>
+        <li>A subtle internal "click" at each turn</li>
+      </ul>
+    </section>
+
+    <section class="section pitfalls">
+      <h3>Common Pitfalls</h3>
+      <ul>
+        <li>Trying to catch both turns equally well from day one — pick whichever is easier to feel and start there</li>
+        <li>Mentally labeling "now! now!" — that is thinking about the turn, not noticing it</li>
+      </ul>
+    </section>
+
+    <section class="section commentary">
+      <h3>Modern Commentary</h3>
+      <span class="label">AI-distilled, not from Osho</span>
+      <p><strong>What this is really pointing at:</strong> Every breath is a small pendulum. At each extreme, the pendulum is momentarily still before reversing. The sutra says: that stillness is not nothing — it is the place from which the whole movement is being seen.</p>
+      <p><strong>A modern analogy:</strong> Like the apex of a thrown ball. Mid-air, before it falls, there is a frame of perfect stillness. The breath has two such frames, every few seconds, free of charge.</p>
+      <p class="essence"><strong>Essence</strong>There are two doors per breath, not one. Which one will you walk through?</p>
+    </section>
+
+    <div class="actions">
+      <button class="timer-btn" data-timer="15">Start a 15-min sitting</button>
+      <span class="timer-display" data-display="t2"></span>
+    </div>
+  </article>
+
+
+  <!-- ============================ TECHNIQUE 3 ============================ -->
+  <article class="technique" id="t3" data-tech="3">
+    <div class="technique-head">
+      <span>Technique 3 of 112</span>
+      <button class="fav-btn" aria-label="Favourite" data-fav="t3">&#9825;</button>
+    </div>
+    <div class="tags"><strong>Category:</strong> Breath &middot; <strong>Tags:</strong> navel &middot; fusion &middot; centre &middot; intermediate</div>
+
+    <blockquote class="sutra">
+      Or, whenever in-breath and out-breath fuse, at this instant touch the energy-less, energy-filled centre.
+    </blockquote>
+
+    <section class="section plain">
+      <h3>In Plain English</h3>
+      <p>There is a point near the navel where the energy of the in-breath and the energy of the out-breath meet and cancel. The sutra says: rest attention there. Osho calls it "energy-less" because your fuel-energy doesn't reach it, and "energy-filled" because cosmic energy does.</p>
+    </section>
+
+    <section class="section practice">
+      <h3>How to Practice</h3>
+      <ol>
+        <li>Lie on your back or sit upright. Body soft.</li>
+        <li>Breathe deeply but naturally — let the breath go all the way to the belly. (Most adults breathe shallowly; let the belly rise and fall.)</li>
+        <li>Place attention near the navel.</li>
+        <li>Feel the in-breath travelling down to meet the out-breath travelling up. Find the point where they meet.</li>
+        <li>That meeting point is what to settle into. Stay there.</li>
+        <li>Begin with 15 minutes. Build to 30 over time.</li>
+      </ol>
+    </section>
+
+    <section class="section facts">
+      <h3>Quick Facts</h3>
+      <dl>
+        <dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+        <dt>Duration</dt><dd>15&ndash;30 min</dd>
+        <dt>Best time</dt><dd>Morning, or after a meal has settled (not on a full stomach)</dd>
+        <dt>Posture</dt><dd>Lying or seated</dd>
+        <dt>Eyes</dt><dd>Closed</dd>
+        <dt>Best for</dt><dd>People who feel "stuck in their head" — this drops attention into the body</dd>
+        <dt>Avoid if</dt><dd>You haven't yet got comfortable with deep belly breathing &mdash; do that first</dd>
+      </dl>
+    </section>
+
+    <section class="section signs">
+      <h3>Signs It's Working</h3>
+      <ul>
+        <li>The belly becomes warm or tingles softly</li>
+        <li>A sense of being "centred" — a felt geographical pull toward the navel area</li>
+        <li>Thinking weakens; the body becomes the foreground</li>
+      </ul>
+    </section>
+
+    <section class="section pitfalls">
+      <h3>Common Pitfalls</h3>
+      <ul>
+        <li>Forcing belly breathing in a way that strains the diaphragm — let it deepen on its own</li>
+        <li>Looking for the "meeting point" as a precise anatomical spot — it is felt, not located</li>
+        <li>Skipping straight to this technique without trying Techniques 1 and 2 first</li>
+      </ul>
+    </section>
+
+    <section class="section qa">
+      <h3>Questions From The Book</h3>
+      <details>
+        <summary>Why has my breathing become shallow as I grew up? What blocks belly breathing?</summary>
+        <div class="qa-body">
+          <p class="src">Implied throughout Chapter 3 &middot; "Breath &mdash; A Bridge to the Universe"</p>
+          <p>Osho's answer, in essence: a child breathes with the whole belly, naturally. Adults breathe shallowly because deep breathing reaches the navel — and the navel is near the sex centre. Civilisation's discomfort with sex has, generation after generation, conditioned the breath to stay above the chest. To recover this technique, you also recover a body that is not afraid of itself.</p>
+          <p>Watch a sleeping baby: the whole abdomen rises and falls. Watch a stressed adult at a desk: the breath barely moves the collarbones. The sutra is asking you to become, again, the way you began.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="section commentary">
+      <h3>Modern Commentary</h3>
+      <span class="label">AI-distilled, not from Osho</span>
+      <p><strong>What this is really pointing at:</strong> Where two opposite movements meet, neither exists. The sutra is using breath as a way to point you to a place in the body where the dualities you live in (in/out, give/take, expand/contract) cancel — and what remains is undifferentiated awareness.</p>
+      <p><strong>A modern analogy:</strong> Where two opposing waves cross in a tank, the water at the crossing point becomes momentarily still. That stillness is not absence of energy — it is two energies in perfect balance.</p>
+      <p><strong>Why neuroscience cares:</strong> Slow diaphragmatic breathing measurably increases vagal tone, lowers heart rate, and shifts the autonomic balance toward parasympathetic dominance. The "warm centred feeling" practitioners describe lines up with measurable physiology, not just metaphor.</p>
+      <p class="essence"><strong>Essence</strong>The deepest stillness in the body is not where nothing is happening &mdash; it is where two opposites are perfectly cancelling.</p>
+    </section>
+
+    <div class="actions">
+      <button class="timer-btn" data-timer="20">Start a 20-min sitting</button>
+      <span class="timer-display" data-display="t3"></span>
+    </div>
+  </article>
+
+
+  <!-- ============================ TECHNIQUE 4 ============================ -->
+  <article class="technique" id="t4" data-tech="4">
+    <div class="technique-head">
+      <span>Technique 4 of 112</span>
+      <button class="fav-btn" aria-label="Favourite" data-fav="t4">&#9825;</button>
+    </div>
+    <div class="tags"><strong>Category:</strong> Breath &middot; <strong>Tags:</strong> stoppage &middot; universal pause &middot; surrender &middot; advanced</div>
+
+    <blockquote class="sutra">
+      Or, when breath is all out (up) and stopped of itself, or all in (down) and stopped &mdash; in such universal pause, one's small self vanishes. This is difficult only for the impure.
+    </blockquote>
+
+    <section class="section plain">
+      <h3>In Plain English</h3>
+      <p>Sometimes, naturally, the breath stops at full out or full in — not because you held it, but because it just stops. The sutra says: in that moment, the sense of being a separate "you" can drop. The phrase "difficult only for the impure" means: the resistance is not technical, it is psychological. Anything you cling to will refuse this pause.</p>
+    </section>
+
+    <section class="section practice">
+      <h3>How to Practice</h3>
+      <ol>
+        <li>Lie down. Body fully relaxed.</li>
+        <li>Take a few slow, full breaths to settle. Then breathe naturally.</li>
+        <li>After a normal exhale, sometimes the breath does not immediately return. There is a small "settle" before the in-breath comes. Watch for that.</li>
+        <li>When you find it, do nothing. Don't reach for the next breath. Just be.</li>
+        <li>The next breath comes by itself, eventually. Let it.</li>
+        <li>This is not breath-holding. It is breath-noticing.</li>
+        <li>Practise 15 minutes lying down for the first weeks.</li>
+      </ol>
+    </section>
+
+    <section class="section facts">
+      <h3>Quick Facts</h3>
+      <dl>
+        <dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced</dd>
+        <dt>Duration</dt><dd>15&ndash;20 min</dd>
+        <dt>Best time</dt><dd>Late evening, when the body is naturally winding down</dd>
+        <dt>Posture</dt><dd>Lying down, supine</dd>
+        <dt>Eyes</dt><dd>Closed</dd>
+        <dt>Best for</dt><dd>Practitioners with at least a few months in Techniques 1&ndash;3</dd>
+        <dt>Avoid if</dt><dd>You have anxiety around breath-holding, or sleep apnoea</dd>
+      </dl>
+    </section>
+
+    <section class="section signs">
+      <h3>Signs It's Working</h3>
+      <ul>
+        <li>The "settle" lengthens — not by your effort, but by your surrender</li>
+        <li>A clean falling-away sensation, like a thought you forgot mid-sentence</li>
+        <li>A few seconds where you genuinely don't know if you're breathing</li>
+      </ul>
+    </section>
+
+    <section class="section pitfalls">
+      <h3>Common Pitfalls</h3>
+      <ul>
+        <li>Holding the breath. This kills the whole technique. The pause is given, not taken.</li>
+        <li>Panicking when the next breath is slow to return — the body breathes itself; trust it</li>
+        <li>Trying this advanced technique before Techniques 1&ndash;3 feel natural</li>
+      </ul>
+    </section>
+
+    <section class="section commentary">
+      <h3>Modern Commentary</h3>
+      <span class="label">AI-distilled, not from Osho</span>
+      <p><strong>What this is really pointing at:</strong> When breath stops, "you" stop. Identity is not a stable thing — it is a process refreshed every breath. Catch the gap and the process is briefly suspended. What remains is the simplest thing there is.</p>
+      <p><strong>If this feels too advanced &mdash; the simpler version:</strong> Try Technique 1 (gap after in-breath) for a few weeks first. The natural stoppage of Technique 4 will start arriving on its own, without you having to do anything special.</p>
+      <p><strong>About "difficult only for the impure":</strong> Not a moral judgement. It means: whatever you are still gripping — a resentment, a plan, an identity — will refuse to let go in the pause. Nothing to fix, just notice what refuses, and let it refuse.</p>
+      <p class="essence"><strong>Essence</strong>When breath stops, the small self stops. That is the door. It opens by itself for those who do not push.</p>
+    </section>
+
+    <div class="actions">
+      <button class="timer-btn" data-timer="15">Start a 15-min sitting</button>
+      <span class="timer-display" data-display="t4"></span>
+    </div>
+  </article>
+
+
+  <!-- ============================ TECHNIQUE 5 ============================ -->
+  <article class="technique" id="t5" data-tech="5">
+    <div class="technique-head">
+      <span>Technique 5 of 112</span>
+      <button class="fav-btn" aria-label="Favourite" data-fav="t5">&#9825;</button>
+    </div>
+    <div class="tags"><strong>Category:</strong> Breath &middot; <strong>Tags:</strong> third eye &middot; visualisation &middot; light &middot; advanced</div>
+
+    <blockquote class="sutra">
+      Attention between eyebrows, let mind be before thought. Let form fill with breath essence to the top of the head and there shower as light.
+    </blockquote>
+
+    <section class="section plain">
+      <h3>In Plain English</h3>
+      <p>Focus attention at the point between the eyebrows (the third eye). Become aware of the subtle essence of the breath — not the air, but the aliveness it carries. Imagine that essence rising up the head, reaching the crown, and pouring back over you as light. This is the technique that, according to Osho, was given to Pythagoras in Egypt; he carried it back and seeded all Western mysticism with it.</p>
+    </section>
+
+    <section class="section practice">
+      <h3>How to Practice</h3>
+      <ol>
+        <li>Sit upright. Eyes gently closed.</li>
+        <li>Bring both eyes to look softly toward the middle of the forehead — the spot between the eyebrows. Don't strain. The eyes will lock there if you've found the spot.</li>
+        <li>Stay focused there until thoughts begin to feel like clouds passing in front of you, rather than things you are inside of.</li>
+        <li>Now feel the breath as more than air — feel its aliveness. (Tantra calls this prana, modern terms might be vitality or charge.)</li>
+        <li>Imagine that aliveness rising from the breath up to the crown of the head.</li>
+        <li>At the crown, let it shower back down over you as soft light.</li>
+        <li>20&ndash;30 minutes. Best done with a stable foundation in Techniques 1&ndash;4.</li>
+      </ol>
+    </section>
+
+    <section class="section facts">
+      <h3>Quick Facts</h3>
+      <dl>
+        <dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &nbsp;Advanced</dd>
+        <dt>Duration</dt><dd>20&ndash;30 min</dd>
+        <dt>Best time</dt><dd>Pre-dawn or dusk &mdash; lower ambient light helps the inner light experience</dd>
+        <dt>Posture</dt><dd>Seated, spine erect</dd>
+        <dt>Eyes</dt><dd>Closed, looking softly upward</dd>
+        <dt>Best for</dt><dd>Those drawn to visualisation, devotion, or "energy-body" work</dd>
+        <dt>Avoid if</dt><dd>You have a history of psychosis, dissociation, or migraines triggered by upward eye gaze</dd>
+      </dl>
+    </section>
+
+    <section class="section signs">
+      <h3>Signs It's Working</h3>
+      <ul>
+        <li>Eyes lock at the third-eye point and feel reluctant to move</li>
+        <li>Thoughts appear as separate from you, like film on a screen — the witness arises</li>
+        <li>A sensation of warmth, pressure, or light at the forehead or crown</li>
+        <li>Quietude that feels textured, not empty</li>
+      </ul>
+    </section>
+
+    <section class="section pitfalls">
+      <h3>Common Pitfalls</h3>
+      <ul>
+        <li>Forcing the eyes to point upward — strain replaces focus</li>
+        <li>Practising with an unsettled mind &mdash; the sutra's old commentary insists on purity first because at the third eye, imagination becomes unusually potent</li>
+        <li>Confusing visualised light with attainment — light is a sign of energy moving, not the goal</li>
+      </ul>
+    </section>
+
+    <section class="section qa">
+      <h3>Questions From The Book</h3>
+      <details>
+        <summary>What is the third eye, scientifically? Is the pineal gland really involved?</summary>
+        <div class="qa-body">
+          <p class="src">Discussed in Chapter 5, "Five Techniques of Attentiveness"</p>
+          <p>Osho identifies the third eye with the pineal gland — a small endocrine gland between the two eyes. He calls it not blind, just closed; latent. He claims the gland actively absorbs attention: focus on it and your eyes lock in spite of you. Modern science has since confirmed the pineal regulates melatonin and circadian rhythm; whether it has the deeper functions Tantra assigns to it remains outside the scope of physiology.</p>
+          <p>Either way, the practice is the same: it is the act of focusing attention there that matters, not the metaphysics of why.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Why do practitioners of psychic techniques often have tense, fearful eyes?</summary>
+        <div class="qa-body">
+          <p class="src">Chapter 22, "Unblocking the Third Eye"</p>
+          <p>Osho's answer, in essence: hypnotists, mesmerists and forcing-the-third-eye practitioners use the eyes as a tool of will. The eye becomes hardened. In genuine practice the eye softens, the gaze becomes inward, and tension gives way to a kind of liquid attention. If your eyes feel tense or scared after this technique, you're forcing it. Stop. Return to Technique 1 for a week. Come back gentler.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="section commentary">
+      <h3>Modern Commentary</h3>
+      <span class="label">AI-distilled, not from Osho</span>
+      <p><strong>What this is really pointing at:</strong> Where attention goes, energy follows. The technique uses three layers stacked: a precise location (third eye), a quality of awareness (witnessing thought rather than being inside it), and a guided imagination (essence rising and showering as light). Each amplifies the next.</p>
+      <p><strong>A modern analogy:</strong> Like sunlight through a magnifying glass — focused attention concentrates a diffuse field. Add visualisation and you direct that concentration. The "light shower" is your energy field reorganising under directed attention.</p>
+      <p><strong>If this feels too advanced &mdash; the simpler version:</strong> Just Step 1 alone. Sit, close eyes, look softly at the spot between the eyebrows. Stay there for 10 minutes. Skip the visualisation. Build the focus first; the rest comes later.</p>
+      <p><strong>Caveat:</strong> The book treats this as the technique that needs the most groundwork. Pythagoras did 40 days of fasting and breath training before he was allowed to practice it. Don't start here. End up here.</p>
+      <p class="essence"><strong>Essence</strong>Where attention goes, energy follows. Where energy gathers, light is felt. The third eye is not a place &mdash; it is what you see with when the two eyes stop fighting for the picture.</p>
+    </section>
+
+    <div class="actions">
+      <button class="timer-btn" data-timer="25">Start a 25-min sitting</button>
+      <span class="timer-display" data-display="t5"></span>
+    </div>
+  </article>
+
+
+  <!-- ============================ TECHNIQUE 6 ============================ -->
+  <article class="technique" id="t6" data-tech="6">
+    <div class="technique-head">
+      <span>Technique 6 of 112</span>
+      <button class="fav-btn" aria-label="Favourite" data-fav="t6">&#9825;</button>
+    </div>
+    <div class="tags"><strong>Category:</strong> Breath &middot; <strong>Tags:</strong> daily life &middot; integration &middot; awareness &middot; beginner</div>
+
+    <blockquote class="sutra">
+      When in worldly activity, keep attention between two breaths, and so practising, in a few days be born anew.
+    </blockquote>
+
+    <section class="section plain">
+      <h3>In Plain English</h3>
+      <p>Take Technique 1 off the cushion. While doing ordinary things — washing dishes, walking, waiting in line — keep a small thread of attention on the gap between your breaths. The sutra promises that a few days of this is enough to start a kind of inner rebirth.</p>
+    </section>
+
+    <section class="section practice">
+      <h3>How to Practice</h3>
+      <ol>
+        <li>Pick one routine activity to start with: brushing teeth, walking to work, washing dishes.</li>
+        <li>While doing it, keep a soft, background awareness on the gap after the in-breath.</li>
+        <li>Don't let it interrupt the activity. The activity continues; the awareness just rides alongside.</li>
+        <li>Each time you forget, return — no self-blame, no restart. The next gap is one breath away.</li>
+        <li>Over a few weeks, expand to more activities.</li>
+      </ol>
+    </section>
+
+    <section class="section facts">
+      <h3>Quick Facts</h3>
+      <dl>
+        <dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+        <dt>Duration</dt><dd>Continuous, woven through daily life</dd>
+        <dt>Best time</dt><dd>Always &mdash; that is the point</dd>
+        <dt>Posture</dt><dd>Whatever you are already in</dd>
+        <dt>Eyes</dt><dd>Open</dd>
+        <dt>Best for</dt><dd>Householders, busy people who can't add a long sitting practice</dd>
+        <dt>Avoid if</dt><dd>You are operating heavy machinery in a way that requires full external focus &mdash; in those moments just do the task</dd>
+      </dl>
+    </section>
+
+    <section class="section signs">
+      <h3>Signs It's Working</h3>
+      <ul>
+        <li>Routine tasks start feeling oddly fresh, even pleasant</li>
+        <li>You catch yourself less often in autopilot</li>
+        <li>Reactions to small irritations soften &mdash; there is now a tiny gap between trigger and response</li>
+        <li>The sense of "rushing through" the day weakens</li>
+      </ul>
+    </section>
+
+    <section class="section pitfalls">
+      <h3>Common Pitfalls</h3>
+      <ul>
+        <li>Trying to maintain it 100% &mdash; a few seconds an hour is more than most adults manage; that is enough to begin</li>
+        <li>Using it to escape unpleasant tasks &mdash; this is integration, not retreat</li>
+        <li>Treating forgetting as failure &mdash; remembering is the practice; forgetting just makes remembering possible</li>
+      </ul>
+    </section>
+
+    <section class="section commentary">
+      <h3>Modern Commentary</h3>
+      <span class="label">AI-distilled, not from Osho</span>
+      <p><strong>What this is really pointing at:</strong> Most "spiritual practice" stays on the cushion and dies the moment life resumes. This technique closes that gap. It says: the gap between two breaths is portable. Take it with you.</p>
+      <p><strong>A modern analogy:</strong> Like keeping a song playing softly in your head while you talk. The song doesn't stop the talking; the talking doesn't stop the song. Two layers, simultaneously.</p>
+      <p><strong>Why this might be the most important breath technique for modern people:</strong> Daily life is now denser than at any point in history. Most of us cannot find a real 30-minute silence. This sutra says: you don't need to. You need 30 micro-pauses spread through the day. The arithmetic still works.</p>
+      <p class="essence"><strong>Essence</strong>Meditation isn't where you sit. It's what stays awake while you live.</p>
+    </section>
+
+    <div class="actions">
+      <button class="timer-btn" data-timer="10">Optional 10-min anchor sit</button>
+      <span class="timer-display" data-display="t6"></span>
+    </div>
+  </article>
+
+
+  <!-- ============================ TECHNIQUE 7 ============================ -->
+  <article class="technique" id="t7" data-tech="7">
+    <div class="technique-head">
+      <span>Technique 7 of 112</span>
+      <button class="fav-btn" aria-label="Favourite" data-fav="t7">&#9825;</button>
+    </div>
+    <div class="tags"><strong>Category:</strong> Breath &middot; <strong>Tags:</strong> sleep &middot; dream &middot; death &middot; advanced</div>
+
+    <blockquote class="sutra">
+      With intangible breath in centre of forehead, as this reaches heart at the moment of sleep, have direction over dreams and over death itself.
+    </blockquote>
+
+    <section class="section plain">
+      <h3>In Plain English</h3>
+      <p>A pre-sleep practice. Lying in bed, place attention at the forehead. Imagine a subtle thread of breath descending from there to the heart. If you can stay aware as you fall asleep, the sutra promises lucid dreaming and, eventually, conscious passage through death.</p>
+    </section>
+
+    <section class="section practice">
+      <h3>How to Practice</h3>
+      <ol>
+        <li>Lie in bed at the actual moment of going to sleep — not some other time.</li>
+        <li>Eyes closed. Body settled.</li>
+        <li>Place attention at the centre of the forehead.</li>
+        <li>Imagine an "intangible breath" — a thread of fine awareness — descending slowly from forehead to heart.</li>
+        <li>Stay with the thread. Let it deepen, slow, and reach the heart at the very moment sleep takes you.</li>
+        <li>If you wake, that's fine. Notice. Try again the next night.</li>
+      </ol>
+    </section>
+
+    <section class="section facts">
+      <h3>Quick Facts</h3>
+      <dl>
+        <dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced</dd>
+        <dt>Duration</dt><dd>Until sleep arrives (5&ndash;20 min)</dd>
+        <dt>Best time</dt><dd>The actual moment of falling asleep</dd>
+        <dt>Posture</dt><dd>Lying in your usual sleeping position</dd>
+        <dt>Eyes</dt><dd>Closed</dd>
+        <dt>Best for</dt><dd>People who have an existing waking practice; anyone interested in lucid dreaming</dd>
+        <dt>Avoid if</dt><dd>You have insomnia &mdash; this technique can paradoxically delay sleep at first</dd>
+      </dl>
+    </section>
+
+    <section class="section signs">
+      <h3>Signs It's Working</h3>
+      <ul>
+        <li>Vivid hypnagogic imagery (the swirl of pictures right before sleep)</li>
+        <li>A few seconds of recognising "I am falling asleep" without losing the recognition</li>
+        <li>Increasingly clear, often lucid, dreams</li>
+      </ul>
+    </section>
+
+    <section class="section pitfalls">
+      <h3>Common Pitfalls</h3>
+      <ul>
+        <li>Becoming too alert &mdash; the practice is gentle, not active. If it wakes you up, soften.</li>
+        <li>Being attached to having lucid dreams &mdash; that ambition itself blocks the technique</li>
+        <li>Practising occasionally &mdash; this one rewards consistency; nightly is the dose</li>
+      </ul>
+    </section>
+
+    <section class="section qa">
+      <h3>Questions From The Book</h3>
+      <details>
+        <summary>What other factors help one stay conscious while dreaming?</summary>
+        <div class="qa-body">
+          <p class="src">Chapter 6, "Devices to Transcend Dreaming"</p>
+          <p>Osho's answer, in essence: three things support lucid dreaming. (1) Falling asleep with awareness — this technique. (2) Eating light at dinner — a heavy stomach pulls awareness into digestion, not consciousness. (3) Sleeping in a particular way: facing east, head supported, body relaxed. Most importantly: drop the ambition to "achieve" lucidity. Awareness can ride into sleep; ambition cannot.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="section commentary">
+      <h3>Modern Commentary</h3>
+      <span class="label">AI-distilled, not from Osho</span>
+      <p><strong>What this is really pointing at:</strong> The moment of falling asleep is a real event with a real signature in the brain — a transition through hypnagogia, the gateway between waking and dream. The sutra is asking you to keep one thread of awareness alive across that transition.</p>
+      <p><strong>The death claim:</strong> Tantra views the falling-asleep moment and the dying moment as structurally identical — both are an unwinding of the mind from the body. Practise the small one nightly, the sutra implies, and the big one will be familiar.</p>
+      <p><strong>Why neuroscience cares:</strong> Modern lucid dreaming research (Stephen LaBerge, Voss et al.) confirms that pre-sleep attention to a chosen object substantially raises the probability of dream lucidity. The forehead-to-heart visualisation here is essentially a focused MILD-style induction with an added somatic element.</p>
+      <p class="essence"><strong>Essence</strong>The moment between waking and sleep is identical to the moment of death. Catch one nightly &mdash; you have rehearsed for the other.</p>
+    </section>
+
+    <div class="actions">
+      <button class="timer-btn" data-timer="15">Optional 15-min wind-down timer</button>
+      <span class="timer-display" data-display="t7"></span>
+    </div>
+  </article>
+
+
+  <!-- ============================ TECHNIQUE 8 ============================ -->
+  <article class="technique" id="t8" data-tech="8">
+    <div class="technique-head">
+      <span>Technique 8 of 112</span>
+      <button class="fav-btn" aria-label="Favourite" data-fav="t8">&#9825;</button>
+    </div>
+    <div class="tags"><strong>Category:</strong> Breath &middot; <strong>Tags:</strong> devotion &middot; junctions &middot; bhakti &middot; intermediate</div>
+
+    <blockquote class="sutra">
+      With utmost devotion, centre on the two junctions of breath, and know the knower.
+    </blockquote>
+
+    <section class="section plain">
+      <h3>In Plain English</h3>
+      <p>Same two turning points as Technique 2 — but with one ingredient added: devotion. Whatever you most love or revere — the divine, your teacher, the universe, life itself — let that love be the colour of your attention. Devotion makes attention effortless. Then, in those two turning points, look for the one who is looking.</p>
+    </section>
+
+    <section class="section practice">
+      <h3>How to Practice</h3>
+      <ol>
+        <li>Sit. Settle. Breath natural.</li>
+        <li>Bring to mind whatever moves you most — a beloved figure, the open sky, the felt sense of life itself. Let the heart soften.</li>
+        <li>Now, with that softness, watch the two turns of breath (in&rarr;out and out&rarr;in).</li>
+        <li>At each turn, gently ask: who is noticing this turn?</li>
+        <li>Don't answer in words. Let the question pull attention back to its source.</li>
+        <li>20&ndash;30 minutes.</li>
+      </ol>
+    </section>
+
+    <section class="section facts">
+      <h3>Quick Facts</h3>
+      <dl>
+        <dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+        <dt>Duration</dt><dd>20&ndash;30 min</dd>
+        <dt>Best time</dt><dd>Whenever the heart is open &mdash; after music, after a good conversation, in nature</dd>
+        <dt>Posture</dt><dd>Seated</dd>
+        <dt>Eyes</dt><dd>Closed</dd>
+        <dt>Best for</dt><dd>Heart-centred or devotional types &mdash; bhaktas, lovers, artists</dd>
+        <dt>Avoid if</dt><dd>You are emotionally raw or in acute grief &mdash; let the rawness settle first</dd>
+      </dl>
+    </section>
+
+    <section class="section signs">
+      <h3>Signs It's Working</h3>
+      <ul>
+        <li>Attention requires no effort &mdash; the heart holds it</li>
+        <li>The "knower" question stops feeling intellectual and starts feeling near</li>
+        <li>Tears, sometimes, with no sadness behind them</li>
+      </ul>
+    </section>
+
+    <section class="section pitfalls">
+      <h3>Common Pitfalls</h3>
+      <ul>
+        <li>Performing devotion. Real devotion is found, not generated.</li>
+        <li>Turning "who is the knower?" into a riddle to solve &mdash; it is not a riddle, it is a direction</li>
+      </ul>
+    </section>
+
+    <section class="section commentary">
+      <h3>Modern Commentary</h3>
+      <span class="label">AI-distilled, not from Osho</span>
+      <p><strong>What this is really pointing at:</strong> Pure attention is hard. Loving attention is easy &mdash; you've experienced it whenever you've truly fallen for someone or something. The sutra hijacks that mechanism: take the natural focus that love already produces, and aim it at the breath's turning points, with the question "who is noticing?" riding on top.</p>
+      <p><strong>A modern analogy:</strong> Falling in love makes you naturally attentive without trying. This technique uses that same engine, deliberately.</p>
+      <p><strong>Why this is paired with Technique 2 in the book:</strong> Technique 2 is the same anatomy without the fuel. For some practitioners, dry attention is enough. For others, devotion is the carrier wave. The book offers both because people are different.</p>
+      <p class="essence"><strong>Essence</strong>Devotion is concentrated love. Concentrated love is attention without effort.</p>
+    </section>
+
+    <div class="actions">
+      <button class="timer-btn" data-timer="25">Start a 25-min sitting</button>
+      <span class="timer-display" data-display="t8"></span>
+    </div>
+  </article>
+
+
+  <footer>
+    <p>You have reached the end of <em>The Techniques for Breath</em>.</p>
+    <p>14 more categories &mdash; Sound, Light, Centring, Witnessing, Sleep, Heart, and others &mdash; are on the way.</p>
+    <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+  </footer>
+
+</main>
+
+<!-- Optional breath pacer (off by default) -->
+<aside class="pacer" id="pacer" aria-hidden="true">
+  <div class="pacer-orb" aria-hidden="true"></div>
+  <div class="pacer-text">
+    Breathe with the orb
+    <small>4s in &middot; 2s hold &middot; 4s out</small>
+  </div>
+</aside>
+
+<script>
+(function(){
+  'use strict';
+
+  // ---------- Theme (persisted) ----------
+  const html = document.documentElement;
+  const themeBtn = document.getElementById('theme-btn');
+  const stored = localStorage.getItem('vbt-theme');
+  if (stored) html.setAttribute('data-theme', stored);
+  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) html.setAttribute('data-theme','dark');
+  themeBtn.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('vbt-theme', next);
+  });
+
+  // ---------- Reading progress ----------
+  const progress = document.querySelector('.progress');
+  function updateProgress(){
+    const h = document.documentElement;
+    const scrolled = h.scrollTop;
+    const total = h.scrollHeight - h.clientHeight;
+    progress.style.width = total > 0 ? (scrolled/total*100) + '%' : '0';
+  }
+  document.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+
+  // ---------- Favourites (localStorage, per-file because standalone) ----------
+  const FAV_KEY = 'vbt-breath-favs';
+  const favs = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]'));
+  document.querySelectorAll('.fav-btn').forEach(btn => {
+    const id = btn.dataset.fav;
+    if (favs.has(id)) { btn.classList.add('on'); btn.textContent = '\u2665'; }
+    btn.addEventListener('click', () => {
+      if (favs.has(id)) { favs.delete(id); btn.classList.remove('on'); btn.textContent = '\u2661'; }
+      else { favs.add(id); btn.classList.add('on'); btn.textContent = '\u2665'; }
+      localStorage.setItem(FAV_KEY, JSON.stringify([...favs]));
+    });
+  });
+
+  // ---------- Per-technique timers ----------
+  // Each timer is independent, with audible bell at end (Web Audio, no external file).
+  function playBell(){
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = 'sine'; o.frequency.value = 432; // calming reference frequency
+      g.gain.setValueAtTime(0.0001, ctx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.4, ctx.currentTime + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 4.5);
+      o.connect(g).connect(ctx.destination); o.start();
+      o.stop(ctx.currentTime + 4.6);
+    } catch(e){}
+  }
+  document.querySelectorAll('.timer-btn').forEach(btn => {
+    let interval = null;
+    let endTime = 0;
+    const minutes = parseInt(btn.dataset.timer,10);
+    const techId = btn.closest('article.technique').id;
+    const display = document.querySelector('[data-display="' + techId + '"]');
+    const original = btn.textContent;
+
+    function fmt(ms){
+      const s = Math.max(0, Math.ceil(ms/1000));
+      const m = Math.floor(s/60), r = s%60;
+      return m + ':' + (r<10?'0':'') + r;
+    }
+    function stop(natural){
+      if (interval) clearInterval(interval);
+      interval = null;
+      btn.classList.remove('running');
+      btn.textContent = original;
+      if (natural){
+        display.textContent = 'Done.';
+        playBell();
+        setTimeout(()=>{ display.textContent = ''; }, 6000);
+      } else {
+        display.textContent = '';
+      }
+    }
+    btn.addEventListener('click', () => {
+      if (interval){ stop(false); return; }
+      endTime = Date.now() + minutes*60*1000;
+      btn.classList.add('running');
+      btn.textContent = 'Stop';
+      const tick = () => {
+        const left = endTime - Date.now();
+        if (left <= 0) { stop(true); return; }
+        display.textContent = fmt(left) + ' remaining';
+      };
+      tick();
+      interval = setInterval(tick, 500);
+    });
+  });
+
+  // ---------- Focus mode (dim everything except technique in viewport) ----------
+  const focusBtn = document.getElementById('focus-btn');
+  let observer = null;
+  focusBtn.addEventListener('click', () => {
+    const on = !document.body.classList.contains('focus');
+    document.body.classList.toggle('focus', on);
+    focusBtn.setAttribute('aria-pressed', on);
+    if (on && !observer){
+      observer = new IntersectionObserver((entries)=>{
+        entries.forEach(e => e.target.classList.toggle('in-view', e.isIntersecting));
+      }, {threshold:0.4});
+      document.querySelectorAll('article.technique').forEach(a => observer.observe(a));
+    }
+  });
+
+  // ---------- Breath pacer (optional, off by default) ----------
+  const pacerBtn = document.getElementById('pacer-btn');
+  const pacer = document.getElementById('pacer');
+  pacerBtn.addEventListener('click', () => {
+    const on = !pacer.classList.contains('on');
+    pacer.classList.toggle('on', on);
+    pacerBtn.setAttribute('aria-pressed', on);
+    pacer.setAttribute('aria-hidden', !on);
+  });
+
+  // ---------- Print ----------
+  document.getElementById('print-btn').addEventListener('click', () => window.print());
+
+  // ---------- Keyboard shortcut: 'f' for next/prev technique ----------
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'j' || e.key === 'k'){
+      const arts = [...document.querySelectorAll('article.technique')];
+      const cur = arts.findIndex(a => a.getBoundingClientRect().top > -100);
+      const idx = e.key === 'j' ? Math.min(arts.length-1, cur+1) : Math.max(0, cur-1);
+      if (arts[idx]) arts[idx].scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+})();
+</script>
+</body>
+</html>
