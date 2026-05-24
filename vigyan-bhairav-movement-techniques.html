@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 5 movement of consciousness techniques from Osho's Vigyan Bhairav Tantra — distilled, with practice instructions, common pitfalls, questions from the book, and modern commentary.">
+<title>The Techniques for Movement — Vigyan Bhairav Tantra</title>
+<style>
+:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:200;transition:width .15s ease-out;box-shadow:0 0 8px var(--accent-soft)}
+.controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
+.controls button{width:36px;height:36px;border-radius:999px;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.controls button:hover,.controls button[aria-pressed="true"]{background:var(--bg-soft);color:var(--accent)}
+.controls button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--accent-soft)}
+main{max-width:680px;margin:0 auto;padding:5rem 1.5rem 2rem}
+header.hero{text-align:center;padding:2rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink)}
+.hero .lede{color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;font-size:1.05rem;font-style:italic}
+.hero .meta{font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+.jumplinks{margin-top:2.5rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1.25rem 1.5rem;text-align:left}
+.jumplinks h2{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 1rem;font-weight:600}
+.jumplinks ol{margin:0;padding:0;list-style:none;counter-reset:jl}
+.jumplinks li{counter-increment:jl;border-top:1px solid var(--rule);padding:.55rem 0}
+.jumplinks li:first-child{border-top:0}
+.jumplinks a{text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:.7rem;font-size:.95rem;transition:color .15s}
+.jumplinks a::before{content:counter(jl);font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faint);min-width:1.5rem}
+.jumplinks a:hover{color:var(--accent)}
+.jumplinks .sub{color:var(--ink-faint);font-style:italic;font-size:.85rem}
+article.technique{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:2rem 2rem 1.75rem;margin:0 0 2.5rem;box-shadow:var(--shadow);scroll-margin-top:5rem;position:relative}
+.technique-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.4rem}
+.fav-btn{background:transparent;border:0;cursor:pointer;font-size:1.3rem;color:var(--ink-faint);transition:color .2s,transform .2s;line-height:1;padding:.2rem}
+.fav-btn:hover{transform:scale(1.15);color:var(--accent)}
+.fav-btn.on{color:var(--accent)}
+.tags{font-family:var(--sans);font-size:.75rem;color:var(--ink-faint);margin-bottom:1.5rem;letter-spacing:.02em}
+.tags strong{color:var(--ink-soft);font-weight:600}
+blockquote.sutra{margin:1rem 0 2rem;padding:1.75rem 1.5rem;background:var(--sutra-bg);border-left:3px solid var(--accent);border-radius:4px;font-family:var(--serif);font-size:1.18rem;font-style:italic;line-height:1.55;color:var(--ink);text-align:center;quotes:"\201C" "\201D"}
+blockquote.sutra::before{content:open-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.4em;margin-right:.1em}
+blockquote.sutra::after{content:close-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.6em;margin-left:.1em}
+.section{margin:1.75rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule)}
+.section h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .9rem;font-weight:600}
+.section p{margin:.5rem 0}
+.section ol,.section ul{margin:.5rem 0;padding-left:1.4rem}
+.section li{margin:.35rem 0;line-height:1.65}
+.plain p{font-size:1.02rem;color:var(--ink-soft)}
+.facts dl{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.25rem;margin:0;font-family:var(--sans);font-size:.92rem}
+.facts dt{color:var(--ink-faint);font-weight:600;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase;padding-top:.15rem}
+.facts dd{margin:0;color:var(--ink)}
+.stars{color:var(--accent);letter-spacing:.05em}
+.stars .off{color:var(--rule)}
+.signs ul,.pitfalls ul{list-style:none;padding-left:0}
+.signs li::before{content:"\2022";color:var(--accent);margin-right:.7rem;font-weight:700}
+.pitfalls li::before{content:"\2715";color:#a83232;margin-right:.7rem;font-weight:700;font-size:.9em}
+html[data-theme="dark"] .pitfalls li::before{color:#d96b6b}
+.qa details{border:1px solid var(--rule);border-radius:5px;background:var(--bg);margin:.5rem 0;transition:background .2s}
+.qa details[open]{background:var(--bg-soft)}
+.qa summary{padding:.85rem 1rem;cursor:pointer;font-style:italic;color:var(--ink);list-style:none;display:flex;align-items:flex-start;gap:.6rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"\203A";display:inline-block;color:var(--accent);font-style:normal;transition:transform .2s;margin-top:.05em;flex-shrink:0}
+.qa details[open] summary::before{transform:rotate(90deg)}
+.qa-body{padding:0 1rem 1rem 2rem}
+.qa-body .src{font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.5rem}
+.qa-body p{font-size:.95rem;color:var(--ink-soft);margin:.4rem 0}
+.commentary{background:var(--bg);border-radius:6px;border:1px dashed var(--rule);padding:1.25rem 1.4rem}
+.commentary h3{display:flex;align-items:center;gap:.5rem}
+.commentary h3::before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:999px}
+.commentary .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.4rem}
+.commentary p{font-size:.96rem;color:var(--ink-soft);margin:.6rem 0}
+.commentary .essence{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--rule);font-style:italic;color:var(--ink);font-size:1.02rem}
+.commentary .essence strong{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-style:normal;display:block;margin-bottom:.3rem;font-weight:600}
+.actions{margin-top:1.75rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.timer-btn{font-family:var(--sans);font-size:.9rem;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:.7rem 1.4rem;cursor:pointer;font-weight:500;letter-spacing:.02em;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:0 4px 12px -4px var(--accent)}
+.timer-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
+.timer-btn.running{background:#a83232}
+html[data-theme="dark"] .timer-btn.running{background:#c44}
+.timer-display{font-family:var(--sans);font-variant-numeric:tabular-nums;font-size:.95rem;color:var(--ink-faint)}
+body.focus article.technique{opacity:.25;transition:opacity .5s}
+body.focus article.technique.in-view{opacity:1}
+footer{text-align:center;padding:3rem 0 1rem;border-top:1px solid var(--rule);color:var(--ink-faint);font-family:var(--sans);font-size:.85rem}
+footer p{margin:.4rem 0}
+.about-block,.howto-block,.beginner-block,.glossary-block{margin-top:1.25rem;border-radius:6px;font-family:var(--sans);font-size:.92rem;text-align:left}
+.about-block,.glossary-block{background:var(--bg-card);border:1px solid var(--rule)}
+.about-block summary,.glossary-block summary{padding:.85rem 1.25rem;cursor:pointer;color:var(--ink-soft);list-style:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:flex;align-items:center}
+.about-block summary::-webkit-details-marker,.glossary-block summary::-webkit-details-marker{display:none}
+.about-block summary::before,.glossary-block summary::before{content:"+";margin-right:.6rem;color:var(--accent);font-weight:700;font-size:1.15rem;line-height:1;transition:transform .2s}
+.about-block[open] summary::before,.glossary-block[open] summary::before{content:"\2212"}
+.about-body,.glossary-body{padding:0 1.25rem 1.25rem;border-top:1px solid var(--rule)}
+.about-body p{font-family:var(--serif);margin:.8rem 0;line-height:1.65;color:var(--ink-soft)}
+.glossary-body dl{margin:.8rem 0 0;display:grid;gap:.35rem 1rem}
+.glossary-body dt{font-weight:700;color:var(--accent);font-size:.9rem;margin-top:.55rem}
+.glossary-body dd{margin:0;color:var(--ink-soft);font-family:var(--serif);font-size:.92rem;line-height:1.55}
+.howto-block{background:var(--sutra-bg);border-left:3px solid var(--accent);padding:1.25rem 1.5rem}
+.howto-block h3,.beginner-block h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 .7rem;font-weight:600}
+.howto-block p,.beginner-block p{margin:.5rem 0;font-family:var(--serif);line-height:1.65;color:var(--ink-soft)}
+.howto-block strong,.beginner-block strong{color:var(--ink)}
+.beginner-block{background:var(--bg-soft);border:1px dashed var(--accent-soft);padding:1.25rem 1.5rem}
+.beginner-block a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.beginner-block a:hover{border-bottom-color:var(--accent)}
+.disclaimer{font-size:.78rem;color:var(--ink-faint);font-style:italic;margin:1.25rem 0 0;text-align:center;line-height:1.5}
+.glossary-term{border-bottom:1px dotted var(--accent);cursor:help;color:inherit;padding:0 1px;transition:background .15s}
+.glossary-term:hover,.glossary-term:focus{background:var(--accent-soft);outline:none}
+.glossary-tooltip{position:absolute;background:var(--ink);color:var(--bg);padding:.7rem .9rem;border-radius:6px;font-family:var(--sans);font-size:.82rem;line-height:1.5;max-width:280px;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);z-index:300;opacity:0;pointer-events:none;transition:opacity .15s}
+.glossary-tooltip.show{opacity:1;pointer-events:auto}
+.glossary-tooltip strong{display:block;margin-bottom:.35rem;color:var(--accent-soft);text-transform:uppercase;font-size:.68rem;letter-spacing:.12em}
+@media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.actions,.fav-btn{display:none!important}article.technique{box-shadow:none;border:none;page-break-inside:avoid;padding:0;margin:0 0 1.5rem}blockquote.sutra{background:#f5f5f5;border-left:2px solid #888}main{max-width:none;padding:1rem}.about-block,.glossary-block,.howto-block,.beginner-block,.disclaimer{display:none!important}.glossary-term{background:none!important;border-bottom:1px dotted #888}}
+@media(max-width:600px){body{font-size:17px}article.technique{padding:1.5rem 1.25rem}.controls{top:.5rem;right:.5rem}blockquote.sutra{font-size:1.05rem;padding:1.25rem 1rem}.facts dl{grid-template-columns:1fr;gap:.1rem .5rem}.facts dt{padding-top:.5rem}main{padding:4rem 1rem 2rem}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<nav class="controls" aria-label="Reading controls">
+  <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+  <button id="focus-btn" aria-label="Toggle focus mode" title="Focus mode" aria-pressed="false">&#9678;</button>
+  <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
+</nav>
+<main>
+<header class="hero">
+  <div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 9 of 15</div>
+  <h1>The Techniques for Movement</h1>
+  <p class="lede">Five techniques that use the movement of consciousness &mdash; not physical movement but the shift of awareness from the isolated self into the universal, from the bounded body into infinite space. These are techniques of expansion, dissolving, and the ultimate freedom of realising you are everywhere.</p>
+  <p class="meta">5 techniques &middot; ~8 min read &middot; works fully offline</p>
+
+  <details class="about-block">
+    <summary>About these techniques</summary>
+    <div class="about-body">
+      <p>These five techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The movement sutras form the ninth major category &mdash; but &ldquo;movement&rdquo; here does not mean physical motion. It means the movement of consciousness itself: expanding beyond the body, dissolving the isolated self, entering the space of pure awareness.</p>
+      <p>These techniques range from empathic identification with others (feeling another&rsquo;s consciousness as your own) to the absolute stillness of entering supportless, eternal space. They represent a progression: from recognising consciousness in others, to seeing it as the only thing that exists, to releasing the body, to releasing thought, and finally to entering the groundless ground of being itself.</p>
+    </div>
+  </details>
+  <aside class="howto-block">
+    <h3>How to use this page</h3>
+    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
+    <p><strong>Note on &ldquo;movement&rdquo;:</strong> In this category, movement refers to the movement of consciousness, not necessarily physical movement. These are techniques of inner expansion &mdash; consciousness moving beyond its habitual boundaries into its true unlimited nature.</p>
+  </aside>
+  <aside class="beginner-block">
+    <h3>New to movement meditation?</h3>
+    <p>Start with <a href="#t1">Technique 1 &mdash; feel the consciousness of each person</a> or <a href="#t3">Technique 3 &mdash; toss attachment for body aside</a>. Both are accessible for beginners and produce tangible results within days. Spend 20&ndash;30 minutes a day for 21 days. Then return for what comes next.</p>
+  </aside>
+
+  <details class="glossary-block">
+    <summary>Glossary &mdash; unfamiliar terms?</summary>
+    <div class="glossary-body">
+      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+      <dl>
+        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+        <dt>consciousness</dt><dd>The one awareness that animates all forms &mdash; not personal mind or intellect, but the universal &ldquo;I am&rdquo; that looks through every pair of eyes.</dd>
+        <dt>monism</dt><dd>The philosophical position that only one substance exists. In tantra, that substance is consciousness &mdash; appearing as many forms but remaining one.</dd>
+        <dt>disidentification</dt><dd>Loosening the grip of &ldquo;I am this body/mind/role.&rdquo; Not rejecting the body but recognising you are more than it.</dd>
+        <dt>bodylessness</dt><dd>The experiential state of not being localized in the physical form &mdash; feeling awareness as spread throughout space rather than confined to a body.</dd>
+        <dt>supportless</dt><dd>Awareness that needs no ground, no reason, no basis &mdash; it IS the ground. The ultimate freedom of needing nothing to stand on.</dd>
+        <dt>space</dt><dd>Not physical emptiness but the infinite field in which all experience appears. Awareness itself experienced as boundless space.</dd>
+        <dt>joy</dt><dd>The natural state of consciousness when it recognises its own unlimited nature &mdash; not pleasure (which depends on objects) but causeless being.</dd>
+      </dl>
+    </div>
+  </details>
+  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. These techniques work with identity and boundary dissolution; if you experience disorientation, ground yourself by feeling your body and surroundings.</p>
+  <nav class="jumplinks" aria-label="Techniques in this file">
+    <h2>Techniques in this file</h2>
+    <ol>
+      <li><a href="#t1"><span>Feel the consciousness of each person as your own</span> <span class="sub">&middot; becoming each being</span></a></li>
+      <li><a href="#t2"><span>This consciousness exists as each being, and nothing else exists</span> <span class="sub">&middot; one consciousness</span></a></li>
+      <li><a href="#t3"><span>Toss attachment for body aside, realizing I am everywhere</span> <span class="sub">&middot; everywhere is joyous</span></a></li>
+      <li><a href="#t4"><span>Thinking no thing, will limited-self unlimit</span> <span class="sub">&middot; contentless awareness</span></a></li>
+      <li><a href="#t5"><span>Enter space, supportless, eternal, still</span> <span class="sub">&middot; the absolute</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+
+<!-- ============================ TECHNIQUE 1 ============================ -->
+<article class="technique" id="t1" data-tech="1">
+  <div class="technique-head"><span>Technique 98 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t1">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Movement &middot; <strong>Tags:</strong> empathy &middot; becoming-others &middot; consciousness &middot; compassion &middot; dissolving-self</div>
+  <blockquote class="sutra">Feel the consciousness of each person as your own consciousness. So, leaving aside concern for self, become each being.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Look at any person and FEEL their consciousness as your own. Not &ldquo;what are they thinking&rdquo; (that&rsquo;s projection) but feel: the same awareness that looks through my eyes looks through theirs. The same &ldquo;I am&rdquo; lives in them. When you leave aside concern for YOUR self entirely and become each being, the isolated self dissolves into the universal consciousness that was always shared.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Choose your setting:</strong> Sit in a caf&eacute;, a park, a train station &mdash; anywhere people are present and you can observe without being disturbed. Alternatively, begin with a single person: a friend, a family member, even a stranger on a bench. You need at least 20 minutes of uninterrupted observation.</li>
+      <li><strong>Settle into your own awareness first:</strong> Before attempting to feel another&rsquo;s consciousness, become firmly aware of your OWN consciousness. Close your eyes briefly. Feel: I am aware. I exist. There is a &ldquo;looking&rdquo; happening from behind these eyes. This is your starting point &mdash; know what consciousness feels like from the inside.</li>
+      <li><strong>Look at a person:</strong> Open your eyes and look at one specific person. Not their clothes, not their face, not their story. Look at the ALIVENESS behind their eyes. The fact that they, too, are looking out from a centre. They, too, feel &ldquo;I am.&rdquo;</li>
+      <li><strong>Feel, don&rsquo;t think:</strong> Do NOT think &ldquo;they have consciousness too.&rdquo; That is a philosophy, not an experience. Instead, FEEL: the same awareness that is here, looking through my eyes, is THERE, looking through theirs. It is literally the same awareness wearing a different mask. Feel it as you feel warmth or hunger &mdash; directly, not as a concept.</li>
+      <li><strong>Leave aside concern for self:</strong> This is the key instruction. As long as you are concerned with YOUR self (your appearance, your comfort, your thoughts about them), you cannot truly feel another&rsquo;s consciousness. Drop all self-referencing. Forget yourself entirely. BECOME the other person&rsquo;s awareness.</li>
+      <li><strong>Expand to multiple people:</strong> Once you can feel one person&rsquo;s consciousness as your own, expand. Feel two people simultaneously. Then five. Then the entire caf&eacute;. Each one of them: the same awareness, the same &ldquo;I am,&rdquo; looking out from different locations. You are all of them.</li>
+      <li><strong>Include &ldquo;enemies&rdquo; and strangers:</strong> The real test is with people you dislike, fear, or feel superior/inferior to. Can you feel THEIR consciousness as yours? Can you feel the same awareness looking through the eyes of someone you find repulsive? If yes, the technique is working deeply.</li>
+      <li><strong>Include non-human beings:</strong> Extend the practice to animals &mdash; a dog, a bird, an insect. Feel: consciousness is there too, looking out, experiencing. Even plants: feel the aliveness. This is not anthropomorphism &mdash; it is the recognition that awareness pervades all living forms.</li>
+      <li><strong>The dissolving:</strong> At some point, the sense of &ldquo;my&rdquo; consciousness versus &ldquo;their&rdquo; consciousness collapses. There is just one consciousness &mdash; everywhere, in everything. The isolated self was a fiction. This dissolving is the goal of the technique.</li>
+      <li><strong>Carry it into daily life:</strong> Once practised formally for 21 days, begin carrying this perception throughout daily interactions. When talking to someone, FEEL their awareness as your own. Conflict dissolves. Judgment dissolves. Compassion arises naturally &mdash; not as a moral duty but as the inevitable result of experiencing unity.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>20 min or throughout the day</dd><dt>Posture</dt><dd>Any &mdash; seated, walking, in conversation</dd><dt>Eyes</dt><dd>Open</dd><dt>Best for</dt><dd>Those who feel isolated or disconnected; people wanting to develop genuine compassion; anyone struggling with judgment of others</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>A sudden feeling of intimacy with strangers &mdash; as if you know them from the inside</li><li>Judgment of others spontaneously drops away</li><li>Compassion arises not as effort but as natural response to feeling shared awareness</li><li>The sense of &ldquo;me vs. them&rdquo; softens or disappears entirely</li><li>Moments of overwhelming love for random people &mdash; a waitress, a bus driver, a child</li><li>The loneliness that comes from isolation dissolves; you feel accompanied by all beings</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Projecting YOUR thoughts onto others and calling it &ldquo;feeling their consciousness&rdquo; &mdash; projection is not the same as recognition of shared awareness</li><li>Intellectualising: thinking ABOUT consciousness rather than FEELING it &mdash; keep it experiential</li><li>Skipping the self-awareness step &mdash; you must know what consciousness feels like in yourself before recognising it in others</li><li>Using this as people-reading or empathic manipulation &mdash; the point is dissolution of self, not gaining power over others</li><li>Becoming overwhelmed in crowds &mdash; start with one person, build gradually</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How is this different from ordinary empathy or projection?</summary>
+      <div class="qa-body"><p class="src">Chapter 67, "Become Each Being"</p><p>Osho is emphatic: ordinary empathy projects YOUR feelings onto others (&ldquo;I imagine how THEY feel&rdquo;). This technique does the opposite: you recognise that the SAME awareness lives in both. You are not imagining their experience &mdash; you are recognising that the consciousness looking through their eyes is the very same consciousness that looks through yours. Not similar &mdash; identical. One ocean with many waves. This is not empathy but identity &mdash; at the level of awareness, not personality.</p></div>
+    </details>
+    <details><summary>Why does Osho say &ldquo;leaving aside concern for self&rdquo; is essential?</summary>
+      <div class="qa-body"><p class="src">Chapter 67</p><p>As long as you maintain concern for your separate self &mdash; how you look, what they think of you, what you might gain &mdash; you remain isolated in your own bubble. The bubble of self-concern prevents you from truly FEELING another&rsquo;s consciousness. It&rsquo;s like trying to listen while talking: impossible. You must stop the inner monologue of self-concern to actually FEEL the awareness that lives in another.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Neuroscience has discovered mirror neurons &mdash; brain cells that fire both when you perform an action and when you watch someone else perform it. This technique leverages that hardware but goes far beyond it: not mirroring actions but recognising shared awareness itself. It&rsquo;s the difference between feeling what someone does and recognising that the same &ldquo;knower&rdquo; exists in both of you.</p>
+    <p><strong>Practical parallel:</strong> In psychotherapy, Carl Rogers described &ldquo;unconditional positive regard&rdquo; as the foundation of healing relationship. This technique produces that regard naturally &mdash; when you experience someone&rsquo;s consciousness as your own, judgment becomes impossible. You cannot condemn yourself. This is compassion that arises from reality, not morality.</p>
+    <div class="essence"><strong>One-line essence</strong>The same &ldquo;I am&rdquo; looks through every pair of eyes. Recognise it, and the prison of isolation dissolves forever.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t1"></span></div>
+</article>
+
+
+<!-- ============================ TECHNIQUE 2 ============================ -->
+<article class="technique" id="t2" data-tech="2">
+  <div class="technique-head"><span>Technique 99 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t2">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Movement &middot; <strong>Tags:</strong> one-consciousness &middot; nothing-else &middot; monism &middot; unity &middot; seeing</div>
+  <blockquote class="sutra">This consciousness exists as each being, and nothing else exists.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>This is the culmination of the previous technique. See that consciousness is the ONLY thing that exists &mdash; appearing as different forms (person, tree, rock, sky) but always the same awareness. Nothing else exists except this one consciousness playing all roles. The multiplicity is appearance; the unity is reality. When walking in a crowd, see one consciousness wearing different masks. When in nature, see one consciousness being trees, birds, river, sky.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Master Technique 98 first:</strong> This technique builds on the previous one. You must already be able to feel another person&rsquo;s consciousness as your own. If you cannot, return to Technique 98 and practise for at least 21 days before attempting this one.</li>
+      <li><strong>Sit in a rich environment:</strong> A park, a busy street, a natural landscape &mdash; anywhere where MANY forms are present: people, animals, plants, buildings, sky. You need multiplicity around you to practise seeing through it to the unity beneath.</li>
+      <li><strong>Begin with people:</strong> Look at the crowd and feel: one consciousness looking through all these eyes. Not many consciousnesses &mdash; ONE. The same awareness playing many characters. A theater with one actor in countless costumes.</li>
+      <li><strong>Extend to animals:</strong> See a bird. Feel: the same consciousness that looks through my eyes looks through those tiny black eyes. The same &ldquo;I am&rdquo; flies in that body. Not a different consciousness &mdash; the same one. Consciousness does not have boundaries &mdash; it fills whatever form it inhabits completely.</li>
+      <li><strong>Extend to plants:</strong> See a tree. Feel: consciousness is there too, but slower, quieter, more patient. The same awareness that rushes through the human mind stands still and tall in the tree for a hundred years. Same consciousness, different tempo.</li>
+      <li><strong>Extend to &ldquo;inanimate&rdquo; matter:</strong> This is the radical step. See a rock. Feel: even here, consciousness rests. In deep sleep, as it were. Not dead matter but consciousness so deeply at rest it appears inert. Modern physics confirms: matter is energy, energy is vibration, and vibration requires... a field in which to vibrate. That field is consciousness.</li>
+      <li><strong>The key insight &mdash; &ldquo;nothing else exists&rdquo;:</strong> Now see it all at once. Everything you look at &mdash; EVERYTHING &mdash; is consciousness in different costumes. There is literally nothing else. Not consciousness PLUS matter, not consciousness INSIDE matter, but consciousness AS everything. The chair, the sky, your hand, the sound of traffic &mdash; all consciousness appearing in different forms.</li>
+      <li><strong>Let multiplicity dissolve:</strong> Hold this perception steadily. The apparent diversity of the world &mdash; so many separate things! &mdash; begins to shimmer and reveal its underlying unity. Like looking at a movie screen: at first you see characters, plot, scenery. Then you step back and see: it&rsquo;s all just light on a screen. One light, infinite images.</li>
+      <li><strong>Rest in the seeing:</strong> When the perception stabilises even for a moment, rest in it. Don&rsquo;t grasp. Don&rsquo;t try to hold it. Just rest. One consciousness, everywhere, being everything. Nothing else exists. You are That. Everything is That.</li>
+      <li><strong>Return gently:</strong> When ready, allow the ordinary multiplicity to return. But notice: it never quite looks the same again. Even when you see separate things, you remember what you saw. The unity becomes a background knowing that informs all perception.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced</dd>
+    <dt>Duration</dt><dd>20 min</dd><dt>Posture</dt><dd>Seated or walking slowly</dd><dt>Eyes</dt><dd>Open (soft, receptive gaze)</dd><dt>Best for</dt><dd>Those who have mastered Technique 98; philosophically inclined minds; people seeking non-dual awakening; those tired of separation</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Moments where the world &ldquo;flickers&rdquo; &mdash; you see the unity beneath the diversity</li><li>A sense of overwhelming awe: everything is alive, everything is one</li><li>Boundaries between &ldquo;self&rdquo; and &ldquo;world&rdquo; become transparent</li><li>Fear diminishes dramatically &mdash; what is there to fear when you ARE everything?</li><li>Spontaneous love for all forms &mdash; not sentimental but the natural response to seeing oneself everywhere</li><li>A deep, unshakeable peace that does not depend on circumstances</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Making it a philosophical belief rather than a lived perception &mdash; BELIEVING &ldquo;all is one&rdquo; is not the same as SEEING it</li><li>Attempting this without the foundation of Technique 98 &mdash; it will remain intellectual</li><li>Using this as spiritual bypassing: &ldquo;nothing matters because all is one&rdquo; &mdash; true non-dual perception INCREASES compassion, not dismissiveness</li><li>Getting frustrated when the perception slips &mdash; it comes in flashes at first; stability takes months or years</li><li>Confusing the perception with a mood &mdash; &ldquo;I feel connected&rdquo; is not the same as SEEING one consciousness everywhere</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>What does Osho mean by &ldquo;nothing else exists&rdquo;?</summary>
+      <div class="qa-body"><p class="src">Chapter 67, "Nothing Else Exists"</p><p>Osho explains: this is the most radical statement in tantra. Not that consciousness exists alongside matter (dualism), not that consciousness is one of many things (pluralism), but that consciousness is the ONLY thing that exists (monism). What we call matter, energy, space, time &mdash; all are forms of consciousness. When you see a stone, you are seeing consciousness in its most condensed, sleeping form. When you see a human being, you are seeing consciousness in its most awake form. But the substance is always the same. One ocean, many waves &mdash; but the waves ARE the ocean.</p></div>
+    </details>
+    <details><summary>How does this relate to modern physics?</summary>
+      <div class="qa-body"><p class="src">Chapter 67</p><p>Osho notes that physics has already dissolved matter into energy (E=mc&sup2;), and energy into probability waves that only &ldquo;collapse&rdquo; into definite states when observed. The observer &mdash; consciousness &mdash; turns out to be inseparable from the observed. The tantra arrived at this conclusion 5,000 years ago through inner observation: everything is consciousness appearing as form. Physics approaches the same truth from the outside.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> This is the quintessential non-dual (advaita) teaching: there is only one &ldquo;thing&rdquo; &mdash; awareness &mdash; and it appears as the entire manifest world. The technique asks you to shift from the default mode of seeing many separate things to seeing one consciousness expressing itself in infinite forms. This is not a metaphysical claim to adopt but a perceptual shift to undergo.</p>
+    <p><strong>Phenomenological parallel:</strong> When you dream at night, the entire dream world &mdash; characters, landscape, events &mdash; is made of one substance: your dreaming mind. This technique suggests that waking reality has the same structure: one consciousness dreaming the world into being. The forms are real (as appearances), but the substance is always and only consciousness.</p>
+    <div class="essence"><strong>One-line essence</strong>One consciousness, wearing all masks, playing all roles, being all things &mdash; and nothing else has ever existed.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t2"></span></div>
+</article>
+
+
+<!-- ============================ TECHNIQUE 3 ============================ -->
+<article class="technique" id="t3" data-tech="3">
+  <div class="technique-head"><span>Technique 100 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t3">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Movement &middot; <strong>Tags:</strong> bodyless &middot; everywhere &middot; joy &middot; disidentification &middot; expansion</div>
+  <blockquote class="sutra">Toss attachment for body aside, realizing I am everywhere. One who is everywhere is joyous.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Deliberately relax the grip on &ldquo;I am this body.&rdquo; Feel: I am not contained in this body. I am the awareness that USES this body but is not limited to it. Feel yourself as the space the body moves in, not as the body itself. One who is everywhere has nothing to gain, nothing to lose, nothing to protect. That is why joy arises &mdash; joy is the natural state when there is no fear, and fear only exists for something that can be harmed. Awareness cannot be harmed.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Find a quiet, private place:</strong> This is an eyes-closed practice. Sit or lie comfortably. You need 25 minutes of undisturbed time. The body should be relaxed, comfortable, and forgotten as much as possible &mdash; no tight clothing, no uncomfortable posture.</li>
+      <li><strong>Scan and release the body:</strong> Spend 5 minutes doing a body scan from head to toes. With each area, deliberately RELEASE your identification with it. Not &ldquo;I am relaxing my arm&rdquo; but &ldquo;this arm is not me.&rdquo; Feel each body part becoming &ldquo;not-self&rdquo; &mdash; present, but not who you are.</li>
+      <li><strong>Feel the space around the body:</strong> Now shift attention from the body to the SPACE the body occupies. Feel the air touching your skin. Feel the room around you. Let your sense of &ldquo;I&rdquo; move from being inside the skin to being the space surrounding the skin.</li>
+      <li><strong>Expand the sense of &ldquo;I&rdquo;:</strong> Slowly, feel yourself as bigger than the body. First, expand to fill the room. Then the building. Then the neighbourhood. Don&rsquo;t THINK it &mdash; FEEL it. Feel yourself as vast, spacious, unbounded. The body becomes a tiny point within you &mdash; you are no longer within the body.</li>
+      <li><strong>&ldquo;Toss attachment aside&rdquo;:</strong> The sutra says &ldquo;toss&rdquo; &mdash; not gently release but actively throw away. There is a decisiveness here. It&rsquo;s like removing a costume: just take it off and toss it. The body is a costume awareness is wearing. Toss the attachment to it. Not the body itself &mdash; the ATTACHMENT.</li>
+      <li><strong>Realise: I am everywhere:</strong> When the body-identification loosens sufficiently, a realisation dawns: if I am not this body, then where am I? Everywhere. Awareness has no location. It is the space in which everything appears. YOU are that space. Feel it: I am everywhere. Not metaphorically &mdash; literally. Awareness is here, there, everywhere simultaneously.</li>
+      <li><strong>Notice the joy:</strong> As the sense of being everywhere stabilises, notice: joy arises by itself. Not happiness about something &mdash; causeless joy. This is because fear has dissolved. Fear requires a thing that can be harmed. If you are everywhere, you cannot be harmed &mdash; you are too vast, too all-pervading. Without fear, the natural state is joy.</li>
+      <li><strong>Rest in the joy:</strong> Don&rsquo;t try to intensify the joy or hold onto it. Just notice it and let it be. It is your natural state &mdash; what you feel when the artificial contraction of body-identification relaxes. Stay here for 5&ndash;10 minutes.</li>
+      <li><strong>Return with awareness:</strong> Slowly, bring attention back to the body. Feel the breath. Feel the weight. Open your eyes. But carry the knowing: the body is IN you &mdash; you are not in the body. This knowing can remain even as you return to normal activity.</li>
+      <li><strong>Daily integration:</strong> Throughout the day, whenever you feel fear or contraction, ask: &ldquo;Am I really just this body?&rdquo; The question alone loosens the grip. Even a moment of remembering &ldquo;I am everywhere&rdquo; restores spaciousness and dissolves the contraction of fear.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>25 min</dd><dt>Posture</dt><dd>Seated or lying down</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Those over-identified with the body; people with body-image issues; anyone experiencing fear or anxiety; those who feel small or limited</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>A felt sense of being larger than the body &mdash; spacious, vast, unconstrained</li><li>Causeless joy that arises when body-identification relaxes</li><li>Fear diminishes significantly &mdash; you feel unassailable</li><li>The body feels lighter, more transparent, less &ldquo;solid&rdquo;</li><li>A sense of freedom that does not depend on circumstances</li><li>Over time: less concern with aging, appearance, physical limitations &mdash; not from denial but from knowing you are more than the body</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Dissociating from the body (numbness, disconnection) rather than expanding beyond it &mdash; expansion feels spacious and joyful; dissociation feels flat and empty</li><li>Neglecting the body as a result of this practice &mdash; the point is not to reject the body but to stop being IMPRISONED by it</li><li>Making it intellectual: &ldquo;I understand I am not the body&rdquo; is not the same as FEELING yourself as everywhere</li><li>Forcing the expansion &mdash; it happens naturally when attachment is released; forcing creates tension, not spaciousness</li><li>Confusing temporary bliss experiences with stable realisation &mdash; keep practising even after beautiful experiences</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does Osho connect bodylessness with joy?</summary>
+      <div class="qa-body"><p class="src">Chapter 68, "Everywhere is Joyous"</p><p>Osho explains: all suffering requires a centre that can be hurt. All fear requires something that can be destroyed. The body provides that centre and that something. When you realise you are NOT the body &mdash; when you experience yourself as the awareness in which the body appears &mdash; what can be hurt? What can die? Nothing. And when nothing can be lost, what remains? Joy. Joy is not something you achieve &mdash; it is what remains when fear is removed. It is your natural state, obscured only by the false identification with a vulnerable body.</p></div>
+    </details>
+    <details><summary>Is this not escapism from the body?</summary>
+      <div class="qa-body"><p class="src">Chapter 68</p><p>Osho is clear: this is not escape. Escape would be denying the body, hating it, ignoring its needs. This is INCLUSION &mdash; you include the body within a larger identity. The body remains, is cared for, is used &mdash; but it is no longer a prison. It becomes a vehicle, an instrument, a temporary home. The difference is like the difference between being a prisoner in a house and being the owner who can leave whenever they choose. The house remains the same &mdash; the relationship changes utterly.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Modern psychology recognises that over-identification with the body is a source of immense suffering &mdash; body dysmorphia, aging anxiety, health anxiety, vanity, physical insecurity. This technique addresses the ROOT cause: not the body&rsquo;s imperfections but the misidentification of &ldquo;I&rdquo; with the body. When the &ldquo;I&rdquo; expands beyond the body, all body-related suffering loses its foundation.</p>
+    <p><strong>Research parallel:</strong> Studies on out-of-body experiences and the rubber hand illusion demonstrate that body ownership is a construct of the brain, not a fixed reality. The brain&rsquo;s body schema can be expanded, contracted, or dissolved entirely under certain conditions. This technique deliberately triggers that expansion, revealing that &ldquo;I am this body&rdquo; is a neural construct, not an absolute truth.</p>
+    <div class="essence"><strong>One-line essence</strong>Toss the body-costume aside. Discover you are the space it moves in. And in that spaciousness, find the joy that fear had been hiding.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t3"></span></div>
+</article>
+
+
+<!-- ============================ TECHNIQUE 4 ============================ -->
+<article class="technique" id="t4" data-tech="4">
+  <div class="technique-head"><span>Technique 101 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t4">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Movement &middot; <strong>Tags:</strong> no-thing &middot; unlimiting &middot; expansion &middot; effortless &middot; freedom</div>
+  <blockquote class="sutra">Thinking no thing, will limited-self unlimit.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>When you think ABOUT things, you become limited (mind contracts around objects). When you think NO thing &mdash; when awareness floats free without landing on any content &mdash; the self naturally expands to its unlimited nature. Don&rsquo;t TRY to be unlimited (that&rsquo;s still thinking a thing). Just stop thinking things. Stop landing on content. Float in contentless awareness. The unlimited-self reveals itself when you stop building walls with thoughts.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Understand the mechanism:</strong> Every thought is a contraction. Think &ldquo;apple&rdquo; and awareness contracts to the size of an apple. Think &ldquo;my problem&rdquo; and awareness contracts to the size of a problem. Think NOTHING &mdash; and awareness has no reason to contract. It naturally expands to its unlimited default state. This is not effort; it is the removal of effort.</li>
+      <li><strong>Sit comfortably, eyes closed:</strong> Find a quiet space. 20 minutes of undisturbed time. No agenda, no goal, no technique beyond this one instruction: think no thing.</li>
+      <li><strong>Notice how thinking works:</strong> For the first 5 minutes, simply watch the mind&rsquo;s activity. Notice: each thought is an OBJECT. &ldquo;What&rsquo;s for dinner&rdquo; &mdash; object. &ldquo;I feel tired&rdquo; &mdash; object. &ldquo;Am I doing this right?&rdquo; &mdash; object. Even &ldquo;I am awareness&rdquo; is an object. EVERY thought is a thing.</li>
+      <li><strong>Stop landing:</strong> Imagine awareness is a bird that normally perches on branches (thoughts). Now let the bird fly without landing. A thought appears &mdash; don&rsquo;t land on it. Don&rsquo;t engage. Don&rsquo;t push it away either (pushing is also landing). Just don&rsquo;t land. Let it pass like a cloud you notice but don&rsquo;t follow.</li>
+      <li><strong>Don&rsquo;t try to stop thoughts:</strong> This is crucial. &ldquo;I must stop thinking&rdquo; is itself a thought &mdash; and a very sticky one. Don&rsquo;t try to stop. Just don&rsquo;t engage. Thoughts will continue to arise &mdash; let them. They are not your concern. Your only &ldquo;instruction&rdquo; is: don&rsquo;t land on anything. Don&rsquo;t think ABOUT anything.</li>
+      <li><strong>Notice the expansion:</strong> When you successfully float between thoughts for even a few seconds, notice what happens: the sense of self EXPANDS. It becomes boundless, formless, unlimited. This happens automatically &mdash; you don&rsquo;t have to DO expansion. You just have to stop contracting. Expansion is the natural state when contraction ceases.</li>
+      <li><strong>The paradox of effortlessness:</strong> Any effort to be unlimited IS limitation. Any trying is thinking a thing (&ldquo;I am trying to be unlimited&rdquo; &mdash; that&rsquo;s a thought-object). The technique works precisely because it requires NO effort. It only requires the cessation of effort. Stop doing. Stop thinking. Stop landing. What remains IS the unlimited self.</li>
+      <li><strong>When you find yourself thinking:</strong> And you will, many times &mdash; simply notice: &ldquo;Ah, I was thinking a thing.&rdquo; Don&rsquo;t judge. Don&rsquo;t restart. Don&rsquo;t feel like you failed. Just notice that you were contracted around a thought-object, and gently release the grip. Float free again.</li>
+      <li><strong>Duration and frequency:</strong> 20 minutes, once or twice daily. Over time, the gaps between thoughts lengthen naturally. What was moments of contentless awareness becomes minutes, then the default state. The unlimited self is not something you achieve once &mdash; it is what you ARE when you stop covering it with thought-objects.</li>
+      <li><strong>Integration:</strong> Throughout the day, periodically check: &ldquo;Am I thinking a thing right now?&rdquo; If so, briefly release the grip. Even one second of contentless awareness is enough to remind you of the unlimited nature beneath all thinking. These micro-moments add up.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced</dd>
+    <dt>Duration</dt><dd>20 min</dd><dt>Posture</dt><dd>Seated, comfortable</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Overthinkers; intellectuals; those who have tried many techniques and found them all too &ldquo;busy&rdquo;; anyone ready for radical simplicity</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Gaps between thoughts lengthen &mdash; from milliseconds to seconds to longer</li><li>A sense of vast spaciousness during the gaps</li><li>The &ldquo;limited self&rdquo; (the tense, contracted, worried &ldquo;me&rdquo;) relaxes and expands</li><li>Thinking becomes optional &mdash; you can think when needed and stop when not</li><li>A background peace that persists even when thoughts are present</li><li>The discovery that you exist WITHOUT thoughts &mdash; awareness is prior to thinking</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Trying to stop thoughts through force &mdash; this creates tension, not freedom</li><li>Turning &ldquo;think no thing&rdquo; into a mantra or object of focus &mdash; that&rsquo;s thinking a thing!</li><li>Getting frustrated at the constant arising of thoughts &mdash; thoughts arising is natural; the issue is only ENGAGING with them</li><li>Confusing drowsiness with thoughtlessness &mdash; contentless awareness is ALERT, not sleepy; if you&rsquo;re drifting off, you&rsquo;ve gone unconscious, not thought-free</li><li>Expecting immediate results &mdash; the thinking habit is decades old; patience is essential</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How does Osho distinguish between &ldquo;no thought&rdquo; and unconsciousness?</summary>
+      <div class="qa-body"><p class="src">Chapter 68, "The Limited Self Unlimits"</p><p>Osho is very clear: sleep is also thoughtless, but it is not meditation. The difference is awareness. In sleep, thoughts stop AND awareness dims. In this technique, thoughts stop BUT awareness remains &mdash; bright, alert, present. You are fully awake, fully conscious, simply not thinking about any object. This is the crucial distinction: contentless awareness, not unconsciousness. If you feel sleepy, you have missed the point. Stand up, splash water on your face, and try again with alertness.</p></div>
+    </details>
+    <details><summary>Why does thinking create limitation?</summary>
+      <div class="qa-body"><p class="src">Chapter 68</p><p>Osho explains: every thought has a boundary. &ldquo;Apple&rdquo; is not &ldquo;sky.&rdquo; &ldquo;Love&rdquo; is not &ldquo;anger.&rdquo; Every thought defines by excluding &mdash; this, not that. When awareness identifies with a thought, it takes on that thought&rsquo;s boundaries. It becomes limited to the shape of the thought. Remove all thoughts, and awareness has no reason to take any particular shape. It defaults to its natural state: shapeless, boundless, unlimited. Limitation is not imposed from outside &mdash; you create it fresh with every thought you think.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Cognitive science describes how attention narrows to the object of thought &mdash; attentional tunnelling. This technique reverses that: by not fixating on any object, attention remains open, wide, panoramic. In modern mindfulness terminology, this is &ldquo;open awareness&rdquo; or &ldquo;choiceless awareness&rdquo; &mdash; awareness without a chosen object. The &ldquo;unlimited self&rdquo; is simply awareness in its natural, unconstricted state.</p>
+    <p><strong>Neuroscience parallel:</strong> Default Mode Network research shows that self-referential thinking (the &ldquo;narrative self&rdquo;) correlates with activity in specific brain regions. When these regions quiet (as in deep meditation), practitioners report boundlessness, timelessness, and selflessness. This technique produces exactly that quieting &mdash; not by doing something but by ceasing to do.</p>
+    <div class="essence"><strong>One-line essence</strong>Every thought builds a wall. Think no thing, and all walls vanish. The unlimited self was always here &mdash; hidden behind bricks made of thoughts.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t4"></span></div>
+</article>
+
+
+<!-- ============================ TECHNIQUE 5 ============================ -->
+<article class="technique" id="t5" data-tech="5">
+  <div class="technique-head"><span>Technique 102 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t5">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Movement &middot; <strong>Tags:</strong> space &middot; support &middot; eternal &middot; stillness &middot; absolute</div>
+  <blockquote class="sutra">Enter space, supportless, eternal, still.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>This is the final movement technique &mdash; movement into absolute stillness. Enter SPACE &mdash; not physical space but the space of awareness itself. It is supportless (nothing holds it up &mdash; it holds everything). It is eternal (it was here before birth and will be here after death). It is still (thoughts move within it but it itself never moves). Just enter it. Don&rsquo;t look for support, don&rsquo;t look for ground. Be groundless, supportless, floating in the eternal still space that you are.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Understand what is meant by &ldquo;space&rdquo;:</strong> Not the physical space between objects. Not outer space. But the inner space of awareness &mdash; the infinite field in which all experience appears. Thoughts appear in it. Sensations appear in it. Emotions appear in it. But IT is always still, always present, always unchanged. This is what you are entering.</li>
+      <li><strong>Sit in absolute stillness:</strong> This technique requires physical stillness as a gateway to inner stillness. Sit in a comfortable position and resolve: I will not move for 30 minutes. Not a finger. Not an eyelid if possible. Let the body become a statue. Physical stillness creates the conditions for discovering the stillness that is always present within.</li>
+      <li><strong>Release all support:</strong> Normally, awareness clings to supports: the body (&ldquo;I am here&rdquo;), thoughts (&ldquo;I am thinking this&rdquo;), identity (&ldquo;I am so-and-so&rdquo;), time (&ldquo;it is Tuesday&rdquo;). One by one, release these supports. Stop relying on the body as your anchor. Stop relying on thoughts as your identity. Stop relying on time to orient you. Let go of EVERY support.</li>
+      <li><strong>The terror of supportlessness:</strong> When supports are released, fear may arise &mdash; a vertigo, as if falling into infinite space with nothing to hold. This is normal. It is the ego&rsquo;s panic at losing all its reference points. Breathe through it. The fear is temporary; what lies beyond it is eternal peace. You are not falling &mdash; you are discovering that you never needed support in the first place.</li>
+      <li><strong>Discover: you ARE the support:</strong> The fear passes when you realise: awareness does not NEED support because it IS the support. Everything else rests in awareness &mdash; the body, thoughts, the world. Awareness rests in nothing. It is self-existing, self-luminous, self-sufficient. It is the ground of all grounds. When you stop looking for support OUTSIDE awareness, you discover that awareness is supportless &mdash; and that this is freedom, not terror.</li>
+      <li><strong>Feel the eternity:</strong> This space &mdash; this awareness &mdash; has no beginning and no end. It was not born with the body and will not die with the body. Feel this: not as a belief but as a direct recognition. This awareness that is present right now has ALWAYS been present. It never changes. Bodies change, thoughts change, worlds change &mdash; but this awareness is eternal, unchanging, still.</li>
+      <li><strong>Enter the stillness:</strong> Awareness itself never moves. Thoughts move within it (like fish in an ocean) but the ocean itself is still. Sensations arise and pass (like waves on a surface) but the depths are motionless. Enter those depths. Sink below the waves of thought and sensation into the absolute stillness of pure awareness. It is always here &mdash; you have only to stop being distracted by the surface activity.</li>
+      <li><strong>Rest without reference:</strong> In this space there is no time, no location, no identity. You cannot say &ldquo;I am here&rdquo; because there is no &ldquo;here.&rdquo; You cannot say &ldquo;it has been 10 minutes&rdquo; because there is no time. You cannot say &ldquo;I am [name]&rdquo; because there is no personal identity. Just pure being. Pure awareness. Pure space. Rest here.</li>
+      <li><strong>Duration:</strong> Stay as long as the stillness holds &mdash; 5 minutes, 30 minutes, an hour. When the surface mind begins to stir again (and it will), gently let it. You have tasted the eternal. It doesn&rsquo;t go anywhere. You can return anytime.</li>
+      <li><strong>Return:</strong> When ready to return to ordinary activity, do so slowly. Feel the body. Feel time returning. Feel identity reassembling. But now you know: beneath all of that, the supportless, eternal, still space remains &mdash; always. You can rest in it at any moment by simply releasing your grip on supports.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &nbsp;Very Advanced</dd>
+    <dt>Duration</dt><dd>30 min</dd><dt>Posture</dt><dd>Seated in absolute physical stillness</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Experienced meditators seeking the absolute; those with a solid meditation foundation; practitioners ready to face the groundlessness of being</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>A sense of vast, still space &mdash; infinite in all directions</li><li>The disappearance of time: 30 minutes feel like 2 minutes (or like no time at all)</li><li>Complete cessation of the inner monologue &mdash; not forced silence but natural absence of thought</li><li>A profound, unshakeable peace that nothing can disturb</li><li>The feeling of being &ldquo;self-existing&rdquo; &mdash; needing nothing, depending on nothing</li><li>After the session: a quality of depth, gravity, and stillness that others may notice in your presence</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Looking for the space as an object &mdash; space is not something you find; it is what you ARE when you stop being something else</li><li>Panicking at the groundlessness and grasping for a reference point &mdash; the panic itself is a reference point; let it pass</li><li>Confusing dullness or blankness with the eternal space &mdash; the space is ALIVE, luminous, aware; if it feels dull, you have gone into torpor, not stillness</li><li>Attempting this without adequate preparation &mdash; build a foundation with the earlier techniques in this category first</li><li>Trying to MAINTAIN the state through effort &mdash; the space is effortless; if you&rsquo;re straining, you&rsquo;re still in the mind</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>What does Osho mean by &ldquo;supportless&rdquo;?</summary>
+      <div class="qa-body"><p class="src">Chapter 68, "Enter Space"</p><p>Osho explains: everything in the world needs support. The body needs food and air. Thoughts need objects. Emotions need triggers. The mind needs something to think about. But awareness itself needs NOTHING. It is self-existing. It doesn&rsquo;t depend on the body (it was here in the womb before the body was fully formed). It doesn&rsquo;t depend on thoughts (it exists in the gap between thoughts). It doesn&rsquo;t depend on time (time is a concept that appears WITHIN it). This is what &ldquo;supportless&rdquo; means: awareness is the ultimate ground, needing no ground beneath it.</p></div>
+    </details>
+    <details><summary>Why does the sutra say &ldquo;enter&rdquo; &mdash; where is this space?</summary>
+      <div class="qa-body"><p class="src">Chapter 68</p><p>Osho clarifies: &ldquo;enter&rdquo; is slightly misleading because you are already IN it &mdash; you ARE it. But the language uses &ldquo;enter&rdquo; because from the perspective of the mind, it feels like entering something new. In reality, it is more like a fish &ldquo;entering&rdquo; the ocean &mdash; it was always in the ocean but didn&rsquo;t know it. You &ldquo;enter&rdquo; space by dropping the illusion that you are separate from it. The space is not somewhere else to go to; it is what remains when you stop being distracted by content.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> This is the culmination of all movement techniques &mdash; the ultimate &ldquo;movement&rdquo; is into complete stillness. It describes the nature of awareness itself: uncaused, unsupported, eternal, and still. In Zen, this is called &ldquo;the gateless gate&rdquo; &mdash; you cannot enter it through effort because you are already it. You can only recognise what has always been the case.</p>
+    <p><strong>Phenomenological parallel:</strong> Husserl&rsquo;s phenomenology sought the &ldquo;transcendental ego&rdquo; &mdash; the pure awareness that precedes all content of experience. This technique is the experiential equivalent: strip away all content (body, thought, time, identity) and what remains is pure awareness itself &mdash; the space in which all phenomena appear. It is &ldquo;supportless&rdquo; because it is the ultimate support; &ldquo;eternal&rdquo; because time appears within it; &ldquo;still&rdquo; because all movement happens within its unmoving expanse.</p>
+    <div class="essence"><strong>One-line essence</strong>Enter the space you have always been. It needs no ground, knows no time, moves nowhere &mdash; and it is what you are when everything else is released.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="30">Start a 30-min sitting</button><span class="timer-display" data-display="t5"></span></div>
+</article>
+
+
+<footer>
+  <p>You have reached the end of <em>The Techniques for Movement</em>.</p>
+  <p>6 more categories &mdash; Sensory, Void, Negation, Sleep, Tantra, and Imagination &mdash; are on the way.</p>
+  <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+</footer>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  const html=document.documentElement;
+  const themeBtn=document.getElementById('theme-btn');
+  const stored=localStorage.getItem('vbt-theme');
+  if(stored)html.setAttribute('data-theme',stored);
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  themeBtn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next)});
+
+  const progress=document.querySelector('.progress');
+  function updateProgress(){const h=document.documentElement;const s=h.scrollTop;const t=h.scrollHeight-h.clientHeight;progress.style.width=t>0?(s/t*100)+'%':'0'}
+  document.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+  const FAV_KEY='vbt-movement-favs';
+  const favs=new Set(JSON.parse(localStorage.getItem(FAV_KEY)||'[]'));
+  document.querySelectorAll('.fav-btn').forEach(btn=>{const id=btn.dataset.fav;if(favs.has(id)){btn.classList.add('on');btn.textContent='\u2665'}btn.addEventListener('click',()=>{if(favs.has(id)){favs.delete(id);btn.classList.remove('on');btn.textContent='\u2661'}else{favs.add(id);btn.classList.add('on');btn.textContent='\u2665'}localStorage.setItem(FAV_KEY,JSON.stringify([...favs]))})});
+
+  function playBell(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=432;g.gain.setValueAtTime(0.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.4,ctx.currentTime+0.02);g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+4.5);o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+4.6)}catch(e){}}
+  document.querySelectorAll('.timer-btn').forEach(btn=>{let interval=null;let endTime=0;const minutes=parseInt(btn.dataset.timer,10);const techId=btn.closest('article.technique').id;const display=document.querySelector('[data-display="'+techId+'"]');const original=btn.textContent;function fmt(ms){const s=Math.max(0,Math.ceil(ms/1000));const m=Math.floor(s/60),r=s%60;return m+':'+(r<10?'0':'')+r}function stop(natural){if(interval)clearInterval(interval);interval=null;btn.classList.remove('running');btn.textContent=original;if(natural){display.textContent='Done.';playBell();setTimeout(()=>{display.textContent=''},6000)}else{display.textContent=''}}btn.addEventListener('click',()=>{if(interval){stop(false);return}endTime=Date.now()+minutes*60*1000;btn.classList.add('running');btn.textContent='Stop';const tick=()=>{const left=endTime-Date.now();if(left<=0){stop(true);return}display.textContent=fmt(left)+' remaining'};tick();interval=setInterval(tick,500)})});
+
+  const focusBtn=document.getElementById('focus-btn');
+  let observer=null;
+  focusBtn.addEventListener('click',()=>{const on=!document.body.classList.contains('focus');document.body.classList.toggle('focus',on);focusBtn.setAttribute('aria-pressed',on);if(on&&!observer){observer=new IntersectionObserver((entries)=>{entries.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting))},{threshold:0.4});document.querySelectorAll('article.technique').forEach(a=>observer.observe(a))}});
+
+  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+
+  document.addEventListener('keydown',(e)=>{if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;if(e.key==='j'||e.key==='k'){const arts=[...document.querySelectorAll('article.technique')];const cur=arts.findIndex(a=>a.getBoundingClientRect().top>-100);const idx=e.key==='j'?Math.min(arts.length-1,cur+1):Math.max(0,cur-1);if(arts[idx])arts[idx].scrollIntoView({behavior:'smooth',block:'start'})}});
+
+  const GLOSSARY={'Vigyan Bhairav Tantra':'A ~5,000-year-old Sanskrit text: 112 meditation techniques as a dialogue between Shiva and Devi.','consciousness':'The one awareness that animates all forms \u2014 not personal mind but the universal \u201cI am\u201d that looks through every pair of eyes.','monism':'The philosophical position that only one substance exists. In tantra, that substance is consciousness appearing as many forms.','disidentification':'Loosening the grip of \u201cI am this body/mind/role.\u201d Not rejecting the body but recognising you are more than it.','bodylessness':'The experiential state of not being localized in the physical form \u2014 feeling awareness as spread throughout space.','supportless':'Awareness that needs no ground, no reason, no basis \u2014 it IS the ground. The ultimate freedom of needing nothing to stand on.','space':'Not physical emptiness but the infinite field in which all experience appears. Awareness itself experienced as boundless space.','joy':'The natural state of consciousness when it recognises its own unlimited nature \u2014 not pleasure but causeless being.'};
+  function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+  const gTerms=Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length);
+  document.querySelectorAll('article.technique, header.hero').forEach(article=>{gTerms.forEach(term=>{const re=new RegExp('\\b('+escapeRegex(term)+')\\b','i');const walker=document.createTreeWalker(article,NodeFilter.SHOW_TEXT,{acceptNode:(node)=>{const p=node.parentElement;if(!p)return NodeFilter.FILTER_REJECT;if(p.closest('script,style,.glossary-term,.glossary-block,.controls,.progress,.timer-display,.technique-head,.actions'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});let n;while((n=walker.nextNode())){const m=n.textContent.match(re);if(m){const text=n.textContent;const before=text.slice(0,m.index);const after=text.slice(m.index+m[1].length);const span=document.createElement('span');span.className='glossary-term';span.dataset.term=term;span.tabIndex=0;span.textContent=m[1];const frag=document.createDocumentFragment();if(before)frag.appendChild(document.createTextNode(before));frag.appendChild(span);if(after)frag.appendChild(document.createTextNode(after));n.replaceWith(frag);return}}})});
+
+  let gTip=null;
+  function showGTip(e){const el=e.currentTarget;const term=el.dataset.term;const def=GLOSSARY[term];if(!def)return;if(!gTip){gTip=document.createElement('div');gTip.className='glossary-tooltip';document.body.appendChild(gTip)}gTip.innerHTML='<strong></strong>';gTip.firstChild.textContent=term;gTip.appendChild(document.createTextNode(def));const rect=el.getBoundingClientRect();gTip.style.top=(rect.bottom+window.scrollY+6)+'px';let left=rect.left+window.scrollX;if(left+290>window.innerWidth+window.scrollX)left=window.innerWidth+window.scrollX-296;if(left<8)left=8;gTip.style.left=left+'px';gTip.classList.add('show')}
+  function hideGTip(){if(gTip)gTip.classList.remove('show')}
+  document.querySelectorAll('.glossary-term').forEach(el=>{el.addEventListener('mouseenter',showGTip);el.addEventListener('focus',showGTip);el.addEventListener('mouseleave',hideGTip);el.addEventListener('blur',hideGTip);el.addEventListener('click',(e)=>{e.preventDefault();showGTip(e);setTimeout(hideGTip,6000)})});
+})();
+</script>
+</body>
+</html>
