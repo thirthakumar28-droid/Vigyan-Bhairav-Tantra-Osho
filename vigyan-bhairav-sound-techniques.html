@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 8 sound and mantra techniques from Osho's Vigyan Bhairav Tantra — distilled, with practice instructions, common pitfalls, questions from the book, and modern commentary.">
+<title>The Techniques for Sound & Mantra — Vigyan Bhairav Tantra</title>
+<style>
+:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:200;transition:width .15s ease-out;box-shadow:0 0 8px var(--accent-soft)}
+.controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
+.controls button{width:36px;height:36px;border-radius:999px;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.controls button:hover,.controls button[aria-pressed="true"]{background:var(--bg-soft);color:var(--accent)}
+.controls button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--accent-soft)}
+main{max-width:680px;margin:0 auto;padding:5rem 1.5rem 2rem}
+header.hero{text-align:center;padding:2rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink)}
+.hero .lede{color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;font-size:1.05rem;font-style:italic}
+.hero .meta{font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+.jumplinks{margin-top:2.5rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1.25rem 1.5rem;text-align:left}
+.jumplinks h2{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 1rem;font-weight:600}
+.jumplinks ol{margin:0;padding:0;list-style:none;counter-reset:jl}
+.jumplinks li{counter-increment:jl;border-top:1px solid var(--rule);padding:.55rem 0}
+.jumplinks li:first-child{border-top:0}
+.jumplinks a{text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:.7rem;font-size:.95rem;transition:color .15s}
+.jumplinks a::before{content:counter(jl);font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faint);min-width:1.5rem}
+.jumplinks a:hover{color:var(--accent)}
+.jumplinks .sub{color:var(--ink-faint);font-style:italic;font-size:.85rem}
+article.technique{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:2rem 2rem 1.75rem;margin:0 0 2.5rem;box-shadow:var(--shadow);scroll-margin-top:5rem;position:relative}
+.technique-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.4rem}
+.fav-btn{background:transparent;border:0;cursor:pointer;font-size:1.3rem;color:var(--ink-faint);transition:color .2s,transform .2s;line-height:1;padding:.2rem}
+.fav-btn:hover{transform:scale(1.15);color:var(--accent)}
+.fav-btn.on{color:var(--accent)}
+.tags{font-family:var(--sans);font-size:.75rem;color:var(--ink-faint);margin-bottom:1.5rem;letter-spacing:.02em}
+.tags strong{color:var(--ink-soft);font-weight:600}
+blockquote.sutra{margin:1rem 0 2rem;padding:1.75rem 1.5rem;background:var(--sutra-bg);border-left:3px solid var(--accent);border-radius:4px;font-family:var(--serif);font-size:1.18rem;font-style:italic;line-height:1.55;color:var(--ink);text-align:center;quotes:"\201C" "\201D"}
+blockquote.sutra::before{content:open-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.4em;margin-right:.1em}
+blockquote.sutra::after{content:close-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.6em;margin-left:.1em}
+.section{margin:1.75rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule)}
+.section h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .9rem;font-weight:600}
+.section p{margin:.5rem 0}
+.section ol,.section ul{margin:.5rem 0;padding-left:1.4rem}
+.section li{margin:.35rem 0;line-height:1.65}
+.plain p{font-size:1.02rem;color:var(--ink-soft)}
+.facts dl{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.25rem;margin:0;font-family:var(--sans);font-size:.92rem}
+.facts dt{color:var(--ink-faint);font-weight:600;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase;padding-top:.15rem}
+.facts dd{margin:0;color:var(--ink)}
+.stars{color:var(--accent);letter-spacing:.05em}
+.stars .off{color:var(--rule)}
+.signs ul,.pitfalls ul{list-style:none;padding-left:0}
+.signs li::before{content:"\2022";color:var(--accent);margin-right:.7rem;font-weight:700}
+.pitfalls li::before{content:"\2715";color:#a83232;margin-right:.7rem;font-weight:700;font-size:.9em}
+html[data-theme="dark"] .pitfalls li::before{color:#d96b6b}
+.qa details{border:1px solid var(--rule);border-radius:5px;background:var(--bg);margin:.5rem 0;transition:background .2s}
+.qa details[open]{background:var(--bg-soft)}
+.qa summary{padding:.85rem 1rem;cursor:pointer;font-style:italic;color:var(--ink);list-style:none;display:flex;align-items:flex-start;gap:.6rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"\203A";display:inline-block;color:var(--accent);font-style:normal;transition:transform .2s;margin-top:.05em;flex-shrink:0}
+.qa details[open] summary::before{transform:rotate(90deg)}
+.qa-body{padding:0 1rem 1rem 2rem}
+.qa-body .src{font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.5rem}
+.qa-body p{font-size:.95rem;color:var(--ink-soft);margin:.4rem 0}
+.commentary{background:var(--bg);border-radius:6px;border:1px dashed var(--rule);padding:1.25rem 1.4rem}
+.commentary h3{display:flex;align-items:center;gap:.5rem}
+.commentary h3::before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:999px}
+.commentary .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.4rem}
+.commentary p{font-size:.96rem;color:var(--ink-soft);margin:.6rem 0}
+.commentary .essence{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--rule);font-style:italic;color:var(--ink);font-size:1.02rem}
+.commentary .essence strong{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-style:normal;display:block;margin-bottom:.3rem;font-weight:600}
+.actions{margin-top:1.75rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.timer-btn{font-family:var(--sans);font-size:.9rem;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:.7rem 1.4rem;cursor:pointer;font-weight:500;letter-spacing:.02em;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:0 4px 12px -4px var(--accent)}
+.timer-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
+.timer-btn.running{background:#a83232}
+html[data-theme="dark"] .timer-btn.running{background:#c44}
+.timer-display{font-family:var(--sans);font-variant-numeric:tabular-nums;font-size:.95rem;color:var(--ink-faint)}
+body.focus article.technique{opacity:.25;transition:opacity .5s}
+body.focus article.technique.in-view{opacity:1}
+footer{text-align:center;padding:3rem 0 1rem;border-top:1px solid var(--rule);color:var(--ink-faint);font-family:var(--sans);font-size:.85rem}
+footer p{margin:.4rem 0}
+.about-block,.howto-block,.beginner-block,.glossary-block{margin-top:1.25rem;border-radius:6px;font-family:var(--sans);font-size:.92rem;text-align:left}
+.about-block,.glossary-block{background:var(--bg-card);border:1px solid var(--rule)}
+.about-block summary,.glossary-block summary{padding:.85rem 1.25rem;cursor:pointer;color:var(--ink-soft);list-style:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:flex;align-items:center}
+.about-block summary::-webkit-details-marker,.glossary-block summary::-webkit-details-marker{display:none}
+.about-block summary::before,.glossary-block summary::before{content:"+";margin-right:.6rem;color:var(--accent);font-weight:700;font-size:1.15rem;line-height:1;transition:transform .2s}
+.about-block[open] summary::before,.glossary-block[open] summary::before{content:"\2212"}
+.about-body,.glossary-body{padding:0 1.25rem 1.25rem;border-top:1px solid var(--rule)}
+.about-body p{font-family:var(--serif);margin:.8rem 0;line-height:1.65;color:var(--ink-soft)}
+.glossary-body dl{margin:.8rem 0 0;display:grid;gap:.35rem 1rem}
+.glossary-body dt{font-weight:700;color:var(--accent);font-size:.9rem;margin-top:.55rem}
+.glossary-body dd{margin:0;color:var(--ink-soft);font-family:var(--serif);font-size:.92rem;line-height:1.55}
+.howto-block{background:var(--sutra-bg);border-left:3px solid var(--accent);padding:1.25rem 1.5rem}
+.howto-block h3,.beginner-block h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 .7rem;font-weight:600}
+.howto-block p,.beginner-block p{margin:.5rem 0;font-family:var(--serif);line-height:1.65;color:var(--ink-soft)}
+.howto-block strong,.beginner-block strong{color:var(--ink)}
+.beginner-block{background:var(--bg-soft);border:1px dashed var(--accent-soft);padding:1.25rem 1.5rem}
+.beginner-block a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.beginner-block a:hover{border-bottom-color:var(--accent)}
+.disclaimer{font-size:.78rem;color:var(--ink-faint);font-style:italic;margin:1.25rem 0 0;text-align:center;line-height:1.5}
+.glossary-term{border-bottom:1px dotted var(--accent);cursor:help;color:inherit;padding:0 1px;transition:background .15s}
+.glossary-term:hover,.glossary-term:focus{background:var(--accent-soft);outline:none}
+.glossary-tooltip{position:absolute;background:var(--ink);color:var(--bg);padding:.7rem .9rem;border-radius:6px;font-family:var(--sans);font-size:.82rem;line-height:1.5;max-width:280px;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);z-index:300;opacity:0;pointer-events:none;transition:opacity .15s}
+.glossary-tooltip.show{opacity:1;pointer-events:auto}
+.glossary-tooltip strong{display:block;margin-bottom:.35rem;color:var(--accent-soft);text-transform:uppercase;font-size:.68rem;letter-spacing:.12em}
+@media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.actions,.fav-btn{display:none!important}article.technique{box-shadow:none;border:none;page-break-inside:avoid;padding:0;margin:0 0 1.5rem}blockquote.sutra{background:#f5f5f5;border-left:2px solid #888}main{max-width:none;padding:1rem}.about-block,.glossary-block,.howto-block,.beginner-block,.disclaimer{display:none!important}.glossary-term{background:none!important;border-bottom:1px dotted #888}}
+@media(max-width:600px){body{font-size:17px}article.technique{padding:1.5rem 1.25rem}.controls{top:.5rem;right:.5rem}blockquote.sutra{font-size:1.05rem;padding:1.25rem 1rem}.facts dl{grid-template-columns:1fr;gap:.1rem .5rem}.facts dt{padding-top:.5rem}main{padding:4rem 1rem 2rem}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<nav class="controls" aria-label="Reading controls">
+  <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+  <button id="focus-btn" aria-label="Toggle focus mode" title="Focus mode" aria-pressed="false">&#9678;</button>
+  <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
+</nav>
+<main>
+<header class="hero">
+  <div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 3 of 15</div>
+  <h1>The Techniques for Sound &amp; Mantra</h1>
+  <p class="lede">Eight techniques that use sound &mdash; spoken, heard, imagined, or fading &mdash; as a bridge from the noisy mind to the silent centre. Sound is the subtlest form of matter; follow it inward and it dissolves into pure awareness.</p>
+  <p class="meta">8 techniques &middot; ~10 min read &middot; works fully offline</p>
+  <details class="about-block">
+    <summary>About these techniques</summary>
+    <div class="about-body">
+      <p>These eight techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The sound and mantra sutras form the third major category &mdash; using vibration, resonance, and the dying echo of a tone to carry the mind from word to wordlessness.</p>
+    </div>
+  </details>
+  <aside class="howto-block">
+    <h3>How to use this page</h3>
+    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+    <p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
+  </aside>
+  <aside class="beginner-block">
+    <h3>New to sound meditation?</h3>
+    <p>Start with <a href="#t2">Technique 2 &mdash; bathe in the centre of sound</a>. It requires nothing but ears and a willingness to listen without labelling. Spend 20 minutes a day for 21 days. Then return for what comes next.</p>
+  </aside>
+  <details class="glossary-block">
+    <summary>Glossary &mdash; unfamiliar terms?</summary>
+    <div class="glossary-body">
+      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+      <dl>
+        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+        <dt>AUM (Om)</dt><dd>The primordial sound in Indian tradition &mdash; composed of A, U, M representing creation, sustenance, and dissolution. Considered the sound of the universe itself.</dd>
+        <dt>mantra</dt><dd>A word or phrase repeated to focus the mind. In tantra, the vibration matters more than the meaning.</dd>
+        <dt>nada</dt><dd>Sanskrit for "sound" &mdash; specifically the inner, unstruck sound heard in deep meditation (anahad nada).</dd>
+        <dt>anahad</dt><dd>"Unstruck" &mdash; sound that arises without two things striking each other. The inner hum of existence itself.</dd>
+        <dt>soundfulness</dt><dd>Osho's term for the state where you become so merged with sound that the listener disappears &mdash; only sound remains.</dd>
+        <dt>overtone</dt><dd>A harmonic frequency above the fundamental tone. When you chant AUM, multiple overtones resonate in skull and chest cavities.</dd>
+        <dt>vagus nerve</dt><dd>The longest cranial nerve, connecting brain to gut. Stimulated by humming, chanting, and slow exhales &mdash; activates the rest-and-digest response.</dd>
+        <dt>cymatics</dt><dd>The study of visible sound vibration. Demonstrates how frequencies create geometric patterns in matter.</dd>
+        <dt>default mode network</dt><dd>Brain regions active during mind-wandering. Quiets during focused attention and deep listening.</dd>
+      </dl>
+    </div>
+  </details>
+  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
+  <nav class="jumplinks" aria-label="Techniques in this file">
+    <h2>Techniques in this file</h2>
+    <ol>
+      <li><a href="#t1"><span>Imagine Sanskrit letters as sounds, then feeling, then freedom</span> <span class="sub">&middot; beyond words</span></a></li>
+      <li><a href="#t2"><span>Bathe in the centre of sound</span> <span class="sub">&middot; the waterfall technique</span></a></li>
+      <li><a href="#t3"><span>Intone a sound, as AUM, slowly</span> <span class="sub">&middot; become the sound</span></a></li>
+      <li><a href="#t4"><span>In the beginning of a sound, awake</span> <span class="sub">&middot; the birth of vibration</span></a></li>
+      <li><a href="#t5"><span>While listening to stringed instruments, hear their central sound</span> <span class="sub">&middot; omnipresence through music</span></a></li>
+      <li><a href="#t6"><span>Intone a sound audibly, then less audibly</span> <span class="sub">&middot; sound as passage to feeling</span></a></li>
+      <li><a href="#t7"><span>Silently intone a word ending in "AH"</span> <span class="sub">&middot; the exhale of release</span></a></li>
+      <li><a href="#t8"><span>Enter the sound of your name</span> <span class="sub">&middot; your name as mantra</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<!-- ============================ TECHNIQUE 1 ============================ -->
+<article class="technique" id="t1" data-tech="1">
+  <div class="technique-head"><span>Technique 37 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t1">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> letters &middot; feeling &middot; dissolution &middot; freedom</div>
+  <blockquote class="sutra">Devi, imagine the Sanskrit letters in these honey-filled foci of awareness, first as letters, then more subtly as sounds, then as most subtle feeling. Then, leaving them aside, be free.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Take any word or syllable. First see it as written form. Then hear it as pure sound, dropping the meaning. Then feel it as vibration in the body. Then drop even that &mdash; and what remains is freedom, the awareness prior to all form.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Choose a word &mdash; a Sanskrit syllable like AUM, or any word that resonates.</li>
+      <li>Visualise it as written letters. See the shape in your mind's eye.</li>
+      <li>Now drop the visual &mdash; hear only the sound. Repeat it mentally or aloud.</li>
+      <li>Drop the meaning of the sound. Let it become pure vibration, a humming in the body.</li>
+      <li>Drop even the vibration. Leave everything aside.</li>
+      <li>Rest in what remains &mdash; the silence after all layers have been removed.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>20&ndash;30 min</dd><dt>Posture</dt><dd>Seated, relaxed</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Intellectual types; those who live in words; writers and thinkers</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>Each layer genuinely dissolves &mdash; you can feel the shift from form to sound to vibration to silence</li><li>A moment of pure emptiness after the final "leaving aside"</li><li>The word loses all meaning, becomes absurd, then vanishes</li><li>A sense of spacious freedom behind all words</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Rushing through the layers &mdash; spend real time at each stage</li><li>Clinging to the vibration stage because it feels pleasant &mdash; the instruction is to leave it aside too</li><li>Choosing a word with too much emotional charge &mdash; start with a neutral syllable</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why Sanskrit specifically? Can any language work?</summary>
+      <div class="qa-body"><p class="src">Chapter 25, "From Words to Pure Sounds to Being"</p><p>Osho clarifies: the sutra mentions Sanskrit because it was the original language of the text. But any language works &mdash; because the technique moves away from language entirely. The point is to go from the gross (written form) through the subtle (sound) to the most subtle (feeling) and then beyond. The language is the starting material, not the destination.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Language is layered: symbol (visual) &rarr; phoneme (auditory) &rarr; meaning (cognitive) &rarr; felt-sense (somatic). This technique deconstructs that stack, peeling each layer off. What remains is awareness itself &mdash; prior to representation.</p>
+    <p><strong>Linguistic parallel:</strong> Semantic satiation (repeating a word until it loses meaning) is the accidental, trivial version of this. The sutra makes it intentional and takes it further &mdash; past meaning-loss into body-vibration, then past even that into formlessness.</p>
+    <div class="essence"><strong>One-line essence</strong>Words veil the silence. Peel them back &mdash; form, sound, feeling, nothing &mdash; and the silence was always already here.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t1"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 2 ============================ -->
+<article class="technique" id="t2" data-tech="2">
+  <div class="technique-head"><span>Technique 38 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t2">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> listening &middot; waterfall &middot; omnipresence &middot; immersion</div>
+  <blockquote class="sutra">Bathe in the centre of sound, as in the continuous sound of a waterfall. Or, by putting the fingers in the ears, hear the sound of sounds.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Immerse yourself in ambient sound &mdash; traffic, rain, a fan, a waterfall &mdash; until you are surrounded by it from all directions. Then find the centre of that sound-sphere: that centre is you, the listener. Or plug your ears and listen to the inner sound of your own body.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit anywhere sound is continuous &mdash; near traffic, running water, a fan, rain.</li>
+      <li>Close your eyes. Let the sound arrive from all directions simultaneously.</li>
+      <li>Don't label individual sounds. Let them merge into one ocean of vibration.</li>
+      <li>Feel yourself at the centre of this sphere of sound. You are the hub; sound is the wheel.</li>
+      <li>Rest at the centre. The sounds come to you; you don't go to them.</li>
+      <li>Alternative: press thumbs gently into ears. Listen to the rushing inner sound (blood, neural activity). Stay with it for 10&ndash;20 minutes.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+    <dt>Duration</dt><dd>15&ndash;20 min</dd><dt>Posture</dt><dd>Any</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Auditory learners; city-dwellers; those who find silence intimidating</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>Individual sounds merge into one continuous field</li><li>You feel centred, as if sound is arriving at you from all directions equally</li><li>A sense of spaciousness or vastness opens</li><li>The distinction between "inside" and "outside" blurs</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Labelling sounds &mdash; "that's a car, that's a bird" keeps the mind active</li><li>Choosing harsh or jarring environments &mdash; start with smooth, continuous sounds</li><li>Pressing too hard on the ears (alternative method) &mdash; gentle pressure only</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How does listening to noise lead to silence?</summary>
+      <div class="qa-body"><p class="src">Chapter 25, "Bathe in Sound"</p><p>Osho explains: the technique doesn't fight noise &mdash; it uses it. When you merge with the totality of sound without preference, the labelling mind stops. The mind needs to distinguish, categorise, and name. When sound is allowed as one mass, the mind has nothing to do &mdash; and falls silent naturally. The noise continues; you find silence at its centre.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> This is open-monitoring meditation applied specifically to sound. Instead of focusing on one sound (concentrative), you receive all sounds equally. The brain's auditory cortex, overwhelmed by non-discriminative input, eventually quiets the categorisation circuits. What remains is pure listening &mdash; awareness without object.</p>
+    <p><strong>Modern parallel:</strong> Sound baths (singing bowls, gongs) work on this principle &mdash; saturate the auditory field so the mind gives up trying to track individual sounds. This ancient sutra teaches you to do it with whatever sounds already exist around you.</p>
+    <div class="essence"><strong>One-line essence</strong>You cannot find silence by fighting noise. Drown in the noise &mdash; and at its very centre, silence waits.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t2"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 3 ============================ -->
+<article class="technique" id="t3" data-tech="3">
+  <div class="technique-head"><span>Technique 39 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t3">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> AUM &middot; chanting &middot; merging &middot; vibration</div>
+  <blockquote class="sutra">Intone a sound, as AUM, slowly. As sound enters soundfulness, so do you.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Chant AUM (or any single tone) slowly and with total attention. As the sound fills you completely &mdash; until there is no gap between you and the sound &mdash; you enter the state Osho calls "soundfulness": sound without a separate listener.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit upright. Take three slow breaths to settle.</li>
+      <li>Inhale fully. On the exhale, chant "AUM" slowly &mdash; let each syllable (A-U-M) take several seconds.</li>
+      <li>Feel the vibration in the belly (A), chest (U), and skull (M).</li>
+      <li>Don't just hear the sound &mdash; become it. Let there be no listener separate from the chanting.</li>
+      <li>As the echo fades at the end of each AUM, ride the silence for a moment before the next.</li>
+      <li>Continue for 20&ndash;30 minutes. Let the chant become slower and slower over time.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+    <dt>Duration</dt><dd>20&ndash;30 min</dd><dt>Posture</dt><dd>Seated, upright (for full resonance)</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Everyone; especially those who feel disconnected from body; singers; vocal people</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>The boundary between "I" and "sound" dissolves</li><li>The body vibrates as one instrument</li><li>Time disappears; you don't know how long you've been chanting</li><li>After stopping, the silence is extraordinarily deep</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Chanting too fast &mdash; the instruction is slowly; slower than you think</li><li>Performing the sound rather than becoming it &mdash; drop aesthetics</li><li>Stopping too soon because the mind says "this is boring" &mdash; boredom is the edge; stay past it</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>What is "soundfulness" and how is it different from just hearing?</summary>
+      <div class="qa-body"><p class="src">Chapter 27, "Soundlessness, Soundfulness"</p><p>Osho says: hearing implies a hearer and a heard &mdash; two things. Soundfulness is non-dual: the sound has filled you so completely that the listener has dissolved. It's like a sponge soaked in water &mdash; you can no longer find the sponge separate from the water. You become the vibration. That is the door &mdash; because if the listener has dissolved, what remains is pure consciousness.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Chanting AUM stimulates the vagus nerve through slow exhalation and laryngeal vibration. fMRI studies show AUM chanting deactivates the amygdala and default mode network more effectively than quiet rest. The "merging" experience correlates with reduced self-referential processing.</p>
+    <p><strong>Overtone science:</strong> The three syllables A-U-M create distinct resonance chambers in the body. The transition between them produces overtones that the inner ear registers even when the conscious mind doesn't. These overtones may explain the "filling" quality.</p>
+    <div class="essence"><strong>One-line essence</strong>Chant slowly enough that you dissolve into the chant. When only sound remains, that is the doorway.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t3"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 4 ============================ -->
+<article class="technique" id="t4" data-tech="4">
+  <div class="technique-head"><span>Technique 40 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t4">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> beginning &middot; awakening &middot; subtle &middot; alertness</div>
+  <blockquote class="sutra">In the beginning and gradual refinement of the sound of any letter, awake.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>When you speak or chant any letter or syllable, bring total awareness to the very first instant the sound is born &mdash; the spark before it becomes full voice. That initial impulse, caught with alertness, is a moment of pure awakening.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Choose any simple sound &mdash; "Ah", "Oh", "Mm", or a single letter.</li>
+      <li>Before you voice it, notice the impulse &mdash; the micro-moment when intention becomes vibration.</li>
+      <li>Slowly begin the sound. Catch the very first edge where silence becomes audible.</li>
+      <li>As the sound develops, notice how it refines &mdash; becomes clearer, fuller.</li>
+      <li>Stay alert through the entire arc: birth, growth, peak, decay, silence.</li>
+      <li>Repeat. Each time, try to catch the beginning even earlier &mdash; the pre-sound impulse.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>15&ndash;20 min</dd><dt>Posture</dt><dd>Seated</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Detail-oriented minds; musicians; those who enjoy subtlety</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>You begin to perceive a micro-gap between intention and sound</li><li>The beginning of the sound feels electric, vivid</li><li>Alertness sharpens without tension</li><li>You start noticing "beginnings" in all experience, not just sound</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Analysing instead of feeling &mdash; this is about alertness, not thinking about alertness</li><li>Making the sound too quickly to catch the beginning &mdash; go extremely slowly</li><li>Getting frustrated when you "miss" it &mdash; the missing itself is part of sharpening awareness</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why focus on the beginning of a sound rather than the sound itself?</summary>
+      <div class="qa-body"><p class="src">Chapter 27, "The Beginning of Sound"</p><p>Osho explains: the beginning is where creation happens. At the beginning of any phenomenon, energy is fresh, undivided, pure. Once the sound is established, the mind relaxes and goes unconscious again. But at the beginning, you must be totally present &mdash; because beginnings demand alertness. The technique exploits this natural demand.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Neuroscience calls this "event-related potential" &mdash; the brain's response to the onset of a stimulus is always stronger than to its continuation. This sutra aligns with that: catch the onset, because that's when attention naturally peaks. By making onset-catching deliberate, you train sustained alertness.</p>
+    <p><strong>Mindfulness parallel:</strong> Noting practice in Vipassana ("arising, arising") is similar &mdash; catching phenomena at their birth point. This sutra focuses it specifically on sound, making it more tangible.</p>
+    <div class="essence"><strong>One-line essence</strong>Every sound has a birthday &mdash; a spark from silence into vibration. Catch that spark, and you are awake.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t4"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 5 ============================ -->
+<article class="technique" id="t5" data-tech="5">
+  <div class="technique-head"><span>Technique 41 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t5">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> music &middot; strings &middot; composite &middot; omnipresence</div>
+  <blockquote class="sutra">While listening to stringed instruments, hear their composite central sound; thus omnipresence.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>When listening to a sitar, guitar, or any stringed instrument, don't follow individual notes. Instead, listen for the one unified sound beneath all the notes &mdash; the "hum" that holds the music together. That central sound is omnipresent, and finding it makes you omnipresent too.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Play or listen to any stringed instrument &mdash; sitar, tanpura, guitar, cello, harp.</li>
+      <li>Close your eyes. Don't follow the melody or individual notes.</li>
+      <li>Listen for the one continuous sound underneath &mdash; the drone, the resonance, the overtone that persists even as notes change.</li>
+      <li>Let individual notes fade into background. Only the central hum matters.</li>
+      <li>Merge with that hum. Feel it as the sound of existence itself.</li>
+      <li>Stay in this listening for the duration of the music, and then in the silence after.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+    <dt>Duration</dt><dd>15&ndash;30 min (length of the music)</dd><dt>Posture</dt><dd>Any relaxed position</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Music lovers; those with good ears; anyone who finds silence difficult</dd><dt>Best instrument</dt><dd>Tanpura (Indian drone) or any sustained-resonance instrument</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>The music stops being "entertainment" and becomes a field</li><li>You hear a continuous hum or tone underneath the melody</li><li>A sense of being everywhere the sound is &mdash; not localised in the body</li><li>Deep emotional opening without sentimentality</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Following the melody &mdash; the melody is the surface; you want the depth</li><li>Choosing music with lyrics &mdash; words engage the language brain and pull you out</li><li>Intellectualising "omnipresence" &mdash; just feel the sound everywhere; the concept will follow</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How can a stringed instrument create omnipresence?</summary>
+      <div class="qa-body"><p class="src">Chapter 27, "The Composite Central Sound"</p><p>Osho explains: every stringed instrument produces overtones &mdash; sounds above and below the played note. When you stop tracking individual notes and listen to the totality, you hear something that has no single source. It seems to come from everywhere. That "everywhere" quality is what the sutra means by omnipresence. You merge with a sound that has no boundary &mdash; and therefore you, the listener, become boundless.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Psychoacoustics shows that our brain localises sounds by their transients (attacks). Sustained, resonant tones with rich overtones lose localisation &mdash; they seem to come from "everywhere." The sutra exploits this: by attending to the sustained resonance rather than the note-attacks, you shift from focused to diffuse auditory processing &mdash; and with it, your sense of self diffuses.</p>
+    <p><strong>Nada yoga:</strong> This is the basis of the Indian tradition of Nada Yoga &mdash; using sound (particularly the tanpura drone) as a meditation vehicle. The drone has no melody, no rhythm &mdash; only pure resonance. It is this technique in instrument form.</p>
+    <div class="essence"><strong>One-line essence</strong>Beneath every melody is one sound. Find it, and you find the sound of existence itself &mdash; which is everywhere, and so are you.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t5"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 6 ============================ -->
+<article class="technique" id="t6" data-tech="6">
+  <div class="technique-head"><span>Technique 42 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t6">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> fading &middot; feeling &middot; heart &middot; passage</div>
+  <blockquote class="sutra">Intone a sound audibly, then less and less audibly as feeling deepens into this silent harmony.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Chant any sound aloud. Gradually make it quieter &mdash; softer and softer &mdash; until only the feeling of the sound remains, without any audible vibration. The sound was the vehicle; the feeling is the destination.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Choose a sound &mdash; AUM, a loved one's name, a favourite mantra, or any word.</li>
+      <li>Begin chanting it at normal volume. Full voice.</li>
+      <li>After a few minutes, reduce the volume &mdash; still audible, but softer.</li>
+      <li>Continue reducing. Whisper. Then move to lip-only movement with no sound.</li>
+      <li>Then drop the lips. Only the mental sound remains.</li>
+      <li>Then drop the mental sound. Only the feeling &mdash; the vibration, the emotion, the quality &mdash; remains.</li>
+      <li>Rest in that feeling. It is the silent harmony the sutra speaks of.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>25&ndash;30 min</dd><dt>Posture</dt><dd>Seated or lying</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Devotional types; people who feel more than think; heart-oriented seekers</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>The transition from sound to feeling is seamless &mdash; no gap, no jolt</li><li>The feeling lives on long after the sound has stopped</li><li>Tears, warmth, or tenderness may arise as the heart opens</li><li>The body feels harmonised &mdash; like a bell that has just stopped ringing but still vibrates</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Dropping the volume too fast &mdash; take at least 15 minutes to move from full voice to silence</li><li>Thinking "feeling" means emotion &mdash; it can be; but it can also be a bodily vibration, a quality of space</li><li>Getting stuck at the whisper level and never entering silence</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>What is the "feeling" that remains when sound disappears?</summary>
+      <div class="qa-body"><p class="src">Chapter 29, "Sound as Passage toward Feeling"</p><p>Osho says: the sound always carries a feeling &mdash; like a boat carries a passenger. When the boat reaches the shore (silence), the passenger (feeling) steps off. The feeling is not an emotion specifically &mdash; it is the vibratory quality of the sound experienced in the heart rather than the ears. A-U-M has a feeling-tone of vastness and completion. Your name has a feeling-tone of identity. A lover's name has a feeling-tone of devotion. The technique uses sound to reach that tone, then discards the carrier.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Cognitive science distinguishes between "cold" processing (conceptual) and "hot" processing (felt-sense). Sound starts as auditory cortex activity (cold) but gradually recruits limbic areas (hot) through repetition and emotional association. By progressively fading the auditory input while maintaining attention, you shift entirely into felt-sense mode &mdash; embodied, non-verbal awareness.</p>
+    <p><strong>Japa tradition:</strong> This is the classical progression of japa (mantra repetition): vaikhari (spoken) &rarr; upamshu (whispered) &rarr; manasik (mental) &rarr; ajapa (happening by itself, only feeling). This sutra makes that entire journey explicit in one sitting.</p>
+    <div class="essence"><strong>One-line essence</strong>Sound is the boat. Feeling is the shore. Let the boat dissolve, and you arrive where you always were.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t6"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 7 ============================ -->
+<article class="technique" id="t7" data-tech="7">
+  <div class="technique-head"><span>Technique 45 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t7">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> AH &middot; exhale &middot; release &middot; death &middot; spontaneity</div>
+  <blockquote class="sutra">Silently intone a word ending in "AH." Then in the "HH," effortlessly, the spontaneity.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Choose any word that ends with the sound "AH" (like "Allah," "Buddha," "mama," or simply "ahhh"). Intone it silently, emphasising the final "AH." That "AH" is an exhale, a release, a letting-go. In the effortless silence after the "H" sound &mdash; spontaneity, the uncaused, arises.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit comfortably. Eyes closed.</li>
+      <li>Choose a word ending in "AH" &mdash; or simply use the sound "Ahhh" alone.</li>
+      <li>Silently (mentally) intone the word. Feel the "AH" as a complete exhale &mdash; everything leaving.</li>
+      <li>At the end of the "AH," notice the trailing breath: "HH..." &mdash; a whisper of silence.</li>
+      <li>In that "HH" &mdash; don't do anything. Don't intend, don't seek. Let whatever arises arise by itself.</li>
+      <li>That is spontaneity &mdash; action without a doer, experience without an experiencer.</li>
+      <li>Repeat for 20 minutes.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>20 min</dd><dt>Posture</dt><dd>Seated, relaxed</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>People who hold tension; control-freaks; those who struggle to let go</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>The exhale feels like a complete release &mdash; physical and emotional</li><li>After the "AH," a moment of total emptiness &mdash; no doer</li><li>Something happens by itself: a smile, a sensation, a movement &mdash; without "you" doing it</li><li>A sense of dying and being reborn with each cycle</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Waiting for something spectacular in the "HH" &mdash; spontaneity is often subtle and quiet</li><li>Making the "AH" too aggressive &mdash; it should be a gentle, total exhale, not a shout</li><li>Trying to control what arises in the gap &mdash; control is the opposite of spontaneity</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why specifically "AH"? What is special about this sound?</summary>
+      <div class="qa-body"><p class="src">Chapter 31, "From Sound to Inner Silence"</p><p>Osho explains: "AH" is the sound of complete exhalation &mdash; you cannot say "AH" while inhaling. It is the sound of letting go, the sound of death (the last breath is always an out-breath). By emphasising "AH," you practise a miniature death &mdash; a total release of holding. And in that release, life springs back fresh, unconditioned, spontaneous. It is renewal through surrender.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> The "AH" sound lengthens the exhale, which directly stimulates the vagus nerve and shifts the nervous system from sympathetic (fight-or-flight) to parasympathetic (rest-and-release). The "spontaneity" that follows is the body's natural response when the grip of conscious control loosens &mdash; what somatic therapists call "the unwind."</p>
+    <p><strong>Somatic parallel:</strong> Peter Levine's Somatic Experiencing uses spontaneous micro-movements after release as signs of trauma discharge. This sutra does the same thing: create a total exhale (release), then let whatever needs to happen, happen &mdash; without directing it.</p>
+    <div class="essence"><strong>One-line essence</strong>"AH" is the sound of letting go. In the silence after, life moves by itself &mdash; and that movement is grace.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t7"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 8 ============================ -->
+<article class="technique" id="t8" data-tech="8">
+  <div class="technique-head"><span>Technique 47 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t8">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> name &middot; identity &middot; mantra &middot; dissolution</div>
+  <blockquote class="sutra">Enter the sound of your name and, through this sound, all sounds.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Repeat your own name as a mantra. Not to reinforce identity, but to dissolve it &mdash; because when a name is repeated enough, it loses meaning and becomes pure sound. Through your name, enter sound itself. Through sound itself, enter silence.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit quietly. Close your eyes.</li>
+      <li>Begin repeating your own name &mdash; aloud at first, then softer, then mentally.</li>
+      <li>Don't think about who the name belongs to. Let it be just a sound.</li>
+      <li>As meaning drops away, the name becomes a vibration &mdash; like any other mantra.</li>
+      <li>Follow that vibration inward. It leads to the same silence as any other sound.</li>
+      <li>From that silence, all sounds arise &mdash; including your name. Rest in the source.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+    <dt>Duration</dt><dd>20 min</dd><dt>Posture</dt><dd>Any</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Those with a strong sense of identity; ego-oriented types; people who don't resonate with Sanskrit mantras</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>Your name starts to sound strange, foreign, meaningless</li><li>A gap opens between "you" and "your name" &mdash; you realise you are not the name</li><li>The name becomes as arbitrary and beautiful as birdsong</li><li>A taste of what you are beyond all names</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Reinforcing identity &mdash; if you feel more "me" rather than less, you're holding the meaning too tight</li><li>Using a nickname that triggers emotions &mdash; use your full given name for neutrality</li><li>Comparing this to affirmations &mdash; this is the opposite; you're emptying the name, not filling it</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Won't repeating my name make me more egotistic?</summary>
+      <div class="qa-body"><p class="src">Chapter 31, "Your Name as Mantra"</p><p>Osho says: the ego uses the name as an identification. But repetition destroys identification. Say any word five hundred times and it becomes nonsense &mdash; it loses all connection to meaning. That is exactly the point. You are using the ego's own tool (the name) to dissolve the ego. It is homeopathic: the poison becomes the medicine when given in the right way. After enough repetition, you stand behind the name &mdash; and for the first time, you know you are not it.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Semantic satiation &mdash; the well-documented phenomenon where repeating any word causes it to temporarily lose meaning &mdash; is the mechanism here. But the sutra goes beyond the linguistic trick: it uses your most identity-loaded word (your name) to create a visceral experience of "I am not my name." That disidentification is liberating.</p>
+    <p><strong>IFS parallel:</strong> Internal Family Systems therapy distinguishes "Self" from "parts." Your name belongs to a part &mdash; the social identity. When the name dissolves, you contact Self &mdash; the awareness beneath all roles. This sutra achieves that unburdening through sound alone.</p>
+    <div class="essence"><strong>One-line essence</strong>Your name is the first sound that bound you. Repeat it until it unbinds you &mdash; and discover who was here before the name.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t8"></span></div>
+</article>
+
+<footer>
+  <p>You have reached the end of <em>The Techniques for Sound &amp; Mantra</em>.</p>
+  <p>12 more categories &mdash; Light, Centering, Witnessing, Self-Inquiry, Void, Senses, Movement, Sleep, Tantra, Heart, Death, Imagination, and Mind &mdash; are on the way.</p>
+  <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+</footer>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  const html=document.documentElement;
+  const themeBtn=document.getElementById('theme-btn');
+  const stored=localStorage.getItem('vbt-theme');
+  if(stored)html.setAttribute('data-theme',stored);
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  themeBtn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next)});
+
+  const progress=document.querySelector('.progress');
+  function updateProgress(){const h=document.documentElement;const s=h.scrollTop;const t=h.scrollHeight-h.clientHeight;progress.style.width=t>0?(s/t*100)+'%':'0'}
+  document.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+  const FAV_KEY='vbt-sound-favs';
+  const favs=new Set(JSON.parse(localStorage.getItem(FAV_KEY)||'[]'));
+  document.querySelectorAll('.fav-btn').forEach(btn=>{const id=btn.dataset.fav;if(favs.has(id)){btn.classList.add('on');btn.textContent='\u2665'}btn.addEventListener('click',()=>{if(favs.has(id)){favs.delete(id);btn.classList.remove('on');btn.textContent='\u2661'}else{favs.add(id);btn.classList.add('on');btn.textContent='\u2665'}localStorage.setItem(FAV_KEY,JSON.stringify([...favs]))})});
+
+  function playBell(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=432;g.gain.setValueAtTime(0.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.4,ctx.currentTime+0.02);g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+4.5);o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+4.6)}catch(e){}}
+  document.querySelectorAll('.timer-btn').forEach(btn=>{let interval=null;let endTime=0;const minutes=parseInt(btn.dataset.timer,10);const techId=btn.closest('article.technique').id;const display=document.querySelector('[data-display="'+techId+'"]');const original=btn.textContent;function fmt(ms){const s=Math.max(0,Math.ceil(ms/1000));const m=Math.floor(s/60),r=s%60;return m+':'+(r<10?'0':'')+r}function stop(natural){if(interval)clearInterval(interval);interval=null;btn.classList.remove('running');btn.textContent=original;if(natural){display.textContent='Done.';playBell();setTimeout(()=>{display.textContent=''},6000)}else{display.textContent=''}}btn.addEventListener('click',()=>{if(interval){stop(false);return}endTime=Date.now()+minutes*60*1000;btn.classList.add('running');btn.textContent='Stop';const tick=()=>{const left=endTime-Date.now();if(left<=0){stop(true);return}display.textContent=fmt(left)+' remaining'};tick();interval=setInterval(tick,500)})});
+
+  const focusBtn=document.getElementById('focus-btn');
+  let observer=null;
+  focusBtn.addEventListener('click',()=>{const on=!document.body.classList.contains('focus');document.body.classList.toggle('focus',on);focusBtn.setAttribute('aria-pressed',on);if(on&&!observer){observer=new IntersectionObserver((entries)=>{entries.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting))},{threshold:0.4});document.querySelectorAll('article.technique').forEach(a=>observer.observe(a))}});
+
+  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+
+  document.addEventListener('keydown',(e)=>{if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;if(e.key==='j'||e.key==='k'){const arts=[...document.querySelectorAll('article.technique')];const cur=arts.findIndex(a=>a.getBoundingClientRect().top>-100);const idx=e.key==='j'?Math.min(arts.length-1,cur+1):Math.max(0,cur-1);if(arts[idx])arts[idx].scrollIntoView({behavior:'smooth',block:'start'})}});
+
+  const GLOSSARY={'Vigyan Bhairav Tantra':'A ~5,000-year-old Sanskrit text: 112 meditation techniques as a dialogue between Shiva and Devi.','AUM (Om)':'The primordial sound \u2014 A, U, M representing creation, sustenance, dissolution. The sound of the universe itself.','mantra':'A word or phrase repeated to focus the mind. In tantra, vibration matters more than meaning.','nada':'Sanskrit for "sound" \u2014 specifically the inner, unstruck sound heard in deep meditation.','anahad':'Unstruck \u2014 sound arising without two things striking each other. The inner hum of existence.','soundfulness':'Osho\'s term: being so merged with sound that the listener disappears and only sound remains.','overtone':'A harmonic frequency above the fundamental tone. Multiple overtones resonate during chanting.','vagus nerve':'Longest cranial nerve, brain to gut. Stimulated by humming and slow exhales; activates rest-and-digest.','cymatics':'Study of visible sound vibration \u2014 frequencies creating geometric patterns in matter.','default mode network':'Brain regions active during mind-wandering. Quiets during focused attention and deep listening.'};
+  function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+  const gTerms=Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length);
+  document.querySelectorAll('article.technique, header.hero').forEach(article=>{gTerms.forEach(term=>{const re=new RegExp('\\b('+escapeRegex(term)+')\\b','i');const walker=document.createTreeWalker(article,NodeFilter.SHOW_TEXT,{acceptNode:(node)=>{const p=node.parentElement;if(!p)return NodeFilter.FILTER_REJECT;if(p.closest('script,style,.glossary-term,.glossary-block,.controls,.progress,.timer-display,.technique-head,.actions'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});let n;while((n=walker.nextNode())){const m=n.textContent.match(re);if(m){const text=n.textContent;const before=text.slice(0,m.index);const after=text.slice(m.index+m[1].length);const span=document.createElement('span');span.className='glossary-term';span.dataset.term=term;span.tabIndex=0;span.textContent=m[1];const frag=document.createDocumentFragment();if(before)frag.appendChild(document.createTextNode(before));frag.appendChild(span);if(after)frag.appendChild(document.createTextNode(after));n.replaceWith(frag);return}}})});
+
+  let gTip=null;
+  function showGTip(e){const el=e.currentTarget;const term=el.dataset.term;const def=GLOSSARY[term];if(!def)return;if(!gTip){gTip=document.createElement('div');gTip.className='glossary-tooltip';document.body.appendChild(gTip)}gTip.innerHTML='<strong></strong>';gTip.firstChild.textContent=term;gTip.appendChild(document.createTextNode(def));const rect=el.getBoundingClientRect();gTip.style.top=(rect.bottom+window.scrollY+6)+'px';let left=rect.left+window.scrollX;if(left+290>window.innerWidth+window.scrollX)left=window.innerWidth+window.scrollX-296;if(left<8)left=8;gTip.style.left=left+'px';gTip.classList.add('show')}
+  function hideGTip(){if(gTip)gTip.classList.remove('show')}
+  document.querySelectorAll('.glossary-term').forEach(el=>{el.addEventListener('mouseenter',showGTip);el.addEventListener('focus',showGTip);el.addEventListener('mouseleave',hideGTip);el.addEventListener('blur',hideGTip);el.addEventListener('click',(e)=>{e.preventDefault();showGTip(e);setTimeout(hideGTip,6000)})});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 10 centering techniques from Osho's Vigyan Bhairav Tantra — distilled, with practice instructions, common pitfalls, questions from the book, and modern commentary.">
+<title>The Techniques for Centering — Vigyan Bhairav Tantra</title>
+<style>
+:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:200;transition:width .15s ease-out;box-shadow:0 0 8px var(--accent-soft)}
+.controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
+.controls button{width:36px;height:36px;border-radius:999px;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.controls button:hover,.controls button[aria-pressed="true"]{background:var(--bg-soft);color:var(--accent)}
+.controls button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--accent-soft)}
+main{max-width:680px;margin:0 auto;padding:5rem 1.5rem 2rem}
+header.hero{text-align:center;padding:2rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink)}
+.hero .lede{color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;font-size:1.05rem;font-style:italic}
+.hero .meta{font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+.jumplinks{margin-top:2.5rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1.25rem 1.5rem;text-align:left}
+.jumplinks h2{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 1rem;font-weight:600}
+.jumplinks ol{margin:0;padding:0;list-style:none;counter-reset:jl}
+.jumplinks li{counter-increment:jl;border-top:1px solid var(--rule);padding:.55rem 0}
+.jumplinks li:first-child{border-top:0}
+.jumplinks a{text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:.7rem;font-size:.95rem;transition:color .15s}
+.jumplinks a::before{content:counter(jl);font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faint);min-width:1.5rem}
+.jumplinks a:hover{color:var(--accent)}
+.jumplinks .sub{color:var(--ink-faint);font-style:italic;font-size:.85rem}
+article.technique{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:2rem 2rem 1.75rem;margin:0 0 2.5rem;box-shadow:var(--shadow);scroll-margin-top:5rem;position:relative}
+.technique-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.4rem}
+.fav-btn{background:transparent;border:0;cursor:pointer;font-size:1.3rem;color:var(--ink-faint);transition:color .2s,transform .2s;line-height:1;padding:.2rem}
+.fav-btn:hover{transform:scale(1.15);color:var(--accent)}
+.fav-btn.on{color:var(--accent)}
+.tags{font-family:var(--sans);font-size:.75rem;color:var(--ink-faint);margin-bottom:1.5rem;letter-spacing:.02em}
+.tags strong{color:var(--ink-soft);font-weight:600}
+blockquote.sutra{margin:1rem 0 2rem;padding:1.75rem 1.5rem;background:var(--sutra-bg);border-left:3px solid var(--accent);border-radius:4px;font-family:var(--serif);font-size:1.18rem;font-style:italic;line-height:1.55;color:var(--ink);text-align:center;quotes:"\201C" "\201D"}
+blockquote.sutra::before{content:open-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.4em;margin-right:.1em}
+blockquote.sutra::after{content:close-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.6em;margin-left:.1em}
+.section{margin:1.75rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule)}
+.section h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .9rem;font-weight:600}
+.section p{margin:.5rem 0}
+.section ol,.section ul{margin:.5rem 0;padding-left:1.4rem}
+.section li{margin:.35rem 0;line-height:1.65}
+.plain p{font-size:1.02rem;color:var(--ink-soft)}
+.facts dl{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.25rem;margin:0;font-family:var(--sans);font-size:.92rem}
+.facts dt{color:var(--ink-faint);font-weight:600;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase;padding-top:.15rem}
+.facts dd{margin:0;color:var(--ink)}
+.stars{color:var(--accent);letter-spacing:.05em}
+.stars .off{color:var(--rule)}
+.signs ul,.pitfalls ul{list-style:none;padding-left:0}
+.signs li::before{content:"\2022";color:var(--accent);margin-right:.7rem;font-weight:700}
+.pitfalls li::before{content:"\2715";color:#a83232;margin-right:.7rem;font-weight:700;font-size:.9em}
+html[data-theme="dark"] .pitfalls li::before{color:#d96b6b}
+.qa details{border:1px solid var(--rule);border-radius:5px;background:var(--bg);margin:.5rem 0;transition:background .2s}
+.qa details[open]{background:var(--bg-soft)}
+.qa summary{padding:.85rem 1rem;cursor:pointer;font-style:italic;color:var(--ink);list-style:none;display:flex;align-items:flex-start;gap:.6rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"\203A";display:inline-block;color:var(--accent);font-style:normal;transition:transform .2s;margin-top:.05em;flex-shrink:0}
+.qa details[open] summary::before{transform:rotate(90deg)}
+.qa-body{padding:0 1rem 1rem 2rem}
+.qa-body .src{font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.5rem}
+.qa-body p{font-size:.95rem;color:var(--ink-soft);margin:.4rem 0}
+.commentary{background:var(--bg);border-radius:6px;border:1px dashed var(--rule);padding:1.25rem 1.4rem}
+.commentary h3{display:flex;align-items:center;gap:.5rem}
+.commentary h3::before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:999px}
+.commentary .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.4rem}
+.commentary p{font-size:.96rem;color:var(--ink-soft);margin:.6rem 0}
+.commentary .essence{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--rule);font-style:italic;color:var(--ink);font-size:1.02rem}
+.commentary .essence strong{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-style:normal;display:block;margin-bottom:.3rem;font-weight:600}
+.actions{margin-top:1.75rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.timer-btn{font-family:var(--sans);font-size:.9rem;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:.7rem 1.4rem;cursor:pointer;font-weight:500;letter-spacing:.02em;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:0 4px 12px -4px var(--accent)}
+.timer-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
+.timer-btn.running{background:#a83232}
+html[data-theme="dark"] .timer-btn.running{background:#c44}
+.timer-display{font-family:var(--sans);font-variant-numeric:tabular-nums;font-size:.95rem;color:var(--ink-faint)}
+body.focus article.technique{opacity:.25;transition:opacity .5s}
+body.focus article.technique.in-view{opacity:1}
+footer{text-align:center;padding:3rem 0 1rem;border-top:1px solid var(--rule);color:var(--ink-faint);font-family:var(--sans);font-size:.85rem}
+footer p{margin:.4rem 0}
+.about-block,.howto-block,.beginner-block,.glossary-block{margin-top:1.25rem;border-radius:6px;font-family:var(--sans);font-size:.92rem;text-align:left}
+.about-block,.glossary-block{background:var(--bg-card);border:1px solid var(--rule)}
+.about-block summary,.glossary-block summary{padding:.85rem 1.25rem;cursor:pointer;color:var(--ink-soft);list-style:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:flex;align-items:center}
+.about-block summary::-webkit-details-marker,.glossary-block summary::-webkit-details-marker{display:none}
+.about-block summary::before,.glossary-block summary::before{content:"+";margin-right:.6rem;color:var(--accent);font-weight:700;font-size:1.15rem;line-height:1;transition:transform .2s}
+.about-block[open] summary::before,.glossary-block[open] summary::before{content:"\2212"}
+.about-body,.glossary-body{padding:0 1.25rem 1.25rem;border-top:1px solid var(--rule)}
+.about-body p{font-family:var(--serif);margin:.8rem 0;line-height:1.65;color:var(--ink-soft)}
+.glossary-body dl{margin:.8rem 0 0;display:grid;gap:.35rem 1rem}
+.glossary-body dt{font-weight:700;color:var(--accent);font-size:.9rem;margin-top:.55rem}
+.glossary-body dd{margin:0;color:var(--ink-soft);font-family:var(--serif);font-size:.92rem;line-height:1.55}
+.howto-block{background:var(--sutra-bg);border-left:3px solid var(--accent);padding:1.25rem 1.5rem}
+.howto-block h3,.beginner-block h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 .7rem;font-weight:600}
+.howto-block p,.beginner-block p{margin:.5rem 0;font-family:var(--serif);line-height:1.65;color:var(--ink-soft)}
+.howto-block strong,.beginner-block strong{color:var(--ink)}
+.beginner-block{background:var(--bg-soft);border:1px dashed var(--accent-soft);padding:1.25rem 1.5rem}
+.beginner-block a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.beginner-block a:hover{border-bottom-color:var(--accent)}
+.disclaimer{font-size:.78rem;color:var(--ink-faint);font-style:italic;margin:1.25rem 0 0;text-align:center;line-height:1.5}
+.glossary-term{border-bottom:1px dotted var(--accent);cursor:help;color:inherit;padding:0 1px;transition:background .15s}
+.glossary-term:hover,.glossary-term:focus{background:var(--accent-soft);outline:none}
+.glossary-tooltip{position:absolute;background:var(--ink);color:var(--bg);padding:.7rem .9rem;border-radius:6px;font-family:var(--sans);font-size:.82rem;line-height:1.5;max-width:280px;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);z-index:300;opacity:0;pointer-events:none;transition:opacity .15s}
+.glossary-tooltip.show{opacity:1;pointer-events:auto}
+.glossary-tooltip strong{display:block;margin-bottom:.35rem;color:var(--accent-soft);text-transform:uppercase;font-size:.68rem;letter-spacing:.12em}
+@media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.actions,.fav-btn{display:none!important}article.technique{box-shadow:none;border:none;page-break-inside:avoid;padding:0;margin:0 0 1.5rem}blockquote.sutra{background:#f5f5f5;border-left:2px solid #888}main{max-width:none;padding:1rem}.about-block,.glossary-block,.howto-block,.beginner-block,.disclaimer{display:none!important}.glossary-term{background:none!important;border-bottom:1px dotted #888}}
+@media(max-width:600px){body{font-size:17px}article.technique{padding:1.5rem 1.25rem}.controls{top:.5rem;right:.5rem}blockquote.sutra{font-size:1.05rem;padding:1.25rem 1rem}.facts dl{grid-template-columns:1fr;gap:.1rem .5rem}.facts dt{padding-top:.5rem}main{padding:4rem 1rem 2rem}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<nav class="controls" aria-label="Reading controls">
+  <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+  <button id="focus-btn" aria-label="Toggle focus mode" title="Focus mode" aria-pressed="false">&#9678;</button>
+  <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
+</nav>
+<main>
+<header class="hero">
+  <div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 2 of 15</div>
+  <h1>The Techniques for Centering</h1>
+  <p class="lede">Ten techniques that bring awareness to the still point within the body &mdash; the spine, the navel, the heart-space, the middle between any two opposites. The centre is always present; these methods simply show you where to look.</p>
+  <p class="meta">10 techniques &middot; ~12 min read &middot; works fully offline</p>
+  <details class="about-block">
+    <summary>About these techniques</summary>
+    <div class="about-body">
+      <p>These ten techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. These centering sutras come from the body-awareness and posture chapters &mdash; the techniques that use the physical form as a doorway to the formless.</p>
+    </div>
+  </details>
+  <aside class="howto-block">
+    <h3>How to use this page</h3>
+    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+    <p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
+  </aside>
+  <aside class="beginner-block">
+    <h3>New to centering?</h3>
+    <p>Start with <a href="#t4">Technique 4 &mdash; feel awareness filling your spine</a>. It is the most iconic centering sutra and needs no special posture. Spend 20 minutes a day for 21 days. Then return for what comes next.</p>
+  </aside>
+  <details class="glossary-block">
+    <summary>Glossary &mdash; unfamiliar terms?</summary>
+    <div class="glossary-body">
+      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+      <dl>
+        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+        <dt>centering</dt><dd>The act of bringing awareness to a still point inside the body or mind &mdash; a location where movement pauses and the witness can rest.</dd>
+        <dt>sushumna</dt><dd>The central energy channel running along the spinal cord in yogic anatomy. When prana flows through it, one enters a state of balance.</dd>
+        <dt>hara</dt><dd>The Japanese term (tanden in Chinese) for the energy centre two inches below the navel &mdash; the body's gravitational and vital centre.</dd>
+        <dt>chakra</dt><dd>Literally "wheel" &mdash; an intersection of energy channels in the subtle body. The seven main chakras correspond to the spine from base to crown.</dd>
+        <dt>kundalini</dt><dd>Dormant energy said to rest at the base of the spine. When awakened, it rises through the sushumna toward the crown.</dd>
+        <dt>witness</dt><dd>The observing awareness behind all experience &mdash; the "I" that watches thoughts, sensations, and emotions without being any of them.</dd>
+        <dt>samadhi</dt><dd>A deep meditative state of unification; absorption beyond ordinary self-consciousness.</dd>
+        <dt>proprioception</dt><dd>The body's internal sense of its own position and movement &mdash; the "sixth sense" that knows where your limbs are without looking.</dd>
+        <dt>interoception</dt><dd>The sense of the internal state of the body &mdash; heartbeat, gut feeling, breath, temperature. Key to embodied awareness.</dd>
+      </dl>
+    </div>
+  </details>
+  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
+  <nav class="jumplinks" aria-label="Techniques in this file">
+    <h2>Techniques in this file</h2>
+    <ol>
+      <li><a href="#t1"><span>Feel the cosmos as translucent ever-living presence</span> <span class="sub">&middot; stone-like</span></a></li>
+      <li><a href="#t2"><span>In a moving vehicle, rhythmically sway</span> <span class="sub">&middot; motion as meditation</span></a></li>
+      <li><a href="#t3"><span>Pierce a point in the body with attention</span> <span class="sub">&middot; single-point focus</span></a></li>
+      <li><a href="#t4"><span>Feel awareness filling your spine</span> <span class="sub">&middot; the iconic centering sutra</span></a></li>
+      <li><a href="#t5"><span>Close the seven openings of the head</span> <span class="sub">&middot; seal and listen</span></a></li>
+      <li><a href="#t6"><span>Let the senses be absorbed in the heart</span> <span class="sub">&middot; inward gathering</span></a></li>
+      <li><a href="#t7"><span>Keep in the middle &mdash; do not choose</span> <span class="sub">&middot; the middle way</span></a></li>
+      <li><a href="#t8"><span>Sit on the buttocks only, legs and arms unsupported</span> <span class="sub">&middot; balance point</span></a></li>
+      <li><a href="#t9"><span>Concentrate on a pain in the body</span> <span class="sub">&middot; pain as doorway</span></a></li>
+      <li><a href="#t10"><span>Feel your body as weightless</span> <span class="sub">&middot; dissolving gravity</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<!-- ============================ TECHNIQUE 1 ============================ -->
+<article class="technique" id="t1" data-tech="1">
+  <div class="technique-head"><span>Technique 10 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t1">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> body &middot; stillness &middot; stone &middot; presence</div>
+  <blockquote class="sutra">Feel the cosmos as a translucent ever-living presence.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Instead of perceiving the world as made of solid, separate objects, feel everything around you &mdash; the air, the walls, the sky &mdash; as a single luminous aliveness, transparent and pulsing with existence.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit or stand in a quiet place. Eyes open, soft-focused.</li>
+      <li>Look at whatever is in front of you &mdash; don't label it.</li>
+      <li>Feel into the sense that the scene is alive, made of the same shimmering substance as your own awareness.</li>
+      <li>Let boundaries between objects dissolve &mdash; not by thinking, but by relaxing the effort of separating.</li>
+      <li>Rest in this translucent feeling for 20 minutes.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>20 min</dd><dt>Posture</dt><dd>Any &mdash; seated, standing, or walking</dd><dt>Eyes</dt><dd>Open, soft-focused</dd><dt>Best for</dt><dd>Visual or intuitive temperaments; those who feel separate from the world</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>Objects feel less solid, more alive</li><li>The boundary between "me" and "world" thins</li><li>A quiet awe or tenderness arises without reason</li><li>You stop naming things and just see</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Trying to hallucinate transparency &mdash; this is a feeling, not a visual effect</li><li>Turning it into philosophy &mdash; "everything is one" is a thought, not the experience</li><li>Forcing it in noisy environments before the knack is formed</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How can I feel the cosmos as alive when so much of it seems dead matter?</summary>
+      <div class="qa-body"><p class="src">Chapter 7, "The Techniques for Centering"</p><p>Osho says: what you call "dead" is only the label of a mind that hasn't looked deeply enough. Even a stone is vibrating at the atomic level. The word "translucent" in the sutra doesn't ask you to see through walls &mdash; it asks you to see through the mind's habit of deadening reality into nouns.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Perception is constructive: your brain assembles a solid world from electrical signals. This sutra invites you to relax the assembly, to notice the raw aliveness before the brain freezes it into labelled objects.</p>
+    <p><strong>Neuroscience parallel:</strong> "Predictive processing" theory says we mostly see our expectations, not reality. Relaxing predictions (the "translucent" feeling) correlates with increased gamma-wave activity and the open-awareness states measured in experienced meditators.</p>
+    <div class="essence"><strong>One-line essence</strong>The world is not made of things &mdash; it is made of presence. See that, and you are centred in the living whole.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t1"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 2 ============================ -->
+<article class="technique" id="t2" data-tech="2">
+  <div class="technique-head"><span>Technique 20 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t2">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> movement &middot; vehicle &middot; rhythm &middot; swaying</div>
+  <blockquote class="sutra">In a moving vehicle, by rhythmically swaying, experience. Or in a still vehicle, by letting yourself swing in slowing invisible circles.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Use the natural movement of a bus, train, or swing to let the body rock gently. Instead of bracing against the motion, surrender to it &mdash; let it carry awareness inward to the still axis around which the swaying happens.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit in a moving bus, train, or on a swing. Close your eyes if safe.</li>
+      <li>Let the body sway naturally with the motion &mdash; don't resist.</li>
+      <li>Feel for the still point inside around which the swaying happens &mdash; the axis.</li>
+      <li>Rest attention at that centre. Let the body keep moving, but you stay at the unmoving point.</li>
+      <li>If in a still room, gently initiate small circular swaying yourself, then let the circles slow down until they stop &mdash; remain at the zero-point.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+    <dt>Duration</dt><dd>10&ndash;20 min (or any commute)</dd><dt>Posture</dt><dd>Seated in vehicle, or on a swing</dd><dt>Eyes</dt><dd>Closed (if safe) or half-closed</dd><dt>Best for</dt><dd>Commuters; restless bodies that can't sit still</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>The swaying feels effortless, almost pleasurable</li><li>A sense of a still "core" emerges distinct from the moving body</li><li>Time seems to slip &mdash; the commute feels shorter</li><li>The mind quiets without effort</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Forcing large movements &mdash; subtle rocking is more effective</li><li>Getting motion-sick by closing eyes on a winding road &mdash; choose smooth transit</li><li>Intellectualising the "centre" instead of feeling it physically</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Can movement really lead to stillness?</summary>
+      <div class="qa-body"><p class="src">Chapter 9, "Techniques for Centering"</p><p>Osho explains: stillness is not the opposite of movement &mdash; it is the axis of movement. A wheel moves, but the hub remains still. The sutra uses physical motion to reveal the hub &mdash; your own centre that never moves, no matter what the body does.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Your vestibular system constantly computes a still reference frame even while the body is in motion. This sutra makes that computation conscious &mdash; you feel the still frame directly, not just compute it unconsciously.</p>
+    <p><strong>Modern parallel:</strong> Rocking has been shown to synchronise brain oscillations and promote sleep (Current Biology, 2019). The centering aspect works similarly &mdash; rhythmic motion entrains attention inward.</p>
+    <div class="essence"><strong>One-line essence</strong>Movement is the wheel. You are the hub. Find the hub, and motion becomes meditation.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="15">Start a 15-min sitting</button><span class="timer-display" data-display="t2"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 3 ============================ -->
+<article class="technique" id="t3" data-tech="3">
+  <div class="technique-head"><span>Technique 13 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t3">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> concentration &middot; single-point &middot; body &middot; piercing</div>
+  <blockquote class="sutra">Or, imagine the five-coloured circles of the peacock tail to be your five senses in illimitable space. Now let their beauty melt within. Similarly, at any point in space or on a wall &mdash; until the point dissolves. Then your wish for another comes true.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Choose any small point &mdash; a dot on the wall, a candle flame, or even an imagined point inside your body &mdash; and pour your total attention into it until the point dissolves and only awareness remains.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit facing a blank wall. Place a small dot at eye-level (or use an existing mark).</li>
+      <li>Gaze at the point without blinking as long as comfortable. Eyes may water &mdash; that's fine.</li>
+      <li>Let all peripheral vision blur. Only the point exists.</li>
+      <li>Eventually the point may seem to disappear, or expand, or merge with you.</li>
+      <li>When the point dissolves, close your eyes and rest in the spacious awareness that remains.</li>
+      <li>Alternatively: close your eyes from the start and concentrate on an internal point &mdash; the navel, the heart, or the third eye.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>15&ndash;30 min</dd><dt>Posture</dt><dd>Seated, upright</dd><dt>Eyes</dt><dd>Open (fixed gaze) or closed (inner point)</dd><dt>Best for</dt><dd>Strong-willed minds; those who like clear tasks</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>The point seems to shimmer or disappear</li><li>Peripheral vision fades naturally</li><li>A deep quiet descends, thought-free</li><li>Time distortion &mdash; 20 minutes feel like 5</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Straining the eyes &mdash; blink when you must; the point is a focus, not a punishment</li><li>Choosing too complex an object &mdash; the simpler the point, the better</li><li>Expecting visions &mdash; the goal is dissolution of the point, not fireworks</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does concentrating on a point lead to freedom rather than more narrowness?</summary>
+      <div class="qa-body"><p class="src">Chapter 8, "Centering &amp; Concentration"</p><p>Osho says: narrowing attention to a single point is like narrowing a river into a gorge &mdash; the energy intensifies until it explodes through. The point is a device; once concentration is total, the device falls away and what remains is unlimited awareness, because the mind that limits has been exhausted into silence.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Attention is normally scattered across thousands of micro-objects per second. Giving it one single object starves the default mode network of fuel. When the DMN goes quiet, you experience what meditators call "emptiness" &mdash; not blankness, but awareness without content.</p>
+    <p><strong>Trataka parallel:</strong> This is essentially the yogic practice of trataka (steady gazing). Research shows it improves attention span, reduces anxiety, and can induce mild altered states even in beginners.</p>
+    <div class="essence"><strong>One-line essence</strong>Give attention one point, and when the point dissolves, what remains is you &mdash; boundless.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t3"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 4 ============================ -->
+<article class="technique" id="t4" data-tech="4">
+  <div class="technique-head"><span>Technique 14 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t4">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> spine &middot; awareness &middot; sushumna &middot; energy</div>
+  <blockquote class="sutra">Or, feel your form as awareness &mdash; above, below, and through your heart &mdash; and let the form melt away. Your spinal column, let it be as an axis of awareness, feeling it as such.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Feel your spine &mdash; from tailbone to crown &mdash; not as bone, but as a column of pure awareness. Let everything else (flesh, muscles, identity) dissolve until only that luminous axis remains.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit with spine naturally upright &mdash; not rigid, but aligned.</li>
+      <li>Close your eyes. Bring attention to the base of the spine.</li>
+      <li>Slowly feel upward: sense the spine not as a physical rod but as a thread of light or awareness.</li>
+      <li>Let the muscles, organs, and flesh around it fade from attention &mdash; only the axis remains.</li>
+      <li>Rest at the top of the head. Then feel the entire column simultaneously, from base to crown.</li>
+      <li>Stay with this feeling for 20&ndash;30 minutes. If attention drifts, return to the base and travel upward again.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner&ndash;Intermediate</dd>
+    <dt>Duration</dt><dd>20&ndash;30 min</dd><dt>Posture</dt><dd>Seated, spine upright</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Body-oriented people; those who like structure; energy workers</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>A tingling or warmth along the spine</li><li>The body feels lighter, almost hollow</li><li>A sense of vertical expansion &mdash; as if the axis extends beyond the body</li><li>Deep silence without effort</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Trying to "push" energy upward &mdash; this is awareness, not force</li><li>Slouching so the spine cannot be felt clearly &mdash; alignment matters</li><li>Confusing visualisation with feeling &mdash; feel the spine, don't draw a mental picture</li><li>Getting spooked by tingling &mdash; it's just proprioceptive attention intensifying</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Is this the same as kundalini awakening?</summary>
+      <div class="qa-body"><p class="src">Chapter 8, "The Spinal Column"</p><p>Osho clarifies: this technique is subtler and gentler. Kundalini practices force energy upward; this sutra simply brings awareness to the already-existing axis. It does not push &mdash; it recognises. Recognition can lead to the same result eventually, but without the turbulence that forced kundalini methods sometimes create.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> The spine is your literal axis &mdash; the first thing that forms in embryonic development. Bringing awareness there taps into the deepest layer of proprioception, pre-verbal, pre-emotional. You are contacting the body before the mind layered stories on top of it.</p>
+    <p><strong>Somatic parallel:</strong> Body-based therapies (Feldenkrais, Alexander Technique) emphasise spinal awareness as the foundation of ease. This sutra takes it further: the spine isn't just physical &mdash; it's awareness itself taking a vertical form.</p>
+    <div class="essence"><strong>One-line essence</strong>You are not in the body. The body is arranged around your awareness &mdash; and that awareness is shaped like a spine.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t4"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 5 ============================ -->
+<article class="technique" id="t5" data-tech="5">
+  <div class="technique-head"><span>Technique 15 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t5">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> head &middot; seal &middot; sound &middot; inner listening</div>
+  <blockquote class="sutra">Closing the seven openings of the head with your hands, a space between your eyes becomes all-inclusive.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Block the ears, eyes, nostrils, and mouth with your fingers. With all outer input sealed, attention naturally falls inward to the space between the eyes &mdash; the third eye area &mdash; and a vast inner world opens.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit comfortably. Take a few normal breaths.</li>
+      <li>Place your thumbs gently in the ears to seal them.</li>
+      <li>Place index fingers lightly over closed eyelids.</li>
+      <li>Place middle fingers on the sides of the nostrils (press gently to partially close).</li>
+      <li>Place ring fingers above the upper lip, little fingers below the lower lip.</li>
+      <li>Breathe softly through the slight gap in the nostrils. Don't hold your breath.</li>
+      <li>Rest attention in the space between the eyebrows. Listen to the inner sound.</li>
+      <li>Stay for 5&ndash;15 minutes. Release when ready.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>5&ndash;15 min per round</dd><dt>Posture</dt><dd>Seated, upright</dd><dt>Eyes</dt><dd>Closed (covered)</dd><dt>Best for</dt><dd>Those drawn to inner sound; people who get overwhelmed by external stimuli</dd><dt>Note</dt><dd>This is the yogic Shanmukhi Mudra / Yoni Mudra</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>You hear an internal hum, buzz, or high-pitched tone</li><li>The space between eyebrows feels warm or expansive</li><li>A sense of being inside a vast cave or dome</li><li>External world vanishes; deep interiority</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Pressing too hard on the eyes &mdash; feather-light touch only</li><li>Holding the breath &mdash; keep breathing softly through partial nostrils</li><li>Arms tiring quickly &mdash; support elbows on a table or use a prop</li><li>Getting disturbed by inner sounds &mdash; they are normal, just listen without fear</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>What is the inner sound one hears when the ears are sealed?</summary>
+      <div class="qa-body"><p class="src">Chapter 9, "The Seven Openings"</p><p>Osho explains that the body is never silent &mdash; blood circulation, neural activity, the heartbeat all create sound. Normally drowned out by external noise, sealing the ears reveals this primal hum. Tantra calls it "anahad nad" &mdash; the unstruck sound. It is not mystical; it is the sound of your own aliveness.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Sensory deprivation, even partial, shifts attention from exteroception to interoception. The brain, starved of input, amplifies internal signals. The "third eye" sensation is the prefrontal cortex becoming aware of its own activity without the usual outward-facing data stream.</p>
+    <p><strong>Float-tank parallel:</strong> Modern flotation therapy achieves similar states &mdash; reduced external input, amplified inner awareness, deep relaxation. This 5,000-year-old technique does it with just your ten fingers.</p>
+    <div class="essence"><strong>One-line essence</strong>Seal the doors and the inner sky reveals itself &mdash; it was always there, just drowned out.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="10">Start a 10-min sitting</button><span class="timer-display" data-display="t5"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 6 ============================ -->
+<article class="technique" id="t6" data-tech="6">
+  <div class="technique-head"><span>Technique 16 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t6">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> heart &middot; senses &middot; absorption &middot; devotion</div>
+  <blockquote class="sutra">Let your senses be absorbed into your heart. Let the centre of your being be the centre of all your senses.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Instead of attention flowing outward through the senses, reverse it: let seeing, hearing, touching, tasting, and smelling all flow inward &mdash; as if the heart is receiving them, absorbing them. The heart becomes the centre of perception.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit quietly. Eyes closed or half-open.</li>
+      <li>Become aware of all sensory input simultaneously &mdash; sounds, skin sensations, the taste in your mouth, residual light behind eyelids.</li>
+      <li>Imagine or feel all of these streams flowing inward, converging at the heart centre (middle of the chest).</li>
+      <li>The heart is a lake; the senses are rivers emptying into it.</li>
+      <li>Rest in the heart as it receives everything. Don't go outward to meet stimuli &mdash; let them come to you.</li>
+      <li>Stay for 20 minutes. You may feel warmth or tenderness in the chest.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>20 min</dd><dt>Posture</dt><dd>Seated or lying down</dd><dt>Eyes</dt><dd>Closed or half-open</dd><dt>Best for</dt><dd>Feeling types; those with active senses; people who feel scattered</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>The chest feels warm, alive, or expanding</li><li>Sensory input feels less intrusive &mdash; you're receiving, not grasping</li><li>A sense of integration &mdash; everything belongs</li><li>Unexpected tenderness or gratitude</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Trying to suppress senses &mdash; you're not blocking them, you're redirecting them</li><li>Confusion between physical heart and heart centre &mdash; use the middle of the chest</li><li>Getting emotional and stopping &mdash; emotion is a sign of opening; let it pass</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How does the heart "absorb" senses? Isn't awareness in the brain?</summary>
+      <div class="qa-body"><p class="src">Chapter 9, "The Heart as Centre"</p><p>Osho explains that in the Eastern understanding, the heart is the true centre of being &mdash; not anatomically, but energetically. The brain processes, but the heart receives. When senses flow toward the heart, you shift from processing-mode to being-mode. The technique doesn't require physiological accuracy &mdash; it requires a felt shift in the direction of attention.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> The heart has its own neural network (~40,000 neurons). HeartMath research shows that "heart coherence" &mdash; a state where heart rhythms become smooth and ordered &mdash; correlates with reduced cortisol, increased DHEA, and improved emotional regulation. Directing attention to the heart promotes this coherence.</p>
+    <p><strong>Polyvagal parallel:</strong> The vagus nerve connects the heart to the brain. When attention rests at the heart, vagal tone increases, triggering the parasympathetic "rest and connect" response.</p>
+    <div class="essence"><strong>One-line essence</strong>The senses scatter you outward. Gather them at the heart, and you come home.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t6"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 7 ============================ -->
+<article class="technique" id="t7" data-tech="7">
+  <div class="technique-head"><span>Technique 17 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t7">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> middle &middot; non-choosing &middot; equanimity &middot; balance</div>
+  <blockquote class="sutra">Unminding mind, keep in the middle &mdash; until.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Whenever you notice the mind leaning toward one side of a pair of opposites &mdash; like/dislike, success/failure, love/hate &mdash; don't choose either. Stay in the exact middle. Don't lean. Stay there "until" &mdash; until something opens.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>In daily life, watch for any moment you are choosing or preferring.</li>
+      <li>Notice both poles: "I like this" and "I dislike that."</li>
+      <li>Deliberately stay in neither. Don't suppress the preference &mdash; just don't follow it.</li>
+      <li>Stay at the zero point, the fulcrum, between yes and no.</li>
+      <li>In formal sitting: notice thoughts dividing reality into pairs. For each pair, rest in the middle.</li>
+      <li>The word "until" means: don't set a time. Stay in the middle until something happens by itself.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced</dd>
+    <dt>Duration</dt><dd>All day (or 20-min formal sitting)</dd><dt>Posture</dt><dd>Any &mdash; this is primarily a life-technique</dd><dt>Eyes</dt><dd>Open (daily life) or closed (sitting)</dd><dt>Best for</dt><dd>Over-thinkers; indecisive minds; those caught in judgment loops</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>A surprising spaciousness between thoughts</li><li>Situations that normally trigger reactivity feel neutral</li><li>A sense of freedom &mdash; "I don't have to choose"</li><li>Equanimity even amid chaos</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Confusing the middle with indifference &mdash; this is alert balance, not numbness</li><li>Using it to avoid decisions in practical life &mdash; this is an inner practice, not outer paralysis</li><li>Turning "not choosing" into a rule you rigidly follow &mdash; even that is a choice</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Isn't the middle just fence-sitting? How is it different from cowardice?</summary>
+      <div class="qa-body"><p class="src">Chapter 10, "The Middle Way"</p><p>Osho says: fence-sitting is confusion &mdash; the middle is clarity. The fence-sitter wants to choose but cannot. The one in the middle has seen that both sides are the same energy with different labels, and no longer needs to choose. It is not avoidance &mdash; it is transcendence. Buddha called it the "middle way" for this reason.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> The brain's evaluation system (anterior cingulate cortex) constantly categorises experience as approach/avoid. This sutra short-circuits that binary by refusing to activate either circuit. The result: the ACC quiets, and open monitoring awareness (associated with the PFC) takes over.</p>
+    <p><strong>ACT parallel:</strong> In Acceptance and Commitment Therapy, "defusion" is the practice of noticing a thought without buying into it or pushing it away. This is the modern clinical version of "keep in the middle."</p>
+    <div class="essence"><strong>One-line essence</strong>The mind divides. You, the witness, don't need to take sides. Stay in the middle, and the mind falls silent.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t7"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 8 ============================ -->
+<article class="technique" id="t8" data-tech="8">
+  <div class="technique-head"><span>Technique 19 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t8">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> balance &middot; body &middot; buttocks &middot; unsupported</div>
+  <blockquote class="sutra">Sit only on the buttocks, leaving legs and arms unsupported. Suddenly, the centering.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Sit on the floor with only your buttocks touching the ground &mdash; legs lifted, arms lifted or free. The moment you find physical balance, the inner centre reveals itself. The body's search for equilibrium becomes awareness's search for stillness.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Sit on a firm, flat surface.</li>
+      <li>Lean back slightly and lift both feet off the ground. Arms can extend for balance or rest on knees.</li>
+      <li>Find the tipping point where you're balanced solely on the sit-bones.</li>
+      <li>Hold this position &mdash; not with strain, but with alert relaxation.</li>
+      <li>Notice: the moment balance is found, the mind stops. That stop is the centering.</li>
+      <li>If you fall, simply try again. Each fresh balance attempt is a fresh moment of centering.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner (physically demanding)</dd>
+    <dt>Duration</dt><dd>5&ndash;10 min (build up gradually)</dd><dt>Posture</dt><dd>Navasana-like (boat pose)</dd><dt>Eyes</dt><dd>Open or closed</dd><dt>Best for</dt><dd>Physical people; restless bodies; those who "can't sit still"</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>A sudden hush in the mind the moment balance is achieved</li><li>The body feels integrated &mdash; one unit rather than parts</li><li>Joy or laughter arising from the playfulness of balancing</li><li>After release, a deep settling and stillness</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Over-straining the abs &mdash; this shouldn't be an exercise; find ease</li><li>Holding the breath to stabilise &mdash; keep breathing normally</li><li>Giving up too soon &mdash; the centering often happens just as the body wobbles</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>This seems like just a yoga pose. What's the spiritual dimension?</summary>
+      <div class="qa-body"><p class="src">Chapter 10, "Balance &amp; Centering"</p><p>Osho says: the difference between a yoga pose and this technique is intention. In yoga, you hold the pose for the body. Here, you use the body's search for balance as a mirror for consciousness. The moment the body finds centre, the mind involuntarily stops &mdash; because balance demands total presence. That total presence IS meditation.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Balancing requires real-time proprioceptive feedback that monopolises attention &mdash; leaving nothing for discursive thought. This is why balancing poses in yoga are inherently meditative. The sutra makes this explicit: use the physical demand of balance as a shortcut to mental stillness.</p>
+    <p><strong>Flow-state parallel:</strong> Csikszentmihalyi's flow research shows that challenge-skill balance silences the inner critic. This pose creates that balance instantly &mdash; challenging enough to demand full attention, simple enough to not frustrate.</p>
+    <div class="essence"><strong>One-line essence</strong>When the body must balance, the mind must be silent. Use the body's need as the mind's liberation.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="10">Start a 10-min sitting</button><span class="timer-display" data-display="t8"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 9 ============================ -->
+<article class="technique" id="t9" data-tech="9">
+  <div class="technique-head"><span>Technique 21 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t9">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> pain &middot; body &middot; awareness &middot; doorway</div>
+  <blockquote class="sutra">Pierce some part of your nectar-filled form with a pin, and gently enter the piercing &mdash; and attain to the inner purity.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>When you feel a physical pain or sensation &mdash; a headache, a cramp, an itch &mdash; don't avoid it. Instead, pour your total awareness directly into its centre. Enter it. In the centre of pain there is no pain &mdash; only energy.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Whenever a pain or strong sensation arises in the body, pause.</li>
+      <li>Don't resist, don't try to fix it. Just turn full attention toward it.</li>
+      <li>Enter the sensation as if you were diving into its exact centre.</li>
+      <li>Notice: at the very centre, the quality changes &mdash; from "pain" to pure intensity or vibration.</li>
+      <li>Rest there. Let the energy be &mdash; without labelling it as pain.</li>
+      <li>Alternatively (not recommended for beginners): lightly pinch the skin and meditate on the sensation's centre.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced</dd>
+    <dt>Duration</dt><dd>As long as the sensation lasts</dd><dt>Posture</dt><dd>Any</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>People with chronic pain; stoic temperaments; those who learn through intensity</dd><dt>Caution</dt><dd>Not for acute injuries or medical emergencies</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>The pain transforms into vibration, heat, or neutral intensity</li><li>The boundary between "me" and "pain" dissolves</li><li>Fear of the pain vanishes &mdash; replaced by curiosity</li><li>A profound sense of aliveness or purity at the centre</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Using this to bypass necessary medical attention &mdash; this is meditation, not treatment</li><li>Self-harm &mdash; the sutra uses "pin" as a metaphor; do NOT injure yourself</li><li>Forcing attention into unbearable pain &mdash; start with mild discomfort and build tolerance</li><li>Tensing around the pain instead of softening into it</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Isn't it masochistic to meditate on pain?</summary>
+      <div class="qa-body"><p class="src">Chapter 10, "Pain &amp; Awareness"</p><p>Osho responds: a masochist enjoys pain. This technique has nothing to do with enjoyment &mdash; it uses pain as a concentration device. Pain demands attention; the technique rides that demand inward. The "nectar-filled form" in the sutra means: even pain, when fully entered, reveals bliss at its core &mdash; because at the centre of any sensation is pure awareness, which is inherently blissful.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Pain neuroscience distinguishes between nociception (the signal) and suffering (the emotional interpretation). When you bring non-reactive attention to pain's centre, you decouple signal from suffering. The signal remains, but the "self" that suffers steps back. This is the basis of mindfulness-based pain management (MBSR).</p>
+    <p><strong>Clinical parallel:</strong> Jon Kabat-Zinn's MBSR programme teaches exactly this &mdash; approach pain with curiosity rather than aversion. Studies show it reduces subjective pain intensity by 30&ndash;50% in chronic pain patients.</p>
+    <div class="essence"><strong>One-line essence</strong>At the centre of pain, there is no pain &mdash; only the energy you were calling pain. Enter the centre, and you are free.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="15">Start a 15-min sitting</button><span class="timer-display" data-display="t9"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 10 ============================ -->
+<article class="technique" id="t10" data-tech="10">
+  <div class="technique-head"><span>Technique 11 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t10">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> weightlessness &middot; body &middot; lightness &middot; dissolving</div>
+  <blockquote class="sutra">Suppose you are gradually being deprived of strength or of knowledge. At the instant of deprivation, transcend.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Imagine your body becoming lighter and lighter &mdash; as if gravity is slowly being removed. Or imagine your knowledge, your certainties, dissolving one by one. At the moment where nothing remains &mdash; no weight, no knowing &mdash; something transcends.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li>Lie down or sit comfortably. Close your eyes.</li>
+      <li>Feel the weight of your body. Start with the feet.</li>
+      <li>Slowly imagine the weight dissolving &mdash; feet becoming weightless, then legs, hips, torso, arms, head.</li>
+      <li>Feel the entire body as light, floating, almost not there.</li>
+      <li>At the moment the last bit of heaviness goes &mdash; stay alert. That instant is the door.</li>
+      <li>Alternatively: let your certainties dissolve one by one. "I am X" &mdash; let it go. "I know Y" &mdash; let it go. At the instant nothing remains, transcend.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+    <dt>Duration</dt><dd>20 min</dd><dt>Posture</dt><dd>Lying down (preferred) or seated</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Tense bodies; insomniacs; those who carry too much weight (literal or metaphorical)</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It's Working</h3><ul><li>The body genuinely feels lighter &mdash; parts seem to float</li><li>Boundaries of the body blur &mdash; where do "you" end and the air begin?</li><li>A sense of expansion or dissolution</li><li>Deep peace, similar to the moment just before sleep</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Falling asleep &mdash; stay alert at the edge; the transcendence happens at the threshold</li><li>Trying too hard to "feel light" &mdash; let it be gradual, imaginal, not forced</li><li>Fear of losing control &mdash; you are safe; the body is still there</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How can imagining weightlessness lead to actual transcendence?</summary>
+      <div class="qa-body"><p class="src">Chapter 7, "Weightlessness"</p><p>Osho explains: the body and identity are held together by gravity &mdash; both physical and psychological. Weight is the feeling of being bound. When you systematically release that feeling, even in imagination, the identification with the body loosens. And in that loosening, for even one moment, you taste what is not the body. That taste is transcendence.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Body-scan relaxation (progressive muscle relaxation) works on a similar principle: systematically releasing tension region by region induces parasympathetic dominance. This sutra goes further &mdash; not just relaxing muscles but releasing the sense of having a body at all.</p>
+    <p><strong>Hypnagogic parallel:</strong> The feeling of floating that occurs at sleep onset (hypnagogia) is exactly what this technique cultivates &mdash; but with maintained awareness. You hover at the edge of sleep without falling in. That edge is one of the most creative and transcendent states known to neuroscience.</p>
+    <div class="essence"><strong>One-line essence</strong>Let weight go &mdash; physical and psychological &mdash; and what remains has never been heavy.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t10"></span></div>
+</article>
+
+<footer>
+  <p>You have reached the end of <em>The Techniques for Centering</em>.</p>
+  <p>13 more categories &mdash; Sound, Light, Witnessing, Void, Senses, Movement, Sleep, Tantra, Heart, Death, Imagination, Mind, and Self-Inquiry &mdash; are on the way.</p>
+  <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+</footer>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  const html=document.documentElement;
+  const themeBtn=document.getElementById('theme-btn');
+  const stored=localStorage.getItem('vbt-theme');
+  if(stored)html.setAttribute('data-theme',stored);
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  themeBtn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next)});
+
+  const progress=document.querySelector('.progress');
+  function updateProgress(){const h=document.documentElement;const s=h.scrollTop;const t=h.scrollHeight-h.clientHeight;progress.style.width=t>0?(s/t*100)+'%':'0'}
+  document.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+  const FAV_KEY='vbt-centering-favs';
+  const favs=new Set(JSON.parse(localStorage.getItem(FAV_KEY)||'[]'));
+  document.querySelectorAll('.fav-btn').forEach(btn=>{const id=btn.dataset.fav;if(favs.has(id)){btn.classList.add('on');btn.textContent='\u2665'}btn.addEventListener('click',()=>{if(favs.has(id)){favs.delete(id);btn.classList.remove('on');btn.textContent='\u2661'}else{favs.add(id);btn.classList.add('on');btn.textContent='\u2665'}localStorage.setItem(FAV_KEY,JSON.stringify([...favs]))})});
+
+  function playBell(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=432;g.gain.setValueAtTime(0.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.4,ctx.currentTime+0.02);g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+4.5);o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+4.6)}catch(e){}}
+  document.querySelectorAll('.timer-btn').forEach(btn=>{let interval=null;let endTime=0;const minutes=parseInt(btn.dataset.timer,10);const techId=btn.closest('article.technique').id;const display=document.querySelector('[data-display="'+techId+'"]');const original=btn.textContent;function fmt(ms){const s=Math.max(0,Math.ceil(ms/1000));const m=Math.floor(s/60),r=s%60;return m+':'+(r<10?'0':'')+r}function stop(natural){if(interval)clearInterval(interval);interval=null;btn.classList.remove('running');btn.textContent=original;if(natural){display.textContent='Done.';playBell();setTimeout(()=>{display.textContent=''},6000)}else{display.textContent=''}}btn.addEventListener('click',()=>{if(interval){stop(false);return}endTime=Date.now()+minutes*60*1000;btn.classList.add('running');btn.textContent='Stop';const tick=()=>{const left=endTime-Date.now();if(left<=0){stop(true);return}display.textContent=fmt(left)+' remaining'};tick();interval=setInterval(tick,500)})});
+
+  const focusBtn=document.getElementById('focus-btn');
+  let observer=null;
+  focusBtn.addEventListener('click',()=>{const on=!document.body.classList.contains('focus');document.body.classList.toggle('focus',on);focusBtn.setAttribute('aria-pressed',on);if(on&&!observer){observer=new IntersectionObserver((entries)=>{entries.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting))},{threshold:0.4});document.querySelectorAll('article.technique').forEach(a=>observer.observe(a))}});
+
+  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+
+  document.addEventListener('keydown',(e)=>{if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;if(e.key==='j'||e.key==='k'){const arts=[...document.querySelectorAll('article.technique')];const cur=arts.findIndex(a=>a.getBoundingClientRect().top>-100);const idx=e.key==='j'?Math.min(arts.length-1,cur+1):Math.max(0,cur-1);if(arts[idx])arts[idx].scrollIntoView({behavior:'smooth',block:'start'})}});
+
+  const GLOSSARY={'Vigyan Bhairav Tantra':'A ~5,000-year-old Sanskrit text: 112 meditation techniques as a dialogue between Shiva and Devi.','centering':'Bringing awareness to a still point inside the body or mind where the witness can rest.','sushumna':'The central energy channel along the spinal cord. When prana flows through it, balance arises.','hara':'The energy centre two inches below the navel \u2014 the body\'s gravitational and vital centre.','chakra':'An intersection of energy channels in the subtle body. Seven main chakras line the spine.','kundalini':'Dormant energy at the spine\'s base. When awakened, it rises toward the crown.','witness':'The observing awareness behind all experience \u2014 what watches without being what is watched.','samadhi':'Deep meditative absorption beyond ordinary self-consciousness.','proprioception':'The body\'s internal sense of its own position and movement.','interoception':'The sense of the internal state of the body \u2014 heartbeat, breath, temperature.'};
+  function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+  const gTerms=Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length);
+  document.querySelectorAll('article.technique, header.hero').forEach(article=>{gTerms.forEach(term=>{const re=new RegExp('\\b('+escapeRegex(term)+')\\b','i');const walker=document.createTreeWalker(article,NodeFilter.SHOW_TEXT,{acceptNode:(node)=>{const p=node.parentElement;if(!p)return NodeFilter.FILTER_REJECT;if(p.closest('script,style,.glossary-term,.glossary-block,.controls,.progress,.timer-display,.technique-head,.actions'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});let n;while((n=walker.nextNode())){const m=n.textContent.match(re);if(m){const text=n.textContent;const before=text.slice(0,m.index);const after=text.slice(m.index+m[1].length);const span=document.createElement('span');span.className='glossary-term';span.dataset.term=term;span.tabIndex=0;span.textContent=m[1];const frag=document.createDocumentFragment();if(before)frag.appendChild(document.createTextNode(before));frag.appendChild(span);if(after)frag.appendChild(document.createTextNode(after));n.replaceWith(frag);return}}})});
+
+  let gTip=null;
+  function showGTip(e){const el=e.currentTarget;const term=el.dataset.term;const def=GLOSSARY[term];if(!def)return;if(!gTip){gTip=document.createElement('div');gTip.className='glossary-tooltip';document.body.appendChild(gTip)}gTip.innerHTML='<strong></strong>';gTip.firstChild.textContent=term;gTip.appendChild(document.createTextNode(def));const rect=el.getBoundingClientRect();gTip.style.top=(rect.bottom+window.scrollY+6)+'px';let left=rect.left+window.scrollX;if(left+290>window.innerWidth+window.scrollX)left=window.innerWidth+window.scrollX-296;if(left<8)left=8;gTip.style.left=left+'px';gTip.classList.add('show')}
+  function hideGTip(){if(gTip)gTip.classList.remove('show')}
+  document.querySelectorAll('.glossary-term').forEach(el=>{el.addEventListener('mouseenter',showGTip);el.addEventListener('focus',showGTip);el.addEventListener('mouseleave',hideGTip);el.addEventListener('blur',hideGTip);el.addEventListener('click',(e)=>{e.preventDefault();showGTip(e);setTimeout(hideGTip,6000)})});
+})();
+</script>
+</body>
+</html>
