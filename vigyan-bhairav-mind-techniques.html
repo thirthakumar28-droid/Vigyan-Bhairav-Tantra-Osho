@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 7 mind &amp; thought techniques from Osho's Vigyan Bhairav Tantra — distilled, with practice instructions, common pitfalls, questions from the book, and modern commentary.">
+<title>The Techniques for Mind &amp; Thought — Vigyan Bhairav Tantra</title>
+<style>
+:root {
+--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;
+--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;
+--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;
+--sutra-bg:#f8efd9;
+--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12);
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;
+--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+html[data-theme="dark"]{
+--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;
+--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;
+--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;
+--sutra-bg:#2a221a;
+--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
+</style>
+
+<style>
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:200;transition:width .15s ease-out;box-shadow:0 0 8px var(--accent-soft)}
+.controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
+.controls button{width:36px;height:36px;border-radius:999px;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.controls button:hover,.controls button[aria-pressed="true"]{background:var(--bg-soft);color:var(--accent)}
+.controls button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--accent-soft)}
+main{max-width:680px;margin:0 auto;padding:5rem 1.5rem 2rem}
+header.hero{text-align:center;padding:2rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink)}
+.hero .lede{color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;font-size:1.05rem;font-style:italic}
+.hero .meta{font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+.jumplinks{margin-top:2.5rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1.25rem 1.5rem;text-align:left}
+.jumplinks h2{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 1rem;font-weight:600}
+.jumplinks ol{margin:0;padding:0;list-style:none;counter-reset:jl}
+.jumplinks li{counter-increment:jl;border-top:1px solid var(--rule);padding:.55rem 0}
+.jumplinks li:first-child{border-top:0}
+.jumplinks a{text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:.7rem;font-size:.95rem;transition:color .15s}
+.jumplinks a::before{content:counter(jl);font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faint);min-width:1.5rem}
+.jumplinks a:hover{color:var(--accent)}
+.jumplinks .sub{color:var(--ink-faint);font-style:italic;font-size:.85rem}
+</style>
+
+<style>
+article.technique{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:2rem 2rem 1.75rem;margin:0 0 2.5rem;box-shadow:var(--shadow);scroll-margin-top:5rem;position:relative}
+.technique-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.4rem}
+.fav-btn{background:transparent;border:0;cursor:pointer;font-size:1.3rem;color:var(--ink-faint);transition:color .2s,transform .2s;line-height:1;padding:.2rem}
+.fav-btn:hover{transform:scale(1.15);color:var(--accent)}
+.fav-btn.on{color:var(--accent)}
+.tags{font-family:var(--sans);font-size:.75rem;color:var(--ink-faint);margin-bottom:1.5rem;letter-spacing:.02em}
+.tags strong{color:var(--ink-soft);font-weight:600}
+blockquote.sutra{margin:1rem 0 2rem;padding:1.75rem 1.5rem;background:var(--sutra-bg);border-left:3px solid var(--accent);border-radius:4px;font-family:var(--serif);font-size:1.18rem;font-style:italic;line-height:1.55;color:var(--ink);text-align:center;quotes:"\201C" "\201D"}
+blockquote.sutra::before{content:open-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.4em;margin-right:.1em}
+blockquote.sutra::after{content:close-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.6em;margin-left:.1em}
+.section{margin:1.75rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule)}
+.section h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .9rem;font-weight:600}
+.section p{margin:.5rem 0}
+.section ol,.section ul{margin:.5rem 0;padding-left:1.4rem}
+.section li{margin:.35rem 0;line-height:1.65}
+.plain p{font-size:1.02rem;color:var(--ink-soft)}
+.facts dl{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.25rem;margin:0;font-family:var(--sans);font-size:.92rem}
+.facts dt{color:var(--ink-faint);font-weight:600;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase;padding-top:.15rem}
+.facts dd{margin:0;color:var(--ink)}
+.stars{color:var(--accent);letter-spacing:.05em}
+.stars .off{color:var(--rule)}
+.signs ul,.pitfalls ul{list-style:none;padding-left:0}
+.signs li::before{content:"•";color:var(--accent);margin-right:.7rem;font-weight:700}
+.pitfalls li::before{content:"\2715";color:#a83232;margin-right:.7rem;font-weight:700;font-size:.9em}
+html[data-theme="dark"] .pitfalls li::before{color:#d96b6b}
+</style>
+
+<style>
+.qa details{border:1px solid var(--rule);border-radius:5px;background:var(--bg);margin:.5rem 0;transition:background .2s}
+.qa details[open]{background:var(--bg-soft)}
+.qa summary{padding:.85rem 1rem;cursor:pointer;font-style:italic;color:var(--ink);list-style:none;display:flex;align-items:flex-start;gap:.6rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"\203A";display:inline-block;color:var(--accent);font-style:normal;transition:transform .2s;margin-top:.05em;flex-shrink:0}
+.qa details[open] summary::before{transform:rotate(90deg)}
+.qa-body{padding:0 1rem 1rem 2rem}
+.qa-body .src{font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.5rem}
+.qa-body p{font-size:.95rem;color:var(--ink-soft);margin:.4rem 0}
+.commentary{background:var(--bg);border-radius:6px;border:1px dashed var(--rule);padding:1.25rem 1.4rem}
+.commentary h3{display:flex;align-items:center;gap:.5rem}
+.commentary h3::before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:999px}
+.commentary .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.4rem}
+.commentary p{font-size:.96rem;color:var(--ink-soft);margin:.6rem 0}
+.commentary .essence{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--rule);font-style:italic;color:var(--ink);font-size:1.02rem}
+.commentary .essence strong{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-style:normal;display:block;margin-bottom:.3rem;font-weight:600}
+.actions{margin-top:1.75rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.timer-btn{font-family:var(--sans);font-size:.9rem;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:.7rem 1.4rem;cursor:pointer;font-weight:500;letter-spacing:.02em;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:0 4px 12px -4px var(--accent)}
+.timer-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
+.timer-btn.running{background:#a83232}
+html[data-theme="dark"] .timer-btn.running{background:#c44}
+.timer-display{font-family:var(--sans);font-variant-numeric:tabular-nums;font-size:.95rem;color:var(--ink-faint)}
+body.focus article.technique{opacity:.25;transition:opacity .5s}
+body.focus article.technique.in-view{opacity:1}
+footer{text-align:center;padding:3rem 0 1rem;border-top:1px solid var(--rule);color:var(--ink-faint);font-family:var(--sans);font-size:.85rem}
+footer p{margin:.4rem 0}
+@media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.actions,.fav-btn{display:none!important}article.technique{box-shadow:none;border:none;page-break-inside:avoid;padding:0;margin:0 0 1.5rem}blockquote.sutra{background:#f5f5f5;border-left:2px solid #888}main{max-width:none;padding:1rem}}
+@media(max-width:600px){body{font-size:17px}article.technique{padding:1.5rem 1.25rem}.controls{top:.5rem;right:.5rem}blockquote.sutra{font-size:1.05rem;padding:1.25rem 1rem}.facts dl{grid-template-columns:1fr;gap:.1rem .5rem}.facts dt{padding-top:.5rem}main{padding:4rem 1rem 2rem}}
+</style>
+
+<style>
+.about-block,.howto-block,.beginner-block,.glossary-block{margin-top:1.25rem;border-radius:6px;font-family:var(--sans);font-size:.92rem;text-align:left}
+.about-block,.glossary-block{background:var(--bg-card);border:1px solid var(--rule)}
+.about-block summary,.glossary-block summary{padding:.85rem 1.25rem;cursor:pointer;color:var(--ink-soft);list-style:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:flex;align-items:center}
+.about-block summary::-webkit-details-marker,.glossary-block summary::-webkit-details-marker{display:none}
+.about-block summary::before,.glossary-block summary::before{content:"+";margin-right:.6rem;color:var(--accent);font-weight:700;font-size:1.15rem;line-height:1}
+.about-block[open] summary::before,.glossary-block[open] summary::before{content:"\2212"}
+.about-body,.glossary-body{padding:0 1.25rem 1.25rem;border-top:1px solid var(--rule)}
+.about-body p{font-family:var(--serif);margin:.8rem 0;line-height:1.65;color:var(--ink-soft)}
+.glossary-body dl{margin:.8rem 0 0;display:grid;gap:.35rem 1rem}
+.glossary-body dt{font-weight:700;color:var(--accent);font-size:.9rem;margin-top:.55rem}
+.glossary-body dd{margin:0;color:var(--ink-soft);font-family:var(--serif);font-size:.92rem;line-height:1.55}
+.howto-block{background:var(--sutra-bg);border-left:3px solid var(--accent);padding:1.25rem 1.5rem}
+.howto-block h3,.beginner-block h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 .7rem;font-weight:600}
+.howto-block p,.beginner-block p{margin:.5rem 0;font-family:var(--serif);line-height:1.65;color:var(--ink-soft)}
+.howto-block strong,.beginner-block strong{color:var(--ink)}
+.beginner-block{background:var(--bg-soft);border:1px dashed var(--accent-soft);padding:1.25rem 1.5rem}
+.beginner-block a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.beginner-block a:hover{border-bottom-color:var(--accent)}
+.disclaimer{font-size:.78rem;color:var(--ink-faint);font-style:italic;margin:1.25rem 0 0;text-align:center;line-height:1.5}
+.glossary-term{border-bottom:1px dotted var(--accent);cursor:help;color:inherit;padding:0 1px;transition:background .15s}
+.glossary-term:hover,.glossary-term:focus{background:var(--accent-soft);outline:none}
+.glossary-tooltip{position:absolute;background:var(--ink);color:var(--bg);padding:.7rem .9rem;border-radius:6px;font-family:var(--sans);font-size:.82rem;line-height:1.5;max-width:280px;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);z-index:300;opacity:0;pointer-events:none;transition:opacity .15s}
+.glossary-tooltip.show{opacity:1;pointer-events:auto}
+.glossary-tooltip strong{display:block;margin-bottom:.35rem;color:var(--accent-soft);text-transform:uppercase;font-size:.68rem;letter-spacing:.12em}
+@media print{.about-block,.glossary-block,.howto-block,.beginner-block,.disclaimer{display:none!important}.glossary-term{background:none!important;border-bottom:1px dotted #888}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<nav class="controls" aria-label="Reading controls">
+<button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+<button id="focus-btn" aria-label="Toggle focus mode" title="Focus mode" aria-pressed="false">&#9678;</button>
+<button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
+</nav>
+<main>
+
+<header class="hero">
+<div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 15 of 15</div>
+<h1>The Techniques for Mind &amp; Thought</h1>
+<p class="lede">
+These techniques use the mind's own machinery against itself &mdash; desire, wandering, doubt, naming, knowing. Instead of fighting thought, they redirect your attention to the gaps, the roots, and the watcher behind the watched. The mind dissolves not by suppression but by being fully seen.
+</p>
+<p class="meta">7 techniques &middot; ~12 min read &middot; works fully offline</p>
+
+<details class="about-block">
+<summary>About these techniques</summary>
+<div class="about-body">
+<p>These seven techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+<p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. Unlike most of the 112, the techniques here don't ask you to fight the mind. They use the mind's own movements &mdash; desire, wandering, naming, knowing &mdash; as the doorway.</p>
+</div>
+</details>
+
+<aside class="howto-block">
+<h3>How to use this page</h3>
+<p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+<p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
+</aside>
+
+<aside class="beginner-block">
+<h3>New to meditation?</h3>
+<p>Start with <a href="#t3">Technique 3 &mdash; "wherever your mind is wandering, this"</a>. It is the easiest sutra in all 112. It cannot fail; every moment of distraction noticed is a moment of practice. Try it for 21 days, then return for what comes next.</p>
+</aside>
+
+<details class="glossary-block">
+<summary>Glossary &mdash; unfamiliar terms?</summary>
+<div class="glossary-body">
+<p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+<dl>
+<dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+<dt>Tantra</dt><dd>Literally "method" or "technique" &mdash; a non-fighting approach that uses life energies (desire, sex, emotion) as doorways rather than enemies.</dd>
+<dt>ego</dt><dd>In this context, not arrogance but the constructed sense of being a separate "me" &mdash; the narrative self that meditation gradually dissolves.</dd>
+<dt>nirvana</dt><dd>Sanskrit for "extinguishing" &mdash; the cessation of the false self, often translated as "liberation."</dd>
+<dt>moksha</dt><dd>Sanskrit for "liberation" &mdash; release from the cycle of identification and suffering.</dd>
+<dt>sansara</dt><dd>The world of ordinary experience and identification, contrasted with moksha.</dd>
+<dt>samadhi</dt><dd>A deep meditative state of unification; absorption beyond ordinary self-consciousness.</dd>
+<dt>shunya</dt><dd>Sanskrit for "void" or "emptiness" &mdash; the central concept in Buddhist philosophy.</dd>
+<dt>atma</dt><dd>Sanskrit for "self" or "soul" &mdash; the inner essence Hindus consider eternal.</dd>
+<dt>brahma</dt><dd>Sanskrit for "the absolute" &mdash; the impersonal ground of being in Hindu philosophy.</dd>
+<dt>default mode network</dt><dd>A network of brain regions active when mind-wandering; modern neuroscience considers it the substrate of the "narrative self."</dd>
+<dt>ACT</dt><dd>Acceptance and Commitment Therapy &mdash; a modern psychotherapy using cognitive defusion and present-moment awareness.</dd>
+<dt>MBSR</dt><dd>Mindfulness-Based Stress Reduction &mdash; Jon Kabat-Zinn's clinical adaptation of meditation for stress, pain, and anxiety.</dd>
+<dt>90-second rule</dt><dd>Jill Bolte Taylor's observation: the neurochemical wave of an emotion clears within ~90 seconds. Anything longer is re-triggering through thought.</dd>
+<dt>Gurdjieff</dt><dd>G.I. Gurdjieff (1866&ndash;1949) &mdash; Russian-Armenian teacher who introduced "self-remembering" to the West.</dd>
+<dt>Krishnamurti</dt><dd>J. Krishnamurti (1895&ndash;1986) &mdash; Indian teacher who emphasised choiceless awareness and rejected formal techniques.</dd>
+</dl>
+</div>
+</details>
+
+<p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
+
+<nav class="jumplinks" aria-label="Techniques in this file">
+<h2>Techniques in this file</h2>
+<ol>
+<li><a href="#t1"><span>In extreme desire, be undisturbed</span> <span class="sub">&middot; witness the storm</span></a></li>
+<li><a href="#t2"><span>The universe as a picture show</span> <span class="sub">&middot; detach through seeing</span></a></li>
+<li><a href="#t3"><span>Wherever your mind wanders &mdash; this</span> <span class="sub">&middot; the only technique you cannot fail</span></a></li>
+<li><a href="#t4"><span>Before desire and before knowing, how can I say I am?</span> <span class="sub">&middot; dissolve the I</span></a></li>
+<li><a href="#t5"><span>Know nothing as pure or impure</span> <span class="sub">&middot; drop all judgment</span></a></li>
+<li><a href="#t6"><span>Remain in the subjective mood</span> <span class="sub">&middot; the witness stays home</span></a></li>
+<li><a href="#t7"><span>Meditate on knowing and not-knowing</span> <span class="sub">&middot; dissolve both to be</span></a></li>
+</ol>
+</nav>
+</header>
+
+<!-- ============================ TECHNIQUE 1 ============================ -->
+<article class="technique" id="t1" data-tech="1">
+<div class="technique-head">
+<span>Technique 69 of 112</span>
+<button class="fav-btn" aria-label="Favourite" data-fav="t1">&#9825;</button>
+</div>
+<div class="tags"><strong>Category:</strong> Mind &amp; Thought &middot; <strong>Tags:</strong> desire &middot; storm &middot; witness &middot; intermediate</div>
+
+<blockquote class="sutra">
+In moods of extreme desire, be undisturbed.
+</blockquote>
+
+<section class="section plain">
+<h3>In Plain English</h3>
+<p>When a massive wave of desire hits &mdash; lust, rage, craving, ambition &mdash; do not try to suppress it and do not act on it. Instead, stay still inside it. Be the unmoving centre of the cyclone. The desire will still roar, but you are no longer the desire; you are the one watching the desire.</p>
+</section>
+
+<section class="section practice">
+<h3>How to Practice</h3>
+<ol>
+<li>Wait for a genuine moment of extreme desire (anger counts, lust counts, craving counts). Don't manufacture it.</li>
+<li>The moment you notice the wave rising, pause externally. Freeze the body.</li>
+<li>Now notice: the desire is happening <em>to</em> you. You are the space it is happening inside of.</li>
+<li>Don't push the desire away. Don't feed it either. Just hold still and observe.</li>
+<li>Watch where the desire lives in the body &mdash; chest tightness, heat in the belly, tension in the jaw.</li>
+<li>Stay with it. The wave peaks and then, without your help, recedes.</li>
+<li>What remains after the wave &mdash; notice that. That is you.</li>
+</ol>
+</section>
+
+<section class="section facts">
+<h3>Quick Facts</h3>
+<dl>
+<dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+<dt>Duration</dt><dd>As long as the desire-wave lasts (30 sec to 5 min typically)</dd>
+<dt>Best time</dt><dd>You cannot choose &mdash; the moment chooses you</dd>
+<dt>Posture</dt><dd>Whatever you are already in. Freeze there.</dd>
+<dt>Eyes</dt><dd>Open or closed &mdash; whichever helps you stay internal</dd>
+<dt>Best for</dt><dd>People who are emotionally intense and feel "ruled by" desire</dd>
+<dt>Avoid if</dt><dd>You are in genuine danger (fight-or-flight during an emergency is appropriate)</dd>
+</dl>
+</section>
+
+<section class="section signs">
+<h3>Signs It's Working</h3>
+<ul>
+<li>The desire's intensity stays the same but your suffering decreases &mdash; there is space around it</li>
+<li>You feel the desire as a physical event, not a narrative</li>
+<li>After the wave passes, a surprising calm &mdash; sometimes even laughter</li>
+<li>Over weeks: desires still come, but they no longer "have" you</li>
+</ul>
+</section>
+
+<section class="section pitfalls">
+<h3>Common Pitfalls</h3>
+<ul>
+<li>Suppressing: pushing the desire down is NOT this technique. Let it be fully present, just unwatched.</li>
+<li>Indulging: acting on it immediately means you missed the window</li>
+<li>Trying it only with small desires &mdash; the sutra specifically says "extreme". Small desires won't provide enough energy for the breakthrough.</li>
+<li>Intellectualizing: "I am witnessing now" is a thought, not witnessing</li>
+</ul>
+</section>
+
+<section class="section qa">
+<h3>Questions From The Book</h3>
+<details>
+<summary>When a mood against someone arises and I try to remain centered, it feels impossible. What am I doing wrong?</summary>
+<div class="qa-body">
+<p class="src">Chapter 16, "Beyond the Sin of Unconsciousness"</p>
+<p>Osho's answer, in essence: you are trying to remain centered while simultaneously analyzing the mood. The analysis is a second layer of mind on top of the first. The technique asks only one thing: don't place the mood on the other person. The moment you attribute the anger to the person, you have moved outside yourself. Keep the energy inside &mdash; not as suppression, but as raw fuel without a target. Without a target, the energy has nowhere to go except back to the source. That return is the centering.</p>
+</div>
+</details>
+<details>
+<summary>If a desire or mood becomes exhilarating and I don't express it outwardly, does that energy go back to the source?</summary>
+<div class="qa-body">
+<p class="src">Chapter 42, "Alertness through Tantra"</p>
+<p>Osho's answer, in essence: Yes, but with a condition. If you suppress it out of morality &mdash; "I should not feel this" &mdash; the energy does not return to the source; it goes underground into the unconscious and festers. Only when you hold the energy with full awareness, without judgment, without repression, does it naturally recycle inward and refresh you. Awareness is the key ingredient that determines whether non-expression is suppression or transformation.</p>
+</div>
+</details>
+</section>
+
+<section class="section commentary">
+<h3>Modern Commentary</h3>
+<span class="label">AI-distilled, not from Osho</span>
+<p><strong>What this is really pointing at:</strong> Every desire has a 90-second neurochemical lifespan. Jill Bolte Taylor's "90-second rule" describes how an emotion &mdash; once triggered &mdash; floods the body with chemicals that clear within about 90 seconds. Everything after that is re-triggering through thought. The sutra says: be still for the first wave. If you can survive 90 seconds without acting or narrating, the biochemistry recedes and you are left standing in clarity.</p>
+<p><strong>A modern analogy:</strong> Like standing still in a strong wind instead of running with it. The wind passes. You are still here. You realise you were never the wind.</p>
+<p><strong>Why neuroscience cares:</strong> The prefrontal cortex (executive function) can override the amygdala (reactive impulse) &mdash; but only if you buy time. The "freeze" in this technique is exactly the pause that allows the PFC to come online. Meditators show measurably thicker PFC tissue, and this is likely why.</p>
+<p class="essence"><strong>Essence</strong>The storm is not you. You are the sky it passes through.</p>
+</section>
+
+<div class="actions">
+<button class="timer-btn" data-timer="5">Start a 5-min sit-with-it</button>
+<span class="timer-display" data-display="t1"></span>
+</div>
+</article>
+
+<!-- ============================ TECHNIQUE 2 ============================ -->
+<article class="technique" id="t2" data-tech="2">
+<div class="technique-head">
+<span>Technique 70 of 112</span>
+<button class="fav-btn" aria-label="Favourite" data-fav="t2">&#9825;</button>
+</div>
+<div class="tags"><strong>Category:</strong> Mind &amp; Thought &middot; <strong>Tags:</strong> illusion &middot; detachment &middot; film &middot; witness &middot; beginner</div>
+
+<blockquote class="sutra">
+This so-called universe appears as a juggling, a picture show. To be happy, look upon it so.
+</blockquote>
+
+<section class="section plain">
+<h3>In Plain English</h3>
+<p>Treat everything you see &mdash; the drama of your day, relationships, successes, failures &mdash; as though you are watching a film. Not your film. A film. This is not nihilism or coldness; it is the recognition that your suffering comes from believing the picture show is the whole of reality. When you see it <em>as</em> a show, you are free to enjoy it without being crushed by it.</p>
+</section>
+
+<section class="section practice">
+<h3>How to Practice</h3>
+<ol>
+<li>Choose any period of your day &mdash; commuting, a meeting, cooking dinner.</li>
+<li>Mentally step back one layer. Imagine you are watching a film of your own life.</li>
+<li>Notice: the "you" in the film is a character. You &mdash; the watcher &mdash; are in the audience.</li>
+<li>Don't detach robotically. Let the emotions play. Just recognise their film-like quality &mdash; they appear, peak, and pass.</li>
+<li>After 10 minutes, notice what has shifted in your body and mood.</li>
+<li>Over days, extend this. Let it become a quiet background attitude.</li>
+</ol>
+</section>
+
+<section class="section facts">
+<h3>Quick Facts</h3>
+<dl>
+<dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+<dt>Duration</dt><dd>10 min minimum, or continuous background attitude</dd>
+<dt>Best time</dt><dd>During routine activity; especially useful when things feel overwhelming</dd>
+<dt>Posture</dt><dd>Any &mdash; this is a way of seeing, not a seated practice</dd>
+<dt>Eyes</dt><dd>Open</dd>
+<dt>Best for</dt><dd>People who over-identify with events; those who take everything personally</dd>
+<dt>Avoid if</dt><dd>You already have a dissociative tendency (derealization) &mdash; this could amplify it unhelpfully</dd>
+</dl>
+</section>
+
+<section class="section signs">
+<h3>Signs It's Working</h3>
+<ul>
+<li>Situations that used to trigger you feel lighter, even slightly humorous</li>
+<li>You catch yourself smiling at the "plotline" of your day</li>
+<li>Reactivity slows down &mdash; a gap appears between event and response</li>
+<li>Others may say you seem more relaxed, less reactive</li>
+</ul>
+</section>
+
+<section class="section pitfalls">
+<h3>Common Pitfalls</h3>
+<ul>
+<li>Using it as emotional avoidance: "Nothing matters" is nihilism, not meditation</li>
+<li>Becoming cold or superior: the technique asks for compassionate watching, not judgment of others</li>
+<li>Forcing it during genuine grief or loss &mdash; there are times to fully feel without distance</li>
+</ul>
+</section>
+
+<section class="section qa">
+<h3>Questions From The Book</h3>
+<details>
+<summary>If the world is illusion, why bother doing anything at all?</summary>
+<div class="qa-body">
+<p class="src">Chapter 37, "Techniques to Witness the Flux-like Film of Life"</p>
+<p>Osho's answer, in essence: This is the intellect's misunderstanding. The sutra does not say the universe is unreal. It says it appears <em>as</em> a juggling, a picture show. The word "appears" is important. It is a technique of looking, not a philosophy about reality. You look at it as a picture show so that your suffering about it drops. When suffering drops, you do not stop acting &mdash; you start acting freely, for the first time, because compulsion is gone. It is the difference between a slave rowing and a free person sailing.</p>
+</div>
+</details>
+</section>
+
+<section class="section commentary">
+<h3>Modern Commentary</h3>
+<span class="label">AI-distilled, not from Osho</span>
+<p><strong>What this is really pointing at:</strong> Cognitive fusion &mdash; the psychological term for believing you ARE your thoughts and experiences &mdash; is the root of most suffering according to both ancient Tantra and modern ACT (Acceptance and Commitment Therapy). This sutra is a defusion technique: create a small distance between the experiencer and the experience.</p>
+<p><strong>A modern analogy:</strong> You are watching a VR movie and forgot you put the headset on. The sutra says: remember the headset. You don't need to take it off. Just knowing it's there changes everything.</p>
+<p><strong>Why psychology cares:</strong> "Cognitive defusion" is a core pillar of third-wave behavioural therapies (ACT, DBT). The mechanism: when you label an experience as "a story my mind is telling" rather than "reality," the amygdala response decreases and the anterior cingulate cortex (error-monitoring, metacognition) activates. You move from reactive to reflective.</p>
+<p class="essence"><strong>Essence</strong>You are not in the movie. You are in the cinema.</p>
+</section>
+
+<div class="actions">
+<button class="timer-btn" data-timer="10">Start a 10-min practice</button>
+<span class="timer-display" data-display="t2"></span>
+</div>
+</article>
+
+<!-- ============================ TECHNIQUE 3 ============================ -->
+<article class="technique" id="t3" data-tech="3">
+<div class="technique-head">
+<span>Technique 73 of 112</span>
+<button class="fav-btn" aria-label="Favourite" data-fav="t3">&#9825;</button>
+</div>
+<div class="tags"><strong>Category:</strong> Mind &amp; Thought &middot; <strong>Tags:</strong> wandering &middot; present &middot; acceptance &middot; beginner</div>
+
+<blockquote class="sutra">
+Wherever your mind is wandering, internally or externally, at this very place, this.
+</blockquote>
+
+<section class="section plain">
+<h3>In Plain English</h3>
+<p>This is possibly the most compassionate sutra in the entire 112. It says: wherever you find your mind right now &mdash; lost in fantasy, worrying about tomorrow, reliving last week &mdash; THAT is your meditation spot. Don't fight the wandering. Use it. The place the mind has wandered to IS the technique. Just notice "here I am" &mdash; and that noticing is the awakening.</p>
+</section>
+
+<section class="section practice">
+<h3>How to Practice</h3>
+<ol>
+<li>Sit or walk. Don't try to concentrate on anything.</li>
+<li>Let the mind wander freely for a few moments.</li>
+<li>Then gently ask: where is my mind right now? (A memory? A plan? A fantasy? A worry?)</li>
+<li>Don't pull the mind back. Instead, be fully present <em>where the mind already is</em>.</li>
+<li>If it's in a memory: be fully in that memory, with awareness. If it's planning: be fully aware that planning is happening.</li>
+<li>"This" &mdash; the word at the end of the sutra &mdash; means: here. Whatever here is right now. That's enough.</li>
+<li>Repeat throughout the day, as often as you remember.</li>
+</ol>
+</section>
+
+<section class="section facts">
+<h3>Quick Facts</h3>
+<dl>
+<dt>Difficulty</dt><dd><span class="stars">&#9733;<span class="off">&#9733;&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner (the easiest in the whole book)</dd>
+<dt>Duration</dt><dd>Instantaneous, repeated</dd>
+<dt>Best time</dt><dd>Literally anytime you remember &mdash; that remembering IS the practice</dd>
+<dt>Posture</dt><dd>Any</dd>
+<dt>Eyes</dt><dd>Open or closed</dd>
+<dt>Best for</dt><dd>Everyone. Especially those who have tried meditation and "failed" because they couldn't stop thinking.</dd>
+<dt>Avoid if</dt><dd>There is no situation where this is harmful</dd>
+</dl>
+</section>
+
+<section class="section signs">
+<h3>Signs It's Working</h3>
+<ul>
+<li>You stop fighting the mind &mdash; and paradoxically, it starts to quiet</li>
+<li>Each moment of remembering feels like waking up from a micro-dream</li>
+<li>A background sense of "I am here" begins to persist even between practices</li>
+<li>The self-criticism about "bad meditation" disappears entirely</li>
+</ul>
+</section>
+
+<section class="section pitfalls">
+<h3>Common Pitfalls</h3>
+<ul>
+<li>Turning it into a concentration exercise ("I must stay here!") &mdash; that is the opposite. Let the mind go. Then notice where it went.</li>
+<li>Feeling like you're "cheating" because it's too easy &mdash; it's not a cheat; it's the purest technique</li>
+<li>Forgetting for hours and then beating yourself up &mdash; the next remembering is the practice; there is no lost time</li>
+</ul>
+</section>
+
+<section class="section qa">
+<h3>Questions From The Book</h3>
+<details>
+<summary>I am in the present moment with no thought, but I still don't feel like a buddha. What's missing?</summary>
+<div class="qa-body">
+<p class="src">Chapter 40, "Sudden Enlightenment and Its Obstacles"</p>
+<p>Osho's answer, in essence: Nothing is missing. You are expecting fireworks. Enlightenment is not an experience added to you &mdash; it is the removal of the sense that something is missing. The very expectation "I should feel something special" is the last thought, the last veil. Drop even that. This very ordinary moment, fully seen, IS it. The problem is not that enlightenment is absent; it is that you are looking for it to be something other than what this already is.</p>
+</div>
+</details>
+<details>
+<summary>How can the practice of witnessing make me quiet without making me serious and lifeless?</summary>
+<div class="qa-body">
+<p class="src">Chapter 38, "Toward the Authentic Being"</p>
+<p>Osho's answer, in essence: If witnessing makes you serious, it has become a strain, not a witnessing. True witnessing is effortless &mdash; like a mirror reflecting. A mirror is not serious; it doesn't strain to reflect. If you become grave and still, you have turned the technique into suppression. Let the witnessing be playful. Watch as a child watches &mdash; curious, not heavy. If laughter comes, laugh. If you move, move. The witness is not against life &mdash; it is the deepest participation in life, because for the first time nothing is excluded.</p>
+</div>
+</details>
+</section>
+
+<section class="section commentary">
+<h3>Modern Commentary</h3>
+<span class="label">AI-distilled, not from Osho</span>
+<p><strong>What this is really pointing at:</strong> Every other meditation gives you a target and says "come back when you wander." This sutra flips that: the wandering itself IS the landing. There is no failure mode. Every moment of distraction, the instant you notice it, is a moment of awakening. This reframes the entire relationship with the wandering mind.</p>
+<p><strong>A modern analogy:</strong> Most GPS systems say "recalculating" when you miss a turn. This sutra says: wherever you are now IS the destination. There is no wrong turn.</p>
+<p><strong>Why psychology cares:</strong> Modern mindfulness research (Brewer et al., Yale) shows that self-criticism about mind-wandering creates a secondary stress loop. When participants were told "noticing wandering IS the practice," their cortisol levels dropped. This sutra contains that exact instruction, written 5,000 years before the study.</p>
+<p><strong>If every technique in this file confuses you, do only this one.</strong> It cannot fail. It requires no special conditions. It takes zero time. And it works.</p>
+<p class="essence"><strong>Essence</strong>You cannot lose this meditation. Wherever you go, you are already there.</p>
+</section>
+
+<div class="actions">
+<button class="timer-btn" data-timer="10">Optional 10-min anchor sit</button>
+<span class="timer-display" data-display="t3"></span>
+</div>
+</article>
+
+<!-- ============================ TECHNIQUE 4 ============================ -->
+<article class="technique" id="t4" data-tech="4">
+<div class="technique-head">
+<span>Technique 92 of 112</span>
+<button class="fav-btn" aria-label="Favourite" data-fav="t4">&#9825;</button>
+</div>
+<div class="tags"><strong>Category:</strong> Mind &amp; Thought &middot; <strong>Tags:</strong> self-inquiry &middot; ego &middot; dissolution &middot; advanced</div>
+
+<blockquote class="sutra">
+Feel: my thought, I-ness, internal organs &mdash; me. Before desire and before knowing, how can I say I am? Consider. Dissolve in the beauty.
+</blockquote>
+
+<section class="section plain">
+<h3>In Plain English</h3>
+<p>You assume "I exist." But examine it: the "I" is made of thoughts (removable), the feeling of I-ness (a sensation, not a thing), and the body (internal organs &mdash; also not "you"). Before any desire arose and before any knowledge was formed &mdash; what were you? If there was no thought, no desire, no knowledge &mdash; where was this "I"? Look for it. When you cannot find it, dissolve into that unfindability. That dissolution is beautiful, not terrifying.</p>
+</section>
+
+<section class="section practice">
+<h3>How to Practice</h3>
+<ol>
+<li>Sit quietly. Eyes closed. Body settled.</li>
+<li>Ask: what is this "I"? Notice what arises &mdash; thoughts? Sensations? Memories? Images?</li>
+<li>Each thing that arises: see that it is an object being watched. It is not the watcher.</li>
+<li>Now ask: before my first thought today &mdash; was "I" there? Before my first desire in childhood &mdash; was "I" there?</li>
+<li>Keep looking for the "I" that existed before knowing began. You won't find it as a thing.</li>
+<li>In that not-finding, something relaxes. The structure of "me" softens. Let it.</li>
+<li>The sutra calls this dissolution "beauty." Allow it to feel like that &mdash; an opening, not a loss.</li>
+</ol>
+</section>
+
+<section class="section facts">
+<h3>Quick Facts</h3>
+<dl>
+<dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &nbsp;Advanced</dd>
+<dt>Duration</dt><dd>20&ndash;40 min</dd>
+<dt>Best time</dt><dd>Quiet, undisturbed hour &mdash; early morning or late night</dd>
+<dt>Posture</dt><dd>Seated, spine erect</dd>
+<dt>Eyes</dt><dd>Closed</dd>
+<dt>Best for</dt><dd>Philosophical minds; those who have practiced simpler techniques and are ready for the root question</dd>
+<dt>Avoid if</dt><dd>You have active depersonalization disorder or are in a psychotic episode</dd>
+</dl>
+</section>
+
+<section class="section signs">
+<h3>Signs It's Working</h3>
+<ul>
+<li>The search for "I" starts to feel absurd &mdash; like looking for your glasses while wearing them</li>
+<li>A peculiar lightness or spaciousness when the "I" cannot be found</li>
+<li>Less identification with roles, labels, achievements &mdash; they feel more like clothes than skin</li>
+<li>Moments where the boundary between "inside" and "outside" blurs</li>
+</ul>
+</section>
+
+<section class="section pitfalls">
+<h3>Common Pitfalls</h3>
+<ul>
+<li>Answering the question intellectually: "I am consciousness!" &mdash; that is a concept, not the dissolution</li>
+<li>Panic when the "I" can't be found &mdash; this is safe; your body continues, your life continues, only the false centre dissolves</li>
+<li>Trying to <em>create</em> the absence of I, rather than simply looking and not finding it</li>
+</ul>
+</section>
+
+<section class="section qa">
+<h3>Questions From The Book</h3>
+<details>
+<summary>How can one know that a spiritual search is authentic and not just another ego-trip?</summary>
+<div class="qa-body">
+<p class="src">Chapter 56, "Discovering Emptiness"</p>
+<p>Osho's answer, in essence: If the search makes you feel special, superior, or gives you a spiritual identity to wear &mdash; it is an ego-trip dressed in spiritual clothing. A genuine search always humbles. It takes things away rather than giving things. If meditation is making you "someone" &mdash; a spiritual seeker, an awakened person &mdash; it has become decoration. When it is genuine, it is making you nobody. The real sign is the disappearance of the need to be seen as spiritual.</p>
+</div>
+</details>
+<details>
+<summary>When I become more aware, a feeling of "I am present, I exist" remains. How to dissolve even this?</summary>
+<div class="qa-body">
+<p class="src">Chapter 54, "The Fire of Awareness"</p>
+<p>Osho's answer, in essence: The feeling "I am aware" is the last, most subtle layer of ego. Earlier layers were gross &mdash; anger, ambition, desire. This one is refined. But it is still a feeling, still an object. The technique asks: who is watching even this feeling of "I am"? Don't answer. The question itself, if held without an answer, dissolves the layer. The answer would create a new layer. Let the question burn without resolution.</p>
+</div>
+</details>
+</section>
+
+<section class="section commentary">
+<h3>Modern Commentary</h3>
+<span class="label">AI-distilled, not from Osho</span>
+<p><strong>What this is really pointing at:</strong> The "self" is not a thing located somewhere &mdash; it is a process. Modern neuroscience calls it the "narrative self" or the "default mode network" (DMN). The DMN constructs the story of "me" from memories, future plans, and self-referential thought. When you meditate deeply, the DMN quiets. What remains is awareness without a narrator. This sutra is asking you to look for the narrator and discover it was always just another character.</p>
+<p><strong>A modern analogy:</strong> A whirlpool looks like a thing. It has a shape, a location, a name. But it is not a thing &mdash; it is a pattern of movement in water. Stop the movement, and the whirlpool doesn't "die" &mdash; it simply was never a thing to begin with. Your "I" is a whirlpool in consciousness.</p>
+<p><strong>If this feels too advanced &mdash; the simpler version:</strong> Try Technique 3 ("wherever your mind wanders, this") for a few weeks first. Once you are comfortable simply noticing without struggling, this deeper inquiry will feel natural rather than frightening.</p>
+<p class="essence"><strong>Essence</strong>You are looking for the one who is looking. That search, genuinely pursued, ends in laughter &mdash; because the seeker was always the sought.</p>
+</section>
+
+<div class="actions">
+<button class="timer-btn" data-timer="30">Start a 30-min inquiry</button>
+<span class="timer-display" data-display="t4"></span>
+</div>
+</article>
+
+<!-- ============================ TECHNIQUE 5 ============================ -->
+<article class="technique" id="t5" data-tech="5">
+<div class="technique-head">
+<span>Technique 77 of 112</span>
+<button class="fav-btn" aria-label="Favourite" data-fav="t5">&#9825;</button>
+</div>
+<div class="tags"><strong>Category:</strong> Mind &amp; Thought &middot; <strong>Tags:</strong> non-judgment &middot; purity &middot; acceptance &middot; intermediate</div>
+
+<blockquote class="sutra">
+The purity of other teachings is an impurity to us. In reality, know nothing as pure or impure.
+</blockquote>
+
+<section class="section plain">
+<h3>In Plain English</h3>
+<p>Stop labeling experiences as "good" or "bad," "pure" or "impure," "spiritual" or "worldly." The mind's deepest habit is division &mdash; this is clean, that is dirty; this is sacred, that is profane. The sutra says: reality itself makes no such division. Drop the judge. When nothing is impure, nothing is pure either. What remains is simply what IS &mdash; undivided, whole, free.</p>
+</section>
+
+<section class="section practice">
+<h3>How to Practice</h3>
+<ol>
+<li>Choose a day (or start with an hour) where you commit to making no internal judgments.</li>
+<li>Whatever arises &mdash; a beautiful thought, an ugly thought, pleasure, pain, anger, love &mdash; simply let it be without the label.</li>
+<li>Notice how reflexive labeling is: good/bad appears before you've even finished perceiving something.</li>
+<li>Each time you catch a judgment forming, don't fight it. Just don't follow it. Let it dissolve.</li>
+<li>Watch how much energy the mind spends on sorting reality into categories. That energy is now freed.</li>
+<li>After the hour/day, notice how you feel. Less tired? More open?</li>
+</ol>
+</section>
+
+<section class="section facts">
+<h3>Quick Facts</h3>
+<dl>
+<dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+<dt>Duration</dt><dd>1 hour to full day</dd>
+<dt>Best time</dt><dd>A day off or low-pressure day is ideal for the first attempt</dd>
+<dt>Posture</dt><dd>Any &mdash; this is a perceptual shift, not a seated practice</dd>
+<dt>Eyes</dt><dd>Open</dd>
+<dt>Best for</dt><dd>Perfectionists; moralists who are exhausted by their own standards; those who over-categorize experience</dd>
+<dt>Avoid if</dt><dd>You are in a situation requiring genuine ethical discernment (e.g., protecting someone from harm)</dd>
+</dl>
+</section>
+
+<section class="section signs">
+<h3>Signs It's Working</h3>
+<ul>
+<li>A surprising peace &mdash; like putting down a heavy bag you didn't know you were carrying</li>
+<li>People and situations that previously triggered you feel neutral or even interesting</li>
+<li>The inner critic voice weakens noticeably</li>
+<li>Colours and sounds seem slightly more vivid (when the judging mind quiets, perception opens)</li>
+</ul>
+</section>
+
+<section class="section pitfalls">
+<h3>Common Pitfalls</h3>
+<ul>
+<li>Judging yourself for judging: "I just judged that! I'm doing it wrong!" &mdash; that is another judgment. Let it pass too.</li>
+<li>Thinking this means you should abandon all ethics in life &mdash; this is a practice of inner freedom, not an excuse for harmful behaviour</li>
+<li>Confusing non-judgment with indifference &mdash; you can still act wisely without the mental habit of sorting everything into bins</li>
+</ul>
+</section>
+
+<section class="section qa">
+<h3>Questions From The Book</h3>
+<details>
+<summary>If nothing is impure, then how can the teachings of others be called impure by this sutra?</summary>
+<div class="qa-body">
+<p class="src">Chapter 42, "Alertness through Tantra"</p>
+<p>Osho's answer, in essence: The sutra is being deliberately paradoxical to shake you. It says "the purity of other teachings is an impurity TO US" &mdash; then immediately says "know nothing as pure or impure." The first half is the provocation; the second half is the technique. The provocation breaks your loyalty to a system of judgment. Then the technique emerges: live without the category system itself. Tantra uses the shock of contradiction to break habitual thinking.</p>
+</div>
+</details>
+</section>
+
+<section class="section commentary">
+<h3>Modern Commentary</h3>
+<span class="label">AI-distilled, not from Osho</span>
+<p><strong>What this is really pointing at:</strong> The brain's categorization system &mdash; approach/avoid, good/bad &mdash; is a survival mechanism that runs constantly. In primitive environments, it saves your life. In modern life, it mostly creates mental noise and suffering. Judgments about food, people, thoughts, your own body, the weather &mdash; this ceaseless binary sorting consumes enormous cognitive resources. The sutra asks: what if you stopped sorting for one hour?</p>
+<p><strong>A modern analogy:</strong> Like removing the spam filter from your email and just reading everything that arrives. Surprisingly, most of what the filter was blocking turns out to be harmless &mdash; even interesting.</p>
+<p><strong>Why psychology cares:</strong> Non-judgmental awareness is the core instruction of Mindfulness-Based Stress Reduction (MBSR, Jon Kabat-Zinn). Research consistently shows that the habit of constant evaluation correlates with higher anxiety, depression, and cortisol levels. This sutra is that entire research programme in one sentence, written millennia earlier.</p>
+<p class="essence"><strong>Essence</strong>The judge in your head is retired. What arrives when you stop sorting? &mdash; Life.</p>
+</section>
+
+<div class="actions">
+<button class="timer-btn" data-timer="20">Start a 20-min non-judging sit</button>
+<span class="timer-display" data-display="t5"></span>
+</div>
+</article>
+
+<!-- ============================ TECHNIQUE 6 ============================ -->
+<article class="technique" id="t6" data-tech="6">
+<div class="technique-head">
+<span>Technique 101 of 112</span>
+<button class="fav-btn" aria-label="Favourite" data-fav="t6">&#9825;</button>
+</div>
+<div class="tags"><strong>Category:</strong> Mind &amp; Thought &middot; <strong>Tags:</strong> subject &middot; witness &middot; attention &middot; intermediate</div>
+
+<blockquote class="sutra">
+The appreciation of objects and subjects is the same for an enlightened as for an unenlightened person. The former has one greatness: he remains in the subjective mood, not lost in things.
+</blockquote>
+
+<section class="section plain">
+<h3>In Plain English</h3>
+<p>An awakened person sees the same world you do. Trees, people, food, problems &mdash; all the same. The only difference: they never lose track of the one who is seeing. They stay home &mdash; in the subject &mdash; while looking at objects. You leave home every time an object pulls you. The technique: stay with the seer, not with the seen. Don't change what you look at; change where you look from.</p>
+</section>
+
+<section class="section practice">
+<h3>How to Practice</h3>
+<ol>
+<li>Sit with eyes open. Look at anything &mdash; a wall, a tree, your hands.</li>
+<li>Now shift attention: instead of focusing on the object, focus on the <em>fact that you are seeing</em>.</li>
+<li>The object remains in your visual field. But your priority has shifted to the seer.</li>
+<li>Notice: the seer never changes. Objects change constantly. The seer is steady.</li>
+<li>Walk through your day with this background awareness: "I am the one who is seeing, hearing, feeling &mdash; not the things being seen, heard, felt."</li>
+<li>Whenever you "get lost" in a thing &mdash; a thought, an argument, a craving &mdash; gently return to the seer.</li>
+</ol>
+</section>
+
+<section class="section facts">
+<h3>Quick Facts</h3>
+<dl>
+<dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+<dt>Duration</dt><dd>Start with 10 min seated, then extend into daily life</dd>
+<dt>Best time</dt><dd>Morning (clear mind helps), but can be done anytime</dd>
+<dt>Posture</dt><dd>Seated initially, then walking and daily activity</dd>
+<dt>Eyes</dt><dd>Open</dd>
+<dt>Best for</dt><dd>People who feel constantly pulled outward; those overwhelmed by stimulation</dd>
+<dt>Avoid if</dt><dd>You are solipsistic by temperament &mdash; ensure you don't use this to dismiss others' reality</dd>
+</dl>
+</section>
+
+<section class="section signs">
+<h3>Signs It's Working</h3>
+<ul>
+<li>A subtle sense of being "behind your eyes" rather than "in the world"</li>
+<li>External situations become less urgent &mdash; not because they don't matter but because you are no longer lost in them</li>
+<li>A quiet confidence that doesn't depend on circumstances</li>
+<li>Less reactivity: you can hear criticism without immediately flinching</li>
+</ul>
+</section>
+
+<section class="section pitfalls">
+<h3>Common Pitfalls</h3>
+<ul>
+<li>Creating a false "watcher" identity &mdash; "I am the witness" can become a new ego. The witness has no name.</li>
+<li>Dissociating from life: the technique is not about withdrawal, it's about stable presence WHILE engaging</li>
+<li>Straining to "find" the subject &mdash; you can't see the seer as an object. You can only be it.</li>
+</ul>
+</section>
+
+<section class="section qa">
+<h3>Questions From The Book</h3>
+<details>
+<summary>In which way can the practice of self-remembering transform the human mind?</summary>
+<div class="qa-body">
+<p class="src">Chapter 36, "From Illusion to Reality"</p>
+<p>Osho's answer, in essence: Gurdjieff called this technique "self-remembering" &mdash; remember yourself while looking at anything. Normally you forget yourself; you become the thing you are watching. A movie absorbs you. An argument absorbs you. Self-remembering means: keep a thread of awareness on yourself while engaging with anything. It transforms the mind because energy that was constantly leaking outward now has a home to return to. You become a centre rather than a scattered field.</p>
+</div>
+</details>
+<details>
+<summary>If I am always the subject, never lost in objects, won't I become cold and removed from life?</summary>
+<div class="qa-body">
+<p class="src">Chapter 73, "Fear of Transformation Goes Deep"</p>
+<p>Osho's answer, in essence: The opposite happens. When you are not lost in things, you can actually enjoy them for the first time. A person drowning in water cannot enjoy swimming. But someone standing on solid ground who chooses to enter the water can play in it. The subjective mood is the ground. From there, engagement is a choice, not a compulsion. Love becomes purer when you are not lost in it, because there is no fear of losing yourself.</p>
+</div>
+</details>
+</section>
+
+<section class="section commentary">
+<h3>Modern Commentary</h3>
+<span class="label">AI-distilled, not from Osho</span>
+<p><strong>What this is really pointing at:</strong> Attention is always flowing outward &mdash; toward screens, problems, people, desires. This creates what psychology calls "continuous partial attention" &mdash; you are everywhere and therefore nowhere. The sutra reverses the direction: instead of attention flowing outward toward objects, let attention rest in its source. The objects don't disappear; you just stop being consumed by them.</p>
+<p><strong>A modern analogy:</strong> Like the difference between a flashlight and a lighthouse. The flashlight moves from object to object, always chasing. The lighthouse stays home and illuminates whatever passes through its beam. Be the lighthouse.</p>
+<p><strong>Why neuroscience cares:</strong> The distinction between "subject" and "object" maps onto what researchers call metacognition &mdash; awareness of awareness. Metacognitive capacity is trainable and correlates with emotional regulation, decision quality, and reduced rumination. This sutra is a metacognition drill.</p>
+<p class="essence"><strong>Essence</strong>You see the world and the world sees you. One of you never changes. Stay with that one.</p>
+</section>
+
+<div class="actions">
+<button class="timer-btn" data-timer="15">Start a 15-min practice</button>
+<span class="timer-display" data-display="t6"></span>
+</div>
+</article>
+
+<!-- ============================ TECHNIQUE 7 ============================ -->
+<article class="technique" id="t7" data-tech="7">
+<div class="technique-head">
+<span>Technique 108 of 112</span>
+<button class="fav-btn" aria-label="Favourite" data-fav="t7">&#9825;</button>
+</div>
+<div class="tags"><strong>Category:</strong> Mind &amp; Thought &middot; <strong>Tags:</strong> emptiness &middot; transcendence &middot; knowing &middot; advanced</div>
+
+<blockquote class="sutra">
+Sweet hearted one, meditate on knowing and not-knowing, existing and not-existing. Then leave both aside that you may be.
+</blockquote>
+
+<section class="section plain">
+<h3>In Plain English</h3>
+<p>The mind can only think in pairs: knowing/not-knowing, existing/not-existing, yes/no, something/nothing. This sutra says: hold both opposites in awareness simultaneously. Let them cancel. Then drop both. What remains cannot be named &mdash; but it IS. The sutra calls it "you" &mdash; "that you may be." This is not a philosophical exercise; it is a direct pointing to what you are when all categories are abandoned.</p>
+</section>
+
+<section class="section practice">
+<h3>How to Practice</h3>
+<ol>
+<li>Sit in deep stillness. 10 minutes of silent settling first.</li>
+<li>Contemplate: "I know things." Feel the state of knowing &mdash; the confidence, the structure it gives.</li>
+<li>Now contemplate: "I know nothing." Feel the state of not-knowing &mdash; the openness, the uncertainty.</li>
+<li>Hold both simultaneously. Don't choose one over the other. Let them coexist.</li>
+<li>Now do the same with existence: "I exist" &mdash; feel that. "I do not exist" &mdash; feel that too.</li>
+<li>Hold both. Neither is false; neither is complete.</li>
+<li>Now: leave both aside. Don't land on either pole. Simply be &mdash; without any statement about what you are.</li>
+<li>Rest there. 20&ndash;40 minutes.</li>
+</ol>
+</section>
+
+<section class="section facts">
+<h3>Quick Facts</h3>
+<dl>
+<dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &nbsp;Advanced (one of the final techniques)</dd>
+<dt>Duration</dt><dd>30&ndash;45 min</dd>
+<dt>Best time</dt><dd>Deep night or pre-dawn &mdash; when the world is quiet and mind is least defended</dd>
+<dt>Posture</dt><dd>Seated, fully erect, utterly still</dd>
+<dt>Eyes</dt><dd>Closed</dd>
+<dt>Best for</dt><dd>Experienced meditators who have already worked through earlier techniques and are ready for the final leap</dd>
+<dt>Avoid if</dt><dd>You are new to meditation, or if existential questions trigger anxiety rather than curiosity</dd>
+</dl>
+</section>
+
+<section class="section signs">
+<h3>Signs It's Working</h3>
+<ul>
+<li>The mind stops grasping &mdash; a feeling like releasing a clenched fist you didn't know was clenched</li>
+<li>A strange peace that isn't "positive" or "negative" &mdash; it just IS</li>
+<li>The sense that categories like "self/other," "here/there," "then/now" are optional overlays, not reality</li>
+<li>Moments where you genuinely cannot say whether you exist or not &mdash; and it doesn't bother you</li>
+</ul>
+</section>
+
+<section class="section pitfalls">
+<h3>Common Pitfalls</h3>
+<ul>
+<li>Intellectualizing: "I get it, it's neither!" &mdash; understanding the idea is not doing the technique</li>
+<li>Choosing one pole: "I'll go with not-knowing, it sounds more spiritual" &mdash; the technique requires both, then neither</li>
+<li>Trying this as your first technique &mdash; without prior grounding, it can feel like vertigo rather than freedom</li>
+<li>Expecting a blinding insight &mdash; the result is subtler: a gentle absence of all conclusion</li>
+</ul>
+</section>
+
+<section class="section qa">
+<h3>Questions From The Book</h3>
+<details>
+<summary>You call the inner space emptiness, but also call it being. How can something be both empty and full?</summary>
+<div class="qa-body">
+<p class="src">Chapter 80, "All and Nothing Mean the Same"</p>
+<p>Osho's answer, in essence: "All" and "nothing" are contradictory only in the dictionary, not in existence. If you love all, it is the same as loving no one in particular. If you are everything, you are also nothing specific. These are two ways of pointing at the absolute. One is via negation (empty, void, nothingness), the other via affirmation (fullness, totality, God). Neither is more correct. They meet at the same point &mdash; the point where mind's categories break down. The technique takes you there by holding both and then dropping both.</p>
+</div>
+</details>
+<details>
+<summary>Why did Buddhism get uprooted from India because of emptiness teachings?</summary>
+<div class="qa-body">
+<p class="src">Chapter 79, "The Philosophy of Emptiness"</p>
+<p>Osho's answer, in essence: India's temperament is devotional, theistic. The idea of total emptiness &mdash; no God, no soul, no permanence &mdash; felt like nihilism to the Indian heart. People could not understand that Buddha was using emptiness as a method, not a philosophy. He denied God not because God doesn't exist, but because any concept of God becomes a hiding place for the ego. He denied the soul so that no subtle "self" could survive. The technique requires total emptiness as the door &mdash; but what you find inside is the fullest fullness. People heard only the door and missed what lay behind it.</p>
+</div>
+</details>
+<details>
+<summary>Were techniques like "become universal consciousness" meant only for very advanced persons?</summary>
+<div class="qa-body">
+<p class="src">Chapter 78, "The Inner Guide"</p>
+<p>Osho's answer, in essence: They were meant for very innocent persons, not very advanced ones. An innocent person can hear "you are already that" and simply accept it &mdash; and in that acceptance, it becomes actual. We need elaborate techniques only because we cannot trust. We cannot simply hear and be. The simpler you are, the fewer steps you need. The more complex your mind, the more technique is required to exhaust it.</p>
+</div>
+</details>
+</section>
+
+<section class="section commentary">
+<h3>Modern Commentary</h3>
+<span class="label">AI-distilled, not from Osho</span>
+<p><strong>What this is really pointing at:</strong> The mind operates in binary code: 1 or 0, yes or no, exists or doesn't exist. This sutra says: what if reality is neither 1 nor 0? What if it is the screen on which both 1 and 0 appear? You cannot think your way to what is beyond thought &mdash; but you can exhaust thought by giving it two opposites to hold simultaneously. The mind, unable to resolve the contradiction, eventually surrenders. In that surrender, something else becomes apparent.</p>
+<p><strong>A modern analogy:</strong> Like a computer encountering an instruction that says "this statement is false." The logical processor halts. In that halt, you become aware of the processor itself &mdash; not its output, but its existence. That awareness of the processor (not any calculation it produces) is what the sutra calls "you."</p>
+<p><strong>If this feels too advanced &mdash; the simpler version:</strong> Start with Technique 3 (wherever the mind wanders, this) for a month. Then move to Technique 6 (remain in the subject). Only after those feel natural should you attempt this final dissolution. It is the last door, not the first.</p>
+<p><strong>Why this technique is placed near the end of the 112:</strong> It requires that you have already become comfortable with paradox, with not-knowing, with the absence of ground. Without that preparation, it feels terrifying. With it, it feels like coming home.</p>
+<p class="essence"><strong>Essence</strong>When knowing and not-knowing are both released, what breathes? That.</p>
+</section>
+
+<div class="actions">
+<button class="timer-btn" data-timer="40">Start a 40-min deep sitting</button>
+<span class="timer-display" data-display="t7"></span>
+</div>
+</article>
+
+
+<footer>
+<p>You have reached the end of <em>The Techniques for Mind &amp; Thought</em>.</p>
+<p>14 more categories &mdash; Breath, Sound, Light, Centring, Witnessing, Senses, and others &mdash; complete the 112.</p>
+<p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+'use strict';
+const html=document.documentElement;
+const themeBtn=document.getElementById('theme-btn');
+const stored=localStorage.getItem('vbt-theme');
+if(stored)html.setAttribute('data-theme',stored);
+else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+themeBtn.addEventListener('click',()=>{const n=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',n);localStorage.setItem('vbt-theme',n)});
+
+const progress=document.querySelector('.progress');
+function updateProgress(){const h=document.documentElement;const s=h.scrollTop;const t=h.scrollHeight-h.clientHeight;progress.style.width=t>0?(s/t*100)+'%':'0'}
+document.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+const FAV_KEY='vbt-mind-favs';
+const favs=new Set(JSON.parse(localStorage.getItem(FAV_KEY)||'[]'));
+document.querySelectorAll('.fav-btn').forEach(btn=>{const id=btn.dataset.fav;if(favs.has(id)){btn.classList.add('on');btn.textContent='\u2665'}btn.addEventListener('click',()=>{if(favs.has(id)){favs.delete(id);btn.classList.remove('on');btn.textContent='\u2661'}else{favs.add(id);btn.classList.add('on');btn.textContent='\u2665'}localStorage.setItem(FAV_KEY,JSON.stringify([...favs]))})});
+
+function playBell(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=432;g.gain.setValueAtTime(0.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.4,ctx.currentTime+0.02);g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+4.5);o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+4.6)}catch(e){}}
+document.querySelectorAll('.timer-btn').forEach(btn=>{let interval=null;let endTime=0;const minutes=parseInt(btn.dataset.timer,10);const techId=btn.closest('article.technique').id;const display=document.querySelector('[data-display="'+techId+'"]');const original=btn.textContent;function fmt(ms){const s=Math.max(0,Math.ceil(ms/1000));const m=Math.floor(s/60),r=s%60;return m+':'+(r<10?'0':'')+r}function stop(natural){if(interval)clearInterval(interval);interval=null;btn.classList.remove('running');btn.textContent=original;if(natural){display.textContent='Done.';playBell();setTimeout(()=>{display.textContent=''},6000)}else{display.textContent=''}}btn.addEventListener('click',()=>{if(interval){stop(false);return}endTime=Date.now()+minutes*60*1000;btn.classList.add('running');btn.textContent='Stop';const tick=()=>{const left=endTime-Date.now();if(left<=0){stop(true);return}display.textContent=fmt(left)+' remaining'};tick();interval=setInterval(tick,500)})});
+
+const focusBtn=document.getElementById('focus-btn');
+let observer=null;
+focusBtn.addEventListener('click',()=>{const on=!document.body.classList.contains('focus');document.body.classList.toggle('focus',on);focusBtn.setAttribute('aria-pressed',on);if(on&&!observer){observer=new IntersectionObserver((entries)=>{entries.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting))},{threshold:0.4});document.querySelectorAll('article.technique').forEach(a=>observer.observe(a))}});
+
+document.getElementById('print-btn').addEventListener('click',()=>window.print());
+
+document.addEventListener('keydown',(e)=>{if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;if(e.key==='j'||e.key==='k'){const arts=[...document.querySelectorAll('article.technique')];const cur=arts.findIndex(a=>a.getBoundingClientRect().top>-100);const idx=e.key==='j'?Math.min(arts.length-1,cur+1):Math.max(0,cur-1);if(arts[idx])arts[idx].scrollIntoView({behavior:'smooth',block:'start'})}});
+
+const GLOSSARY={
+'Vigyan Bhairav Tantra':'A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.',
+'Tantra':'Literally "method" \u2014 a non-fighting approach that uses life energies (desire, sex, emotion) as doorways rather than enemies.',
+'ego':'In this context, not arrogance but the constructed sense of being a separate "me" \u2014 the narrative self that meditation gradually dissolves.',
+'nirvana':'Sanskrit for "extinguishing" \u2014 the cessation of the false self, often translated as "liberation."',
+'moksha':'Sanskrit for "liberation" \u2014 release from the cycle of identification and suffering.',
+'sansara':'The world of ordinary experience and identification, contrasted with moksha.',
+'samadhi':'A deep meditative state of unification; absorption beyond ordinary self-consciousness.',
+'shunya':'Sanskrit for "void" or "emptiness" \u2014 the central concept in Buddhist philosophy.',
+'atma':'Sanskrit for "self" or "soul" \u2014 the inner essence Hindus consider eternal.',
+'brahma':'Sanskrit for "the absolute" \u2014 the impersonal ground of being in Hindu philosophy.',
+'default mode network':'A network of brain regions active when mind-wandering; modern neuroscience considers it the substrate of the "narrative self."',
+'ACT':'Acceptance and Commitment Therapy \u2014 a modern psychotherapy using cognitive defusion and present-moment awareness.',
+'MBSR':'Mindfulness-Based Stress Reduction \u2014 Jon Kabat-Zinn\'s clinical adaptation of meditation for stress, pain, and anxiety.',
+'90-second rule':'Jill Bolte Taylor\'s observation: the neurochemical wave of an emotion clears within ~90 seconds. Anything longer is re-triggering through thought.',
+'Gurdjieff':'G.I. Gurdjieff (1866\u20131949) \u2014 Russian-Armenian teacher who introduced "self-remembering" to the West.',
+'Krishnamurti':'J. Krishnamurti (1895\u20131986) \u2014 Indian teacher who emphasised choiceless awareness and rejected formal techniques.'
+};
+function escG(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+const gT=Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length);
+document.querySelectorAll('article.technique, header.hero').forEach(art=>{
+gT.forEach(t=>{
+const re=new RegExp('\\b('+escG(t)+')\\b','i');
+const w=document.createTreeWalker(art,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;if(!p)return NodeFilter.FILTER_REJECT;if(p.closest('script, style, .glossary-term, .glossary-block, .controls, .progress, .timer-display, .technique-head, .actions'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});
+let n;
+while((n=w.nextNode())){const m=n.textContent.match(re);if(m){const tx=n.textContent;const b=tx.slice(0,m.index);const a=tx.slice(m.index+m[1].length);const sp=document.createElement('span');sp.className='glossary-term';sp.dataset.term=t;sp.tabIndex=0;sp.textContent=m[1];const f=document.createDocumentFragment();if(b)f.appendChild(document.createTextNode(b));f.appendChild(sp);if(a)f.appendChild(document.createTextNode(a));n.replaceWith(f);return}}
+});
+});
+let gTip=null;
+function showG(e){const el=e.currentTarget;const t=el.dataset.term;const d=GLOSSARY[t];if(!d)return;if(!gTip){gTip=document.createElement('div');gTip.className='glossary-tooltip';document.body.appendChild(gTip)}gTip.innerHTML='<strong></strong>';gTip.firstChild.textContent=t;gTip.appendChild(document.createTextNode(d));const r=el.getBoundingClientRect();gTip.style.top=(r.bottom+window.scrollY+6)+'px';let l=r.left+window.scrollX;if(l+290>window.innerWidth+window.scrollX)l=window.innerWidth+window.scrollX-296;if(l<8)l=8;gTip.style.left=l+'px';gTip.classList.add('show')}
+function hideG(){if(gTip)gTip.classList.remove('show')}
+document.querySelectorAll('.glossary-term').forEach(el=>{el.addEventListener('mouseenter',showG);el.addEventListener('focus',showG);el.addEventListener('mouseleave',hideG);el.addEventListener('blur',hideG);el.addEventListener('click',e=>{e.preventDefault();showG(e);setTimeout(hideG,6000)})});
+})();
+</script>
+</body>
+</html>

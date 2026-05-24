@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 10 light and gazing techniques from Osho's Vigyan Bhairav Tantra — distilled, with practice instructions, common pitfalls, questions from the book, and modern commentary.">
+<title>The Techniques for Light & Gazing — Vigyan Bhairav Tantra</title>
+<style>
+:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:200;transition:width .15s ease-out;box-shadow:0 0 8px var(--accent-soft)}
+.controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
+.controls button{width:36px;height:36px;border-radius:999px;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.controls button:hover,.controls button[aria-pressed="true"]{background:var(--bg-soft);color:var(--accent)}
+.controls button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--accent-soft)}
+main{max-width:680px;margin:0 auto;padding:5rem 1.5rem 2rem}
+header.hero{text-align:center;padding:2rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink)}
+.hero .lede{color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;font-size:1.05rem;font-style:italic}
+.hero .meta{font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+.jumplinks{margin-top:2.5rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1.25rem 1.5rem;text-align:left}
+.jumplinks h2{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 1rem;font-weight:600}
+.jumplinks ol{margin:0;padding:0;list-style:none;counter-reset:jl}
+.jumplinks li{counter-increment:jl;border-top:1px solid var(--rule);padding:.55rem 0}
+.jumplinks li:first-child{border-top:0}
+.jumplinks a{text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:.7rem;font-size:.95rem;transition:color .15s}
+.jumplinks a::before{content:counter(jl);font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faint);min-width:1.5rem}
+.jumplinks a:hover{color:var(--accent)}
+.jumplinks .sub{color:var(--ink-faint);font-style:italic;font-size:.85rem}
+article.technique{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:2rem 2rem 1.75rem;margin:0 0 2.5rem;box-shadow:var(--shadow);scroll-margin-top:5rem;position:relative}
+.technique-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.4rem}
+.fav-btn{background:transparent;border:0;cursor:pointer;font-size:1.3rem;color:var(--ink-faint);transition:color .2s,transform .2s;line-height:1;padding:.2rem}
+.fav-btn:hover{transform:scale(1.15);color:var(--accent)}
+.fav-btn.on{color:var(--accent)}
+.tags{font-family:var(--sans);font-size:.75rem;color:var(--ink-faint);margin-bottom:1.5rem;letter-spacing:.02em}
+.tags strong{color:var(--ink-soft);font-weight:600}
+blockquote.sutra{margin:1rem 0 2rem;padding:1.75rem 1.5rem;background:var(--sutra-bg);border-left:3px solid var(--accent);border-radius:4px;font-family:var(--serif);font-size:1.18rem;font-style:italic;line-height:1.55;color:var(--ink);text-align:center;quotes:"\201C" "\201D"}
+blockquote.sutra::before{content:open-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.4em;margin-right:.1em}
+blockquote.sutra::after{content:close-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.6em;margin-left:.1em}
+.section{margin:1.75rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule)}
+.section h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .9rem;font-weight:600}
+.section p{margin:.5rem 0}
+.section ol,.section ul{margin:.5rem 0;padding-left:1.4rem}
+.section li{margin:.35rem 0;line-height:1.65}
+.plain p{font-size:1.02rem;color:var(--ink-soft)}
+.facts dl{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.25rem;margin:0;font-family:var(--sans);font-size:.92rem}
+.facts dt{color:var(--ink-faint);font-weight:600;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase;padding-top:.15rem}
+.facts dd{margin:0;color:var(--ink)}
+.stars{color:var(--accent);letter-spacing:.05em}
+.stars .off{color:var(--rule)}
+.signs ul,.pitfalls ul{list-style:none;padding-left:0}
+.signs li::before{content:"\2022";color:var(--accent);margin-right:.7rem;font-weight:700}
+.pitfalls li::before{content:"\2715";color:#a83232;margin-right:.7rem;font-weight:700;font-size:.9em}
+html[data-theme="dark"] .pitfalls li::before{color:#d96b6b}
+.qa details{border:1px solid var(--rule);border-radius:5px;background:var(--bg);margin:.5rem 0;transition:background .2s}
+.qa details[open]{background:var(--bg-soft)}
+.qa summary{padding:.85rem 1rem;cursor:pointer;font-style:italic;color:var(--ink);list-style:none;display:flex;align-items:flex-start;gap:.6rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"\203A";display:inline-block;color:var(--accent);font-style:normal;transition:transform .2s;margin-top:.05em;flex-shrink:0}
+.qa details[open] summary::before{transform:rotate(90deg)}
+.qa-body{padding:0 1rem 1rem 2rem}
+.qa-body .src{font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.5rem}
+.qa-body p{font-size:.95rem;color:var(--ink-soft);margin:.4rem 0}
+.commentary{background:var(--bg);border-radius:6px;border:1px dashed var(--rule);padding:1.25rem 1.4rem}
+.commentary h3{display:flex;align-items:center;gap:.5rem}
+.commentary h3::before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:999px}
+.commentary .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.4rem}
+.commentary p{font-size:.96rem;color:var(--ink-soft);margin:.6rem 0}
+.commentary .essence{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--rule);font-style:italic;color:var(--ink);font-size:1.02rem}
+.commentary .essence strong{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-style:normal;display:block;margin-bottom:.3rem;font-weight:600}
+.actions{margin-top:1.75rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.timer-btn{font-family:var(--sans);font-size:.9rem;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:.7rem 1.4rem;cursor:pointer;font-weight:500;letter-spacing:.02em;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:0 4px 12px -4px var(--accent)}
+.timer-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
+.timer-btn.running{background:#a83232}
+html[data-theme="dark"] .timer-btn.running{background:#c44}
+.timer-display{font-family:var(--sans);font-variant-numeric:tabular-nums;font-size:.95rem;color:var(--ink-faint)}
+body.focus article.technique{opacity:.25;transition:opacity .5s}
+body.focus article.technique.in-view{opacity:1}
+footer{text-align:center;padding:3rem 0 1rem;border-top:1px solid var(--rule);color:var(--ink-faint);font-family:var(--sans);font-size:.85rem}
+footer p{margin:.4rem 0}
+.about-block,.howto-block,.beginner-block,.glossary-block{margin-top:1.25rem;border-radius:6px;font-family:var(--sans);font-size:.92rem;text-align:left}
+.about-block,.glossary-block{background:var(--bg-card);border:1px solid var(--rule)}
+.about-block summary,.glossary-block summary{padding:.85rem 1.25rem;cursor:pointer;color:var(--ink-soft);list-style:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:flex;align-items:center}
+.about-block summary::-webkit-details-marker,.glossary-block summary::-webkit-details-marker{display:none}
+.about-block summary::before,.glossary-block summary::before{content:"+";margin-right:.6rem;color:var(--accent);font-weight:700;font-size:1.15rem;line-height:1;transition:transform .2s}
+.about-block[open] summary::before,.glossary-block[open] summary::before{content:"\2212"}
+.about-body,.glossary-body{padding:0 1.25rem 1.25rem;border-top:1px solid var(--rule)}
+.about-body p{font-family:var(--serif);margin:.8rem 0;line-height:1.65;color:var(--ink-soft)}
+.glossary-body dl{margin:.8rem 0 0;display:grid;gap:.35rem 1rem}
+.glossary-body dt{font-weight:700;color:var(--accent);font-size:.9rem;margin-top:.55rem}
+.glossary-body dd{margin:0;color:var(--ink-soft);font-family:var(--serif);font-size:.92rem;line-height:1.55}
+.howto-block{background:var(--sutra-bg);border-left:3px solid var(--accent);padding:1.25rem 1.5rem}
+.howto-block h3,.beginner-block h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 .7rem;font-weight:600}
+.howto-block p,.beginner-block p{margin:.5rem 0;font-family:var(--serif);line-height:1.65;color:var(--ink-soft)}
+.howto-block strong,.beginner-block strong{color:var(--ink)}
+.beginner-block{background:var(--bg-soft);border:1px dashed var(--accent-soft);padding:1.25rem 1.5rem}
+.beginner-block a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.beginner-block a:hover{border-bottom-color:var(--accent)}
+.disclaimer{font-size:.78rem;color:var(--ink-faint);font-style:italic;margin:1.25rem 0 0;text-align:center;line-height:1.5}
+.glossary-term{border-bottom:1px dotted var(--accent);cursor:help;color:inherit;padding:0 1px;transition:background .15s}
+.glossary-term:hover,.glossary-term:focus{background:var(--accent-soft);outline:none}
+.glossary-tooltip{position:absolute;background:var(--ink);color:var(--bg);padding:.7rem .9rem;border-radius:6px;font-family:var(--sans);font-size:.82rem;line-height:1.5;max-width:280px;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);z-index:300;opacity:0;pointer-events:none;transition:opacity .15s}
+.glossary-tooltip.show{opacity:1;pointer-events:auto}
+.glossary-tooltip strong{display:block;margin-bottom:.35rem;color:var(--accent-soft);text-transform:uppercase;font-size:.68rem;letter-spacing:.12em}
+@media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.actions,.fav-btn{display:none!important}article.technique{box-shadow:none;border:none;page-break-inside:avoid;padding:0;margin:0 0 1.5rem}blockquote.sutra{background:#f5f5f5;border-left:2px solid #888}main{max-width:none;padding:1rem}.about-block,.glossary-block,.howto-block,.beginner-block,.disclaimer{display:none!important}.glossary-term{background:none!important;border-bottom:1px dotted #888}}
+@media(max-width:600px){body{font-size:17px}article.technique{padding:1.5rem 1.25rem}.controls{top:.5rem;right:.5rem}blockquote.sutra{font-size:1.05rem;padding:1.25rem 1rem}.facts dl{grid-template-columns:1fr;gap:.1rem .5rem}.facts dt{padding-top:.5rem}main{padding:4rem 1rem 2rem}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<nav class="controls" aria-label="Reading controls">
+  <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+  <button id="focus-btn" aria-label="Toggle focus mode" title="Focus mode" aria-pressed="false">&#9678;</button>
+  <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
+</nav>
+<main>
+<header class="hero">
+  <div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 4 of 15</div>
+  <h1>The Techniques for Light &amp; Gazing</h1>
+  <p class="lede">Ten techniques that use inner light, outer darkness, fire, sky, and the luminosity of awareness itself as doorways to the divine. Light is consciousness made visible; follow it inward and you become the source.</p>
+  <p class="meta">10 techniques &middot; ~14 min read &middot; works fully offline</p>
+  <details class="about-block">
+    <summary>About these techniques</summary>
+    <div class="about-body">
+      <p>These ten techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The light and gazing sutras form the fourth major category &mdash; using inner luminosity, outer darkness, fire, sky-gazing, and the radiance of pure attention to dissolve the boundary between seer and seen.</p>
+      <p>These techniques span the full spectrum: from visualising light rising through the spine, to staring into a black night, to realising that awareness itself is luminous. Some are gentle beginner practices; others are among the most powerful and potentially overwhelming in the entire tantra.</p>
+    </div>
+  </details>
+  <aside class="howto-block">
+    <h3>How to use this page</h3>
+    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
+    <p><strong>Critical safety note:</strong> Techniques 1, 2, and 5 involve powerful energy work. Never leave these incomplete mid-session. Always bring the energy to the crown and release. Read all cautions before beginning.</p>
+  </aside>
+  <aside class="beginner-block">
+    <h3>New to light meditation?</h3>
+    <p>Start with <a href="#t4">Technique 4 &mdash; the clear sky</a> or <a href="#t9">Technique 9 &mdash; wherever attention alights</a>. Both require nothing special and are safe for all levels. Spend 20&ndash;40 minutes a day for 21 days. Then return for what comes next.</p>
+  </aside>
+  <details class="glossary-block">
+    <summary>Glossary &mdash; unfamiliar terms?</summary>
+    <div class="glossary-body">
+      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+      <dl>
+        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+        <dt>sahasrar</dt><dd>The thousand-petalled lotus at the crown of the head &mdash; the highest energy centre in the yogic system. When kundalini reaches here, the individual dissolves into the cosmic.</dd>
+        <dt>chakra</dt><dd>An energy centre in the subtle body. The seven main chakras run along the spine from base (muladhara) to crown (sahasrar).</dd>
+        <dt>kundalini</dt><dd>The dormant energy said to lie coiled at the base of the spine. When awakened, it rises through the chakras toward the crown.</dd>
+        <dt>sushumna</dt><dd>The central energy channel running along the spine through which kundalini rises. Flanked by ida (left/lunar) and pingala (right/solar).</dd>
+        <dt>prana</dt><dd>Life-force energy. Breath is its grossest form; light and attention are subtler forms. All techniques ultimately work with prana.</dd>
+        <dt>third eye</dt><dd>The ajna chakra, located between the eyebrows. Associated with insight, inner vision, and the dissolution of duality.</dd>
+        <dt>turiya</dt><dd>The fourth state &mdash; beyond waking, dreaming, and deep sleep. Pure awareness that witnesses all three states without being any of them.</dd>
+        <dt>Essenes</dt><dd>An ancient Jewish mystical sect (c. 200 BCE &ndash; 100 CE) that, according to Osho, experienced God as absolute darkness &mdash; the formless, the void before creation.</dd>
+        <dt>aura</dt><dd>The subtle luminous field said to surround living beings. In these techniques, imagining the body as an aura of light helps dissolve the sense of solidity.</dd>
+        <dt>prakriti</dt><dd>Nature or matter in Sankhya philosophy &mdash; the manifest world as distinguished from purusha (pure consciousness). The fire technique burns prakriti to reveal purusha.</dd>
+      </dl>
+    </div>
+  </details>
+  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. Some techniques in this category can produce intense experiences. If you feel overwhelmed, open your eyes, ground through your feet, and breathe normally.</p>
+  <nav class="jumplinks" aria-label="Techniques in this file">
+    <h2>Techniques in this file</h2>
+    <ol>
+      <li><a href="#t1"><span>Light rays rising from centre to centre up the vertebrae</span> <span class="sub">&middot; the spine of light</span></a></li>
+      <li><a href="#t2"><span>In the spaces between, feel this as lightning</span> <span class="sub">&middot; lightning between chakras</span></a></li>
+      <li><a href="#t3"><span>Feel the cosmos as a translucent ever-living presence</span> <span class="sub">&middot; luminous world</span></a></li>
+      <li><a href="#t4"><span>In summer when you see the entire sky endlessly clear</span> <span class="sub">&middot; entering the sky</span></a></li>
+      <li><a href="#t5"><span>See all space as if already absorbed in your own head</span> <span class="sub">&middot; space in the skull</span></a></li>
+      <li><a href="#t6"><span>Waking, sleeping, dreaming, know you as light</span> <span class="sub">&middot; the continuous flame</span></a></li>
+      <li><a href="#t7"><span>In rain during a black night, enter that blackness</span> <span class="sub">&middot; darkness as the womb</span></a></li>
+      <li><a href="#t8"><span>Close eyes and find blackness before you</span> <span class="sub">&middot; inner darkness, faults disappear</span></a></li>
+      <li><a href="#t9"><span>Wherever your attention alights, at this very point, experience</span> <span class="sub">&middot; the light of attention</span></a></li>
+      <li><a href="#t10"><span>Focus on fire rising through your form from the toes up</span> <span class="sub">&middot; burning to ashes</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<!-- ============================ TECHNIQUE 1 ============================ -->
+<article class="technique" id="t1" data-tech="1">
+  <div class="technique-head"><span>Technique 70 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t1">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> spine &middot; chakras &middot; light &middot; energy &middot; visualization</div>
+  <blockquote class="sutra">Consider your essence as light rays rising from centre to centre up the vertebrae, and so rises livingness in you.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Visualise &mdash; no, <em>feel</em> &mdash; light rising through your spine from the sex centre at the base to the crown at the top. As the light ascends through each energy centre, feel aliveness intensifying. You are not imagining something false; physics confirms you are made of light particles. This technique asks you to experience that truth directly.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Preparation:</strong> Choose a time when you will not be disturbed for at least 45 minutes. Lock the door. Turn off your phone. This is non-negotiable &mdash; interruption mid-practice can leave energy stranded in uncomfortable places.</li>
+      <li><strong>Settle the body:</strong> Sit comfortably with spine erect, or lie down flat. Take 5&ndash;10 slow breaths. Let the body become heavy, grounded, still. Don&rsquo;t begin the main practice until the surface mind has quieted.</li>
+      <li><strong>Develop feeling, not thinking:</strong> This is the critical distinction Osho emphasises. Do NOT think &ldquo;light is rising.&rdquo; Instead, FEEL warmth, tingling, aliveness. Start by feeling the warmth of your own body &mdash; the heat at your sex centre. That heat IS light slowed down. Let yourself feel it as luminous.</li>
+      <li><strong>First centre (Muladhara/sex centre):</strong> Feel a pool of warm golden light at the base of your spine. Don&rsquo;t rush. Spend 5 full minutes here. Let the warmth intensify naturally. It is not imagination &mdash; blood flows here, heat is real.</li>
+      <li><strong>Rising to the navel:</strong> When the base feels alive, allow the light to rise &mdash; like a slow river of warm honey &mdash; up through the belly to the navel centre. Feel the navel glow. Warmth spreads through the abdomen. The belly softens. Stay 3&ndash;5 minutes.</li>
+      <li><strong>Rising to the heart:</strong> Let the river of light continue upward to the heart. Here, something changes: breathing deepens spontaneously, the heartbeat may slow or become more noticeable. A feeling of openness, vulnerability, love may arise. Stay 5 minutes. Don&rsquo;t push feelings away.</li>
+      <li><strong>Rising to the throat:</strong> The light ascends to the throat. You may feel a lump, a desire to speak or sing or cry. Let the throat open. The light purifies whatever is held here. Stay 2&ndash;3 minutes.</li>
+      <li><strong>Rising to the third eye:</strong> The light moves to the space between the eyebrows. Pressure may build here &mdash; this is normal. The inner visual field may shift: colours, patterns, or a sense of vast space. Stay 3&ndash;5 minutes.</li>
+      <li><strong>Rising to the crown (sahasrar):</strong> Finally, feel the light push through the top of the head. Imagine &mdash; feel &mdash; the crown opening like a thousand-petalled lotus. Light streams upward into infinite space. You are not contained by the body any longer. Stay here for 5&ndash;10 minutes.</li>
+      <li><strong>Release into cosmos:</strong> Let the light dissolve upward into the sky. You are empty, transparent, clean. The &ldquo;livingness&rdquo; the sutra mentions is this: you feel more alive than you have ever felt, because the life-force is no longer blocked at any point.</li>
+      <li><strong>CRITICAL &mdash; Never leave incomplete:</strong> If you must stop early, ALWAYS bring the energy to the crown and release it upward before opening your eyes. Energy left at the sex centre or navel creates agitation; at the heart, emotional overwhelm; at the third eye, headaches. Complete the circuit.</li>
+      <li><strong>Return:</strong> When ready, feel the body again. Wiggle toes and fingers. Open eyes slowly. Sit for 2&ndash;3 minutes before standing. Drink water.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced</dd>
+    <dt>Duration</dt><dd>40&ndash;60 min</dd><dt>Posture</dt><dd>Seated (spine erect) or lying flat</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Those comfortable with energy work; patient practitioners; people who feel &ldquo;stuck&rdquo; or low-energy</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Distinct warmth or tingling at each centre as the light arrives</li><li>Spontaneous changes in breathing and heartbeat at the heart centre</li><li>Colours appearing in the inner visual field at the third eye</li><li>A sense of the crown &ldquo;opening&rdquo; &mdash; like a flower blooming or a fountain releasing</li><li>Feeling extraordinarily alive, vibrant, and clear after the session</li><li>Over weeks: increased energy, reduced sleep need, emotional clarity</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Thinking instead of feeling &mdash; if you&rsquo;re narrating &ldquo;now the light is at the navel,&rdquo; you&rsquo;re in the head, not the body</li><li>Rushing through centres to &ldquo;get to the top&rdquo; &mdash; each centre needs real time; this is not a race</li><li>Stopping mid-practice due to disturbance &mdash; always complete to crown before stopping</li><li>Forcing the energy with willpower &mdash; the light rises by invitation, by feeling, not by force</li><li>Practising in a public or shared space where interruption is possible</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does Osho say this is not imagination but reality?</summary>
+      <div class="qa-body"><p class="src">Chapter 46, "From the Beginning of Light"</p><p>Osho explains: modern physics confirms that all matter is condensed energy, and energy is light vibrating at different frequencies. Your body is literally made of light &mdash; photons, electrons, quanta of energy. When you &ldquo;imagine&rdquo; yourself as light, you are not adding something false; you are removing the false solidity that the mind projects. You are seeing what is actually there. The feeling confirms this &mdash; heat, tingling, aliveness &mdash; these are not hallucinations but direct perceptions of your own energy field.</p></div>
+    </details>
+    <details><summary>What happens if energy gets stuck at a centre?</summary>
+      <div class="qa-body"><p class="src">Chapter 46</p><p>Osho warns strongly: never leave this practice incomplete. If energy accumulates at the sex centre, you will feel extreme restlessness and sexual agitation. At the navel, digestive disturbance and anxiety. At the heart, uncontrollable emotions. At the throat, inability to sleep. At the third eye, splitting headaches. ALWAYS take the energy to the crown and release it. If you are interrupted, immediately visualise the light shooting up and out through the top of the head. This takes only seconds and prevents all problems.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> This maps directly to the yogic model of kundalini rising through the sushumna channel. Whether you frame it as literal energy or as progressive relaxation of neuromuscular holding patterns along the spine, the experiential result is the same: a wave of aliveness ascending the body, culminating in a sense of boundless openness at the crown.</p>
+    <p><strong>Neuroscience parallel:</strong> The spine contains the central nervous system. &ldquo;Light rising through the vertebrae&rdquo; may correspond to sequential activation of spinal nerve plexuses, which map roughly to the traditional chakra locations. The warmth practitioners report is consistent with increased blood flow to these regions during focused interoceptive attention.</p>
+    <div class="essence"><strong>One-line essence</strong>You are made of light pretending to be solid. Let the light remember itself &mdash; rising, centre by centre, until the pretence dissolves at the crown.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="45">Start a 45-min sitting</button><span class="timer-display" data-display="t1"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 2 ============================ -->
+<article class="technique" id="t2" data-tech="2">
+  <div class="technique-head"><span>Technique 71 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t2">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> lightning &middot; jump &middot; chakras &middot; energy &middot; spark</div>
+  <blockquote class="sutra">Or in the spaces between, feel this as lightning.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>This is a variation of the previous technique. Instead of light rising gradually like a river, feel it JUMPING between centres like lightning bolts &mdash; instantaneous, electric, sharp. The spaces between the chakras are bridged in a flash. For minds that are naturally jumpy, restless, or male-energy-dominant, this abrupt approach may work better than the slow, gradual river of the previous sutra.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Same preparation as Technique 1:</strong> Total privacy. 40&ndash;60 minutes of uninterrupted time. Spine erect or lying flat. 5&ndash;10 breaths to settle.</li>
+      <li><strong>Feel the base centre:</strong> Become aware of warmth and energy at the base of the spine. Let it gather intensity for 2&ndash;3 minutes &mdash; like a storm cloud building charge.</li>
+      <li><strong>FLASH to navel:</strong> In one instant &mdash; not gradually &mdash; feel the energy JUMP from base to navel. Like a lightning bolt. Like a spark leaping a gap. The sensation should be sudden, electric, vivid.</li>
+      <li><strong>Let the navel absorb:</strong> Pause at the navel for 1&ndash;2 minutes. Let the energy settle and intensify again. Build the charge.</li>
+      <li><strong>FLASH to heart:</strong> Another instantaneous jump. Base-to-navel was the first bolt; navel-to-heart is the second. Feel the electric shock of arrival at the heart.</li>
+      <li><strong>Continue upward:</strong> Heart to throat &mdash; flash. Throat to third eye &mdash; flash. Third eye to crown &mdash; the final bolt.</li>
+      <li><strong>At the crown:</strong> Feel all the lightning energy collecting and then bursting upward like a thunderbolt into the sky. Complete release.</li>
+      <li><strong>Rest in the aftermath:</strong> After the final release, sit in the profound silence that follows a storm. The body may feel electric, buzzing, incredibly alive.</li>
+      <li><strong>If too much heat arises:</strong> Osho warns that this technique can generate intense heat. If you feel burning, agitation, or overwhelm, SWITCH immediately to the gradual method (Technique 1). Move the energy slowly and gently to the crown. Not everyone is suited to the lightning approach.</li>
+      <li><strong>Experiment with both:</strong> Try the gradual method for a week. Then try the lightning method for a week. Your body will tell you which one is yours. Some people are rivers; some people are lightning. Neither is superior.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced</dd>
+    <dt>Duration</dt><dd>40&ndash;60 min</dd><dt>Posture</dt><dd>Seated or lying flat</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Restless minds; male-energy-dominant types; those who find gradual methods boring; impatient practitioners</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Distinct electric &ldquo;jolts&rdquo; as the energy jumps between centres</li><li>The body may physically jerk or twitch at the moment of each jump</li><li>A sense of speed, excitement, intensity that the gradual method lacks</li><li>After the final release at the crown: profound stillness, like the calm after a thunderstorm</li><li>Heat in the spine that is intense but not painful</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Generating too much heat and continuing anyway &mdash; if it burns, switch to the gradual method immediately</li><li>Making it mental/imaginary rather than felt &mdash; the &ldquo;lightning&rdquo; must be a body sensation, not a thought</li><li>Skipping the pause between jumps &mdash; each centre needs a moment to absorb the charge before the next bolt</li><li>Same as Technique 1: NEVER leave incomplete. Always release at the crown.</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does Osho say this suits the male mind better?</summary>
+      <div class="qa-body"><p class="src">Chapter 46, "Lightning or River"</p><p>Osho explains: by &ldquo;male mind&rdquo; he does not mean biological men only. He means the yang, active, restless quality of consciousness that jumps rather than flows. Some women have this quality; some men are more river-like. The point is energetic temperament, not gender. If you find gradual approaches tedious, if your mind naturally jumps from thing to thing, then this lightning method uses your own nature rather than fighting it. The restlessness becomes the vehicle.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Where Technique 1 is the parasympathetic approach (slow, gentle, river-like), this is the sympathetic burst &mdash; using intensity and surprise to bypass the thinking mind. The sudden &ldquo;jump&rdquo; doesn&rsquo;t give the mind time to interfere. It&rsquo;s the difference between easing into cold water and diving in.</p>
+    <p><strong>Somatic parallel:</strong> In trauma therapy, some clients respond better to titration (gradual) and others to pendulation (rapid oscillation between states). This mirrors that distinction perfectly. Know your nervous system.</p>
+    <div class="essence"><strong>One-line essence</strong>Not all rivers reach the ocean first. Sometimes lightning is faster &mdash; one bolt, one flash, and the sky is split open.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="45">Start a 45-min sitting</button><span class="timer-display" data-display="t2"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 3 ============================ -->
+<article class="technique" id="t3" data-tech="3">
+  <div class="technique-head"><span>Technique 72 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t3">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> translucence &middot; cosmos &middot; presence &middot; sensitivity &middot; perception</div>
+  <blockquote class="sutra">Feel the cosmos as a translucent ever-living presence.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Develop such sensitivity that you begin to perceive everything around you &mdash; trees, rocks, sky, other people &mdash; as luminous, translucent, alive with inner light. Not as dead matter but as living presence. This is not a belief to adopt but a perception to develop through months of patient practice.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Phase 1 &mdash; Develop sensitivity (Week 1&ndash;2):</strong> Before attempting the main technique, spend two weeks developing raw sensitivity. Follow a child for an hour and notice how they touch everything. Touch your own body with awareness &mdash; feel the texture of your skin, the warmth. In the shower, feel every drop of water. Eat slowly, tasting fully. This phase is essential preparation.</li>
+      <li><strong>Phase 2 &mdash; Candle gazing (Week 3&ndash;4):</strong> Sit in a dark room with a single candle. Adopt a prayerful attitude &mdash; not religious prayer but an attitude of reverence and openness. Gaze at the flame for 5 minutes without blinking if possible. Notice: the flame is not one colour. As your eyes relax, you&rsquo;ll see the full rainbow within it &mdash; blue at the base, white at the centre, gold and red at the edges. The flame is alive, dancing, ever-changing.</li>
+      <li><strong>Phase 3 &mdash; Seeing luminosity in objects (Week 5&ndash;8):</strong> After candle-gazing, look at other objects in the room. Carry the quality of the flame-gazing &mdash; that soft, receptive, reverent seeing &mdash; to everything. See the table as glowing from within. See the wall as translucent. Don&rsquo;t THINK &ldquo;this is translucent&rdquo; &mdash; FEEL it. Let it happen.</li>
+      <li><strong>Phase 4 &mdash; Walking outside (Week 9&ndash;12):</strong> Take this perception outdoors. Walk slowly. See trees not as solid wood but as columns of living light. See the sky not as empty space but as luminous presence. See rocks not as dead matter but as condensed light vibrating slowly. See other people as flames walking around in body-shaped lanterns.</li>
+      <li><strong>The key instruction:</strong> Don&rsquo;t think ABOUT translucence. Don&rsquo;t philosophise. Don&rsquo;t try to convince yourself. Just soften your gaze, open your feeling, and ALLOW the world to reveal its luminous nature. It will, if you are patient and sensitive enough.</li>
+      <li><strong>Duration:</strong> Practise 1 hour daily. The full transformation typically takes 3 months of consistent practice. Some moments of &ldquo;seeing through&rdquo; may come earlier as glimpses.</li>
+      <li><strong>Attitude:</strong> Approach with childlike wonder, not adult analysis. The child sees the world as magical because the child has not yet learned to see it as dead matter. You are unlearning deadness.</li>
+      <li><strong>Integration:</strong> Once this perception stabilises, it becomes your default way of seeing. The world never looks dead again. This is what mystics mean by &ldquo;seeing God everywhere&rdquo; &mdash; not a belief but a direct perception of aliveness.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>60 min daily for 3 months</dd><dt>Posture</dt><dd>Various &mdash; seated for candle, walking for outdoors</dd><dt>Eyes</dt><dd>Open (soft gaze)</dd><dt>Best for</dt><dd>Visual people; artists; nature lovers; those who feel the world is &ldquo;dead&rdquo; or meaningless</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Moments of spontaneous beauty that stop you in your tracks</li><li>The candle flame reveals unexpected colours and depth</li><li>Objects begin to look &ldquo;more real&rdquo; &mdash; edges softer, colours richer, presence palpable</li><li>A sense of everything being alive, breathing, aware</li><li>Gratitude arises without reason</li><li>Other people notice something different about your eyes &mdash; a softness, a depth</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Trying to see translucence with the thinking mind &mdash; this blocks the perception</li><li>Skipping the sensitivity-building phase and jumping straight to &ldquo;seeing light&rdquo;</li><li>Getting discouraged in the first weeks when nothing seems to change</li><li>Forcing it &mdash; translucence reveals itself when you are receptive, not when you demand it</li><li>Confusing philosophical belief with direct perception &mdash; believing &ldquo;everything is light&rdquo; is not the same as SEEING it</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How is this different from just pretending the world is beautiful?</summary>
+      <div class="qa-body"><p class="src">Chapter 47, "Translucent Presence"</p><p>Osho is clear: this is not positive thinking, not affirmation, not pretending. It is a change in perception that happens naturally when sensitivity is sufficiently developed. When your eyes become soft and receptive enough, reality reveals a dimension that was always there but that the hardened, categorising mind cannot see. You are not adding beauty to the world &mdash; you are removing the barrier that prevented you from seeing what was always present.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Our default perceptual mode is utilitarian &mdash; we see objects in terms of use, category, and threat. This technique shifts perception from &ldquo;what is it?&rdquo; to &ldquo;that it IS.&rdquo; This mirrors the phenomenological &ldquo;reduction&rdquo; &mdash; bracketing interpretation to encounter raw presence. When interpretation drops, everything looks luminous because you&rsquo;re seeing the aliveness that categories obscure.</p>
+    <p><strong>Research parallel:</strong> Studies on awe show that experiences of beauty and vastness reduce default mode network activity and self-referential thinking. This technique systematically cultivates the perceptual conditions that produce awe &mdash; making the extraordinary perception of aliveness a stable trait rather than a fleeting state.</p>
+    <div class="essence"><strong>One-line essence</strong>The world is not dead. Your seeing has become dead. Resurrect your seeing, and the cosmos reveals itself as a translucent, ever-living presence it always was.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="60">Start a 60-min sitting</button><span class="timer-display" data-display="t3"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 4 ============================ -->
+<article class="technique" id="t4" data-tech="4">
+  <div class="technique-head"><span>Technique 73 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t4">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> sky &middot; clarity &middot; emptiness &middot; open &middot; staring</div>
+  <blockquote class="sutra">In summer when you see the entire sky endlessly clear, enter such clarity.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>On a cloudless day, lie on your back and stare into the clear blue sky. Don&rsquo;t think about the sky &mdash; enter it. Lose yourself in its boundlessness. When the outer sky fills you so completely that your inner space becomes sky-like, close your eyes &mdash; and discover the same infinite clarity within. The outer sky and the inner sky are one.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Find your spot:</strong> A lonely beach, a rooftop, an open field, a garden &mdash; anywhere you can lie flat on your back with the full sky above you. The sky must be clear &mdash; cloudless, blue, boundless. Summer days are ideal.</li>
+      <li><strong>Lie down comfortably:</strong> Flat on your back, arms slightly away from the body, palms up. Let the body be completely relaxed. The ground holds you; you don&rsquo;t need to hold yourself.</li>
+      <li><strong>Rule 1 &mdash; Don&rsquo;t blink:</strong> Osho&rsquo;s specific instruction. Keep your eyes open without blinking. Tears will come &mdash; this is good. The tears cleanse the eyes, and after the tears pass, vision becomes extraordinarily clear. The effort of not blinking keeps the mind from wandering.</li>
+      <li><strong>Rule 2 &mdash; Don&rsquo;t think ABOUT the sky:</strong> Don&rsquo;t say &ldquo;how beautiful.&rdquo; Don&rsquo;t say &ldquo;how vast.&rdquo; Don&rsquo;t analyse, don&rsquo;t poeticise. Just stare. Let the sky pour into your eyes without commentary.</li>
+      <li><strong>Rule 3 &mdash; Stay at least 40 minutes:</strong> The mind will resist. At 5 minutes it will say &ldquo;this is boring.&rdquo; At 15 minutes it will create urgent thoughts. Stay. At 30&ndash;40 minutes, something shifts &mdash; the boundary between you and sky begins to dissolve.</li>
+      <li><strong>Enter the sky:</strong> Move deeper and deeper into the blue. Try to find its boundary &mdash; there is none. Try to find where it ends &mdash; it doesn&rsquo;t. The boundlessness of the sky begins to infect your consciousness. Your mind, which is normally full of boundaries, starts to become boundless.</li>
+      <li><strong>The merging:</strong> At some point, &ldquo;you&rdquo; looking at &ldquo;sky&rdquo; becomes simply... sky. The watcher and the watched merge. This may come as a sudden shift or a gradual dissolution. Either way, it is unmistakable.</li>
+      <li><strong>Close your eyes:</strong> When the merging happens (or after 40 minutes), gently close your eyes. Now look within. The same sky is here &mdash; vast, clear, boundless, empty. The inner sky meets the outer sky. They were never separate.</li>
+      <li><strong>Alternative for cloudy days:</strong> If no clear sky is available, close your eyes and focus on the SPACE between thoughts. Not the thoughts themselves &mdash; the gaps. Those gaps are the inner sky. They are just as vast, just as clear, just as boundless. Rest in the gaps.</li>
+      <li><strong>Return:</strong> When you feel ready, bring attention back to the body. Feel the ground beneath you. Sit up slowly. The clarity of the sky often remains for hours afterward.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+    <dt>Duration</dt><dd>40+ min</dd><dt>Posture</dt><dd>Lying flat on back</dd><dt>Eyes</dt><dd>Open (without blinking) then closed</dd><dt>Best for</dt><dd>Everyone; especially anxious minds; overthinkers; those who feel trapped or confined</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Tears come and pass; vision becomes crystal-clear afterward</li><li>The sense of boundary between self and sky dissolves</li><li>A feeling of vast spaciousness, both outside and inside</li><li>When you close your eyes, the inner space feels as limitless as the outer</li><li>Thoughts slow dramatically or stop entirely</li><li>A deep, effortless peace &mdash; not imposed but natural, like the sky itself</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Thinking about the sky instead of entering it &mdash; every &ldquo;how beautiful&rdquo; is a barrier</li><li>Giving up at 10&ndash;15 minutes because &ldquo;nothing is happening&rdquo; &mdash; the shift needs 30&ndash;40 minutes</li><li>Blinking constantly &mdash; the non-blinking creates a specific quality of absorption; commit to it</li><li>Choosing a day with clouds &mdash; clouds give the mind objects to track; you need formless, clear blue</li><li>Looking at the sun (obviously!) &mdash; look at the sky AWAY from the sun</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does Shiva say &ldquo;in summer&rdquo; specifically?</summary>
+      <div class="qa-body"><p class="src">Chapter 47, "The Sky Technique"</p><p>Osho explains: in India, summer skies are the clearest &mdash; no clouds, no haze, pure blue vastness. But the deeper reason is that summer is when the body is most alive, most warm, most expanded. In winter we contract; in summer we naturally open. The combination of a clear sky and an open, warm body creates the ideal conditions for this dissolution of boundaries. However, any clear sky will work regardless of season.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> The clear sky is a perfect mirror for awareness itself &mdash; formless, boundless, unchanging, containing everything without being affected by anything. By staring into it, you are staring into a physical representation of your own deepest nature. The technique uses the outer analogy to reveal the inner reality.</p>
+    <p><strong>Neuroscience parallel:</strong> Soft, unfocused gazing at a uniform visual field (Ganzfeld effect) is known to produce altered states of consciousness, perceptual dissolution, and reduced self-referential thinking. The brain, deprived of edges and objects to categorise, enters a state similar to deep meditation. This 5,000-year-old technique stumbled on what researchers confirmed only in the 20th century.</p>
+    <div class="essence"><strong>One-line essence</strong>The sky has no boundaries. Stare long enough, and you remember: neither do you.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="40">Start a 40-min sitting</button><span class="timer-display" data-display="t4"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 5 ============================ -->
+<article class="technique" id="t5" data-tech="5">
+  <div class="technique-head"><span>Technique 74 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t5">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> space &middot; head &middot; absorption &middot; vastness &middot; expansion</div>
+  <blockquote class="sutra">Shakti, see all space as if already absorbed in your own head in the brilliance.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Expand your sense of self until all space &mdash; the room, the city, the sky, the cosmos &mdash; is contained within your own head. Not that you are in space, but that space is in you. This is the most powerful and potentially overwhelming technique in this category. The mind, which needs narrowness to exist, cannot survive when all space enters it. The mind dissolves; only brilliance remains.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>CAUTION:</strong> This technique should be done with a companion present (in the next room or nearby). It can produce dizziness, disorientation, or loss of consciousness in some practitioners. Do NOT attempt this alone until you have done it successfully with support at least 5&ndash;10 times.</li>
+      <li><strong>Week 1 &mdash; Small expansion:</strong> Lie in bed before sleep. Feel your body as normal. Then imagine &mdash; FEEL &mdash; your body extending 6 inches beyond its physical boundary in every direction. Feel your feet 6 inches longer, your head 6 inches taller, your body 6 inches wider. Just 6 inches. Get comfortable with this small expansion. Practice nightly for a week.</li>
+      <li><strong>Week 2 &mdash; Room-sized:</strong> Same practice, but now expand until you FEEL 12 feet tall, filling the entire room. The walls are inside you. The ceiling is inside your head. The floor is inside your feet. Don&rsquo;t think it &mdash; FEEL it. Your body-sense expands to fill the room.</li>
+      <li><strong>Week 3 &mdash; House-sized:</strong> Expand further. Feel the whole house within you. Other rooms, other people &mdash; all inside your expanded body-sense. The roof is inside your head. The garden is inside your belly.</li>
+      <li><strong>Week 4 &mdash; City-sized and beyond:</strong> Continue expanding. The city is inside you. The countryside. The continent. The earth. The sky. Eventually: ALL SPACE is absorbed in your own head. You are not inside space &mdash; space is inside you.</li>
+      <li><strong>The critical moment:</strong> When space truly enters your head, the mind disappears. This is because the mind needs narrowness, confinement, boundaries to function. When all boundaries are gone &mdash; when infinity is inside you &mdash; the mind has no walls to bounce between. It collapses. What remains is &ldquo;brilliance&rdquo; &mdash; pure awareness without form.</li>
+      <li><strong>The impact is tremendous:</strong> Osho warns that this can be overwhelming. Some people faint. Some feel terror. Some experience ecstasy. This is why a companion is necessary &mdash; someone to bring you water, to ground you, to simply be present so you are not alone if the experience becomes too intense.</li>
+      <li><strong>Grounding afterward:</strong> After each session, deliberately contract back to body-size. Feel your physical boundaries. Stamp your feet. Drink cold water. Touch something solid. Don&rsquo;t drive or operate machinery for at least 30 minutes after deep practice.</li>
+      <li><strong>Build over 3 months:</strong> This is NOT a technique to rush. Each week&rsquo;s expansion must be stable before moving to the next. If any stage produces too much discomfort, stay at that stage until it becomes comfortable. There is no prize for speed.</li>
+      <li><strong>Group practice:</strong> Osho recommends doing this in a group of 3&ndash;5 people, all practising simultaneously. The shared field supports the expansion and provides safety.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &nbsp;Very Advanced</dd>
+    <dt>Duration</dt><dd>Build over 3 months (20&ndash;40 min per session)</dd><dt>Posture</dt><dd>Lying down (especially for advanced stages)</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Experienced meditators only; those with a stable sense of self who can afford to lose it temporarily</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Genuine physical sensation of the body expanding beyond its boundaries</li><li>A feeling of the room (or larger space) being &ldquo;inside&rdquo; rather than &ldquo;around&rdquo;</li><li>At advanced stages: the mind goes completely silent because it has no reference points</li><li>A sense of brilliance or luminosity filling the expanded space</li><li>Afterward: profound peace, spaciousness, and a lightness that lasts hours or days</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Attempting advanced stages without building gradually &mdash; this is dangerous</li><li>Doing it alone without support, especially in early attempts</li><li>Confusing intellectual understanding with felt experience &mdash; THINKING &ldquo;space is in me&rdquo; is worthless; you must FEEL it</li><li>Not grounding adequately afterward &mdash; this can leave you spacey and disoriented for hours</li><li>Pushing through fear or dizziness rather than backing off &mdash; respect your limits</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does Osho say the mind needs narrowness to exist?</summary>
+      <div class="qa-body"><p class="src">Chapter 47, "Space Absorbed in the Head"</p><p>Osho explains: the mind functions by creating boundaries &mdash; between this and that, here and there, self and other. It is a boundary-making mechanism. When you remove all boundaries by absorbing all space into yourself, the mind has nothing to do. It&rsquo;s like a fish taken out of water &mdash; it cannot function in infinity. It needs the narrowness of &ldquo;I am here, the world is there&rdquo; to operate. Remove that division, and the mind simply stops. What remains is consciousness without mind &mdash; what the sutra calls &ldquo;brilliance.&rdquo;</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> The default sense of self has spatial boundaries: &ldquo;I end at my skin.&rdquo; This technique systematically expands that spatial self-model until it includes everything. When the boundary includes everything, it is no longer a boundary &mdash; and the self-model collapses. What&rsquo;s left is unbounded awareness. This maps to what neuroscience calls &ldquo;ego dissolution&rdquo; or &ldquo;oceanic boundlessness.&rdquo;</p>
+    <p><strong>Research parallel:</strong> Rubber hand illusion and full-body ownership transfer experiments show that the brain&rsquo;s body schema is remarkably flexible &mdash; it can be extended to virtual avatars, tools, and even entire rooms. This technique leverages that neural plasticity deliberately, pushing the body schema to its absolute limit &mdash; and past it.</p>
+    <div class="essence"><strong>One-line essence</strong>You think you are inside space. Reverse it: space is inside you. And in that reversal, the walls of the mind come down forever.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="30">Start a 30-min sitting</button><span class="timer-display" data-display="t5"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 6 ============================ -->
+<article class="technique" id="t6" data-tech="6">
+  <div class="technique-head"><span>Technique 75 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t6">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> light &middot; flame &middot; waking &middot; sleeping &middot; dreaming &middot; continuity</div>
+  <blockquote class="sutra">Waking, sleeping, dreaming, know you as light.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Carry a single perception &mdash; that you are a flame of light &mdash; through all three states of consciousness: waking, dreaming, and deep sleep. Start with waking only. When the flame becomes stable enough that it persists into dreams, carry it deeper into dreamless sleep. When you remain aware through all three states, you become the fourth &mdash; turiya &mdash; the witness that never sleeps.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Phase 1 &mdash; Waking state (Months 1&ndash;3):</strong> Throughout your day &mdash; while walking, eating, working, talking &mdash; maintain the feeling that a small, bright flame is burning in your heart centre. The body is merely the aura around this flame &mdash; a transparent glass chimney. You are not a solid physical body with a soul somewhere inside; you are a flame with a body-shaped glow around it.</li>
+      <li><strong>Make it felt, not thought:</strong> Don&rsquo;t keep repeating &ldquo;I am light.&rdquo; Instead, FEEL the warmth at the heart. Feel the luminosity. Feel the lightness (both less-heavy and more-luminous). Let it become your background body-sense.</li>
+      <li><strong>Persist for 3 months:</strong> This is not a 20-minute meditation &mdash; it is a 24/7 remembrance during waking hours. At first you&rsquo;ll forget constantly. That&rsquo;s fine. Each time you remember, gently return to the flame. Over weeks, the gaps between forgetting shorten.</li>
+      <li><strong>The sign that Phase 1 is complete:</strong> Other people notice something different about you. They may report feeling warmth near you, seeing a subtle glow, or simply feeling inexplicably attracted. When OTHERS notice, the flame has become strong enough to proceed.</li>
+      <li><strong>Phase 2 &mdash; Dreaming state:</strong> Only after Phase 1 is stable. As you fall asleep each night, feel the flame at the heart. Let it be the last thing in awareness as you drift off. The flame will begin to appear in your dreams &mdash; sometimes as a literal light, sometimes as an unusual clarity within the dream. Eventually, the flame&rsquo;s presence in dreams gives you lucidity &mdash; you know you are dreaming.</li>
+      <li><strong>When dreams disappear:</strong> As the flame becomes constant in dreams, something remarkable happens: dreams stop. Not because you are suppressing them, but because the flame&rsquo;s light dissolves the dream-material. Dreams are made of unconsciousness; when light enters, they evaporate.</li>
+      <li><strong>Phase 3 &mdash; Deep sleep:</strong> Only when dreams have largely disappeared. Now the flame persists even in deep sleep. You are no longer unconscious during sleep &mdash; a witness remains, aware of the darkness, aware of the body resting, aware of the gap. This is turiya &mdash; the fourth state.</li>
+      <li><strong>Timeline:</strong> This is a long-term practice. Phase 1 alone takes 3 months minimum. The full practice may take a year or more. This is not a quick technique &mdash; it is a life-practice.</li>
+      <li><strong>Don&rsquo;t skip phases:</strong> Each phase must be stable before moving to the next. If the waking-state flame is not yet noticed by others, the dreaming phase will not work. If dreams have not dissolved, deep-sleep awareness will not arise. Trust the sequence.</li>
+      <li><strong>The result:</strong> When turiya is established, you never truly sleep again &mdash; the body sleeps but you remain aware. This is not insomnia; the body gets full rest. But consciousness never switches off. You become continuous awareness &mdash; 24/7, unbroken, the same light in waking, dreaming, and deep sleep.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced (long-term)</dd>
+    <dt>Duration</dt><dd>3+ months continuous (24/7 remembrance)</dd><dt>Posture</dt><dd>All postures &mdash; this is done in daily life</dd><dt>Eyes</dt><dd>Open and closed (all states)</dd><dt>Best for</dt><dd>Committed practitioners; those seeking continuity of awareness; lucid dreamers; people with strong devotional capacity</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Phase 1: Others notice warmth, light, or attraction around you</li><li>Phase 1: You feel lighter, less solid, more transparent throughout the day</li><li>Phase 2: The flame appears in dreams; lucid dreams begin</li><li>Phase 2: Dreams gradually become less frequent, then disappear</li><li>Phase 3: Moments of awareness during deep sleep &mdash; you know the body is asleep but &ldquo;you&rdquo; are awake</li><li>Full: Unbroken continuity &mdash; no gap in awareness between waking, dreaming, and sleep</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Making it a strain &mdash; the remembrance should be gentle, not a grim self-imposed duty</li><li>Expecting results in days or weeks &mdash; this is a months-to-years practice</li><li>Jumping to Phase 2 without the external confirmation that Phase 1 is working</li><li>Confusing lucid dreaming techniques (reality checks, etc.) with this &mdash; this works through the flame, not through cognitive tricks</li><li>Sleep disturbance early on &mdash; if you lose sleep quality, you are trying too hard at bedtime; let it be soft</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>What is turiya and why is it called &ldquo;the fourth&rdquo;?</summary>
+      <div class="qa-body"><p class="src">Chapter 48, "Know You As Light"</p><p>Osho explains: we normally know three states &mdash; waking, dreaming, and deep sleep. We cycle through them daily. But there is a fourth that is not a state at all &mdash; it is the awareness that witnesses all three states without being any of them. It is called &ldquo;the fourth&rdquo; (turiya) simply because it has no name of its own &mdash; it is beyond naming, beyond states. It is what you are when you stop identifying with any particular state. This technique creates continuity through all states, and that continuity IS turiya.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> This technique creates what sleep researchers call &ldquo;witnessing sleep&rdquo; &mdash; a condition documented in advanced meditators where gamma brainwave activity persists during NREM sleep. The meditator reports continuous awareness even in deep sleep. This is not sleep deprivation; the body&rsquo;s restoration continues normally. It is consciousness becoming independent of its usual state-dependent switching.</p>
+    <p><strong>Modern research:</strong> Studies on long-term TM practitioners (20+ years) show increased EEG coherence during sleep and self-reports of continuous witnessing awareness. This maps precisely to what this 5,000-year-old sutra describes as the goal.</p>
+    <div class="essence"><strong>One-line essence</strong>A flame that burns through waking, dreams, and sleep without flickering &mdash; that flame is you. Not the body, not the mind, not any state &mdash; the light that witnesses them all.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="30">Start a 30-min sitting</button><span class="timer-display" data-display="t6"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 7 ============================ -->
+<article class="technique" id="t7" data-tech="7">
+  <div class="technique-head"><span>Technique 76 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t7">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> darkness &middot; night &middot; form &middot; formlessness &middot; surrender</div>
+  <blockquote class="sutra">In rain during a black night, enter that blackness as the form of forms.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>On a moonless, rainy night &mdash; when darkness is absolute &mdash; go outside with open eyes and stare into that blackness. Not the blackness behind closed eyelids (that is merely the negative of light) but real, external, total darkness. Let the darkness enter your eyes. Let yourself dissolve into it. The darkness is not empty &mdash; it is the &ldquo;form of forms,&rdquo; the womb from which all creation arises. Enter it as you would enter a mother&rsquo;s embrace.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Phase 1 &mdash; Overcome fear of darkness (Weeks 1&ndash;2):</strong> Most people have a deep, unconscious fear of darkness. Before attempting the main technique, befriend the dark. Sit in your room with all lights off for 30 minutes nightly. Don&rsquo;t meditate &mdash; just BE in the dark. Let your eyes adjust. Let the fear surface, be felt, and pass. Do this until darkness feels comfortable, even inviting.</li>
+      <li><strong>Phase 2 &mdash; Develop love for darkness:</strong> Begin to notice what darkness gives you that light cannot: rest for the eyes, cool relaxation, mystery, womb-like safety, the dissolution of visual boundaries. Let yourself LOVE the dark &mdash; as a friend, as a mother, as the original state from which you came.</li>
+      <li><strong>Phase 3 &mdash; The main practice:</strong> Wait for a moonless, rainy night. Rain is specified because rain clouds block all starlight, making the darkness truly total. Also, the sound of rain relaxes the mind and provides a gentle background for surrender.</li>
+      <li><strong>Go outside:</strong> Stand or sit in a safe, open area. Keep your eyes OPEN &mdash; this is crucial. You are not looking at closed-eyelid darkness (which is just retinal noise) but at actual, external, absolute darkness. There is nothing to see &mdash; and that &ldquo;nothing&rdquo; becomes everything.</li>
+      <li><strong>Let darkness enter your eyes:</strong> Normally you project outward through the eyes &mdash; looking AT things. Now reverse it. Let the darkness come IN through the eyes. Be receptive. Your eyes are doors &mdash; normally you go out through them; now let the dark come in. Tears may come; the eyes may hurt slightly. Persist.</li>
+      <li><strong>Enter the darkness:</strong> When real darkness has entered you, a shift happens: YOU enter IT. The boundary between inside and outside dissolves. You are no longer a person surrounded by darkness. You ARE the darkness. There is no separation.</li>
+      <li><strong>Feel darkness as the cosmic womb:</strong> Lie down if you can (dry shelter nearby if raining heavily). Feel yourself held by infinite blackness as a baby is held in the womb. There is nothing to do, nothing to be, no identity needed in total darkness. The ego cannot exist without light to reflect off of. In absolute dark, you become formless &mdash; and that formlessness is peace.</li>
+      <li><strong>Carry a patch of darkness:</strong> After the session, as you return to light, try to carry a patch of that inner darkness with you. Throughout the next day, remember the black velvet quality behind your solar plexus. Osho says: those who carry darkness within become deeply relaxed, cool, passionless, free of anger and agitation.</li>
+      <li><strong>Historical note:</strong> The Essenes &mdash; an ancient mystery school &mdash; meditated on God as absolute darkness, not light. Their reasoning: light is created; darkness is uncreated. Darkness was before &ldquo;let there be light.&rdquo; Darkness IS the ultimate formlessness from which all forms emerge.</li>
+      <li><strong>Duration:</strong> 1 hour sessions, practised for 3 months for full transformation. Weekly sessions on dark nights as available.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>1 hour daily for 3 months</dd><dt>Posture</dt><dd>Standing, sitting, or lying &mdash; outside in darkness</dd><dt>Eyes</dt><dd>Open (into real darkness)</dd><dt>Best for</dt><dd>Those afraid of the dark; insomniacs; people with anger issues; those exhausted by too much stimulation</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Fear of darkness transforms into love of darkness</li><li>A sense of being held, cradled, embraced by the dark</li><li>The boundary between inner and outer dissolves &mdash; you become the darkness</li><li>Deep physical relaxation that lasts into the next day</li><li>Reduction in anger, agitation, and restlessness over weeks</li><li>Sleep quality improves dramatically (darkness becomes associated with deep rest)</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Skipping Phase 1 &mdash; doing the outdoor practice while still afraid of the dark makes it a horror exercise, not meditation</li><li>Keeping eyes closed &mdash; closed-eye darkness is NOT the same; it&rsquo;s just retinal patterns. You need real external darkness entering open eyes</li><li>Choosing a night that isn&rsquo;t dark enough &mdash; streetlights, starlight, or moonlight defeat the purpose</li><li>Fighting the darkness rather than surrendering into it</li><li>Safety: don&rsquo;t do this in unsafe locations; choose a known, safe outdoor space</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does Osho call darkness &ldquo;the form of forms&rdquo;?</summary>
+      <div class="qa-body"><p class="src">Chapter 48, "Darkness: The Womb"</p><p>Osho explains: light reveals forms but is not itself the source of form. Darkness is the original state &mdash; the uncreated backdrop from which all creation emerges. Before the Big Bang, there was darkness. Before conception, the womb is dark. Before a seed sprouts, it is underground in darkness. Darkness is the matrix, the mould, the womb of all forms. It is called &ldquo;the form of forms&rdquo; because every form arises from it and returns to it. To enter darkness consciously is to return to the source of all creation.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Complete darkness eliminates all visual input &mdash; the brain&rsquo;s most active sensory channel goes quiet. The visual cortex, deprived of input, enters a state of reduced metabolic activity. The result is a profound quieting of the entire nervous system. Combined with the symbolic/archetypal associations of darkness (womb, rest, dissolution of identity), this creates conditions for deep surrender.</p>
+    <p><strong>Therapeutic parallel:</strong> Darkness retreats (practiced in some traditions for 1&ndash;14 days) have been shown to increase melatonin, DMT precursors, and endogenous opioids. Even one hour of total darkness produces measurable relaxation responses. The ancient technique predates the modern discovery of these mechanisms by millennia.</p>
+    <div class="essence"><strong>One-line essence</strong>Light reveals the world. Darkness reveals you &mdash; the formless awareness that was here before any world arose.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="60">Start a 60-min sitting</button><span class="timer-display" data-display="t7"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 8 ============================ -->
+<article class="technique" id="t8" data-tech="8">
+  <div class="technique-head"><span>Technique 77 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t8">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> darkness &middot; inner &middot; faults &middot; purification &middot; eyes</div>
+  <blockquote class="sutra">When a moonless rainy night is not present, close eyes and find blackness before you. Opening eyes, see blackness. So faults disappear forever.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>This is the indoor version of the previous technique &mdash; for when actual darkness is unavailable. Close your eyes and find the natural blackness that is there. Then open your eyes and PROJECT that inner darkness outward &mdash; see blackness even with eyes open. When inner and outer darkness merge into totality, all &ldquo;faults&rdquo; (disturbances, impurities, egoic patterns) disappear &mdash; because in total darkness there is no ego, no identity, no separation between self and other.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Find a quiet space:</strong> Any room, any time. Dim the lights if possible, but this technique works even in a lit room because you are working with inner darkness projected outward.</li>
+      <li><strong>Close your eyes:</strong> Look at the blackness that appears. Don&rsquo;t look for colours, patterns, or images &mdash; focus on the BLACK itself. The darkness behind your eyelids. Let it deepen, thicken, become velvety.</li>
+      <li><strong>Stay with the blackness for 5&ndash;10 minutes:</strong> Let it become rich, deep, total. If colours or images appear, gently return attention to the black background behind them. The darkness is always there behind everything else.</li>
+      <li><strong>Open your eyes:</strong> Now, keeping that quality of inner darkness alive, open your eyes. See the outer world but MAINTAIN the sense of darkness. Project the inner blackness outward. Let it overlay what you see. The room may appear darker, edges may soften, the visual field may seem less solid.</li>
+      <li><strong>Merge inner and outer:</strong> The inner darkness (eyes closed) and the outer seeing (eyes open) are not two different things. Let them merge. The darkness is everywhere &mdash; behind appearances, between objects, within objects. Everything floats in darkness.</li>
+      <li><strong>Alternate:</strong> Close eyes (find blackness) &rarr; open eyes (maintain blackness) &rarr; close eyes (deepen) &rarr; open eyes (maintain). Each cycle, the darkness becomes more stable and pervasive even with eyes open.</li>
+      <li><strong>&ldquo;Faults disappear&rdquo;:</strong> Osho explains that &ldquo;faults&rdquo; here means disturbances, impurities, mental agitations. In total darkness there is no ego &mdash; because ego needs light (reflection, visibility, comparison) to exist. When you carry total darkness even with eyes open, the ego has no mirror. Without a mirror, it cannot exist. Without ego, its faults (anger, greed, jealousy) have no home.</li>
+      <li><strong>Practice duration:</strong> 20&ndash;30 minutes per session. Can be done daily without special conditions.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>20&ndash;30 min</dd><dt>Posture</dt><dd>Seated</dd><dt>Eyes</dt><dd>Alternating open and closed</dd><dt>Best for</dt><dd>Those who cannot access outdoor darkness; city-dwellers; people who want to dissolve habitual patterns; those working with shadow material</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>The inner blackness becomes genuinely deep &mdash; not grey but truly black, velvety, rich</li><li>When eyes open, you can maintain a quality of darkness pervading the visual field</li><li>A sense of peace and egolessness during the practice</li><li>Over weeks: habitual reactive patterns (anger, jealousy, comparison) lose their grip</li><li>A general sense of purification &mdash; old patterns falling away without effort</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Getting distracted by colours and patterns behind closed eyes &mdash; these are not the blackness; look past them</li><li>Giving up because you &ldquo;can&rsquo;t see blackness with eyes open&rdquo; &mdash; it&rsquo;s a quality, not a visual override; be subtle</li><li>Expecting dramatic experiences &mdash; this is a quiet, purifying technique; the results show in daily life, not in the session</li><li>Interpreting &ldquo;faults disappear&rdquo; as instant transformation &mdash; it is gradual dissolution over weeks</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>What is the difference between this darkness and depression?</summary>
+      <div class="qa-body"><p class="src">Chapter 48, "Finding Blackness"</p><p>Osho distinguishes clearly: depression is darkness you are FIGHTING &mdash; you don&rsquo;t want it, it oppresses you, you feel trapped. This meditative darkness is darkness you ENTER willingly with love and openness. One is resistance; the other is surrender. When you resist darkness, it becomes depression. When you embrace it, it becomes liberation. The darkness is the same &mdash; your relationship to it makes all the difference.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> This technique uses the after-image principle in reverse. Normally, staring at a bright object creates a dark after-image. Here, you cultivate the &ldquo;dark after-image&rdquo; of inner darkness and project it onto the visual field. The result is a paradoxical state of seeing-yet-resting &mdash; the visual system is open but not in its usual acquisitive mode. This mirrors the &ldquo;open awareness&rdquo; state in contemplative practice.</p>
+    <p><strong>Shadow work parallel:</strong> The &ldquo;faults disappearing&rdquo; maps to Jung&rsquo;s concept of integrating the shadow. What you cannot see (because it&rsquo;s in the dark, unconscious) controls you. When you voluntarily enter darkness &mdash; when you make friends with the unseen &mdash; the shadow loses its power over you. The faults don&rsquo;t disappear by being fixed but by being seen, accepted, and integrated through darkness.</p>
+    <div class="essence"><strong>One-line essence</strong>Find the darkness within; project it without. In total blackness, the ego finds no mirror &mdash; and without a mirror, its faults have nowhere to live.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t8"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 9 ============================ -->
+<article class="technique" id="t9" data-tech="9">
+  <div class="technique-head"><span>Technique 78 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t9">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> attention &middot; presence &middot; immediacy &middot; this-point &middot; awareness</div>
+  <blockquote class="sutra">Wherever your attention alights, at this very point, experience.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>This is perhaps the simplest and most profound technique in the entire light category &mdash; and it is disguised as nothing special. Wherever your attention goes &mdash; to a sound, a colour, a face, a sensation, a thought &mdash; at THAT very point, be completely present. Don&rsquo;t move on. Don&rsquo;t interpret. Don&rsquo;t compare. Just EXPERIENCE the raw aliveness of whatever attention touches. The point of attention becomes luminous when you are fully there. The &ldquo;light&rdquo; in this technique is the light of awareness itself.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>No special conditions needed:</strong> This can be done anywhere, anytime, in any posture, with eyes open or closed. It requires nothing except total presence.</li>
+      <li><strong>Notice where your attention goes:</strong> Right now, something is attracting your attention &mdash; these words, a background sound, a body sensation, a thought. Whatever it is, DON&rsquo;T interfere with it. Let attention go where it naturally goes.</li>
+      <li><strong>At THAT point, be totally present:</strong> The key word is &ldquo;at this very point.&rdquo; Don&rsquo;t move to the next thing. Don&rsquo;t label it. Don&rsquo;t think about it. Just BE with it. Experience it raw, naked, without the layer of interpretation.</li>
+      <li><strong>The point becomes luminous:</strong> When you are fully present with anything &mdash; a sound, a colour, a texture, even a thought &mdash; it begins to glow with aliveness. This is not hallucination; it is what happens when attention is undivided. Normally attention is scattered; when collected at one point, it creates a quality of brilliance at that point.</li>
+      <li><strong>Don&rsquo;t hold or grasp:</strong> When attention naturally moves to something else, let it. But at the NEW point, be fully there again. The practice is not concentration (forcing attention to stay) but presence (being total wherever attention happens to be).</li>
+      <li><strong>Formal practice (20 min):</strong> Sit quietly. Let attention wander freely. But wherever it alights &mdash; on a breath, a sound, an itch, a memory &mdash; be completely there for as long as it stays. When it moves, follow it with the same totality. Every point of attention becomes a meditation object.</li>
+      <li><strong>Informal practice (all day):</strong> Throughout the day, periodically notice: where is my attention right now? At that point, be fully present for a moment. Then continue with your activity. This takes zero time out of your day but transforms the quality of every moment.</li>
+      <li><strong>The insight:</strong> You will discover that what we call &ldquo;light&rdquo; or &ldquo;consciousness&rdquo; or &ldquo;awareness&rdquo; is simply what happens when attention is total. There is no separate mystical light to seek &mdash; the light IS attention itself, fully present. Every moment is already luminous; you just haven&rsquo;t been fully there to notice.</li>
+      <li><strong>Don&rsquo;t make it complicated:</strong> This technique is so simple that the mind refuses to believe it can work. The mind wants something complex, esoteric, special. But the sutra is clear: wherever attention alights, at THIS VERY POINT, experience. That&rsquo;s all. Nothing more is needed.</li>
+      <li><strong>Deepening:</strong> Over time, the gaps between moments of presence shrink. You spend more and more of the day actually HERE rather than lost in commentary about here. This is the gradual illumination of life itself &mdash; not through special states but through ordinary attention made total.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner</dd>
+    <dt>Duration</dt><dd>All day (or 20 min formal sitting)</dd><dt>Posture</dt><dd>Any</dd><dt>Eyes</dt><dd>Open or closed</dd><dt>Best for</dt><dd>Everyone; especially those who find other techniques too complex; minimalists; those who want meditation integrated into daily life</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Moments of surprising vividness in ordinary experience</li><li>Colours seem brighter, sounds clearer, textures richer &mdash; not because they changed but because you are actually there</li><li>A sense of presence that is effortless and natural</li><li>Less time lost in mental commentary; more time in raw experience</li><li>Others notice you are more attentive, more &ldquo;here&rdquo; in conversations</li><li>The realisation that awareness itself is luminous &mdash; you don&rsquo;t need to add light; you need to remove distraction</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Making it into concentration &mdash; forcing attention to stay on one thing. This is about being present WHEREVER attention goes, not about controlling where it goes</li><li>Dismissing it as too simple &mdash; &ldquo;this can&rsquo;t be it.&rdquo; It is.</li><li>Adding interpretation: &ldquo;I hear a bird&rdquo; is interpretation. The raw sound BEFORE you know it&rsquo;s a bird &mdash; that is experience</li><li>Trying to be present to EVERYTHING simultaneously &mdash; the sutra says &ldquo;wherever attention alights&rdquo; (singular). Be with one point at a time.</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How can something so simple be called a &ldquo;light technique&rdquo;?</summary>
+      <div class="qa-body"><p class="src">Chapter 49, "The Point of Attention"</p><p>Osho explains: light is not only what eyes see. The deepest light is awareness itself &mdash; the luminosity of knowing. When you are fully present with anything, that thing becomes lit up FROM WITHIN by your attention. A flower you truly see glows. A sound you truly hear shimmers. This is not metaphor &mdash; it is direct experience. Attention IS light. When you are absent-minded, the world is dim. When you are present, the world is radiant. This technique reveals that you ARE the source of light &mdash; not the sun, not a candle, but awareness itself.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> This is open monitoring meditation in its purest form &mdash; non-judgemental awareness of whatever arises, without preference or control. Research shows this mode activates the salience network and insular cortex, increasing interoceptive and exteroceptive sensitivity. The world literally becomes more vivid because you are processing more of its richness rather than filtering it through concepts.</p>
+    <p><strong>Phenomenological parallel:</strong> Husserl&rsquo;s &ldquo;return to the things themselves&rdquo; is exactly this &mdash; bracketing all theory to encounter raw phenomena. When you experience the sound before labelling it &ldquo;bird,&rdquo; you encounter what the phenomenologists call the &ldquo;given&rdquo; &mdash; reality before interpretation. That raw given is always luminous. Interpretation dims it.</p>
+    <div class="essence"><strong>One-line essence</strong>You are the light. Wherever attention lands with total presence, that point glows. No special technique needed &mdash; just be completely here.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t9"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 10 ============================ -->
+<article class="technique" id="t10" data-tech="10">
+  <div class="technique-head"><span>Technique 79 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t10">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> fire &middot; burning &middot; body &middot; ashes &middot; transcendence</div>
+  <blockquote class="sutra">Focus on fire rising through your form from the toes up until the body burns to ashes but not you.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Imagine fire starting at your toes and rising upward through the body. The flesh burns. The bones turn to ash. The entire body is consumed by flames. But YOU remain &mdash; the witness, the awareness that cannot burn. What the fire destroys is everything you are NOT. What survives the fire is what you ARE. This is a death meditation using fire as the vehicle of dissolution.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Sit or lie in complete stillness:</strong> The body must be absolutely motionless for this practice to work deeply. Any movement breaks the spell. Settle in for 30 minutes. Resolve not to move.</li>
+      <li><strong>Close your eyes. Relax completely:</strong> Take 5 slow breaths. Feel the weight of the body. Feel its solidity. Feel its heaviness. You are about to let all of that burn.</li>
+      <li><strong>Ignite the fire at the toes:</strong> Imagine &mdash; FEEL &mdash; fire beginning at your toes. Not a gentle warmth but actual fire. Flames licking at the flesh. The toes begin to burn. Feel the heat, the consuming, the dissolution.</li>
+      <li><strong>Rise slowly upward:</strong> Let the fire travel upward: feet burning, ankles, calves, knees. The flesh chars and turns to ash. The bones glow orange and crumble. Move slowly &mdash; spend at least 15 minutes on the journey from toes to head.</li>
+      <li><strong>Through the torso:</strong> Fire reaches the belly. The organs burn &mdash; intestines, liver, stomach, all consumed. The spine glows and crumbles. The heart burns last in the chest &mdash; feel it catch fire and dissolve.</li>
+      <li><strong>The head:</strong> Fire reaches the neck, the jaw, the face. Eyes burn. Brain burns. The skull cracks in the heat and crumbles to ash. Everything is gone. The entire body is now a pile of ash &mdash; or simply empty space where a body used to be.</li>
+      <li><strong>But NOT you:</strong> This is the crucial point of the sutra. The body has burned completely. But you &mdash; the one who watched the burning &mdash; remain. You cannot burn. You were never the body. You are the awareness in which the body appeared and in which it has now disappeared. THAT is you.</li>
+      <li><strong>Rest in what remains:</strong> After the body is gone, rest in the pure awareness that survives. It has no form, no location, no weight, no boundaries. It simply IS. Stay here for 5&ndash;10 minutes.</li>
+      <li><strong>This is a death meditation:</strong> You are rehearsing death &mdash; not morbidly but as a way of discovering what cannot die. Osho says: if you can &ldquo;die&rdquo; in meditation and find what survives, you will never fear physical death again. You already know what you are &mdash; and it is not the body.</li>
+      <li><strong>Return:</strong> Slowly, rebuild the sense of the body. Feel it reconstituting from the ashes &mdash; or simply open your eyes and feel the body is still here. But now you know: the body is what you HAVE, not what you ARE.</li>
+      <li><strong>Frequency:</strong> Once daily for 30 minutes. Particularly powerful when done in the evening before sleep, as it creates a quality of letting-go that deepens sleep significantly.</li>
+      <li><strong>Variation:</strong> If fire feels too violent, you can use water (body dissolving into ocean) or air (body evaporating into sky). But fire is the most effective because it is the most total &mdash; nothing remains after fire but ash.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>30 min</dd><dt>Posture</dt><dd>Seated or lying (completely still)</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Those with death anxiety; people over-identified with the body; anyone who wants to know what they are beyond form; those who fear loss</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>You can FEEL the heat and burning &mdash; it becomes visceral, not just imaginary</li><li>A genuine sense of the body disappearing, of becoming formless</li><li>Moments of pure awareness with no body-sense at all &mdash; bodiless but conscious</li><li>Fear may arise mid-practice (fear of dissolution) &mdash; if you can pass through it, profound peace waits on the other side</li><li>After the practice: lightness, detachment from physical concerns, reduced fear of death</li><li>Over weeks: less identification with the body, less anxiety about health, aging, or mortality</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Rushing through the burning &mdash; give it real time; 15 minutes minimum for the full ascent</li><li>Not making it visceral enough &mdash; a vague &ldquo;idea&rdquo; of fire won&rsquo;t work; you need to FEEL heat, smell smoke, hear crackling</li><li>Stopping at the fear &mdash; when the fire approaches the heart or head, fear arises; push gently through it</li><li>Identifying with the ashes &mdash; &ldquo;I am the ashes&rdquo; is still identification with form; you are what remains AFTER the ashes</li><li>Using this as escapism from the body &mdash; the point is not to reject the body but to know you are MORE than it</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why fire specifically? Is this related to the Hindu cremation tradition?</summary>
+      <div class="qa-body"><p class="src">Chapter 49, "The Body Burns"</p><p>Osho says: yes, the Hindu tradition of burning the dead body is not merely practical &mdash; it is spiritual. By burning the body, the message is: you were never this. What burns was never the real you. This technique takes that insight BEFORE death &mdash; you burn the body now, in meditation, and discover what remains. Fire is chosen because it is the most absolute transformer in nature. Water leaves residue; earth preserves form; even air scatters but doesn&rsquo;t destroy. Only fire transforms completely &mdash; matter becomes energy, form becomes formless. That total transformation is what makes fire the ideal vehicle for this meditation.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> This is systematic disidentification from the body using visualisation. By vividly imagining the destruction of the physical form while maintaining awareness, you experientially discover that consciousness is not dependent on the body. This parallels maranasati (death meditation) in Buddhism and the Stoic practice of memento mori &mdash; contemplating mortality to discover what is essential.</p>
+    <p><strong>Terror Management Theory:</strong> Research shows that mortality salience (awareness of death) initially triggers defensive reactions but, when processed contemplatively rather than reactively, leads to decreased death anxiety, increased authenticity, and greater meaning in life. This technique provides a controlled, repeatable way to process mortality.</p>
+    <div class="essence"><strong>One-line essence</strong>Burn the body in meditation. What remains when the ashes cool &mdash; that deathless awareness &mdash; is what you have always been.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="30">Start a 30-min sitting</button><span class="timer-display" data-display="t10"></span></div>
+</article>
+
+<footer>
+  <p>You have reached the end of <em>The Techniques for Light &amp; Gazing</em>.</p>
+  <p>11 more categories &mdash; Centering, Sound, Witnessing, Self-Inquiry, Void, Senses, Movement, Sleep, Tantra, Heart, Death, Imagination, and Mind &mdash; are on the way.</p>
+  <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+</footer>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  const html=document.documentElement;
+  const themeBtn=document.getElementById('theme-btn');
+  const stored=localStorage.getItem('vbt-theme');
+  if(stored)html.setAttribute('data-theme',stored);
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  themeBtn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next)});
+
+  const progress=document.querySelector('.progress');
+  function updateProgress(){const h=document.documentElement;const s=h.scrollTop;const t=h.scrollHeight-h.clientHeight;progress.style.width=t>0?(s/t*100)+'%':'0'}
+  document.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+  const FAV_KEY='vbt-light-favs';
+  const favs=new Set(JSON.parse(localStorage.getItem(FAV_KEY)||'[]'));
+  document.querySelectorAll('.fav-btn').forEach(btn=>{const id=btn.dataset.fav;if(favs.has(id)){btn.classList.add('on');btn.textContent='\u2665'}btn.addEventListener('click',()=>{if(favs.has(id)){favs.delete(id);btn.classList.remove('on');btn.textContent='\u2661'}else{favs.add(id);btn.classList.add('on');btn.textContent='\u2665'}localStorage.setItem(FAV_KEY,JSON.stringify([...favs]))})});
+
+  function playBell(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=432;g.gain.setValueAtTime(0.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.4,ctx.currentTime+0.02);g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+4.5);o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+4.6)}catch(e){}}
+  document.querySelectorAll('.timer-btn').forEach(btn=>{let interval=null;let endTime=0;const minutes=parseInt(btn.dataset.timer,10);const techId=btn.closest('article.technique').id;const display=document.querySelector('[data-display="'+techId+'"]');const original=btn.textContent;function fmt(ms){const s=Math.max(0,Math.ceil(ms/1000));const m=Math.floor(s/60),r=s%60;return m+':'+(r<10?'0':'')+r}function stop(natural){if(interval)clearInterval(interval);interval=null;btn.classList.remove('running');btn.textContent=original;if(natural){display.textContent='Done.';playBell();setTimeout(()=>{display.textContent=''},6000)}else{display.textContent=''}}btn.addEventListener('click',()=>{if(interval){stop(false);return}endTime=Date.now()+minutes*60*1000;btn.classList.add('running');btn.textContent='Stop';const tick=()=>{const left=endTime-Date.now();if(left<=0){stop(true);return}display.textContent=fmt(left)+' remaining'};tick();interval=setInterval(tick,500)})});
+
+  const focusBtn=document.getElementById('focus-btn');
+  let observer=null;
+  focusBtn.addEventListener('click',()=>{const on=!document.body.classList.contains('focus');document.body.classList.toggle('focus',on);focusBtn.setAttribute('aria-pressed',on);if(on&&!observer){observer=new IntersectionObserver((entries)=>{entries.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting))},{threshold:0.4});document.querySelectorAll('article.technique').forEach(a=>observer.observe(a))}});
+
+  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+
+  document.addEventListener('keydown',(e)=>{if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;if(e.key==='j'||e.key==='k'){const arts=[...document.querySelectorAll('article.technique')];const cur=arts.findIndex(a=>a.getBoundingClientRect().top>-100);const idx=e.key==='j'?Math.min(arts.length-1,cur+1):Math.max(0,cur-1);if(arts[idx])arts[idx].scrollIntoView({behavior:'smooth',block:'start'})}});
+
+  const GLOSSARY={'Vigyan Bhairav Tantra':'A ~5,000-year-old Sanskrit text: 112 meditation techniques as a dialogue between Shiva and Devi.','sahasrar':'The thousand-petalled lotus at the crown of the head \u2014 the highest energy centre. When kundalini reaches here, the individual dissolves into the cosmic.','chakra':'An energy centre in the subtle body. Seven main chakras run along the spine from base to crown.','kundalini':'Dormant energy coiled at the base of the spine. When awakened, it rises through the chakras toward the crown.','sushumna':'The central energy channel along the spine through which kundalini rises. Flanked by ida and pingala.','prana':'Life-force energy. Breath is its grossest form; light and attention are subtler forms.','third eye':'The ajna chakra between the eyebrows. Associated with insight, inner vision, and dissolution of duality.','turiya':'The fourth state \u2014 beyond waking, dreaming, and deep sleep. Pure awareness witnessing all three states.','Essenes':'Ancient Jewish mystical sect that experienced God as absolute darkness \u2014 the formless void before creation.','aura':'The subtle luminous field surrounding living beings. Imagining the body as an aura dissolves the sense of solidity.','prakriti':'Nature/matter in Sankhya philosophy. The fire technique burns prakriti to reveal purusha (pure consciousness).'};
+  function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+  const gTerms=Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length);
+  document.querySelectorAll('article.technique, header.hero').forEach(article=>{gTerms.forEach(term=>{const re=new RegExp('\\b('+escapeRegex(term)+')\\b','i');const walker=document.createTreeWalker(article,NodeFilter.SHOW_TEXT,{acceptNode:(node)=>{const p=node.parentElement;if(!p)return NodeFilter.FILTER_REJECT;if(p.closest('script,style,.glossary-term,.glossary-block,.controls,.progress,.timer-display,.technique-head,.actions'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});let n;while((n=walker.nextNode())){const m=n.textContent.match(re);if(m){const text=n.textContent;const before=text.slice(0,m.index);const after=text.slice(m.index+m[1].length);const span=document.createElement('span');span.className='glossary-term';span.dataset.term=term;span.tabIndex=0;span.textContent=m[1];const frag=document.createDocumentFragment();if(before)frag.appendChild(document.createTextNode(before));frag.appendChild(span);if(after)frag.appendChild(document.createTextNode(after));n.replaceWith(frag);return}}})});
+
+  let gTip=null;
+  function showGTip(e){const el=e.currentTarget;const term=el.dataset.term;const def=GLOSSARY[term];if(!def)return;if(!gTip){gTip=document.createElement('div');gTip.className='glossary-tooltip';document.body.appendChild(gTip)}gTip.innerHTML='<strong></strong>';gTip.firstChild.textContent=term;gTip.appendChild(document.createTextNode(def));const rect=el.getBoundingClientRect();gTip.style.top=(rect.bottom+window.scrollY+6)+'px';let left=rect.left+window.scrollX;if(left+290>window.innerWidth+window.scrollX)left=window.innerWidth+window.scrollX-296;if(left<8)left=8;gTip.style.left=left+'px';gTip.classList.add('show')}
+  function hideGTip(){if(gTip)gTip.classList.remove('show')}
+  document.querySelectorAll('.glossary-term').forEach(el=>{el.addEventListener('mouseenter',showGTip);el.addEventListener('focus',showGTip);el.addEventListener('mouseleave',hideGTip);el.addEventListener('blur',hideGTip);el.addEventListener('click',(e)=>{e.preventDefault();showGTip(e);setTimeout(hideGTip,6000)})});
+})();
+</script>
+</body>
+</html>
