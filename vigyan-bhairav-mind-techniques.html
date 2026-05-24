@@ -108,6 +108,34 @@ footer p{margin:.4rem 0}
 @media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.actions,.fav-btn{display:none!important}article.technique{box-shadow:none;border:none;page-break-inside:avoid;padding:0;margin:0 0 1.5rem}blockquote.sutra{background:#f5f5f5;border-left:2px solid #888}main{max-width:none;padding:1rem}}
 @media(max-width:600px){body{font-size:17px}article.technique{padding:1.5rem 1.25rem}.controls{top:.5rem;right:.5rem}blockquote.sutra{font-size:1.05rem;padding:1.25rem 1rem}.facts dl{grid-template-columns:1fr;gap:.1rem .5rem}.facts dt{padding-top:.5rem}main{padding:4rem 1rem 2rem}}
 </style>
+
+<style>
+.about-block,.howto-block,.beginner-block,.glossary-block{margin-top:1.25rem;border-radius:6px;font-family:var(--sans);font-size:.92rem;text-align:left}
+.about-block,.glossary-block{background:var(--bg-card);border:1px solid var(--rule)}
+.about-block summary,.glossary-block summary{padding:.85rem 1.25rem;cursor:pointer;color:var(--ink-soft);list-style:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:flex;align-items:center}
+.about-block summary::-webkit-details-marker,.glossary-block summary::-webkit-details-marker{display:none}
+.about-block summary::before,.glossary-block summary::before{content:"+";margin-right:.6rem;color:var(--accent);font-weight:700;font-size:1.15rem;line-height:1}
+.about-block[open] summary::before,.glossary-block[open] summary::before{content:"\2212"}
+.about-body,.glossary-body{padding:0 1.25rem 1.25rem;border-top:1px solid var(--rule)}
+.about-body p{font-family:var(--serif);margin:.8rem 0;line-height:1.65;color:var(--ink-soft)}
+.glossary-body dl{margin:.8rem 0 0;display:grid;gap:.35rem 1rem}
+.glossary-body dt{font-weight:700;color:var(--accent);font-size:.9rem;margin-top:.55rem}
+.glossary-body dd{margin:0;color:var(--ink-soft);font-family:var(--serif);font-size:.92rem;line-height:1.55}
+.howto-block{background:var(--sutra-bg);border-left:3px solid var(--accent);padding:1.25rem 1.5rem}
+.howto-block h3,.beginner-block h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 .7rem;font-weight:600}
+.howto-block p,.beginner-block p{margin:.5rem 0;font-family:var(--serif);line-height:1.65;color:var(--ink-soft)}
+.howto-block strong,.beginner-block strong{color:var(--ink)}
+.beginner-block{background:var(--bg-soft);border:1px dashed var(--accent-soft);padding:1.25rem 1.5rem}
+.beginner-block a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.beginner-block a:hover{border-bottom-color:var(--accent)}
+.disclaimer{font-size:.78rem;color:var(--ink-faint);font-style:italic;margin:1.25rem 0 0;text-align:center;line-height:1.5}
+.glossary-term{border-bottom:1px dotted var(--accent);cursor:help;color:inherit;padding:0 1px;transition:background .15s}
+.glossary-term:hover,.glossary-term:focus{background:var(--accent-soft);outline:none}
+.glossary-tooltip{position:absolute;background:var(--ink);color:var(--bg);padding:.7rem .9rem;border-radius:6px;font-family:var(--sans);font-size:.82rem;line-height:1.5;max-width:280px;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);z-index:300;opacity:0;pointer-events:none;transition:opacity .15s}
+.glossary-tooltip.show{opacity:1;pointer-events:auto}
+.glossary-tooltip strong{display:block;margin-bottom:.35rem;color:var(--accent-soft);text-transform:uppercase;font-size:.68rem;letter-spacing:.12em}
+@media print{.about-block,.glossary-block,.howto-block,.beginner-block,.disclaimer{display:none!important}.glossary-term{background:none!important;border-bottom:1px dotted #888}}
+</style>
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
@@ -125,6 +153,52 @@ footer p{margin:.4rem 0}
 These techniques use the mind's own machinery against itself &mdash; desire, wandering, doubt, naming, knowing. Instead of fighting thought, they redirect your attention to the gaps, the roots, and the watcher behind the watched. The mind dissolves not by suppression but by being fully seen.
 </p>
 <p class="meta">7 techniques &middot; ~12 min read &middot; works fully offline</p>
+
+<details class="about-block">
+<summary>About these techniques</summary>
+<div class="about-body">
+<p>These seven techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+<p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. Unlike most of the 112, the techniques here don't ask you to fight the mind. They use the mind's own movements &mdash; desire, wandering, naming, knowing &mdash; as the doorway.</p>
+</div>
+</details>
+
+<aside class="howto-block">
+<h3>How to use this page</h3>
+<p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+<p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
+</aside>
+
+<aside class="beginner-block">
+<h3>New to meditation?</h3>
+<p>Start with <a href="#t3">Technique 3 &mdash; "wherever your mind is wandering, this"</a>. It is the easiest sutra in all 112. It cannot fail; every moment of distraction noticed is a moment of practice. Try it for 21 days, then return for what comes next.</p>
+</aside>
+
+<details class="glossary-block">
+<summary>Glossary &mdash; unfamiliar terms?</summary>
+<div class="glossary-body">
+<p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+<dl>
+<dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+<dt>Tantra</dt><dd>Literally "method" or "technique" &mdash; a non-fighting approach that uses life energies (desire, sex, emotion) as doorways rather than enemies.</dd>
+<dt>ego</dt><dd>In this context, not arrogance but the constructed sense of being a separate "me" &mdash; the narrative self that meditation gradually dissolves.</dd>
+<dt>nirvana</dt><dd>Sanskrit for "extinguishing" &mdash; the cessation of the false self, often translated as "liberation."</dd>
+<dt>moksha</dt><dd>Sanskrit for "liberation" &mdash; release from the cycle of identification and suffering.</dd>
+<dt>sansara</dt><dd>The world of ordinary experience and identification, contrasted with moksha.</dd>
+<dt>samadhi</dt><dd>A deep meditative state of unification; absorption beyond ordinary self-consciousness.</dd>
+<dt>shunya</dt><dd>Sanskrit for "void" or "emptiness" &mdash; the central concept in Buddhist philosophy.</dd>
+<dt>atma</dt><dd>Sanskrit for "self" or "soul" &mdash; the inner essence Hindus consider eternal.</dd>
+<dt>brahma</dt><dd>Sanskrit for "the absolute" &mdash; the impersonal ground of being in Hindu philosophy.</dd>
+<dt>default mode network</dt><dd>A network of brain regions active when mind-wandering; modern neuroscience considers it the substrate of the "narrative self."</dd>
+<dt>ACT</dt><dd>Acceptance and Commitment Therapy &mdash; a modern psychotherapy using cognitive defusion and present-moment awareness.</dd>
+<dt>MBSR</dt><dd>Mindfulness-Based Stress Reduction &mdash; Jon Kabat-Zinn's clinical adaptation of meditation for stress, pain, and anxiety.</dd>
+<dt>90-second rule</dt><dd>Jill Bolte Taylor's observation: the neurochemical wave of an emotion clears within ~90 seconds. Anything longer is re-triggering through thought.</dd>
+<dt>Gurdjieff</dt><dd>G.I. Gurdjieff (1866&ndash;1949) &mdash; Russian-Armenian teacher who introduced "self-remembering" to the West.</dd>
+<dt>Krishnamurti</dt><dd>J. Krishnamurti (1895&ndash;1986) &mdash; Indian teacher who emphasised choiceless awareness and rejected formal techniques.</dd>
+</dl>
+</div>
+</details>
+
+<p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
 
 <nav class="jumplinks" aria-label="Techniques in this file">
 <h2>Techniques in this file</h2>
@@ -837,6 +911,39 @@ focusBtn.addEventListener('click',()=>{const on=!document.body.classList.contain
 document.getElementById('print-btn').addEventListener('click',()=>window.print());
 
 document.addEventListener('keydown',(e)=>{if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;if(e.key==='j'||e.key==='k'){const arts=[...document.querySelectorAll('article.technique')];const cur=arts.findIndex(a=>a.getBoundingClientRect().top>-100);const idx=e.key==='j'?Math.min(arts.length-1,cur+1):Math.max(0,cur-1);if(arts[idx])arts[idx].scrollIntoView({behavior:'smooth',block:'start'})}});
+
+const GLOSSARY={
+'Vigyan Bhairav Tantra':'A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.',
+'Tantra':'Literally "method" \u2014 a non-fighting approach that uses life energies (desire, sex, emotion) as doorways rather than enemies.',
+'ego':'In this context, not arrogance but the constructed sense of being a separate "me" \u2014 the narrative self that meditation gradually dissolves.',
+'nirvana':'Sanskrit for "extinguishing" \u2014 the cessation of the false self, often translated as "liberation."',
+'moksha':'Sanskrit for "liberation" \u2014 release from the cycle of identification and suffering.',
+'sansara':'The world of ordinary experience and identification, contrasted with moksha.',
+'samadhi':'A deep meditative state of unification; absorption beyond ordinary self-consciousness.',
+'shunya':'Sanskrit for "void" or "emptiness" \u2014 the central concept in Buddhist philosophy.',
+'atma':'Sanskrit for "self" or "soul" \u2014 the inner essence Hindus consider eternal.',
+'brahma':'Sanskrit for "the absolute" \u2014 the impersonal ground of being in Hindu philosophy.',
+'default mode network':'A network of brain regions active when mind-wandering; modern neuroscience considers it the substrate of the "narrative self."',
+'ACT':'Acceptance and Commitment Therapy \u2014 a modern psychotherapy using cognitive defusion and present-moment awareness.',
+'MBSR':'Mindfulness-Based Stress Reduction \u2014 Jon Kabat-Zinn\'s clinical adaptation of meditation for stress, pain, and anxiety.',
+'90-second rule':'Jill Bolte Taylor\'s observation: the neurochemical wave of an emotion clears within ~90 seconds. Anything longer is re-triggering through thought.',
+'Gurdjieff':'G.I. Gurdjieff (1866\u20131949) \u2014 Russian-Armenian teacher who introduced "self-remembering" to the West.',
+'Krishnamurti':'J. Krishnamurti (1895\u20131986) \u2014 Indian teacher who emphasised choiceless awareness and rejected formal techniques.'
+};
+function escG(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+const gT=Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length);
+document.querySelectorAll('article.technique, header.hero').forEach(art=>{
+gT.forEach(t=>{
+const re=new RegExp('\\b('+escG(t)+')\\b','i');
+const w=document.createTreeWalker(art,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;if(!p)return NodeFilter.FILTER_REJECT;if(p.closest('script, style, .glossary-term, .glossary-block, .controls, .progress, .timer-display, .technique-head, .actions'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});
+let n;
+while((n=w.nextNode())){const m=n.textContent.match(re);if(m){const tx=n.textContent;const b=tx.slice(0,m.index);const a=tx.slice(m.index+m[1].length);const sp=document.createElement('span');sp.className='glossary-term';sp.dataset.term=t;sp.tabIndex=0;sp.textContent=m[1];const f=document.createDocumentFragment();if(b)f.appendChild(document.createTextNode(b));f.appendChild(sp);if(a)f.appendChild(document.createTextNode(a));n.replaceWith(f);return}}
+});
+});
+let gTip=null;
+function showG(e){const el=e.currentTarget;const t=el.dataset.term;const d=GLOSSARY[t];if(!d)return;if(!gTip){gTip=document.createElement('div');gTip.className='glossary-tooltip';document.body.appendChild(gTip)}gTip.innerHTML='<strong></strong>';gTip.firstChild.textContent=t;gTip.appendChild(document.createTextNode(d));const r=el.getBoundingClientRect();gTip.style.top=(r.bottom+window.scrollY+6)+'px';let l=r.left+window.scrollX;if(l+290>window.innerWidth+window.scrollX)l=window.innerWidth+window.scrollX-296;if(l<8)l=8;gTip.style.left=l+'px';gTip.classList.add('show')}
+function hideG(){if(gTip)gTip.classList.remove('show')}
+document.querySelectorAll('.glossary-term').forEach(el=>{el.addEventListener('mouseenter',showG);el.addEventListener('focus',showG);el.addEventListener('mouseleave',hideG);el.addEventListener('blur',hideG);el.addEventListener('click',e=>{e.preventDefault();showG(e);setTimeout(hideG,6000)})});
 })();
 </script>
 </body>

@@ -408,6 +408,101 @@
     .facts dt{padding-top:.5rem}
     main{padding:4rem 1rem 2rem}
   }
+
+  /* ----- Orientation blocks (About / How-to / Beginner / Glossary) ----- */
+  .about-block, .howto-block, .beginner-block, .glossary-block {
+    margin-top: 1.25rem;
+    border-radius: 6px;
+    font-family: var(--sans);
+    font-size: .92rem;
+    text-align: left;
+  }
+  .about-block, .glossary-block {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+  }
+  .about-block summary, .glossary-block summary {
+    padding: .85rem 1.25rem;
+    cursor: pointer;
+    color: var(--ink-soft);
+    list-style: none;
+    font-size: .72rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex; align-items: center;
+  }
+  .about-block summary::-webkit-details-marker,
+  .glossary-block summary::-webkit-details-marker { display: none; }
+  .about-block summary::before, .glossary-block summary::before {
+    content: "+"; margin-right: .6rem; color: var(--accent);
+    font-weight: 700; font-size: 1.15rem; line-height: 1;
+    transition: transform .2s;
+  }
+  .about-block[open] summary::before, .glossary-block[open] summary::before { content: "\2212"; }
+  .about-body, .glossary-body {
+    padding: 0 1.25rem 1.25rem;
+    border-top: 1px solid var(--rule);
+  }
+  .about-body p { font-family: var(--serif); margin: .8rem 0; line-height: 1.65; color: var(--ink-soft); }
+  .glossary-body dl { margin: .8rem 0 0; display: grid; gap: .35rem 1rem; }
+  .glossary-body dt { font-weight: 700; color: var(--accent); font-size: .9rem; margin-top: .55rem; }
+  .glossary-body dd { margin: 0; color: var(--ink-soft); font-family: var(--serif); font-size: .92rem; line-height: 1.55; }
+  .howto-block {
+    background: var(--sutra-bg);
+    border-left: 3px solid var(--accent);
+    padding: 1.25rem 1.5rem;
+  }
+  .howto-block h3, .beginner-block h3 {
+    font-family: var(--sans); font-size: .72rem; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--accent);
+    margin: 0 0 .7rem; font-weight: 600;
+  }
+  .howto-block p, .beginner-block p {
+    margin: .5rem 0; font-family: var(--serif); line-height: 1.65;
+    color: var(--ink-soft);
+  }
+  .howto-block strong, .beginner-block strong { color: var(--ink); }
+  .beginner-block {
+    background: var(--bg-soft);
+    border: 1px dashed var(--accent-soft);
+    padding: 1.25rem 1.5rem;
+  }
+  .beginner-block a {
+    color: var(--accent); font-weight: 600; text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+  .beginner-block a:hover { border-bottom-color: var(--accent); }
+  .disclaimer {
+    font-size: .78rem; color: var(--ink-faint); font-style: italic;
+    margin: 1.25rem 0 0; text-align: center; line-height: 1.5;
+  }
+
+  /* Glossary inline-term + tooltip */
+  .glossary-term {
+    border-bottom: 1px dotted var(--accent);
+    cursor: help; color: inherit; padding: 0 1px;
+    transition: background .15s;
+  }
+  .glossary-term:hover, .glossary-term:focus { background: var(--accent-soft); outline: none; }
+  .glossary-tooltip {
+    position: absolute; background: var(--ink); color: var(--bg);
+    padding: .7rem .9rem; border-radius: 6px;
+    font-family: var(--sans); font-size: .82rem; line-height: 1.5;
+    max-width: 280px; box-shadow: 0 8px 24px -8px rgba(0,0,0,.4);
+    z-index: 300; opacity: 0; pointer-events: none;
+    transition: opacity .15s;
+  }
+  .glossary-tooltip.show { opacity: 1; pointer-events: auto; }
+  .glossary-tooltip strong {
+    display: block; margin-bottom: .35rem; color: var(--accent-soft);
+    text-transform: uppercase; font-size: .68rem; letter-spacing: .12em;
+  }
+
+  @media print {
+    .about-block, .glossary-block, .howto-block, .beginner-block, .disclaimer { display: none !important; }
+    .glossary-term { background: none !important; border-bottom: 1px dotted #888; }
+  }
 </style>
 </head>
 <body>
@@ -433,6 +528,60 @@
       whatever lies beyond it.
     </p>
     <p class="meta">8 techniques &middot; ~10 min read &middot; works fully offline</p>
+
+    <details class="about-block">
+      <summary>About these techniques</summary>
+      <div class="about-body">
+        <p>These eight techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+        <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The eight techniques here are the breath-based sutras &mdash; the doorway most teachers consider the most accessible to a modern mind.</p>
+      </div>
+    </details>
+
+    <aside class="howto-block">
+      <h3>How to use this page</h3>
+      <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+      <p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
+    </aside>
+
+    <aside class="beginner-block">
+      <h3>New to meditation?</h3>
+      <p>Start with <a href="#t1">Technique 1 &mdash; watching the gap after the in-breath</a>. It is beginner-level and requires no prior practice. Spend 10 minutes a day for 21 days. Then return for what comes next.</p>
+    </aside>
+
+    <details class="glossary-block">
+      <summary>Glossary &mdash; unfamiliar terms?</summary>
+      <div class="glossary-body">
+        <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+        <dl>
+          <dt>Vigyan Bhairav Tantra</dt>
+          <dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+          <dt>Shiva</dt>
+          <dd>In this text, the name for the divine consciousness &mdash; not a personal god, but the underlying awareness the techniques aim to recognise.</dd>
+          <dt>Devi</dt>
+          <dd>The questioner in the dialogue &mdash; representing the seeker who asks how to know the divine.</dd>
+          <dt>prana</dt>
+          <dd>Sanskrit for "life force" &mdash; the subtle vitality carried by breath, considered prior to and more fundamental than the physical air.</dd>
+          <dt>third eye</dt>
+          <dd>The point between the eyebrows, traditionally associated with the pineal gland. In tantra, the seat of inner vision.</dd>
+          <dt>pineal gland</dt>
+          <dd>A small endocrine gland in the brain near the third-eye point. Regulates melatonin and circadian rhythm.</dd>
+          <dt>sahasrar</dt>
+          <dd>Sanskrit for "thousand-petalled" &mdash; the crown chakra at the top of the head, considered the highest energy centre.</dd>
+          <dt>samadhi</dt>
+          <dd>A deep meditative state of unification; absorption beyond ordinary self-consciousness.</dd>
+          <dt>vagal tone</dt>
+          <dd>A measure of activity in the vagus nerve; higher vagal tone correlates with calmness and parasympathetic dominance.</dd>
+          <dt>default mode network</dt>
+          <dd>A network of brain regions active when you are mind-wandering or ruminating. Quiets in deep meditation.</dd>
+          <dt>Pythagoras</dt>
+          <dd>Greek philosopher (~570 BCE). Tradition holds he travelled to Egypt, trained in this third-eye technique, and seeded Western mysticism with it.</dd>
+          <dt>Wilhelm Reich</dt>
+          <dd>Austrian psychoanalyst (1897&ndash;1957) who proposed "orgone energy" &mdash; a Western parallel to prana.</dd>
+        </dl>
+      </div>
+    </details>
+
+    <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
 
     <nav class="jumplinks" aria-label="Techniques in this file">
       <h2>Techniques in this file</h2>
@@ -1265,6 +1414,92 @@
       const idx = e.key === 'j' ? Math.min(arts.length-1, cur+1) : Math.max(0, cur-1);
       if (arts[idx]) arts[idx].scrollIntoView({behavior:'smooth', block:'start'});
     }
+  });
+
+  // ---------- Glossary (auto-wrap first occurrence per article + hover tooltip) ----------
+  const GLOSSARY = {
+    'Vigyan Bhairav Tantra': 'A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.',
+    'Shiva': 'In this text, the name for the divine consciousness \u2014 not a personal god, but the underlying awareness the techniques aim to recognise.',
+    'Devi': 'The questioner in the dialogue \u2014 representing the seeker who asks how to know the divine.',
+    'prana': 'Sanskrit for "life force" \u2014 the subtle vitality carried by breath, considered prior to and more fundamental than the physical air.',
+    'third eye': 'The point between the eyebrows, traditionally associated with the pineal gland. In tantra, the seat of inner vision.',
+    'pineal gland': 'A small endocrine gland near the third-eye point. Regulates melatonin and circadian rhythm.',
+    'sahasrar': 'Sanskrit for "thousand-petalled" \u2014 the crown chakra at the top of the head, considered the highest energy centre.',
+    'samadhi': 'A deep meditative state of unification; absorption beyond ordinary self-consciousness.',
+    'vagal tone': 'Activity in the vagus nerve; higher vagal tone correlates with calmness and parasympathetic dominance.',
+    'default mode network': 'A network of brain regions active when you are mind-wandering or ruminating. Quiets in deep meditation.',
+    'Pythagoras': 'Greek philosopher (~570 BCE). Tradition holds he travelled to Egypt, trained in this third-eye technique, and seeded Western mysticism.',
+    'Wilhelm Reich': 'Austrian psychoanalyst (1897\u20131957) who proposed "orgone energy" \u2014 a Western parallel to prana.'
+  };
+
+  function escapeRegex(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  const gTerms = Object.keys(GLOSSARY).sort((a,b) => b.length - a.length);
+
+  document.querySelectorAll('article.technique, header.hero').forEach(article => {
+    gTerms.forEach(term => {
+      const re = new RegExp('\\b(' + escapeRegex(term) + ')\\b', 'i');
+      const walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT, {
+        acceptNode: (node) => {
+          const p = node.parentElement;
+          if (!p) return NodeFilter.FILTER_REJECT;
+          if (p.closest('script, style, .glossary-term, .glossary-block, .controls, .progress, .timer-display, .technique-head, .actions')) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      let n;
+      while ((n = walker.nextNode())) {
+        const m = n.textContent.match(re);
+        if (m) {
+          const text = n.textContent;
+          const before = text.slice(0, m.index);
+          const after = text.slice(m.index + m[1].length);
+          const span = document.createElement('span');
+          span.className = 'glossary-term';
+          span.dataset.term = term;
+          span.tabIndex = 0;
+          span.textContent = m[1];
+          const frag = document.createDocumentFragment();
+          if (before) frag.appendChild(document.createTextNode(before));
+          frag.appendChild(span);
+          if (after) frag.appendChild(document.createTextNode(after));
+          n.replaceWith(frag);
+          return;
+        }
+      }
+    });
+  });
+
+  let gTip = null;
+  function showGTip(e){
+    const el = e.currentTarget;
+    const term = el.dataset.term;
+    const def = GLOSSARY[term];
+    if (!def) return;
+    if (!gTip){
+      gTip = document.createElement('div');
+      gTip.className = 'glossary-tooltip';
+      document.body.appendChild(gTip);
+    }
+    gTip.innerHTML = '<strong></strong>';
+    gTip.firstChild.textContent = term;
+    gTip.appendChild(document.createTextNode(def));
+    const rect = el.getBoundingClientRect();
+    gTip.style.top = (rect.bottom + window.scrollY + 6) + 'px';
+    let left = rect.left + window.scrollX;
+    if (left + 290 > window.innerWidth + window.scrollX) left = window.innerWidth + window.scrollX - 296;
+    if (left < 8) left = 8;
+    gTip.style.left = left + 'px';
+    gTip.classList.add('show');
+  }
+  function hideGTip(){ if (gTip) gTip.classList.remove('show'); }
+  document.querySelectorAll('.glossary-term').forEach(el => {
+    el.addEventListener('mouseenter', showGTip);
+    el.addEventListener('focus', showGTip);
+    el.addEventListener('mouseleave', hideGTip);
+    el.addEventListener('blur', hideGTip);
+    el.addEventListener('click', (e) => { e.preventDefault(); showGTip(e); setTimeout(hideGTip, 6000); });
   });
 })();
 </script>
