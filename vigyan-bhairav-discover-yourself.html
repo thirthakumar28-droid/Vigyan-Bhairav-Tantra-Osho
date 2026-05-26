@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Before you choose a meditation technique, discover who you are. Self-discovery quizzes, the four yogic paths, Ayurvedic doshas, Big Five, Enneagram, and a 7-day observation tracker to find which of the 112 Vigyan Bhairav techniques fits YOU.">
+<title>Who Are You? &mdash; Discover Yourself First &middot; Vigyan Bhairav Tantra</title>
+<style>
+:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--body-c:#c25a1a;--mind-c:#4a6e8a;--heart-c:#b8527a;--energy-c:#7a5ab8;--vata-c:#7a8ab8;--pitta-c:#c25a1a;--kapha-c:#5a8a6e;--warn-c:#a83232;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12)}
+html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--body-c:#e07a3a;--mind-c:#7a9eb8;--heart-c:#d47298;--energy-c:#9a7ad8;--vata-c:#9aa8d4;--pitta-c:#e07a3a;--kapha-c:#7aae92;--warn-c:#d96b6b;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:200;transition:width .15s ease-out;box-shadow:0 0 8px var(--accent-soft)}
+.controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
+.controls button{width:36px;height:36px;border-radius:999px;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.controls button:hover,.controls button[aria-pressed="true"]{background:var(--bg-soft);color:var(--accent)}
+main{max-width:760px;margin:0 auto;padding:5rem 1.5rem 2rem}
+header.hero{text-align:center;padding:2rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink)}
+h2.section-h{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3.5vw,2rem);line-height:1.25;margin:3.5rem 0 1rem;color:var(--ink);border-bottom:1px solid var(--rule);padding-bottom:.6rem}
+h3.sub-h{font-family:var(--sans);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin:2rem 0 .8rem;font-weight:600}
+.hero .lede{color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;font-size:1.05rem;font-style:italic}
+.hero .meta{font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+p{margin:.7rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent-soft)}
+section.block{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:2rem 2rem 1.75rem;margin:2rem 0;box-shadow:var(--shadow);scroll-margin-top:5rem}
+section.block.intro{background:transparent;border:0;box-shadow:none;padding:0}
+.callout{background:var(--sutra-bg);border-left:3px solid var(--accent);border-radius:4px;padding:1.1rem 1.4rem;margin:1.5rem 0;font-size:.96rem;color:var(--ink-soft)}
+.callout strong{color:var(--ink)}
+.warn{background:var(--bg-soft);border-left:3px solid var(--warn-c);padding:1.1rem 1.4rem;margin:1.5rem 0;border-radius:4px}
+.warn strong{color:var(--warn-c)}
+ul.clean{list-style:none;padding-left:0}
+ul.clean li{padding-left:1.4em;position:relative;margin:.45rem 0;line-height:1.6}
+ul.clean li::before{content:"\2022";color:var(--accent);position:absolute;left:.4em;font-weight:700}
+.quiz{background:var(--bg-soft);border:1px solid var(--rule);border-radius:8px;padding:1.4rem 1.5rem;margin:1.5rem 0}
+.quiz-q{margin:1.4rem 0 .9rem;padding-top:1.2rem;border-top:1px dashed var(--rule);font-family:var(--sans);font-size:.95rem;color:var(--ink);font-weight:600;line-height:1.5;letter-spacing:.01em}
+.quiz-q:first-child,.quiz-q.first{border-top:0;padding-top:0;margin-top:0}
+.quiz-q .num{display:inline-block;font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-right:.5rem;font-weight:600}
+.quiz-options{list-style:none;padding:0;margin:.4rem 0 0;display:flex;flex-direction:column;gap:.4rem}
+.quiz-options label{display:flex;gap:.7rem;padding:.65rem .9rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:5px;cursor:pointer;font-family:var(--sans);font-size:.9rem;line-height:1.5;color:var(--ink-soft);transition:background .15s,border-color .15s,color .15s;align-items:flex-start}
+.quiz-options label:hover{background:var(--sutra-bg);border-color:var(--accent-soft);color:var(--ink)}
+.quiz-options input[type="radio"]{accent-color:var(--accent);margin-top:.25em;flex-shrink:0;cursor:pointer}
+.quiz-options input[type="radio"]:checked + span{color:var(--ink);font-weight:500}
+.quiz-options label:has(input:checked){background:var(--sutra-bg);border-color:var(--accent);color:var(--ink)}
+.quiz-actions{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--rule);display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.btn{font-family:var(--sans);font-size:.9rem;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:.7rem 1.4rem;cursor:pointer;font-weight:500;letter-spacing:.02em;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:0 4px 12px -4px var(--accent)}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
+.btn-ghost{background:transparent;color:var(--ink-soft);box-shadow:none;border:1px solid var(--rule)}
+.btn-ghost:hover{background:var(--bg-soft);color:var(--ink)}
+.qstatus{font-family:var(--sans);font-size:.82rem;color:var(--ink-faint);font-style:italic}
+.results{margin-top:1.5rem;padding:1.5rem 1.5rem 1.25rem;background:var(--sutra-bg);border:2px solid var(--accent);border-radius:8px;display:none}
+.results.show{display:block;animation:fadein .5s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.results h3{font-family:var(--sans);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 1rem;font-weight:600}
+.results .primary{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin:.4rem 0 .8rem;line-height:1.3}
+.results .breakdown{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.5rem;margin:1rem 0 1.4rem;font-family:var(--sans);font-size:.85rem}
+.results .pct{background:var(--bg-card);padding:.6rem .7rem;border-radius:5px;border:1px solid var(--rule);text-align:center}
+.results .pct .lbl{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;display:block;margin-bottom:.2rem}
+.results .pct .v{font-size:1.2rem;color:var(--ink);font-weight:600}
+.results .quote{font-style:italic;color:var(--ink-soft);font-size:1.02rem;line-height:1.6;margin:1rem 0;padding:.8rem 1rem;background:var(--bg-card);border-left:2px solid var(--accent-soft);border-radius:3px}
+.results .recommend{margin:1.2rem 0;padding-top:1rem;border-top:1px solid var(--rule)}
+.results .recommend h4{font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin:.6rem 0 .5rem;font-weight:600}
+.results .recommend ol{margin:.4rem 0;padding-left:1.4rem;font-family:var(--sans);font-size:.92rem}
+.results .recommend ol li{margin:.3rem 0;line-height:1.55}
+.results .avoid{font-family:var(--sans);font-size:.88rem;color:var(--ink-soft);margin-top:.8rem}
+.results .avoid strong{color:var(--warn-c)}
+.type-card{background:var(--bg-card);border:1px solid var(--rule);border-left-width:4px;border-radius:6px;padding:1.4rem 1.5rem;margin:1.2rem 0;transition:transform .15s,box-shadow .15s}
+.type-card.body{border-left-color:var(--body-c)}
+.type-card.mind{border-left-color:var(--mind-c)}
+.type-card.heart{border-left-color:var(--heart-c)}
+.type-card.energy{border-left-color:var(--energy-c)}
+.type-card h4{font-family:var(--serif);font-size:1.2rem;margin:0 0 .5rem;color:var(--ink);font-weight:500}
+.type-card.body h4{color:var(--body-c)}
+.type-card.mind h4{color:var(--mind-c)}
+.type-card.heart h4{color:var(--heart-c)}
+.type-card.energy h4{color:var(--energy-c)}
+.type-card .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:.2rem;display:block}
+.type-card p{margin:.4rem 0;font-size:.95rem;color:var(--ink-soft);line-height:1.6}
+.type-card .strengths{font-family:var(--sans);font-size:.88rem;color:var(--ink-soft);margin:.6rem 0}
+.type-card .strengths strong{color:var(--ink);font-weight:600}
+.path-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:1.5rem 1.6rem;margin:1.2rem 0;box-shadow:var(--shadow)}
+.path-card h3{font-family:var(--serif);font-size:1.3rem;margin:0 0 .3rem;color:var(--accent);font-weight:500}
+.path-card .sanskrit{font-family:var(--sans);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:.8rem}
+.path-card p{font-size:.98rem;color:var(--ink-soft);margin:.5rem 0}
+.path-card .you-if{margin-top:1rem}
+.path-card .you-if strong{font-family:var(--sans);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:600;display:block;margin-bottom:.4rem}
+.path-card .you-if ul{margin:.3rem 0;padding-left:1.3rem;font-size:.94rem}
+.path-card .links{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--rule);font-family:var(--sans);font-size:.88rem}
+.path-card .links strong{color:var(--ink-soft);display:block;margin-bottom:.4rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.path-card .links a{display:inline-block;margin:.2rem .5rem .2rem 0;padding:.25rem .7rem;background:var(--bg-soft);border-radius:999px;border:1px solid var(--rule);color:var(--ink-soft);font-size:.84rem}
+.path-card .links a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.dosha-card{background:var(--bg-card);border:1px solid var(--rule);border-left-width:4px;border-radius:6px;padding:1.4rem 1.5rem;margin:1.2rem 0}
+.dosha-card.vata{border-left-color:var(--vata-c)}
+.dosha-card.pitta{border-left-color:var(--pitta-c)}
+.dosha-card.kapha{border-left-color:var(--kapha-c)}
+.dosha-card h4{font-family:var(--serif);font-size:1.2rem;margin:0 0 .3rem;font-weight:500}
+.dosha-card.vata h4{color:var(--vata-c)}
+.dosha-card.pitta h4{color:var(--pitta-c)}
+.dosha-card.kapha h4{color:var(--kapha-c)}
+.dosha-card .traits{font-family:var(--sans);font-size:.84rem;color:var(--ink-faint);letter-spacing:.04em;margin-bottom:.6rem}
+.dosha-card p{font-size:.94rem;color:var(--ink-soft);margin:.5rem 0}
+.dosha-card .needs{font-family:var(--sans);font-size:.86rem;margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--rule)}
+.dosha-card .needs strong{color:var(--ink);display:block;margin-bottom:.3rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.dosha-card .needs a{display:inline-block;margin:.15rem .35rem .15rem 0;color:var(--accent)}
+.dosha-card .avoid-line{font-size:.86rem;color:var(--ink-soft);margin-top:.5rem;font-style:italic}
+.dosha-card .avoid-line strong{color:var(--warn-c);font-style:normal;font-weight:600}
+.trait-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1.3rem 1.5rem;margin:1.2rem 0}
+.trait-card h4{font-family:var(--serif);font-size:1.15rem;color:var(--accent);margin:0 0 .3rem;font-weight:500}
+.trait-card .prompt{font-style:italic;color:var(--ink-soft);font-size:.96rem;margin:.5rem 0 1rem;padding:.6rem .9rem;background:var(--sutra-bg);border-left:2px solid var(--accent-soft);border-radius:3px}
+.trait-card .vs{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-family:var(--sans);font-size:.88rem;margin-top:.6rem}
+.trait-card .vs .col{padding:.7rem .9rem;background:var(--bg-soft);border-radius:5px;border:1px solid var(--rule)}
+.trait-card .vs .col strong{display:block;color:var(--ink);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.4rem}
+.trait-card .vs a{color:var(--accent);font-weight:500}
+.enneagram-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:1.5rem 0}
+.enn-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:.9rem .8rem;text-align:center;cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s;font-family:var(--sans);position:relative}
+.enn-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--accent-soft)}
+.enn-card.active{border-color:var(--accent);background:var(--sutra-bg);box-shadow:0 0 0 2px var(--accent-soft)}
+.enn-card .num{display:block;font-family:var(--serif);font-size:1.6rem;color:var(--accent);font-weight:500;line-height:1}
+.enn-card .name{display:block;font-size:.78rem;letter-spacing:.04em;color:var(--ink);font-weight:600;margin-top:.3rem;line-height:1.25}
+.enn-card .epithet{display:block;font-size:.72rem;color:var(--ink-faint);font-style:italic;margin-top:.15rem;line-height:1.2}
+.enn-detail{grid-column:1/-1;background:var(--bg-card);border:1px solid var(--accent);border-radius:6px;padding:1.3rem 1.5rem;margin-top:.5rem;display:none;animation:fadein .35s ease}
+.enn-detail.show{display:block}
+.enn-detail h4{font-family:var(--serif);font-size:1.25rem;color:var(--accent);margin:0 0 .4rem;font-weight:500}
+.enn-detail .motivation{font-family:var(--sans);font-size:.85rem;color:var(--ink-faint);margin:.5rem 0}
+.enn-detail .motivation strong{color:var(--ink);text-transform:uppercase;font-size:.7rem;letter-spacing:.14em;display:block;margin-bottom:.2rem}
+.enn-detail p{font-size:.95rem;color:var(--ink-soft);margin:.5rem 0}
+.enn-detail .recs{margin-top:.8rem;padding-top:.8rem;border-top:1px solid var(--rule);font-family:var(--sans);font-size:.88rem}
+.enn-detail .recs strong{color:var(--ink-soft);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:.4rem}
+.tracker{background:var(--bg-soft);border:1px solid var(--rule);border-radius:8px;padding:1.4rem 1.5rem;margin:1.5rem 0}
+.tracker .day{margin:1.1rem 0;padding-top:1rem;border-top:1px dashed var(--rule)}
+.tracker .day:first-child{border-top:0;padding-top:0;margin-top:0}
+.tracker .day-h{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem;margin-bottom:.5rem}
+.tracker .day-h .name{font-family:var(--sans);font-weight:600;font-size:.92rem;color:var(--ink);letter-spacing:.05em;text-transform:uppercase}
+.tracker .day-h .theme{font-family:var(--sans);font-size:.85rem;color:var(--accent);font-weight:500}
+.tracker .day-h .theme::before{content:"\2014 ";color:var(--ink-faint)}
+.tracker textarea{width:100%;min-height:90px;padding:.7rem .85rem;border-radius:5px;border:1px solid var(--rule);background:var(--bg-card);color:var(--ink);font-family:var(--serif);font-size:.95rem;line-height:1.55;resize:vertical;transition:border-color .15s,box-shadow .15s}
+.tracker textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.tracker .saved{font-family:var(--sans);font-size:.74rem;color:var(--ink-faint);margin-top:.3rem;font-style:italic;min-height:1em}
+.prompts details{border:1px solid var(--rule);border-radius:5px;background:var(--bg-card);margin:.55rem 0;transition:background .2s}
+.prompts details[open]{background:var(--sutra-bg)}
+.prompts summary{padding:.85rem 1rem;cursor:pointer;font-family:var(--serif);font-style:italic;color:var(--ink);list-style:none;display:flex;align-items:flex-start;gap:.6rem;font-size:1rem;line-height:1.5}
+.prompts summary::-webkit-details-marker{display:none}
+.prompts summary::before{content:"\203A";display:inline-block;color:var(--accent);font-style:normal;transition:transform .2s;flex-shrink:0;margin-top:.05em}
+.prompts details[open] summary::before{transform:rotate(90deg)}
+.prompts .body{padding:0 1rem 1rem 2rem;font-family:var(--serif);font-size:.95rem;color:var(--ink-soft);line-height:1.65}
+.prompts .group{margin:1.2rem 0}
+.prompts .group h4{font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 .5rem}
+.combos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem;margin:1.3rem 0}
+.combo{background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1rem 1.2rem;font-family:var(--sans);font-size:.88rem}
+.combo h4{font-family:var(--serif);font-size:1.05rem;margin:0 0 .35rem;color:var(--accent);font-weight:500}
+.combo p{font-size:.86rem;color:var(--ink-soft);margin:.3rem 0;line-height:1.55}
+.combo a{font-size:.85rem}
+.steps{counter-reset:s;list-style:none;padding:0;margin:1.5rem 0}
+.steps li{counter-increment:s;background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1rem 1.3rem 1rem 3.5rem;margin:.7rem 0;position:relative;font-size:.96rem;line-height:1.6;color:var(--ink-soft)}
+.steps li::before{content:counter(s);position:absolute;left:1rem;top:1rem;width:1.9rem;height:1.9rem;border-radius:999px;background:var(--accent);color:#fff;font-family:var(--sans);font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+.steps li strong{color:var(--ink);display:block;margin-bottom:.2rem}
+.resources{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.5rem;margin:1.3rem 0;font-family:var(--sans);font-size:.88rem}
+.resources a{display:block;padding:.6rem .85rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:5px;color:var(--ink);text-align:center;border-bottom-width:1px;transition:background .15s,border-color .15s,color .15s}
+.resources a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+footer{text-align:center;padding:3rem 0 1rem;border-top:1px solid var(--rule);color:var(--ink-faint);font-family:var(--sans);font-size:.85rem;margin-top:3rem}
+footer p{margin:.4rem 0}
+footer a{color:var(--ink-soft)}
+.jumplinks{margin-top:2.5rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1.25rem 1.5rem;text-align:left}
+.jumplinks h2{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 1rem;font-weight:600}
+.jumplinks ol{margin:0;padding:0;list-style:none;counter-reset:jl}
+.jumplinks li{counter-increment:jl;border-top:1px solid var(--rule);padding:.55rem 0}
+.jumplinks li:first-child{border-top:0}
+.jumplinks a{text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:.7rem;font-size:.95rem;border-bottom:0}
+.jumplinks a::before{content:counter(jl);font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faint);min-width:1.5rem}
+.jumplinks a:hover{color:var(--accent)}
+.jumplinks .sub{color:var(--ink-faint);font-style:italic;font-size:.85rem}
+@media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.btn,.quiz-actions,.qstatus{display:none!important}main{max-width:none;padding:1rem}section.block{box-shadow:none;border:1px solid #ccc;page-break-inside:avoid;padding:1rem;margin:.5rem 0}.results{display:block!important;border-color:#888}.tracker textarea{border:1px solid #ccc;min-height:60px}.enn-detail{display:block!important}.enneagram-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){body{font-size:17px}main{padding:4rem 1rem 2rem}section.block{padding:1.4rem 1.2rem}.controls{top:.5rem;right:.5rem}.enneagram-grid{grid-template-columns:repeat(2,1fr)}.trait-card .vs{grid-template-columns:1fr}.results .breakdown{grid-template-columns:repeat(2,1fr)}h2.section-h{font-size:1.4rem}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<nav class="controls" aria-label="Reading controls">
+  <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+  <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
+</nav>
+<main>
+<header class="hero">
+  <div class="eyebrow">Self-Discovery &middot; The Most Important Step</div>
+  <h1>Who Are You? Discover Yourself First</h1>
+  <p class="lede">Before you choose a meditation technique, you must know whom the technique is for. Of the 112 sutras in the Vigyan Bhairav, perhaps only three or four were ever meant for YOU. The rest are for someone else &mdash; another body, another mind, another nature.</p>
+  <p class="meta">5 quizzes &middot; 4 yogic paths &middot; 9 enneagram types &middot; 7-day tracker &middot; ~25 min</p>
+  <nav class="jumplinks" aria-label="Sections in this file">
+    <h2>What you will discover here</h2>
+    <ol>
+      <li><a href="#why"><span>Why self-discovery matters</span> <span class="sub">&middot; the first meditation</span></a></li>
+      <li><a href="#quiz1"><span>Quick Indicator Quiz</span> <span class="sub">&middot; body / mind / heart / energy</span></a></li>
+      <li><a href="#paths"><span>The Four Yogic Paths</span> <span class="sub">&middot; karma, bhakti, jnana, raja</span></a></li>
+      <li><a href="#dosha"><span>Ayurvedic Dosha Quiz</span> <span class="sub">&middot; vata, pitta, kapha</span></a></li>
+      <li><a href="#bigfive"><span>Big Five reflection</span> <span class="sub">&middot; OCEAN traits</span></a></li>
+      <li><a href="#enneagram"><span>Enneagram explorer</span> <span class="sub">&middot; the nine types</span></a></li>
+      <li><a href="#tracker"><span>7-day observation tracker</span> <span class="sub">&middot; what you actually do</span></a></li>
+      <li><a href="#prompts"><span>Self-reflection prompts</span> <span class="sub">&middot; 30+ doorways</span></a></li>
+      <li><a href="#combos"><span>Combination types</span> <span class="sub">&middot; you are usually a blend</span></a></li>
+      <li><a href="#wrong"><span>Signs you are forcing the wrong path</span> <span class="sub">&middot; warning bells</span></a></li>
+      <li><a href="#practice"><span>From insight to practice</span> <span class="sub">&middot; five steps</span></a></li>
+      <li><a href="#resources"><span>All 15 technique categories</span> <span class="sub">&middot; library index</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<section class="block intro" id="why">
+<h2 class="section-h">Why self-discovery matters</h2>
+<p>The Vigyan Bhairav Tantra contains <strong>112 techniques</strong> &mdash; not because Shiva was indecisive, but because <em>people are different</em>. A technique that liberates one person can imprison another. A practice that brings tears of devotion to one heart will bore another to sleep. A meditation that opens the body of an active person will disturb the subtle nervous system of someone naturally introspective.</p>
+<p>This is the secret the spiritual marketplace forgets. You see &ldquo;the best meditation app&rdquo;, &ldquo;the technique that changed my life&rdquo;, &ldquo;the only practice you need&rdquo; &mdash; and underneath every such claim is one assumption: <em>everyone is the same</em>. You are not. You are made of a particular body, a particular mind, a particular emotional landscape, a particular nervous system. The technique that fits you fits like a key in a lock. The wrong technique &mdash; however celebrated &mdash; will simply not turn.</p>
+<p>The book itself is unambiguous on this point. Osho repeats it again and again: <em>find the one technique meant for you</em>. Try it for twenty-one days. If it fits, you will know &mdash; the practice will start carrying you rather than the other way round. If it does not fit, do not blame yourself, do not blame the technique. Move on. The 112 sutras are not 112 commandments. They are 112 doors, only a handful of which open for any single person.</p>
+<p>And here is what almost no one says: <strong>self-knowledge is itself the first meditation</strong>. Before you sit, before you breathe, before you watch a candle or repeat a mantra &mdash; observe yourself. What do you actually love? What energises you? What drains you? When are you most alive? Who do you imitate, and why? The questions on this page are not a personality test. They are the beginning of meditation itself.</p>
+<p>The danger of imitation is real. Spiritual culture is full of people doing techniques that do not fit them &mdash; usually because someone they admired did that technique. An active, fiery person sits in silent vipassana for ten days because the teacher was famous, and ends up depressed. A naturally meditative, withdrawn person joins ecstatic dancing because the community is warm, and ends up depleted. Both are sincere. Both are working hard. Both are on the wrong path. Self-knowledge would have saved them years.</p>
+<p>So before you read another technique file in this library, spend half an hour with this page. Take the quizzes. Read the four paths. Sit with the prompts. Don't rush. The investment of one careful hour here may save you years of practising the wrong thing.</p>
+<div class="callout"><strong>The principle:</strong> Meditation is not one-size-fits-all. The right technique feels like coming home. The wrong technique feels like wearing someone else's clothes. Your only job is to find which of the 112 doors is yours.</div>
+</section>
+
+<section class="block" id="quiz1">
+<h2 class="section-h">Quiz 1 &mdash; The Quick Indicator</h2>
+<p>Twelve questions, four options each. Each option corresponds to one of four primal orientations: <strong style="color:var(--body-c)">BODY</strong> (the doer), <strong style="color:var(--mind-c)">MIND</strong> (the inquirer), <strong style="color:var(--heart-c)">HEART</strong> (the lover), <strong style="color:var(--energy-c)">ENERGY</strong> (the witness). Answer with your <em>first instinct</em>, not what sounds spiritually impressive. The truth is what you actually do, not what you wish you did.</p>
+<div class="callout">If two answers feel equally true, choose the one you behave like <em>under stress</em>. Stress reveals the dominant nature; calm hides it.</div>
+
+<form class="quiz" id="quiz1-form" aria-label="Quick indicator quiz">
+
+<div class="quiz-q first"><span class="num">Q1</span> When you are stressed, what does your body actually do?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q1" value="body"><span>I need to MOVE &mdash; walk, run, exercise, clean, do something physical. Sitting still makes it worse.</span></label></li>
+  <li><label><input type="radio" name="q1" value="mind"><span>I analyse it &mdash; replay the situation, list options, plan, research, try to understand what happened.</span></label></li>
+  <li><label><input type="radio" name="q1" value="heart"><span>I need to talk to someone, cry it out, hug, listen to sad music, feel my feelings fully.</span></label></li>
+  <li><label><input type="radio" name="q1" value="energy"><span>I withdraw &mdash; need to be alone, sit quietly, sometimes lie down for hours doing nothing.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q2</span> What did you most love doing as a child, around age 6&ndash;10?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q2" value="body"><span>Running, climbing, building, sports, making things with my hands &mdash; constant movement.</span></label></li>
+  <li><label><input type="radio" name="q2" value="mind"><span>Reading, taking things apart, asking endless &ldquo;why&rdquo; questions, puzzles, encyclopaedias.</span></label></li>
+  <li><label><input type="radio" name="q2" value="heart"><span>Making friends, caring for animals or younger kids, drawing what I felt, singing, dancing.</span></label></li>
+  <li><label><input type="radio" name="q2" value="energy"><span>Daydreaming, staring out windows, being alone in nature, vivid inner imagination, &ldquo;spaced out&rdquo;.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q3</span> How do you learn something new most naturally?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q3" value="body"><span>By DOING it &mdash; hands on, trial and error. Reading instructions bores me; I have to try.</span></label></li>
+  <li><label><input type="radio" name="q3" value="mind"><span>By understanding it first &mdash; how does it work? What are the principles? Then I can act.</span></label></li>
+  <li><label><input type="radio" name="q3" value="heart"><span>From a person I trust &mdash; a teacher who inspires me. The relationship matters more than the content.</span></label></li>
+  <li><label><input type="radio" name="q3" value="energy"><span>By absorbing it slowly &mdash; sitting with it, letting it sink in, getting a felt sense before I act.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q4</span> What is hardest for you?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q4" value="body"><span>Sitting still for long periods. I can sit for half an hour, then everything in me wants to move.</span></label></li>
+  <li><label><input type="radio" name="q4" value="mind"><span>Stopping the thinking. Even when I want silence, my mind keeps running &mdash; questions, analysis, plans.</span></label></li>
+  <li><label><input type="radio" name="q4" value="heart"><span>Being alone too long. I need contact, connection, love. Isolation drains me.</span></label></li>
+  <li><label><input type="radio" name="q4" value="energy"><span>Staying engaged with the noisy world. Crowds, loud music, small talk &mdash; they exhaust me quickly.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q5</span> What genuinely energises you and gives you life?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q5" value="body"><span>Physical work, exercise, dancing, building, fixing, sex, cooking &mdash; doing real things with the body.</span></label></li>
+  <li><label><input type="radio" name="q5" value="mind"><span>A new idea, a good conversation, solving a hard problem, finally understanding something.</span></label></li>
+  <li><label><input type="radio" name="q5" value="heart"><span>Deep connection, music that moves me to tears, helping someone, being in love, beauty.</span></label></li>
+  <li><label><input type="radio" name="q5" value="energy"><span>Solitude in nature, silence, meditation, sleep, an empty afternoon with nothing scheduled.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q6</span> Which feeling shows up in you most often?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q6" value="body"><span>Restlessness &mdash; an itch to do something, go somewhere, MAKE something happen.</span></label></li>
+  <li><label><input type="radio" name="q6" value="mind"><span>Curiosity, doubt, the need to figure things out &mdash; or anxiety when I can&rsquo;t.</span></label></li>
+  <li><label><input type="radio" name="q6" value="heart"><span>Tenderness, longing, joy, sorrow &mdash; emotions are vivid and close to the surface for me.</span></label></li>
+  <li><label><input type="radio" name="q6" value="energy"><span>Quiet observation. I&rsquo;m often watching, sensing, noticing &mdash; even when I look passive.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q7</span> Which of these phrases makes your chest open the most?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q7" value="body"><span>&ldquo;The body knows. Trust the body. Move and the answer comes.&rdquo;</span></label></li>
+  <li><label><input type="radio" name="q7" value="mind"><span>&ldquo;Investigate. Question everything. Truth survives all inquiry.&rdquo;</span></label></li>
+  <li><label><input type="radio" name="q7" value="heart"><span>&ldquo;Surrender. Love. Let the heart break open. The beloved is everywhere.&rdquo;</span></label></li>
+  <li><label><input type="radio" name="q7" value="energy"><span>&ldquo;Be still. Watch. The watcher is what you are. Nothing more is needed.&rdquo;</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q8</span> In a group of people, what role do you naturally take?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q8" value="body"><span>The doer &mdash; I get things done, organise, lead the action, set the pace.</span></label></li>
+  <li><label><input type="radio" name="q8" value="mind"><span>The thinker &mdash; I ask the awkward question, see the flaw in the plan, propose the framework.</span></label></li>
+  <li><label><input type="radio" name="q8" value="heart"><span>The connector &mdash; I sense how everyone is feeling, smooth tensions, hold the emotional thread.</span></label></li>
+  <li><label><input type="radio" name="q8" value="energy"><span>The quiet one &mdash; I observe, listen, speak rarely but when I do everyone notices.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q9</span> What is your relationship with your body?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q9" value="body"><span>I LOVE my body. I know it from inside. I trust it. It&rsquo;s where I live most fully.</span></label></li>
+  <li><label><input type="radio" name="q9" value="mind"><span>The body is my vehicle &mdash; I take care of it, but I live mainly in my head.</span></label></li>
+  <li><label><input type="radio" name="q9" value="heart"><span>My body holds my emotions. I feel everything in my chest, gut, throat &mdash; the body is my emotional landscape.</span></label></li>
+  <li><label><input type="radio" name="q9" value="energy"><span>I&rsquo;m sometimes barely aware of my body. I forget to eat, forget I have feet. I live in subtle awareness.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q10</span> What kind of book pulls you in most strongly?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q10" value="body"><span>Practical: how-to, biographies of doers, hands-on guides, books with real-world results.</span></label></li>
+  <li><label><input type="radio" name="q10" value="mind"><span>Ideas: philosophy, science, complex non-fiction, books that stretch how I think.</span></label></li>
+  <li><label><input type="radio" name="q10" value="heart"><span>Stories that move me: novels, poetry, devotional writings, letters, anything that makes me cry.</span></label></li>
+  <li><label><input type="radio" name="q10" value="energy"><span>Mystical or sparse: koans, Tao Te Ching, contemplative writing, books with lots of white space.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q11</span> What kind of leader do you trust?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q11" value="body"><span>Someone who DOES what they say. Action, courage, results &mdash; these I respect.</span></label></li>
+  <li><label><input type="radio" name="q11" value="mind"><span>Someone who can explain clearly, reason rigorously, defend their view under questioning.</span></label></li>
+  <li><label><input type="radio" name="q11" value="heart"><span>Someone with heart &mdash; warm, present, genuinely cares. I follow love, not authority.</span></label></li>
+  <li><label><input type="radio" name="q11" value="energy"><span>Someone with presence. They radiate something even when silent. I follow what I feel from them.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q12</span> If you imagine an enlightened being, what comes first to mind?</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="q12" value="body"><span>Someone fully embodied &mdash; alive, present, working, loving, dancing. Buddha walking, not Buddha sitting.</span></label></li>
+  <li><label><input type="radio" name="q12" value="mind"><span>Someone of utter clarity &mdash; sees through every illusion, answers every question, mind like a sword.</span></label></li>
+  <li><label><input type="radio" name="q12" value="heart"><span>Someone overflowing with love &mdash; tears in their eyes, infinite tenderness, every being held.</span></label></li>
+  <li><label><input type="radio" name="q12" value="energy"><span>Someone in deep stillness &mdash; almost not there, like an empty mirror, a lake without ripple.</span></label></li>
+</ul>
+
+<div class="quiz-actions">
+  <button type="button" class="btn" id="quiz1-submit">See my results</button>
+  <button type="button" class="btn btn-ghost" id="quiz1-reset">Reset</button>
+  <span class="qstatus" id="quiz1-status"></span>
+</div>
+
+<div class="results" id="quiz1-result" role="region" aria-live="polite" aria-label="Quiz 1 results">
+  <h3>Your indicator profile</h3>
+  <div class="primary" id="q1-primary"></div>
+  <div class="breakdown" id="q1-breakdown"></div>
+  <div class="quote" id="q1-quote"></div>
+  <div id="q1-strengths"></div>
+  <div class="recommend" id="q1-recommend"></div>
+  <div class="avoid" id="q1-avoid"></div>
+  <div id="q1-secondary"></div>
+</div>
+
+</form>
+
+<div class="callout"><strong>Remember:</strong> a quiz can only point. The real test is twenty-one days of practice with your top recommended technique. If it fits, you will know &mdash; not because the quiz said so, but because something inside you starts to settle.</div>
+</section>
+
+<section class="block intro" id="paths">
+<h2 class="section-h">The Four Yogic Paths</h2>
+<p>The classical tradition of India recognised four primary paths to liberation, one for each fundamental human nature. The Bhagavad Gita, the Upanishads, and Patanjali all return to this fourfold map. It is not theory; it is observation. Across thousands of years and millions of seekers, these are the four shapes a human nervous system actually takes when it turns inward.</p>
+<p>Read all four. One of them will tug at you. That tug is the path.</p>
+
+<article class="path-card">
+  <h3>Karma Yoga &mdash; the path of action</h3>
+  <div class="sanskrit">For active, extroverted, doing natures</div>
+  <p>Karma yoga is meditation through action. The doer cannot meditate by sitting still &mdash; their nature explodes in stillness. But give them work that absorbs them totally, and the doer disappears <em>into</em> the work. The action remains; the actor dissolves. This is what Krishna teaches Arjuna on the battlefield: <em>act without attachment to fruit</em>. Action becomes worship. Sweat becomes prayer.</p>
+  <p>For the karma yogi, the body is the temple, movement is the mantra, and <em>doing</em> is the doorway. Sitting cross-legged for hours feels like death; chopping wood, dancing, cleaning a floor with full presence feels like life. The world itself becomes the meditation hall.</p>
+  <div class="you-if">
+    <strong>You are likely a karma yogi if</strong>
+    <ul class="clean">
+      <li>You go crazy when you sit too long &mdash; your body literally aches for movement.</li>
+      <li>You feel most alive while DOING something &mdash; cooking, building, exercising, working.</li>
+      <li>Silent meditation feels like punishment, but a long walk feels like prayer.</li>
+      <li>You learn through your hands and your sweat, not through reading.</li>
+    </ul>
+  </div>
+  <div class="links"><strong>Recommended technique categories</strong>
+    <a href="vigyan-bhairav-movement-techniques.html">Movement</a>
+    <a href="vigyan-bhairav-tantra-techniques.html">Tantric Union</a>
+    <a href="vigyan-bhairav-sensory-techniques.html">Sensory</a>
+    <a href="vigyan-bhairav-centering-techniques.html">Centering</a>
+  </div>
+</article>
+
+<article class="path-card">
+  <h3>Bhakti Yoga &mdash; the path of devotion</h3>
+  <div class="sanskrit">For emotional, devotional, loving natures</div>
+  <p>Bhakti yoga is meditation through love. The bhakta cannot meditate by analysis &mdash; logic feels cold and foreign. But give them an object of devotion &mdash; a beloved, a master, a deity, the existence itself &mdash; and they pour themselves out. In total self-giving, the &ldquo;I&rdquo; empties. The lover becomes the love. This is the path of Mirabai, of Rumi, of Ramakrishna. Tears are not weakness; they are the bhakti yogi&rsquo;s mantra.</p>
+  <p>For the bhakti yogi, the heart is the gate, devotion is the practice, and <em>surrender</em> is the goal. The cold investigator path will starve them. The active doer path will exhaust them. They need to fall in love &mdash; with anything &mdash; until the falling consumes them.</p>
+  <div class="you-if">
+    <strong>You are likely a bhakti yogi if</strong>
+    <ul class="clean">
+      <li>You cry easily at music, beauty, kindness &mdash; the heart is wide open.</li>
+      <li>You feel everything intensely; emotions are vivid, close to the surface, real.</li>
+      <li>Love &mdash; falling in love, loving someone, being loved &mdash; is the most meaningful experience available.</li>
+      <li>Pure inquiry feels arid; you need warmth, presence, relationship in your spirituality.</li>
+    </ul>
+  </div>
+  <div class="links"><strong>Recommended technique categories</strong>
+    <a href="vigyan-bhairav-heart-techniques.html">Heart &amp; Devotion</a>
+    <a href="vigyan-bhairav-sound-techniques.html">Sound &amp; Mantra</a>
+    <a href="vigyan-bhairav-tantra-techniques.html">Tantric Union</a>
+    <a href="vigyan-bhairav-sensory-techniques.html">Sensory</a>
+  </div>
+</article>
+
+<article class="path-card">
+  <h3>Jnana Yoga &mdash; the path of knowledge</h3>
+  <div class="sanskrit">For rational, inquiring, intellectual natures</div>
+  <p>Jnana yoga is meditation through inquiry. The mind cannot be stopped by force &mdash; the more you suppress it, the louder it becomes. But give the mind a question it cannot answer, and the mind exhausts itself. <em>Who am I?</em> asks Ramana. <em>Neti, neti</em> &mdash; not this, not this &mdash; chants the Upanishad. The investigator turns the searchlight on the searcher, and finds that the searcher cannot be found. Inquiry is the doorway.</p>
+  <p>For the jnana yogi, the mind is both prison and key. The way out is through, not around. They cannot believe their way to truth; they have to investigate, doubt, dismantle, until what cannot be doubted shines through. The Buddha was a jnana yogi. So was Krishnamurti.</p>
+  <div class="you-if">
+    <strong>You are likely a jnana yogi if</strong>
+    <ul class="clean">
+      <li>You cannot accept anything on belief &mdash; you have to test it, question it, see for yourself.</li>
+      <li>Your mind is sharp, restless, always asking, always analysing.</li>
+      <li>Devotional practices feel sentimental; you need rigour, clarity, real seeing.</li>
+      <li>You suspect the &ldquo;I&rdquo; might not be real, and that fascinates rather than frightens you.</li>
+    </ul>
+  </div>
+  <div class="links"><strong>Recommended technique categories</strong>
+    <a href="vigyan-bhairav-negation-techniques.html">Self-Inquiry &amp; Negation</a>
+    <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>
+    <a href="vigyan-bhairav-mind-techniques.html">Mind &amp; Thought</a>
+    <a href="vigyan-bhairav-void-techniques.html">Emptiness &amp; Void</a>
+  </div>
+</article>
+
+<article class="path-card">
+  <h3>Raja Yoga &mdash; the royal path</h3>
+  <div class="sanskrit">For meditative, introspective, witnessing natures</div>
+  <p>Raja yoga is meditation through stillness. Where the karma yogi acts, the bhakti yogi loves, and the jnana yogi inquires &mdash; the raja yogi simply <em>watches</em>. Witnessing is their nature. Patanjali&rsquo;s eightfold path is the classical map: posture, breath, sense-withdrawal, concentration, meditation, absorption. The mind is gradually withdrawn from the world and rested in its own source. Stillness is not effort for the raja yogi; it is going home.</p>
+  <p>For the raja yogi, subtle awareness is the native ground. They sense what others cannot see &mdash; energies, presences, the texture of silence. Their danger is the opposite of the karma yogi&rsquo;s: not too much doing, but too much subtle absorption, getting lost in inner realms.</p>
+  <div class="you-if">
+    <strong>You are likely a raja yogi if</strong>
+    <ul class="clean">
+      <li>Stillness feels natural &mdash; sometimes more natural than action.</li>
+      <li>You can sit for hours, often spontaneously, watching, being.</li>
+      <li>You sense subtle things &mdash; energy, mood, presence &mdash; quickly and accurately.</li>
+      <li>The witnessing position &mdash; the watcher who is not what is watched &mdash; feels obvious to you, not abstract.</li>
+    </ul>
+  </div>
+  <div class="links"><strong>Recommended technique categories</strong>
+    <a href="vigyan-bhairav-light-techniques.html">Light &amp; Gazing</a>
+    <a href="vigyan-bhairav-centering-techniques.html">Centering</a>
+    <a href="vigyan-bhairav-void-techniques.html">Emptiness &amp; Void</a>
+    <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>
+  </div>
+</article>
+
+<div class="callout"><strong>Note:</strong> Most people are blends. You may be 60% jnana with a strong bhakti undertone, or 70% karma with a hidden raja core. That is normal. The path that <em>tugs hardest</em> is your primary; the path that quietly supports it is your secondary. You will need techniques from both.</div>
+</section>
+
+<section class="block" id="dosha">
+<h2 class="section-h">Quiz 2 &mdash; Your Ayurvedic Dosha</h2>
+<p>Ayurveda &mdash; the 5,000-year-old Indian medical system &mdash; describes three biological constitutions called <strong>doshas</strong>: <em>Vata</em> (air + space), <em>Pitta</em> (fire + water), and <em>Kapha</em> (earth + water). Each dosha responds differently to meditation. The same technique that calms a Pitta person can disorient a Vata. Knowing your dominant dosha tells you which techniques will <em>ground</em> you and which will <em>destabilise</em> you.</p>
+<div class="callout">For each question, pick the option that describes you most of the time, since childhood. Don&rsquo;t pick what you wish were true &mdash; pick what your body actually does.</div>
+
+<form class="quiz" id="quiz2-form" aria-label="Dosha quiz">
+
+<div class="quiz-q first"><span class="num">Q1</span> Body frame</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="d1" value="vata"><span>Thin, light, hard to gain weight; long fingers; prominent joints; cool to the touch.</span></label></li>
+  <li><label><input type="radio" name="d1" value="pitta"><span>Medium, athletic, well-proportioned; warm body, often flushed or freckled; gain or lose easily.</span></label></li>
+  <li><label><input type="radio" name="d1" value="kapha"><span>Sturdy, broader frame; gain weight easily and lose it slowly; smooth, soft skin.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q2</span> Energy patterns through the day</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="d2" value="vata"><span>Bursts of high energy then sudden depletion. Variable, unpredictable, can crash hard.</span></label></li>
+  <li><label><input type="radio" name="d2" value="pitta"><span>Steady, intense, focused energy &mdash; until I overdo it, then I burn out fast.</span></label></li>
+  <li><label><input type="radio" name="d2" value="kapha"><span>Slow to start, then steady all day. Endurance is good; getting moving is the hard part.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q3</span> Sleep</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="d3" value="vata"><span>Light, interrupted, often anxious dreams. I lie awake; mind races at night.</span></label></li>
+  <li><label><input type="radio" name="d3" value="pitta"><span>Sound but moderate; vivid, sometimes intense dreams. I wake easily if hot.</span></label></li>
+  <li><label><input type="radio" name="d3" value="kapha"><span>Deep, long, hard to wake. I love sleep, can sleep 9+ hours easily.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q4</span> Stress response</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="d4" value="vata"><span>Anxiety, scattered thoughts, fear, worry &mdash; I become spacey and shaky.</span></label></li>
+  <li><label><input type="radio" name="d4" value="pitta"><span>Anger, irritation, frustration, criticism &mdash; I become sharp, hot, controlling.</span></label></li>
+  <li><label><input type="radio" name="d4" value="kapha"><span>Withdrawal, heaviness, lethargy, mild depression &mdash; I become slow and stuck.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q5</span> Hunger and digestion</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="d5" value="vata"><span>Irregular &mdash; sometimes ravenous, sometimes forget to eat. Gas, bloating common.</span></label></li>
+  <li><label><input type="radio" name="d5" value="pitta"><span>Sharp, intense hunger. If I miss a meal I become irritable. Strong digestion, sometimes burning.</span></label></li>
+  <li><label><input type="radio" name="d5" value="kapha"><span>Steady, can skip meals easily. Slow digestion; food sits heavy.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q6</span> Skin and hair</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="d6" value="vata"><span>Dry, thin, cool skin. Hair often dry, frizzy, or thin.</span></label></li>
+  <li><label><input type="radio" name="d6" value="pitta"><span>Warm, slightly oily, prone to redness/rashes. Hair fine, often early greying or thinning.</span></label></li>
+  <li><label><input type="radio" name="d6" value="kapha"><span>Smooth, thick, slightly oily skin. Hair thick, lush, abundant.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q7</span> Speech</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="d7" value="vata"><span>Fast, lots of words, jumps topics, sometimes incoherent. Voice can be high or thin.</span></label></li>
+  <li><label><input type="radio" name="d7" value="pitta"><span>Direct, sharp, articulate, persuasive. Voice clear and strong; can cut.</span></label></li>
+  <li><label><input type="radio" name="d7" value="kapha"><span>Slow, deliberate, melodious, considered. Voice deep, soothing.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q8</span> Memory</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="d8" value="vata"><span>Quick to learn, quick to forget. Bad with names, places, dates.</span></label></li>
+  <li><label><input type="radio" name="d8" value="pitta"><span>Sharp, organised, accurate. I remember details, especially anything I cared about.</span></label></li>
+  <li><label><input type="radio" name="d8" value="kapha"><span>Slow to learn, but never forget. My memory is deep, long, almost photographic for important things.</span></label></li>
+</ul>
+
+<div class="quiz-q"><span class="num">Q9</span> Movement style</div>
+<ul class="quiz-options">
+  <li><label><input type="radio" name="d9" value="vata"><span>Quick, light, restless. I fidget, gesture, tap. Hard to sit still.</span></label></li>
+  <li><label><input type="radio" name="d9" value="pitta"><span>Purposeful, precise, intense. I move with intention; nothing wasted.</span></label></li>
+  <li><label><input type="radio" name="d9" value="kapha"><span>Slow, graceful, grounded. I walk steadily; I don&rsquo;t rush.</span></label></li>
+</ul>
+
+<div class="quiz-actions">
+  <button type="button" class="btn" id="quiz2-submit">See my dosha</button>
+  <button type="button" class="btn btn-ghost" id="quiz2-reset">Reset</button>
+  <span class="qstatus" id="quiz2-status"></span>
+</div>
+
+<div class="results" id="quiz2-result" role="region" aria-live="polite" aria-label="Dosha results">
+  <h3>Your dominant dosha</h3>
+  <div class="primary" id="q2-primary"></div>
+  <div class="breakdown" id="q2-breakdown"></div>
+  <div id="q2-detail"></div>
+</div>
+
+</form>
+
+<h3 class="sub-h">The three dosha profiles</h3>
+
+<article class="dosha-card vata">
+  <h4>Vata &mdash; air &amp; space</h4>
+  <div class="traits">Light &middot; cold &middot; dry &middot; rough &middot; mobile &middot; subtle</div>
+  <p>Vata governs movement &mdash; nerves, breath, circulation, thought. Vata people are quick, creative, flighty, easily overstimulated. The danger of meditation for Vata is going <em>more spaced out</em>. They already live half in the air. They need techniques that bring them <em>down</em>, into the body, into the present moment, into warmth and regularity.</p>
+  <div class="needs"><strong>Vata needs grounding, warmth, and regularity</strong>
+    <p style="font-size:.86rem;margin:.4rem 0;color:var(--ink-soft)">Best categories:
+      <a href="vigyan-bhairav-centering-techniques.html">Centering</a> &middot;
+      <a href="vigyan-bhairav-breath-techniques.html">Breath</a> &middot;
+      <a href="vigyan-bhairav-sound-techniques.html">Sound &amp; Mantra</a> &middot;
+      <a href="vigyan-bhairav-sensory-techniques.html">Sensory grounding</a>
+    </p>
+  </div>
+  <p class="avoid-line"><strong>Vata, avoid initially:</strong> pure void techniques, sky-gazing for hours, strong silent retreats. They will scatter you, not settle you.</p>
+</article>
+
+<article class="dosha-card pitta">
+  <h4>Pitta &mdash; fire &amp; water</h4>
+  <div class="traits">Hot &middot; sharp &middot; intense &middot; focused &middot; ambitious &middot; precise</div>
+  <p>Pitta governs transformation &mdash; digestion of food, of ideas, of experience. Pitta people are sharp, driven, ambitious, often perfectionist. Their meditation danger is <em>turning practice into another achievement</em>. They will measure, push, force, and burn out. They need techniques that <em>cool</em> them, soften them, teach surrender, dissolve the inner critic.</p>
+  <div class="needs"><strong>Pitta needs cooling, softening, and surrender</strong>
+    <p style="font-size:.86rem;margin:.4rem 0;color:var(--ink-soft)">Best categories:
+      <a href="vigyan-bhairav-heart-techniques.html">Heart &amp; Devotion</a> &middot;
+      <a href="vigyan-bhairav-light-techniques.html">Sky-gazing &amp; Light</a> &middot;
+      <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a> &middot;
+      <a href="vigyan-bhairav-void-techniques.html">Void</a> (gently)
+    </p>
+  </div>
+  <p class="avoid-line"><strong>Pitta, avoid initially:</strong> intense focused concentration, fiery breath techniques like rapid kapalabhati for long durations, anything that fuels the inner driver.</p>
+</article>
+
+<article class="dosha-card kapha">
+  <h4>Kapha &mdash; earth &amp; water</h4>
+  <div class="traits">Heavy &middot; cool &middot; smooth &middot; stable &middot; slow &middot; loving</div>
+  <p>Kapha governs structure &mdash; bones, muscle, fat, stability, calm. Kapha people are steady, patient, deeply loving, slow to anger and slow to change. Their meditation danger is <em>using practice to hide in stillness</em> &mdash; sitting more, sleeping more, withdrawing more, when what they actually need is to be <em>activated</em>. They need fire, movement, wakefulness.</p>
+  <div class="needs"><strong>Kapha needs activation, energy, and movement</strong>
+    <p style="font-size:.86rem;margin:.4rem 0;color:var(--ink-soft)">Best categories:
+      <a href="vigyan-bhairav-movement-techniques.html">Movement</a> &middot;
+      <a href="vigyan-bhairav-breath-techniques.html">Active breath (kapalabhati, bhastrika)</a> &middot;
+      <a href="vigyan-bhairav-tantra-techniques.html">Dynamic / Tantric</a> &middot;
+      <a href="vigyan-bhairav-sensory-techniques.html">Sensory awakening</a>
+    </p>
+  </div>
+  <p class="avoid-line"><strong>Kapha, avoid initially:</strong> long sitting meditation, sleep-based techniques, anything passive. You will simply fall asleep or grow heavier.</p>
+</article>
+</section>
+
+<section class="block intro" id="bigfive">
+<h2 class="section-h">Big Five (OCEAN) &mdash; reflection, not quiz</h2>
+<p>The Big Five is the most empirically robust personality framework modern psychology has produced. Five broad traits, each on a continuum: <strong>O</strong>penness, <strong>C</strong>onscientiousness, <strong>E</strong>xtraversion, <strong>A</strong>greeableness, <strong>N</strong>euroticism. There is no &ldquo;good&rdquo; or &ldquo;bad&rdquo; end &mdash; only <em>different</em>, with different gifts and different risks. Different ends call for different meditations.</p>
+<p>Read the prompt. Sit with it. Decide where you sit on the line. Then read the implications.</p>
+
+<article class="trait-card">
+  <h4>O &mdash; Openness to Experience</h4>
+  <p class="prompt">Are you typically drawn to new experiences, ideas, art, and unconventional ways of seeing &mdash; or do you prefer the familiar, the practical, the proven?</p>
+  <div class="vs">
+    <div class="col"><strong>High openness</strong>You love novelty, ideas, depth. Risk: you collect techniques like books, never going deep. Need: <em>commitment to one</em>. Try <a href="vigyan-bhairav-imagination-techniques.html">Imagination</a>, <a href="vigyan-bhairav-tantra-techniques.html">Tantric</a>, <a href="vigyan-bhairav-light-techniques.html">Light</a>, <a href="vigyan-bhairav-void-techniques.html">Void</a> &mdash; rich, multi-layered practices that will satisfy your need for depth.</div>
+    <div class="col"><strong>Low openness (preserving)</strong>You trust the practical, the proven. Risk: you may dismiss meditation as mystical fluff. Need: <em>start where it&rsquo;s concrete</em>. Try <a href="vigyan-bhairav-breath-techniques.html">Breath</a>, <a href="vigyan-bhairav-centering-techniques.html">Centering</a>, <a href="vigyan-bhairav-sensory-techniques.html">Sensory</a>, <a href="vigyan-bhairav-movement-techniques.html">Movement</a> &mdash; physical, simple, repeatable.</div>
+  </div>
+</article>
+
+<article class="trait-card">
+  <h4>C &mdash; Conscientiousness</h4>
+  <p class="prompt">Are you organised, disciplined, goal-driven &mdash; or spontaneous, flexible, going where the day takes you?</p>
+  <div class="vs">
+    <div class="col"><strong>High conscientiousness</strong>You will sit every day. Risk: meditation becomes another chore, another KPI, another way to be hard on yourself. Need: <em>softer practices</em>. Try <a href="vigyan-bhairav-heart-techniques.html">Heart</a>, <a href="vigyan-bhairav-sound-techniques.html">Sound</a>, <a href="vigyan-bhairav-sensory-techniques.html">Sensory</a>. Loosen the grip; surrender is your edge.</div>
+    <div class="col"><strong>Low conscientiousness (flexible)</strong>You prefer flow over structure. Risk: you will start ten techniques and finish none. Need: <em>structure that doesn&rsquo;t feel like a cage</em>. Try short, vivid practices: <a href="vigyan-bhairav-movement-techniques.html">Movement</a>, <a href="vigyan-bhairav-tantra-techniques.html">Tantric</a>, <a href="vigyan-bhairav-imagination-techniques.html">Imagination</a>. Pair with one accountability friend.</div>
+  </div>
+</article>
+
+<article class="trait-card">
+  <h4>E &mdash; Extraversion</h4>
+  <p class="prompt">Do other people fill your tank, or drain it? Do you think out loud, or in private?</p>
+  <div class="vs">
+    <div class="col"><strong>High extraversion</strong>You energise around people. Risk: silent solo meditation feels like exile. Need: <em>active and shared practices</em>. Try <a href="vigyan-bhairav-movement-techniques.html">Movement</a>, <a href="vigyan-bhairav-tantra-techniques.html">Tantric</a>, <a href="vigyan-bhairav-sound-techniques.html">Sound &amp; chanting</a>, <a href="vigyan-bhairav-heart-techniques.html">Heart practices in groups</a>. Group meditation is your friend.</div>
+    <div class="col"><strong>Low extraversion (introvert)</strong>Solitude is your fuel. Risk: you may withdraw too much, use meditation to avoid life. Need: <em>balance inner with embodied</em>. Try <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>, <a href="vigyan-bhairav-void-techniques.html">Void</a>, <a href="vigyan-bhairav-light-techniques.html">Sky-gazing</a> &mdash; but also <a href="vigyan-bhairav-movement-techniques.html">Movement</a> to keep the body in the world.</div>
+  </div>
+</article>
+
+<article class="trait-card">
+  <h4>A &mdash; Agreeableness</h4>
+  <p class="prompt">Are you trusting, accommodating, focused on harmony &mdash; or skeptical, direct, willing to challenge?</p>
+  <div class="vs">
+    <div class="col"><strong>High agreeableness</strong>Warm, helpful, harmonising. Risk: you may surrender to a teacher or technique without questioning, lose yourself in service. Need: <em>strengthen the witness</em>. Try <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>, <a href="vigyan-bhairav-negation-techniques.html">Self-Inquiry</a> &mdash; develop discernment alongside openness.</div>
+    <div class="col"><strong>Low agreeableness (challenger)</strong>Direct, skeptical, sometimes argumentative. Risk: you reject teachers and traditions before testing them. Need: <em>practices that don&rsquo;t require belief</em>. Try <a href="vigyan-bhairav-negation-techniques.html">Negation</a>, <a href="vigyan-bhairav-mind-techniques.html">Mind</a>, <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a> &mdash; pure inquiry, no faith required.</div>
+  </div>
+</article>
+
+<article class="trait-card">
+  <h4>N &mdash; Neuroticism (Emotional Sensitivity)</h4>
+  <p class="prompt">How easily do anxiety, sadness, irritability rise in you? How thin is your skin to stress?</p>
+  <div class="vs">
+    <div class="col"><strong>High neuroticism (sensitive)</strong>Big feelings, often. Risk: pure void or empty-mind techniques can amplify anxiety. Need: <em>grounding and warmth first</em>. Try <a href="vigyan-bhairav-centering-techniques.html">Centering</a>, <a href="vigyan-bhairav-breath-techniques.html">Breath</a>, <a href="vigyan-bhairav-heart-techniques.html">Heart</a>, <a href="vigyan-bhairav-sound-techniques.html">Sound</a>. Build a stable platform before exploring void or death contemplation.</div>
+    <div class="col"><strong>Low neuroticism (steady)</strong>Calm, level, stress-resilient. Risk: meditation may feel unnecessary &mdash; nothing&rsquo;s wrong. Need: <em>practices that go beyond comfort</em>. Try <a href="vigyan-bhairav-death-techniques.html">Death contemplation</a>, <a href="vigyan-bhairav-void-techniques.html">Void</a>, <a href="vigyan-bhairav-negation-techniques.html">Negation</a> &mdash; deep practices that work beyond the surface.</div>
+  </div>
+</article>
+
+<div class="callout"><strong>How to use this:</strong> Notice the trait that&rsquo;s most extreme in you (high or low). That is the trait that most shapes how meditation will land for you. Choose techniques that <em>balance</em> that extreme &mdash; not techniques that amplify it.</div>
+</section>
+
+<section class="block" id="enneagram">
+<h2 class="section-h">The Enneagram &mdash; nine types</h2>
+<p>The Enneagram is a map of nine fundamental personality structures, each organised around a particular core motivation and core fear. It is not a quiz here &mdash; it is a recognition. Read each type. One of them will hit you in the chest. That is yours.</p>
+<p>Click any type to read its full description, core motivation, and the technique categories that match its temperament.</p>
+
+<div class="enneagram-grid" id="ennGrid">
+  <button type="button" class="enn-card" data-enn="1" aria-expanded="false" aria-controls="enn-detail-1"><span class="num">1</span><span class="name">Reformer</span><span class="epithet">the perfectionist</span></button>
+  <button type="button" class="enn-card" data-enn="2" aria-expanded="false" aria-controls="enn-detail-2"><span class="num">2</span><span class="name">Helper</span><span class="epithet">the giver</span></button>
+  <button type="button" class="enn-card" data-enn="3" aria-expanded="false" aria-controls="enn-detail-3"><span class="num">3</span><span class="name">Achiever</span><span class="epithet">the performer</span></button>
+  <button type="button" class="enn-card" data-enn="4" aria-expanded="false" aria-controls="enn-detail-4"><span class="num">4</span><span class="name">Individualist</span><span class="epithet">the romantic</span></button>
+  <button type="button" class="enn-card" data-enn="5" aria-expanded="false" aria-controls="enn-detail-5"><span class="num">5</span><span class="name">Investigator</span><span class="epithet">the observer</span></button>
+  <button type="button" class="enn-card" data-enn="6" aria-expanded="false" aria-controls="enn-detail-6"><span class="num">6</span><span class="name">Loyalist</span><span class="epithet">the skeptic</span></button>
+  <button type="button" class="enn-card" data-enn="7" aria-expanded="false" aria-controls="enn-detail-7"><span class="num">7</span><span class="name">Enthusiast</span><span class="epithet">the explorer</span></button>
+  <button type="button" class="enn-card" data-enn="8" aria-expanded="false" aria-controls="enn-detail-8"><span class="num">8</span><span class="name">Challenger</span><span class="epithet">the protector</span></button>
+  <button type="button" class="enn-card" data-enn="9" aria-expanded="false" aria-controls="enn-detail-9"><span class="num">9</span><span class="name">Peacemaker</span><span class="epithet">the mediator</span></button>
+
+  <div class="enn-detail" id="enn-detail-1">
+    <h4>Type 1 &mdash; The Reformer</h4>
+    <div class="motivation"><strong>Core motivation</strong>To be good, right, perfect &mdash; to live up to a high inner standard and improve the world.</div>
+    <p><strong>The pattern:</strong> An inner critic that never sleeps. Ones see what is wrong &mdash; in themselves, in their work, in the world &mdash; and feel a moral pressure to fix it. Their gift is integrity, precision, ethics. Their wound is constant self-judgement; nothing is ever quite good enough.</p>
+    <p><strong>The meditation key:</strong> Loosen the inner critic. Let imperfection be holy. The witness sees the critic as just another thought &mdash; not the voice of God.</p>
+    <div class="recs"><strong>Recommended categories</strong>
+      <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>
+      <a href="vigyan-bhairav-negation-techniques.html">Self-Inquiry</a>
+      <a href="vigyan-bhairav-heart-techniques.html">Heart (to soften)</a>
+    </div>
+  </div>
+
+  <div class="enn-detail" id="enn-detail-2">
+    <h4>Type 2 &mdash; The Helper</h4>
+    <div class="motivation"><strong>Core motivation</strong>To be loved and needed &mdash; to give so completely that love comes back.</div>
+    <p><strong>The pattern:</strong> Twos focus on others to a fault. They sense everyone&rsquo;s needs and rush to meet them, while their own needs go quietly buried. Their gift is warmth, generosity, emotional attunement. Their wound is invisible exhaustion and hidden resentment when love does not return.</p>
+    <p><strong>The meditation key:</strong> Turn the love inward. Devotion to existence itself, not just to specific people. Discover that your worth is not earned by giving.</p>
+    <div class="recs"><strong>Recommended categories</strong>
+      <a href="vigyan-bhairav-heart-techniques.html">Heart &amp; Devotion</a>
+      <a href="vigyan-bhairav-sound-techniques.html">Sound &amp; Mantra</a>
+      <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing (to see the helper)</a>
+    </div>
+  </div>
+
+  <div class="enn-detail" id="enn-detail-3">
+    <h4>Type 3 &mdash; The Achiever</h4>
+    <div class="motivation"><strong>Core motivation</strong>To be valuable, successful, admired &mdash; to win, to perform, to embody the best version.</div>
+    <p><strong>The pattern:</strong> Threes know how to achieve. They scan for what counts as success and become it &mdash; sometimes losing track of who they actually are underneath. Their gift is competence, charisma, getting things done. Their wound is the suspicion that without achievement, they are nothing.</p>
+    <p><strong>The meditation key:</strong> Drop the doing. Discover the being that doesn&rsquo;t need to perform. Death contemplation cuts through the achievement trance like nothing else.</p>
+    <div class="recs"><strong>Recommended categories</strong>
+      <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>
+      <a href="vigyan-bhairav-death-techniques.html">Death contemplation</a>
+      <a href="vigyan-bhairav-void-techniques.html">Void</a>
+    </div>
+  </div>
+
+  <div class="enn-detail" id="enn-detail-4">
+    <h4>Type 4 &mdash; The Individualist</h4>
+    <div class="motivation"><strong>Core motivation</strong>To be authentic, unique, fully expressive of one&rsquo;s deepest self &mdash; to find what is missing.</div>
+    <p><strong>The pattern:</strong> Fours feel things deeply, especially what is absent or longed for. Their attention turns to what they don&rsquo;t have, what others have, what once was. Their gift is depth, beauty, emotional truth. Their wound is melancholy, envy, the conviction that something essential is missing.</p>
+    <p><strong>The meditation key:</strong> The longing IS the doorway. Don&rsquo;t fix it &mdash; enter it. Tantra and devotion turn longing into transcendence.</p>
+    <div class="recs"><strong>Recommended categories</strong>
+      <a href="vigyan-bhairav-heart-techniques.html">Heart &amp; Devotion</a>
+      <a href="vigyan-bhairav-imagination-techniques.html">Imagination</a>
+      <a href="vigyan-bhairav-tantra-techniques.html">Tantric</a>
+    </div>
+  </div>
+
+  <div class="enn-detail" id="enn-detail-5">
+    <h4>Type 5 &mdash; The Investigator</h4>
+    <div class="motivation"><strong>Core motivation</strong>To understand, to be competent, to have enough resources (knowledge, time, energy) not to be overwhelmed.</div>
+    <p><strong>The pattern:</strong> Fives retreat into the mind. They observe, study, master &mdash; from a careful distance. Their gift is depth of understanding, original thinking, perceptiveness. Their wound is detachment from the body and emotions; safety bought at the cost of life.</p>
+    <p><strong>The meditation key:</strong> Inquiry is your native ground &mdash; do it sharply. But also: come into the body. Sensory and movement work will save you from over-living in the mind.</p>
+    <div class="recs"><strong>Recommended categories</strong>
+      <a href="vigyan-bhairav-negation-techniques.html">Self-Inquiry</a>
+      <a href="vigyan-bhairav-mind-techniques.html">Mind &amp; Thought</a>
+      <a href="vigyan-bhairav-void-techniques.html">Void</a>
+      <a href="vigyan-bhairav-sensory-techniques.html">Sensory (counterbalance)</a>
+    </div>
+  </div>
+
+  <div class="enn-detail" id="enn-detail-6">
+    <h4>Type 6 &mdash; The Loyalist</h4>
+    <div class="motivation"><strong>Core motivation</strong>To find security and support &mdash; to know who and what to trust in a world that keeps threatening.</div>
+    <p><strong>The pattern:</strong> Sixes live with anxiety as a constant companion &mdash; scanning for threats, planning for worst cases, often loyal to the trusted authority that provides safety. Their gift is responsibility, courage, deep loyalty. Their wound is chronic doubt and the inability to fully trust their own knowing.</p>
+    <p><strong>The meditation key:</strong> Find the inner ground that doesn&rsquo;t depend on outer reassurance. Centering and breath give you a portable safety. The witness shows that fear is not you.</p>
+    <div class="recs"><strong>Recommended categories</strong>
+      <a href="vigyan-bhairav-centering-techniques.html">Centering</a>
+      <a href="vigyan-bhairav-breath-techniques.html">Breath</a>
+      <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>
+    </div>
+  </div>
+
+  <div class="enn-detail" id="enn-detail-7">
+    <h4>Type 7 &mdash; The Enthusiast</h4>
+    <div class="motivation"><strong>Core motivation</strong>To be happy, free, stimulated &mdash; to keep options open, to avoid being stuck in pain or limitation.</div>
+    <p><strong>The pattern:</strong> Sevens move toward what is bright and fun. They start everything, commit to little, escape boredom and pain by leaping to the next experience. Their gift is enthusiasm, vision, contagious optimism. Their wound is the inability to stay &mdash; with one technique, one feeling, one moment &mdash; long enough for it to deepen.</p>
+    <p><strong>The meditation key:</strong> Slow down. Stay. The technique that bores you on day 14 is precisely the one that will liberate you on day 21. Centering and witnessing teach you to remain.</p>
+    <div class="recs"><strong>Recommended categories</strong>
+      <a href="vigyan-bhairav-centering-techniques.html">Centering (slowing)</a>
+      <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>
+      <a href="vigyan-bhairav-breath-techniques.html">Breath</a>
+    </div>
+  </div>
+
+  <div class="enn-detail" id="enn-detail-8">
+    <h4>Type 8 &mdash; The Challenger</h4>
+    <div class="motivation"><strong>Core motivation</strong>To be strong, in control, not dominated &mdash; to protect oneself and others from harm by being the more powerful one.</div>
+    <p><strong>The pattern:</strong> Eights move into the world with force. They confront, protect, dominate, refuse to be small. Their gift is courage, power, leadership. Their wound is a hidden tenderness they cannot show, and a fear of vulnerability so deep they keep it even from themselves.</p>
+    <p><strong>The meditation key:</strong> Use your power to surrender it. Tantric and movement practices match your intensity; heart work breaks the armour. Don&rsquo;t go small &mdash; go deep.</p>
+    <div class="recs"><strong>Recommended categories</strong>
+      <a href="vigyan-bhairav-tantra-techniques.html">Tantric</a>
+      <a href="vigyan-bhairav-movement-techniques.html">Movement</a>
+      <a href="vigyan-bhairav-heart-techniques.html">Heart (to soften)</a>
+    </div>
+  </div>
+
+  <div class="enn-detail" id="enn-detail-9">
+    <h4>Type 9 &mdash; The Peacemaker</h4>
+    <div class="motivation"><strong>Core motivation</strong>To maintain inner and outer peace &mdash; to merge, to keep harmony, to avoid conflict and disturbance.</div>
+    <p><strong>The pattern:</strong> Nines blend in. They sense everyone&rsquo;s position, mediate, smooth, and quietly fall asleep to their own desires. Their gift is acceptance, calm, the ability to hold space. Their wound is self-forgetting &mdash; using stillness as a way to disappear rather than awaken.</p>
+    <p><strong>The meditation key:</strong> Don&rsquo;t add more sleep. Wake up. Movement, sensory, and active practices reignite your own life. Sitting alone risks dissolving you further.</p>
+    <div class="recs"><strong>Recommended categories</strong>
+      <a href="vigyan-bhairav-movement-techniques.html">Movement</a>
+      <a href="vigyan-bhairav-sensory-techniques.html">Sensory</a>
+      <a href="vigyan-bhairav-tantra-techniques.html">Tantric (active)</a>
+    </div>
+  </div>
+</div>
+
+<div class="callout"><strong>Centres of intelligence:</strong> Types 8, 9, 1 are the BODY centre (gut, instinct). Types 2, 3, 4 are the HEART centre (feeling, image). Types 5, 6, 7 are the HEAD centre (thinking, fear). Notice: this maps onto Body/Heart/Mind from Quiz 1 above. Cross-reference your results.</div>
+</section>
+
+<section class="block" id="tracker">
+<h2 class="section-h">7-day observation tracker</h2>
+<p>Quizzes are a starting point. The real data is what you actually do across a week of ordinary life. For seven days, write a few sentences each evening on the day&rsquo;s focus theme. Be honest. Don&rsquo;t edit for spirituality. Just record what was true.</p>
+<p>Your entries autosave locally to this device &mdash; nothing leaves your browser. After seven days, read the whole tracker back and look for patterns. Patterns reveal nature.</p>
+
+<div class="tracker">
+  <div class="day">
+    <div class="day-h"><span class="name">Day 1 &middot; Monday</span><span class="theme">Energy levels</span></div>
+    <p style="font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);margin:.3rem 0 .6rem">When did you feel most alive today? Most drained? What activity was happening at each peak and trough?</p>
+    <textarea data-day="d1" placeholder="Write what you noticed..." aria-label="Day 1 observations"></textarea>
+    <div class="saved" data-saved="d1"></div>
+  </div>
+  <div class="day">
+    <div class="day-h"><span class="name">Day 2 &middot; Tuesday</span><span class="theme">Emotional triggers</span></div>
+    <p style="font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);margin:.3rem 0 .6rem">What set off your strongest emotional reaction today? Anger, joy, sadness, fear &mdash; whichever was most intense. What was the trigger? What did the body do?</p>
+    <textarea data-day="d2" placeholder="Write what you noticed..." aria-label="Day 2 observations"></textarea>
+    <div class="saved" data-saved="d2"></div>
+  </div>
+  <div class="day">
+    <div class="day-h"><span class="name">Day 3 &middot; Wednesday</span><span class="theme">Joy patterns</span></div>
+    <p style="font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);margin:.3rem 0 .6rem">When did you feel a moment of genuine joy or contentment today? Even small ones. What was happening &mdash; doing, being, alone, with others?</p>
+    <textarea data-day="d3" placeholder="Write what you noticed..." aria-label="Day 3 observations"></textarea>
+    <div class="saved" data-saved="d3"></div>
+  </div>
+  <div class="day">
+    <div class="day-h"><span class="name">Day 4 &middot; Thursday</span><span class="theme">Stress responses</span></div>
+    <p style="font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);margin:.3rem 0 .6rem">What stressed you today &mdash; even mildly? How did your body and mind respond? What did you reach for to cope?</p>
+    <textarea data-day="d4" placeholder="Write what you noticed..." aria-label="Day 4 observations"></textarea>
+    <div class="saved" data-saved="d4"></div>
+  </div>
+  <div class="day">
+    <div class="day-h"><span class="name">Day 5 &middot; Friday</span><span class="theme">Social patterns</span></div>
+    <p style="font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);margin:.3rem 0 .6rem">Did people&rsquo;s company fill or drain you today? Which conversations lit you up? Which left you wanting to retreat?</p>
+    <textarea data-day="d5" placeholder="Write what you noticed..." aria-label="Day 5 observations"></textarea>
+    <div class="saved" data-saved="d5"></div>
+  </div>
+  <div class="day">
+    <div class="day-h"><span class="name">Day 6 &middot; Saturday</span><span class="theme">Solitude</span></div>
+    <p style="font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);margin:.3rem 0 .6rem">If you had time alone today, what did you do with it? Did silence feel restful, restless, or both? What did your mind reach for?</p>
+    <textarea data-day="d6" placeholder="Write what you noticed..." aria-label="Day 6 observations"></textarea>
+    <div class="saved" data-saved="d6"></div>
+  </div>
+  <div class="day">
+    <div class="day-h"><span class="name">Day 7 &middot; Sunday</span><span class="theme">Reflection &mdash; what is the pattern?</span></div>
+    <p style="font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);margin:.3rem 0 .6rem">Read back through the previous six days. What pattern do you see? Which path (body / mind / heart / energy) keeps showing up? What does the data say about which technique you actually need?</p>
+    <textarea data-day="d7" placeholder="Write what you noticed..." aria-label="Day 7 reflection"></textarea>
+    <div class="saved" data-saved="d7"></div>
+  </div>
+</div>
+<div class="callout"><strong>Use the data:</strong> If energy peaks during physical work, you are probably body-dominant. If peaks come during inquiry or solving problems, mind-dominant. If during connection or beauty, heart-dominant. If during solitude or stillness, energy-dominant. The week reveals what the quizzes only suggest.</div>
+</section>
+
+<section class="block intro" id="prompts">
+<h2 class="section-h">Self-reflection prompts</h2>
+<p>Thirty-plus questions, organised by domain. There is no need to answer them all. Pick the ones that bite. Sit with them. Write your answers somewhere you can come back to. The questions you cannot answer are often more important than the ones you can.</p>
+
+<div class="prompts">
+
+<div class="group">
+<h4>Past &mdash; the clues you came with</h4>
+<details><summary>What did you love at age 7 that you have forgotten?</summary><div class="body">Children naturally express their nature before culture trains it out of them. The activity that lit you up at six or seven &mdash; building, drawing, organising games, telling stories, climbing trees, singing &mdash; carries an honest signal about your underlying type. What was it?</div></details>
+<details><summary>When have you felt most ALIVE in your life? What was happening?</summary><div class="body">Make a list of three or four moments when you felt most alive &mdash; whatever they were. Look for the common thread. Were you doing? Inquiring? Loving? Witnessing? Alone? With others? In motion? In stillness? The pattern is your nature pointing.</div></details>
+<details><summary>What have you been told about yourself most often, since childhood?</summary><div class="body">&ldquo;You&rsquo;re always in your head.&rdquo; &ldquo;You&rsquo;re so sensitive.&rdquo; &ldquo;You can&rsquo;t sit still.&rdquo; &ldquo;You&rsquo;re so quiet.&rdquo; The repeated mirror others have held up may carry signal under the static.</div></details>
+<details><summary>Who did you secretly want to BE as a child or teenager?</summary><div class="body">The hero you imitated &mdash; the explorer, the warrior, the saint, the genius, the rebel, the artist &mdash; reveals an aspirational shape. Whose biography did you devour?</div></details>
+<details><summary>What was the first time you experienced something you would now call &ldquo;spiritual&rdquo;?</summary><div class="body">A moment in nature, a piece of music, falling in love, a near-death scare, a long illness, a single instant of stillness. What was the GATE? Body, mind, heart, or energy?</div></details>
+</div>
+
+<div class="group">
+<h4>Present &mdash; the truth of now</h4>
+<details><summary>What activity makes you lose track of time?</summary><div class="body">Time disappears in flow. Whatever consistently makes you forget the clock is your nature&rsquo;s home territory. Cooking? Coding? Conversation? Long walks? Reading? Making music? Be specific.</div></details>
+<details><summary>What do you procrastinate on, and why?</summary><div class="body">What you avoid often reveals the missing element &mdash; if you avoid sitting still, you may be a body type with too much fire. If you avoid emotional conversations, perhaps a mind type defending against the heart. The avoidance is a clue.</div></details>
+<details><summary>What is the first thing you reach for when something hurts?</summary><div class="body">Movement? Analysis? A friend? Solitude? Each instinctive reach reveals the channel through which YOUR nature processes pain &mdash; and through which it will also process awakening.</div></details>
+<details><summary>If you could only practise one of the four yogic paths for the rest of your life, which calls you?</summary><div class="body">Karma (action), Bhakti (love), Jnana (inquiry), Raja (witnessing). One of them tugs harder than the others. Don&rsquo;t pick the one that sounds noble. Pick the one your nature actually pulls toward.</div></details>
+<details><summary>What kind of teacher have you secretly always wanted?</summary><div class="body">A wild, dancing teacher? A precise, exacting teacher? A loving, motherly teacher? A silent, present teacher? The teacher you imagine reveals the path you&rsquo;d most easily walk.</div></details>
+</div>
+
+<div class="group">
+<h4>Body &mdash; the honest informant</h4>
+<details><summary>Do you feel at home in your body, or like a visitor?</summary><div class="body">Body-dominant types feel embodied; energy-dominant types often feel like they are renting the body, not living in it. Mind types may have lost contact with the body altogether. Where are YOU?</div></details>
+<details><summary>What does your body do when you sit still for 30 minutes?</summary><div class="body">Some bodies settle. Some begin to scream &mdash; restlessness, itching, twitching, tension. The screaming body needs movement-based meditation; the settling body can rest in stillness.</div></details>
+<details><summary>Is sex a meditation for you, a release, a problem, or something else?</summary><div class="body">Tantric types find sacredness in body and union. Mind types may treat sex as another investigation or as an interruption. Heart types fuse it with love. Energy types may find it disturbing to subtle awareness. There is no right answer; only YOUR truth.</div></details>
+<details><summary>How does your body respond to silence?</summary><div class="body">Some bodies relax in silence; some grow agitated. Some need silence; others find it eerie. Notice without judgement.</div></details>
+</div>
+
+<div class="group">
+<h4>Mind &mdash; the relentless companion</h4>
+<details><summary>How loud is your inner voice? Is it usually one voice or many?</summary><div class="body">Mind-dominant types report a constant, often loud, sometimes multiple inner voices. Heart and body types may have a relatively quieter inner monologue but louder feelings or sensations. Notice yours honestly.</div></details>
+<details><summary>What question has haunted you for years?</summary><div class="body">The recurring question is the doorway. <em>Who am I really? What is the point? Why is there suffering? Why was I born?</em> &mdash; whatever question keeps circling back, that is YOUR koan. Inquiry techniques will land hardest on this exact question.</div></details>
+<details><summary>What do you read when no one is watching?</summary><div class="body">The books you choose freely &mdash; not the ones you display &mdash; reveal the actual mind. Trash novels, philosophy, poetry, manuals, mysticism, biographies of doers. What are they? What does that say?</div></details>
+<details><summary>Can you tell the difference between a thought and a fact?</summary><div class="body">If yes &mdash; you have already begun the witnessing path. If no &mdash; thoughts feel like reality, like commands, like truth. The journey is to learn the distinction. Inquiry techniques teach this directly.</div></details>
+</div>
+
+<div class="group">
+<h4>Heart &mdash; the unguarded place</h4>
+<details><summary>When did you last cry? Why?</summary><div class="body">The tears you remember, and the ones you don&rsquo;t shed but feel pressing, both reveal the state of the heart. Heart types cry easily and often. Mind types may have not cried in years. Body types may cry only after exhaustion.</div></details>
+<details><summary>Whom do you love most, and how?</summary><div class="body">Notice the quality of your love. Is it active service? Devoted attention? Quiet presence? Wild merging? The love you actually offer reveals the heart you actually have.</div></details>
+<details><summary>What kind of beauty stops you in your tracks?</summary><div class="body">Music, landscape, faces, mathematics, machines, words, flowers. The beauty that consistently arrests you points to the channel of your devotion.</div></details>
+<details><summary>Do you trust love, or do you suspect it?</summary><div class="body">Bhakti types trust love almost too much &mdash; they&rsquo;ll dissolve into it. Jnana types suspect everything, including love. Knowing your relationship to love tells you whether devotion-based meditation is medicine or poison for you.</div></details>
+</div>
+
+<div class="group">
+<h4>Spirit &mdash; the larger questions</h4>
+<details><summary>What do you mean when you say &ldquo;I&rdquo;?</summary><div class="body">Sit with this. The body? A name? A continuous story? A feeling of presence? An empty awareness that observes everything? The honest answer is not a single answer &mdash; it is a flickering set. Watch the flickers.</div></details>
+<details><summary>If you knew you would die in three months, what would change today?</summary><div class="body">The technique you would actually do, the practice you would actually keep, the person you would call &mdash; these reveal what really matters under the daily noise.</div></details>
+<details><summary>What scares you most about meditation?</summary><div class="body">Some fear losing themselves. Some fear feeling too much. Some fear discovering nothing is there. Some fear discovering something IS there. Your specific fear points to the technique that will most deeply transform you &mdash; eventually. Not first. Eventually.</div></details>
+<details><summary>If meditation were guaranteed to work, what would you actually want from it?</summary><div class="body">Peace? Liberation? Power? Love? Understanding? The HONEST answer (not the spiritually-correct one) reveals which path your motivation already flows along.</div></details>
+<details><summary>What in your life would you have to face if you could not be distracted from yourself?</summary><div class="body">This is what meditation will eventually surface. Not as punishment, but as freedom. Knowing it now lets you choose techniques that will support the encounter rather than ambush you.</div></details>
+<details><summary>If you have already meditated &mdash; what worked, and what didn&rsquo;t? Why?</summary><div class="body">Past failures are data. The technique you abandoned may have been wrong for you, or you may have abandoned it on day 14 of 21. Look honestly: was it the wrong fit, or did you not stay long enough?</div></details>
+<details><summary>Whose enlightenment story moves you most?</summary><div class="body">Buddha sitting under the tree? Ramana&rsquo;s sudden death-experience inquiry? Rumi&rsquo;s dancing? Krishnamurti&rsquo;s walking? Ramakrishna&rsquo;s tears? The story you cannot stop reading is pointing at your own template.</div></details>
+<details><summary>What would &ldquo;going home&rdquo; spiritually feel like for you?</summary><div class="body">Don&rsquo;t describe it abstractly. Describe the FEEL. Stillness? Aliveness? Love? Clarity? Disappearance? The feel you long for is the destination your nature is built for.</div></details>
+</div>
+
+</div>
+</section>
+
+<section class="block intro" id="combos">
+<h2 class="section-h">Combination types &mdash; you are usually a blend</h2>
+<p>Pure types are rare. Most people are dominated by one of the four (body / mind / heart / energy) but supported strongly by another. Below are common blends with bridge techniques.</p>
+
+<div class="combos">
+  <div class="combo">
+    <h4>Body + Mind</h4>
+    <p>The doer who also analyses. Engineer types, athlete-thinkers. Need physical anchor with cognitive clarity.</p>
+    <p><strong>Bridge:</strong> <a href="vigyan-bhairav-breath-techniques.html">Breath</a>, <a href="vigyan-bhairav-centering-techniques.html">Centering</a></p>
+  </div>
+  <div class="combo">
+    <h4>Mind + Heart</h4>
+    <p>The thinker who also feels deeply. Philosophers and poets. Need inquiry that includes the heart.</p>
+    <p><strong>Bridge:</strong> <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>, <a href="vigyan-bhairav-imagination-techniques.html">Imagination</a></p>
+  </div>
+  <div class="combo">
+    <h4>Heart + Energy</h4>
+    <p>The lover who also senses subtly. Mystic-bhaktas. Need to anchor devotion in awareness.</p>
+    <p><strong>Bridge:</strong> <a href="vigyan-bhairav-sound-techniques.html">Sound</a>, <a href="vigyan-bhairav-light-techniques.html">Light</a></p>
+  </div>
+  <div class="combo">
+    <h4>Body + Energy</h4>
+    <p>The doer who is also subtly aware. Martial artist / yoga teacher type. Movement IS meditation.</p>
+    <p><strong>Bridge:</strong> <a href="vigyan-bhairav-movement-techniques.html">Movement</a>, <a href="vigyan-bhairav-tantra-techniques.html">Tantric</a></p>
+  </div>
+  <div class="combo">
+    <h4>Body + Heart</h4>
+    <p>The doer who feels deeply. Dancers, healers, parents. Touch and presence are the language.</p>
+    <p><strong>Bridge:</strong> <a href="vigyan-bhairav-tantra-techniques.html">Tantric</a>, <a href="vigyan-bhairav-sensory-techniques.html">Sensory</a></p>
+  </div>
+  <div class="combo">
+    <h4>Mind + Energy</h4>
+    <p>The inquirer who naturally rests in awareness. Advaita types. Inquiry leads quickly to silence.</p>
+    <p><strong>Bridge:</strong> <a href="vigyan-bhairav-negation-techniques.html">Negation</a>, <a href="vigyan-bhairav-void-techniques.html">Void</a></p>
+  </div>
+  <div class="combo">
+    <h4>Integrators &mdash; three or more strong</h4>
+    <p>You score evenly across multiple paths. Need: pick a 21-day technique anyway. Variety later, ONE first. Try <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a> as the universal foundation.</p>
+  </div>
+</div>
+</section>
+
+<section class="block intro" id="wrong">
+<h2 class="section-h">Signs you are forcing the wrong path</h2>
+<p>Even a sincere practitioner can be on the wrong path for years. Watch for these warning bells. They do not mean meditation is wrong; they mean THIS technique, FOR YOU, is wrong.</p>
+<div class="warn"><strong>Warning signs:</strong>
+<ul class="clean">
+  <li>You are bored, sometimes resentful, where you &ldquo;should&rdquo; be moved &mdash; sitting in silent retreats but your soul is asleep.</li>
+  <li>Practice produces guilt rather than openness &mdash; you keep falling short of the technique&rsquo;s ideal and feel worse afterward.</li>
+  <li>You dissociate during practice &mdash; spacing out, numbing, leaving the body, rather than awakening to it.</li>
+  <li>Anxiety <em>increases</em> rather than decreases over weeks of practice (warning especially for void or empty-mind techniques in Vata or sensitive types).</li>
+  <li>You are imitating someone &mdash; a teacher, a friend, a tradition &mdash; rather than practising what your own nature pulls you toward.</li>
+  <li>You secretly dread the practice but keep doing it because of identity (&ldquo;I am a meditator&rdquo;).</li>
+  <li>Your life is worsening &mdash; relationships fraying, body weakening, mind clouding &mdash; not improving. (Real meditation, even when difficult, eventually integrates and supports life.)</li>
+  <li>You shift to a NEW spiritual identity &mdash; superior, detached, special &mdash; rather than becoming more genuinely human.</li>
+  <li>The technique requires you to suppress your nature: an active person forced into long stillness, a feeler told to stop feeling, a thinker told to just &ldquo;believe&rdquo;.</li>
+  <li>After a year, your friends and family say you are LESS warm, less alive, less present &mdash; rather than more.</li>
+</ul>
+</div>
+<p>Any one of these is permission to question the technique. Two or three is a sign to <em>change</em> the technique. This is not failure &mdash; it is self-knowledge in action. The 112 sutras exist precisely so that you can switch.</p>
+</section>
+
+<section class="block intro" id="practice">
+<h2 class="section-h">From insight to practice &mdash; five steps</h2>
+<p>Self-knowledge is useless without practice. Here is the bridge.</p>
+<ol class="steps">
+  <li><strong>Identify your primary type.</strong> Run the Quick Indicator Quiz. Note your dominant orientation: body, mind, heart, or energy. Cross-check against your dosha and the path that tugged hardest. Don&rsquo;t worry about secondary types yet &mdash; first practice always serves the primary.</li>
+  <li><strong>Pick ONE category, not many.</strong> From your primary type&rsquo;s recommended list, pick the top category. (For body: Movement. For mind: Self-Inquiry or Witnessing. For heart: Heart &amp; Devotion. For energy: Centering or Light.) ONE category. This week.</li>
+  <li><strong>From that file, pick ONE technique.</strong> Open the category file. Read all the techniques. Pick the ONE that calls you most, or the one marked &ldquo;beginner-friendly&rdquo;. Don&rsquo;t shop. Don&rsquo;t collect. ONE.</li>
+  <li><strong>Commit to 21 days.</strong> Practise the same technique, every day, for at least 20 minutes, for 21 consecutive days. The book is explicit on this number. On day 7 you will think it isn&rsquo;t working &mdash; that IS the work. Stay. On day 14 you may feel nothing &mdash; stay. By day 18&ndash;21 something usually settles.</li>
+  <li><strong>Reflect, then adjust.</strong> After 21 days, write what changed. What softened? What sharpened? What revealed itself? Now &mdash; and only now &mdash; consider whether to continue, deepen with another technique in the same category, or branch into a complementary category for your secondary type. Self-discovery is iterative; you refine the answer through practice itself.</li>
+</ol>
+<div class="callout"><strong>One technique, twenty-one days. Then reassess. That is the entire path.</strong></div>
+</section>
+
+<section class="block intro" id="resources">
+<h2 class="section-h">All 15 technique categories</h2>
+<p>The complete library, for cross-reference once you know your type.</p>
+<div class="resources">
+  <a href="vigyan-bhairav-breath-techniques.html">Breath</a>
+  <a href="vigyan-bhairav-centering-techniques.html">Centering</a>
+  <a href="vigyan-bhairav-witnessing-techniques.html">Witnessing</a>
+  <a href="vigyan-bhairav-mind-techniques.html">Mind &amp; Thought</a>
+  <a href="vigyan-bhairav-sound-techniques.html">Sound &amp; Mantra</a>
+  <a href="vigyan-bhairav-light-techniques.html">Light &amp; Gazing</a>
+  <a href="vigyan-bhairav-void-techniques.html">Emptiness &amp; Void</a>
+  <a href="vigyan-bhairav-sensory-techniques.html">Sensory</a>
+  <a href="vigyan-bhairav-movement-techniques.html">Movement</a>
+  <a href="vigyan-bhairav-negation-techniques.html">Self-Inquiry &amp; Negation</a>
+  <a href="vigyan-bhairav-sleep-techniques.html">Sleep &amp; Waking</a>
+  <a href="vigyan-bhairav-tantra-techniques.html">Tantric Union</a>
+  <a href="vigyan-bhairav-heart-techniques.html">Heart &amp; Devotion</a>
+  <a href="vigyan-bhairav-death-techniques.html">Death Contemplation</a>
+  <a href="vigyan-bhairav-imagination-techniques.html">Imagination</a>
+</div>
+<p style="text-align:center;margin-top:1.5rem;font-size:.92rem"><a href="important-first-access-this.html">&laquo; Read the first-access guide</a></p>
+</section>
+
+<footer>
+  <p>You have reached the end of <em>Discover Yourself First</em>.</p>
+  <p>Self-knowledge is the first meditation. The 112 sutras &mdash; transmitted by Shiva, distilled by Osho &mdash; await you with the right key.</p>
+  <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+</footer>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  /* ----------------- THEME ----------------- */
+  const html=document.documentElement;
+  const themeBtn=document.getElementById('theme-btn');
+  const stored=localStorage.getItem('vbt-theme');
+  if(stored)html.setAttribute('data-theme',stored);
+  else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  themeBtn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next)});
+
+  /* ----------------- PROGRESS BAR ----------------- */
+  const progress=document.querySelector('.progress');
+  function updateProgress(){const h=document.documentElement;const s=h.scrollTop;const t=h.scrollHeight-h.clientHeight;progress.style.width=t>0?(s/t*100)+'%':'0'}
+  document.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+  /* ----------------- PRINT ----------------- */
+  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+
+  /* ----------------- TYPE PROFILES (Quiz 1) ----------------- */
+  const TYPE_PROFILES={
+    body:{
+      label:'Body-Dominant (Karma Yogi)',
+      colorVar:'--body-c',
+      quote:'You learn through doing. Your body is your wisdom. Stillness alone is hard for you \u2014 and that is not a flaw, it is information.',
+      strengths:['Vitality and aliveness','Presence in action','Practical knowing through the hands','Capacity for sustained doing'],
+      recs:[
+        {name:'Movement',href:'vigyan-bhairav-movement-techniques.html'},
+        {name:'Sensory',href:'vigyan-bhairav-sensory-techniques.html'},
+        {name:'Tantric Union',href:'vigyan-bhairav-tantra-techniques.html'},
+        {name:'Centering',href:'vigyan-bhairav-centering-techniques.html'},
+        {name:'Breath',href:'vigyan-bhairav-breath-techniques.html'}
+      ],
+      avoid:'pure void techniques and abstract self-inquiry &mdash; for now. Your body needs to be MET first; the void can come later.'
+    },
+    mind:{
+      label:'Mind-Dominant (Jnana Yogi)',
+      colorVar:'--mind-c',
+      quote:'You learn through investigation. Your mind is sharp \u2014 and it is also the prison. The way out is through, not around.',
+      strengths:['Clarity and discernment','Analytical depth','Capacity for sustained inquiry','Allergic to spiritual platitude'],
+      recs:[
+        {name:'Self-Inquiry &amp; Negation',href:'vigyan-bhairav-negation-techniques.html'},
+        {name:'Witnessing',href:'vigyan-bhairav-witnessing-techniques.html'},
+        {name:'Mind &amp; Thought',href:'vigyan-bhairav-mind-techniques.html'},
+        {name:'Emptiness &amp; Void',href:'vigyan-bhairav-void-techniques.html'}
+      ],
+      avoid:'heavy emotional/devotional practices &mdash; for now. They will feel saccharine until inquiry has cleared a real space for the heart.'
+    },
+    heart:{
+      label:'Heart-Dominant (Bhakti Yogi)',
+      colorVar:'--heart-c',
+      quote:'You learn through feeling. Love is your native language. Logic is foreign country.',
+      strengths:['Emotional depth and openness','Natural devotion','Capacity to be moved','Warmth that affects others'],
+      recs:[
+        {name:'Heart &amp; Devotion',href:'vigyan-bhairav-heart-techniques.html'},
+        {name:'Sound &amp; Mantra',href:'vigyan-bhairav-sound-techniques.html'},
+        {name:'Tantric Union',href:'vigyan-bhairav-tantra-techniques.html'},
+        {name:'Sensory',href:'vigyan-bhairav-sensory-techniques.html'}
+      ],
+      avoid:'cold inquiry and pure negation &mdash; for now. Your heart needs warmth first; the inquiry can come once the heart trusts you.'
+    },
+    energy:{
+      label:'Energy-Dominant (Raja Yogi)',
+      colorVar:'--energy-c',
+      quote:'You learn through subtle awareness. You sense what others can&rsquo;t see. Stillness is your home.',
+      strengths:['Subtle perception','Natural witnessing capacity','Comfort in solitude and silence','Ability to rest in awareness itself'],
+      recs:[
+        {name:'Light &amp; Gazing',href:'vigyan-bhairav-light-techniques.html'},
+        {name:'Centering',href:'vigyan-bhairav-centering-techniques.html'},
+        {name:'Emptiness &amp; Void',href:'vigyan-bhairav-void-techniques.html'},
+        {name:'Witnessing',href:'vigyan-bhairav-witnessing-techniques.html'}
+      ],
+      avoid:'getting lost in subtle realms. Stay anchored in body and life; otherwise inner experience can become a sophisticated escape.'
+    }
+  };
+
+  /* ----------------- DOSHA PROFILES (Quiz 2) ----------------- */
+  const DOSHA_PROFILES={
+    vata:{
+      label:'Vata-dominant (air &amp; space)',
+      colorVar:'--vata-c',
+      quote:'You are quick, creative, and easily scattered. Your meditation must bring you DOWN \u2014 into the body, into warmth, into ground.',
+      needs:['Grounding','Warmth','Regularity','Steady breath'],
+      recs:[
+        {name:'Centering',href:'vigyan-bhairav-centering-techniques.html'},
+        {name:'Breath',href:'vigyan-bhairav-breath-techniques.html'},
+        {name:'Sound &amp; Mantra',href:'vigyan-bhairav-sound-techniques.html'},
+        {name:'Sensory grounding',href:'vigyan-bhairav-sensory-techniques.html'}
+      ],
+      avoid:'pure void, long sky-gazing, intense silent retreats. They will scatter you, not settle you.'
+    },
+    pitta:{
+      label:'Pitta-dominant (fire &amp; water)',
+      colorVar:'--pitta-c',
+      quote:'You are sharp, focused, intense. Your meditation must COOL you \u2014 soften the inner critic, teach surrender, melt the driver.',
+      needs:['Cooling','Softening','Surrender','Compassion'],
+      recs:[
+        {name:'Heart &amp; Devotion',href:'vigyan-bhairav-heart-techniques.html'},
+        {name:'Light &amp; Sky-gazing',href:'vigyan-bhairav-light-techniques.html'},
+        {name:'Witnessing',href:'vigyan-bhairav-witnessing-techniques.html'},
+        {name:'Void (gently)',href:'vigyan-bhairav-void-techniques.html'}
+      ],
+      avoid:'fiery breath techniques for long durations, intense focused concentration, anything that fuels the inner driver.'
+    },
+    kapha:{
+      label:'Kapha-dominant (earth &amp; water)',
+      colorVar:'--kapha-c',
+      quote:'You are steady, deep, slow to move. Your meditation must ACTIVATE you \u2014 fire, movement, wakefulness. Don&rsquo;t add more sleep.',
+      needs:['Activation','Energy','Movement','Wakefulness'],
+      recs:[
+        {name:'Movement',href:'vigyan-bhairav-movement-techniques.html'},
+        {name:'Active breath',href:'vigyan-bhairav-breath-techniques.html'},
+        {name:'Tantric / Dynamic',href:'vigyan-bhairav-tantra-techniques.html'},
+        {name:'Sensory awakening',href:'vigyan-bhairav-sensory-techniques.html'}
+      ],
+      avoid:'long sitting meditation, sleep-based techniques, anything passive. You will fall asleep or grow heavier.'
+    }
+  };
+
+  /* ----------------- QUIZ 1 LOGIC ----------------- */
+  const Q1_KEY='vbt-discover-quiz1';
+  const q1Form=document.getElementById('quiz1-form');
+  const q1Submit=document.getElementById('quiz1-submit');
+  const q1Reset=document.getElementById('quiz1-reset');
+  const q1Status=document.getElementById('quiz1-status');
+  const q1Result=document.getElementById('quiz1-result');
+  const TOTAL_Q1=12;
+
+  function getQ1Answers(){
+    const ans={};
+    for(let i=1;i<=TOTAL_Q1;i++){
+      const r=q1Form.querySelector('input[name="q'+i+'"]:checked');
+      if(r)ans['q'+i]=r.value;
+    }
+    return ans;
+  }
+  function tallyQ1(ans){
+    const t={body:0,mind:0,heart:0,energy:0};
+    Object.values(ans).forEach(v=>{if(t.hasOwnProperty(v))t[v]++});
+    return t;
+  }
+  function pctMap(tally){
+    const total=Object.values(tally).reduce((a,b)=>a+b,0)||1;
+    const out={};Object.keys(tally).forEach(k=>{out[k]=Math.round(tally[k]/total*100)});
+    return out;
+  }
+  function rankByValueDesc(obj){
+    return Object.entries(obj).sort((a,b)=>b[1]-a[1]).map(e=>e[0]);
+  }
+  function renderQ1Result(ans){
+    const tally=tallyQ1(ans);
+    const total=Object.values(tally).reduce((a,b)=>a+b,0);
+    if(total===0){q1Status.textContent='Answer at least one question to see results.';q1Result.classList.remove('show');return}
+    const pct=pctMap(tally);
+    const ranked=rankByValueDesc(tally);
+    const primary=ranked[0];
+    const secondary=ranked[1];
+    const profile=TYPE_PROFILES[primary];
+    const secProfile=TYPE_PROFILES[secondary];
+
+    document.getElementById('q1-primary').innerHTML='Your primary type: <strong style="color:var('+profile.colorVar+')">'+profile.label+'</strong>';
+
+    const order=['body','mind','heart','energy'];
+    const labels={body:'Body',mind:'Mind',heart:'Heart',energy:'Energy'};
+    const colors={body:'--body-c',mind:'--mind-c',heart:'--heart-c',energy:'--energy-c'};
+    document.getElementById('q1-breakdown').innerHTML=order.map(k=>(
+      '<div class="pct" style="border-color:var('+colors[k]+')">'+
+      '<span class="lbl" style="color:var('+colors[k]+')">'+labels[k]+'</span>'+
+      '<span class="v">'+pct[k]+'%</span></div>'
+    )).join('');
+
+    document.getElementById('q1-quote').textContent=profile.quote;
+    document.getElementById('q1-strengths').innerHTML='<h4 style="font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin:.6rem 0 .4rem;font-weight:600">Strengths of your type</h4><ul class="clean" style="font-size:.92rem;font-family:var(--sans)">'+profile.strengths.map(s=>'<li>'+s+'</li>').join('')+'</ul>';
+
+    const recHTML='<h4>Recommended technique categories &mdash; in order</h4><ol>'+profile.recs.map(r=>'<li><a href="'+r.href+'">'+r.name+'</a></li>').join('')+'</ol>';
+    document.getElementById('q1-recommend').innerHTML=recHTML;
+    document.getElementById('q1-avoid').innerHTML='<strong>Avoid initially:</strong> '+profile.avoid;
+
+    let secHTML='';
+    if(tally[secondary]>0&&secondary!==primary){
+      secHTML='<div class="recommend" style="border-top:1px dashed var(--rule);margin-top:1rem"><h4>Your secondary type</h4>'+
+        '<p style="font-family:var(--sans);font-size:.92rem;color:var(--ink-soft);margin:.4rem 0">A strong undercurrent of <strong style="color:var('+secProfile.colorVar+')">'+secProfile.label+'</strong> ('+pct[secondary]+'%). After your first 21 days, consider blending in: '+
+        secProfile.recs.slice(0,2).map(r=>'<a href="'+r.href+'">'+r.name+'</a>').join(' &middot; ')+'.</p></div>';
+    }
+    document.getElementById('q1-secondary').innerHTML=secHTML;
+
+    q1Result.classList.add('show');
+    q1Status.textContent='Saved.';
+    setTimeout(()=>{q1Status.textContent=''},2500);
+    try{localStorage.setItem(Q1_KEY,JSON.stringify(ans))}catch(e){}
+    q1Result.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  q1Submit.addEventListener('click',()=>{
+    const ans=getQ1Answers();
+    const cnt=Object.keys(ans).length;
+    if(cnt<TOTAL_Q1){
+      const ok=confirm('You have answered '+cnt+' of '+TOTAL_Q1+' questions. Show partial results anyway?');
+      if(!ok)return;
+    }
+    renderQ1Result(ans);
+  });
+  q1Reset.addEventListener('click',()=>{
+    q1Form.querySelectorAll('input[type="radio"]').forEach(r=>{r.checked=false});
+    q1Result.classList.remove('show');
+    q1Status.textContent='Reset.';
+    setTimeout(()=>{q1Status.textContent=''},1500);
+    try{localStorage.removeItem(Q1_KEY)}catch(e){}
+  });
+  // Restore Q1
+  try{
+    const saved=JSON.parse(localStorage.getItem(Q1_KEY)||'null');
+    if(saved&&typeof saved==='object'){
+      Object.entries(saved).forEach(([name,val])=>{
+        const r=q1Form.querySelector('input[name="'+name+'"][value="'+val+'"]');
+        if(r)r.checked=true;
+      });
+      if(Object.keys(saved).length>=TOTAL_Q1)renderQ1Result(saved);
+    }
+  }catch(e){}
+
+  /* ----------------- QUIZ 2 LOGIC (Dosha) ----------------- */
+  const Q2_KEY='vbt-discover-quiz2';
+  const q2Form=document.getElementById('quiz2-form');
+  const q2Submit=document.getElementById('quiz2-submit');
+  const q2Reset=document.getElementById('quiz2-reset');
+  const q2Status=document.getElementById('quiz2-status');
+  const q2Result=document.getElementById('quiz2-result');
+  const TOTAL_Q2=9;
+
+  function getQ2Answers(){
+    const ans={};
+    for(let i=1;i<=TOTAL_Q2;i++){
+      const r=q2Form.querySelector('input[name="d'+i+'"]:checked');
+      if(r)ans['d'+i]=r.value;
+    }
+    return ans;
+  }
+  function tallyQ2(ans){
+    const t={vata:0,pitta:0,kapha:0};
+    Object.values(ans).forEach(v=>{if(t.hasOwnProperty(v))t[v]++});
+    return t;
+  }
+  function renderQ2Result(ans){
+    const tally=tallyQ2(ans);
+    const total=Object.values(tally).reduce((a,b)=>a+b,0);
+    if(total===0){q2Status.textContent='Answer at least one question to see results.';q2Result.classList.remove('show');return}
+    const pct=pctMap(tally);
+    const ranked=rankByValueDesc(tally);
+    const primary=ranked[0];
+    const profile=DOSHA_PROFILES[primary];
+
+    document.getElementById('q2-primary').innerHTML='Your dominant dosha: <strong style="color:var('+profile.colorVar+')">'+profile.label+'</strong>';
+
+    const order=['vata','pitta','kapha'];
+    const labels={vata:'Vata',pitta:'Pitta',kapha:'Kapha'};
+    const colors={vata:'--vata-c',pitta:'--pitta-c',kapha:'--kapha-c'};
+    document.getElementById('q2-breakdown').innerHTML=order.map(k=>(
+      '<div class="pct" style="border-color:var('+colors[k]+')">'+
+      '<span class="lbl" style="color:var('+colors[k]+')">'+labels[k]+'</span>'+
+      '<span class="v">'+pct[k]+'%</span></div>'
+    )).join('');
+
+    let detail='<div class="quote">'+profile.quote+'</div>';
+    detail+='<div class="recommend"><h4>What you need</h4><p style="font-family:var(--sans);font-size:.92rem;color:var(--ink-soft);margin:.3rem 0">'+profile.needs.join(' &middot; ')+'</p>';
+    detail+='<h4>Recommended categories</h4><ol>'+profile.recs.map(r=>'<li><a href="'+r.href+'">'+r.name+'</a></li>').join('')+'</ol></div>';
+    detail+='<div class="avoid"><strong>Avoid initially:</strong> '+profile.avoid+'</div>';
+
+    // dual-dosha note
+    const second=ranked[1];
+    if(tally[second]>0&&Math.abs(tally[primary]-tally[second])<=1){
+      detail+='<p style="font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);margin-top:1rem;padding-top:.7rem;border-top:1px dashed var(--rule)"><strong>Note:</strong> you appear to be a dual-dosha type ('+labels[primary]+'-'+labels[second]+'). The dominant dosha leads, but both must be respected. If a technique aggravates your secondary, soften or rotate.</p>';
+    }
+    document.getElementById('q2-detail').innerHTML=detail;
+
+    q2Result.classList.add('show');
+    q2Status.textContent='Saved.';
+    setTimeout(()=>{q2Status.textContent=''},2500);
+    try{localStorage.setItem(Q2_KEY,JSON.stringify(ans))}catch(e){}
+    q2Result.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  q2Submit.addEventListener('click',()=>{
+    const ans=getQ2Answers();
+    const cnt=Object.keys(ans).length;
+    if(cnt<TOTAL_Q2){
+      const ok=confirm('You have answered '+cnt+' of '+TOTAL_Q2+' questions. Show partial results anyway?');
+      if(!ok)return;
+    }
+    renderQ2Result(ans);
+  });
+  q2Reset.addEventListener('click',()=>{
+    q2Form.querySelectorAll('input[type="radio"]').forEach(r=>{r.checked=false});
+    q2Result.classList.remove('show');
+    q2Status.textContent='Reset.';
+    setTimeout(()=>{q2Status.textContent=''},1500);
+    try{localStorage.removeItem(Q2_KEY)}catch(e){}
+  });
+  try{
+    const saved=JSON.parse(localStorage.getItem(Q2_KEY)||'null');
+    if(saved&&typeof saved==='object'){
+      Object.entries(saved).forEach(([name,val])=>{
+        const r=q2Form.querySelector('input[name="'+name+'"][value="'+val+'"]');
+        if(r)r.checked=true;
+      });
+      if(Object.keys(saved).length>=TOTAL_Q2)renderQ2Result(saved);
+    }
+  }catch(e){}
+
+  /* ----------------- ENNEAGRAM CARDS ----------------- */
+  const ennCards=document.querySelectorAll('.enn-card');
+  const ennDetails=document.querySelectorAll('.enn-detail');
+  ennCards.forEach(card=>{
+    card.addEventListener('click',()=>{
+      const num=card.dataset.enn;
+      const target=document.getElementById('enn-detail-'+num);
+      const isOpen=target.classList.contains('show');
+      ennDetails.forEach(d=>d.classList.remove('show'));
+      ennCards.forEach(c=>{c.classList.remove('active');c.setAttribute('aria-expanded','false')});
+      if(!isOpen){
+        target.classList.add('show');
+        card.classList.add('active');
+        card.setAttribute('aria-expanded','true');
+        setTimeout(()=>{target.scrollIntoView({behavior:'smooth',block:'nearest'})},80);
+      }
+    });
+    card.addEventListener('keydown',e=>{
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click()}
+    });
+  });
+
+  /* ----------------- 7-DAY TRACKER ----------------- */
+  const TRACKER_KEY='vbt-discover-tracker';
+  const trackData=(()=>{try{return JSON.parse(localStorage.getItem(TRACKER_KEY)||'{}')}catch(e){return{}}})();
+  document.querySelectorAll('.tracker textarea').forEach(ta=>{
+    const day=ta.dataset.day;
+    const savedEl=document.querySelector('[data-saved="'+day+'"]');
+    if(trackData[day])ta.value=trackData[day];
+    let timer=null;
+    ta.addEventListener('input',()=>{
+      trackData[day]=ta.value;
+      if(savedEl)savedEl.textContent='Saving\u2026';
+      clearTimeout(timer);
+      timer=setTimeout(()=>{
+        try{localStorage.setItem(TRACKER_KEY,JSON.stringify(trackData));if(savedEl)savedEl.textContent='Saved \u2014 '+new Date().toLocaleTimeString()}
+        catch(e){if(savedEl)savedEl.textContent='Could not save (storage unavailable)'}
+      },400);
+    });
+  });
+
+  /* ----------------- SMOOTH SCROLL FOR ANCHORS ----------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const href=a.getAttribute('href');
+      if(href.length<2)return;
+      const target=document.querySelector(href);
+      if(!target)return;
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      history.replaceState(null,'',href);
+    });
+  });
+
+  /* ----------------- KEYBOARD HINTS ----------------- */
+  document.addEventListener('keydown',e=>{
+    if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;
+    if(e.key==='t'||e.key==='T'){themeBtn.click()}
+    if(e.key==='p'||e.key==='P'){window.print()}
+  });
+})();
+</script>
+</body>
+</html>
