@@ -360,3 +360,261 @@ If you want to keep these pages, the most defensible edit is:
 2. **Cut "Signs It's Working" entirely**, or replace it with a single line per technique drawn directly from Osho where one exists.
 3. **Either trim "Common Pitfalls" to genuine Osho warnings**, or relabel it ("Modern practice notes — not from Osho") so readers can tell the source.
 4. **Re-write "How to Practice" for the techniques that contradict Osho** (breath 4, centering 3, 5, 8, 10, death 1, heart 1, heart 5, imagination 6) — or at minimum add a clear note flagging where the AI version diverges from Osho.
+
+
+
+---
+
+# Audit, Part 2 — remaining 5 files
+
+**Files audited (alphabetical):**
+6. `vigyan-bhairav-negation-techniques.html` — 6 techniques
+7. `vigyan-bhairav-sleep-techniques.html` — 5 techniques
+8. `vigyan-bhairav-tantra-techniques.html` — 4 techniques
+9. `vigyan-bhairav-void-techniques.html` — 8 techniques
+10. `vigyan-bhairav-witnessing-techniques.html` — 10 techniques
+
+**Method.** Same as Part 1 — extracted the full text of *The Book of Secrets* (the EPUB in this repo), located each sutra by grepping for distinctive phrases, then read the surrounding 200–600 lines of Osho's commentary, and compared line-by-line against the AI-written *How to Practice*, *Signs It's Working*, and *Common Pitfalls* sections.
+
+---
+
+## Headline findings (across the five files)
+
+1. **Best file:** `tantra-techniques.html` — all 4 sutras verbatim, all 4 technique numbers correct (48–51), practices reasonably faithful.
+2. **Best practice fidelity overall:** `witnessing-techniques.html` — 10/10 sutras verbatim, 10/10 technique numbers correct, several practices follow Osho's commentary closely (e.g. t1 self-remembering, t3 expressing-in-vacuum, t6 universal-acceptance).
+3. **Worst file:** `sleep-techniques.html` — 1 outright fabricated sutra (t5), 1 truncated sutra (t3), 1 altered sutra (t4), all 5 technique numbers wrong.
+4. **Most internally inconsistent file:** `void-techniques.html` — 3 sutras are duplicates of sutras already used on other pages (t5 = heart t2 "Devotion frees"; t6 = sleep t2 = centering t8 "sit only on the buttocks"; t8 is unique here but the same-themed "Wherever your attention alights" appears in light t9). One sutra (t7) is rewritten away from Osho's wording into a Ramana-style "who-is-filled" inquiry.
+5. **Numbering systemic issue:** the negation, sleep, and void files use sequential placeholders (92–97, 103–107, 82–89) rather than the canonical Vigyan Bhairav Tantra numbering. The witnessing file's numbers (53–62) actually match Osho's *List of Meditations* numbering. The previously-corrected mind file uses yet a different scheme (canonical 92, 106–110, 112). Cross-file numbering should be harmonised in a separate pass.
+
+---
+
+## File 6 — Negation techniques (6 techniques)
+
+Sources: Osho Chapters 35 (file _40_), 57 (file _62_), 65 (file _70_), 71 (file _76_), 73 (file _78_).
+
+### Sutra accuracy
+
+| t# | Sutra status | Notes |
+|---|---|---|
+| t1 | **verbatim** | "Believe omniscient, omnipotent, pervading." (Ch 73) |
+| t2 | **ALTERED** | AI: "Think of nothing. No thing. Become the no-thingness itself." Osho: **"Thinking no thing will limited-self unlimit."** (Ch 57). The AI dropped the *promise* of the sutra ("limited-self unlimit") and replaced it with an imperative ("become") that Osho does not give. |
+| t3 | **verbatim** | "The appreciation of objects and subjects is the same…" (Ch 73) |
+| t4 | **verbatim** | "Illusions deceive, colors circumscribe, even divisibles are indivisible." (Ch 35) — but this exact same sutra is also used as **witnessing t8** with a completely different practice. Two pages, one sutra, two AI interpretations. |
+| t5 | **verbatim** | "In an easy position, gradually pervade an area between the armpits into great peace." (Ch 71) |
+| t6 | **verbatim** | "Feel yourself as pervading all directions, far, near." (Ch 71) |
+
+### Technique 1 ("Believe omniscient") — How to Practice
+- **Osho's actual instruction (Ch 73):** *"Close your eyes and just feel that you have no body, feel as if the body has disappeared, melted away. Then you can feel your all-pervadingness."* Osho's whole approach for this sutra is **drop body-identification first**; the all-pervading feeling arises from that disidentification, not from outward expansion.
+- **AI's version:** A 10-step graduated outward expansion — feel body edges → expand to the room → expand to the building → expand to the city → expand to the earth → expand to the cosmos → rest as pervading. This is a kasina-style space-meditation, not Osho's body-disidentification approach.
+- **Verdict: How to Practice — extrapolated.** Defensible operationalisation but misses Osho's specific door-in.
+
+### Technique 2 ("Thinking no thing") — How to Practice
+- **Osho's actual teaching (Ch 57):** This is essentially a **Zen koan**. Osho explicitly draws the analogy: *"Zen masters give an absurd puzzle to the seeker to think about… 'What is your original face — the face you had before birth?' …He tries and tries and tries and fails — that failure is the basic thing… All thinking stops in that total failure."* The technique works through the **impossibility** of the instruction.
+- **AI's version:** A 10-step graduated letting-go — recognise thoughts as things, sensations as things, images as things, emotions as things, blankness as a thing, rest as the space.
+- **Verdict: How to Practice — extrapolated.** The AI's version is essentially Mahamudra/rigpa-style open awareness. Internally coherent and useful, but it is not Osho's koan-via-impossibility method for this sutra.
+
+### Other techniques
+- **t3 (subjective mood):** Practice broadly faithful — Osho's chapter 73 emphasises the difference is in *where you are located while seeing*, not in what is seen. The AI captures this.
+- **t4 (Illusions deceive):** Practice is a neti-neti / "negate body, thoughts, name, roles" procedure. Osho's Chapter 35 actually emphasises something different: *"If you really go deep in this attitude that everything which cannot be decided is illusory, you will automatically, spontaneously turn to yourself."* The doorway is "see the world as a dream → turn toward the dreamer," not "negate identifications one by one." The AI's framing is closer to Ramana's neti-neti than to Osho's commentary on this sutra.
+- **t5 (between the armpits):** Practice is broadly faithful — Osho does describe placing attention in the space between the two armpits (the heart area).
+- **t6 (pervading all directions):** Practice broadly faithful, though Osho frames the directions as a *device* rather than a literal multi-stage expansion.
+
+### Signs / Pitfalls
+Same pattern as Part 1: ~85–95% AI-authored modern phenomenology and coaching extensions. No specific bullet-point checklists exist for these sutras in Osho's commentary.
+
+### Chapter references in Q&A blocks
+The "Chapter X" attributions in the Q&A blocks are **mostly wrong** for this file. For example, the AI cites "Chapter 63 — Start With Believing" for t1; Osho's chapter is actually **Chapter 73 — Fear of Transformation Goes Deep** (file 78.htm). The AI cites "Chapter 64 — No-Thingness" for t2; Osho's chapter is actually **Chapter 57 — You Are Everywhere**. There is no Osho chapter titled "No-Thingness." This is a systemic citation problem that affects most of the Q&A `class="src"` references in this file.
+
+---
+
+## File 7 — Sleep techniques (5 techniques)
+
+Sources: Osho Chapter 5 (file _10_), Chapter 11 (file _16_).
+
+### Sutra accuracy
+
+| t# | Sutra status | Notes |
+|---|---|---|
+| t1 | **verbatim** | "Lie down as dead. Enraged in wrath, stay so. Or stare without moving an eyelash. Or suck something and become the sucking." (Ch 5) |
+| t2 | **verbatim**, but **DUPLICATES** centering t8 and void t6 in this repo. |
+| t3 | **TRUNCATED** | AI: "In a moving vehicle, by rhythmically swaying, experience." Osho's full sutra: *"In a moving vehicle, by rhythmically swaying, experience. **Or in a still vehicle, by letting yourself swing in slowing invisible circles.**"* The AI drops the second half — which is the practical instruction for practitioners not actually in a moving vehicle. |
+| t4 | **ALTERED** | AI: "Pierce some point of your body with a pin, and gently enter the piercing." Osho's actual: *"Pierce some part of your **nectar-filled form** with a pin, and gently enter the piercing **and attain to the inner purity**."* The AI drops both the "nectar-filled form" theological framing and the result clause "attain to the inner purity." |
+| t5 | **NOT FOUND IN OSHO** | "Think of your body as being made of cosmic essences and leave it to be consumed." A grep of the entire EPUB returns zero matches for "cosmic essences" or any variant of this phrasing. The closest authentic Osho sutra is *"Suppose your passive form to be an empty room with walls of skin — empty"* (Chapter 79), which is a distinct teaching. **The entire t5 entry is commentary on a sutra that does not appear in Osho's book.** |
+
+### Technique 4 ("Pierce with a pin") — How to Practice
+- **Osho's actual instruction (Ch 11):** Take an actual pin, give it to a friend, sit and let the friend pierce your back at several points (avoiding "blind spots"). Witness the piercing. Don't witness the body in pain — witness as the witness, separate from the pierced flesh. This is unambiguously **literal** in Osho.
+- **AI's "In Plain English"** (before this PR): *"Focus on a strong body sensation (not self-harm — use an ice cube or strong pressure)."* The "not self-harm" framing is **the opposite** of Osho's stance. The AI's pitfall in centering t9 made this even more explicit: *"the sutra uses 'pin' as a metaphor"* — that is incorrect about Osho.
+- **This PR's correction:** the t4 In Plain English now states Osho's literal instruction first, then offers the modern safe-adaptation as an explicit substitution rather than as the primary reading.
+- **Verdict before correction: contradicts Osho on framing. After correction: the literal vs. modern distinction is now visible to the reader.**
+
+### Technique 5 ("cosmic essences") — entire entry suspect
+The sutra is not in *The Book of Secrets*. Therefore the entire 10-step five-element-dissolution practice, the Signs, and the Pitfalls are all the AI writing about a teaching Osho did not give. The five-element dissolution is itself a real practice — it appears in *Bardo Thödol* (Tibetan Book of the Dead) and in Tibetan dzogchen literature — but it is not what Osho is teaching about this (non-existent in his book) sutra.
+
+**This PR adds an "Editor's note" admonition box** at the top of t5 stating that the sutra is not verbatim in Osho's commentary and pointing readers to the closest authentic alternative (Chapter 79's "empty room with walls of skin").
+
+### Technique 2 ("sit only on the buttocks") — How to Practice
+Same issue as **centering t8** (already noted in Part 1):
+- **Osho:** Sit in seated asana (lotus / siddhasana). Cultivate **sensitivity in the buttocks**. Then balance the weight evenly between the two sit-bones. The technique is essentially Buddha's seated posture, explained as a buttock-balancing meditation. Osho prefaces this with extensive instructions on making the buttocks sensitive (*"first you have to make your buttocks sensitive"*).
+- **AI:** "Lean back slightly and lift both feet off the ground… find the tipping point where you're balanced solely on the sit-bones." This is *navasana* (boat pose / V-sit), abdominals engaged. Feet off floor.
+- **Verdict: How to Practice — CONTRADICTS Osho.** Two completely different physical actions. Same issue affects centering t8 (unfixed in Part 1) and void t6 (this file).
+
+### Technique 1 ("Lie down as dead") — How to Practice
+- **Osho's actual instruction (Ch 5):** Lie down. Imagine you are dead, cannot move, cannot scream, cannot do anything. Whatever arises (anger, fear, sadness) — *"stay so."* The technique is a totality of stillness through a death-rehearsal frame. Osho gives this as one of four totality variations: dead-pose, frozen-rage, unblinking-stare, total-sucking. **Any** total absorption works.
+- **AI:** Frames it as a pre-sleep technique to enter a sleep-like depth with awareness. The AI also says "I was never the body" insight emerges. The framing is shifted from totality-of-absorption to access-deep-rest. Captures part of the teaching but loses the totality framing.
+- **Verdict: extrapolated.** Defensible but selective.
+
+---
+
+## File 8 — Tantra techniques (4 techniques)
+
+Sources: Osho Chapter 33 (file _38_), Chapter 34 (file _39_).
+
+### Sutra accuracy
+All 4 sutras verbatim. All 4 technique numbers (48, 49, 50, 51) match Osho's *List of Meditations* numbering. **This is the cleanest file in the entire set on these two metrics.**
+
+### How to Practice — broadly faithful
+- **t1 (fire in the beginning, avoid embers):** AI captures the core teaching — keep awareness on the *beginning* quality (the fire of arousal) rather than rushing toward climax (the embers). The "energy rises through the spine to the heart, throat, crown" framing is more kundalini-yoga than Osho's actual chapter 33 commentary, but it's not contradicting Osho. The "10 steps" structure is the AI's; Osho gives no such procedural breakdown.
+- **t2 (senses shaken as leaves):** Faithfully captures Osho's central insight — *don't suppress the trembling, ENTER it*. Osho explicitly warns against the modern habit of staying still during lovemaking. The AI also mentions Osho's Kundalini Meditation, which IS a real Osho practice based on the same principle. **This is one of the most faithful entries in the audited set.**
+- **t3 (remembering union):** Faithfully captures Osho's chapter 33 teaching — the energy is yours, not the partner's; memory can recreate the same energetic state.
+- **t4 (long-absent friend, permeate joy):** Faithfully captures the "catch the joy in the first instant, let it permeate the whole body" instruction. Osho gives this exact teaching in chapter 34.
+
+### Signs / Pitfalls
+Same general issue — most are AI-extrapolated coaching, not Osho's specific bullet markers. But the *direction* of the Signs/Pitfalls is reasonable for this file.
+
+### Verdict on tantra file
+**No structural fidelity issues.** Sutras correct, numbers correct, practices broadly faithful. This file required no edits in this PR.
+
+---
+
+## File 9 — Void techniques (8 techniques)
+
+Sources: Osho Chapters 12 (file _17_), 13 (file _18_), 23 (file _28_), 25 (file _30_), 60 (file _65_), 65 (file _70_), 70 (file _75_), 79 (file _84_).
+
+### Sutra accuracy
+
+| t# | Sutra status | Notes |
+|---|---|---|
+| t1 | **verbatim** | "Feel: my thought, I-ness, internal organs — me." (Ch 60) |
+| t2 | **MINOR ALTERATION** | AI added "of that" to the end: "Dissolve in the beauty of that." Osho ends: "Dissolve in the beauty." (Ch 60). Fixed in this PR. |
+| t3 | **verbatim** | "Roam about until exhausted…" (Ch 13) |
+| t4 | **verbatim** | "Suppose you are gradually being deprived of strength or of knowledge…" (Ch 13) |
+| t5 | **verbatim**, but **DUPLICATES** heart t2 in this repo. Same sutra, two pages, two practices. |
+| t6 | **verbatim**, but **DUPLICATES** sleep t2 and centering t8. Same sutra, three pages. |
+| t7 | **REWRITTEN** | AI: "In an empty place, fix mind on one object. You will not only be full of that object but will also know who is filled." Osho's actual sutra (Ch 12): *"Feel an object before you. Feel the absence of all other objects but this one. Then leaving aside the object-feeling and the absence-feeling, realize."* The AI's wording is a Ramana-flavoured rewrite that introduces "who is filled" — which is not Osho's instruction here. Fixed in this PR. |
+| t8 | **verbatim** | "Simply by looking into the blue sky beyond clouds, the serenity." (Ch 23) |
+
+### Technique 7 ("feel an object") — How to Practice
+- **Osho's actual instruction (Ch 12):** Three steps. (1) Feel one object so completely that all other objects disappear from awareness. (2) Feel the absence of all other objects (the world has dropped away; only this object remains). (3) Drop *both* the object-feeling and the absence-feeling. What remains is pure consciousness without any content. Osho stresses: practise step 1 alone for days or weeks; only when the filling is solid should you attempt the dropping.
+- **AI's version (before this PR):** Step 5 was *"Now ask: WHO is filled?"* — turning the technique into a Ramana-style self-inquiry. The corresponding Q&A defended this with a "void behind the fullness" framing.
+- **This PR's correction:** restores the sutra to Osho's wording, rewrites the In Plain English to match, replaces step 5 of the practice with Osho's actual "leave both aside" instruction, fixes the Signs / Pitfalls items that referenced "who is filled," and corrects the Q&A.
+
+### Duplicate-sutra problem
+Three of void's eight sutras are duplicates of sutras that appear on other pages of this site:
+
+| Void technique | Also appears as | Practice consistency |
+|---|---|---|
+| t5 ("Devotion frees") | heart t2 | Both pages give a generic bhakti practice. Both equally extrapolated. Cross-file commentary differs. |
+| t6 ("sit only on the buttocks") | sleep t2; centering t8 | All three pages contradict Osho the same way (V-sit / boat pose instead of weight-balancing while seated). |
+| t8 ("blue sky beyond clouds") | unique to this file in the audit set, but very close in theme to light t4 ("entire sky endlessly clear"). |
+
+This duplication suggests that whoever assigned techniques to category pages did not check for overlap — one logical sutra has been split across multiple thematic pages and given a fresh AI commentary each time.
+
+### Technique 1 ("Feel: my thought…") — How to Practice
+- **Osho's actual instruction (Ch 60):** Spends ~70% of the chapter on the **feeling-vs-thinking** prerequisite. The technique requires you to first re-develop the capacity to *feel* (not think) — touching things, hearing things, smelling things without immediately verbalising them. Only then can you turn the same feeling-capacity inward to feel "my thought, I-ness, internal organs — me." When felt rather than thought, you discover that *no thought is yours* — they're all borrowed.
+- **AI's version:** Ramana-style neti-neti: feel the organs, ask "am I these?" — observe — therefore not. Move to thoughts — observe — therefore not. Move to I-ness — observe — therefore not. Rest in what remains.
+- **Verdict: How to Practice — extrapolated.** The Ramana-flavoured inquiry is one valid reading, but it skips the feeling-prerequisite that is the core of Osho's chapter for this sutra.
+
+### Other techniques (t2, t3, t4, t8)
+- **t2 (before desire and before knowing):** Practice broadly faithful — this is the Zen "original face before birth" sutra, and Osho's chapter 60 explicitly invokes the koan tradition. The AI captures this.
+- **t3 (roam about until exhausted):** This IS what Osho teaches — Dynamic Meditation works on this principle, and Osho's chapter 13 gives essentially the AI's instruction.
+- **t4 (deprived of strength or knowledge):** Faithful — Osho's chapter 13 explicitly offers both Path A (imagine strength leaving) and Path B (imagine knowledge dissolving), as the AI does.
+- **t8 (blue sky beyond clouds):** Practice broadly faithful — the cloud/thoughts analogy is exactly Osho's chapter 23 teaching. AI version is well-aligned.
+
+---
+
+## File 10 — Witnessing techniques (10 techniques)
+
+Sources: Osho Chapters 35–37 (files _40_, _41_, _42_), 39 (file _44_), 61 (file _66_).
+
+### Sutra accuracy
+All 10 sutras verbatim. All 10 technique numbers (53, 54, 55, 56, 57, 58, 59, 60, 61, 62) match Osho's *List of Meditations* sequencing. **No structural sutra issues in this file.** One overlap: t8 sutra ("Illusions deceive…") is the same as negation t4.
+
+### How to Practice — most faithful file in the audit set
+- **t1 (self-remembering):** Captures Osho's actual chapter 35 teaching with substantial fidelity. The 30-students-fled story is verbatim Osho. The "double-arrowed awareness" phrase is verbatim Osho ("then your consciousness becomes double-arrowed"). The "feel I am, don't think I am" distinction is Osho's exact instruction.
+- **t2 (wherever satisfaction is found):** Faithful — Osho's chapter 35 gives the "thirsty, drink water, forget the water, dwell on the satisfaction" example that the AI uses.
+- **t3 (be undisturbed in extreme desire):** Faithful — Osho's chapter 37 explicitly contrasts the two wrong responses (suppress / express toward the object) and offers the third way (express in vacuum, witness from the centre). The AI's "private space, beat a pillow, scream into a cushion" matches Osho's instruction.
+- **t4 (juggling, picture show):** Faithful — the AI's "go to a cinema and watch the audience" framing is consistent with Osho's chapter 37 teaching, though Osho doesn't actually mention cinemas.
+- **t5 (neither pleasure nor pain):** Faithful in spirit. Osho calls this "walking on the razor's edge" — the AI uses the same image.
+- **t6 (objects and desires exist in others):** Faithful — captures Osho's "single standard, no double standards" teaching from chapter 37.
+- **t7 (at the point of sleep):** Captures Osho's "gap between waking and sleep" teaching better than the heart t1 entry does. Where heart t1 imposes a "being IS love" doctrine, witnessing t7 correctly says "pure being — consciousness without content. No thoughts, no body-sense, no world — but awareness remains." This is closer to Osho's actual *shunya* / abyss teaching.
+- **t8 (illusions deceive):** Practice is a "see-through-divisions" non-duality exercise. Osho's chapter 35 teaching is more focused on "see-the-world-as-dream → turn-toward-the-dreamer." The AI picks up half the sutra ("even divisibles are indivisible") and turns it into a unity practice. Defensible but partial.
+- **t9 (waves with us):** Faithful — Osho's chapter 39 teaches exactly the wave/ocean framing the AI uses.
+- **t10 (knower and known):** Faithful — Osho's chapter 61 teaches the dissolution of the trinity (knower / knowing / known) into one undivided event, as the AI describes.
+
+### Signs / Pitfalls
+Largest set in the audit. Some specific items track Osho's commentary; others are coaching extensions. Same general fabrication-rate as the other files (~80%), but in this file the sigs and pitfalls are at least *consistent with* Osho's overall framing rather than contradicting it.
+
+### Verdict on witnessing file
+**No sutra fixes required. Practices broadly faithful.** This file is the strongest-written of the 16 in the repo and required no edits in this PR.
+
+---
+
+## Cross-file pattern summary (Part 2)
+
+### 1. Sutra-text alterations and a fabrication
+
+The biggest fidelity issues, ranked:
+- **Sleep t5: SUTRA NOT IN OSHO** — entire entry is commentary on a synthesised teaching.
+- **Negation t2: ALTERED** — replaces Osho's promise ("limited-self unlimit") with an imperative ("become no-thingness").
+- **Void t7: REWRITTEN** — turns Osho's "feel object → feel absence → drop both" into a Ramana-style "fix on object → ask who is filled."
+- **Sleep t4: ALTERED** — drops "nectar-filled form" and "attain to the inner purity."
+- **Sleep t3: TRUNCATED** — drops "Or in a still vehicle, by letting yourself swing in slowing invisible circles."
+- **Void t2: MINOR** — adds "of that" to "Dissolve in the beauty."
+
+All six are addressed in this PR.
+
+### 2. Duplicate sutras across pages
+
+Three sutras appear on multiple pages of this site under different categorisations, each with independently-AI-written commentary:
+- "Devotion frees" — heart t2, void t5
+- "Without support for feet or hands, sit only on the buttocks…" — centering t8, sleep t2, void t6
+- "Illusions deceive, colors circumscribe…" — negation t4, witnessing t8
+
+In each case the practices on the duplicate pages diverge from each other (different "How to Practice" / "Signs" / "Pitfalls"), even though Osho is teaching one technique. This is a categorisation problem rather than an audit-fidelity problem, but it makes the same practitioner experience contradictory advice on the "same" sutra depending which page they land on.
+
+### 3. Numbering inconsistency across the corrected and uncorrected files
+
+The repo currently uses three different numbering conventions for the 112 techniques:
+- **Witnessing (this audit), tantra (this audit):** match Osho's *List of Meditations* sequence (e.g. self-remembering = #53).
+- **Negation, sleep, void (this audit), and the as-yet-uncorrected pages:** sequential placeholders that do not match any known canonical numbering.
+- **Mind (corrected in PR #13):** appears to use traditional Vigyan Bhairav Tantra canonical numbering (e.g. self-remembering would be a different number under this scheme).
+
+A separate harmonisation pass is needed across all 16 files to settle on one convention.
+
+### 4. "Signs It's Working" remains a structural fabrication
+
+Same as Part 1. Across the 33 techniques in these five files there are perhaps 5 sign-bullets that track something specific Osho says about the corresponding sutra; the rest are modern meditation-app phenomenology. The deepest fix would be to remove this section entirely and let Osho's sparse, image-rich descriptions in his commentary stand on their own.
+
+### 5. "Common Pitfalls" is mostly modern coaching
+
+Same as Part 1. Mostly defensible modern advice; rarely traceable to Osho's specific commentary on the corresponding sutra. One specific contradiction in this file set (now corrected by this PR): sleep t4 / centering t9 framing the pin instruction as "metaphor only" — Osho is literal.
+
+---
+
+## What this PR changes
+
+| File | Change |
+|---|---|
+| `vigyan-bhairav-negation-techniques.html` | t2 sutra restored to Osho's verbatim wording; t2 In Plain English rewritten to match the corrected sutra; t2 jumplink updated; t2 Q&A chapter reference corrected (was "Chapter 64 — No-Thingness" which doesn't exist; now "Chapter 57 — You Are Everywhere"). |
+| `vigyan-bhairav-sleep-techniques.html` | t3 sutra: truncated second clause restored. t4 sutra: "nectar-filled form" and "attain to the inner purity" restored; t4 In Plain English rewritten to acknowledge Osho's literal pin instruction with the modern safe-adaptation framed as a substitution. t5: prominent "Editor's note" admonition box added flagging that the sutra is not verbatim in Osho's commentary, with pointer to the closest authentic sutra (Ch 79). |
+| `vigyan-bhairav-tantra-techniques.html` | No changes (file already accurate). |
+| `vigyan-bhairav-void-techniques.html` | t2 sutra: "of that" removed. t7 sutra restored to Osho's verbatim wording; t7 In Plain English rewritten; t7 step 1 softened ("empty place" was added by AI, sutra does not specify location); t7 steps 5–6 rewritten to match Osho's "leave both aside" instruction; t7 jumplink updated; t7 Signs and Pitfalls items referencing "who is filled" rewritten; t7 Q&A title and chapter reference corrected; t7 one-line essence rewritten. |
+| `vigyan-bhairav-witnessing-techniques.html` | No changes (file already accurate). |
+
+## What this PR does NOT change (deliberately deferred)
+
+- **Technique numbering** in negation, sleep, void files. Cross-file harmonisation should happen as a separate pass once the canonical numbering scheme is decided.
+- **Duplicate sutras** across pages. This is a categorisation question (which page does each sutra "belong" on?) and not an in-line text fix.
+- **V-sit / boat-pose contradiction** in sleep t2 and void t6. The same issue exists in centering t8 (Part 1 audit, not yet fixed). All three should be fixed together for consistency.
+- **Most "Signs It's Working" and "Common Pitfalls" content.** The fix would be to remove or relabel these sections wholesale; that is a content-policy decision for the maintainers rather than a line-edit.
+- **Most chapter-reference attributions in Q&A blocks** — these are systematically wrong across the negation file (and likely others). Fixing all of them is a separate pass.
