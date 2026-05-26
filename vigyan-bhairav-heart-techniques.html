@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 5 heart and devotion techniques from Osho's Vigyan Bhairav Tantra — distilled, with practice instructions, common pitfalls, questions from the book, and modern commentary.">
+<title>The Techniques for Heart &amp; Devotion — Vigyan Bhairav Tantra</title>
+<style>
+:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:200;transition:width .15s ease-out;box-shadow:0 0 8px var(--accent-soft)}
+.controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
+.controls button{width:36px;height:36px;border-radius:999px;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.controls button:hover,.controls button[aria-pressed="true"]{background:var(--bg-soft);color:var(--accent)}
+.controls button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--accent-soft)}
+main{max-width:680px;margin:0 auto;padding:5rem 1.5rem 2rem}
+header.hero{text-align:center;padding:2rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink)}
+.hero .lede{color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;font-size:1.05rem;font-style:italic}
+.hero .meta{font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+.jumplinks{margin-top:2.5rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1.25rem 1.5rem;text-align:left}
+.jumplinks h2{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 1rem;font-weight:600}
+.jumplinks ol{margin:0;padding:0;list-style:none;counter-reset:jl}
+.jumplinks li{counter-increment:jl;border-top:1px solid var(--rule);padding:.55rem 0}
+.jumplinks li:first-child{border-top:0}
+.jumplinks a{text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:.7rem;font-size:.95rem;transition:color .15s}
+.jumplinks a::before{content:counter(jl);font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faint);min-width:1.5rem}
+.jumplinks a:hover{color:var(--accent)}
+.jumplinks .sub{color:var(--ink-faint);font-style:italic;font-size:.85rem}
+article.technique{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:2rem 2rem 1.75rem;margin:0 0 2.5rem;box-shadow:var(--shadow);scroll-margin-top:5rem;position:relative}
+.technique-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.4rem}
+.fav-btn{background:transparent;border:0;cursor:pointer;font-size:1.3rem;color:var(--ink-faint);transition:color .2s,transform .2s;line-height:1;padding:.2rem}
+.fav-btn:hover{transform:scale(1.15);color:var(--accent)}
+.fav-btn.on{color:var(--accent)}
+.tags{font-family:var(--sans);font-size:.75rem;color:var(--ink-faint);margin-bottom:1.5rem;letter-spacing:.02em}
+.tags strong{color:var(--ink-soft);font-weight:600}
+blockquote.sutra{margin:1rem 0 2rem;padding:1.75rem 1.5rem;background:var(--sutra-bg);border-left:3px solid var(--accent);border-radius:4px;font-family:var(--serif);font-size:1.18rem;font-style:italic;line-height:1.55;color:var(--ink);text-align:center;quotes:"\201C" "\201D"}
+blockquote.sutra::before{content:open-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.4em;margin-right:.1em}
+blockquote.sutra::after{content:close-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.6em;margin-left:.1em}
+.section{margin:1.75rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule)}
+.section h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .9rem;font-weight:600}
+.section p{margin:.5rem 0}
+.section ol,.section ul{margin:.5rem 0;padding-left:1.4rem}
+.section li{margin:.35rem 0;line-height:1.65}
+.plain p{font-size:1.02rem;color:var(--ink-soft)}
+.facts dl{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.25rem;margin:0;font-family:var(--sans);font-size:.92rem}
+.facts dt{color:var(--ink-faint);font-weight:600;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase;padding-top:.15rem}
+.facts dd{margin:0;color:var(--ink)}
+.stars{color:var(--accent);letter-spacing:.05em}
+.stars .off{color:var(--rule)}
+.signs ul,.pitfalls ul{list-style:none;padding-left:0}
+.signs li::before{content:"\2022";color:var(--accent);margin-right:.7rem;font-weight:700}
+.pitfalls li::before{content:"\2715";color:#a83232;margin-right:.7rem;font-weight:700;font-size:.9em}
+html[data-theme="dark"] .pitfalls li::before{color:#d96b6b}
+.qa details{border:1px solid var(--rule);border-radius:5px;background:var(--bg);margin:.5rem 0;transition:background .2s}
+.qa details[open]{background:var(--bg-soft)}
+.qa summary{padding:.85rem 1rem;cursor:pointer;font-style:italic;color:var(--ink);list-style:none;display:flex;align-items:flex-start;gap:.6rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"\203A";display:inline-block;color:var(--accent);font-style:normal;transition:transform .2s;margin-top:.05em;flex-shrink:0}
+.qa details[open] summary::before{transform:rotate(90deg)}
+.qa-body{padding:0 1rem 1rem 2rem}
+.qa-body .src{font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.5rem}
+.qa-body p{font-size:.95rem;color:var(--ink-soft);margin:.4rem 0}
+.commentary{background:var(--bg);border-radius:6px;border:1px dashed var(--rule);padding:1.25rem 1.4rem}
+.commentary h3{display:flex;align-items:center;gap:.5rem}
+.commentary h3::before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:999px}
+.commentary .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.4rem}
+.commentary p{font-size:.96rem;color:var(--ink-soft);margin:.6rem 0}
+.commentary .essence{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--rule);font-style:italic;color:var(--ink);font-size:1.02rem}
+.commentary .essence strong{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-style:normal;display:block;margin-bottom:.3rem;font-weight:600}
+.actions{margin-top:1.75rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.timer-btn{font-family:var(--sans);font-size:.9rem;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:.7rem 1.4rem;cursor:pointer;font-weight:500;letter-spacing:.02em;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:0 4px 12px -4px var(--accent)}
+.timer-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
+.timer-btn.running{background:#a83232}
+html[data-theme="dark"] .timer-btn.running{background:#c44}
+.timer-display{font-family:var(--sans);font-variant-numeric:tabular-nums;font-size:.95rem;color:var(--ink-faint)}
+body.focus article.technique{opacity:.25;transition:opacity .5s}
+body.focus article.technique.in-view{opacity:1}
+footer{text-align:center;padding:3rem 0 1rem;border-top:1px solid var(--rule);color:var(--ink-faint);font-family:var(--sans);font-size:.85rem}
+footer p{margin:.4rem 0}
+.about-block,.howto-block,.beginner-block,.glossary-block{margin-top:1.25rem;border-radius:6px;font-family:var(--sans);font-size:.92rem;text-align:left}
+.about-block,.glossary-block{background:var(--bg-card);border:1px solid var(--rule)}
+.about-block summary,.glossary-block summary{padding:.85rem 1.25rem;cursor:pointer;color:var(--ink-soft);list-style:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:flex;align-items:center}
+.about-block summary::-webkit-details-marker,.glossary-block summary::-webkit-details-marker{display:none}
+.about-block summary::before,.glossary-block summary::before{content:"+";margin-right:.6rem;color:var(--accent);font-weight:700;font-size:1.15rem;line-height:1;transition:transform .2s}
+.about-block[open] summary::before,.glossary-block[open] summary::before{content:"\2212"}
+.about-body,.glossary-body{padding:0 1.25rem 1.25rem;border-top:1px solid var(--rule)}
+.about-body p{font-family:var(--serif);margin:.8rem 0;line-height:1.65;color:var(--ink-soft)}
+.glossary-body dl{margin:.8rem 0 0;display:grid;gap:.35rem 1rem}
+.glossary-body dt{font-weight:700;color:var(--accent);font-size:.9rem;margin-top:.55rem}
+.glossary-body dd{margin:0;color:var(--ink-soft);font-family:var(--serif);font-size:.92rem;line-height:1.55}
+.howto-block{background:var(--sutra-bg);border-left:3px solid var(--accent);padding:1.25rem 1.5rem}
+.howto-block h3,.beginner-block h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 .7rem;font-weight:600}
+.howto-block p,.beginner-block p{margin:.5rem 0;font-family:var(--serif);line-height:1.65;color:var(--ink-soft)}
+.howto-block strong,.beginner-block strong{color:var(--ink)}
+.beginner-block{background:var(--bg-soft);border:1px dashed var(--accent-soft);padding:1.25rem 1.5rem}
+.beginner-block a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.beginner-block a:hover{border-bottom-color:var(--accent)}
+.disclaimer{font-size:.78rem;color:var(--ink-faint);font-style:italic;margin:1.25rem 0 0;text-align:center;line-height:1.5}
+.glossary-term{border-bottom:1px dotted var(--accent);cursor:help;color:inherit;padding:0 1px;transition:background .15s}
+.glossary-term:hover,.glossary-term:focus{background:var(--accent-soft);outline:none}
+.glossary-tooltip{position:absolute;background:var(--ink);color:var(--bg);padding:.7rem .9rem;border-radius:6px;font-family:var(--sans);font-size:.82rem;line-height:1.5;max-width:280px;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);z-index:300;opacity:0;pointer-events:none;transition:opacity .15s}
+.glossary-tooltip.show{opacity:1;pointer-events:auto}
+.glossary-tooltip strong{display:block;margin-bottom:.35rem;color:var(--accent-soft);text-transform:uppercase;font-size:.68rem;letter-spacing:.12em}
+@media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.actions,.fav-btn{display:none!important}article.technique{box-shadow:none;border:none;page-break-inside:avoid;padding:0;margin:0 0 1.5rem}blockquote.sutra{background:#f5f5f5;border-left:2px solid #888}main{max-width:none;padding:1rem}.about-block,.glossary-block,.howto-block,.beginner-block,.disclaimer{display:none!important}.glossary-term{background:none!important;border-bottom:1px dotted #888}}
+@media(max-width:600px){body{font-size:17px}article.technique{padding:1.5rem 1.25rem}.controls{top:.5rem;right:.5rem}blockquote.sutra{font-size:1.05rem;padding:1.25rem 1rem}.facts dl{grid-template-columns:1fr;gap:.1rem .5rem}.facts dt{padding-top:.5rem}main{padding:4rem 1rem 2rem}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<nav class="controls" aria-label="Reading controls">
+  <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+  <button id="focus-btn" aria-label="Toggle focus mode" title="Focus mode" aria-pressed="false">&#9678;</button>
+  <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
+</nav>
+<main>
+<header class="hero">
+  <div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 12 of 15</div>
+  <h1>The Techniques for Heart &amp; Devotion</h1>
+  <p class="lede">Five techniques that use the heart &mdash; love, devotion, music, feeling, and eternity &mdash; as doorways to the divine. The heart knows what the mind cannot grasp: that love is not something you DO but something you ARE when the defences drop.</p>
+  <p class="meta">5 techniques &middot; ~8 min read &middot; works fully offline</p>
+  <details class="about-block">
+    <summary>About these techniques</summary>
+    <div class="about-body">
+      <p>These five techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The heart and devotion sutras form the twelfth major category &mdash; using love, surrender, music, feeling, and the eternal present moment to dissolve the ego through the heart rather than through the mind.</p>
+      <p>These techniques approach awakening through LOVE rather than understanding. Where other categories use the mind (inquiry, witnessing, negation), these techniques bypass the mind entirely and go straight to the heart. The heart does not need to understand in order to open &mdash; it only needs to feel. And feeling, when it is total, IS enlightenment.</p>
+    </div>
+  </details>
+  <aside class="howto-block">
+    <h3>How to use this page</h3>
+    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
+    <p><strong>Key principle:</strong> These heart techniques work through FEELING, not through understanding. The mind wants to analyse love; the heart wants to DROWN in it. Let yourself drown. Analysis can come later (or never &mdash; the heart doesn&rsquo;t need it).</p>
+  </aside>
+  <aside class="beginner-block">
+    <h3>New to heart meditation?</h3>
+    <p>Start with <a href="#t3">Technique 3 &mdash; feel love filling you from all sides</a> or <a href="#t4">Technique 4 &mdash; enter music totally</a>. Both are immediately accessible, require no belief system, and produce warmth and opening quickly. Spend 20&ndash;30 minutes a day for 21 days.</p>
+  </aside>
+  <details class="glossary-block">
+    <summary>Glossary &mdash; unfamiliar terms?</summary>
+    <div class="glossary-body">
+      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+      <dl>
+        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+        <dt>devotion</dt><dd>Total self-giving toward a beloved (person, God, existence). Not dependence but the heart&rsquo;s way of dissolving the ego through love.</dd>
+        <dt>bhakti</dt><dd>The yoga of devotion &mdash; the path to the divine through love rather than knowledge (jnana) or action (karma).</dd>
+        <dt>heart centre</dt><dd>The energetic centre in the middle of the chest (anahata chakra) &mdash; the seat of love, compassion, and feeling in the subtle body.</dd>
+        <dt>surrender</dt><dd>Releasing the ego&rsquo;s grip &mdash; not passivity but active letting-go. The heart&rsquo;s natural movement when it truly loves.</dd>
+        <dt>bhajan</dt><dd>Devotional song &mdash; music designed to open the heart and dissolve the singer into the feeling of love or worship.</dd>
+        <dt>eternity</dt><dd>Not endless time but TIMELESSNESS &mdash; the quality of THIS moment when it is fully inhabited. The heart lives in eternity; the mind lives in time.</dd>
+        <dt>divine love</dt><dd>Love without object or condition &mdash; the overflowing quality of the heart when it has been filled to capacity. Not directed at anyone; simply radiating in all directions.</dd>
+        <dt>ego-dissolution</dt><dd>The temporary or permanent loss of the sense of being a separate self. In heart techniques, this happens through love rather than inquiry.</dd>
+      </dl>
+    </div>
+  </details>
+  <p class="disclaimer">Practise on your own discretion &mdash; heart techniques may release strong emotions (tears, grief, ecstasy). This is natural and healthy. Let emotions flow without acting on them. If emotional intensity becomes overwhelming, ground through the body and breath, then return to the heart gently.</p>
+  <nav class="jumplinks" aria-label="Techniques in this file">
+    <h2>Techniques in this file</h2>
+    <ol>
+      <li><a href="#t1"><span>At the point of sleep, when sleep has not yet come</span> <span class="sub">&middot; the unguarded heart</span></a></li>
+      <li><a href="#t2"><span>Devotion frees</span> <span class="sub">&middot; total self-giving</span></a></li>
+      <li><a href="#t3"><span>Feel love filling you from all sides</span> <span class="sub">&middot; becoming love</span></a></li>
+      <li><a href="#t4"><span>As you sing, or listen to music, enter the feeling totally</span> <span class="sub">&middot; devotional music</span></a></li>
+      <li><a href="#t5"><span>Wherever your mind is settled, feel this moment as the eternal</span> <span class="sub">&middot; eternity now</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<!-- ============================ TECHNIQUE 1 ============================ -->
+<article class="technique" id="t1" data-tech="1">
+  <div class="technique-head"><span>Technique 108 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t1">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Heart &amp; Devotion &middot; <strong>Tags:</strong> heart-opening &middot; transition &middot; being</div>
+  <blockquote class="sutra">At the point of sleep, when sleep has not yet come and external wakefulness vanishes, at this point being is revealed.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>The sleep transition as a heart technique &mdash; when the external world vanishes, the heart opens because the defences that protect it also vanish. In that unguarded moment, being is revealed as love. The point between waking and sleeping is not just a consciousness-gap; it is the moment when the heart&rsquo;s armour dissolves. In that vulnerability, your true being &mdash; which IS love &mdash; shines through.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Prepare for sleep with the heart:</strong> As you lie in bed, bring awareness to your heart centre &mdash; the middle of your chest. Don&rsquo;t bring thoughts there; bring FEELING. Feel whatever warmth, tenderness, or openness naturally lives in that area. Even a faint glow is enough to begin.</li>
+      <li><strong>Notice the world fading:</strong> As drowsiness comes, the external world begins to vanish. Sounds become distant. The room disappears. Your body becomes vague. Notice this fading not with alarm but with tenderness. The world is gently withdrawing &mdash; like a curtain being drawn. Behind it, something waits.</li>
+      <li><strong>Feel the defences dropping:</strong> With the external world, your DEFENCES also drop. The social persona, the protective mechanisms, the armour around the heart &mdash; all of these require the external world to justify their existence. When the world vanishes, they have nothing to defend against. They relax. The heart opens.</li>
+      <li><strong>Be vulnerable:</strong> In this unguarded moment, allow yourself to be completely vulnerable. No pretence, no strength, no walls. Just the raw, tender, naked heart. It may feel frightening for a moment &mdash; the ego fears vulnerability. But stay with it. The vulnerability IS the doorway.</li>
+      <li><strong>Feel what is revealed:</strong> When the defences drop and the heart opens &mdash; WHAT IS THERE? The sutra says &ldquo;being is revealed.&rdquo; What is your being? Not your identity, not your story, not your roles &mdash; your BEING. Feel it. It is warm. It is love. It is tender. It is what you are when you stop pretending to be something else.</li>
+      <li><strong>Being IS love:</strong> The discovery of this technique is simple but world-shattering: your fundamental being is not neutral, not empty, not indifferent. It is LOVE. Pure being, when touched without the ego&rsquo;s interference, feels like unconditional love. Not love for someone or something &mdash; just LOVE as a quality of existence.</li>
+      <li><strong>Rest in the revelation:</strong> Don&rsquo;t try to hold onto it. Don&rsquo;t try to remember it for tomorrow. Just REST in the revelation. Being is love. You are love. Not because you DO loving things but because love is the nature of consciousness when it is undefended. Let this wash through you as sleep approaches.</li>
+      <li><strong>Let sleep come from the heart:</strong> Instead of &ldquo;falling&rdquo; asleep (which implies losing something), RELAX into sleep from the heart. Let sleep be the heart&rsquo;s rest &mdash; the heart opening so fully that the body-mind simply dissolves into it. Sleep as an act of love, not of unconsciousness.</li>
+      <li><strong>The morning echo:</strong> Upon waking, before the defences reconstruct, there is again a moment of unguarded being. Catch it. For a few seconds upon waking, the heart is still open from sleep. Feel it. Let it inform how you begin the day. Start from love, not from agenda.</li>
+      <li><strong>Daily practice:</strong> Throughout the day, whenever you feel your heart-armour tightening (in conflict, in anxiety, in social performance), remember the sleep-point revelation: underneath all armour, being is love. You can choose to lower the defences for a moment even in waking life. Each time you do, being is revealed again.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>15&ndash;30 min (at sleep-point)</dd><dt>Posture</dt><dd>Lying in bed</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Sensitive people; those who feel &ldquo;guarded&rdquo; in daily life; anyone who senses their heart is closed but doesn&rsquo;t know how to open it; those who cry easily at the sleep threshold</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Tears at the sleep threshold &mdash; soft, sweet tears without sadness &mdash; just the heart opening</li><li>A feeling of warmth spreading from the chest as defences drop</li><li>A sense of profound vulnerability that feels SAFE rather than frightening</li><li>Sleep coming as a gentle embrace rather than an unconscious collapse</li><li>Waking with the heart still open &mdash; feeling love before feeling agenda</li><li>A growing softness in daily life &mdash; less armour, more tenderness, more willingness to be seen</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Trying to open the heart forcefully &mdash; the opening happens when defences DROP, which is a letting-go, not an effort</li><li>Confusing sentimentality with heart-opening &mdash; sentimentality is the mind imitating the heart; true opening is simple, direct, without story</li><li>Fear of vulnerability causing the ego to reassert at the critical moment &mdash; breathe through the fear; it passes in seconds</li><li>Analysing the experience instead of feeling it &mdash; the moment you think &ldquo;is this it?&rdquo; you have left the heart and entered the head</li><li>Getting discouraged if sleep takes you before the revelation &mdash; the practice works subconsciously too; trust the process over 21 days</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does being reveal itself specifically at the sleep-point?</summary>
+      <div class="qa-body"><p class="src">Chapter 69, "Being Is Revealed"</p><p>Osho explains: during waking life, the ego maintains a constant defence system &mdash; protecting the self-image, managing social performance, guarding vulnerabilities. This system requires ENERGY and EXTERNAL INPUT to function. At the sleep threshold, external input ceases and energy withdraws. The defence system collapses &mdash; not because you defeated it but because it has nothing left to run on. In that collapse, being is revealed because being was always there; it was just hidden behind the defences.</p></div>
+    </details>
+    <details><summary>Is this similar to the vulnerability people feel when falling in love?</summary>
+      <div class="qa-body"><p class="src">Chapter 69</p><p>Osho says: exactly. When you fall in love, the defences drop toward one person &mdash; and in that gap, being is revealed. That is why new love feels so transformative, so alive, so real. But the sleep-point technique does this WITHOUT depending on another person. You learn to let defences drop every night, toward existence itself. It is falling in love with being. The beloved is everything &mdash; the cosmos, the night, the breath, the heart itself.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Psychoanalysis discovered that people often cry at bedtime or upon waking &mdash; moments when ego-defences are weakest. Attachment theory shows that the need for love is most acutely felt when defences relax (hence the pain of sleeping alone after heartbreak). This technique reframes that vulnerability as a GIFT rather than a weakness &mdash; the moment defences drop is not dangerous but revelatory. What is revealed is not our wound but our nature.</p>
+    <p><strong>Polyvagal theory:</strong> Stephen Porges&rsquo; polyvagal theory shows that the nervous system must be in a &ldquo;ventral vagal&rdquo; (safe and social) state for the heart to open. The sleep transition naturally activates the parasympathetic system, creating exactly the physiological conditions for heart-opening. This technique aligns conscious intention with an automatic biological process, making it remarkably effective.</p>
+    <div class="essence"><strong>One-line essence</strong>When the world vanishes at sleep&rsquo;s edge, your armour vanishes too. In that unguarded moment, discover what you always were underneath: love itself, resting in being.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t1"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 2 ============================ -->
+<article class="technique" id="t2" data-tech="2">
+  <div class="technique-head"><span>Technique 109 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t2">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Heart &amp; Devotion &middot; <strong>Tags:</strong> devotion &middot; love &middot; surrender &middot; freedom</div>
+  <blockquote class="sutra">Devotion frees.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Pour total love toward any beloved &mdash; a person, God, existence. The quality of total self-giving empties the heart of ego. What remains is pure love without an object &mdash; divine love. Devotion is the heart&rsquo;s way of dissolving the self: you cannot THINK yourself into egolessness, but you can LOVE yourself into it. When giving is total, the giver disappears.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Choose your beloved:</strong> Who or what can your heart pour itself toward without reservation? A teacher, God in any form, the universe, a loved one, nature, truth, beauty, existence itself. The object matters less than the QUALITY of your devotion. Choose whatever makes your heart overflow most naturally.</li>
+      <li><strong>Create a devotional space:</strong> Light a candle, place a photo or symbol of your beloved, play soft devotional music if it helps. The space should say to your heart: &ldquo;Here you are safe to love without limit.&rdquo; Or go to a natural cathedral &mdash; a forest, a hilltop, a riverbank &mdash; wherever your heart opens spontaneously.</li>
+      <li><strong>Open the heart centre:</strong> Sit or kneel. Bring awareness to the centre of the chest. Feel it softening, warming, expanding. You may place a hand over the heart to connect more deeply. Breathe into the heart space. Let it become the centre of your world.</li>
+      <li><strong>Begin to pour:</strong> Now direct the heart&rsquo;s energy toward your chosen beloved. Not as thought (&ldquo;I love you&rdquo;) but as FEELING &mdash; a warmth, a flow, a stream of devotional energy moving from your heart toward the beloved. Let it be continuous, like a river that never stops flowing.</li>
+      <li><strong>Give yourself totally:</strong> Don&rsquo;t just give love &mdash; give YOURSELF. Give your thoughts, your memories, your identity, your fears, your hopes. Pour everything into the stream. The beloved is a vast ocean; you are a river emptying into it. Hold nothing back. Keep nothing in reserve.</li>
+      <li><strong>Feel the emptying:</strong> As you give and give, notice: you are becoming empty. Lighter. More spacious. The more you give, the less remains of &ldquo;you.&rdquo; This is not loss &mdash; it is liberation. Every ounce of self given away is an ounce of freedom gained. The ego dissolves in the acid of total love.</li>
+      <li><strong>When nothing is left:</strong> Continue pouring until there is no one left to pour. The giver has been given. The river has reached the ocean and is ocean now. In this moment, there is no &ldquo;you&rdquo; and no &ldquo;beloved&rdquo; &mdash; only love itself, without subject or object. THIS is divine love. Not love FROM someone TO someone, but love as the fabric of existence.</li>
+      <li><strong>Rest in freedom:</strong> The sutra says &ldquo;devotion frees.&rdquo; Feel the freedom. Not freedom FROM something (that is merely escape) but freedom AS something &mdash; freedom as your natural state when the ego is dissolved. You are free because there is no one left to be imprisoned. The cage is empty. The bird is the sky.</li>
+      <li><strong>Use devotional practices:</strong> Singing bhajans, chanting mantras, writing love letters to God, prostrating before your symbol, serving others selflessly &mdash; all are forms of pouring. Choose whichever form helps your heart pour most naturally. The form is the vehicle; the pouring is the practice.</li>
+      <li><strong>Make daily life devotional:</strong> Once you taste the freedom, bring devotion into everything. Cook as an offering. Walk as a prayer. Work as service. Each action done with devotional quality empties the ego a little more. Eventually, life itself becomes continuous devotion &mdash; a constant pouring of love toward existence.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate (easy for devotional types, hard for intellectuals)</dd>
+    <dt>Duration</dt><dd>20&ndash;40 min</dd><dt>Posture</dt><dd>Any &mdash; sitting, kneeling, dancing, prostrating</dd><dt>Eyes</dt><dd>Open or closed</dd><dt>Best for</dt><dd>Heart-oriented people; lovers; those with natural reverence; anyone who has experienced the ego-dissolution of falling in love; bhakti temperaments</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>Tears that come without sadness &mdash; the heart overflowing in gratitude</li><li>A feeling of emptying out, becoming lighter, more spacious</li><li>Moments of ecstasy where the boundary between self and beloved dissolves</li><li>The distinction between &ldquo;I&rdquo; and &ldquo;the beloved&rdquo; thinning until it disappears</li><li>A background hum of love in daily life &mdash; devotion spreading beyond formal practice to colour everything</li><li>Freedom felt as lightness, spaciousness, and the absence of self-concern</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Confusing devotion with dependence &mdash; devotion empties the self; dependence fills it with need and clinging</li><li>Becoming proud of one&rsquo;s devotion (&ldquo;I am so devoted&rdquo;) &mdash; this creates a new, subtler ego</li><li>Devotion to a person becoming possessive attachment &mdash; true devotion does not need response or reciprocation</li><li>Holding back a &ldquo;watcher&rdquo; who observes the devotion &mdash; total devotion has no witness; give the watcher too</li><li>Intellectualising instead of feeling &mdash; the head cannot do devotion; only the heart can</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Can devotion be practised without believing in God?</summary>
+      <div class="qa-body"><p class="src">Chapter 60, "Devotion Frees"</p><p>Osho says absolutely: devotion to truth, to beauty, to nature, to existence itself &mdash; all work. Even devotion to one&rsquo;s own inquiry. What matters is the quality of TOTAL self-giving, not the theological framework. A scientist lost in wonder at the cosmos is more devoted than a believer mechanically repeating prayers. The intensity of self-giving is everything; the belief system is nothing.</p></div>
+    </details>
+    <details><summary>Why only two words &mdash; the shortest sutra?</summary>
+      <div class="qa-body"><p class="src">Chapter 60</p><p>Osho explains: because devotion cannot be taught through long explanation. Either you know the taste of total self-giving or you do not. Words cannot convey it &mdash; only experience can. Two words are sufficient: devotion frees. Try it. The experience will teach you everything that words cannot. The brevity of the sutra IS the teaching &mdash; devotion is simple, direct, and needs no elaboration. It is the heart speaking to the heart in the fewest possible words.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Devotion reverses the direction of attention. Normally all attention flows INWARD (self-referential processing, the default mode network). Devotion redirects ALL attention OUTWARD toward the beloved. When the stream of self-attention is completely redirected, the self-structure loses its fuel and temporarily dissolves. Freedom is the experiential result of this dissolution &mdash; no self means no prison.</p>
+    <p><strong>Research on self-transcendent emotions:</strong> Studies on awe, gratitude, and love show that these emotions reliably reduce self-referential thinking and increase prosocial behaviour. The mechanism is identical to what this technique produces: when the heart opens fully toward something greater, the small self becomes transparent. This is measurable, replicable, and universal across cultures.</p>
+    <div class="essence"><strong>One-line essence</strong>Two words contain the entire path: Devotion frees. Pour yourself out so totally that no one remains to be imprisoned. The empty vessel IS freedom.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t2"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 3 ============================ -->
+<article class="technique" id="t3" data-tech="3">
+  <div class="technique-head"><span>Technique 110 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t3">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Heart &amp; Devotion &middot; <strong>Tags:</strong> love &middot; filling &middot; becoming &middot; all-sides</div>
+  <blockquote class="sutra">Feel love filling you from all sides, and become love itself.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Instead of directing love outward, RECEIVE it from all directions. Feel the universe loving you &mdash; the sun, the air, the earth, other beings. Let love pour IN until you are so full you become love itself. Most people only know how to give love or seek love. This technique teaches the rarest skill: how to RECEIVE love from existence &mdash; and in that receiving, become it.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Find a receptive posture:</strong> Sit or lie with arms slightly open, palms upward. The posture should say &ldquo;receiving&rdquo; &mdash; not closed, not protected, not braced. Open the chest. Soften the belly. Let the body be a vessel with no lid &mdash; open to what comes from all directions.</li>
+      <li><strong>Feel love from below:</strong> Begin with the earth. Feel the ground beneath you as an expression of love &mdash; it holds you, supports you, has held you your entire life without ever dropping you. The gravity that keeps you grounded is earth&rsquo;s love. Feel this love rising up through your body from below. Warm, solid, unconditional.</li>
+      <li><strong>Feel love from above:</strong> Now feel the sky &mdash; the sun that warms you, the rain that nourishes, the stars that shine even when you are not looking. The sky pours its gifts downward constantly, asking nothing in return. Feel this cosmic generosity streaming down from above, entering through the crown of the head. Light, warm, infinite.</li>
+      <li><strong>Feel love from all sides:</strong> The air touches your skin &mdash; that is love. The sounds of life reach your ears &mdash; that is love. The colours of the world enter your eyes &mdash; that is love. Other beings exist nearby, breathing the same air &mdash; that is love. Feel love pressing in from every direction simultaneously. You are SURROUNDED by love. Immersed in it.</li>
+      <li><strong>Let it pour in:</strong> Stop resisting. Stop filtering. Stop deciding what is love and what is not. EVERYTHING is love &mdash; every sensation, every sound, every breath. Let it all pour in without defence. The heart is a lake and existence is rain &mdash; let the lake fill without limit. There is no overflow &mdash; the heart expands to receive.</li>
+      <li><strong>Feel yourself filling:</strong> As love pours in from all directions, feel yourself filling up. The heart fills first. Then the chest. Then the belly, the limbs, the head. Every cell becomes saturated with love. You are not creating this love &mdash; you are RECEIVING it. It was always pouring toward you; you simply were not open to receive.</li>
+      <li><strong>The tipping point &mdash; becoming:</strong> At some point, filling becomes BEING. You cannot tell where the love ends and you begin. The receiver and the received merge. You don&rsquo;t HAVE love; you ARE love. The boundary between inside and outside dissolves. There is only love &mdash; no lover, no beloved, no direction. Just love everywhere, as everything.</li>
+      <li><strong>Rest in being love:</strong> Once the merger happens, rest in it. There is nothing to do, nowhere to go, nothing to achieve. You are love. Not metaphorically &mdash; experientially. Every cell vibrates with it. Every thought is made of it. Every breath is it. Rest here as long as the state holds naturally.</li>
+      <li><strong>Carry it into the day:</strong> When the formal practice ends, maintain the receptive quality. Walking down the street: feel love coming from the trees, the buildings, the strangers. Cooking dinner: feel love in the food, the water, the fire. The world never stops pouring love &mdash; you only stop receiving it. Keep receiving.</li>
+      <li><strong>The reversal:</strong> This technique reverses the usual spiritual effort. Most techniques ask you to DO something &mdash; concentrate, witness, inquire. This one asks you to RECEIVE. To stop doing and simply open. For many people (especially caregivers and overgivers), this is the most radical and transformative instruction possible: let yourself be loved. It is enough.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner-friendly</dd>
+    <dt>Duration</dt><dd>20&ndash;30 min</dd><dt>Posture</dt><dd>Seated or lying, open posture, palms up</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Everyone; especially people who give more than they receive; caregivers; those who feel unloved or unlovable; anyone who finds it hard to accept love; those exhausted from always being the strong one</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>A tangible warmth spreading through the body as love is received from all directions</li><li>Tears of gratitude &mdash; not sadness but the heart melting under the weight of so much love</li><li>A feeling of being held, supported, cared for by existence itself</li><li>The boundary between self and world softening &mdash; less &ldquo;me here, world there&rdquo;</li><li>Moments of merger where you cannot distinguish yourself from love</li><li>A growing ability to receive compliments, help, and affection in daily life without deflecting</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Trying to create love mentally rather than receiving it &mdash; this is a RECEIVING practice, not a visualisation</li><li>The belief &ldquo;I don&rsquo;t deserve love&rdquo; blocking reception &mdash; notice this belief and let it dissolve; the earth does not check your worthiness before holding you</li><li>Confusing this with affirmations (&ldquo;I am loved&rdquo;) &mdash; this is not a mental belief but a FELT experience of love actually entering</li><li>Rushing to the &ldquo;becoming&rdquo; phase before truly filling &mdash; be patient; the merger cannot be forced; it happens naturally when fullness is total</li><li>Only practising formally and not carrying the receptive quality into daily life &mdash; the real transformation is in maintaining openness throughout the day</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How can everything be love?</summary>
+      <div class="qa-body"><p class="src">Chapter 70, "Becoming Love"</p><p>Osho explains: this is not a philosophical claim but a perceptual shift. When the heart is truly open and receiving, EVERYTHING is experienced as love &mdash; because love is the nature of existence when the filter of the ego is removed. The ego divides experience into &ldquo;loving&rdquo; and &ldquo;unloving,&rdquo; &ldquo;pleasant&rdquo; and &ldquo;unpleasant.&rdquo; Without the ego&rsquo;s filtering, all experience is simply existence TOUCHING you &mdash; and that touch is love. Even rain, even wind, even difficulty &mdash; when received without resistance &mdash; is experienced as love&rsquo;s touch.</p></div>
+    </details>
+    <details><summary>Why &ldquo;from all sides&rdquo; rather than from one direction?</summary>
+      <div class="qa-body"><p class="src">Chapter 70</p><p>Osho says: &ldquo;from all sides&rdquo; prevents the ego from selecting and filtering. If love comes from one direction, the ego can still maintain itself: &ldquo;Love comes from THERE but not from here.&rdquo; When love comes from ALL sides simultaneously, the ego has nowhere to stand, nothing to exclude, no position to maintain. It is overwhelmed and dissolved by the omnidirectionality of love. This is why the technique is so powerful &mdash; it leaves no escape route for the ego.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Most psychological suffering comes from a felt sense of separation &mdash; &ldquo;I am here alone, the world is there.&rdquo; This technique dissolves that separation by inverting the usual direction of love. Instead of reaching OUT (which reinforces the sense of distance), you open to love coming IN (which dissolves the boundary). When love is felt as coming from everywhere simultaneously, the experiential boundary between self and world collapses. You become part of the field rather than separate from it.</p>
+    <p><strong>Positive psychology research:</strong> Studies on &ldquo;loving-kindness meditation&rdquo; show that receiving love (even imagined) activates the same neural circuits as actually being loved &mdash; reducing cortisol, increasing oxytocin, and activating reward circuits. This technique is a more radical version: not just receiving love from one source but from ALL of existence simultaneously. The neurological effect is proportionally more powerful.</p>
+    <div class="essence"><strong>One-line essence</strong>Stop giving for a moment and RECEIVE. The universe has been pouring love toward you since birth. Open, fill, overflow &mdash; and discover you are not IN love; you ARE love.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t3"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 4 ============================ -->
+<article class="technique" id="t4" data-tech="4">
+  <div class="technique-head"><span>Technique 111 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t4">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Heart &amp; Devotion &middot; <strong>Tags:</strong> music &middot; feeling &middot; total &middot; devotion</div>
+  <blockquote class="sutra">As you sing, or listen to music, enter the feeling totally &mdash; become the feeling.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Use music (devotional songs, bhajans, any heart-music) as a vehicle. Don&rsquo;t listen FROM the head &mdash; let the music enter the heart. Become the feeling the music evokes until there is no listener, only the devotional quality. Music dissolves the boundary between experiencer and experience more easily than silence can &mdash; because music bypasses the thinking mind and speaks directly to the heart.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Choose heart-music:</strong> Select music that moves you EMOTIONALLY, not intellectually. Devotional songs, bhajans, kirtan, gospel, Sufi qawwali, or any music that makes your heart swell. It doesn&rsquo;t need to be religious &mdash; a love song, a cello concerto, a folk lament. The criterion is: does it open your heart? Does it make you FEEL deeply?</li>
+      <li><strong>Create the space:</strong> Dim lights. Sit comfortably or lie down. Use good headphones or speakers that let the music surround you. Remove all other sensory distractions. For the next 20&ndash;30 minutes, music will be your ENTIRE world. Nothing else exists.</li>
+      <li><strong>Begin listening from the heart:</strong> Press play. But don&rsquo;t listen from the head (analysing the melody, recognising the instruments, thinking about the lyrics). FEEL the music in your chest. Let it enter the heart centre directly. The ears are just the doorway &mdash; the destination is the heart.</li>
+      <li><strong>Let the music take over:</strong> Stop being a &ldquo;listener&rdquo; &mdash; let the music PLAY you. You are not consuming the music; the music is consuming you. Let it move your body if it wants to &mdash; sway, nod, rock. Let it move your emotions &mdash; cry, smile, tremble. Let it move your breath. Give yourself completely to whatever the music does to you.</li>
+      <li><strong>Enter the feeling:</strong> As the music evokes feelings &mdash; longing, love, joy, devotion, tenderness &mdash; enter those feelings TOTALLY. Don&rsquo;t observe them from outside (&ldquo;how interesting, I feel moved&rdquo;). BECOME them. If the music creates longing, BE longing. If it creates devotion, BE devotion. If it creates ecstasy, BE ecstasy. No distance between you and the feeling.</li>
+      <li><strong>Dissolve into the feeling:</strong> At some point, the distinction between the music, the feeling, and you disappears. There is no listener hearing music that creates feeling. There is only FEELING &mdash; unified, total, without subject or object. You have become the feeling. This is the meditation &mdash; not something that happens before or after the music, but IN the music. The music IS the technique.</li>
+      <li><strong>Sing if called:</strong> If the music invites you to sing along, SING. Singing deepens the dissolution because now the music is also coming FROM you, not just TO you. The boundary dissolves even faster when you are both receiver and creator. Let the singing come from the heart, not the throat. Don&rsquo;t worry about pitch or beauty &mdash; just pour the heart out through the voice.</li>
+      <li><strong>The silence after:</strong> When the music ends, remain still. In the silence that follows total musical absorption, the heart is completely open, soft, vulnerable, and empty. This post-music silence is profoundly meditative &mdash; often MORE so than formal meditation. The music has done the work of emptying the mind; now rest in the result.</li>
+      <li><strong>Extend to daily listening:</strong> You can practise this with any music, anytime. Commuting, cooking, walking &mdash; if music is playing, practise entering it totally. Let every song become an opportunity for the heart to open and the self to dissolve. Life becomes a continuous concert of devotion.</li>
+      <li><strong>Beyond music &mdash; any sound:</strong> Once you master entering music totally, extend to ALL sound. Rain on the roof. Birds at dawn. Traffic. A loved one&rsquo;s voice. Every sound can be entered as feeling. Every sound is music when the heart receives it. The whole world becomes a devotional song.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;<span class="off">&#9733;&#9733;&#9733;&#9733;</span></span> &nbsp;Very easy</dd>
+    <dt>Duration</dt><dd>20&ndash;40 min (length of music)</dd><dt>Posture</dt><dd>Any &mdash; sitting, lying, dancing, swaying</dd><dt>Eyes</dt><dd>Closed (preferred) or soft-focused</dd><dt>Best for</dt><dd>Everyone; especially music lovers; those who find silence intimidating; emotional types; anyone who has ever been moved to tears by a song; people who &ldquo;can&rsquo;t meditate&rdquo; in silence</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>You forget yourself during the music &mdash; time passes without notice</li><li>The body moves spontaneously &mdash; swaying, rocking, dancing without deliberate choice</li><li>Strong emotions arise freely &mdash; tears, joy, ecstasy &mdash; without resistance or embarrassment</li><li>The distinction between you and the music disappears &mdash; you ARE the melody</li><li>The silence after feels electric, alive, deeply peaceful</li><li>A growing sensitivity to sound in daily life &mdash; everything sounds more beautiful, more meaningful</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Listening FROM the head (analysing harmony, technique, lyrics) instead of feeling from the heart</li><li>Choosing music that stimulates the mind rather than opens the heart &mdash; complex progressive music may be too intellectual</li><li>Maintaining the &ldquo;listener&rdquo; position &mdash; observing yourself being moved rather than actually being moved</li><li>Judging your response (&ldquo;I should be feeling more&rdquo;) &mdash; this keeps you in the head; just feel whatever comes, even if it is subtle</li><li>Using music as background rather than giving it total attention &mdash; this is not passive listening; it is total surrender to sound</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does music bypass the mind so effectively?</summary>
+      <div class="qa-body"><p class="src">Chapter 71, "Become The Feeling"</p><p>Osho explains: the thinking mind operates through words and logic. Music bypasses both &mdash; it is non-verbal and non-logical. It speaks directly to the emotional brain, the body, the heart. This is why even people who are intellectually defended (philosophers, scientists, skeptics) can be moved to tears by music. Music enters through a door the intellect cannot guard. That is its power as a spiritual technique &mdash; it reaches parts of consciousness that no verbal teaching can reach.</p></div>
+    </details>
+    <details><summary>What kind of music works best?</summary>
+      <div class="qa-body"><p class="src">Chapter 71</p><p>Osho says: whatever opens YOUR heart. For some it is Indian classical music; for others, Western devotional hymns; for others, a simple folk melody. The key is: does it make you feel? Does it bypass your intellect and reach your heart directly? If yes, it works. If it makes you THINK (about structure, technique, meaning), it is not the right music for this technique. Find what makes you FEEL &mdash; deeply, simply, without analysis. That is your music.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Music activates brain regions associated with emotion, reward, and body-movement while simultaneously suppressing the default mode network (self-referential thinking). This dual effect &mdash; amplifying feeling while silencing the inner narrator &mdash; creates a natural state of ego-dissolution. Research shows that music-induced &ldquo;chills&rdquo; (frisson) correlate with dopamine release in the same brain regions activated by spiritual experiences. Music is a neurochemical shortcut to transcendence.</p>
+    <p><strong>Music therapy research:</strong> Studies show that group singing and devotional music reduce cortisol, increase oxytocin (the &ldquo;bonding hormone&rdquo;), and produce measurable shifts toward more open, connected, less self-focused states. This technique simply makes these effects INTENTIONAL and TOTAL rather than incidental.</p>
+    <div class="essence"><strong>One-line essence</strong>Don&rsquo;t listen to music &mdash; let music listen through you. Enter the feeling it creates so totally that no listener remains. You and the music and the feeling become one &mdash; and that oneness is the divine.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t4"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 5 ============================ -->
+<article class="technique" id="t5" data-tech="5">
+  <div class="technique-head"><span>Technique 112 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t5">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Heart &amp; Devotion &middot; <strong>Tags:</strong> eternity &middot; this-moment &middot; heart &middot; peace</div>
+  <blockquote class="sutra">Wherever your mind is settled, feel this moment as the eternal.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Right now, wherever attention rests &mdash; feel THIS moment as the only moment that has ever existed. It is eternal. The heart opens when time stops because the heart lives in eternity, not in time. Let this moment be enough. Let it be everything. The mind lives in time (past and future); the heart lives in eternity (this moment, infinitely deep). When you feel the moment as eternal, you shift from mind to heart.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Stop wherever you are:</strong> This technique requires no preparation, no special posture, no particular time. RIGHT NOW, wherever you are, whatever you are doing &mdash; stop the inner rush. Don&rsquo;t change anything external. Just shift your relationship with THIS moment.</li>
+      <li><strong>Feel where your mind has settled:</strong> Notice what your attention is resting on right now. Perhaps these words. Perhaps a sound. Perhaps a sensation in the body. Perhaps a feeling. Whatever it is &mdash; don&rsquo;t change it. Let attention rest where it naturally is. The sutra says &ldquo;wherever your mind is settled&rdquo; &mdash; any content will do.</li>
+      <li><strong>Now feel this moment as eternal:</strong> This is the shift. Not &ldquo;this moment will last forever&rdquo; (that is thinking about time). But: this moment IS eternity. There has never been another moment. There will never be another moment. Only this one exists. It is not a moment IN time &mdash; it is the timeless appearing AS a moment.</li>
+      <li><strong>Drop past and future:</strong> The past is a memory (not real now). The future is imagination (not real now). Only THIS is real. Let the past dissolve completely &mdash; it never was. Let the future dissolve &mdash; it never will be. There is only this moment, stretching in all directions into infinity. Not a point on a timeline but the ONLY reality.</li>
+      <li><strong>Feel the depth:</strong> When past and future drop, THIS moment becomes infinitely deep. It is not a thin slice of time &mdash; it is bottomless. Like a still lake that looks shallow but is actually miles deep. Settle into the depth. Let your awareness sink down into the eternity of NOW. The deeper you go, the more the heart opens.</li>
+      <li><strong>The heart and eternity:</strong> Notice: when time stops, the heart opens. This is because the heart lives in eternity &mdash; it is the mind that lives in time. The mind needs past and future to exist (it is made of memories and plans). The heart needs only THIS moment. When you give it only this moment, the heart has everything it needs. It relaxes, opens, and reveals its nature: love.</li>
+      <li><strong>Let this moment be enough:</strong> The deepest heart-wound is the feeling of insufficiency &mdash; &ldquo;this is not enough; I need more; the next moment will be better.&rdquo; This technique heals that wound directly. THIS moment is enough. It is complete. It lacks nothing. Feel the radical sufficiency of now. Nothing needs to be added. Nothing needs to change. This is it. This is everything.</li>
+      <li><strong>Feel peace:</strong> When this moment is felt as eternal and sufficient, peace arises naturally. Not the peace of having solved problems (that is temporary), but the peace of realising there is no time in which problems exist. Past problems are memories; future problems are imaginations. In the eternal now, there is only peace. The heart rests in its natural state.</li>
+      <li><strong>Practise at random moments:</strong> Set no schedule. Instead, practise this AT RANDOM throughout the day. While washing dishes: &ldquo;this moment is eternal.&rdquo; While walking: &ldquo;this moment is all there is.&rdquo; While in conversation: &ldquo;this moment is the only moment.&rdquo; Each random practice brings you home to the heart&rsquo;s eternity.</li>
+      <li><strong>The last technique:</strong> This is technique 112 of 112 &mdash; the final sutra in the Vigyan Bhairav Tantra. It is perhaps the simplest and the most profound. No special practice needed, no special conditions, no preparation. Wherever you are, whatever is happening: feel this moment as the eternal. The entire tantra is contained in this one instruction. Begin here. End here. Be here.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;&#9733;<span class="off">&#9733;</span></span> &nbsp;Advanced (simple to understand, profound to embody)</dd>
+    <dt>Duration</dt><dd>Any &mdash; from 3 seconds to infinity</dd><dt>Posture</dt><dd>Any &mdash; whatever you are doing</dd><dt>Eyes</dt><dd>Open or closed &mdash; as you are</dd><dt>Best for</dt><dd>Everyone; especially those who feel time-pressure; busy people who cannot set aside meditation time; philosophers; anyone seeking peace without conditions</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>A sudden dropping-away of urgency &mdash; the inner rush stops</li><li>THIS moment feels richer, deeper, more vivid than usual</li><li>A sense of timelessness that is not dull but intensely alive</li><li>The heart relaxes and opens spontaneously when time-pressure dissolves</li><li>The feeling &ldquo;this is enough&rdquo; replacing the usual &ldquo;I need more&rdquo;</li><li>Growing peace that is not dependent on circumstances &mdash; it exists IN the moment regardless of content</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Making it a mental exercise (&ldquo;I believe this moment is eternal&rdquo;) instead of a felt shift &mdash; FEEL it, don&rsquo;t think it</li><li>Trying to stop time through effort &mdash; time stops when you stop running; you cannot stop it by trying harder</li><li>Confusing timelessness with boredom or dullness &mdash; eternity is infinitely ALIVE, not static</li><li>Only practising in pleasant moments and avoiding it in difficult ones &mdash; the eternal includes everything; practise in difficulty too</li><li>Thinking you need to maintain the feeling permanently &mdash; even a flash of eternity transforms; don&rsquo;t create pressure</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why is this the last technique &mdash; the 112th?</summary>
+      <div class="qa-body"><p class="src">Chapter 72, "The Eternal Moment"</p><p>Osho explains: because it is the simplest, the most universal, and the most complete. All 111 techniques before this are preparations &mdash; ways to quiet the mind, open the heart, dissolve the ego. But this technique needs no preparation. It can be done right now, by anyone, in any circumstance. It is Shiva&rsquo;s final gift to Devi: you don&rsquo;t need any technique at all. Just feel this moment as the eternal. The 112th technique makes all others unnecessary &mdash; it IS the destination all others point toward.</p></div>
+    </details>
+    <details><summary>What does &ldquo;wherever your mind is settled&rdquo; mean?</summary>
+      <div class="qa-body"><p class="src">Chapter 72</p><p>Osho says: it means DON&rsquo;T CHANGE ANYTHING. Whatever you are experiencing right now &mdash; don&rsquo;t improve it, don&rsquo;t replace it, don&rsquo;t spiritualise it. It is already perfect because it is already eternal. &ldquo;Wherever your mind is settled&rdquo; means: you don&rsquo;t need to be in meditation, in a temple, in a special state. Wherever you ARE &mdash; that is the place. Whatever you are doing &mdash; that is the practice. The eternal is not somewhere else; it is HERE, disguised as the ordinary.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Neuroscience shows that the sense of time passing is constructed by the brain &mdash; specifically by the hippocampus encoding sequences and the prefrontal cortex projecting future scenarios. When these systems quiet down (in meditation, flow states, or awe), the experience of time slows or stops. This technique deliberately triggers that timelessness by reframing the present moment as eternal. It is a cognitive reappraisal that produces genuine neurological shifts &mdash; the time-construction machinery quiets, and what remains is pure presence.</p>
+    <p><strong>Existential psychology:</strong> Viktor Frankl, Rollo May, and other existential psychologists noted that the most profound moments of human life are experienced as timeless &mdash; love, creativity, peak experiences. This technique makes that timelessness available ON DEMAND rather than waiting for special circumstances. It domesticates eternity &mdash; brings it from rare peak experiences into ordinary Tuesday afternoons.</p>
+    <div class="essence"><strong>One-line essence</strong>This moment is not a slice of time. It is eternity itself, wearing the disguise of &ldquo;now.&rdquo; Feel it. The heart opens when time stops &mdash; because the heart has always lived in the eternal.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t5"></span></div>
+</article>
+
+<footer>
+  <p>You have reached the end of <em>The Techniques for Heart &amp; Devotion</em>.</p>
+  <p>This is Technique 112 &mdash; the final sutra of the Vigyan Bhairav Tantra. The circle is complete.</p>
+  <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+</footer>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  const html=document.documentElement;
+  const themeBtn=document.getElementById('theme-btn');
+  const stored=localStorage.getItem('vbt-theme');
+  if(stored)html.setAttribute('data-theme',stored);
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  themeBtn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next)});
+
+  const progress=document.querySelector('.progress');
+  function updateProgress(){const h=document.documentElement;const s=h.scrollTop;const t=h.scrollHeight-h.clientHeight;progress.style.width=t>0?(s/t*100)+'%':'0'}
+  document.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+  const FAV_KEY='vbt-heart-favs';
+  const favs=new Set(JSON.parse(localStorage.getItem(FAV_KEY)||'[]'));
+  document.querySelectorAll('.fav-btn').forEach(btn=>{const id=btn.dataset.fav;if(favs.has(id)){btn.classList.add('on');btn.textContent='\u2665'}btn.addEventListener('click',()=>{if(favs.has(id)){favs.delete(id);btn.classList.remove('on');btn.textContent='\u2661'}else{favs.add(id);btn.classList.add('on');btn.textContent='\u2665'}localStorage.setItem(FAV_KEY,JSON.stringify([...favs]))})});
+
+  function playBell(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=432;g.gain.setValueAtTime(0.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.4,ctx.currentTime+0.02);g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+4.5);o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+4.6)}catch(e){}}
+  document.querySelectorAll('.timer-btn').forEach(btn=>{let interval=null;let endTime=0;const minutes=parseInt(btn.dataset.timer,10);const techId=btn.closest('article.technique').id;const display=document.querySelector('[data-display="'+techId+'"]');const original=btn.textContent;function fmt(ms){const s=Math.max(0,Math.ceil(ms/1000));const m=Math.floor(s/60),r=s%60;return m+':'+(r<10?'0':'')+r}function stop(natural){if(interval)clearInterval(interval);interval=null;btn.classList.remove('running');btn.textContent=original;if(natural){display.textContent='Done.';playBell();setTimeout(()=>{display.textContent=''},6000)}else{display.textContent=''}}btn.addEventListener('click',()=>{if(interval){stop(false);return}endTime=Date.now()+minutes*60*1000;btn.classList.add('running');btn.textContent='Stop';const tick=()=>{const left=endTime-Date.now();if(left<=0){stop(true);return}display.textContent=fmt(left)+' remaining'};tick();interval=setInterval(tick,500)})});
+
+  const focusBtn=document.getElementById('focus-btn');
+  let observer=null;
+  focusBtn.addEventListener('click',()=>{const on=!document.body.classList.contains('focus');document.body.classList.toggle('focus',on);focusBtn.setAttribute('aria-pressed',on);if(on&&!observer){observer=new IntersectionObserver((entries)=>{entries.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting))},{threshold:0.4});document.querySelectorAll('article.technique').forEach(a=>observer.observe(a))}});
+
+  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+
+  document.addEventListener('keydown',(e)=>{if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;if(e.key==='j'||e.key==='k'){const arts=[...document.querySelectorAll('article.technique')];const cur=arts.findIndex(a=>a.getBoundingClientRect().top>-100);const idx=e.key==='j'?Math.min(arts.length-1,cur+1):Math.max(0,cur-1);if(arts[idx])arts[idx].scrollIntoView({behavior:'smooth',block:'start'})}});
+
+  const GLOSSARY={'Vigyan Bhairav Tantra':'A ~5,000-year-old Sanskrit text: 112 meditation techniques as a dialogue between Shiva and Devi.','devotion':'Total self-giving toward a beloved. Not dependence but the heart\u2019s way of dissolving the ego through love.','bhakti':'The yoga of devotion \u2014 the path to the divine through love rather than knowledge or action.','heart centre':'The energetic centre in the middle of the chest (anahata chakra) \u2014 seat of love and compassion.','surrender':'Releasing the ego\u2019s grip \u2014 not passivity but active letting-go. The heart\u2019s natural movement in love.','bhajan':'Devotional song \u2014 music designed to open the heart and dissolve the singer into feeling.','eternity':'Not endless time but TIMELESSNESS \u2014 the quality of this moment when fully inhabited.','divine love':'Love without object or condition \u2014 the overflowing quality of the heart when filled to capacity.','ego-dissolution':'Loss of the sense of being a separate self. In heart techniques, happens through love rather than inquiry.'};
+  function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+  const gTerms=Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length);
+  document.querySelectorAll('article.technique, header.hero').forEach(article=>{gTerms.forEach(term=>{const re=new RegExp('\\b('+escapeRegex(term)+')\\b','i');const walker=document.createTreeWalker(article,NodeFilter.SHOW_TEXT,{acceptNode:(node)=>{const p=node.parentElement;if(!p)return NodeFilter.FILTER_REJECT;if(p.closest('script,style,.glossary-term,.glossary-block,.controls,.progress,.timer-display,.technique-head,.actions'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});let n;while((n=walker.nextNode())){const m=n.textContent.match(re);if(m){const text=n.textContent;const before=text.slice(0,m.index);const after=text.slice(m.index+m[1].length);const span=document.createElement('span');span.className='glossary-term';span.dataset.term=term;span.tabIndex=0;span.textContent=m[1];const frag=document.createDocumentFragment();if(before)frag.appendChild(document.createTextNode(before));frag.appendChild(span);if(after)frag.appendChild(document.createTextNode(after));n.replaceWith(frag);return}}})});
+
+  let gTip=null;
+  function showGTip(e){const el=e.currentTarget;const term=el.dataset.term;const def=GLOSSARY[term];if(!def)return;if(!gTip){gTip=document.createElement('div');gTip.className='glossary-tooltip';document.body.appendChild(gTip)}gTip.innerHTML='<strong></strong>';gTip.firstChild.textContent=term;gTip.appendChild(document.createTextNode(def));const rect=el.getBoundingClientRect();gTip.style.top=(rect.bottom+window.scrollY+6)+'px';let left=rect.left+window.scrollX;if(left+290>window.innerWidth+window.scrollX)left=window.innerWidth+window.scrollX-296;if(left<8)left=8;gTip.style.left=left+'px';gTip.classList.add('show')}
+  function hideGTip(){if(gTip)gTip.classList.remove('show')}
+  document.querySelectorAll('.glossary-term').forEach(el=>{el.addEventListener('mouseenter',showGTip);el.addEventListener('focus',showGTip);el.addEventListener('mouseleave',hideGTip);el.addEventListener('blur',hideGTip);el.addEventListener('click',(e)=>{e.preventDefault();showGTip(e);setTimeout(hideGTip,6000)})});
+})();
+</script>
+</body>
+</html>

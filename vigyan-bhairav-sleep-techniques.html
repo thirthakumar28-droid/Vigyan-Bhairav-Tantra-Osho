@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 5 sleep and dream techniques from Osho's Vigyan Bhairav Tantra — distilled, with practice instructions, common pitfalls, questions from the book, and modern commentary.">
+<title>The Techniques for Sleep &amp; Dream — Vigyan Bhairav Tantra</title>
+<style>
+:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:200;transition:width .15s ease-out;box-shadow:0 0 8px var(--accent-soft)}
+.controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
+.controls button{width:36px;height:36px;border-radius:999px;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.controls button:hover,.controls button[aria-pressed="true"]{background:var(--bg-soft);color:var(--accent)}
+.controls button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--accent-soft)}
+main{max-width:680px;margin:0 auto;padding:5rem 1.5rem 2rem}
+header.hero{text-align:center;padding:2rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink)}
+.hero .lede{color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;font-size:1.05rem;font-style:italic}
+.hero .meta{font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+.jumplinks{margin-top:2.5rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:6px;padding:1.25rem 1.5rem;text-align:left}
+.jumplinks h2{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 1rem;font-weight:600}
+.jumplinks ol{margin:0;padding:0;list-style:none;counter-reset:jl}
+.jumplinks li{counter-increment:jl;border-top:1px solid var(--rule);padding:.55rem 0}
+.jumplinks li:first-child{border-top:0}
+.jumplinks a{text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:.7rem;font-size:.95rem;transition:color .15s}
+.jumplinks a::before{content:counter(jl);font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faint);min-width:1.5rem}
+.jumplinks a:hover{color:var(--accent)}
+.jumplinks .sub{color:var(--ink-faint);font-style:italic;font-size:.85rem}
+article.technique{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:2rem 2rem 1.75rem;margin:0 0 2.5rem;box-shadow:var(--shadow);scroll-margin-top:5rem;position:relative}
+.technique-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.4rem}
+.fav-btn{background:transparent;border:0;cursor:pointer;font-size:1.3rem;color:var(--ink-faint);transition:color .2s,transform .2s;line-height:1;padding:.2rem}
+.fav-btn:hover{transform:scale(1.15);color:var(--accent)}
+.fav-btn.on{color:var(--accent)}
+.tags{font-family:var(--sans);font-size:.75rem;color:var(--ink-faint);margin-bottom:1.5rem;letter-spacing:.02em}
+.tags strong{color:var(--ink-soft);font-weight:600}
+blockquote.sutra{margin:1rem 0 2rem;padding:1.75rem 1.5rem;background:var(--sutra-bg);border-left:3px solid var(--accent);border-radius:4px;font-family:var(--serif);font-size:1.18rem;font-style:italic;line-height:1.55;color:var(--ink);text-align:center;quotes:"\201C" "\201D"}
+blockquote.sutra::before{content:open-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.4em;margin-right:.1em}
+blockquote.sutra::after{content:close-quote;color:var(--accent-soft);font-size:1.6em;line-height:0;vertical-align:-.6em;margin-left:.1em}
+.section{margin:1.75rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule)}
+.section h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .9rem;font-weight:600}
+.section p{margin:.5rem 0}
+.section ol,.section ul{margin:.5rem 0;padding-left:1.4rem}
+.section li{margin:.35rem 0;line-height:1.65}
+.plain p{font-size:1.02rem;color:var(--ink-soft)}
+.facts dl{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.25rem;margin:0;font-family:var(--sans);font-size:.92rem}
+.facts dt{color:var(--ink-faint);font-weight:600;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase;padding-top:.15rem}
+.facts dd{margin:0;color:var(--ink)}
+.stars{color:var(--accent);letter-spacing:.05em}
+.stars .off{color:var(--rule)}
+.signs ul,.pitfalls ul{list-style:none;padding-left:0}
+.signs li::before{content:"\2022";color:var(--accent);margin-right:.7rem;font-weight:700}
+.pitfalls li::before{content:"\2715";color:#a83232;margin-right:.7rem;font-weight:700;font-size:.9em}
+html[data-theme="dark"] .pitfalls li::before{color:#d96b6b}
+.qa details{border:1px solid var(--rule);border-radius:5px;background:var(--bg);margin:.5rem 0;transition:background .2s}
+.qa details[open]{background:var(--bg-soft)}
+.qa summary{padding:.85rem 1rem;cursor:pointer;font-style:italic;color:var(--ink);list-style:none;display:flex;align-items:flex-start;gap:.6rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"\203A";display:inline-block;color:var(--accent);font-style:normal;transition:transform .2s;margin-top:.05em;flex-shrink:0}
+.qa details[open] summary::before{transform:rotate(90deg)}
+.qa-body{padding:0 1rem 1rem 2rem}
+.qa-body .src{font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.5rem}
+.qa-body p{font-size:.95rem;color:var(--ink-soft);margin:.4rem 0}
+.commentary{background:var(--bg);border-radius:6px;border:1px dashed var(--rule);padding:1.25rem 1.4rem}
+.commentary h3{display:flex;align-items:center;gap:.5rem}
+.commentary h3::before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:999px}
+.commentary .label{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.4rem}
+.commentary p{font-size:.96rem;color:var(--ink-soft);margin:.6rem 0}
+.commentary .essence{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--rule);font-style:italic;color:var(--ink);font-size:1.02rem}
+.commentary .essence strong{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-style:normal;display:block;margin-bottom:.3rem;font-weight:600}
+.actions{margin-top:1.75rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.timer-btn{font-family:var(--sans);font-size:.9rem;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:.7rem 1.4rem;cursor:pointer;font-weight:500;letter-spacing:.02em;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:0 4px 12px -4px var(--accent)}
+.timer-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
+.timer-btn.running{background:#a83232}
+html[data-theme="dark"] .timer-btn.running{background:#c44}
+.timer-display{font-family:var(--sans);font-variant-numeric:tabular-nums;font-size:.95rem;color:var(--ink-faint)}
+body.focus article.technique{opacity:.25;transition:opacity .5s}
+body.focus article.technique.in-view{opacity:1}
+footer{text-align:center;padding:3rem 0 1rem;border-top:1px solid var(--rule);color:var(--ink-faint);font-family:var(--sans);font-size:.85rem}
+footer p{margin:.4rem 0}
+.about-block,.howto-block,.beginner-block,.glossary-block{margin-top:1.25rem;border-radius:6px;font-family:var(--sans);font-size:.92rem;text-align:left}
+.about-block,.glossary-block{background:var(--bg-card);border:1px solid var(--rule)}
+.about-block summary,.glossary-block summary{padding:.85rem 1.25rem;cursor:pointer;color:var(--ink-soft);list-style:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:flex;align-items:center}
+.about-block summary::-webkit-details-marker,.glossary-block summary::-webkit-details-marker{display:none}
+.about-block summary::before,.glossary-block summary::before{content:"+";margin-right:.6rem;color:var(--accent);font-weight:700;font-size:1.15rem;line-height:1;transition:transform .2s}
+.about-block[open] summary::before,.glossary-block[open] summary::before{content:"\2212"}
+.about-body,.glossary-body{padding:0 1.25rem 1.25rem;border-top:1px solid var(--rule)}
+.about-body p{font-family:var(--serif);margin:.8rem 0;line-height:1.65;color:var(--ink-soft)}
+.glossary-body dl{margin:.8rem 0 0;display:grid;gap:.35rem 1rem}
+.glossary-body dt{font-weight:700;color:var(--accent);font-size:.9rem;margin-top:.55rem}
+.glossary-body dd{margin:0;color:var(--ink-soft);font-family:var(--serif);font-size:.92rem;line-height:1.55}
+.howto-block{background:var(--sutra-bg);border-left:3px solid var(--accent);padding:1.25rem 1.5rem}
+.howto-block h3,.beginner-block h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 .7rem;font-weight:600}
+.howto-block p,.beginner-block p{margin:.5rem 0;font-family:var(--serif);line-height:1.65;color:var(--ink-soft)}
+.howto-block strong,.beginner-block strong{color:var(--ink)}
+.beginner-block{background:var(--bg-soft);border:1px dashed var(--accent-soft);padding:1.25rem 1.5rem}
+.beginner-block a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.beginner-block a:hover{border-bottom-color:var(--accent)}
+.disclaimer{font-size:.78rem;color:var(--ink-faint);font-style:italic;margin:1.25rem 0 0;text-align:center;line-height:1.5}
+.glossary-term{border-bottom:1px dotted var(--accent);cursor:help;color:inherit;padding:0 1px;transition:background .15s}
+.glossary-term:hover,.glossary-term:focus{background:var(--accent-soft);outline:none}
+.glossary-tooltip{position:absolute;background:var(--ink);color:var(--bg);padding:.7rem .9rem;border-radius:6px;font-family:var(--sans);font-size:.82rem;line-height:1.5;max-width:280px;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);z-index:300;opacity:0;pointer-events:none;transition:opacity .15s}
+.glossary-tooltip.show{opacity:1;pointer-events:auto}
+.glossary-tooltip strong{display:block;margin-bottom:.35rem;color:var(--accent-soft);text-transform:uppercase;font-size:.68rem;letter-spacing:.12em}
+@media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.actions,.fav-btn{display:none!important}article.technique{box-shadow:none;border:none;page-break-inside:avoid;padding:0;margin:0 0 1.5rem}blockquote.sutra{background:#f5f5f5;border-left:2px solid #888}main{max-width:none;padding:1rem}.about-block,.glossary-block,.howto-block,.beginner-block,.disclaimer{display:none!important}.glossary-term{background:none!important;border-bottom:1px dotted #888}}
+@media(max-width:600px){body{font-size:17px}article.technique{padding:1.5rem 1.25rem}.controls{top:.5rem;right:.5rem}blockquote.sutra{font-size:1.05rem;padding:1.25rem 1rem}.facts dl{grid-template-columns:1fr;gap:.1rem .5rem}.facts dt{padding-top:.5rem}main{padding:4rem 1rem 2rem}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<nav class="controls" aria-label="Reading controls">
+  <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+  <button id="focus-btn" aria-label="Toggle focus mode" title="Focus mode" aria-pressed="false">&#9678;</button>
+  <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
+</nav>
+<main>
+<header class="hero">
+  <div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 10 of 15</div>
+  <h1>The Techniques for Sleep &amp; Dream</h1>
+  <p class="lede">Five techniques that use the sleep transition, rhythmic movement, intense sensation, and bodily dissolution as doorways to conscious sleep. The threshold between waking and sleeping is a portal &mdash; cross it with awareness intact and you discover the immortal witness.</p>
+  <p class="meta">5 techniques &middot; ~8 min read &middot; works fully offline</p>
+  <details class="about-block">
+    <summary>About these techniques</summary>
+    <div class="about-body">
+      <p>These five techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The sleep and dream sutras form the tenth major category &mdash; using the sleep transition, death-like stillness, rhythmic movement, and dissolution to maintain awareness through the threshold where most people lose consciousness.</p>
+      <p>These techniques approach awakening through the nightly miracle of sleep. Every night you cross from waking to sleeping &mdash; from somebody to nobody, from self to no-self. Usually this happens unconsciously. These techniques teach you to cross that threshold WITH awareness. When you can sleep consciously, death holds no mystery &mdash; death is simply the final sleep.</p>
+    </div>
+  </details>
+  <aside class="howto-block">
+    <h3>How to use this page</h3>
+    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
+    <p><strong>Key principle:</strong> These sleep techniques work at the TRANSITION point &mdash; the hypnagogic threshold. The moment between waking and sleeping is the most vulnerable, most open, most magical moment of the day. These techniques teach you to STAY AWARE through it.</p>
+  </aside>
+  <aside class="beginner-block">
+    <h3>New to sleep meditation?</h3>
+    <p>Start with <a href="#t1">Technique 1 &mdash; lie down as dead</a> or <a href="#t5">Technique 5 &mdash; body dissolving into elements</a>. Both are done lying in bed, require no special preparation, and produce tangible results quickly. Practise every night for 21 nights.</p>
+  </aside>
+  <details class="glossary-block">
+    <summary>Glossary &mdash; unfamiliar terms?</summary>
+    <div class="glossary-body">
+      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+      <dl>
+        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+        <dt>hypnagogic</dt><dd>The transitional state between wakefulness and sleep &mdash; characterised by dream-like imagery, body numbness, and reduced critical thinking. The key portal these techniques exploit.</dd>
+        <dt>shavasana</dt><dd>Literally &ldquo;corpse pose&rdquo; in yoga &mdash; lying flat on the back, completely still, like a dead body. The foundation of Technique 1.</dd>
+        <dt>conscious sleep</dt><dd>Maintaining awareness while the body and mind enter sleep. The witness remains &mdash; you know you are sleeping while you sleep. Also called yoga nidra.</dd>
+        <dt>yoga nidra</dt><dd>&ldquo;Yogic sleep&rdquo; &mdash; a state of conscious deep sleep where awareness persists without content. The deepest rest possible while remaining aware.</dd>
+        <dt>dissolution</dt><dd>The feeling of the body&rsquo;s boundaries dissolving &mdash; melting back into the elements (earth, water, fire, air, space) from which it arose.</dd>
+        <dt>witness</dt><dd>The pure awareness that observes all states &mdash; waking, dreaming, sleeping &mdash; without being affected by any of them. What you truly are.</dd>
+        <dt>hypnagogic imagery</dt><dd>Spontaneous visual patterns, faces, landscapes that appear at the threshold of sleep. Signs that the transition is happening.</dd>
+        <dt>death posture</dt><dd>Lying completely still with no muscular engagement &mdash; mimicking a corpse to trigger the body&rsquo;s sleep mechanisms while maintaining mental alertness.</dd>
+      </dl>
+    </div>
+  </details>
+  <p class="disclaimer">Practise on your own discretion &mdash; these techniques are best done at bedtime and are inherently safe. If sleep disturbance occurs, reduce intensity and return to normal sleep hygiene for a few days before resuming. The goal is not insomnia but CONSCIOUS sleep.</p>
+  <nav class="jumplinks" aria-label="Techniques in this file">
+    <h2>Techniques in this file</h2>
+    <ol>
+      <li><a href="#t1"><span>Lie down as dead. Enraged in wrath, stay so.</span> <span class="sub">&middot; death posture</span></a></li>
+      <li><a href="#t2"><span>Without support for feet or hands, sit only on the buttocks</span> <span class="sub">&middot; sleep-entry centering</span></a></li>
+      <li><a href="#t3"><span>In a moving vehicle, by rhythmically swaying, experience</span> <span class="sub">&middot; rhythmic sleep</span></a></li>
+      <li><a href="#t4"><span>Pierce some point of your body with a pin</span> <span class="sub">&middot; sensation as sleep-depth</span></a></li>
+      <li><a href="#t5"><span>Think of your body as being made of cosmic essences</span> <span class="sub">&middot; elemental dissolution</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<!-- ============================ TECHNIQUE 1 ============================ -->
+<article class="technique" id="t1" data-tech="1">
+  <div class="technique-head"><span>Technique 103 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t1">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sleep &amp; Dream &middot; <strong>Tags:</strong> death-posture &middot; stillness &middot; shavasana</div>
+  <blockquote class="sutra">Lie down as dead. Enraged in wrath, stay so. Or stare without moving an eyelash. Or suck something and become the sucking.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Lie like a corpse &mdash; no movement. Feel as if dead. When the body is totally still and &ldquo;dead,&rdquo; consciousness separates from it. You discover you are not the body. The sutra offers four variations &mdash; death posture, frozen rage, unblinking stare, or total absorption in sucking &mdash; all creating such intense stillness or single-pointed focus that the self separates from the body and witnesses it from beyond.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Prepare for bed as normal:</strong> Complete your evening routine. Brush teeth, dim lights, put away screens. When you lie down in bed, this is your practice. No special setup required &mdash; the technique IS the transition from waking to sleep.</li>
+      <li><strong>Lie flat on your back:</strong> Arms at your sides, palms up or down &mdash; whichever is natural. Legs slightly apart. This is shavasana, the corpse pose. Feel the bed supporting your full weight. Let gravity take everything.</li>
+      <li><strong>Decide to be dead:</strong> This is the crucial inner shift. You are not &ldquo;relaxing&rdquo; &mdash; you are DEAD. A dead body cannot move a finger, cannot scratch an itch, cannot adjust position. Make a firm inner commitment: &ldquo;I will not move. I am dead.&rdquo; This commitment must be total.</li>
+      <li><strong>Surrender all muscular control:</strong> Starting from the feet, consciously release every muscle group. Feet &mdash; dead. Calves &mdash; dead. Thighs &mdash; dead. Pelvis, belly, chest &mdash; dead. Arms, hands, fingers &mdash; dead. Neck, jaw, face, eyes &mdash; dead. Even the tongue &mdash; let it fall back, lifeless. Feel the entire body as a corpse lying on the bed.</li>
+      <li><strong>Do not respond to the body:</strong> The body will test you. An itch will arise. An urge to swallow. A desire to adjust position. A restless leg. DO NOT RESPOND. A dead body does not scratch. Let every sensation arise, peak, and pass WITHOUT ANY RESPONSE. This is the death posture &mdash; total non-responsiveness.</li>
+      <li><strong>Feel the separation:</strong> After 10&ndash;15 minutes of absolute stillness, something remarkable happens: consciousness begins to SEPARATE from the body. You feel aware, alert, present &mdash; but the body feels distant, foreign, not-you. You are witnessing the body rather than being it. This is the discovery: you are not the body.</li>
+      <li><strong>Maintain awareness through the sleep transition:</strong> As the body sinks deeper into its death-stillness, sleep will approach. The hypnagogic imagery will begin &mdash; flashes of light, random images, a feeling of floating. STAY AWARE through this transition. Don&rsquo;t engage with the imagery, don&rsquo;t follow it &mdash; just witness.</li>
+      <li><strong>Enter sleep consciously:</strong> If you can maintain awareness through the hypnagogic transition, you will enter sleep KNOWING you are entering sleep. The body sleeps; you remain. This is yoga nidra &mdash; conscious sleep. Even if you only achieve this for moments before unconsciousness takes over, those moments are transformative.</li>
+      <li><strong>The morning insight:</strong> Upon waking, notice: something was aware even during sleep. You may not remember it clearly, but there is a sense of continuity &mdash; of something that was present through the night even when &ldquo;you&rdquo; were gone. That something is the witness &mdash; what you truly are.</li>
+      <li><strong>Practise every night:</strong> Make this your nightly ritual. Over 21 days, the periods of conscious sleep will extend. Some nights you will succeed beautifully; other nights sleep will take you immediately. Both are fine. The practice accumulates. Eventually, conscious sleep becomes your natural state.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner-friendly</dd>
+    <dt>Duration</dt><dd>20&ndash;45 min (until sleep comes)</dd><dt>Posture</dt><dd>Lying flat on back, corpse pose</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Everyone; especially those who want to use bedtime as practice time; people interested in lucid dreaming; those who fear death</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>The body feels increasingly distant, heavy, or numb after 10&ndash;15 minutes of stillness</li><li>A clear sense of being separate from the body &mdash; witnessing it rather than being it</li><li>Hypnagogic imagery arising with you AWARE of it rather than lost in it</li><li>Moments of knowing you are falling asleep while remaining conscious</li><li>Waking with a sense that awareness persisted through the night</li><li>Reduced fear of death &mdash; death feels like a familiar transition, not an unknown terror</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Moving even slightly &mdash; any movement resets the process; the commitment to stillness must be absolute</li><li>Trying too hard to stay awake &mdash; the goal is not insomnia but CONSCIOUS sleep; let sleep come, just maintain witness</li><li>Getting excited when the separation begins and thereby losing it &mdash; stay neutral, observing</li><li>Giving up after 5 minutes because &ldquo;nothing is happening&rdquo; &mdash; 15&ndash;20 minutes of total stillness is the minimum</li><li>Confusing physical relaxation with the death posture &mdash; relaxation still implies a living body; this technique requires feeling genuinely DEAD</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does the sutra combine death posture with rage, staring, and sucking?</summary>
+      <div class="qa-body"><p class="src">Chapter 66, "Lie Down As Dead"</p><p>Osho explains: all four variations share one principle &mdash; TOTALITY. Lie as dead TOTALLY. Be in rage TOTALLY (without acting on it). Stare TOTALLY without blinking. Suck TOTALLY until you become the sucking. The common thread is total absorption that leaves no energy for the ego. When absorption is total, the self drops. The death posture is the most accessible version for sleep practice &mdash; but any total absorption creates the same gap.</p></div>
+    </details>
+    <details><summary>Is this the same as yoga nidra?</summary>
+      <div class="qa-body"><p class="src">Chapter 66</p><p>Osho says: yoga nidra as taught today is a systematized version of this ancient sutra. The principle is identical &mdash; maintain awareness while the body enters sleep. Traditional yoga nidra uses body scanning and rotation of consciousness; this sutra uses the more direct method of simply being dead. Both arrive at the same place: conscious sleep, where the witness remains while the body-mind complex rests.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Sleep paralysis research shows that the body has a natural mechanism for disconnecting motor control during sleep (atonia). This technique deliberately invokes that mechanism through voluntary stillness. By refusing to move, you trigger the body&rsquo;s sleep-entry protocols while maintaining cortical alertness. The result is a dissociation between body-state (sleeping) and awareness-state (alert) &mdash; proving experientially that consciousness is not dependent on bodily activity.</p>
+    <p><strong>Lucid dreaming research:</strong> The Wake-Initiated Lucid Dream (WILD) technique in lucid dreaming research uses exactly this method: maintain awareness while the body falls asleep. Studies show that practitioners can reliably enter REM sleep with metacognitive awareness intact. This 5,000-year-old sutra is the original WILD technique.</p>
+    <div class="essence"><strong>One-line essence</strong>Lie as dead. Do not move. When the body is truly still, consciousness separates &mdash; and you discover you were never the body at all.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="25">Start a 25-min sitting</button><span class="timer-display" data-display="t1"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 2 ============================ -->
+<article class="technique" id="t2" data-tech="2">
+  <div class="technique-head"><span>Technique 104 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t2">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sleep &amp; Dream &middot; <strong>Tags:</strong> sleep-entry &middot; balance &middot; centering</div>
+  <blockquote class="sutra">Without support for feet or hands, sit only on the buttocks. Suddenly, the centering.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Use the balance-centering as a pre-sleep technique &mdash; the mind-gap it creates transitions smoothly into conscious sleep. When you sit balanced on buttocks alone with nothing supporting hands or feet, the mind becomes completely absorbed in maintaining equilibrium. The moment balance is found, mind STOPS. That gap &mdash; that sudden centering &mdash; is identical to the gap at sleep-entry. Use it as a doorway.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Practise in bed before lying down:</strong> Sit on your mattress or on the floor beside your bed. This is a pre-sleep technique &mdash; do it in the last minutes before sleep. Dim the lights. The environment should already say &ldquo;sleep.&rdquo;</li>
+      <li><strong>Lift feet and hands:</strong> Lean back slightly and lift both feet off the surface. Arms extended or held up &mdash; touching nothing. You are balanced entirely on your sit-bones. The body must find equilibrium without any external support.</li>
+      <li><strong>Let the mind absorb into balance:</strong> As the body wobbles and searches for stability, notice: the mind has become completely silent. All attention is consumed by the physical challenge. There is no room for thoughts, worries, plans for tomorrow. The balance demand has emptied the mind.</li>
+      <li><strong>Find the still point:</strong> When balance is achieved &mdash; even for a few seconds &mdash; the mind enters a GAP. No wobbling, no thinking, no effort. Just stillness. This gap is neurologically identical to the hypnagogic moment &mdash; it is a doorway between states.</li>
+      <li><strong>Repeat 5&ndash;7 times:</strong> Hold balance for 10&ndash;30 seconds, then release. Rest. Repeat. Each repetition deepens the mind-gap. After 5&ndash;7 rounds, the mind is thoroughly emptied and centred &mdash; primed for conscious sleep entry.</li>
+      <li><strong>Immediately lie down:</strong> After the final balance hold, lie down immediately in corpse pose. The mind is empty, centred, quiet. The body is tired from the core engagement. This combination &mdash; empty mind + tired body &mdash; is IDEAL for conscious sleep entry.</li>
+      <li><strong>Carry the gap into sleep:</strong> As you lie down, maintain the QUALITY of that balance-gap. The same empty, centred awareness. Don&rsquo;t think. Don&rsquo;t plan. Just rest in the gap. Let sleep come TO you while you remain in that centred stillness.</li>
+      <li><strong>The centering persists:</strong> Even if you fall asleep quickly, the centering you created through balance will persist into sleep. Many practitioners report that their sleep is deeper, more restful, and more aware after this pre-sleep centering. The quality of sleep changes.</li>
+      <li><strong>Morning variation:</strong> This technique can also be used upon waking &mdash; sit up immediately and balance before the mind fills with the day&rsquo;s agenda. The morning mind-gap is equally valuable. Bookend your sleep with centering.</li>
+      <li><strong>Progressive difficulty:</strong> As your core strengthens, make the balance harder &mdash; close eyes, extend legs higher, hold longer. The harder the balance, the deeper the mind-gap. Eventually you can maintain the gap even after releasing the posture &mdash; the centered awareness becomes your ground state.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner-friendly</dd>
+    <dt>Duration</dt><dd>5&ndash;10 min (pre-sleep)</dd><dt>Posture</dt><dd>Seated, unsupported, then lying down</dd><dt>Eyes</dt><dd>Open during balance, closed when lying down</dd><dt>Best for</dt><dd>Active types who need physical fatigue before sleep; overthinkers whose minds race at bedtime; those seeking a quick pre-sleep centering ritual</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>The mind becomes noticeably quieter after the balance rounds &mdash; the bedtime thought-chatter decreases</li><li>Sleep comes faster and more naturally after the centering practice</li><li>The quality of sleep deepens &mdash; fewer disturbances, more restful mornings</li><li>You begin to notice the moment of sleep-entry more clearly &mdash; the gap between waking and sleeping becomes perceptible</li><li>Core strength improves as a side benefit &mdash; body and awareness strengthen together</li><li>A growing ability to choose stillness rather than being at the mercy of racing thoughts</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Doing it too vigorously and waking yourself up instead of preparing for sleep &mdash; keep it gentle, meditative, not athletic</li><li>Getting frustrated if balance is difficult &mdash; the wobbling IS the technique; even imperfect balance empties the mind</li><li>Skipping the immediate lie-down &mdash; the transition from balance to corpse pose must be quick to carry the gap forward</li><li>Thinking about the technique instead of simply doing it &mdash; analysis activates the mind; just balance and feel</li><li>Doing it only occasionally rather than nightly &mdash; the cumulative effect over 21 days is what transforms sleep</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>How does physical balance relate to sleep?</summary>
+      <div class="qa-body"><p class="src">Chapter 60, "Sudden Centering"</p><p>Osho explains: the mind must be empty for sleep to come. Normally the mind chatters on, keeping you awake. Balance creates forced emptiness &mdash; the mind HAS to be silent during balance because all attention is consumed by the physical demand. Once emptied through balance, the mind doesn&rsquo;t fill up again easily. That emptiness is the same emptiness through which sleep arrives. You have simply created the CONDITION for sleep rather than waiting for it to happen accidentally.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Sleep onset requires deactivation of the default mode network (the brain&rsquo;s &ldquo;thinking about yourself&rdquo; system). Balance practice forces attention into the vestibular-cerebellar system, effectively shutting down DMN activity. This is why people who exercise report better sleep &mdash; physical engagement silences the rumination network. This technique concentrates that effect into 5 minutes of precise, targeted neurological resetting.</p>
+    <p><strong>Sleep hygiene parallel:</strong> Modern sleep science recommends &ldquo;cognitive shuffling&rdquo; and body-scan relaxation before bed. Both work by occupying the thinking mind with non-threatening tasks. Balance practice achieves the same result more powerfully &mdash; it doesn&rsquo;t just distract the mind, it EMPTIES it. The mind-gap produced by balance is deeper than anything achievable through mental tricks alone.</p>
+    <div class="essence"><strong>One-line essence</strong>Balance empties the mind. An empty mind sleeps consciously. Use the body&rsquo;s demand for equilibrium to create the silence through which aware sleep becomes possible.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="10">Start a 10-min sitting</button><span class="timer-display" data-display="t2"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 3 ============================ -->
+<article class="technique" id="t3" data-tech="3">
+  <div class="technique-head"><span>Technique 105 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t3">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sleep &amp; Dream &middot; <strong>Tags:</strong> rhythm &middot; sleep &middot; rocking</div>
+  <blockquote class="sutra">In a moving vehicle, by rhythmically swaying, experience.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Use rhythmic movement (rocking, swaying) to induce the hypnagogic state consciously. Like being rocked to sleep as a baby but maintaining awareness through the transition. The repetitive rhythm lulls the thinking mind while the rhythmic body-sense keeps a thread of awareness alive. You enter the sleep-state through the body&rsquo;s ancient memory of being rocked.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Choose your rhythm:</strong> Sit cross-legged on your bed or cushion before sleep. Begin to sway gently &mdash; side to side, or forward and back. Find a rhythm that feels natural, hypnotic, like being rocked in a cradle. Not too fast (stimulating), not too slow (no momentum). About the speed of a slow pendulum.</li>
+      <li><strong>Close your eyes:</strong> Let the swaying happen with eyes closed. The visual world disappears; only the rhythm remains. Feel the body as a pendulum &mdash; weightless, effortless, moving of its own accord. Let the rhythm become automatic &mdash; you are not doing it; it is happening.</li>
+      <li><strong>Let the rhythm take over:</strong> After 3&ndash;5 minutes, the swaying should feel autonomous &mdash; as if the body is being rocked by an invisible hand. Your job is to NOT interfere. Don&rsquo;t direct it, don&rsquo;t control it, don&rsquo;t even participate consciously. Just let it happen while you watch.</li>
+      <li><strong>Feel the lullaby effect:</strong> The rhythmic movement activates the same neurological pathways that put infants to sleep. You will feel drowsy, dreamy, soft. The edges of consciousness begin to blur. Thoughts slow down. The boundary between waking and sleeping thins. This is the hypnagogic state &mdash; the portal.</li>
+      <li><strong>Maintain the thread of awareness:</strong> As drowsiness deepens, keep ONE thread of awareness alive &mdash; the felt sense of the swaying itself. You don&rsquo;t need to think, analyse, or remain fully alert. Just the FEELING of movement. This thread carries you through the transition consciously.</li>
+      <li><strong>Let the swaying diminish naturally:</strong> As sleep approaches, the swaying will naturally slow, diminish, and eventually stop. Let this happen organically &mdash; don&rsquo;t force it to continue and don&rsquo;t force it to stop. When the body wants to be still, let it be still. When it stops, you may be at the exact threshold.</li>
+      <li><strong>Lie down in the stillness:</strong> When the swaying has stopped and profound drowsiness fills you, gently lie down. The transition from rhythmic movement to stillness is like a train slowing into a station. The momentum of awareness carries forward even as the body becomes still.</li>
+      <li><strong>Enter sleep with the rhythm&rsquo;s echo:</strong> Even after lying still, you can feel the echo of the swaying &mdash; a ghost-rhythm in the body. This echo is your awareness-thread. Follow it into sleep. It becomes the bridge between waking awareness and sleep awareness.</li>
+      <li><strong>Vehicle variation:</strong> The original sutra mentions &ldquo;a moving vehicle&rdquo; &mdash; bus, train, car (as passenger). If you travel, use the vehicle&rsquo;s motion as your rocking. Close your eyes, feel the sway and vibration, and let it carry you into the hypnagogic state. Many people already fall asleep in vehicles &mdash; now do it CONSCIOUSLY.</li>
+      <li><strong>Rocking chair variation:</strong> A rocking chair is perhaps the ideal modern implementation of this technique. The rhythmic movement is effortless, sustainable, and perfectly calibrated for inducing conscious drowsiness. Rock yourself toward sleep, then transfer to bed at the threshold.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;<span class="off">&#9733;&#9733;&#9733;&#9733;</span></span> &nbsp;Very easy</dd>
+    <dt>Duration</dt><dd>10&ndash;20 min</dd><dt>Posture</dt><dd>Seated swaying, then lying down</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Everyone; especially restless sleepers; those who fall asleep on buses/trains (already have the capacity); parents who know the rocking effect from putting children to sleep</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>The swaying becomes autonomous within minutes &mdash; it happens without effort or direction</li><li>Profound drowsiness arises quickly, naturally, pleasantly</li><li>Hypnagogic imagery begins while you remain aware of the swaying</li><li>The boundary between you and the movement dissolves &mdash; you ARE the rhythm</li><li>Sleep comes quickly and naturally after the practice &mdash; no tossing and turning</li><li>A quality of sweet, childlike peace during and after the rocking</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Swaying too fast or vigorously &mdash; this is not exercise; it should be lullaby-speed, gentle, hypnotic</li><li>Trying to stay alert instead of allowing drowsiness &mdash; the goal IS to become drowsy; just maintain one thread of awareness</li><li>Feeling self-conscious about rocking &mdash; this is a primal, ancient comfort mechanism; let go of adult embarrassment</li><li>Doing it on a full stomach &mdash; the swaying may cause nausea; wait at least an hour after eating</li><li>Expecting dramatic experiences &mdash; this technique works subtly; its gift is effortless, natural, conscious sleep entry</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does rhythm induce altered states?</summary>
+      <div class="qa-body"><p class="src">Chapter 67, "Rhythmic Experience"</p><p>Osho explains: the thinking mind operates through irregularity &mdash; one thought leads unpredictably to another. Rhythm introduces REGULARITY, which the thinking mind cannot process or engage with (there is nothing new to think about). So the thinking mind withdraws, bored, and what remains is pure awareness without thought. This is why drums, chanting, rocking, and repetitive movement have been used in every culture to induce trance states. Rhythm bypasses the intellect entirely.</p></div>
+    </details>
+    <details><summary>What is the &ldquo;experience&rdquo; the sutra mentions?</summary>
+      <div class="qa-body"><p class="src">Chapter 67</p><p>Osho notes: the sutra simply says &ldquo;experience&rdquo; without specifying WHAT to experience. This is deliberate. The experience cannot be named in advance &mdash; it is the experience of pure being without the filter of the thinking mind. When rhythm has silenced thought, what remains is raw existence &mdash; unmediated, uninterpreted, direct. THAT is &ldquo;the experience.&rdquo; It cannot be described because description requires the thinking mind, which has been bypassed.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Vestibular stimulation (rocking, swaying) has been scientifically proven to accelerate sleep onset and improve sleep quality. A 2019 study in Current Biology showed that gentle rocking reduced the time to fall asleep, increased time in deep sleep, and improved memory consolidation. The body has an ancient, pre-verbal response to rhythmic motion that this technique deliberately exploits.</p>
+    <p><strong>Infant parallel:</strong> Babies are rocked to sleep because the womb was a rocking environment &mdash; the mother&rsquo;s walking, breathing, and heartbeat created constant gentle motion. This technique returns the adult to that primal state of being rocked by existence itself. The conscious addition is simply maintaining awareness through the transition that infants make unconsciously.</p>
+    <div class="essence"><strong>One-line essence</strong>Let rhythm rock you toward sleep as it did when you were an infant &mdash; but this time, stay awake inside the rocking. Cross the threshold with eyes open on the inside.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="15">Start a 15-min sitting</button><span class="timer-display" data-display="t3"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 4 ============================ -->
+<article class="technique" id="t4" data-tech="4">
+  <div class="technique-head"><span>Technique 106 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t4">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sleep &amp; Dream &middot; <strong>Tags:</strong> sensation &middot; focus &middot; sleep-like-depth</div>
+  <blockquote class="sutra">Pierce some point of your body with a pin, and gently enter the piercing.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>Focus on a strong body sensation (not self-harm &mdash; use an ice cube or strong pressure) to create such intense single-pointed focus that the mind drops into a state resembling sleep with maintained awareness. The sensation becomes so absorbing that all other mental activity ceases &mdash; and in that cessation, you enter a depth normally only available in sleep, but with full consciousness.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Important note &mdash; modern adaptation:</strong> This technique does NOT require actual piercing or self-harm. Use intense but safe sensations: an ice cube held against the skin, strong finger-pressure on an acupressure point, a clothespin on the earlobe, or simply pressing a fingernail into the palm. The principle is INTENSE FOCUSED SENSATION, not pain or damage.</li>
+      <li><strong>Choose your sensation source:</strong> An ice cube on the inner wrist is ideal &mdash; intensely cold, impossible to ignore, completely safe. Alternatively: strong thumb pressure on the point between thumb and forefinger (the &ldquo;hegu&rdquo; acupressure point), or pressing a fingernail firmly into the opposite palm.</li>
+      <li><strong>Create the sensation:</strong> Apply the ice cube or pressure. The sensation should be strong enough to DEMAND attention &mdash; impossible to ignore &mdash; but not so extreme that it triggers panic or the fight-or-flight response. You want intensity without distress. Alert discomfort, not suffering.</li>
+      <li><strong>Enter the sensation:</strong> Here is the key instruction: &ldquo;gently ENTER the piercing.&rdquo; Don&rsquo;t resist the sensation. Don&rsquo;t endure it. ENTER it. Move your awareness INTO the point of sensation. Feel it from the inside. Become the sensation rather than the one experiencing it. Dissolve into the feeling.</li>
+      <li><strong>Let it absorb you completely:</strong> As you enter the sensation more and more deeply, all other mental activity stops. Thoughts cannot compete with this intense, immediate, present-moment experience. The mind becomes single-pointed &mdash; focused entirely on this one spot, this one sensation. Everything else falls away.</li>
+      <li><strong>Notice the depth:</strong> After 5&ndash;10 minutes of total absorption in the sensation, something shifts. The quality of consciousness changes &mdash; it becomes deeper, quieter, more interior. This depth is the same depth you normally only experience in deep sleep &mdash; but here you are aware. The sensation has pulled you DOWN, below the surface mind, into the silent depths.</li>
+      <li><strong>Release the sensation:</strong> After reaching this depth, gently remove the ice or release the pressure. The sensation fades &mdash; but the DEPTH remains. You are now in a sleep-like depth of consciousness without being asleep. Rest here. This is the space between waking and sleeping, accessed through sensation rather than through the sleep transition.</li>
+      <li><strong>Use as pre-sleep practice:</strong> This technique is especially powerful when done in bed just before sleep. The depth of consciousness it produces slides naturally into sleep &mdash; but because you ARRIVED there consciously (through the sensation), you maintain awareness through the transition. Conscious sleep follows easily from this depth.</li>
+      <li><strong>The principle of absorption:</strong> ANY total absorption produces sleep-like depth with maintained awareness. Sensation is simply one of the most reliable doorways because the body CANNOT ignore intense sensation. Unlike thought-based techniques (which the mind can evade), sensation-based techniques bypass all mental resistance. The body is the doorway.</li>
+      <li><strong>Safety and gentleness:</strong> The sutra says &ldquo;gently enter.&rdquo; Gentleness is key. This is not an endurance test or pain practice. It is a SENSITIVITY practice &mdash; using intensity to develop such exquisite attention that consciousness penetrates to depths normally hidden. Be gentle with yourself. The goal is depth, not damage.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;&#9733;<span class="off">&#9733;&#9733;</span></span> &nbsp;Intermediate</dd>
+    <dt>Duration</dt><dd>15&ndash;20 min</dd><dt>Posture</dt><dd>Seated or lying, with sensation source accessible</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Body-oriented practitioners; those who find purely mental techniques too abstract; people who respond to physical intensity; martial artists and athletes familiar with pain-focus</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>The sensation transforms from &ldquo;something happening TO you&rdquo; to &ldquo;something you ARE&rdquo; &mdash; you enter it</li><li>All other thoughts completely cease &mdash; only the sensation remains in awareness</li><li>A distinct downward shift in consciousness &mdash; feeling deeper, quieter, more interior</li><li>The sensation itself changes quality &mdash; from sharp/cold to warm/expansive as you enter it fully</li><li>After releasing, a profound depth of awareness that feels like being at the bottom of a deep lake &mdash; still, clear, dark, peaceful</li><li>Sleep comes easily and deeply after the practice</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Using excessive intensity that triggers panic or fight-or-flight &mdash; the sensation should be strong but manageable</li><li>RESISTING the sensation instead of entering it &mdash; resistance keeps you on the surface; entering takes you deep</li><li>Interpreting this as a pain practice &mdash; it is a FOCUS practice; pain is not the goal, absorption is</li><li>Actual self-harm &mdash; never break skin, never injure; ice cubes and pressure points are completely sufficient</li><li>Intellectualising instead of feeling &mdash; thinking ABOUT the sensation is not the same as being IN it</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does Shiva suggest piercing? Isn&rsquo;t that violent?</summary>
+      <div class="qa-body"><p class="src">Chapter 67, "Enter The Piercing"</p><p>Osho explains: in Shiva&rsquo;s time, this was literal &mdash; a thin needle through a fold of skin, like ear piercing. The pain was brief and manageable. But the PRINCIPLE is what matters: intense sensation creates absolute present-moment focus. Modern practitioners can achieve the same result with ice, pressure, or any strong sensation. The violence is not the point &mdash; the ABSORPTION is the point. Any doorway to total present-moment absorption will work. Shiva chose piercing because in ancient India it was common and familiar.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> Intense sensation activates the insular cortex &mdash; the brain region responsible for interoception (sensing the body from within). When the insular cortex is maximally activated, the default mode network (responsible for mind-wandering and self-referential thought) is suppressed. This creates a state of pure presence without narrative &mdash; exactly the state needed for conscious sleep entry. The body becomes the doorway to transcendence through the simple mechanism of attentional competition.</p>
+    <p><strong>Cold exposure research:</strong> Studies on cold water immersion show that intense cold produces immediate mindfulness &mdash; subjects report complete cessation of rumination and a feeling of profound presence. Ice-cube meditation (a modern adaptation of this technique) has been used successfully in trauma therapy to ground dissociated patients in present-moment body awareness. The principle is ancient; the science confirms it.</p>
+    <div class="essence"><strong>One-line essence</strong>Enter a sensation so completely that you become it. In that total absorption, the mind reaches sleep-depth while remaining fully aware. The body is the gateway to conscious sleep.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="15">Start a 15-min sitting</button><span class="timer-display" data-display="t4"></span></div>
+</article>
+
+<!-- ============================ TECHNIQUE 5 ============================ -->
+<article class="technique" id="t5" data-tech="5">
+  <div class="technique-head"><span>Technique 107 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="t5">&#9825;</button></div>
+  <div class="tags"><strong>Category:</strong> Sleep &amp; Dream &middot; <strong>Tags:</strong> dissolution &middot; cosmic &middot; sleep &middot; letting-go</div>
+  <blockquote class="sutra">Think of your body as being made of cosmic essences and leave it to be consumed.</blockquote>
+  <section class="section plain"><h3>In Plain English</h3><p>As you fall asleep, feel the body dissolving back into its elements &mdash; earth, water, fire, air, space. Let it be consumed by the cosmos. In that dissolving, consciousness remains while the body &ldquo;dies&rdquo; into sleep. The body returns to the universe each night; only awareness persists. This is a nightly rehearsal for the ultimate dissolution &mdash; death &mdash; done gently, naturally, beautifully.</p></section>
+  <section class="section practice"><h3>How to Practice</h3>
+    <ol>
+      <li><strong>Lie in bed, ready for sleep:</strong> This is an in-bed, eyes-closed, falling-asleep technique. All preparation is done. Lights off. Body in corpse pose or your natural sleep position. This is the last thing you do before sleep takes you.</li>
+      <li><strong>Feel the body as elements:</strong> Begin by recognising what the body is made of. The EARTH element: bones, muscles, flesh &mdash; everything solid. The WATER element: blood, saliva, lymph &mdash; everything fluid. The FIRE element: body heat, digestion, metabolism &mdash; everything warm. The AIR element: breath, gases, the lightness in the lungs. The SPACE element: the hollowness within &mdash; the spaces inside chest, belly, skull.</li>
+      <li><strong>Begin with earth dissolving:</strong> Feel the solid parts of the body growing heavy, sinking into the mattress, merging with the earth below. The bones dissolve downward. The muscles melt. The flesh returns to earth. Feel the solidity leaving your body &mdash; you become less solid, more transparent. The earth element is being consumed by the cosmos.</li>
+      <li><strong>Water dissolving:</strong> Now feel the fluid element evaporating, being absorbed. The blood becomes thinner, lighter. Saliva dries. The body&rsquo;s water returns to the cosmic ocean. You feel drier, lighter, less embodied. Another layer of physicality dissolves.</li>
+      <li><strong>Fire dissolving:</strong> The warmth begins to leave the body. Not cold &mdash; but the fire-element returns to the cosmic fire, the sun. The body&rsquo;s heat radiates outward, returning to the universe. Digestion stops. Metabolism quiets. The inner flame dims to an ember, then returns to its source.</li>
+      <li><strong>Air dissolving:</strong> The breath becomes thinner, lighter, barely perceptible. The air in the lungs returns to the atmosphere. Breathing becomes so subtle it almost stops. The air element leaves &mdash; you are no longer breathing; the cosmos breathes through what remains of you.</li>
+      <li><strong>Space dissolving:</strong> Finally, even the space within the body dissolves into the infinite space of the cosmos. The boundary between inner space and outer space disappears. There is no longer a &ldquo;body&rdquo; with space inside it &mdash; there is just space. Infinite, unbounded, cosmic space. And awareness floating in it.</li>
+      <li><strong>What remains:</strong> When all five elements have been consumed &mdash; when the body has been completely returned to the cosmos &mdash; what remains? Only consciousness. Pure awareness without a body. This is what persists through sleep. This is what persists through death. This is what you ARE. Let this bodiless awareness enter sleep. Let it rest in the cosmic space it has always been part of.</li>
+      <li><strong>Fall asleep in dissolution:</strong> Most people will fall asleep during this process &mdash; often during the earth or water phase. This is perfect. The dissolution continues unconsciously, and the quality of sleep is profoundly different &mdash; deeper, more restful, more cosmic. You wake feeling like you dissolved and were reassembled fresh.</li>
+      <li><strong>Morning reassembly:</strong> Upon waking, notice: the elements reassemble. Space condenses into body-space. Air fills the lungs with a deep breath. Fire returns as warmth floods the body. Water returns as you feel fluids moving. Earth returns as solidity and weight. You are reconstructed from the cosmos each morning. Every day is a rebirth.</li>
+    </ol>
+  </section>
+  <section class="section facts"><h3>Quick Facts</h3>
+    <dl><dt>Difficulty</dt><dd><span class="stars">&#9733;&#9733;<span class="off">&#9733;&#9733;&#9733;</span></span> &nbsp;Beginner-friendly</dd>
+    <dt>Duration</dt><dd>15&ndash;30 min (or until sleep comes)</dd><dt>Posture</dt><dd>Lying in bed, natural sleep position</dd><dt>Eyes</dt><dd>Closed</dd><dt>Best for</dt><dd>Everyone; especially those who fear death; nature lovers; people who enjoy visualisation; those who want a beautiful, poetic sleep practice</dd></dl>
+  </section>
+  <section class="section signs"><h3>Signs It&rsquo;s Working</h3><ul><li>The body genuinely feels like it is dissolving &mdash; not imagining but FEELING the boundaries soften</li><li>A profound sense of letting go and returning &mdash; like a river reaching the ocean</li><li>Sleep comes naturally and deeply during the practice &mdash; often before completing all five elements</li><li>Waking feels like being rebuilt from scratch &mdash; fresh, new, lighter</li><li>A growing comfort with impermanence and death &mdash; if the body dissolves nightly, death is just the final dissolution</li><li>Dreams become more spacious, cosmic, less personal</li></ul></section>
+  <section class="section pitfalls"><h3>Common Pitfalls</h3><ul><li>Making it purely intellectual/visual rather than FELT &mdash; you must feel the dissolution in the body, not just picture it</li><li>Anxiety about the dissolution (especially the breath phase) &mdash; if fear arises, slow down, stay with earth longer, let comfort build</li><li>Rushing through the elements to &ldquo;complete&rdquo; the practice &mdash; falling asleep during it is the GOAL, not a failure</li><li>Expecting to remain conscious through the entire night &mdash; even brief moments of conscious dissolution before sleep are transformative</li><li>Treating it as a rigid sequence rather than a natural letting-go &mdash; the elements can dissolve in any order; follow what feels true</li></ul></section>
+  <section class="section qa"><h3>Questions From The Book</h3>
+    <details><summary>Why does the sutra say &ldquo;leave it to be consumed&rdquo;?</summary>
+      <div class="qa-body"><p class="src">Chapter 68, "Cosmic Essences"</p><p>Osho explains: &ldquo;leave it&rdquo; means you are NOT the body. You can leave it because it is not you &mdash; it is something you HAVE, like clothing. And &ldquo;consumed&rdquo; means returned to source &mdash; the elements don&rsquo;t disappear; they return home. Earth to earth, water to water, fire to fire, air to air, space to space. Nothing is destroyed &mdash; everything simply returns to where it came from. The only thing that has no source to return to is consciousness itself &mdash; because it never came FROM anywhere. It simply IS. That is the discovery.</p></div>
+    </details>
+    <details><summary>Is this a death meditation?</summary>
+      <div class="qa-body"><p class="src">Chapter 68</p><p>Osho says: yes and no. It is a rehearsal for death &mdash; done every night, gently, safely, reversibly. By dissolving the body into elements each night and discovering that awareness persists, you prove to yourself experientially that death is not the end. The body dies (elements return to source), but YOU do not die because you are not the body. Every night becomes a small death, and every morning a small birth. When the final death comes, it will feel familiar &mdash; just another dissolution, just another night.</p></div>
+    </details>
+  </section>
+  <section class="section commentary"><h3>Modern Commentary</h3><span class="label">AI-distilled, not from Osho</span>
+    <p><strong>What this is really pointing at:</strong> This technique uses the &ldquo;body-scan&rdquo; principle but takes it further &mdash; rather than just relaxing each area, you dissolve it entirely. Modern yoga nidra traditions use a similar approach (the &ldquo;61 points&rdquo; practice followed by dissolution). Neurologically, the progressive withdrawal of attention from body regions produces a state indistinguishable from the early stages of sleep onset, with one crucial difference: metacognitive awareness is maintained because the mind has a JOB (dissolving the next element) that keeps it alert without keeping it stimulated.</p>
+    <p><strong>End-of-life research:</strong> Tibetan Buddhist dissolution meditations (derived from the same source tradition) are used in hospice care to help dying people face death with equanimity. Research shows that practitioners who have rehearsed the elemental dissolution report significantly less death anxiety and more peaceful dying experiences. Practising every night for years means the final dissolution is simply &ldquo;one more night.&rdquo;</p>
+    <div class="essence"><strong>One-line essence</strong>Each night, let the body return to the cosmos &mdash; earth to earth, water to water, fire to fire, air to air, space to space. What remains when the body is consumed? You. Awareness. The immortal witness.</div>
+  </section>
+  <div class="actions"><button class="timer-btn" data-timer="20">Start a 20-min sitting</button><span class="timer-display" data-display="t5"></span></div>
+</article>
+
+<footer>
+  <p>You have reached the end of <em>The Techniques for Sleep &amp; Dream</em>.</p>
+  <p>More categories &mdash; Heart &amp; Devotion, Death, Tantra, and Imagination &mdash; are on the way.</p>
+  <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+</footer>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  const html=document.documentElement;
+  const themeBtn=document.getElementById('theme-btn');
+  const stored=localStorage.getItem('vbt-theme');
+  if(stored)html.setAttribute('data-theme',stored);
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  themeBtn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next)});
+
+  const progress=document.querySelector('.progress');
+  function updateProgress(){const h=document.documentElement;const s=h.scrollTop;const t=h.scrollHeight-h.clientHeight;progress.style.width=t>0?(s/t*100)+'%':'0'}
+  document.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+
+  const FAV_KEY='vbt-sleep-favs';
+  const favs=new Set(JSON.parse(localStorage.getItem(FAV_KEY)||'[]'));
+  document.querySelectorAll('.fav-btn').forEach(btn=>{const id=btn.dataset.fav;if(favs.has(id)){btn.classList.add('on');btn.textContent='\u2665'}btn.addEventListener('click',()=>{if(favs.has(id)){favs.delete(id);btn.classList.remove('on');btn.textContent='\u2661'}else{favs.add(id);btn.classList.add('on');btn.textContent='\u2665'}localStorage.setItem(FAV_KEY,JSON.stringify([...favs]))})});
+
+  function playBell(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=432;g.gain.setValueAtTime(0.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.4,ctx.currentTime+0.02);g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+4.5);o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+4.6)}catch(e){}}
+  document.querySelectorAll('.timer-btn').forEach(btn=>{let interval=null;let endTime=0;const minutes=parseInt(btn.dataset.timer,10);const techId=btn.closest('article.technique').id;const display=document.querySelector('[data-display="'+techId+'"]');const original=btn.textContent;function fmt(ms){const s=Math.max(0,Math.ceil(ms/1000));const m=Math.floor(s/60),r=s%60;return m+':'+(r<10?'0':'')+r}function stop(natural){if(interval)clearInterval(interval);interval=null;btn.classList.remove('running');btn.textContent=original;if(natural){display.textContent='Done.';playBell();setTimeout(()=>{display.textContent=''},6000)}else{display.textContent=''}}btn.addEventListener('click',()=>{if(interval){stop(false);return}endTime=Date.now()+minutes*60*1000;btn.classList.add('running');btn.textContent='Stop';const tick=()=>{const left=endTime-Date.now();if(left<=0){stop(true);return}display.textContent=fmt(left)+' remaining'};tick();interval=setInterval(tick,500)})});
+
+  const focusBtn=document.getElementById('focus-btn');
+  let observer=null;
+  focusBtn.addEventListener('click',()=>{const on=!document.body.classList.contains('focus');document.body.classList.toggle('focus',on);focusBtn.setAttribute('aria-pressed',on);if(on&&!observer){observer=new IntersectionObserver((entries)=>{entries.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting))},{threshold:0.4});document.querySelectorAll('article.technique').forEach(a=>observer.observe(a))}});
+
+  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+
+  document.addEventListener('keydown',(e)=>{if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;if(e.key==='j'||e.key==='k'){const arts=[...document.querySelectorAll('article.technique')];const cur=arts.findIndex(a=>a.getBoundingClientRect().top>-100);const idx=e.key==='j'?Math.min(arts.length-1,cur+1):Math.max(0,cur-1);if(arts[idx])arts[idx].scrollIntoView({behavior:'smooth',block:'start'})}});
+
+  const GLOSSARY={'Vigyan Bhairav Tantra':'A ~5,000-year-old Sanskrit text: 112 meditation techniques as a dialogue between Shiva and Devi.','hypnagogic':'The transitional state between wakefulness and sleep \u2014 characterised by dream-like imagery and reduced critical thinking.','shavasana':'Corpse pose \u2014 lying flat on the back, completely still, like a dead body.','conscious sleep':'Maintaining awareness while the body and mind enter sleep. Also called yoga nidra.','yoga nidra':'Yogic sleep \u2014 a state of conscious deep sleep where awareness persists without content.','dissolution':'The feeling of the body\u2019s boundaries dissolving back into the elements from which it arose.','witness':'The pure awareness that observes all states \u2014 waking, dreaming, sleeping \u2014 without being affected.','death posture':'Lying completely still with no muscular engagement \u2014 mimicking a corpse to trigger sleep mechanisms while maintaining alertness.'};
+  function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+  const gTerms=Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length);
+  document.querySelectorAll('article.technique, header.hero').forEach(article=>{gTerms.forEach(term=>{const re=new RegExp('\\b('+escapeRegex(term)+')\\b','i');const walker=document.createTreeWalker(article,NodeFilter.SHOW_TEXT,{acceptNode:(node)=>{const p=node.parentElement;if(!p)return NodeFilter.FILTER_REJECT;if(p.closest('script,style,.glossary-term,.glossary-block,.controls,.progress,.timer-display,.technique-head,.actions'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});let n;while((n=walker.nextNode())){const m=n.textContent.match(re);if(m){const text=n.textContent;const before=text.slice(0,m.index);const after=text.slice(m.index+m[1].length);const span=document.createElement('span');span.className='glossary-term';span.dataset.term=term;span.tabIndex=0;span.textContent=m[1];const frag=document.createDocumentFragment();if(before)frag.appendChild(document.createTextNode(before));frag.appendChild(span);if(after)frag.appendChild(document.createTextNode(after));n.replaceWith(frag);return}}})});
+
+  let gTip=null;
+  function showGTip(e){const el=e.currentTarget;const term=el.dataset.term;const def=GLOSSARY[term];if(!def)return;if(!gTip){gTip=document.createElement('div');gTip.className='glossary-tooltip';document.body.appendChild(gTip)}gTip.innerHTML='<strong></strong>';gTip.firstChild.textContent=term;gTip.appendChild(document.createTextNode(def));const rect=el.getBoundingClientRect();gTip.style.top=(rect.bottom+window.scrollY+6)+'px';let left=rect.left+window.scrollX;if(left+290>window.innerWidth+window.scrollX)left=window.innerWidth+window.scrollX-296;if(left<8)left=8;gTip.style.left=left+'px';gTip.classList.add('show')}
+  function hideGTip(){if(gTip)gTip.classList.remove('show')}
+  document.querySelectorAll('.glossary-term').forEach(el=>{el.addEventListener('mouseenter',showGTip);el.addEventListener('focus',showGTip);el.addEventListener('mouseleave',hideGTip);el.addEventListener('blur',hideGTip);el.addEventListener('click',(e)=>{e.preventDefault();showGTip(e);setTimeout(hideGTip,6000)})});
+})();
+</script>
+</body>
+</html>
