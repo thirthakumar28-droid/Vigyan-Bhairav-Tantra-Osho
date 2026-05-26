@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Important first reading — the master index, disclaimer, situation matcher, safety guide, and gateway to all 15 categories of Osho's Vigyan Bhairav Tantra.">
+<title>Important · First Access This — Vigyan Bhairav Tantra</title>
+<style>
+:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--warn-bg:#fef0e0;--warn-border:#c25a1a;--warn-ink:#7a3210;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--warn-bg:#2a1a0e;--warn-border:#d97a3a;--warn-ink:#e8b890;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
+.controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
+.controls button{width:36px;height:36px;border-radius:999px;background:transparent;border:0;cursor:pointer;color:var(--ink-soft);font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.controls button:hover{background:var(--bg-soft);color:var(--accent)}
+main{max-width:780px;margin:0 auto;padding:5rem 1.5rem 2rem}
+header.hero{text-align:center;padding:2rem 0 3rem;border-bottom:1px solid var(--rule);margin-bottom:3rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink)}
+.hero .lede{color:var(--ink-soft);max-width:38rem;margin:0 auto 1.5rem;font-size:1.05rem;font-style:italic}
+.hero .intro{color:var(--ink-soft);max-width:38rem;margin:0 auto;font-size:1rem;line-height:1.7}
+section{margin:0 0 3rem}
+section h2{font-family:var(--serif);font-weight:400;font-size:1.6rem;letter-spacing:-.01em;margin:0 0 1rem;color:var(--ink);border-bottom:1px solid var(--rule);padding-bottom:.5rem}
+section p{color:var(--ink-soft);margin:.6rem 0}
+.disclaimer-block{background:var(--warn-bg);border:2px solid var(--warn-border);border-left:6px solid var(--warn-border);border-radius:8px;padding:1.5rem 1.75rem;margin-bottom:3rem}
+.disclaimer-block h2{color:var(--warn-ink);border:none;padding:0;margin:0 0 .8rem;font-size:1.3rem;font-family:var(--sans);font-weight:700;letter-spacing:.02em}
+.disclaimer-block h2::before{content:"\26A0  ";font-size:1.1em}
+.disclaimer-block p,.disclaimer-block li{color:var(--warn-ink);font-family:var(--sans);font-size:.95rem;line-height:1.6}
+.disclaimer-block ul{padding-left:1.4rem;margin:.7rem 0}
+.disclaimer-block li{margin:.4rem 0}
+.disclaimer-block strong{font-weight:700}
+.matcher-block{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:1.75rem;box-shadow:var(--shadow)}
+.matcher-buttons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.6rem;margin:1rem 0 1.5rem}
+.match-btn{font-family:var(--sans);font-size:.92rem;background:var(--bg-soft);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:.85rem 1rem;cursor:pointer;text-align:left;transition:all .2s;line-height:1.4}
+.match-btn:hover{background:var(--accent-soft);border-color:var(--accent);transform:translateY(-1px)}
+.match-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.match-result{margin-top:1.5rem;padding:1.25rem 1.4rem;background:var(--sutra-bg);border-left:3px solid var(--accent);border-radius:4px;display:none}
+.match-result.show{display:block}
+.match-result h3{font-family:var(--sans);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 .6rem;font-weight:600}
+.match-result p{margin:.5rem 0;color:var(--ink)}
+.match-result a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.match-result a:hover{border-bottom-color:var(--accent)}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1rem 0}
+.cat-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:1.25rem 1.4rem;text-decoration:none;color:var(--ink);transition:all .2s;display:block;box-shadow:var(--shadow)}
+.cat-card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 12px 24px -8px rgba(60,42,15,.18)}
+.cat-num{font-family:var(--sans);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.5rem}
+.cat-title{font-family:var(--serif);font-size:1.15rem;line-height:1.3;margin:0 0 .5rem;color:var(--ink)}
+.cat-meta{font-family:var(--sans);font-size:.78rem;color:var(--accent);font-weight:600;margin-bottom:.6rem;letter-spacing:.04em}
+.cat-desc{font-size:.92rem;color:var(--ink-soft);font-style:italic;line-height:1.5;margin:0 0 .8rem}
+.cat-arrow{font-family:var(--sans);font-size:.8rem;color:var(--accent);font-weight:600}
+.random-block{text-align:center;background:var(--bg-card);border:1px dashed var(--accent-soft);border-radius:8px;padding:2rem 1.5rem}
+.random-block p{margin-bottom:1.2rem;color:var(--ink-soft);font-style:italic}
+.random-btn{font-family:var(--sans);font-size:1rem;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:.9rem 2rem;cursor:pointer;font-weight:500;letter-spacing:.02em;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:0 4px 12px -4px var(--accent)}
+.random-btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px -4px var(--accent)}
+.safety-block{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:1.5rem 1.75rem}
+.safety-block h3{font-family:var(--sans);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:1.2rem 0 .5rem;font-weight:700}
+.safety-block h3:first-child{margin-top:0}
+.safety-block p,.safety-block li{font-size:.94rem;color:var(--ink-soft);line-height:1.6;font-family:var(--sans)}
+.safety-block ul{padding-left:1.3rem;margin:.4rem 0}
+.safety-block li{margin:.3rem 0}
+.safety-block strong{color:var(--ink);font-weight:600}
+.safety-final{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--rule);font-style:italic;text-align:center;font-size:.95rem;color:var(--ink)}
+.about-block{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:1.5rem 1.75rem}
+.about-block h3{font-family:var(--sans);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:1.3rem 0 .5rem;font-weight:600}
+.about-block h3:first-child{margin-top:0}
+.about-block p{font-family:var(--serif);font-size:1rem;line-height:1.7;color:var(--ink-soft);margin:.5rem 0}
+.about-block strong{color:var(--ink)}
+footer{text-align:center;padding:3rem 0 1rem;border-top:1px solid var(--rule);color:var(--ink-faint);font-family:var(--sans);font-size:.85rem;margin-top:3rem}
+footer p{margin:.4rem 0}
+footer .tagline{font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--ink);margin:1rem 0 .8rem}
+@media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls{display:none!important}main{max-width:none;padding:1rem}.cat-card{break-inside:avoid;border:1px solid #888}.disclaimer-block{background:#fff;border:2px solid #000}.match-result{display:block!important}}
+@media(max-width:600px){body{font-size:17px}main{padding:4rem 1rem 2rem}.controls{top:.5rem;right:.5rem}section h2{font-size:1.3rem}.cat-grid{grid-template-columns:1fr}.matcher-buttons{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="controls" aria-label="Reading controls">
+  <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
+  <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
+</nav>
+<main>
+<header class="hero">
+  <div class="eyebrow">Index &middot; Master Reference</div>
+  <h1>Vigyan Bhairav Tantra</h1>
+  <p class="lede">112 meditation techniques distilled by Osho &mdash; find the one that's yours.</p>
+  <p class="intro">This is the entry point to a 15-file collection covering all 112 techniques from the <em>Vigyan Bhairav Tantra</em>, an ancient Sanskrit text in which Shiva offers Devi 112 ways to recognise the divine in ordinary life. Each file is a self-contained guide, working fully offline. Before you open any technique, please read this page completely &mdash; especially the disclaimer and safety sections below.</p>
+</header>
+<section class="disclaimer-block" id="disclaimer">
+  <h2>Critical Disclaimer &mdash; Read Before Practising</h2>
+  <p><strong>Practise at your own discretion and responsibility.</strong></p>
+  <p>These are <strong>contemplative practices, not medical or psychological treatment</strong>. They are not a substitute for professional mental-health care, therapy, or medical advice. If you have any serious health condition, consult a qualified professional before beginning.</p>
+  <p>Some techniques carry specific risks. Read the safety section below carefully and respect the cautions listed in each file:</p>
+  <ul>
+    <li>If you have <strong>severe mental-health conditions</strong> (psychosis, severe trauma, suicidal ideation, dissociative disorders), do not begin without consulting a qualified professional. Avoid identity-dissolution and void techniques.</li>
+    <li>If you have <strong>cardiovascular conditions</strong>, avoid breath retention, intense kundalini-rising practices, and prolonged loud chanting.</li>
+    <li>If you are <strong>pregnant</strong>, avoid intense breath techniques, deep pelvic-energy work, and forceful kundalini practices.</li>
+    <li>If you are recovering from <strong>recent surgery or acute injury</strong>, avoid pain-as-doorway and intense postural techniques.</li>
+    <li>If you have <strong>glaucoma or eye conditions</strong>, avoid pressure-on-eyeballs techniques.</li>
+    <li>If overwhelm arises during practice, <strong>stop immediately</strong>. Open your eyes. Ground through body and breath. Drink water. Walk in nature.</li>
+  </ul>
+  <p>The 21-day commitment described in this collection is intended for committed seekers, not casual experimenters. Some techniques (especially Tantric Union and energy work) require maturity, discernment, and respect for yourself and any partner.</p>
+  <p><strong>When in doubt, choose the gentler technique. When unsure, do less, not more.</strong></p>
+</section>
+<section id="matcher">
+  <h2>Find a technique by what's happening in your life</h2>
+  <p>If you don't know where to begin, click the button that best matches your current state. The recommendation below will update.</p>
+  <div class="matcher-block">
+    <div class="matcher-buttons" role="group" aria-label="Situation buttons">
+      <button class="match-btn" data-key="anxious">I'm anxious or overthinking</button>
+      <button class="match-btn" data-key="sleep">I can't sleep</button>
+      <button class="match-btn" data-key="grief">I'm grieving</button>
+      <button class="match-btn" data-key="disconnected">I feel disconnected from my body</button>
+      <button class="match-btn" data-key="conflict">I'm in conflict or triggered</button>
+      <button class="match-btn" data-key="bored">I'm bored or numb</button>
+      <button class="match-btn" data-key="pain">I'm in physical pain</button>
+      <button class="match-btn" data-key="stuck">I feel stuck creatively</button>
+      <button class="match-btn" data-key="love">I want to feel love</button>
+      <button class="match-btn" data-key="ego">I want to dissolve the ego</button>
+    </div>
+    <div class="match-result" id="match-result" aria-live="polite"></div>
+  </div>
+</section>
+<section id="categories">
+  <h2>The 15 Categories &mdash; Master Grid</h2>
+  <p>Click any card to open that file. Each is fully self-contained and works offline.</p>
+  <div class="cat-grid">
+    <a class="cat-card" href="vigyan-bhairav-breath-techniques.html">
+      <div class="cat-num">Category 1 of 15</div>
+      <div class="cat-title">Breath</div>
+      <div class="cat-meta">8 techniques &middot; Beginner&ndash;Intermediate</div>
+      <div class="cat-desc">The doorway most accessible to a modern mind.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-centering-techniques.html">
+      <div class="cat-num">Category 2 of 15</div>
+      <div class="cat-title">Centering</div>
+      <div class="cat-meta">10 techniques &middot; Beginner&ndash;Advanced</div>
+      <div class="cat-desc">Find the still point within the body.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-sound-techniques.html">
+      <div class="cat-num">Category 3 of 15</div>
+      <div class="cat-title">Sound &amp; Mantra</div>
+      <div class="cat-meta">8 techniques &middot; Beginner&ndash;Intermediate</div>
+      <div class="cat-desc">From noise to silence through vibration.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-light-techniques.html">
+      <div class="cat-num">Category 4 of 15</div>
+      <div class="cat-title">Light &amp; Gazing</div>
+      <div class="cat-meta">10 techniques &middot; Beginner&ndash;Very Advanced</div>
+      <div class="cat-desc">Inner luminosity, outer darkness.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-witnessing-techniques.html">
+      <div class="cat-num">Category 5 of 15</div>
+      <div class="cat-title">Witnessing</div>
+      <div class="cat-meta">10 techniques &middot; Beginner&ndash;Very Advanced</div>
+      <div class="cat-desc">Step back, see, be free.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-negation-techniques.html">
+      <div class="cat-num">Category 6 of 15</div>
+      <div class="cat-title">Self-Inquiry</div>
+      <div class="cat-meta">6 techniques &middot; Beginner&ndash;Very Advanced</div>
+      <div class="cat-desc">Strip away everything you are not.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-void-techniques.html">
+      <div class="cat-num">Category 7 of 15</div>
+      <div class="cat-title">Emptiness &amp; Void</div>
+      <div class="cat-meta">8 techniques &middot; Beginner&ndash;Advanced</div>
+      <div class="cat-desc">The pregnant emptiness behind all forms.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-sensory-techniques.html">
+      <div class="cat-num">Category 8 of 15</div>
+      <div class="cat-title">The Senses</div>
+      <div class="cat-meta">8 techniques &middot; Very Easy&ndash;Advanced</div>
+      <div class="cat-desc">Senses as doorways, not distractions.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-movement-techniques.html">
+      <div class="cat-num">Category 9 of 15</div>
+      <div class="cat-title">Movement</div>
+      <div class="cat-meta">5 techniques &middot; Intermediate&ndash;Very Advanced</div>
+      <div class="cat-desc">Movement of consciousness into the boundless.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-sleep-techniques.html">
+      <div class="cat-num">Category 10 of 15</div>
+      <div class="cat-title">Sleep &amp; Dream</div>
+      <div class="cat-meta">5 techniques &middot; Beginner&ndash;Advanced</div>
+      <div class="cat-desc">Conscious dissolution into rest.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-tantra-techniques.html">
+      <div class="cat-num">Category 11 of 15</div>
+      <div class="cat-title">Tantric Union</div>
+      <div class="cat-meta">4 techniques &middot; Very Easy&ndash;Advanced</div>
+      <div class="cat-desc">Desire as vehicle, not enemy.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-heart-techniques.html">
+      <div class="cat-num">Category 12 of 15</div>
+      <div class="cat-title">Heart &amp; Devotion</div>
+      <div class="cat-meta">5 techniques &middot; Beginner&ndash;Intermediate</div>
+      <div class="cat-desc">Love as the path home.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-death-techniques.html">
+      <div class="cat-num">Category 13 of 15</div>
+      <div class="cat-title">Death Contemplation</div>
+      <div class="cat-meta">4 techniques &middot; Beginner&ndash;Advanced</div>
+      <div class="cat-desc">Discover the deathless.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-imagination-techniques.html">
+      <div class="cat-num">Category 14 of 15</div>
+      <div class="cat-title">Imagination</div>
+      <div class="cat-meta">6 techniques &middot; Beginner&ndash;Advanced</div>
+      <div class="cat-desc">The mind exhausting itself into truth.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+    <a class="cat-card" href="vigyan-bhairav-mind-techniques.html">
+      <div class="cat-num">Category 15 of 15</div>
+      <div class="cat-title">Mind &amp; Thought</div>
+      <div class="cat-meta">7 techniques (numbered 69&ndash;75 of 112)</div>
+      <div class="cat-desc">Use mind to transcend mind.</div>
+      <div class="cat-arrow">Open &rarr;</div>
+    </a>
+  </div>
+</section>
+<section id="random">
+  <h2>I can't decide &mdash; surprise me</h2>
+  <p>If you trust the unconscious to choose for you, click below. A random category will open in a new tab.</p>
+  <div class="random-block">
+    <p>Sometimes the right technique finds you, not the other way around.</p>
+    <button class="random-btn" id="random-btn">Open a random technique &rarr;</button>
+  </div>
+</section>
+<section id="safety">
+  <h2>Safety &amp; Cautions Index</h2>
+  <p>Specific cautions across the 15 categories. Read these before choosing a technique.</p>
+  <div class="safety-block">
+    <h3>Cardiovascular conditions</h3>
+    <ul>
+      <li>Avoid <strong>Light Tech #1</strong> (light rays up the spine with sustained energy buildup).</li>
+      <li>Avoid <strong>breath retention</strong> in any technique &mdash; modify by allowing soft breath to flow.</li>
+      <li>Avoid <strong>prolonged loud chanting</strong> (Sound Tech #5, intense AUM).</li>
+      <li>Avoid <strong>intense kundalini-rising</strong> practices &mdash; favour gentle gradual variants.</li>
+    </ul>
+    <h3>Pregnancy</h3>
+    <ul>
+      <li>Avoid <strong>intense breath techniques</strong> with retention or rapid breathing.</li>
+      <li>Avoid <strong>deep pelvic-floor energy work</strong> and forceful kundalini practices.</li>
+      <li>Favour gentle techniques: sky-gazing, witnessing, heart, sound (soft).</li>
+    </ul>
+    <h3>Recent surgery or acute injury</h3>
+    <ul>
+      <li>Avoid <strong>pain-as-doorway</strong> (Centering Tech #21) until acute injury is medically cleared.</li>
+      <li>Avoid intense postural techniques (boat pose / unsupported sitting) if joints/spine are healing.</li>
+    </ul>
+    <h3>Severe mental-health conditions</h3>
+    <ul>
+      <li>For psychosis, severe PTSD, dissociative disorders, or active suicidal ideation, <strong>consult a qualified professional</strong> before any practice.</li>
+      <li>Avoid: <strong>Void Tech #1</strong> (deprivation), <strong>Death Tech #1</strong> (fire dissolution), <strong>Imagination Tech #1</strong> (formless), and any technique involving identity dissolution.</li>
+      <li>Favour grounding techniques: heart-space, palming, sensory awareness, fresh-seeing.</li>
+    </ul>
+    <h3>Glaucoma and eye conditions</h3>
+    <ul>
+      <li>Avoid <strong>closing the seven openings</strong> (Centering Tech #5) &mdash; involves pressure on eyeballs.</li>
+      <li>Modify <strong>palming</strong> (Sensory Tech #7) to feather-light contact only; do not press.</li>
+    </ul>
+    <h3>Vertigo and motion sickness</h3>
+    <ul>
+      <li>Avoid <strong>Centering Tech #2</strong> (vehicle swaying) and any spinning practices.</li>
+    </ul>
+    <h3>History of dissociation</h3>
+    <ul>
+      <li>Build a foundation with <strong>grounding</strong> practices (sensory, breath, heart) before attempting void or dissolution work.</li>
+      <li>Always end sessions with body-grounding: feel the feet, the breath, the room.</li>
+    </ul>
+    <p class="safety-final">When in doubt, choose the gentler technique.</p>
+  </div>
+</section>
+<section id="about">
+  <h2>About</h2>
+  <div class="about-block">
+    <h3>The Vigyan Bhairav Tantra</h3>
+    <p>An ancient Sanskrit text dated to roughly 5,000 years ago, presented as a dialogue between Shiva and his consort Devi. Devi asks: "How can I know the divine?" Shiva replies with 112 techniques &mdash; methods, devices, doorways &mdash; covering breath, sound, light, witnessing, centering, devotion, and more. Each technique is a path; one is enough.</p>
+    <h3>Osho (1931&ndash;1990)</h3>
+    <p>An Indian mystic and teacher who, between 1972 and 1973, gave 80 talks on this text in Mumbai. Those talks were transcribed and published as <em>The Book of Secrets</em>. His insistence: do not believe; experiment. The techniques are scientific in spirit &mdash; they either work for you or they do not. Try one for 21 days, observe, decide.</p>
+    <h3>The Book of Secrets</h3>
+    <p>Osho's commentary on each of the 112 techniques is the source for the distillations in this collection. Many techniques are accompanied by Osho's stories, contextual teaching, and questions from his audience &mdash; all of which informed the "Questions From The Book" sections in each file.</p>
+    <h3>This Project</h3>
+    <p>Fifteen self-contained HTML files &mdash; one per category &mdash; plus this index. Each file is a digital companion to the original book: the sutra, plain-English explanation, step-by-step practice, signs of progress, common pitfalls, and modern commentary. Each works fully offline. There are no servers, no tracking, no analytics &mdash; only the techniques.</p>
+    <h3>How to use this collection</h3>
+    <p>Read this page first. Take the disclaimer and safety sections seriously. Use the situation matcher above, browse the category grid, or simply press the random button if you trust your intuition. When you find a technique that resonates, <strong>commit to 21 days</strong>. Don't shop. Don't switch. The discipline is the work.</p>
+  </div>
+</section>
+<footer>
+  <p class="tagline">112 techniques &middot; 15 categories &middot; 1 self &middot; &infin; doorways</p>
+  <p>Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
+  <p>Works fully offline. No external dependencies.</p>
+</footer>
+</main>
+<script>
+(function(){
+  'use strict';
+  const html=document.documentElement;
+  const themeBtn=document.getElementById('theme-btn');
+  const stored=localStorage.getItem('vbt-theme');
+  if(stored)html.setAttribute('data-theme',stored);
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  themeBtn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next)});
+  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+  const MATCH_DATA={
+    anxious:{title:"For anxiety and overthinking",body:"<p>Mind operates by movement; anxiety is mind moving too fast. The remedy is not to stop the mind but to redirect attention to its background.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-mind-techniques.html'>Mind &amp; Thought</a> &mdash; especially watching the gap between thoughts</li><li><a href='vigyan-bhairav-witnessing-techniques.html'>Witnessing</a> &mdash; remain in the subjective mood, not lost in things</li><li><a href='vigyan-bhairav-light-techniques.html#t4'>Sky-gazing</a> &mdash; the cleanest entry; lie down, look at the cloudless sky, become it</li></ul>"},
+    sleep:{title:"For sleep difficulties",body:"<p>Sleep arrives when the body is invited to drop, not commanded. These techniques work with the threshold between waking and sleep.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-sleep-techniques.html'>Sleep &amp; Dream</a> &mdash; especially &quot;lie down as dead&quot; (corpse posture) and &quot;cosmic essences&quot; (dissolving the body into elements as you drift off)</li><li><a href='vigyan-bhairav-sensory-techniques.html#t7'>Eye palming</a> &mdash; feather-light touch on closed eyes; cascades into whole-body relaxation</li><li><a href='vigyan-bhairav-witnessing-techniques.html#t7'>Hypnagogic gap</a> &mdash; catch the moment between waking and sleep</li></ul>"},
+    grief:{title:"For grief",body:"<p>Grief is love with nowhere to land. These techniques don't bypass the grief &mdash; they let it complete.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-death-techniques.html'>Death Contemplation</a> &mdash; especially &quot;rest in the permanent&quot;; the awareness that knew the loved one cannot itself be lost</li><li><a href='vigyan-bhairav-heart-techniques.html'>Heart &amp; Devotion</a> &mdash; let love continue without an object; love is what remains when the form is gone</li><li><a href='vigyan-bhairav-witnessing-techniques.html#t6'>Acceptance &mdash; Objects exist in me as in others</a> &mdash; what you accept transforms; what you fight festers</li></ul>"},
+    disconnected:{title:"For disconnection from the body",body:"<p>The body is not the obstacle to spirituality &mdash; it is the instrument. Reconnection is the foundation.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-centering-techniques.html'>Centering</a> &mdash; especially the spine-of-light technique (Tech #4)</li><li><a href='vigyan-bhairav-sensory-techniques.html'>The Senses</a> &mdash; eat as meditation, fresh-seeing, palming</li><li><a href='vigyan-bhairav-movement-techniques.html'>Movement</a> &mdash; consciousness expanding into and beyond the body</li></ul>"},
+    conflict:{title:"For conflict and triggering",body:"<p>Reactivity is the mind being captured by content. The middle path is the cure.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-witnessing-techniques.html#t5'>The middle &mdash; neither pleasure nor pain</a> &mdash; the still point between attraction and aversion</li><li><a href='vigyan-bhairav-witnessing-techniques.html#t3'>Be undisturbed in extreme desire</a> &mdash; find the calm centre of the cyclone</li><li><a href='vigyan-bhairav-centering-techniques.html#t7'>Don't choose, keep in the middle</a> &mdash; equanimity as practice</li></ul>"},
+    bored:{title:"For boredom and numbness",body:"<p>Boredom is dulled perception. Tantra cures it by reawakening the senses.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-sensory-techniques.html#t8'>See as if for the first time</a> &mdash; familiarity is the death of perception; this resurrects wonder</li><li><a href='vigyan-bhairav-witnessing-techniques.html#t2'>Wherever satisfaction is found, actualise it</a> &mdash; train attention to register the positive</li><li><a href='vigyan-bhairav-heart-techniques.html'>Heart &amp; Devotion</a> &mdash; especially permeating joy in small reunions</li></ul>"},
+    pain:{title:"For physical pain",body:"<p>Pain is a signal worth receiving. Suffering is the resistance to the signal. These techniques use pain as a doorway, not an enemy.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-centering-techniques.html#t9'>Concentrate on the pain (Centering Tech #9)</a> &mdash; enter the centre of the sensation; suffering reduces when resistance drops</li><li><a href='vigyan-bhairav-witnessing-techniques.html'>Witnessing</a> &mdash; the watcher is never in pain; only the body is</li><li><a href='vigyan-bhairav-sensory-techniques.html#t7'>Eye palming</a> &mdash; activates the parasympathetic system; gentle and grounding</li></ul><p style='font-size:.9rem;color:var(--ink-faint)'><em>Note: meditation is not a substitute for medical treatment. Use these alongside, not instead of, appropriate care.</em></p>"},
+    stuck:{title:"For creative blocks",body:"<p>Creativity flows from emptiness, not from forcing. These techniques empty the channel.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-imagination-techniques.html'>Imagination</a> &mdash; especially &quot;imagine the unimaginable&quot;; the mind exhausts itself, and creativity returns from the void</li><li><a href='vigyan-bhairav-void-techniques.html'>Emptiness &amp; Void</a> &mdash; especially &quot;blue sky beyond clouds&quot;; let the surface mind quiet</li><li><a href='vigyan-bhairav-light-techniques.html#t9'>Wherever attention alights, experience</a> &mdash; total presence with whatever is in front of you</li></ul>"},
+    love:{title:"To feel love",body:"<p>Love is your nature, obscured only by contraction. These techniques uncover it.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-heart-techniques.html'>Heart &amp; Devotion</a> &mdash; especially &quot;Devotion frees&quot; (the shortest sutra) and &quot;Feel love filling you from all sides&quot;</li><li><a href='vigyan-bhairav-tantra-techniques.html#t4'>Permeate the joy of reunion</a> &mdash; catch joy as it arises; let it fill every cell</li><li><a href='vigyan-bhairav-movement-techniques.html#t1'>Feel the consciousness of each person as your own</a> &mdash; intimate connection with all beings</li></ul>"},
+    ego:{title:"To dissolve the ego",body:"<p>The ego is a contraction. It cannot be defeated; only seen through. These are the deeper techniques.</p><p><strong>Caution:</strong> Read the safety section before beginning. These work best with foundational practice already in place.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-negation-techniques.html'>Self-Inquiry</a> &mdash; the neti-neti method; strip every layer that can be observed</li><li><a href='vigyan-bhairav-void-techniques.html'>Emptiness &amp; Void</a> &mdash; especially &quot;before desire and before knowing&quot;</li><li><a href='vigyan-bhairav-death-techniques.html'>Death Contemplation</a> &mdash; rehearse the dissolution that will come anyway</li></ul>"}
+  };
+  const result=document.getElementById('match-result');
+  document.querySelectorAll('.match-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const key=btn.dataset.key;const data=MATCH_DATA[key];
+      if(!data)return;
+      document.querySelectorAll('.match-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      result.innerHTML='<h3>'+data.title+'</h3>'+data.body;
+      result.classList.add('show');
+      setTimeout(()=>result.scrollIntoView({behavior:'smooth',block:'nearest'}),50);
+    });
+  });
+  const FILES=['vigyan-bhairav-breath-techniques.html','vigyan-bhairav-centering-techniques.html','vigyan-bhairav-sound-techniques.html','vigyan-bhairav-light-techniques.html','vigyan-bhairav-witnessing-techniques.html','vigyan-bhairav-negation-techniques.html','vigyan-bhairav-void-techniques.html','vigyan-bhairav-sensory-techniques.html','vigyan-bhairav-movement-techniques.html','vigyan-bhairav-sleep-techniques.html','vigyan-bhairav-tantra-techniques.html','vigyan-bhairav-heart-techniques.html','vigyan-bhairav-death-techniques.html','vigyan-bhairav-imagination-techniques.html','vigyan-bhairav-mind-techniques.html'];
+  document.getElementById('random-btn').addEventListener('click',()=>{
+    const pick=FILES[Math.floor(Math.random()*FILES.length)];
+    window.open(pick,'_blank');
+  });
+})();
+</script>
+</body>
+</html>
