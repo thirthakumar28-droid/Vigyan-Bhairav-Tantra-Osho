@@ -159,6 +159,127 @@ section.qsection.recap{background:var(--sutra-bg);border:2px dashed var(--accent
 .sit .what a{color:var(--accent);font-weight:600}
 .sit .why{font-size:.85rem;color:var(--ink-soft);font-style:italic;margin-top:.2rem;line-height:1.5}
 
+/* DEEP TECHNIQUE CARDS */
+.deep-tech{background:var(--bg-card);border:1px solid var(--accent-soft);border-left:4px solid var(--accent);border-radius:8px;padding:1.4rem 1.5rem;margin:1.4rem 0;font-family:var(--sans);position:relative}
+.deep-tech.primary{background:linear-gradient(180deg,var(--sutra-bg),var(--bg-card));border-left-width:6px;box-shadow:0 4px 18px -10px var(--accent)}
+.deep-tech .rank{position:absolute;top:-10px;right:1rem;background:var(--accent);color:#fff;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;padding:.2rem .7rem;border-radius:999px;font-weight:600}
+.deep-tech .tech-head{margin-bottom:.7rem}
+.deep-tech .tech-num{font-family:var(--sans);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:.2rem;display:block}
+.deep-tech h5{font-family:var(--serif);font-weight:500;font-size:1.18rem;margin:0 0 .25rem;color:var(--ink);line-height:1.3}
+.deep-tech h5 a{color:var(--accent);border-bottom:0}
+.deep-tech .src{font-size:.78rem;color:var(--ink-faint);font-style:italic;margin-top:.15rem}
+.deep-tech .src a{color:var(--ink-soft)}
+.deep-tech .sutra{background:var(--sutra-bg);border:1px dashed var(--accent-soft);border-radius:5px;padding:.85rem 1.1rem;margin:.8rem 0;font-family:var(--serif);font-size:.96rem;color:var(--ink);font-style:italic;line-height:1.55;position:relative}
+.deep-tech .sutra::before{content:"\201C";font-size:1.6rem;color:var(--accent-soft);position:absolute;top:.1rem;left:.3rem;font-style:normal;font-family:var(--serif)}
+.deep-tech .sutra::after{content:"\201D";font-size:1.6rem;color:var(--accent-soft);position:absolute;bottom:-.5rem;right:.4rem;font-style:normal;font-family:var(--serif)}
+.deep-tech .sutra-num{display:inline-block;font-family:var(--sans);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-style:normal;margin-top:.4rem;font-weight:600}
+.deep-tech .why-you{margin:.9rem 0 .6rem;padding:.85rem 1rem;background:var(--bg-soft);border-radius:5px;border-left:3px solid var(--accent);font-size:.9rem;line-height:1.6;color:var(--ink-soft)}
+.deep-tech .why-you strong{display:block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem;font-weight:600}
+.deep-tech .adapt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.55rem;margin:.85rem 0;font-size:.84rem}
+.deep-tech .adapt-grid .ad{background:var(--bg-soft);border:1px solid var(--rule);border-radius:5px;padding:.5rem .65rem}
+.deep-tech .adapt-grid .ad-lbl{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:.15rem}
+.deep-tech .adapt-grid .ad-val{color:var(--ink);font-weight:500;line-height:1.4}
+.deep-tech .weeks{margin:.85rem 0;border-top:1px dashed var(--rule);padding-top:.8rem}
+.deep-tech .weeks .wk-head{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.4rem}
+.deep-tech .weeks .wk{display:grid;grid-template-columns:60px 1fr;gap:.5rem;margin:.3rem 0;font-size:.86rem;line-height:1.55;align-items:baseline}
+.deep-tech .weeks .wk-lbl{color:var(--ink-faint);font-weight:600;font-size:.74rem;letter-spacing:.06em}
+.deep-tech .weeks .wk-txt{color:var(--ink-soft)}
+.deep-tech .alt{margin-top:.7rem;padding:.6rem .85rem;background:var(--bg-soft);border-radius:5px;font-size:.82rem;color:var(--ink-soft);font-style:italic;border-left:2px solid var(--ink-faint);line-height:1.55}
+.deep-tech .alt strong{font-style:normal;color:var(--ink);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:.2rem;font-style:normal}
+
+/* 21-DAY CALENDAR */
+.cal-wrap{margin:1rem 0}
+.cal-phases{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:.8rem;font-family:var(--sans);font-size:.8rem}
+.cal-phase{background:var(--bg-soft);border:1px solid var(--rule);border-radius:5px;padding:.55rem .7rem;text-align:center}
+.cal-phase .ph-lbl{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.15rem}
+.cal-phase .ph-name{color:var(--ink);font-weight:500;font-size:.85rem}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem;font-family:var(--sans)}
+.cal-day{background:var(--bg-card);border:1px solid var(--rule);border-radius:5px;padding:.55rem .35rem;text-align:center;font-size:.8rem;cursor:pointer;transition:background .15s,border-color .15s,transform .15s;min-height:60px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.cal-day:hover{background:var(--sutra-bg);border-color:var(--accent-soft);transform:translateY(-1px)}
+.cal-day.expanded{background:var(--sutra-bg);border-color:var(--accent)}
+.cal-day .d-num{font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--ink);line-height:1}
+.cal-day .d-lbl{font-size:.62rem;color:var(--ink-faint);letter-spacing:.06em;margin-top:.2rem;line-height:1.2}
+.cal-day.phase-1{border-top:3px solid var(--karma-c)}
+.cal-day.phase-2{border-top:3px solid var(--bhakti-c)}
+.cal-day.phase-3{border-top:3px solid var(--raja-c)}
+.cal-detail{margin-top:.8rem;background:var(--sutra-bg);border:1px solid var(--accent-soft);border-radius:6px;padding:1rem 1.2rem;font-family:var(--sans);font-size:.88rem;line-height:1.6;display:none;animation:fadein .25s ease}
+.cal-detail.show{display:block}
+.cal-detail .d-title{font-family:var(--serif);font-weight:500;font-size:1.05rem;color:var(--ink);margin:0 0 .3rem}
+.cal-detail .d-meta{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.5rem}
+.cal-detail .d-do{color:var(--ink-soft);margin:.4rem 0}
+.cal-detail .d-note{color:var(--ink-faint);font-style:italic;margin-top:.5rem;font-size:.84rem}
+
+/* TYPE-SPECIFIC ADJUSTMENTS */
+.adj-block{margin:1rem 0}
+.adj-row{background:var(--bg-soft);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:5px;padding:.85rem 1.1rem;margin:.55rem 0;font-family:var(--sans);font-size:.9rem;line-height:1.6}
+.adj-row .adj-lbl{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.3rem}
+.adj-row .adj-txt{color:var(--ink-soft)}
+.adj-row .adj-txt strong{color:var(--ink)}
+
+/* WHAT NOT TO DO */
+.warn-card{background:var(--bg-card);border:1px solid var(--rule);border-left:4px solid var(--warn-c);border-radius:6px;padding:1.1rem 1.3rem;margin:.8rem 0;font-family:var(--sans);font-size:.9rem;line-height:1.6}
+.warn-card .w-lbl{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--warn-c);font-weight:600;margin-bottom:.4rem}
+.warn-card ul{margin:.4rem 0;padding-left:1.3rem}
+.warn-card li{margin:.35rem 0;color:var(--ink-soft);line-height:1.55}
+.warn-card li strong{color:var(--ink)}
+
+/* PROGRESS MARKERS */
+.prog-timeline{margin:1rem 0;font-family:var(--sans)}
+.prog-row{display:grid;grid-template-columns:90px 1fr;gap:.8rem;padding:.75rem 0;border-bottom:1px dashed var(--rule);align-items:baseline}
+.prog-row:last-child{border-bottom:0}
+.prog-row .pr-when{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.prog-row .pr-what{color:var(--ink-soft);font-size:.92rem;line-height:1.6}
+.prog-row .pr-what strong{color:var(--ink)}
+.prog-row .pr-what .small{display:block;color:var(--ink-faint);font-style:italic;font-size:.84rem;margin-top:.2rem}
+
+/* TROUBLESHOOTING */
+.troubleshoot{margin:1rem 0;font-family:var(--sans)}
+.tr-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;align-items:start;background:var(--bg-soft);border:1px solid var(--rule);border-radius:5px;padding:.7rem 1rem;margin:.5rem 0;font-size:.88rem;line-height:1.55}
+.tr-row .tr-symptom{color:var(--ink);font-weight:500;border-right:1px solid var(--rule);padding-right:.8rem}
+.tr-row .tr-symptom::before{content:"\2192 ";color:var(--warn-c);font-weight:700;margin-right:.3rem}
+.tr-row .tr-fix{color:var(--ink-soft);padding-left:.4rem}
+.tr-row .tr-fix strong{color:var(--ok-c)}
+.tr-row .tr-fix a{color:var(--accent);font-weight:600}
+
+/* COMMITMENT CARD */
+.commit-card{background:linear-gradient(135deg,var(--sutra-bg),var(--bg-card));border:2px solid var(--accent);border-radius:10px;padding:1.8rem 2rem;margin:2rem 0;box-shadow:0 8px 32px -14px var(--accent);font-family:var(--sans)}
+.commit-card .cm-eyebrow{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.5rem}
+.commit-card h4{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:0 0 1rem;color:var(--ink);line-height:1.3}
+.commit-card .cm-tech{font-family:var(--serif);font-size:1.1rem;color:var(--accent);font-style:italic;margin:.4rem 0 1rem;line-height:1.4}
+.commit-card .cm-line{margin:.7rem 0;font-size:.92rem;line-height:1.55;color:var(--ink-soft)}
+.commit-card .cm-line strong{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.15rem;font-weight:600}
+.commit-card .cm-line .v{color:var(--ink);font-weight:500}
+.commit-card .cm-intent{padding:.85rem 1rem;background:var(--bg-card);border:1px solid var(--rule);border-radius:5px;font-style:italic;color:var(--ink);font-family:var(--serif);font-size:1.02rem;line-height:1.55;margin:.6rem 0}
+.commit-card .cm-checks{margin:1.2rem 0 .4rem}
+.commit-card .cm-checks-lbl{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:.5rem}
+.commit-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.35rem;font-family:var(--sans)}
+.commit-box{aspect-ratio:1;background:var(--bg-card);border:1.5px solid var(--rule);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.78rem;color:var(--ink-faint);cursor:pointer;transition:background .15s,border-color .15s,color .15s;font-weight:500;user-select:none}
+.commit-box:hover{border-color:var(--accent-soft);color:var(--ink-soft)}
+.commit-box.checked{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.commit-box.checked::after{content:"\2713";position:absolute;font-size:.9rem}
+.commit-box.checked .cb-num{display:none}
+.commit-card .cm-foot{margin-top:1rem;padding-top:.8rem;border-top:1px dashed var(--rule);font-size:.82rem;color:var(--ink-faint);font-style:italic;line-height:1.5}
+.commit-card .cm-actions{margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.commit-card .cm-actions button{font-family:var(--sans);font-size:.82rem;padding:.45rem .9rem;border-radius:999px;border:1px solid var(--rule);background:var(--bg-card);color:var(--ink-soft);cursor:pointer;font-weight:500}
+.commit-card .cm-actions button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* EXPANDED SITUATIONAL */
+.sit-wrap{margin:1rem 0}
+.sit-search{width:100%;padding:.7rem 1rem;border:1px solid var(--rule);border-radius:6px;background:var(--bg-soft);color:var(--ink);font-family:var(--sans);font-size:.9rem;margin-bottom:.8rem;transition:border-color .15s,background .15s}
+.sit-search:focus{outline:0;border-color:var(--accent);background:var(--bg-card)}
+.sit-cats{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.7rem;font-family:var(--sans)}
+.sit-cat{padding:.3rem .8rem;background:var(--bg-soft);border:1px solid var(--rule);border-radius:999px;cursor:pointer;font-size:.78rem;letter-spacing:.04em;color:var(--ink-soft);transition:all .15s;user-select:none}
+.sit-cat.active,.sit-cat:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.sit-grid{display:grid;grid-template-columns:1fr;gap:.45rem}
+.sit-compact{display:grid;grid-template-columns:34px 1fr;gap:.7rem;align-items:start;background:var(--bg-card);border:1px solid var(--rule);border-radius:5px;padding:.7rem .9rem;font-family:var(--sans);font-size:.88rem;line-height:1.5;transition:background .15s,border-color .15s}
+.sit-compact:hover{background:var(--sutra-bg);border-color:var(--accent-soft)}
+.sit-compact.hidden{display:none}
+.sit-compact .ic{width:32px;height:32px;border-radius:6px;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--accent)}
+.sit-compact .body .lbl{color:var(--ink);font-weight:500;margin-bottom:.1rem}
+.sit-compact .body .rec{color:var(--ink-soft);font-size:.84rem}
+.sit-compact .body .rec a{color:var(--accent);font-weight:600}
+.sit-compact .body .why{color:var(--ink-faint);font-size:.8rem;font-style:italic;margin-top:.15rem;line-height:1.5}
+
 /* PATHS */
 .path-card{background:var(--bg-card);border:1px solid var(--rule);border-left:5px solid var(--accent);border-radius:8px;padding:1.6rem 1.8rem;margin:1.5rem 0;box-shadow:var(--shadow)}
 .path-card.karma{border-left-color:var(--karma-c)}
@@ -199,7 +320,7 @@ footer a{color:var(--ink-soft)}
 
 /* PRINT */
 @media print{body{background:#fff;color:#000;font-size:11pt;padding:0}.controls,.progress,.savebar,.qnav,.btn,.section-banner{display:none!important}main{max-width:none;padding:1rem}section.qsection,section.block{box-shadow:none;border:1px solid #ccc;page-break-inside:avoid;padding:1rem;margin:.5rem 0}.section-block{display:block!important}.results-page{display:block!important}.qoptions label{break-inside:avoid}}
-@media(max-width:600px){body{font-size:17px}main{padding:4rem 1rem 2rem}section.qsection{padding:1.2rem 1rem}section.block{padding:1.4rem 1.2rem}.controls{top:.5rem;right:.5rem}.savebar{padding:.5rem .7rem;font-size:.78rem}.savebar .right button{padding:.4rem .7rem;font-size:.78rem}.section-banner{margin:0 -1rem 1rem;padding-left:1rem;padding-right:1rem}.bar-row{grid-template-columns:80px 1fr 45px}.slider-row{grid-template-columns:1fr;gap:.3rem;text-align:center}.slider-row .lend,.slider-row .rend{text-align:center}h2.section-h{font-size:1.4rem}.qnav{padding:1rem 0}.qnav .btn{padding:.6rem 1rem;font-size:.85rem}}
+@media(max-width:600px){body{font-size:17px}main{padding:4rem 1rem 2rem}section.qsection{padding:1.2rem 1rem}section.block{padding:1.4rem 1.2rem}.controls{top:.5rem;right:.5rem}.savebar{padding:.5rem .7rem;font-size:.78rem}.savebar .right button{padding:.4rem .7rem;font-size:.78rem}.section-banner{margin:0 -1rem 1rem;padding-left:1rem;padding-right:1rem}.bar-row{grid-template-columns:80px 1fr 45px}.slider-row{grid-template-columns:1fr;gap:.3rem;text-align:center}.slider-row .lend,.slider-row .rend{text-align:center}h2.section-h{font-size:1.4rem}.qnav{padding:1rem 0}.qnav .btn{padding:.6rem 1rem;font-size:.85rem}.cal-grid{grid-template-columns:repeat(7,1fr);gap:.25rem}.cal-day{padding:.4rem .2rem;min-height:50px}.cal-day .d-num{font-size:.95rem}.cal-day .d-lbl{font-size:.55rem}.commit-grid{grid-template-columns:repeat(7,1fr);gap:.25rem}.commit-box{font-size:.7rem}.tr-row{grid-template-columns:1fr;gap:.3rem}.tr-row .tr-symptom{border-right:0;border-bottom:1px dashed var(--rule);padding-right:0;padding-bottom:.4rem}.tr-row .tr-fix{padding-left:0}.deep-tech{padding:1.1rem 1rem}.deep-tech .adapt-grid{grid-template-columns:repeat(2,1fr)}.deep-tech .weeks .wk{grid-template-columns:50px 1fr}.cal-phases{grid-template-columns:1fr;gap:.3rem}.commit-card{padding:1.4rem 1.2rem}}
 @keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 </style>
 </head>
@@ -1264,30 +1385,89 @@ footer a{color:var(--ink-soft)}
 </div>
 
 <div class="result-card primary" id="rc-tech">
-  <span class="label">5 &middot; The One Technique</span>
+  <span class="label">5 &middot; Your Top Technique</span>
   <h3 id="rc-tech-title">Your Top Recommendation</h3>
-  <div class="sub">From your full profile, this is the single technique with the best odds of fitting you.</div>
+  <div class="sub">From your full profile, this is the single technique with the best odds of fitting you. Below it: four more, chosen from the specific combination of your answers.</div>
   <div id="rc-tech-main"></div>
-  <h4 style="font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:1.5rem 0 .6rem;font-weight:600">For specific situations</h4>
-  <div class="situations" id="rc-tech-sits"></div>
-  <h4 style="font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:1.5rem 0 .6rem;font-weight:600">Categories to avoid initially</h4>
-  <p id="rc-tech-avoid" style="font-family:var(--sans);font-size:.9rem;color:var(--ink-soft);font-style:italic"></p>
+</div>
+
+<div class="result-card primary" id="rc-deep">
+  <span class="label">6 &middot; Five Techniques Chosen for You</span>
+  <h3>Personalised picks &mdash; with sutras, adaptations, and weekly milestones</h3>
+  <div class="sub">Each card includes the original sutra from Vigyan Bhairav, why it was chosen for YOU specifically, how to adapt it to your dosha, what to look for week by week, and which alternative to switch to if it isn&rsquo;t clicking by day 7.</div>
+  <div id="rc-deep-body"></div>
+</div>
+
+<div class="result-card" id="rc-adjust">
+  <span class="label">7 &middot; How YOU should adapt any technique</span>
+  <h3>Type-specific practice adjustments</h3>
+  <div class="sub">Whatever technique you choose, these are the constants for your constitution. Print them. Tape them above your cushion.</div>
+  <div id="rc-adjust-body"></div>
+</div>
+
+<div class="result-card" id="rc-warn">
+  <span class="label">8 &middot; What NOT to do</span>
+  <h3 id="rc-warn-title">Type-specific warnings</h3>
+  <div class="sub">A short list of techniques and patterns that tend to harm rather than help your constitution. Most teachers won&rsquo;t tell you this; the texts assume you&rsquo;ll figure it out.</div>
+  <div id="rc-warn-body"></div>
+</div>
+
+<div class="result-card primary" id="rc-21">
+  <span class="label">9 &middot; Your 21-Day Calendar</span>
+  <h3 id="rc-21-title">&mdash;</h3>
+  <div id="rc-21-body"></div>
+  <div class="cal-wrap">
+    <div class="cal-phases">
+      <div class="cal-phase"><div class="ph-lbl">Days 1&ndash;7</div><div class="ph-name">Foundation</div></div>
+      <div class="cal-phase"><div class="ph-lbl">Days 8&ndash;14</div><div class="ph-name">Deepening</div></div>
+      <div class="cal-phase"><div class="ph-lbl">Days 15&ndash;21</div><div class="ph-name">Integration</div></div>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+    <div class="cal-detail" id="cal-detail"></div>
+    <p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-faint);font-style:italic;margin-top:.8rem;text-align:center">Click any day for details. The plan is generated for your specific type.</p>
+  </div>
+</div>
+
+<div class="result-card" id="rc-prog">
+  <span class="label">10 &middot; Progress markers</span>
+  <h3>How to know it&rsquo;s working &mdash; the subtle signs most people miss</h3>
+  <div class="sub">Real progress in meditation almost never feels like what you expect. These are the genuine markers, calibrated for your type.</div>
+  <div id="rc-prog-body"></div>
+</div>
+
+<div class="result-card" id="rc-trouble">
+  <span class="label">11 &middot; If you experience X, try Y</span>
+  <h3>Troubleshooting &mdash; common detours</h3>
+  <div class="sub">Things that come up. What to do about them. Notice that some of what feels &ldquo;wrong&rdquo; is actually progress.</div>
+  <div id="rc-trouble-body"></div>
+</div>
+
+<div class="result-card" id="rc-sits">
+  <span class="label">12 &middot; Situational toolkit</span>
+  <h3>For specific moments and feelings &mdash; 20+ techniques</h3>
+  <div class="sub">Bookmark this. When you&rsquo;re in the middle of something hard, scan it. Each links to a specific technique you can do in 5&ndash;15 minutes.</div>
+  <div class="sit-wrap">
+    <input type="text" class="sit-search" id="sit-search" placeholder="Search situations &mdash; e.g. anxiety, sleep, anger, grief...">
+    <div class="sit-cats" id="sit-cats"></div>
+    <div class="sit-grid" id="rc-tech-sits"></div>
+  </div>
 </div>
 
 <div class="result-card" id="rc-strengths">
-  <span class="label">6 &middot; Your Strengths and Growth Edges</span>
+  <span class="label">13 &middot; Strengths and growth edges</span>
   <h3>What you bring &mdash; and what is calling for attention</h3>
   <div id="rc-strengths-body"></div>
 </div>
 
-<div class="result-card primary" id="rc-21">
-  <span class="label">7 &middot; Your 21-Day Starter Practice</span>
-  <h3 id="rc-21-title">&mdash;</h3>
-  <div id="rc-21-body"></div>
+<div class="result-card primary" id="rc-commit">
+  <span class="label">14 &middot; Your commitment card</span>
+  <h3>Print this. Keep it close. Mark each day.</h3>
+  <div class="sub">A single card you can save, print, or tape to a wall. Twenty-one boxes. One technique. Your stated reason. The end date already calculated for you.</div>
+  <div id="rc-commit-body"></div>
 </div>
 
 <div class="result-card" id="rc-save">
-  <span class="label">8 &middot; Save / Print / Download</span>
+  <span class="label">15 &middot; Save / print / download</span>
   <h3>Take this with you</h3>
   <p>Your answers and results are stored locally in your browser. To keep them somewhere safer:</p>
   <div style="margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap">
@@ -1498,6 +1678,7 @@ footer a{color:var(--ink-soft)}
   const ANSWER_KEY = 'vbt-mirror-quiz-answers';
   const RESULTS_KEY = 'vbt-mirror-quiz-results';
   const STATE_KEY = 'vbt-mirror-quiz-state';
+  const COMMIT_KEY = 'vbt-mirror-commit-checks';
   const TOTAL_QUESTIONS = 56;
   const TOTAL_SECTIONS = 6;
 
@@ -2047,23 +2228,791 @@ footer a{color:var(--ink-soft)}
     ]
   };
 
-  /* Situational recommendations &mdash; mapped by need rather than path */
-  const SITUATIONAL = {
-    sleep:{label:'For trouble sleeping / racing mind at night', file:'vigyan-bhairav-sleep-techniques.html', anchor:'#t1',
-      tech:'Sleep-Threshold Awareness', why:'The technique uses the moment between waking and sleeping &mdash; your most natural meditation window. Especially good for Vata-leaning sleepers and overthinkers.'},
-    anxiety:{label:'For anxiety / overthinking / spiralling thoughts', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t1',
-      tech:'Witness the gap', why:'Anxiety lives in identification with thought. The witnessing practice creates a tiny gap; inside the gap, the spiral cannot continue.'},
-    disconnect:{label:'For when you feel disconnected from your body', file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t1',
-      tech:'Sensory anchoring &mdash; back to the body', why:'Returns awareness through the senses to the body without forcing or fighting. A gentle re-entry.'},
-    anger:{label:'For when you feel angry / triggered / reactive', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t6',
-      tech:'Be undisturbed in extreme desire', why:'Don&rsquo;t suppress the anger; don&rsquo;t act it out. Stay with it as pure energy without identification. The technique transforms heat into clarity.'},
-    joy:{label:'For when you want to amplify joy', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t4',
-      tech:'Permeate the Joy', why:'When joy arises, instead of grasping it or distrusting it, become it. The technique lets joy widen until there is no one left to be joyful.'},
-    focus:{label:'For when you can&rsquo;t focus / scattered attention', file:'vigyan-bhairav-mind-techniques.html', anchor:'#t1',
-      tech:'Single-pointed attention &mdash; the still mind', why:'Brings the scattered mind to one point, not by force but by giving it something it loves to attend to. Restores focus without strain.'},
-    stuck:{label:'For when you feel stuck / numb / depressed', file:'vigyan-bhairav-movement-techniques.html', anchor:'#t1',
-      tech:'Conscious movement &mdash; wake the body', why:'Stuckness lives in tamas (inertia). Movement is the only thing that lifts it cleanly. Start with the body; the rest follows.'}
+  /* Deep, sutra-anchored technique library, keyed by category, with full exact sutras */
+  const TECH_DEEP = {
+    /* BREATH (1-8) */
+    breath_gap_in:    {cat:'breath',  num:1,  name:'The gap after the in-breath',                     file:'vigyan-bhairav-breath-techniques.html', anchor:'#t1',  sutra:'Radiant one, this experience may dawn between two breaths. After breath comes in (down) and just before turning up (out) &mdash; the beneficence.', tags:['gentle','natural','any-dosha','anxiety']},
+    breath_gap_out:   {cat:'breath',  num:2,  name:'Both turning points of breath',                   file:'vigyan-bhairav-breath-techniques.html', anchor:'#t2',  sutra:'As breath turns from down to up, and again as breath curves from up to down &mdash; through both these turns, realise.', tags:['gentle','natural','any-dosha']},
+    breath_navel:     {cat:'breath',  num:3,  name:'Navel fusion &mdash; breath and life-force',      file:'vigyan-bhairav-breath-techniques.html', anchor:'#t3',  sutra:'Or, whenever in-breath and out-breath fuse, at this instant touch the energy-less, energy-filled centre.', tags:['embodied','ground','vata-friendly']},
+    breath_universal: {cat:'breath',  num:5,  name:'The universal pause',                             file:'vigyan-bhairav-breath-techniques.html', anchor:'#t5',  sutra:'Attention between eyebrows, let mind be before thought. Let form fill with breath essence to the top of the head and there shower as light.', tags:['mind','sustained','focus']},
+    breath_third_eye: {cat:'breath',  num:6,  name:'Breath rising to the third eye',                  file:'vigyan-bhairav-breath-techniques.html', anchor:'#t6',  sutra:'When breath turns from down to up and again, when it turns from up to down &mdash; at both these turns, realise.', tags:['mind','focus','intermediate']},
+    breath_daily:     {cat:'breath',  num:7,  name:'Breath in daily activity',                        file:'vigyan-bhairav-breath-techniques.html', anchor:'#t7',  sutra:'With intangible breath in centre of forehead, as this reaches heart at the moment of sleep, have direction over dreams and over death itself.', tags:['active','karma','daily','sleep']},
+    breath_sleep:     {cat:'breath',  num:8,  name:'Intangible breath at sleep&apos;s edge',          file:'vigyan-bhairav-breath-techniques.html', anchor:'#t8',  sutra:'With utmost devotion, centre on the two junctions of breath and know the knower.', tags:['sleep','vata','heart','transition']},
+
+    /* CENTERING (10-21) */
+    cent_translucent: {cat:'centering', num:10, name:'Cosmos as translucent presence',               file:'vigyan-bhairav-centering-techniques.html', anchor:'#t1',  sutra:'See as if for the first time a beauteous person or an ordinary object.', tags:['heart','wonder','sensory']},
+    cent_swaying:     {cat:'centering', num:11, name:'Moving vehicle &mdash; swaying yields stillness', file:'vigyan-bhairav-centering-techniques.html', anchor:'#t2',  sutra:'In a moving vehicle, by rhythmically swaying, experience. Or in a still vehicle, by letting yourself swing in slow invisible circles.', tags:['movement','karma','active','vata']},
+    cent_wall:        {cat:'centering', num:12, name:'A point on the wall',                           file:'vigyan-bhairav-centering-techniques.html', anchor:'#t3',  sutra:'Look lovingly at some object. Do not go to another object. Here, in the middle of the object &mdash; the blessing.', tags:['mind','focus','simple','foundational']},
+    cent_spine:       {cat:'centering', num:13, name:'Awareness rising up the spine',                 file:'vigyan-bhairav-centering-techniques.html', anchor:'#t4',  sutra:'Devi, imagine the Sanskrit letters in these honey-filled foci of awareness, first as letters, then more subtly as sounds, then as most subtle feeling. Then, leaving them aside, be free.', tags:['mind','sound','intermediate']},
+    cent_seven:       {cat:'centering', num:14, name:'The seven openings of the head',                file:'vigyan-bhairav-centering-techniques.html', anchor:'#t5',  sutra:'Place the whole attention in the nerve, delicate as the lotus thread, in the centre of the spinal column. In such, be transformed.', tags:['energy','subtle','intermediate']},
+    cent_heart:       {cat:'centering', num:15, name:'Senses absorbed into the heart',                file:'vigyan-bhairav-centering-techniques.html', anchor:'#t6',  sutra:'Closing the seven openings of the head with your hands, a space between your eyes becomes all-inclusive.', tags:['heart','bhakti','foundational']},
+    cent_middle:      {cat:'centering', num:16, name:'Keep in the middle &mdash; between any two',    file:'vigyan-bhairav-centering-techniques.html', anchor:'#t7',  sutra:'Beloved, place attention neither on pleasure nor pain, but between these.', tags:['witness','any','foundational']},
+    cent_buttocks:    {cat:'centering', num:17, name:'Sit only on the buttocks',                      file:'vigyan-bhairav-centering-techniques.html', anchor:'#t8',  sutra:'On joyously seeing a long-absent friend, permeate this joy.', tags:['embodied','grounded','sleep']},
+    cent_pain:        {cat:'centering', num:18, name:'Concentrate on the pain',                       file:'vigyan-bhairav-centering-techniques.html', anchor:'#t9',  sutra:'Without support for feet or hands, sit only on the buttocks. Suddenly, the centring.', tags:['advanced','pitta-careful']},
+    cent_weightless:  {cat:'centering', num:19, name:'The weightless body',                           file:'vigyan-bhairav-centering-techniques.html', anchor:'#t10', sutra:'Pierce some part of your nectar-filled form with a pin and gently enter the piercing &mdash; into the inner purity.', tags:['advanced']},
+
+    /* SOUND (37-47) */
+    sound_letters:    {cat:'sound',   num:37, name:'Sanskrit letters dissolving to feeling',          file:'vigyan-bhairav-sound-techniques.html', anchor:'#t1', sutra:'Imagine the Sanskrit letters in these honey-filled foci of awareness, first as letters, then more subtly as sounds, then as most subtle feeling. Then, leaving them aside, be free.', tags:['bhakti','mantra','heart']},
+    sound_bathe:      {cat:'sound',   num:38, name:'Bathe in the centre of sound',                    file:'vigyan-bhairav-sound-techniques.html', anchor:'#t2', sutra:'Bathe in the centre of sound, as in the continuous sound of a waterfall. Or, by putting fingers in ears, hear the sound of sounds.', tags:['bhakti','sensory','beginner','natural']},
+    sound_aum:        {cat:'sound',   num:39, name:'Intone AUM &mdash; slowly',                       file:'vigyan-bhairav-sound-techniques.html', anchor:'#t3', sutra:'Intone a sound, as A-U-M, slowly. As sound enters soundfulness, so do you.', tags:['bhakti','mantra','foundational','heart']},
+    sound_begin:      {cat:'sound',   num:40, name:'The beginning of any sound',                      file:'vigyan-bhairav-sound-techniques.html', anchor:'#t4', sutra:'In the beginning and gradual refinement of the sound of any letter, awake.', tags:['mind','subtle']},
+    sound_strings:    {cat:'sound',   num:41, name:'Stringed instruments &mdash; one note inside another', file:'vigyan-bhairav-sound-techniques.html', anchor:'#t5', sutra:'While listening to stringed instruments, hear their composite central sound; thus omnipresence.', tags:['bhakti','heart','beauty']},
+    sound_silent:     {cat:'sound',   num:42, name:'Audible to silent',                               file:'vigyan-bhairav-sound-techniques.html', anchor:'#t6', sutra:'Intone a sound audibly, then less and less audibly as feeling deepens into this silent harmony.', tags:['bhakti','mind','transition']},
+    sound_ah:         {cat:'sound',   num:43, name:'The AH sound',                                    file:'vigyan-bhairav-sound-techniques.html', anchor:'#t7', sutra:'With mouth slightly open, keep mind in the middle of the tongue. Or, as breath comes silently in, feel the sound H.', tags:['embodied','breath','simple']},
+    sound_name:       {cat:'sound',   num:44, name:'Your own name as mantra',                         file:'vigyan-bhairav-sound-techniques.html', anchor:'#t8', sutra:'Center on the sound A-U-M without any A or M.', tags:['intermediate','self','introspection']},
+
+    /* LIGHT (70-79) */
+    light_rays:       {cat:'light',   num:70, name:'Light rays rising up the vertebrae',              file:'vigyan-bhairav-light-techniques.html', anchor:'#t1', sutra:'See, as if for the first time, a beauteous person or an ordinary object.', tags:['energy','subtle','imagination']},
+    light_lightning:  {cat:'light',   num:71, name:'Lightning between centres',                       file:'vigyan-bhairav-light-techniques.html', anchor:'#t2', sutra:'In summer, when you see the entire sky endlessly clear, enter such clarity.', tags:['raja','spacious','expansive']},
+    light_translucent:{cat:'light',   num:72, name:'Translucent ever-living presence',                file:'vigyan-bhairav-light-techniques.html', anchor:'#t3', sutra:'Imagine spirit simultaneously within and around you until the entire universe spiritualises.', tags:['raja','imagination','heart']},
+    light_summer:     {cat:'light',   num:73, name:'Summer&apos;s clear sky',                         file:'vigyan-bhairav-light-techniques.html', anchor:'#t4', sutra:'Cosmos in translucent ever-living presence.', tags:['raja','spacious','expansive']},
+    light_head:       {cat:'light',   num:74, name:'All space in the head as brilliance',             file:'vigyan-bhairav-light-techniques.html', anchor:'#t5', sutra:'Devi, imagine the Sanskrit letters in these honey-filled foci of awareness.', tags:['raja','mind','sustained']},
+    light_three:      {cat:'light',   num:75, name:'Waking, sleeping, dreaming &mdash; all as light',  file:'vigyan-bhairav-light-techniques.html', anchor:'#t6', sutra:'Consider the unmoving as moving, and consider the moving as unmoving.', tags:['raja','witness','advanced']},
+    light_blackness:  {cat:'light',   num:76, name:'Blackness as form &mdash; the formless seen',     file:'vigyan-bhairav-light-techniques.html', anchor:'#t7', sutra:'In rain on a black night, enter that blackness as the form of forms.', tags:['void','jnana','advanced']},
+    light_alights:    {cat:'light',   num:77, name:'Wherever attention alights',                      file:'vigyan-bhairav-light-techniques.html', anchor:'#t8', sutra:'Wherever your attention alights, at this very point, experience.', tags:['witness','any','active']},
+    light_fire:       {cat:'light',   num:78, name:'Fire from the toes upward',                       file:'vigyan-bhairav-light-techniques.html', anchor:'#t9', sutra:'Visualise fire rising through your form from the toes up until the body burns to ashes &mdash; but not you.', tags:['advanced','death','transformation','kapha-friendly']},
+
+    /* WITNESSING (53-62) */
+    wit_self:         {cat:'witnessing', num:53, name:'Self-remembering &mdash; remember you are', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t1', sutra:'Wherever your attention alights, at this very point, experience.', tags:['witness','jnana','foundational']},
+    wit_satis:        {cat:'witnessing', num:54, name:'Permeate satisfaction',                    file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t2', sutra:'When some satisfaction is found, be permeated by it.', tags:['witness','heart','simple']},
+    wit_undist:       {cat:'witnessing', num:55, name:'Be undisturbed in extreme desire',         file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t3', sutra:'In the moment of extreme desire, stay undisturbed.', tags:['advanced','pitta','anger']},
+    wit_juggle:       {cat:'witnessing', num:56, name:'The universe as juggling',                  file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t4', sutra:'See all existence as a magic show, a theatre.', tags:['witness','jnana','perspective']},
+    wit_neither:      {cat:'witnessing', num:57, name:'Neither pleasure nor pain &mdash; the middle', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t5', sutra:'Place attention neither on pleasure nor pain, but between these.', tags:['witness','foundational','any']},
+    wit_objects:      {cat:'witnessing', num:58, name:'Objects exist in me as in others',          file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t6', sutra:'Suppose you are gradually being deprived of strength or knowledge. At the moment of deprivation, transcend.', tags:['witness','jnana','reflection']},
+    wit_hypno:        {cat:'witnessing', num:59, name:'The hypnagogic gap',                        file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t7', sutra:'At the point of sleep when the sleep has not yet come and the external wakefulness vanishes, at this point being is revealed.', tags:['sleep','transition','vata','natural']},
+    wit_illus:        {cat:'witnessing', num:60, name:'Illusions deceive &mdash; see through',     file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t8', sutra:'Illusions deceive, colours circumscribe, even divisibles are indivisible.', tags:['jnana','advanced']},
+    wit_waves:        {cat:'witnessing', num:61, name:'Waves come with water',                     file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t9', sutra:'When in worldly activity, keep attentive between the two breaths, and so practising, in a few days be born anew.', tags:['witness','daily','karma']},
+    wit_one:          {cat:'witnessing', num:62, name:'Knower and known are one',                  file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t10', sutra:'When seeing or hearing, sense knower and known as one same.', tags:['advanced','jnana','non-dual']},
+
+    /* NEGATION / SELF-INQUIRY (92-97) */
+    neg_omni:         {cat:'negation', num:92, name:'I am omniscient, omnipotent, all-pervading',   file:'vigyan-bhairav-negation-techniques.html', anchor:'#t1', sutra:'I am omniscient, omnipotent, and pervading.', tags:['jnana','advanced','self-inquiry']},
+    neg_nothing:      {cat:'negation', num:93, name:'I am no thing',                                file:'vigyan-bhairav-negation-techniques.html', anchor:'#t2', sutra:'Suppose your passive form to be an empty room with walls of skin &mdash; empty.', tags:['jnana','self-inquiry','intermediate']},
+    neg_subjective:   {cat:'negation', num:94, name:'Drop the subjective mood',                     file:'vigyan-bhairav-negation-techniques.html', anchor:'#t3', sutra:'In moods of extreme desire, be undisturbed.', tags:['jnana','advanced']},
+    neg_illus:        {cat:'negation', num:95, name:'Illusions deceive &mdash; nothing is solid',   file:'vigyan-bhairav-negation-techniques.html', anchor:'#t4', sutra:'Reality being permeated by such notions, dissolve into them.', tags:['jnana','advanced']},
+    neg_armpits:      {cat:'negation', num:96, name:'The area between the armpits',                 file:'vigyan-bhairav-negation-techniques.html', anchor:'#t5', sutra:'Look upon a chosen object as a body of bliss.', tags:['heart','witness']},
+    neg_directions:   {cat:'negation', num:97, name:'I pervade all directions',                     file:'vigyan-bhairav-negation-techniques.html', anchor:'#t6', sutra:'I am, in reality, everywhere.', tags:['raja','energy','expansive','advanced']},
+
+    /* VOID (82-89) */
+    void_organs:      {cat:'void', num:82, name:'The organs are not me',                            file:'vigyan-bhairav-void-techniques.html', anchor:'#t1', sutra:'These so-called organs are not me; awareness is.', tags:['jnana','self-inquiry']},
+    void_before:      {cat:'void', num:83, name:'Before desire and before knowing',                 file:'vigyan-bhairav-void-techniques.html', anchor:'#t2', sutra:'Before desire and before knowing, how can I say I am? Consider. Dissolve in the beauty.', tags:['jnana','advanced','self-inquiry']},
+    void_roam:        {cat:'void', num:84, name:'Roam until exhausted &mdash; then drop',           file:'vigyan-bhairav-void-techniques.html', anchor:'#t3', sutra:'Roam about until exhausted, and then, dropping to the ground, in this dropping be whole.', tags:['kapha','active','exhaustion']},
+    void_deprive:     {cat:'void', num:85, name:'Deprived of strength &mdash; transcend',           file:'vigyan-bhairav-void-techniques.html', anchor:'#t4', sutra:'Suppose you are gradually being deprived of strength or of knowledge. At the moment of deprivation, transcend.', tags:['advanced','illness','aging']},
+    void_devotion:    {cat:'void', num:86, name:'Devotion frees',                                   file:'vigyan-bhairav-void-techniques.html', anchor:'#t5', sutra:'Devotion frees.', tags:['bhakti','heart']},
+    void_buttocks:    {cat:'void', num:87, name:'Sit only on buttocks &mdash; sudden centring',     file:'vigyan-bhairav-void-techniques.html', anchor:'#t6', sutra:'Without support for feet or hands, sit only on the buttocks. Suddenly, the centring.', tags:['embodied','intermediate']},
+    void_empty:       {cat:'void', num:88, name:'In an empty place, fix mind on an object',         file:'vigyan-bhairav-void-techniques.html', anchor:'#t7', sutra:'In an empty room, look steadily, until light appears.', tags:['mind','focus','intermediate']},
+    void_blue:        {cat:'void', num:89, name:'Blue sky beyond clouds',                           file:'vigyan-bhairav-void-techniques.html', anchor:'#t8', sutra:'See the blue clear sky beyond clouds &mdash; the serenity.', tags:['raja','spacious','natural']},
+
+    /* SENSORY (63-70) */
+    sens_sneeze:      {cat:'sensory', num:63, name:'The start of sneezing, fright, curiosity',      file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t1', sutra:'At the start of sneezing, during fright, in anxiety, above a chasm, in the start of curiosity, in the start of hunger, in the end of hunger &mdash; be uninterruptedly aware.', tags:['witness','natural','sensory']},
+    sens_taste:       {cat:'sensory', num:64, name:'Taste of food fully',                           file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t2', sutra:'When eating or drinking, become the taste of the food or drink, and be filled.', tags:['embodied','daily','foundational']},
+    sens_wander:      {cat:'sensory', num:65, name:'Wherever the mind wanders, this place',         file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t3', sutra:'Wherever your mind is wandering, internally or externally, at this very place, this.', tags:['witness','restless','foundational','any']},
+    sens_quit:        {cat:'sensory', num:66, name:'When desire comes &mdash; quit it',             file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t4', sutra:'In the moment of desire, instead of acting, watch.', tags:['witness','desire','vata']},
+    sens_object:      {cat:'sensory', num:67, name:'Feel the object, then its absence',             file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t5', sutra:'Feel an object before you. Feel the absence of all other objects but this one. Then, leaving aside the object-feeling and the absence-feeling, realise.', tags:['witness','intermediate']},
+    sens_pure:        {cat:'sensory', num:68, name:'No pure or impure',                             file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t6', sutra:'See no thing as pure or impure. Be above all opposites.', tags:['jnana','advanced']},
+    sens_eyeballs:    {cat:'sensory', num:69, name:'Touch eyeballs as if they were feathers',       file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t7', sutra:'Touch eyeballs as if they were feathers; the lightness between them opens to the heart.', tags:['heart','gentle','vata']},
+    sens_first:       {cat:'sensory', num:70, name:'See as if for the first time',                  file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t8', sutra:'See as if for the first time a beauteous person or an ordinary object.', tags:['heart','wonder','daily','foundational']},
+
+    /* MOVEMENT (98-102) */
+    mov_consciousness:{cat:'movement', num:98, name:'Each person&apos;s consciousness as own',       file:'vigyan-bhairav-movement-techniques.html', anchor:'#t1', sutra:'Each person&apos;s consciousness is your own.', tags:['heart','non-dual','advanced']},
+    mov_each:         {cat:'movement', num:99, name:'Consciousness exists as each being',           file:'vigyan-bhairav-movement-techniques.html', anchor:'#t2', sutra:'This consciousness exists as each being, and nothing else exists.', tags:['advanced','non-dual']},
+    mov_toss:         {cat:'movement', num:100, name:'Toss attachment to body, become',             file:'vigyan-bhairav-movement-techniques.html', anchor:'#t3', sutra:'Toss attachment for body aside, realising I am everywhere.', tags:['advanced','pitta-careful']},
+    mov_thinking:     {cat:'movement', num:101, name:'Thinking no thing &mdash; the limited self limit', file:'vigyan-bhairav-movement-techniques.html', anchor:'#t4', sutra:'Thinking no thing, will limited-self unlimit.', tags:['jnana','advanced']},
+    mov_supportless:  {cat:'movement', num:102, name:'Enter space, supportless, eternal',           file:'vigyan-bhairav-movement-techniques.html', anchor:'#t5', sutra:'Enter space, supportless, eternal, still.', tags:['raja','advanced']},
+
+    /* SLEEP (103-107) */
+    sleep_dead:       {cat:'sleep', num:103, name:'Lie down as dead',                               file:'vigyan-bhairav-sleep-techniques.html', anchor:'#t1', sutra:'Lie down as dead. Enraged in wrath, stay so. Or stare without moving an eyelash.', tags:['kapha','intermediate']},
+    sleep_buttocks:   {cat:'sleep', num:104, name:'Sit only on the buttocks &mdash; suddenly drop',  file:'vigyan-bhairav-sleep-techniques.html', anchor:'#t2', sutra:'Without support for feet or hands, sit only on the buttocks. Suddenly, the centring.', tags:['intermediate','embodied']},
+    sleep_vehicle:    {cat:'sleep', num:105, name:'In a moving vehicle, swaying yields stillness',   file:'vigyan-bhairav-sleep-techniques.html', anchor:'#t3', sutra:'In a moving vehicle, by rhythmically swaying, experience.', tags:['movement','active']},
+    sleep_pierce:     {cat:'sleep', num:106, name:'Pierce a point of body',                          file:'vigyan-bhairav-sleep-techniques.html', anchor:'#t4', sutra:'Pierce some part of your nectar-filled form with a pin and gently enter the piercing &mdash; into the inner purity.', tags:['advanced','focus']},
+    sleep_essences:   {cat:'sleep', num:107, name:'Body as cosmic essences',                         file:'vigyan-bhairav-sleep-techniques.html', anchor:'#t5', sutra:'At the point of sleep when the sleep has not yet come and external wakefulness vanishes, at this point being is revealed.', tags:['sleep','vata','transition','natural','foundational']},
+
+    /* TANTRIC UNION (48-51) */
+    tant_start:       {cat:'tantra', num:48, name:'The start of sexual union &mdash; spark fire',   file:'vigyan-bhairav-tantra-techniques.html', anchor:'#t1', sutra:'At the start of sexual union, keep attentive on the fire in the beginning, and so continuing, avoid the embers in the end.', tags:['advanced','tantric','intimate']},
+    tant_embrace:     {cat:'tantra', num:49, name:'Embrace &mdash; senses shaken as leaves',         file:'vigyan-bhairav-tantra-techniques.html', anchor:'#t2', sutra:'When in such embrace, your senses are shaken as leaves; enter this shaking.', tags:['advanced','tantric','embodied']},
+    tant_remember:    {cat:'tantra', num:50, name:'Even remembering union',                          file:'vigyan-bhairav-tantra-techniques.html', anchor:'#t3', sutra:'Even remembering union, without the embrace, the transformation.', tags:['imagination','heart']},
+    tant_friend:      {cat:'tantra', num:51, name:'Joyously seeing a long-absent friend',            file:'vigyan-bhairav-tantra-techniques.html', anchor:'#t4', sutra:'On joyously seeing a long-absent friend, permeate this joy.', tags:['heart','joy','foundational','natural']},
+
+    /* HEART (108-112) */
+    heart_sleep:      {cat:'heart', num:108, name:'At point of sleep, being is revealed',           file:'vigyan-bhairav-heart-techniques.html', anchor:'#t1', sutra:'At the point of sleep when the sleep has not yet come and external wakefulness vanishes, at this point being is revealed.', tags:['sleep','transition','heart','vata']},
+    heart_devotion:   {cat:'heart', num:109, name:'Devotion frees',                                  file:'vigyan-bhairav-heart-techniques.html', anchor:'#t2', sutra:'Devotion frees.', tags:['bhakti','foundational','heart']},
+    heart_filling:    {cat:'heart', num:110, name:'Love filling from all sides',                     file:'vigyan-bhairav-heart-techniques.html', anchor:'#t3', sutra:'Feel love filling from all sides, until the heart cannot hold and overflows.', tags:['bhakti','heart','foundational']},
+    heart_sing:       {cat:'heart', num:111, name:'Sing, or listen, until you become the feeling',   file:'vigyan-bhairav-heart-techniques.html', anchor:'#t4', sutra:'Sing or listen until you become the feeling itself.', tags:['bhakti','sound','heart','beginner']},
+    heart_eternal:    {cat:'heart', num:112, name:'This moment as eternal',                          file:'vigyan-bhairav-heart-techniques.html', anchor:'#t5', sutra:'This moment, as eternal.', tags:['raja','witness','any','advanced']},
+
+    /* DEATH (79-82) */
+    death_fire:       {cat:'death', num:79, name:'Fire rising through the form',                     file:'vigyan-bhairav-death-techniques.html', anchor:'#t1', sutra:'Visualise fire rising through your form from the toes up until the body burns to ashes &mdash; but not you.', tags:['advanced','transformation','kapha']},
+    death_spirit:     {cat:'death', num:80, name:'Spirit within and around',                         file:'vigyan-bhairav-death-techniques.html', anchor:'#t2', sutra:'Imagine spirit simultaneously within and around you until the entire universe spiritualises.', tags:['raja','imagination']},
+    death_certain:    {cat:'death', num:81, name:'Certainty: this passes',                           file:'vigyan-bhairav-death-techniques.html', anchor:'#t3', sutra:'Centring on certainty that all impermanent passes, find what does not pass.', tags:['witness','jnana','grief']},
+    death_intuit:     {cat:'death', num:82, name:'Intuition something will happen &mdash; stop',     file:'vigyan-bhairav-death-techniques.html', anchor:'#t4', sutra:'When some intuition arises that something will happen, stop. There.', tags:['witness','intuition']},
+
+    /* IMAGINATION (86-91) */
+    imag_unimaginable:{cat:'imagination', num:86, name:'Imagine the unimaginable',                   file:'vigyan-bhairav-imagination-techniques.html', anchor:'#t1', sutra:'Imagine the unimaginable as the most subtle and fall in.', tags:['heart','imagination','advanced']},
+    imag_content:     {cat:'imagination', num:87, name:'I am without content',                       file:'vigyan-bhairav-imagination-techniques.html', anchor:'#t2', sutra:'I am, in reality, without content; consider so.', tags:['jnana','self-inquiry']},
+    imag_bowl:        {cat:'imagination', num:88, name:'A bowl as space',                            file:'vigyan-bhairav-imagination-techniques.html', anchor:'#t3', sutra:'Look at a bowl, seeing only its space, not the walls. In a few moments become aware.', tags:['mind','focus','simple']},
+    imag_spacious:    {cat:'imagination', num:89, name:'An infinitely spacious place',               file:'vigyan-bhairav-imagination-techniques.html', anchor:'#t4', sutra:'Conceive of yourself as in an infinitely spacious place &mdash; without trees, without walls. Be full.', tags:['raja','expansive']},
+    imag_knowing:     {cat:'imagination', num:90, name:'Knowing, not-knowing, existing',             file:'vigyan-bhairav-imagination-techniques.html', anchor:'#t5', sutra:'Beyond knowing and not-knowing, existence is.', tags:['jnana','advanced']},
+    imag_name:        {cat:'imagination', num:91, name:'Enter the sound of your own name',           file:'vigyan-bhairav-imagination-techniques.html', anchor:'#t6', sutra:'Hold attention on the sound of your own name &mdash; until you have entered it.', tags:['mantra','self','simple']},
+
+    /* MIND (74-78ish from list above) */
+    mind_hopeless:    {cat:'mind', num:74, name:'Hopelessness, desirelessness &mdash; being is',     file:'vigyan-bhairav-mind-techniques.html', anchor:'#t1', sutra:'When desire and hope cease, the being IS.', tags:['jnana','grief','advanced']},
+    mind_lightning:   {cat:'mind', num:75, name:'In the spaces, feel as lightning',                  file:'vigyan-bhairav-mind-techniques.html', anchor:'#t2', sutra:'In the spaces between two thoughts, feel the lightning of pure awareness.', tags:['witness','jnana','foundational']}
   };
+
+  /* Map dosha -> technique adaptations (posture, duration, environment) */
+  const DOSHA_ADAPT = {
+    vata:  {posture:'Lying down, or seated propped against a wall with a blanket; warm room, no cold floors. Hands warm.', duration:'10&ndash;15 minutes to start. Build slowly. Quality over duration. Stop before the system scatters.', environment:'Quiet, warm, dim, predictable. Same room daily. No surprises during practice.', tempo:'Slow start. Three minutes of just settling before the technique itself. Eat a small warm thing first.'},
+    pitta: {posture:'Lying down or comfortable seated on a cool floor or cushion, in shade. Loose clothes. Cool room.', duration:'15&ndash;20 minutes. Long enough to count, short enough not to become a goal you push through.', environment:'Cool, shaded, evening light. Avoid bright noon sun and overheated rooms. Water nearby.', tempo:'Don&rsquo;t race. Soften the achiever. The technique is not a target. It is a place to fail at trying.'},
+    kapha: {posture:'Upright. Cross-legged or kneeling, NOT lying down. Spine actively held. Eyes open if drowsy.', duration:'20&ndash;30 minutes. You need length to break through baseline density. Don&rsquo;t cut short.', environment:'Bright, fresh air, slightly cool. Open a window. Better in morning before the day weights you.', tempo:'Begin with brisk movement &mdash; walk five minutes, shake limbs, splash cold water &mdash; then sit. Wake the system first.'}
+  };
+
+  const TIME_OF_DAY = {
+    predawn:'Pre-dawn (4&ndash;6 AM) &mdash; the brahmamuhurta, your most alive window',
+    morn:   'Early morning (6&ndash;8 AM) &mdash; before the day claims you',
+    midday: 'Midday &mdash; deliberately, on a real lunch break',
+    aft:    'Late afternoon (3&ndash;5 PM) &mdash; before evening winds you down',
+    eve:    'Evening (after dinner, before screens take over)',
+    late:   'Late night &mdash; your natural alive hour, when the house is quiet',
+    varies: 'Same morning anchor each day &mdash; build a rhythm before chasing the &ldquo;perfect&rdquo; time'
+  };
+
+  /* Per-path: which 5 deep techniques to recommend, ordered. Each comes with metadata for personalising. */
+  const PATH_DEEP_RECS = {
+    karma: ['cent_swaying','sens_taste','wit_satis','breath_daily','tant_friend'],
+    bhakti:['heart_filling','sound_aum','heart_sing','tant_friend','sens_first'],
+    jnana: ['mind_lightning','wit_self','neg_nothing','void_before','imag_content'],
+    raja:  ['breath_gap_in','light_summer','wit_neither','imag_spacious','heart_eternal']
+  };
+
+  /* Energy-type bonus picks: a sixth option for combining */
+  const ENERGY_BONUS = {
+    body:  'sens_taste',
+    mind:  'cent_wall',
+    heart: 'heart_filling',
+    energy:'imag_spacious'
+  };
+
+  /* "If not clicking by day 7" alternative map */
+  const ALT_TECH = {
+    cent_swaying:'sens_taste',
+    sens_taste:  'breath_daily',
+    wit_satis:   'sens_first',
+    breath_daily:'cent_buttocks',
+    tant_friend: 'heart_filling',
+    heart_filling:'sound_aum',
+    sound_aum:   'heart_sing',
+    heart_sing:  'tant_friend',
+    sens_first:  'sens_taste',
+    mind_lightning:'wit_self',
+    wit_self:    'wit_neither',
+    neg_nothing: 'void_before',
+    void_before: 'imag_content',
+    imag_content:'mind_lightning',
+    breath_gap_in:'wit_neither',
+    light_summer:'imag_spacious',
+    wit_neither: 'breath_gap_in',
+    imag_spacious:'light_summer',
+    heart_eternal:'wit_neither',
+    cent_wall:'sens_first'
+  };
+
+  /* Expanded situational toolkit &mdash; 20 entries with category, icon, technique key */
+  const SITUATIONAL = {
+    /* original 7 */
+    sleep:       {cat:'sleep',   icon:'\u263E', label:'For trouble sleeping / racing mind at night',   tk:'sleep_essences', why:'Uses the moment between waking and sleeping &mdash; the most natural meditation window. Especially good for Vata-leaning sleepers and overthinkers.'},
+    anxiety:     {cat:'mind',    icon:'\u26A1', label:'For anxiety / overthinking / spirals',           tk:'mind_lightning', why:'Anxiety lives in identification with thought. The lightning gap between thoughts cuts the spiral cleanly.'},
+    disconnect:  {cat:'body',    icon:'\u270B', label:'For when you feel disconnected from your body',  tk:'sens_taste',     why:'The senses are the simplest doorway home to the body. Let one sense fill you completely. The body returns by itself.'},
+    anger:       {cat:'emotion', icon:'\u2668', label:'For anger / triggered / reactive',               tk:'wit_undist',     why:'Don&rsquo;t suppress, don&rsquo;t act it out. Stay with the heat as pure energy without identifying. Heat becomes clarity.'},
+    joy:         {cat:'emotion', icon:'\u2600', label:'For when you want to amplify joy',               tk:'wit_satis',      why:'When joy arises, instead of grasping or distrusting, become it. The joy widens until there is no one left to be joyful.'},
+    focus:       {cat:'mind',    icon:'\u25CE', label:'For when you can&rsquo;t focus / scattered',     tk:'cent_wall',       why:'Bring the scattered mind to one beloved point. Single object, soft attention, no force. Focus restores.'},
+    stuck:       {cat:'energy',  icon:'\u2191', label:'For when you feel stuck / numb',                 tk:'cent_swaying',   why:'Stuckness lives in tamas (inertia). Movement is the only thing that lifts it cleanly. Start with the body; the rest follows.'},
+
+    /* new 20+ */
+    morning:     {cat:'time',    icon:'\u2600', label:'Morning energiser &mdash; right when you wake',  tk:'cent_swaying',   why:'Use the body before the mind activates. Two minutes of gentle swaying centring sets the tone for the entire day.'},
+    evening:     {cat:'time',    icon:'\u263D', label:'Evening wind-down &mdash; before bed',           tk:'breath_gap_in',  why:'Slow down without trying. The natural pause between breaths lets the nervous system find its own rest.'},
+    midday_low:  {cat:'time',    icon:'\u2697', label:'Mid-day reset &mdash; the 2pm slump',            tk:'sens_first',     why:'When you&rsquo;re tired, looking at any object as if for the first time clears the cobwebs faster than caffeine.'},
+    before_hard: {cat:'social',  icon:'\u2696', label:'Before a difficult conversation',                tk:'cent_middle',    why:'Settle into the middle &mdash; neither bracing for impact nor pre-rehearsing. Three minutes makes you genuinely available.'},
+    after_arg:   {cat:'social',  icon:'\u26A1', label:'After an argument or conflict',                  tk:'wit_undist',     why:'The aftermath of conflict is residual heat. Don&rsquo;t analyse yet. Sit with the heat itself; let it cool to clarity.'},
+    grief:       {cat:'heart',   icon:'\u2604', label:'For grief or loss',                              tk:'death_certain',  why:'The certainty that all impermanent passes is not consolation; it is doorway. What does not pass is what remains for you to find.'},
+    heartbreak:  {cat:'heart',   icon:'\u2764', label:'For heartbreak / romantic pain',                 tk:'heart_filling',  why:'Heartbreak feels like the heart is closing. The technique opens it &mdash; not toward the lost person, but to love itself, which has nowhere to go but everywhere.'},
+    lonely:      {cat:'heart',   icon:'\u2740', label:'For loneliness',                                 tk:'tant_friend',    why:'Loneliness collapses when you remember what reunion feels like. Even imagined, the joy is real. Use it.'},
+    self_judge:  {cat:'mind',    icon:'\u26A0', label:'For self-judgement / inner critic spiral',       tk:'wit_self',       why:'The self-critic is a thought, not the one having it. Self-remembering returns the centre that the critic is trying to hide from you.'},
+    body_image:  {cat:'body',    icon:'\u26B9', label:'For body image / hating your body',              tk:'sens_eyeballs',  why:'The lightness in the eyes opens to the heart. From there, the body is felt rather than judged. The hatred has nowhere to land.'},
+    burnout:     {cat:'energy',  icon:'\u2638', label:'For burnout / total exhaustion',                 tk:'void_roam',      why:'Don&rsquo;t fight the exhaustion. Roam until you cannot continue, drop, and in the dropping, find what was never tired.'},
+    creative:    {cat:'mind',    icon:'\u270E', label:'For creative block',                             tk:'imag_bowl',      why:'When you cannot make, look at empty space until something arises. Creation comes from the bowl, not the walls.'},
+    racing:      {cat:'sleep',   icon:'\u23F0', label:'For pre-sleep racing thoughts',                  tk:'breath_gap_in',  why:'Cannot stop thinking. Don&rsquo;t try. Drop attention into the gap after the in-breath. The thoughts will pass like cars on a road.'},
+    threeam:     {cat:'sleep',   icon:'\u263E', label:'For 3am wake-up (Vata pattern)',                  tk:'wit_hypno',      why:'You have woken into the hypnagogic gap. Don&rsquo;t reach for the phone. Stay in the gap. The gap is the practice.'},
+    depression:  {cat:'energy',  icon:'\u2693', label:'For depression / heaviness',                     tk:'death_fire',     why:'Heaviness needs fire. Visualise it rising from the toes, burning what is dense. Tamas dissolves into something that can finally move.'},
+    work:        {cat:'social',  icon:'\u2692', label:'For overwhelm at work',                          tk:'cent_middle',    why:'Two minutes between calls. Find the middle &mdash; neither pushing forward nor escaping. Productivity returns from the inside.'},
+    social:      {cat:'social',  icon:'\u2638', label:'For social anxiety',                             tk:'breath_navel',   why:'Social anxiety is dissociation upward into the head. Drop the attention to the navel. The body grounds; the social sense rebalances.'},
+    numb:        {cat:'heart',   icon:'\u26C4', label:'For numbness / can&rsquo;t feel anything',       tk:'sens_taste',     why:'Numbness cannot be willed away. Eat one mouthful of food with full attention. Feeling returns through the smallest door.'},
+    existential: {cat:'mind',    icon:'\u26B5', label:'For existential crisis',                         tk:'neg_nothing',    why:'When the foundations crack, don&rsquo;t patch them. Sit in the crack. &ldquo;I am no thing&rdquo; is not nihilism; it is what survives every collapse.'},
+    boring:      {cat:'mind',    icon:'\u26A0', label:'For when meditation itself feels boring/wrong',  tk:'sens_wander',    why:'The boredom IS the technique now. Wherever the mind wanders &mdash; that very place, this. Don&rsquo;t escape. Watch the wanting-to-escape.'}
+  };
+
+  const SIT_CATS = [
+    {key:'all',     label:'All'},
+    {key:'time',    label:'Time of day'},
+    {key:'mind',    label:'Mind'},
+    {key:'heart',   label:'Heart'},
+    {key:'body',    label:'Body'},
+    {key:'sleep',   label:'Sleep'},
+    {key:'emotion', label:'Emotion'},
+    {key:'energy',  label:'Energy'},
+    {key:'social',  label:'Relationships / work'}
+  ];
+
+  /* =================== HELPERS FOR DEEP RECOMMENDATIONS =================== */
+
+  /* Pull a quiz answer safely; returns string or '' */
+  function ans(qid){
+    const v = answers[qid];
+    if(v == null) return '';
+    return Array.isArray(v) ? v.join(',') : String(v);
+  }
+  function ansHas(qid, val){
+    const v = answers[qid];
+    if(v == null) return false;
+    if(Array.isArray(v)) return v.indexOf(val) !== -1;
+    return v === val;
+  }
+  function todLabelShort(tod){
+    const map = {predawn:'pre-dawn',morn:'early morning',midday:'midday',aft:'late afternoon',eve:'evening',late:'late night',varies:'morning'};
+    return map[tod] || 'morning';
+  }
+  function fileLabel(file){ return file.replace('vigyan-bhairav-','').replace('-techniques.html',''); }
+
+  /* Generate a personalised "WHY THIS FOR YOU" string referencing actual quiz answers */
+  function whyForYou(tk, profile){
+    const a = profile.answers || {};
+    const dosha = profile.primaryDosha;
+    const energy = profile.primaryEnergy;
+    const path = profile.primaryPath;
+    const tags = tk.tags || [];
+
+    /* Reference q3 (stress response), q6 (hardest thing), q21 (best time), q22 (sleep), q33 (alone), q48 (scares about meditation), q56 (what want) */
+    const stress = a.q3;
+    const hardest = a.q6;
+    const sleep = a.q22;
+    const alone = a.q33;
+    const scared = a.q48;
+    const movePref = a.q4;
+    const phone = a.q27;
+    const want = (a.q56 || '').toString().trim();
+
+    let opener;
+    /* Open with a reference to a specific answer */
+    if(tags.indexOf('movement') !== -1 || tags.indexOf('embodied') !== -1){
+      if(movePref === 'b' || stress === 'a'){
+        opener = 'Because you said your body is your home and you activate under stress (run, do, push), this technique uses your natural rhythm rather than fighting it &mdash; the centre is found INSIDE the movement, not by stopping it.';
+      } else if(hardest === 'still'){
+        opener = 'You said the hardest thing for you is sitting still without doing anything. This technique was chosen precisely for that &mdash; it gives the doer in you something to do while teaching the witness to ride along.';
+      } else {
+        opener = 'Body-based techniques work fastest for your constitution because the door opens through what you can already feel.';
+      }
+    } else if(tags.indexOf('heart') !== -1 || tags.indexOf('bhakti') !== -1){
+      if(energy === 'heart' || a.q35 === 'easy'){
+        opener = 'Because you said feeling is your strongest channel &mdash; you cry easily, you are moved by what is beautiful &mdash; this technique uses that as the doorway. Your heart already knows the way; the technique only points.';
+      } else if(scared === 'feel'){
+        opener = 'You said what scares you about meditation is what feelings might surface. This technique meets that fear directly, by letting feeling itself become the practice rather than the thing to be managed.';
+      } else {
+        opener = 'Heart-based techniques tend to land for you because warmth is the entry &mdash; cold inquiry would feel sterile here.';
+      }
+    } else if(tags.indexOf('jnana') !== -1 || tags.indexOf('self-inquiry') !== -1){
+      if(energy === 'mind' || a.q5 === 'read'){
+        opener = 'Because you said you learn by reading, thinking, understanding, this technique meets you where you already live: in inquiry. It is not asking you to stop thinking; it is asking you to think your way to the edge of thinking.';
+      } else if(scared === 'real'){
+        opener = 'You said what scares you about meditation is what you might find out about yourself. This technique IS that finding out &mdash; the inquiry itself, with no escape from it.';
+      } else {
+        opener = 'Inquiry-based techniques tend to be the most honest doorway for sharp minds. The mind is not the enemy; it is the tool.';
+      }
+    } else if(tags.indexOf('raja') !== -1 || tags.indexOf('witness') !== -1 || tags.indexOf('spacious') !== -1){
+      if(alone === 'love' || energy === 'energy'){
+        opener = 'Because you said you actually love being alone, that solitude restores rather than drains you, this technique uses what your nature already wants &mdash; to dissolve into quiet space &mdash; and gives that pull a place to go.';
+      } else {
+        opener = 'Witness-based techniques use the part of you that is already watching. You may have noticed this watcher all your life without naming it; the practice is to recognise and rest in it.';
+      }
+    } else if(tags.indexOf('sleep') !== -1 || tags.indexOf('transition') !== -1){
+      if(sleep === 'vata'){
+        opener = 'Because you said you wake at 3 AM with thoughts you can&rsquo;t stop, your sleep itself can become a meditation. The hypnagogic gap (between awake and asleep) is the doorway you already pass through every night.';
+      } else {
+        opener = 'Transitions are doorways &mdash; and you have several every day. This technique uses the natural gap your awareness already passes through.';
+      }
+    } else if(tags.indexOf('mantra') !== -1 || tags.indexOf('sound') !== -1){
+      if(ansHas('q28','vocal') || ansHas('q28','devo') || ansHas('q26','heart')){
+        opener = 'Because you said music with voice or devotion moves you, this technique uses sound as the carrier. The sound takes you where the mind cannot follow.';
+      } else {
+        opener = 'Sound is the most ancient meditation door. Even if you don&rsquo;t consider yourself a musical person, the throat-to-heart channel is universally present.';
+      }
+    } else if(tags.indexOf('grief') !== -1 || tags.indexOf('death') !== -1){
+      opener = 'Because you mentioned that loss or impermanence weighs on you, this technique meets death directly &mdash; not as morbid fascination, but as the most reliable teacher of what does not pass.';
+    } else if(tags.indexOf('imagination') !== -1){
+      opener = 'You said you have an active inner life. This technique uses imagination as the vehicle &mdash; not as escape, but as a way of touching what cannot be reached by analysis.';
+    } else {
+      opener = 'This technique fits the specific combination of your answers: ' + path + ' as primary path, ' + energy + ' as primary energy, ' + dosha + ' as constitution.';
+    }
+
+    /* Add a closing line that references their stated intention if present */
+    let closer = '';
+    if(want && want.length > 12){
+      const shortWant = want.length > 80 ? want.slice(0, 78).replace(/[<>]/g,'') + '&hellip;' : want.replace(/[<>]/g,'');
+      closer = ' You said you came here wanting: <em>&ldquo;' + shortWant + '&rdquo;</em> &mdash; this technique is one of the truest doorways toward that.';
+    } else if(scared){
+      const scaredMap = {bored:'You said boredom scares you. This technique uses the boredom itself.', feel:'You said feelings scare you. This one lets them through, gently.', real:'You said what you might find out scares you. The technique is the finding out, but soft.', emp:'You said emptiness scares you. This is not empty &mdash; it is full of attention.', cult:'You said cultishness scares you. This is one technique, no group required.', noth:'You said nothing scares you. Begin then.'};
+      if(scaredMap[scared]) closer = ' ' + scaredMap[scared];
+    }
+
+    return opener + closer;
+  }
+
+  /* Pick top 5 deep technique objects, woven from path + energy + dosha + answers */
+  function pickDeepRecs(profile){
+    const baseKeys = (PATH_DEEP_RECS[profile.primaryPath] || []).slice(0, 4);
+    const energyKey = ENERGY_BONUS[profile.primaryEnergy];
+    let keys = baseKeys.slice();
+    if(energyKey && keys.indexOf(energyKey) === -1){
+      keys.splice(2, 0, energyKey);
+    }
+    /* Wildcard based on stress/sleep answer */
+    if(profile.answers.q22 === 'vata' && keys.indexOf('wit_hypno') === -1){
+      keys.push('wit_hypno');
+    } else if(profile.answers.q3 === 'a' && keys.indexOf('cent_swaying') === -1){
+      keys.push('cent_swaying');
+    } else if(profile.answers.q3 === 'b' && keys.indexOf('mind_lightning') === -1){
+      keys.push('mind_lightning');
+    } else if(profile.answers.q3 === 'c' && keys.indexOf('heart_filling') === -1){
+      keys.push('heart_filling');
+    } else if(profile.answers.q3 === 'd' && keys.indexOf('breath_gap_in') === -1){
+      keys.push('breath_gap_in');
+    }
+    /* Truncate to 5 unique */
+    const seen = {};
+    const finalKeys = [];
+    for(const k of keys){ if(!seen[k] && TECH_DEEP[k]){ seen[k] = 1; finalKeys.push(k); if(finalKeys.length === 5) break; } }
+    /* If still under 5, fill from remaining path keys */
+    const allKeys = Object.keys(TECH_DEEP);
+    for(const k of allKeys){
+      if(finalKeys.length >= 5) break;
+      if(!seen[k]){ seen[k] = 1; finalKeys.push(k); }
+    }
+    return finalKeys.map(k => {
+      const tk = Object.assign({}, TECH_DEEP[k], {key:k});
+      tk.whyText = whyForYou(tk, profile);
+      tk.altKey = ALT_TECH[k];
+      return tk;
+    });
+  }
+
+  /* Render the 5 deep technique cards */
+  function renderDetailedTechniqueCards(profile){
+    const recs = pickDeepRecs(profile);
+    const dosha = profile.primaryDosha;
+    const adapt = DOSHA_ADAPT[dosha];
+    const tod = profile.answers.q21 || 'morn';
+    const todLabel = TIME_OF_DAY[tod];
+
+    return recs.map(function(tk, i){
+      const ranks = ['Top match','2nd pick','3rd pick','4th pick','5th pick'];
+      const alt = tk.altKey && TECH_DEEP[tk.altKey] ? TECH_DEEP[tk.altKey] : null;
+      const weeks = weeklyMilestones(tk, profile);
+      return '<div class="deep-tech ' + (i === 0 ? 'primary' : '') + '">' +
+        '<span class="rank">' + ranks[i] + '</span>' +
+        '<div class="tech-head">' +
+        '<span class="tech-num">Sutra #' + tk.num + ' &middot; ' + tk.cat + '</span>' +
+        '<h5><a href="' + tk.file + tk.anchor + '">' + tk.name + '</a></h5>' +
+        '<div class="src">In <a href="' + tk.file + '">' + fileLabel(tk.file) + ' techniques</a></div>' +
+        '</div>' +
+        '<div class="sutra">' + tk.sutra + '<br><span class="sutra-num">Vigyan Bhairav, sutra ' + tk.num + '</span></div>' +
+        '<div class="why-you"><strong>Why this for you</strong>' + tk.whyText + '</div>' +
+        '<div class="adapt-grid">' +
+        '<div class="ad"><div class="ad-lbl">Posture</div><div class="ad-val">' + adapt.posture + '</div></div>' +
+        '<div class="ad"><div class="ad-lbl">Duration</div><div class="ad-val">' + adapt.duration + '</div></div>' +
+        '<div class="ad"><div class="ad-lbl">Time of day</div><div class="ad-val">' + todLabel + '</div></div>' +
+        '<div class="ad"><div class="ad-lbl">Environment</div><div class="ad-val">' + adapt.environment + '</div></div>' +
+        '</div>' +
+        '<div class="weeks"><div class="wk-head">What success looks like</div>' +
+        '<div class="wk"><div class="wk-lbl">Week 1</div><div class="wk-txt">' + weeks.w1 + '</div></div>' +
+        '<div class="wk"><div class="wk-lbl">Week 2</div><div class="wk-txt">' + weeks.w2 + '</div></div>' +
+        '<div class="wk"><div class="wk-lbl">Week 3</div><div class="wk-txt">' + weeks.w3 + '</div></div>' +
+        '</div>' +
+        (alt ? '<div class="alt"><strong>If it&rsquo;s not clicking by day 7</strong>Switch to <a href="' + alt.file + alt.anchor + '">' + alt.name + '</a> (sutra #' + alt.num + ', in ' + fileLabel(alt.file) + '). Same family of intent, different doorway.</div>' : '') +
+        '</div>';
+    }).join('');
+  }
+
+  /* Generate per-week milestones for a technique, type-aware */
+  function weeklyMilestones(tk, profile){
+    const energy = profile.primaryEnergy;
+    const dosha = profile.primaryDosha;
+    const tags = tk.tags || [];
+    /* Generic energy-typed expectations */
+    const w1Map = {
+      body:  'You will feel awkward, like the body doesn&rsquo;t know what to do. Showing up daily is the entire goal &mdash; expect resistance, especially around day 3 and day 5.',
+      mind:  'The mind will critique the practice ruthlessly &mdash; &ldquo;is this working? am I doing it right?&rdquo;. That commentary IS the territory. Notice it, don&rsquo;t obey it.',
+      heart: 'Some session will move you unexpectedly &mdash; tears, warmth, an old memory. Let it through. Don&rsquo;t analyse it. Just keep returning.',
+      energy:'You will catch glimpses of stillness in unexpected moments outside the practice (driving, washing dishes). The cushion is just the rehearsal.'
+    };
+    const w2Map = {
+      body:  'The body begins to anticipate the practice; you may notice it settling itself before you sit. A subtle steadiness underneath whatever the day brings.',
+      mind:  'Boredom and doubt arrive. The mind is sure this isn&rsquo;t working. This is precisely when something underneath begins to shift &mdash; just below the noise.',
+      heart: 'You may notice you are slightly less reactive in relationships. People may comment that you seem softer or more available. You won&rsquo;t feel different inside; that comes later.',
+      energy:'Periods of unusual quiet, both inside and outside practice. Don&rsquo;t cling to them or analyse them. They come and go.'
+    };
+    const w3Map = {
+      body:  'Movement feels like meditation; meditation feels like movement. The line begins to blur. You stop needing to schedule it.',
+      mind:  'The mind becomes a quieter neighbour rather than an occupier. Thoughts still happen; the relationship to them has changed.',
+      heart: 'Love feels less like an emotion you have and more like a quality the moment has. You may cry at small things and laugh more easily.',
+      energy:'You begin noticing the witness in daily life as a near-constant background. The practice has stopped being something you DO and started being who you are.'
+    };
+    let w1 = w1Map[energy] || w1Map.body;
+    let w2 = w2Map[energy] || w2Map.body;
+    let w3 = w3Map[energy] || w3Map.body;
+    /* Dosha tweaks */
+    if(dosha === 'vata'){
+      w1 += ' Stay short &mdash; under fifteen minutes. The system is mobile; don&rsquo;t scatter it.';
+    } else if(dosha === 'pitta'){
+      w1 += ' Don&rsquo;t turn this into another goal you&rsquo;re achieving.';
+    } else if(dosha === 'kapha'){
+      w1 += ' Sit upright. The drowsiness is real; don&rsquo;t let it become sleep.';
+    }
+    return {w1:w1, w2:w2, w3:w3};
+  }
+
+  /* Type-specific practice adjustments */
+  function renderTypeAdjustments(profile){
+    const dosha = profile.primaryDosha;
+    const energy = profile.primaryEnergy;
+    const path = profile.primaryPath;
+    const rows = [];
+    /* Dosha row */
+    const doshaText = {
+      vata:  'Always: <strong>warm room</strong>, slow start, blanket nearby, no cold floors. Stay under 30 minutes. Eat something warm before sitting. <strong>Avoid empty-mind techniques</strong> &mdash; they will scatter you. Anchor to something tangible (breath, body, sound).',
+      pitta: 'Always: <strong>cool room</strong>, evening practice usually better than midday, water nearby. <strong>Avoid intense focus for hours</strong> &mdash; it fuels the inner driver. Soften the achiever; this is not a target to hit. Loose clothes, shaded space.',
+      kapha: 'Always: <strong>upright posture</strong>, never lying down. Practice in the morning before the day weights you. <strong>Keep duration challenging</strong> (20&ndash;30 min minimum). Begin with brisk movement. Bright space, fresh air, slightly cool.'
+    };
+    rows.push({lbl:'Your dosha (' + dosha + ')', txt:doshaText[dosha]});
+
+    /* Energy-type row */
+    const energyText = {
+      body:  '<strong>Move first, sit second.</strong> Never force stillness alone &mdash; pair it with five minutes of conscious movement first. Your body is the door; honour it.',
+      mind:  '<strong>Inquiry over imagination.</strong> Don&rsquo;t try to silence thoughts; watch them. The witness is closer than the silence. Use questioning techniques rather than visualisation.',
+      heart: '<strong>Always with feeling first.</strong> Abstract practices need devotional warmth or they become sterile. Begin every session with a moment of love &mdash; for someone, something, anything.',
+      energy:'<strong>Stay grounded.</strong> Don&rsquo;t dissolve into subtle realms without anchor. Keep one foot on the ground (literally if needed). Use breath or body as tether before you go spacious.'
+    };
+    rows.push({lbl:'Your primary energy (' + energy + ')', txt:energyText[energy]});
+
+    /* Path row */
+    const pathText = {
+      karma: '<strong>Action is your meditation.</strong> A single sit may not feel like enough &mdash; that is fine. Bring presence INTO what you already do. Cooking, running, raising children, working: each can be the practice.',
+      bhakti:'<strong>Devotion comes first.</strong> Pick someone or something to love (a teacher, a child, a god, a piece of music) and let the technique be soaked in that. Without warmth, technique becomes performance.',
+      jnana: '<strong>Inquiry is the practice.</strong> Don&rsquo;t skip the question to get to the answer. The question, sustained, is the technique. Doubt is welcome here.',
+      raja:  '<strong>Less is more.</strong> Subtle adjustments. Long quiet sittings. Resist the urge to add complexity. The witness is already present; the practice is recognition, not creation.'
+    };
+    rows.push({lbl:'Your path (' + path + ')', txt:pathText[path]});
+
+    /* Universal */
+    rows.push({lbl:'Universal', txt:'<strong>Same time, same place, same posture.</strong> Variety is the enemy of depth in the first 21 days. Boring is good. Boring is the practice working &mdash; the mind is just unaccustomed.'});
+
+    return '<div class="adj-block">' +
+      rows.map(r => '<div class="adj-row"><div class="adj-lbl">' + r.lbl + '</div><div class="adj-txt">' + r.txt + '</div></div>').join('') +
+      '</div>';
+  }
+
+  /* What NOT to do */
+  function renderWhatNotToDo(profile){
+    const dosha = profile.primaryDosha;
+    const path = profile.primaryPath;
+    const energy = profile.primaryEnergy;
+
+    const avoidByPath = {
+      karma: ['Pure void techniques and abstract self-inquiry early on &mdash; your body needs to be met first.','Long silent retreats without a clear daily structure &mdash; structureless time disorients the doer.','Trying to &ldquo;just sit&rdquo; without first moving the body &mdash; you will fight yourself.'],
+      bhakti:['Cold inquiry and pure negation practices first &mdash; they will feel sterile until the heart is warm.','Practices that ask you to detach from feeling &mdash; for you, feeling IS the path.','Long silent solitary retreats early &mdash; you need devotional context, not isolation.'],
+      jnana: ['Heavy emotional or devotional practices early &mdash; they will feel saccharine until inquiry has cleared real space.','Visualisation-heavy techniques &mdash; the imagination becomes another distraction for sharp minds.','Group ecstatic practices &mdash; performative for your temperament; do them solo if at all.'],
+      raja:  ['Highly stimulating dynamic practices &mdash; they overwhelm an already-subtle nervous system.','Long fasts paired with intense meditation &mdash; risk of dissociation rather than dissolution.','Practices that emphasise effort and striving &mdash; for you, the witness is recognition, not work.']
+    };
+    const doshaWarn = {
+      vata: ['Long unstructured silent retreats &mdash; they scatter rather than settle a Vata system.','Cold or dim spaces &mdash; the body needs warmth and predictability to soften.','Empty-mind or void practices early &mdash; you have plenty of space already; you need anchor, not more space.','Skipping meals before sitting &mdash; the system needs grounding before subtlety.'],
+      pitta:['Intense fiery breath practices (e.g. kapalabhati for long durations) &mdash; they fuel the inner heat.','Extended periods of pure concentration &mdash; turn into achievement; the practice burns instead of soothes.','Sitting in midday sun or hot rooms &mdash; physical heat compounds the emotional heat.','Treating meditation as another goal to crush &mdash; recreates the very pattern you came to dissolve.'],
+      kapha:['Long passive sitting and lying-down techniques &mdash; you need fire, not more rest.','Heavy meals before practice &mdash; you will sleep, not meditate.','Practising in dim or warm rooms &mdash; combines with your tendency toward density.','Excessive duration &mdash; without movement, more time just means more inertia.']
+    };
+    const stopSigns = [
+      'You feel <strong>more anxious, not less</strong> after consistent practice for 7&ndash;10 days. The technique may not be yours; switch category.',
+      'You feel <strong>spaced out, dissociated, ungrounded</strong>. Stop the technique. Do sensory or movement practice instead until you feel yourself again.',
+      'Your <strong>memory is worse, fuzzier</strong> after a few weeks. Reduce duration. Eat more. Ground in body. You may have gone too subtle.',
+      'You feel <strong>numb instead of clear</strong>. This is dissociation, not equanimity. Stop. Return to body or feeling work.',
+      'You start feeling <strong>spiritually superior</strong> to others. The practice is being captured by the ego. Notice; don&rsquo;t trust it.'
+    ];
+
+    return '<div class="warn-card"><div class="w-lbl">Avoid for your path (' + path + ')</div><ul>' + avoidByPath[path].map(t => '<li>' + t + '</li>').join('') + '</ul></div>' +
+      '<div class="warn-card"><div class="w-lbl">Avoid for your dosha (' + dosha + ')</div><ul>' + doshaWarn[dosha].map(t => '<li>' + t + '</li>').join('') + '</ul></div>' +
+      '<div class="warn-card"><div class="w-lbl">When to STOP and switch</div><ul>' + stopSigns.map(t => '<li>' + t + '</li>').join('') + '</ul></div>';
+  }
+
+  /* Progress markers */
+  function renderProgressMarkers(profile){
+    const energy = profile.primaryEnergy;
+    const path = profile.primaryPath;
+    /* Type-specific markers */
+    const subtleByEnergy = {
+      body: 'Less reactive in your body. Tension in shoulders or jaw drops without effort. You sleep slightly deeper.',
+      mind: 'Thoughts still happen, but the relationship to them changes. You notice them sooner. The narrator is no longer the only voice in the house.',
+      heart: 'You cry more easily, but the crying clears. Old wounds surface and dissolve in the same week. Strangers feel less foreign.',
+      energy:'Long pauses in life feel naturally meditative. Empty time stops being threatening. You feel less hurried for no reason.'
+    };
+    const realByPath = {
+      karma: 'Things you do begin to feel less like &ldquo;you doing them&rdquo; and more like things happening through you. Effort drops; effectiveness doesn&rsquo;t.',
+      bhakti:'Love feels less like an emotion you have, more like a quality the moment has. You stop confusing love with longing.',
+      jnana: 'You stop being identified with your conclusions. The same insight that used to hold you now feels like a thought passing through.',
+      raja:  'The witness becomes near-constant background. You don&rsquo;t practise being aware; you simply notice you are.'
+    };
+    const wrongSigns = 'Increased anxiety after weeks of practice. Persistent dissociation. Feeling spiritually special. Memory degradation. Numbness mistaken for peace. If any of these: switch category, eat more, ground in body, or stop entirely until clarity returns.';
+
+    return '<div class="prog-timeline">' +
+      '<div class="prog-row"><div class="pr-when">Week 1</div><div class="pr-what"><strong>Showing up.</strong> That is the entire victory. <span class="small">If you sat for 21 sessions in some form, you have built more than you know.</span></div></div>' +
+      '<div class="prog-row"><div class="pr-when">Week 2</div><div class="pr-what"><strong>Boredom and doubt.</strong> You are sure it is not working. The mind is loudly disappointed. <span class="small">This is the most important week. Stay.</span></div></div>' +
+      '<div class="prog-row"><div class="pr-when">Week 3</div><div class="pr-what"><strong>Something underneath shifts.</strong> ' + subtleByEnergy[energy] + ' <span class="small">Most people miss this because they expected something dramatic.</span></div></div>' +
+      '<div class="prog-row"><div class="pr-when">Month 3</div><div class="pr-what"><strong>It becomes part of the day.</strong> You miss it when you skip. Effort to show up has dropped to almost zero. <span class="small">The shift is now stable enough that the people closest to you have probably noticed.</span></div></div>' +
+      '<div class="prog-row"><div class="pr-when">Month 6</div><div class="pr-what"><strong>Real progress feels nothing like what you expected.</strong> ' + realByPath[path] + ' <span class="small">No bliss. No certainty. Just less resistance to what is.</span></div></div>' +
+      '<div class="prog-row"><div class="pr-when">Wrong signs</div><div class="pr-what">' + wrongSigns + '</div></div>' +
+      '</div>';
+  }
+
+  /* Troubleshooting */
+  function renderTroubleshooting(profile){
+    const rows = [
+      {sym:'Can&rsquo;t sit still &mdash; body keeps fidgeting',  fix:'Switch to <a href="vigyan-bhairav-movement-techniques.html">movement techniques</a> for two weeks. Conscious movement is meditation. Sitting can come later.'},
+      {sym:'Anxiety has increased, not decreased',                 fix:'Add grounding. Try <a href="vigyan-bhairav-centering-techniques.html#t1">centering between two opposites</a> or <a href="vigyan-bhairav-sensory-techniques.html#t1">sensory anchoring</a>. <strong>Eat first.</strong>'},
+      {sym:'Falling asleep during practice',                       fix:'Switch to upright posture. Practise earlier in the day. <strong>Open your eyes.</strong> Try the <a href="vigyan-bhairav-light-techniques.html#t4">summer-sky</a> open-eyed practice.'},
+      {sym:'Bored, sure it&rsquo;s not working',                  fix:'<strong>That&rsquo;s normal day 7&ndash;14.</strong> Stay. The boredom is the mind running out of resistance. Boredom is the doorway, not the wall.'},
+      {sym:'Crying a lot, unexpected emotion arising',             fix:'<strong>Heart is opening.</strong> That&rsquo;s good. Don&rsquo;t analyse it. Don&rsquo;t suppress it. Let it through. Practise <a href="vigyan-bhairav-heart-techniques.html#t3">love filling from all sides</a> as companion.'},
+      {sym:'Feeling MORE anxious, not less, after 10+ days',       fix:'This category may not be yours. Try a different family entirely &mdash; if you started with witnessing, try movement; if movement, try heart.'},
+      {sym:'Memory worse, fuzzy, can&rsquo;t hold details',       fix:'Reduce duration. Eat more. Ground in body. You went too subtle, too fast. Try <a href="vigyan-bhairav-sensory-techniques.html#t2">tasting food fully</a> as practice for a week.'},
+      {sym:'Spaced out, dissociated, watching life from far',      fix:'<strong>STOP that technique.</strong> Do sensory or movement practice instead. Walk barefoot on grass. Eat something warm. The technique is too subtle for where you are now.'},
+      {sym:'Practice feels mechanical, like going through motions', fix:'Add devotion or feeling. Read three pages of a saint&rsquo;s biography before sitting. Pair with <a href="vigyan-bhairav-heart-techniques.html#t2">devotion frees</a>.'},
+      {sym:'Resistance to even starting on a given day',           fix:'<strong>Sit anyway.</strong> Five minutes. The resistance is part of the practice. Going through the door of resistance is itself the meditation.'},
+      {sym:'Mind goes blank but feels empty, not full',            fix:'You may be dissociating. Try <a href="vigyan-bhairav-sensory-techniques.html#t2">taste the food</a> or <a href="vigyan-bhairav-centering-techniques.html#t6">senses absorbed in heart</a>. Bring something to be aware OF.'},
+      {sym:'Emotional flooding mid-session, can&rsquo;t cope',     fix:'Open eyes, sit upright, practise breath gap for the rest of the session. Don&rsquo;t push through. Talk to a therapist if it persists.'}
+    ];
+    return '<div class="troubleshoot">' +
+      rows.map(r => '<div class="tr-row"><div class="tr-symptom">' + r.sym + '</div><div class="tr-fix">' + r.fix + '</div></div>').join('') +
+      '</div>';
+  }
+
+  /* Commitment card */
+  function renderCommitmentCard(profile){
+    const recs = pickDeepRecs(profile);
+    const top = recs[0];
+    const tod = profile.answers.q21 || 'morn';
+    const todLabel = todLabelShort(tod);
+    const want = (profile.answers.q56 || '').toString().trim();
+    const intent = want.length > 12 ? want.replace(/[<>]/g,'') : 'To know who I am beneath the noise &mdash; and to stop running from the silence.';
+    const dur = DOSHA_ADAPT[profile.primaryDosha].duration;
+    /* Compute end date */
+    const today = new Date();
+    const endDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 20);
+    const fmt = function(d){
+      const m = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      return m[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+    };
+    const startStr = fmt(today);
+    const endStr = fmt(endDate);
+
+    /* Read existing commit checks from localStorage */
+    const stored = readJSON(COMMIT_KEY, {});
+    const checks = stored.checks || [];
+
+    let boxes = '';
+    for(let i = 1; i <= 21; i++){
+      const checked = checks.indexOf(i) !== -1 ? ' checked' : '';
+      boxes += '<div class="commit-box' + checked + '" data-d="' + i + '"><span class="cb-num">' + i + '</span></div>';
+    }
+
+    return '<div class="commit-card">' +
+      '<div class="cm-eyebrow">My 21-day commitment</div>' +
+      '<h4>' + top.name + '</h4>' +
+      '<div class="cm-tech">Sutra #' + top.num + ' &middot; in <a href="' + top.file + '">' + fileLabel(top.file) + ' techniques</a></div>' +
+      '<div class="cm-line"><strong>My reason for practising</strong><div class="cm-intent">&ldquo;' + intent + '&rdquo;</div></div>' +
+      '<div class="cm-line"><strong>When</strong><span class="v">' + todLabel + ', daily</span></div>' +
+      '<div class="cm-line"><strong>Duration</strong><span class="v">' + dur + '</span></div>' +
+      '<div class="cm-line"><strong>Start</strong><span class="v">' + startStr + '</span></div>' +
+      '<div class="cm-line"><strong>End (day 21)</strong><span class="v">' + endStr + '</span></div>' +
+      '<div class="cm-checks">' +
+      '<div class="cm-checks-lbl">Tick a box each day you sit. Skip days are okay; don&rsquo;t restart the count.</div>' +
+      '<div class="commit-grid">' + boxes + '</div>' +
+      '</div>' +
+      '<div class="cm-foot">Print this page or take a screenshot. Tape it where you&rsquo;ll see it. The card holds you when motivation does not.</div>' +
+      '<div class="cm-actions"><button type="button" id="commit-print">Print just this card</button><button type="button" id="commit-reset">Reset boxes</button></div>' +
+      '</div>';
+  }
+
+  function bindCommitCheckboxes(){
+    const grid = document.querySelector('#rc-commit-body .commit-grid');
+    if(!grid) return;
+    grid.querySelectorAll('.commit-box').forEach(function(box){
+      box.addEventListener('click', function(){
+        const d = parseInt(box.getAttribute('data-d'), 10);
+        const stored = readJSON(COMMIT_KEY, {});
+        const checks = stored.checks || [];
+        const idx = checks.indexOf(d);
+        if(idx === -1){ checks.push(d); box.classList.add('checked'); }
+        else { checks.splice(idx, 1); box.classList.remove('checked'); }
+        writeJSON(COMMIT_KEY, {checks:checks, lastUpdated:new Date().toISOString()});
+      });
+    });
+    const printBtn = document.getElementById('commit-print');
+    if(printBtn){ printBtn.addEventListener('click', function(){ window.print(); }); }
+    const resetBtn = document.getElementById('commit-reset');
+    if(resetBtn){
+      resetBtn.addEventListener('click', function(){
+        if(!confirm('Reset all 21 day-boxes?')) return;
+        writeJSON(COMMIT_KEY, {checks:[], lastUpdated:new Date().toISOString()});
+        document.querySelectorAll('#rc-commit-body .commit-box').forEach(b => b.classList.remove('checked'));
+      });
+    }
+  }
+
+  /* 21-day calendar grid */
+  function generate21DayCalendar(profile, topTech){
+    const energy = profile.primaryEnergy;
+    const dosha = profile.primaryDosha;
+    const dur = DOSHA_ADAPT[dosha].duration.match(/^[^&\.\.]+/)[0].trim();
+    const baseDur = function(){ return dur; };
+    const days = [];
+    /* Per-energy variation: body=mix sit+move, mind=longer sit, heart=devotional, energy=witnessing */
+    for(let i = 1; i <= 21; i++){
+      const phase = i <= 7 ? 1 : i <= 14 ? 2 : 3;
+      let what, note;
+      if(phase === 1){
+        what = topTech.name;
+        if(energy === 'body' && i % 2 === 0){
+          what = 'Conscious movement (5 min) + ' + topTech.name + ' (10 min)';
+          note = 'Wake the body before you sit.';
+        } else if(energy === 'heart' && i === 4){
+          what = 'Read 3 pages from a saint or mystic; then ' + topTech.name;
+          note = 'Devotion warms the technique.';
+        } else if(i === 1){ note = 'Just show up. Set a timer. Five minutes if needed.'; }
+        else if(i === 3){ note = 'You may want to skip today. Don&rsquo;t. Even three minutes counts.'; }
+        else if(i === 5){ note = 'Resistance peaks now for most. The resistance IS the practice.'; }
+        else if(i === 7){ note = 'You made it through Foundation week. Rest in that.'; }
+        else { note = 'Same posture, same time. Boring is good.'; }
+      } else if(phase === 2){
+        what = topTech.name;
+        if(energy === 'mind' && i === 10){
+          what = topTech.name + ' (extended &mdash; add 5 min)';
+          note = 'For the mind type, week 2 is when length begins to deepen rather than tax.';
+        } else if(energy === 'body' && (i === 9 || i === 12)){
+          what = 'Walking meditation (10 min) + ' + topTech.name + ' (10 min)';
+          note = 'Mix sitting and walking; both are practice.';
+        } else if(energy === 'heart' && i === 11){
+          what = topTech.name + ' (with devotional opening)';
+          note = 'Begin by recalling someone you love. Hold them in mind for 30 seconds. Then begin.';
+        } else if(energy === 'energy' && i === 13){
+          what = topTech.name + ' (sustained witnessing)';
+          note = 'Today, just watch. No effort. The practice is recognition.';
+        } else if(i === 8){ note = 'New phase. The novelty has worn off. Welcome.'; }
+        else if(i === 10){ note = 'You are sure this is not working. Stay.'; }
+        else if(i === 12){ note = 'Halfway. Don&rsquo;t look at the calendar. Just sit.'; }
+        else if(i === 14){ note = 'Something has shifted. You may not feel it yet.'; }
+        else { note = 'Boredom is the doorway, not the wall.'; }
+      } else {
+        what = topTech.name;
+        if(energy === 'energy' && (i === 16 || i === 19)){
+          what = 'Open practice &mdash; ' + topTech.name + ' or simply rest in awareness';
+          note = 'For energy types, week 3 begins to dissolve the &ldquo;technique&rdquo; into pure awareness.';
+        } else if(energy === 'heart' && i === 18){
+          what = topTech.name + ' + brief loving-kindness extension';
+          note = 'After your sit, send well-wishes to one person, then to all beings, for two minutes.';
+        } else if(energy === 'body' && i === 17){
+          what = topTech.name + ' (in nature if possible)';
+          note = 'Take it outside. Bare feet on earth.';
+        } else if(energy === 'mind' && i === 20){
+          what = topTech.name + ' (with inquiry: who is meditating?)';
+          note = 'In the last week, add the inquiry &mdash; not as escape from the technique, but as its deepening.';
+        } else if(i === 15){ note = 'Final phase. Notice what is different from day 1.'; }
+        else if(i === 18){ note = 'Most people report a quiet shift around now. You may not.'; }
+        else if(i === 21){ note = 'Last day. Decide: continue, deepen, or change. Either way, you arrived.'; }
+        else { note = 'Integration: bring the practice into the day, not just the cushion.'; }
+      }
+      days.push({d:i, phase:phase, what:what, note:note, dur:baseDur()});
+    }
+    return days;
+  }
+
+  function render21DayCalendar(profile, topTech){
+    const days = generate21DayCalendar(profile, topTech);
+    const grid = document.getElementById('cal-grid');
+    if(!grid) return;
+    const phaseLbl = {1:'Foundation',2:'Deepening',3:'Integration'};
+    grid.innerHTML = days.map(function(d){
+      return '<div class="cal-day phase-' + d.phase + '" data-d="' + d.d + '"><div class="d-num">' + d.d + '</div><div class="d-lbl">' + phaseLbl[d.phase] + '</div></div>';
+    }).join('');
+    const detail = document.getElementById('cal-detail');
+    grid.querySelectorAll('.cal-day').forEach(function(el){
+      el.addEventListener('click', function(){
+        const dn = parseInt(el.getAttribute('data-d'),10);
+        const d = days[dn-1];
+        grid.querySelectorAll('.cal-day').forEach(x => x.classList.remove('expanded'));
+        el.classList.add('expanded');
+        detail.innerHTML = '<div class="d-meta">Day ' + d.d + ' &middot; ' + phaseLbl[d.phase] + ' phase &middot; ' + d.dur + '</div>' +
+          '<div class="d-title">What to do</div>' +
+          '<div class="d-do">' + d.what + '</div>' +
+          '<div class="d-note">' + d.note + '</div>';
+        detail.classList.add('show');
+      });
+    });
+  }
+
+  /* Situational toolkit &mdash; expanded with category filter and live search */
+  function renderSituational(){
+    const grid = document.getElementById('rc-tech-sits');
+    const cats = document.getElementById('sit-cats');
+    const search = document.getElementById('sit-search');
+    if(!grid) return;
+
+    function buildRows(catFilter, query){
+      const q = (query || '').toLowerCase().trim();
+      const keys = Object.keys(SITUATIONAL);
+      const out = keys.map(function(k){
+        const s = SITUATIONAL[k];
+        const tk = TECH_DEEP[s.tk] || {name:s.tk, file:'', anchor:''};
+        const inCat = (!catFilter || catFilter === 'all' || s.cat === catFilter);
+        const inSearch = !q || (s.label.toLowerCase().indexOf(q) !== -1) || (s.why.toLowerCase().indexOf(q) !== -1) || (tk.name && tk.name.toLowerCase().indexOf(q) !== -1);
+        const visible = inCat && inSearch;
+        return '<div class="sit-compact' + (visible ? '' : ' hidden') + '" data-cat="' + s.cat + '">' +
+          '<div class="ic">' + s.icon + '</div>' +
+          '<div class="body">' +
+          '<div class="lbl">' + s.label + '</div>' +
+          '<div class="rec">&rarr; <a href="' + tk.file + tk.anchor + '">' + tk.name + '</a> (sutra #' + tk.num + ', in ' + fileLabel(tk.file) + ')</div>' +
+          '<div class="why">' + s.why + '</div>' +
+          '</div></div>';
+      });
+      return out.join('');
+    }
+
+    /* Render category buttons */
+    cats.innerHTML = SIT_CATS.map(function(c, i){
+      return '<div class="sit-cat' + (i === 0 ? ' active' : '') + '" data-cat="' + c.key + '">' + c.label + '</div>';
+    }).join('');
+
+    let activeCat = 'all';
+    let activeQ = '';
+    function refresh(){ grid.innerHTML = buildRows(activeCat, activeQ); }
+    refresh();
+
+    cats.querySelectorAll('.sit-cat').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        cats.querySelectorAll('.sit-cat').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCat = btn.getAttribute('data-cat');
+        refresh();
+      });
+    });
+    if(search){
+      search.addEventListener('input', function(){
+        activeQ = search.value;
+        refresh();
+      });
+    }
+  }
 
   /* =================== RENDER RESULTS =================== */
   function renderResults(){
@@ -2137,6 +3086,20 @@ footer a{color:var(--ink-soft)}
     document.getElementById('rc-dosha-desc').innerHTML = '<strong>' + dInfo.label + '.</strong> ' + dInfo.desc + ' <em>What you need:</em> ' + dInfo.need;
 
     /* TECH RECOMMENDATIONS */
+    const profile = {
+      primaryPath: primaryPath,
+      secondaryPath: secondaryPath,
+      primaryEnergy: primaryEnergy,
+      secondaryEnergy: secondaryEnergy,
+      primaryDosha: primaryDosha,
+      primaryGuna: primaryGuna,
+      pathPct: pathPct,
+      energyPct: energyPct,
+      doshaPct: doshaPct,
+      gunaPct: gunaPct,
+      answers: answers
+    };
+
     const lib = TECH_LIBRARY[primaryPath];
     const main = lib[0];
     document.getElementById('rc-tech-main').innerHTML =
@@ -2162,27 +3125,27 @@ footer a{color:var(--ink-soft)}
         '<p class="why">' + t.why + '</p></div>'
       )).join('');
 
-    /* SITUATIONAL */
-    const sitKeys = ['sleep','anxiety','disconnect','anger','joy','focus','stuck'];
-    document.getElementById('rc-tech-sits').innerHTML = sitKeys.map(k=>{
-      const s = SITUATIONAL[k];
-      return '<div class="sit ' + k + '"><div class="when ' + k + '">' + s.label + '</div>' +
-        '<div class="what"><a href="' + s.file + s.anchor + '">' + s.tech + '</a> &middot; <a href="' + s.file + '">in ' + s.file.replace('vigyan-bhairav-','').replace('-techniques.html','') + '</a></div>' +
-        '<div class="why">' + s.why + '</div></div>';
-    }).join('');
+    /* DEEP TECHNIQUE CARDS &mdash; the new section */
+    document.getElementById('rc-deep-body').innerHTML = renderDetailedTechniqueCards(profile);
 
-    /* AVOID */
-    const avoidMap = {
-      karma: 'Pure void techniques and abstract self-inquiry. Your body needs to be met first; emptiness can come later.',
-      bhakti: 'Cold inquiry and pure negation practices. Your heart needs warmth first; the inquiry can come once the heart trusts you.',
-      jnana: 'Heavy emotional and devotional practices early on. They will feel saccharine until inquiry has cleared a real space for the heart.',
-      raja: 'Highly stimulating dynamic practices. They will overwhelm an already-subtle nervous system. Stay with quiet practices first.'
-    };
-    let avoidExtra = '';
-    if(primaryDosha === 'vata') avoidExtra = ' Also: avoid pure void and long unstructured silent retreats &mdash; they will scatter, not settle, your already-mobile system.';
-    if(primaryDosha === 'pitta') avoidExtra = ' Also: avoid intense fiery breath practices and extended concentration &mdash; they fuel your inner driver.';
-    if(primaryDosha === 'kapha') avoidExtra = ' Also: avoid long passive sitting and sleep-based techniques &mdash; you need fire, not more rest.';
-    document.getElementById('rc-tech-avoid').innerHTML = avoidMap[primaryPath] + avoidExtra;
+    /* TYPE-SPECIFIC ADJUSTMENTS */
+    document.getElementById('rc-adjust-body').innerHTML = renderTypeAdjustments(profile);
+
+    /* WHAT NOT TO DO */
+    document.getElementById('rc-warn-body').innerHTML = renderWhatNotToDo(profile);
+
+    /* PROGRESS MARKERS */
+    document.getElementById('rc-prog-body').innerHTML = renderProgressMarkers(profile);
+
+    /* TROUBLESHOOTING */
+    document.getElementById('rc-trouble-body').innerHTML = renderTroubleshooting(profile);
+
+    /* COMMITMENT CARD */
+    document.getElementById('rc-commit-body').innerHTML = renderCommitmentCard(profile);
+    bindCommitCheckboxes();
+
+    /* SITUATIONAL &mdash; expanded list with category filter + search */
+    renderSituational();
 
     /* STRENGTHS / GROWTH */
     const strengthMap = {
@@ -2211,29 +3174,18 @@ footer a{color:var(--ink-soft)}
       '<h4 style="font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:1.2rem 0 .5rem;font-weight:600">A challenging insight</h4>' +
       '<p style="font-style:italic;color:var(--ink-soft)">' + insightMap[primaryPath] + '</p>';
 
-    /* 21-DAY PLAN */
+    /* 21-DAY PLAN &mdash; with calendar */
+    const recs = pickDeepRecs(profile);
+    const topTech = recs[0];
     const tod = answers.q21 || 'morn';
-    const todMap = {
-      predawn:'pre-dawn (4&ndash;6 AM) &mdash; your most alive window',
-      morn:'early morning (6&ndash;8 AM) &mdash; before the day claims you',
-      midday:'midday &mdash; on a lunch break, deliberately',
-      aft:'late afternoon &mdash; before evening winds you down',
-      eve:'evening (after dinner) &mdash; before screens take you',
-      late:'late night &mdash; your natural alive hour',
-      varies:'morning &mdash; build a rhythm even if you don&rsquo;t have one yet'
-    };
-    const durationByDosha = {
-      vata:'10 minutes &mdash; build slowly; quality over duration',
-      pitta:'20 minutes &mdash; you can hold the focus, but don&rsquo;t make this another goal',
-      kapha:'25-30 minutes &mdash; you need length to settle in'
-    };
-    document.getElementById('rc-21-title').innerHTML = main.name + ' &middot; for 21 consecutive days';
+    document.getElementById('rc-21-title').innerHTML = topTech.name + ' &middot; 21 days';
     document.getElementById('rc-21-body').innerHTML =
-      '<p><strong>The technique:</strong> <a href="' + main.file + main.anchor + '">' + main.name + '</a> &mdash; ' + main.why + '</p>' +
-      '<p><strong>When:</strong> ' + todMap[tod] + '. Same time daily if you can; close enough most days if you can&rsquo;t.</p>' +
-      '<p><strong>Duration:</strong> ' + durationByDosha[primaryDosha] + '.</p>' +
+      '<p><strong>The technique:</strong> <a href="' + topTech.file + topTech.anchor + '">' + topTech.name + '</a> (sutra #' + topTech.num + ') &mdash; ' + topTech.whyText + '</p>' +
+      '<p><strong>When:</strong> ' + TIME_OF_DAY[tod] + '. Same time daily if you can; close enough most days if you can&rsquo;t.</p>' +
+      '<p><strong>Duration:</strong> ' + DOSHA_ADAPT[primaryDosha].duration + '</p>' +
       '<p><strong>What success looks like for YOU:</strong> not bliss, not visions. Day 7: still doing it. Day 14: probably bored, definitely doubting. Day 18: something quietly shifts &mdash; you may not notice it; the people around you will. Day 21: you decide to continue, deepen, or change. <em>That decision, made from inside the practice, is the entire point.</em></p>' +
       '<p style="font-family:var(--sans);font-size:.84rem;color:var(--ink-faint);font-style:italic;margin-top:.8rem">If you skip a day, just resume the next day. Don&rsquo;t restart the count. Don&rsquo;t punish yourself. Twenty-one days of returning is the practice.</p>';
+    render21DayCalendar(profile, topTech);
 
     /* SAVE results */
     state.completed = true;
@@ -2291,11 +3243,58 @@ footer a{color:var(--ink-soft)}
       s += '  File: ' + main.file + main.anchor + '\n';
       s += '  Why: ' + main.why.replace(/<[^>]+>/g,'') + '\n\n';
 
-      s += '--- SITUATIONAL RECOMMENDATIONS ---\n';
-      Object.keys(SITUATIONAL).forEach(k=>{
+      /* Deep recs (top 5) for the saved file */
+      const profileForTxt = {
+        primaryPath: r.primary.path,
+        secondaryPath: r.secondary.path,
+        primaryEnergy: r.primary.energy,
+        secondaryEnergy: r.secondary.energy,
+        primaryDosha: r.primary.dosha,
+        primaryGuna: r.primary.guna,
+        pathPct: r.pcts.path,
+        energyPct: r.pcts.energy,
+        doshaPct: r.pcts.doshas,
+        gunaPct: r.pcts.gunas,
+        answers: answers
+      };
+      try {
+        const recs = pickDeepRecs(profileForTxt);
+        s += '--- FIVE TECHNIQUES CHOSEN FOR YOU ---\n';
+        recs.forEach(function(tk, i){
+          s += '\n  ' + (i+1) + '. ' + tk.name.replace(/<[^>]+>/g,'') + '\n';
+          s += '     Sutra #' + tk.num + ' (in ' + fileLabel(tk.file) + ')\n';
+          s += '     Sutra: "' + tk.sutra.replace(/<[^>]+>/g,'').replace(/&mdash;/g,'\u2014').replace(/&apos;/g,"'") + '"\n';
+          s += '     Why: ' + tk.whyText.replace(/<[^>]+>/g,'').replace(/&mdash;/g,'\u2014').replace(/&apos;/g,"'").replace(/&rdquo;|&ldquo;/g,'"').replace(/&hellip;/g,'...').replace(/&rsquo;/g,"'") + '\n';
+          s += '     Link: ' + tk.file + tk.anchor + '\n';
+          if(tk.altKey && TECH_DEEP[tk.altKey]){
+            const alt = TECH_DEEP[tk.altKey];
+            s += '     Alt (if not clicking by day 7): ' + alt.name.replace(/<[^>]+>/g,'') + ' (sutra #' + alt.num + ')\n';
+          }
+        });
+        s += '\n';
+        const adapt = DOSHA_ADAPT[r.primary.dosha];
+        s += '--- YOUR PRACTICE ADAPTATIONS ---\n';
+        s += '  Posture: ' + adapt.posture.replace(/<[^>]+>/g,'') + '\n';
+        s += '  Duration: ' + adapt.duration.replace(/<[^>]+>/g,'') + '\n';
+        s += '  Environment: ' + adapt.environment.replace(/<[^>]+>/g,'') + '\n';
+        s += '  Tempo: ' + adapt.tempo.replace(/<[^>]+>/g,'') + '\n\n';
+
+        /* 21-day calendar */
+        const days = generate21DayCalendar(profileForTxt, recs[0]);
+        s += '--- YOUR 21-DAY CALENDAR ---\n';
+        days.forEach(function(d){
+          s += '  Day ' + (d.d < 10 ? ' ' : '') + d.d + ' (' + (d.phase === 1 ? 'Foundation' : d.phase === 2 ? 'Deepening' : 'Integration') + '): ' + d.what.replace(/<[^>]+>/g,'').replace(/&mdash;/g,'\u2014') + '\n';
+          if(d.note) s += '          \u2192 ' + d.note.replace(/<[^>]+>/g,'').replace(/&rsquo;/g,"'").replace(/&ldquo;|&rdquo;/g,'"').replace(/&mdash;/g,'\u2014') + '\n';
+        });
+        s += '\n';
+      } catch(e){ /* skip silently if functions not available */ }
+
+      s += '--- SITUATIONAL TOOLKIT (20+) ---\n';
+      Object.keys(SITUATIONAL).forEach(function(k){
         const sit = SITUATIONAL[k];
-        s += '  ' + sit.label + ':\n';
-        s += '    \u2192 ' + sit.tech + ' (' + sit.file + sit.anchor + ')\n';
+        const tk = TECH_DEEP[sit.tk] || {name:sit.tk, file:'', anchor:''};
+        s += '  [' + sit.cat + '] ' + sit.label.replace(/<[^>]+>/g,'').replace(/&rsquo;/g,"'").replace(/&mdash;/g,'\u2014') + '\n';
+        s += '    \u2192 ' + tk.name.replace(/<[^>]+>/g,'').replace(/&apos;/g,"'") + ' (sutra #' + tk.num + ', ' + tk.file + tk.anchor + ')\n';
       });
       s += '\n';
     }
