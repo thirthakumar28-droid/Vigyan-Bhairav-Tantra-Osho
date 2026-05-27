@@ -570,9 +570,14 @@ def render_chapter_intro(ch_num: str, ch_title: str) -> str:
     or '' if no intro exists for it.
 
     The intro JSON has one entry per sutra-discourse chapter (the odd-
-    numbered chapters 3, 5, ..., 79). Each summary already embeds one
-    short attributed quote inline; we split it out into a styled
-    blockquote so the framing reads cleanly.
+    numbered chapters 3, 5, ..., 79). The new schema exposes:
+      - ``paragraphs`` (list[str]): one or more paragraphs of framing
+      - ``quotes`` (list[str]): one or more short attributed quotes
+
+    For backward compatibility, the legacy fields ``summary`` (str) and
+    ``quote`` (str) are still honoured: ``summary`` is split on blank
+    lines into paragraphs (with the inline quote stripped from the tail),
+    and ``quote`` is wrapped in a one-element list.
     """
     try:
         n = int(ch_num)
@@ -581,34 +586,43 @@ def render_chapter_intro(ch_num: str, ch_title: str) -> str:
     entry = chapter_intros.get(n)
     if not entry:
         return ''
-    summary = entry.get('summary', '').strip()
-    quote   = entry.get('quote', '').strip()
 
-    # Split the summary so the inline attributed quote becomes a callout.
-    framing = summary
-    if quote and quote in summary:
-        # Split on the segment that introduces the quote.
-        # Typical pattern: '... As Osho puts it: "QUOTE"'
-        before_quote = summary.split(quote)[0]
-        # Trim the trailing ': "', the words "As Osho puts it" etc.
-        framing = re.sub(
-            r'\s*(?:As Osho (?:puts it|says|notes|frames it|bluntly notes)[^"]*?)?[":\s]*$',
-            '', before_quote,
-        ).strip()
-        if not framing:
-            framing = before_quote.strip()
+    # Prefer the new multi-paragraph / multi-quote schema if present.
+    paragraphs = entry.get('paragraphs') or []
+    quotes     = entry.get('quotes') or []
 
-    framing_html = html.escape(framing).replace('\n', '<br>') if framing else ''
-    quote_html   = html.escape(quote) if quote else ''
+    # Fall back to the legacy single-summary / single-quote schema.
+    if not paragraphs:
+        summary = (entry.get('summary') or '').strip()
+        legacy_quote = (entry.get('quote') or '').strip()
+        framing = summary
+        if legacy_quote and legacy_quote in summary:
+            before_quote = summary.split(legacy_quote)[0]
+            framing = re.sub(
+                r'\s*(?:As Osho (?:puts it|says|notes|frames it|bluntly notes)[^"]*?)?[":\s]*$',
+                '', before_quote,
+            ).strip()
+            if not framing:
+                framing = before_quote.strip()
+        if framing:
+            paragraphs = [p.strip() for p in re.split(r'\n\s*\n', framing) if p.strip()]
+        if legacy_quote:
+            quotes = [legacy_quote]
 
     parts = ['<aside class="chapter-intro" aria-label="Osho\'s framing for this chapter">']
     parts.append('<div class="chapter-intro-eyebrow">Osho\'s framing</div>')
-    if framing_html:
-        parts.append(f'<p class="chapter-intro-body">{framing_html}</p>')
-    if quote_html:
+    for para in paragraphs:
+        para_html = html.escape(para.strip()).replace('\n', '<br>')
+        if para_html:
+            parts.append(f'<p class="chapter-intro-body">{para_html}</p>')
+    for q in quotes:
+        q_clean = q.strip()
+        if not q_clean:
+            continue
+        q_html = html.escape(q_clean)
         parts.append(
             '<blockquote class="chapter-intro-quote">'
-            f'<p>{quote_html}</p>'
+            f'<p>{q_html}</p>'
             '<cite>— Osho</cite>'
             '</blockquote>'
         )
@@ -752,25 +766,27 @@ html{scroll-padding-top:80px}
 /* === chapter-intro (Osho's framing) === */
 .chapter-intro{
   background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;
-  padding:1.4rem 1.6rem;margin:0 0 2.5rem;
+  padding:1.6rem 1.8rem;margin:0 0 2.5rem;
   border-left:3px solid var(--accent);
 }
 .chapter-intro-eyebrow{
   font-family:var(--sans);font-size:.7rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--accent);margin-bottom:.7rem;
+  text-transform:uppercase;color:var(--accent);margin-bottom:.9rem;
   font-weight:600;
 }
 .chapter-intro-body{
-  font-family:var(--serif);font-size:1.02rem;line-height:1.7;
+  font-family:var(--serif);font-size:1.02rem;line-height:1.75;
   color:var(--ink-soft);margin:0 0 1rem;
 }
+.chapter-intro-body:last-of-type{margin-bottom:1.1rem}
 .chapter-intro-quote{
-  margin:1rem 0 0;padding:.9rem 1.2rem;
+  margin:1.1rem 0 0;padding:.95rem 1.25rem;
   border-left:3px solid var(--accent-soft);background:transparent;
   font-style:italic;font-family:var(--serif);font-size:1.05rem;
-  line-height:1.6;color:var(--ink);
+  line-height:1.65;color:var(--ink);
 }
-.chapter-intro-quote p{margin:0 0 .4rem}
+.chapter-intro-quote + .chapter-intro-quote{margin-top:.85rem}
+.chapter-intro-quote p{margin:0 0 .45rem}
 .chapter-intro-quote cite{
   display:block;font-style:normal;font-family:var(--sans);
   font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;

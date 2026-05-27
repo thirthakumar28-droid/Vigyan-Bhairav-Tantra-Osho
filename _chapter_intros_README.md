@@ -2,11 +2,17 @@
 
 ## What this file is
 
-Paraphrased summaries of the framing sections that open each of the **39 sutra-introducing chapters** in Osho's *The Book of Secrets* (commentaries on the 112 sutras of *Vigyan Bhairav Tantra*).
+Comprehensive multi-paragraph framings of the 39 sutra-introducing chapters in
+Osho's *The Book of Secrets* (commentaries on the 112 sutras of *Vigyan Bhairav
+Tantra*).
 
-Each entry captures the frame of mind Osho asks the reader to bring before practising the techniques in that chapter, plus one short attributed direct quote (each under 25 words).
+Each entry captures the frame of mind Osho asks the reader to bring before
+practising the techniques in that chapter, including the major anecdotes,
+illustrations, distinctions and arguments he uses to set up the techniques.
+Each chapter exposes 3–4 paragraphs of paraphrased framing plus 2–3 short
+attributed direct quotes (each under 30 words).
 
-## Structure
+## Schema
 
 ```json
 {
@@ -17,8 +23,17 @@ Each entry captures the frame of mind Osho asks the reader to bring before pract
     {
       "chapter": 3,
       "title": "Breath - A Bridge to the Universe",
-      "summary": "Before practising any breath technique, Osho asks you to drop the seeker's mistake. ... As Osho puts it: \"You cannot seek truth. You can find it, but you cannot seek it. The very seeking is the hindrance.\"",
-      "quote": "You cannot seek truth. You can find it, but you cannot seek it. The very seeking is the hindrance."
+      "paragraphs": [
+        "Before the four breath techniques are even named, Osho asks ...",
+        "The obstacle, Osho insists, is the very mechanism we are trying ...",
+        "This is why Shiva refuses to philosophise ...",
+        "The four breath sutras, then, are simply turnings of attention ..."
+      ],
+      "quotes": [
+        "You cannot seek truth. You can find it, but you cannot seek it. The very seeking is the hindrance.",
+        "The truth is in the present, and mind is always in the future or in the past, so there is no meeting between mind and truth.",
+        "Your being here and now is the truth, and your being here and now is the freedom, and your being here and now is the nirvana."
+      ]
     },
     ...
   ]
@@ -27,47 +42,60 @@ Each entry captures the frame of mind Osho asks the reader to bring before pract
 
 ## Chapter coverage (39)
 
-3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43,
+45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
 
-(The book's even-numbered chapters are Q&A sessions and are not summarised here. Chapter 1, an opening overture without specific techniques, is also excluded.)
+(The book's even-numbered chapters are Q&A sessions and are not summarised
+here. Chapter 1, an opening overture without specific techniques, is also
+excluded.)
 
 ## Authoring rules followed
 
-- Summaries are written in **paraphrased form** (not lifted from the EPUB).
-- Each summary contains exactly **one short direct quote** attributed inline ("As Osho puts it: ..."), kept under 25 words.
-- Word-count target: 100–150 per summary (actual range: 113–140; mean 127).
-- The same quote is also exposed as a separate `quote` field for programmatic use.
+- Paragraphs are written in **paraphrased form** in the file author's own
+  English prose, but track Osho's framing argument faithfully chapter by
+  chapter, using the discourse text that opens each chapter (extracted from
+  the EPUB into `.epub_work/extracted/chNN_framing.txt`).
+- Each `quotes[]` entry is a short verbatim fragment attributed to Osho
+  (each under 30 words).
+- Per-chapter targets:
+  - 3–5 paragraphs (actual: 3 or 4 in every chapter)
+  - 2–4 short quotes (actual: 3 in nearly every chapter)
+  - Each paragraph at least 60 words.
+- Total body words across all chapters: ~14,500 (avg ~370 per chapter).
+- The build script enforces all of this with `assert` checks.
 
-## Intended use (next session)
+## Renderer (in `_build_merged.py`)
 
-For the rebuild of `vigyan-bhairav-tantra-complete-book.html`:
-
-1. Load this JSON in `_build_merged.py` (or wherever the body is assembled).
-2. For each chapter section in the body, find the entry whose `chapter` number matches and inject the `summary` (and optionally a styled blockquote of `quote`) **above** the sutras for that chapter.
-3. Style with a distinct CSS class (e.g. `.chapter-intro`) so it reads as Osho's framing rather than as the sutras themselves.
-
-## Wider plan (companion changes for that next session)
-
-**Preface section — keep:**
-- Critical Disclaimer
-- The 15 Categories — Master Grid
-- About
-
-**Preface section — change:**
-- Replace "I can't decide — surprise me" button with an 8-question quiz that scores answers across the 15 categories and recommends one specific sutra.
-- Remove "Find a technique by what's happening in your life".
-- Remove "Safety & Cautions Index".
-- Remove "About These Techniques · Category Overviews".
-
-**Body — change:**
-- Inject these 39 chapter intros before their respective technique blocks (this file).
+`render_chapter_intro` reads each entry's `paragraphs` and `quotes` lists and
+emits one `<p class="chapter-intro-body">` per paragraph plus one
+`<blockquote class="chapter-intro-quote">` per quote, all wrapped in an
+`<aside class="chapter-intro">`. The renderer also retains backward
+compatibility with the legacy single-`summary` / single-`quote` schema, so old
+JSON files will still render correctly.
 
 ## Rebuilding this JSON
 
-If the source EPUB or the desired phrasing changes, edit the `CHAPTERS` list in `_build_chapter_intros.py` and run:
+If the source EPUB or the desired phrasing changes, edit the `CHAPTERS` list
+in `_build_chapter_intros.py` and run:
 
 ```bash
 python3 _build_chapter_intros.py
 ```
 
-It performs sanity checks (39 chapters, correct chapter numbers, summary word-count bounds, quote length under 25 words) before writing the JSON.
+The script performs sanity checks (39 chapters in the correct numerical order,
+paragraph count and word-count bounds, quote length under 35 words) before
+writing the JSON.
+
+## Re-extracting the source framings (optional)
+
+The framing source for each chapter is extracted from the bundled EPUB by
+unzipping it into `.epub_work/` and running the extractor:
+
+```bash
+unzip -q "The Book of Secrets (Osho) (z-library.sk, 1lib.sk, z-lib.sk).epub" -d .epub_work
+python3 .epub_work/extract_framings.py
+```
+
+This populates `.epub_work/extracted/chNN_framing.txt` with the discourse
+text after the chapter's "The Sutras:" listing and before the first specific
+technique commentary, for each odd-numbered chapter from 3 to 79.
