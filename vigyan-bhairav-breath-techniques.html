@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="near-black">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,34 +33,8 @@
        and entrains HRV (Lehrer et al.).
      ============================================================ */
 
-  :root {
-    --bg:         #f4ede0;   /* warm cream — sepia paper */
-    --bg-card:    #faf4e8;
-    --bg-soft:    #ede4d2;
-    --ink:        #2d2419;   /* deep warm brown — never pure black */
-    --ink-soft:   #5a4a35;
-    --ink-faint:  #8a7958;
-    --rule:       #d9cdb2;
-    --accent:     #b8860b;   /* muted saffron */
-    --accent-soft:#e8c876;
-    --sutra-bg:   #f8efd9;
-    --shadow:     0 1px 0 rgba(60,42,15,.04), 0 8px 24px -12px rgba(60,42,15,.12);
-    --serif:      "Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;
-    --sans:       -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  html[data-theme="dark"] {
-    --bg:         #1a1612;   /* deep warm charcoal */
-    --bg-card:    #221d17;
-    --bg-soft:    #2a241c;
-    --ink:        #e8dec8;
-    --ink-soft:   #b8aa8c;
-    --ink-faint:  #7a6e58;
-    --rule:       #3a3328;
-    --accent:     #d4a13c;
-    --accent-soft:#a87c1a;
-    --sutra-bg:   #2a221a;
-    --shadow:     0 1px 0 rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
-  }
+  :root,html[data-theme="near-black"]{--bg:#0a0a0a;--bg-card:#131313;--bg-soft:#1a1a1a;--ink:#f0f0f0;--ink-soft:#c0c0c0;--ink-faint:#808080;--rule:#2a2a2a;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#1a1a1a;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}html[data-theme="pure-black"]{--bg:#000000;--bg-card:#0a0a0a;--bg-soft:#141414;--ink:#ffffff;--ink-soft:#d0d0d0;--ink-faint:#888888;--rule:#222222;--accent:#e6b347;--accent-soft:#b8860b;--sutra-bg:#0a0a0a;--shadow:0 1px 0 rgba(0,0,0,.5),0 8px 24px -12px rgba(0,0,0,.8)}
+  
 
   *,*::before,*::after{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -266,7 +240,7 @@
   .signs ul,.pitfalls ul{list-style:none;padding-left:0}
   .signs li::before{content:"•";color:var(--accent);margin-right:.7rem;font-weight:700}
   .pitfalls li::before{content:"\2715";color:#a83232;margin-right:.7rem;font-weight:700;font-size:.9em}
-  html[data-theme="dark"] .pitfalls li::before{color:#d96b6b}
+  :root .pitfalls li::before{color:#d96b6b}
 
   /* Q&A — collapsed by default (progressive disclosure) */
   .qa details{
@@ -342,7 +316,7 @@
   }
   .timer-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -4px var(--accent)}
   .timer-btn.running{background:#a83232}
-  html[data-theme="dark"] .timer-btn.running{background:#c44}
+  :root .timer-btn.running{background:#c44}
   .timer-display{
     font-family:var(--sans);font-variant-numeric:tabular-nums;
     font-size:.95rem;color:var(--ink-faint);
@@ -519,7 +493,90 @@
 
 
 <!-- ============================ TECHNIQUE 1 ============================ -->
-  <article class="technique" id="t1" data-tech="1">
+  
+<main>
+
+  <header class="hero">
+    <div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 1 of 15</div>
+    <h1>The Techniques for Breath</h1>
+    <p class="lede">
+      Of the 112 meditation methods Shiva gave to Devi, the first nine
+      arrive through the breath — because the breath is the one bridge
+      that touches both the body and the formless, both this moment and
+      whatever lies beyond it.
+    </p>
+    <p class="meta">8 techniques &middot; ~10 min read &middot; works fully offline</p>
+
+    <details class="about-block">
+      <summary>About these techniques</summary>
+      <div class="about-body">
+        <p>These eight techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
+        <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The eight techniques here are the breath-based sutras &mdash; the doorway most teachers consider the most accessible to a modern mind.</p>
+      </div>
+    </details>
+
+    <aside class="howto-block">
+      <h3>How to use this page</h3>
+      <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
+      <p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
+    </aside>
+
+    <aside class="beginner-block">
+      <h3>New to meditation?</h3>
+      <p>Start with <a href="#t1">Technique 1 &mdash; watching the gap after the in-breath</a>. It is beginner-level and requires no prior practice. Spend 10 minutes a day for 21 days. Then return for what comes next.</p>
+    </aside>
+
+    <details class="glossary-block">
+      <summary>Glossary &mdash; unfamiliar terms?</summary>
+      <div class="glossary-body">
+        <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
+        <dl>
+          <dt>Vigyan Bhairav Tantra</dt>
+          <dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
+          <dt>Shiva</dt>
+          <dd>In this text, the name for the divine consciousness &mdash; not a personal god, but the underlying awareness the techniques aim to recognise.</dd>
+          <dt>Devi</dt>
+          <dd>The questioner in the dialogue &mdash; representing the seeker who asks how to know the divine.</dd>
+          <dt>prana</dt>
+          <dd>Sanskrit for "life force" &mdash; the subtle vitality carried by breath, considered prior to and more fundamental than the physical air.</dd>
+          <dt>third eye</dt>
+          <dd>The point between the eyebrows, traditionally associated with the pineal gland. In tantra, the seat of inner vision.</dd>
+          <dt>pineal gland</dt>
+          <dd>A small endocrine gland in the brain near the third-eye point. Regulates melatonin and circadian rhythm.</dd>
+          <dt>sahasrar</dt>
+          <dd>Sanskrit for "thousand-petalled" &mdash; the crown chakra at the top of the head, considered the highest energy centre.</dd>
+          <dt>samadhi</dt>
+          <dd>A deep meditative state of unification; absorption beyond ordinary self-consciousness.</dd>
+          <dt>vagal tone</dt>
+          <dd>A measure of activity in the vagus nerve; higher vagal tone correlates with calmness and parasympathetic dominance.</dd>
+          <dt>default mode network</dt>
+          <dd>A network of brain regions active when you are mind-wandering or ruminating. Quiets in deep meditation.</dd>
+          <dt>Pythagoras</dt>
+          <dd>Greek philosopher (~570 BCE). Tradition holds he travelled to Egypt, trained in this third-eye technique, and seeded Western mysticism with it.</dd>
+          <dt>Wilhelm Reich</dt>
+          <dd>Austrian psychoanalyst (1897&ndash;1957) who proposed "orgone energy" &mdash; a Western parallel to prana.</dd>
+        </dl>
+      </div>
+    </details>
+
+    <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
+
+    <nav class="jumplinks" aria-label="Techniques in this file">
+      <h2>Techniques in this file</h2>
+      <ol>
+      <li><a href="#t1"><span>Radiant one, this experience may dawn between two breaths. After breath comes in — down — and just b</span></a></li>
+      <li><a href="#t2"><span>As breath turns from down to up, and again as breath curves from up to down — through both these tur</span></a></li>
+      <li><a href="#t3"><span>Or, whenever in-breath and out-breath fuse, at this instant touch the energy-less, energy-filled cen</span></a></li>
+      <li><a href="#t4"><span>Or, when breath is all out (up) and stopped of itself, or all in (down) and stopped — in such univer</span></a></li>
+      <li><a href="#t5"><span>Attention between eyebrows, let mind be before thought. Let form fill with breath essence to the top</span></a></li>
+      <li><a href="#t6"><span>When in worldly activity, keep attention between two breaths, and so practising, in a few days be bo</span></a></li>
+      <li><a href="#t7"><span>With intangible breath in centre of forehead, as this reaches heart at the moment of sleep, have dir</span></a></li>
+      <li><a href="#t8"><span>With utmost devotion, centre on the two junctions of breath, and know the knower.</span></a></li>
+    </ol>
+    </nav>
+  </header>
+
+<article class="technique" id="t1" data-tech="1">
     <div class="technique-head">
       <span>Technique 1 of 112</span>
       <button class="fav-btn" aria-label="Favourite" data-fav="t1">&#9825;</button>
@@ -1177,89 +1234,6 @@
     </div>
   </article>
 
-<main>
-
-  <header class="hero">
-    <div class="eyebrow">Vigyan Bhairav Tantra &middot; Category 1 of 15</div>
-    <h1>The Techniques for Breath</h1>
-    <p class="lede">
-      Of the 112 meditation methods Shiva gave to Devi, the first nine
-      arrive through the breath — because the breath is the one bridge
-      that touches both the body and the formless, both this moment and
-      whatever lies beyond it.
-    </p>
-    <p class="meta">8 techniques &middot; ~10 min read &middot; works fully offline</p>
-
-    <details class="about-block">
-      <summary>About these techniques</summary>
-      <div class="about-body">
-        <p>These eight techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-        <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The eight techniques here are the breath-based sutras &mdash; the doorway most teachers consider the most accessible to a modern mind.</p>
-      </div>
-    </details>
-
-    <aside class="howto-block">
-      <h3>How to use this page</h3>
-      <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-      <p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
-    </aside>
-
-    <aside class="beginner-block">
-      <h3>New to meditation?</h3>
-      <p>Start with <a href="#t1">Technique 1 &mdash; watching the gap after the in-breath</a>. It is beginner-level and requires no prior practice. Spend 10 minutes a day for 21 days. Then return for what comes next.</p>
-    </aside>
-
-    <details class="glossary-block">
-      <summary>Glossary &mdash; unfamiliar terms?</summary>
-      <div class="glossary-body">
-        <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-        <dl>
-          <dt>Vigyan Bhairav Tantra</dt>
-          <dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-          <dt>Shiva</dt>
-          <dd>In this text, the name for the divine consciousness &mdash; not a personal god, but the underlying awareness the techniques aim to recognise.</dd>
-          <dt>Devi</dt>
-          <dd>The questioner in the dialogue &mdash; representing the seeker who asks how to know the divine.</dd>
-          <dt>prana</dt>
-          <dd>Sanskrit for "life force" &mdash; the subtle vitality carried by breath, considered prior to and more fundamental than the physical air.</dd>
-          <dt>third eye</dt>
-          <dd>The point between the eyebrows, traditionally associated with the pineal gland. In tantra, the seat of inner vision.</dd>
-          <dt>pineal gland</dt>
-          <dd>A small endocrine gland in the brain near the third-eye point. Regulates melatonin and circadian rhythm.</dd>
-          <dt>sahasrar</dt>
-          <dd>Sanskrit for "thousand-petalled" &mdash; the crown chakra at the top of the head, considered the highest energy centre.</dd>
-          <dt>samadhi</dt>
-          <dd>A deep meditative state of unification; absorption beyond ordinary self-consciousness.</dd>
-          <dt>vagal tone</dt>
-          <dd>A measure of activity in the vagus nerve; higher vagal tone correlates with calmness and parasympathetic dominance.</dd>
-          <dt>default mode network</dt>
-          <dd>A network of brain regions active when you are mind-wandering or ruminating. Quiets in deep meditation.</dd>
-          <dt>Pythagoras</dt>
-          <dd>Greek philosopher (~570 BCE). Tradition holds he travelled to Egypt, trained in this third-eye technique, and seeded Western mysticism with it.</dd>
-          <dt>Wilhelm Reich</dt>
-          <dd>Austrian psychoanalyst (1897&ndash;1957) who proposed "orgone energy" &mdash; a Western parallel to prana.</dd>
-        </dl>
-      </div>
-    </details>
-
-    <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
-
-    <nav class="jumplinks" aria-label="Techniques in this file">
-      <h2>Techniques in this file</h2>
-      <ol>
-      <li><a href="#t1"><span>Radiant one, this experience may dawn between two breaths. After breath comes in — down — and just b</span></a></li>
-      <li><a href="#t2"><span>As breath turns from down to up, and again as breath curves from up to down — through both these tur</span></a></li>
-      <li><a href="#t3"><span>Or, whenever in-breath and out-breath fuse, at this instant touch the energy-less, energy-filled cen</span></a></li>
-      <li><a href="#t4"><span>Or, when breath is all out (up) and stopped of itself, or all in (down) and stopped — in such univer</span></a></li>
-      <li><a href="#t5"><span>Attention between eyebrows, let mind be before thought. Let form fill with breath essence to the top</span></a></li>
-      <li><a href="#t6"><span>When in worldly activity, keep attention between two breaths, and so practising, in a few days be bo</span></a></li>
-      <li><a href="#t7"><span>With intangible breath in centre of forehead, as this reaches heart at the moment of sleep, have dir</span></a></li>
-      <li><a href="#t8"><span>With utmost devotion, centre on the two junctions of breath, and know the knower.</span></a></li>
-    </ol>
-    </nav>
-  </header>
-
-
   
 
 
@@ -1284,13 +1258,14 @@
   
 
 
-  <footer>
+  
+</main>
+
+<footer>
     <p>You have reached the end of <em>The Techniques for Breath</em>.</p>
     <p>14 more categories &mdash; Sound, Light, Centring, Witnessing, Sleep, Heart, and others &mdash; are on the way.</p>
     <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
   </footer>
-
-</main>
 
 <!-- Optional breath pacer (off by default) -->
 <aside class="pacer" id="pacer" aria-hidden="true">
@@ -1306,16 +1281,7 @@
   'use strict';
 
   // ---------- Theme (persisted) ----------
-  const html = document.documentElement;
-  const themeBtn = document.getElementById('theme-btn');
-  const stored = localStorage.getItem('vbt-theme');
-  if (stored) html.setAttribute('data-theme', stored);
-  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) html.setAttribute('data-theme','dark');
-  themeBtn.addEventListener('click', () => {
-    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('vbt-theme', next);
-  });
+  const html=document.documentElement;const themeBtn=document.getElementById('theme-btn');const stored=localStorage.getItem('vbt-theme');const initial=stored==='pure-black'?'pure-black':'near-black';html.setAttribute('data-theme',initial);function setBtn(t){themeBtn.textContent=t==='pure-black'?'\u25CF':'\u25CB';themeBtn.setAttribute('aria-label','Theme: '+(t==='pure-black'?'Pure Black':'Near Black')+' \u2014 click to toggle');themeBtn.title=themeBtn.getAttribute('aria-label');}setBtn(initial);themeBtn.addEventListener('click',()=>{const cur=html.getAttribute('data-theme');const next=cur==='near-black'?'pure-black':'near-black';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next);setBtn(next);});
 
   // ---------- Reading progress ----------
   const progress = document.querySelector('.progress');

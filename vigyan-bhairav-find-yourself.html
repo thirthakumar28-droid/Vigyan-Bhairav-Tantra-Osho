@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="near-black">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The Mirror &mdash; a deep, research-backed self-discovery quiz that reveals your yogic path, energetic constitution, gunas, dosha, and recommends specific Vigyan Bhairav meditation techniques personalised to YOU. ~50 questions, save and resume anytime.">
 <title>Find Yourself, Then Find Your Meditation &mdash; The Mirror &middot; Vigyan Bhairav Tantra</title>
 <style>
-:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--body-c:#c25a1a;--mind-c:#4a6e8a;--heart-c:#b8527a;--energy-c:#7a5ab8;--vata-c:#7a8ab8;--pitta-c:#c25a1a;--kapha-c:#5a8a6e;--karma-c:#c25a1a;--bhakti-c:#b8527a;--jnana-c:#4a6e8a;--raja-c:#7a5ab8;--sattva-c:#5a8a6e;--rajas-c:#c25a1a;--tamas-c:#5a4a35;--warn-c:#a83232;--ok-c:#5a8a6e;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12)}
-html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--body-c:#e07a3a;--mind-c:#7a9eb8;--heart-c:#d47298;--energy-c:#9a7ad8;--vata-c:#9aa8d4;--pitta-c:#e07a3a;--kapha-c:#7aae92;--karma-c:#e07a3a;--bhakti-c:#d47298;--jnana-c:#7a9eb8;--raja-c:#9a7ad8;--sattva-c:#7aae92;--rajas-c:#e07a3a;--tamas-c:#a89878;--warn-c:#d96b6b;--ok-c:#7aae92;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+:root,html[data-theme="near-black"]{--bg:#0a0a0a;--bg-card:#131313;--bg-soft:#1a1a1a;--ink:#f0f0f0;--ink-soft:#c0c0c0;--ink-faint:#808080;--rule:#2a2a2a;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#1a1a1a;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}html[data-theme="pure-black"]{--bg:#000000;--bg-card:#0a0a0a;--bg-soft:#141414;--ink:#ffffff;--ink-soft:#d0d0d0;--ink-faint:#888888;--rule:#222222;--accent:#e6b347;--accent-soft:#b8860b;--sutra-bg:#0a0a0a;--shadow:0 1px 0 rgba(0,0,0,.5),0 8px 24px -12px rgba(0,0,0,.8)}
+
 *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:8rem}
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:200;transition:width .15s ease-out;box-shadow:0 0 8px var(--accent-soft)}
@@ -209,31 +209,6 @@ footer a{color:var(--ink-soft)}
   <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
   <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
 </nav>
-
-<main>
-<header class="hero">
-  <div class="eyebrow">The Mirror &middot; Centerpiece</div>
-  <h1>Find Yourself, Then Find Your Meditation</h1>
-  <p class="lede">A slow, careful conversation with yourself. About fifty questions across six themes &mdash; how you move through the world, the clues you came with, your daily life, your inner landscape, your relationships, and what you&rsquo;re really searching for. At the end you&rsquo;ll see a multi-dimensional portrait of yourself, and a single Vigyan Bhairav technique chosen for who you actually are.</p>
-  <p class="meta">~25&ndash;35 minutes &middot; save and resume anytime &middot; ~50 questions &middot; works offline</p>
-  <p class="note">If you don&rsquo;t know yourself yet &mdash; if your memory feels patchy, if your sense of who you are keeps shifting &mdash; that is the entire reason this exists. Take your time. Skip nothing important. Come back tomorrow if today is too much.</p>
-  <div class="hero resume" id="resume-banner" role="region" aria-label="Resume previous quiz">
-    <strong>Continue where you left off</strong>
-    <span id="resume-info"></span>
-    <div>
-      <button id="resume-btn">Resume the quiz</button>
-      <button id="restart-btn" class="ghost">Start over</button>
-    </div>
-  </div>
-  <nav class="toc" aria-label="What's on this page">
-    <h2>What is on this page</h2>
-    <ol>
-      <li><a href="#quiz"><span>The Mirror &mdash; ~50-question self-portrait quiz</span> <span class="sub">&middot; six sections, save anytime, deep recommendations</span></a></li>
-      <li><a href="#paths"><span>The Four Yogic Paths</span> <span class="sub">&middot; karma, bhakti, jnana, raja &mdash; expanded with modern manifestations</span></a></li>
-    </ol>
-  </nav>
-</header>
-
 <section class="block" id="quiz">
 <div class="section-banner" id="section-banner">
   <div class="lbl" id="banner-lbl">Section 1 of 6</div>
@@ -1442,13 +1417,13 @@ footer a{color:var(--ink-soft)}
 
 <p style="text-align:center;margin-top:2rem;font-family:var(--sans);font-size:.92rem"><a href="vigyan-bhairav-discover-yourself.html">&laquo; Continue to the broader Discover Yourself page</a> &middot; <a href="important-first-access-this.html">First-access guide</a></p>
 </section>
+</main>
 
 <footer>
   <p>You have reached the end of <em>The Mirror</em>.</p>
   <p>The 112 doors of the Vigyan Bhairav are still here, behind the noise of the world. One of them &mdash; perhaps the one you just glimpsed &mdash; is yours.</p>
   <p style="margin-top:1.5rem">Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
 </footer>
-</main>
 
 <div class="savebar" id="savebar" role="region" aria-label="Save bar">
   <div class="qbar" id="savebar-qbar"></div>
@@ -1470,14 +1445,22 @@ footer a{color:var(--ink-soft)}
   /* =================== THEME =================== */
   const html = document.documentElement;
   const themeBtn = document.getElementById('theme-btn');
-  const storedTheme = localStorage.getItem('vbt-themesettings') || localStorage.getItem('vbt-theme');
-  if(storedTheme) html.setAttribute('data-theme', storedTheme);
-  else if(window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) html.setAttribute('data-theme', 'dark');
+  const stored = localStorage.getItem('vbt-themesettings') || localStorage.getItem('vbt-theme');
+  const initial = stored === 'pure-black' ? 'pure-black' : 'near-black';
+  html.setAttribute('data-theme', initial);
+  function setBtn(t){
+    themeBtn.textContent = t === 'pure-black' ? '\u25CF' : '\u25CB';
+    themeBtn.setAttribute('aria-label','Theme: ' + (t === 'pure-black' ? 'Pure Black' : 'Near Black') + ' \u2014 click to toggle');
+    themeBtn.title = themeBtn.getAttribute('aria-label');
+  }
+  setBtn(initial);
   themeBtn.addEventListener('click', ()=>{
-    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    const cur = html.getAttribute('data-theme');
+    const next = cur === 'near-black' ? 'pure-black' : 'near-black';
     html.setAttribute('data-theme', next);
     localStorage.setItem('vbt-themesettings', next);
     localStorage.setItem('vbt-theme', next);
+    setBtn(next);
   });
 
   /* =================== PROGRESS BAR =================== */
