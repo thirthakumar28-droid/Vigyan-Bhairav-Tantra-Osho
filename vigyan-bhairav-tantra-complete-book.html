@@ -2247,6 +2247,121 @@ html{scroll-padding-top:80px}
 #preface .disclaimer-block{
   background:var(--bg-card);border:1px solid #c44;border-radius:8px;
   padding:1.5rem;margin:1rem 0}
+
+/* === chapter-intro (Osho's framing) === */
+.chapter-intro{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;
+  padding:1.4rem 1.6rem;margin:0 0 2.5rem;
+  border-left:3px solid var(--accent);
+}
+.chapter-intro-eyebrow{
+  font-family:var(--sans);font-size:.7rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:.7rem;
+  font-weight:600;
+}
+.chapter-intro-body{
+  font-family:var(--serif);font-size:1.02rem;line-height:1.7;
+  color:var(--ink-soft);margin:0 0 1rem;
+}
+.chapter-intro-quote{
+  margin:1rem 0 0;padding:.9rem 1.2rem;
+  border-left:3px solid var(--accent-soft);background:transparent;
+  font-style:italic;font-family:var(--serif);font-size:1.05rem;
+  line-height:1.6;color:var(--ink);
+}
+.chapter-intro-quote p{margin:0 0 .4rem}
+.chapter-intro-quote cite{
+  display:block;font-style:normal;font-family:var(--sans);
+  font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);
+}
+@media print{
+  .chapter-intro{break-inside:avoid;border-color:#888}
+}
+
+/* === quiz === */
+#quiz{margin:3rem 0}
+#quiz .quiz-block{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;
+  padding:1.5rem 1.6rem;margin-top:1rem;
+}
+.quiz-q{
+  border:0;border-top:1px solid var(--rule);
+  padding:1.4rem 0 0;margin:1.4rem 0 0;
+}
+.quiz-q:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.quiz-q legend{
+  font-family:var(--serif);font-size:1.08rem;line-height:1.45;
+  color:var(--ink);padding:0;margin-bottom:.9rem;
+}
+.quiz-step{
+  display:block;font-family:var(--sans);font-size:.7rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+  margin-bottom:.3rem;font-weight:600;
+}
+.quiz-opts{display:flex;flex-direction:column;gap:.45rem}
+.quiz-opt{
+  display:flex;gap:.7rem;align-items:flex-start;
+  padding:.6rem .8rem;border:1px solid var(--rule);border-radius:6px;
+  cursor:pointer;font-family:var(--sans);font-size:.93rem;line-height:1.4;
+  color:var(--ink-soft);transition:border-color .15s, background .15s;
+}
+.quiz-opt:hover{border-color:var(--accent-soft);color:var(--ink)}
+.quiz-opt input{margin-top:.25rem;accent-color:var(--accent)}
+.quiz-opt:has(input:checked){
+  border-color:var(--accent);background:var(--accent-soft);color:var(--ink);
+}
+.quiz-actions{
+  display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.6rem;
+  padding-top:1.4rem;border-top:1px solid var(--rule);
+}
+.quiz-btn{
+  background:var(--accent);color:#fff;border:0;border-radius:6px;
+  padding:.7rem 1.2rem;font-family:var(--sans);font-size:.9rem;
+  font-weight:600;cursor:pointer;letter-spacing:.02em;
+}
+.quiz-btn:hover{filter:brightness(1.1)}
+.quiz-btn-ghost{
+  background:transparent;color:var(--ink-soft);
+  border:1px solid var(--rule);
+}
+.quiz-btn-ghost:hover{color:var(--accent);border-color:var(--accent-soft)}
+.quiz-hint{
+  margin:1rem 0 0;font-family:var(--sans);font-size:.85rem;
+  color:#c44;min-height:1.2em;
+}
+.quiz-result{
+  margin-top:1.5rem;padding:1.5rem 1.6rem;background:var(--bg-card);
+  border:1px solid var(--accent-soft);border-radius:8px;
+  border-left:3px solid var(--accent);
+}
+.quiz-result .result-eyebrow{
+  font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);font-weight:600;
+}
+.quiz-result h3{
+  font-family:var(--serif);font-size:1.35rem;margin:.4rem 0 .8rem;color:var(--ink);
+}
+.quiz-result .result-cat{
+  font-family:var(--sans);font-size:.85rem;color:var(--ink-faint);
+  margin:0 0 1rem;
+}
+.quiz-result .result-cta{
+  display:inline-block;background:var(--accent);color:#fff;
+  text-decoration:none;padding:.65rem 1.1rem;border-radius:6px;
+  font-family:var(--sans);font-size:.9rem;font-weight:600;margin-top:.5rem;
+}
+.quiz-result .result-cta:hover{filter:brightness(1.1)}
+.quiz-result .runners-up{
+  margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--rule);
+  font-family:var(--sans);font-size:.82rem;color:var(--ink-faint);
+}
+.quiz-result .runners-up strong{color:var(--ink-soft);font-weight:600}
+@media(max-width:600px){
+  #quiz .quiz-block{padding:1.2rem 1rem}
+  .quiz-q legend{font-size:1rem}
+  .quiz-opt{font-size:.9rem}
+}
 </style>
 </head>
 <body>
@@ -2262,7 +2377,7 @@ html{scroll-padding-top:80px}
 <aside id="master-toc-panel" aria-label="Table of contents">
   <h2>Contents</h2>
   <ol class="master-toc"><li><a href="#preface">Preface — Important: First Access This</a></li>
-<li><a href="#about">About These Techniques (Category Overviews)</a></li>
+<li><a href="#quiz">Find your starting technique (8-question quiz)</a></li>
 <li class="toc-section">The 112 Techniques (in Osho's book order)</li>
 <li><a href="#ch-breath-a-bridge-to-the-universe">3. Breath – A Bridge to the Universe</a> <span class="toc-meta">sutras 1–4 (4)</span></li>
 <li><a href="#ch-five-techniques-of-attentiveness">5. Five Techniques of Attentiveness</a> <span class="toc-meta">sutras 5–9 (5)</span></li>
@@ -2334,25 +2449,7 @@ html{scroll-padding-top:80px}
   <p>The 21-day commitment described in this collection is intended for committed seekers, not casual experimenters. Some techniques (especially Tantric Union and energy work) require maturity, discernment, and respect for yourself and any partner.</p>
   <p><strong>When in doubt, choose the gentler technique. When unsure, do less, not more.</strong></p>
 </section>
-<section id="matcher">
-  <h2>Find a technique by what's happening in your life</h2>
-  <p>If you don't know where to begin, click the button that best matches your current state. The recommendation below will update.</p>
-  <div class="matcher-block">
-    <div class="matcher-buttons" role="group" aria-label="Situation buttons">
-      <button class="match-btn" data-key="anxious">I'm anxious or overthinking</button>
-      <button class="match-btn" data-key="sleep">I can't sleep</button>
-      <button class="match-btn" data-key="grief">I'm grieving</button>
-      <button class="match-btn" data-key="disconnected">I feel disconnected from my body</button>
-      <button class="match-btn" data-key="conflict">I'm in conflict or triggered</button>
-      <button class="match-btn" data-key="bored">I'm bored or numb</button>
-      <button class="match-btn" data-key="pain">I'm in physical pain</button>
-      <button class="match-btn" data-key="stuck">I feel stuck creatively</button>
-      <button class="match-btn" data-key="love">I want to feel love</button>
-      <button class="match-btn" data-key="ego">I want to dissolve the ego</button>
-    </div>
-    <div class="match-result" id="match-result" aria-live="polite"></div>
-  </div>
-</section>
+
 <section id="categories">
   <h2>The 15 Categories &mdash; Master Grid</h2>
   <p>Click any card to open that file. Each is fully self-contained and works offline.</p>
@@ -2464,59 +2561,32 @@ html{scroll-padding-top:80px}
     </a>
   </div>
 </section>
-<section id="random">
-  <h2>I can't decide &mdash; surprise me</h2>
-  <p>If you trust the unconscious to choose for you, click below. A random category will open in a new tab.</p>
-  <div class="random-block">
-    <p>Sometimes the right technique finds you, not the other way around.</p>
-    <button class="random-btn" id="random-btn">Open a random technique &rarr;</button>
-  </div>
+
+<section id="quiz">
+  <h2>Find your starting technique &mdash; an 8-question quiz</h2>
+  <p>Answer all eight honestly. The quiz will recommend one of the 112
+  techniques that fits the way you already meet life. You can re-take it as
+  often as you like.</p>
+  <form id="quiz-form" class="quiz-block" novalidate>
+    <fieldset class="quiz-q" data-qi="0"><legend><span class="quiz-step">Question 1 of 8</span> When you sit down to meditate, what comes most naturally?</legend><div class="quiz-opts"><label class="quiz-opt" for="q0_0"><input type="radio" id="q0_0" name="q0" data-weights='{"breath": 3}' value="0"><span>Following my breath</span></label><label class="quiz-opt" for="q0_1"><input type="radio" id="q0_1" name="q0" data-weights='{"centering": 2, "sensory": 1}' value="1"><span>Sitting still and feeling the body inside</span></label><label class="quiz-opt" for="q0_2"><input type="radio" id="q0_2" name="q0" data-weights='{"witnessing": 2, "mind": 1}' value="2"><span>Watching thoughts pass by</span></label><label class="quiz-opt" for="q0_3"><input type="radio" id="q0_3" name="q0" data-weights='{"sound": 3}' value="3"><span>Listening — to silence or to a sound</span></label><label class="quiz-opt" for="q0_4"><input type="radio" id="q0_4" name="q0" data-weights='{"movement": 2, "breath": 1}' value="4"><span>I can&#x27;t sit still — I want to move</span></label></div></fieldset>
+<fieldset class="quiz-q" data-qi="1"><legend><span class="quiz-step">Question 2 of 8</span> Which sense pulls you in most strongly?</legend><div class="quiz-opts"><label class="quiz-opt" for="q1_0"><input type="radio" id="q1_0" name="q1" data-weights='{"sensory": 2, "tantra": 1}' value="0"><span>Touch — texture, warmth, contact</span></label><label class="quiz-opt" for="q1_1"><input type="radio" id="q1_1" name="q1" data-weights='{"light": 2, "imagination": 1}' value="1"><span>Sight — light, colour, beauty</span></label><label class="quiz-opt" for="q1_2"><input type="radio" id="q1_2" name="q1" data-weights='{"sound": 3}' value="2"><span>Hearing — music, voices, silence</span></label><label class="quiz-opt" for="q1_3"><input type="radio" id="q1_3" name="q1" data-weights='{"breath": 3}' value="3"><span>The feel of breath itself</span></label><label class="quiz-opt" for="q1_4"><input type="radio" id="q1_4" name="q1" data-weights='{"mind": 2, "witnessing": 1}' value="4"><span>None — I live mostly in my head</span></label></div></fieldset>
+<fieldset class="quiz-q" data-qi="2"><legend><span class="quiz-step">Question 3 of 8</span> What&#x27;s the deepest reason you came here?</legend><div class="quiz-opts"><label class="quiz-opt" for="q2_0"><input type="radio" id="q2_0" name="q2" data-weights='{"breath": 2, "centering": 1}' value="0"><span>Less anxiety, more calm</span></label><label class="quiz-opt" for="q2_1"><input type="radio" id="q2_1" name="q2" data-weights='{"heart": 2, "tantra": 1}' value="1"><span>More love, more connection</span></label><label class="quiz-opt" for="q2_2"><input type="radio" id="q2_2" name="q2" data-weights='{"witnessing": 2, "negation": 1}' value="2"><span>Insight — to see what is actually true</span></label><label class="quiz-opt" for="q2_3"><input type="radio" id="q2_3" name="q2" data-weights='{"sleep": 2, "void": 1}' value="3"><span>Rest, surrender, letting go</span></label><label class="quiz-opt" for="q2_4"><input type="radio" id="q2_4" name="q2" data-weights='{"sensory": 2, "movement": 1}' value="4"><span>To feel alive, present, awake</span></label></div></fieldset>
+<fieldset class="quiz-q" data-qi="3"><legend><span class="quiz-step">Question 4 of 8</span> How do you feel about the body?</legend><div class="quiz-opts"><label class="quiz-opt" for="q3_0"><input type="radio" id="q3_0" name="q3" data-weights='{"centering": 2, "sensory": 1}' value="0"><span>It is the doorway I trust most</span></label><label class="quiz-opt" for="q3_1"><input type="radio" id="q3_1" name="q3" data-weights='{"tantra": 2, "breath": 1}' value="1"><span>It is a vehicle for energy</span></label><label class="quiz-opt" for="q3_2"><input type="radio" id="q3_2" name="q3" data-weights='{"mind": 2, "imagination": 1}' value="2"><span>I forget it is there</span></label><label class="quiz-opt" for="q3_3"><input type="radio" id="q3_3" name="q3" data-weights='{"death": 2, "void": 1}' value="3"><span>A burden I would like to transcend</span></label><label class="quiz-opt" for="q3_4"><input type="radio" id="q3_4" name="q3" data-weights='{"heart": 1, "tantra": 1, "negation": 1}' value="4"><span>I am at war with it</span></label></div></fieldset>
+<fieldset class="quiz-q" data-qi="4"><legend><span class="quiz-step">Question 5 of 8</span> When something painful arises inside, what happens?</legend><div class="quiz-opts"><label class="quiz-opt" for="q4_0"><input type="radio" id="q4_0" name="q4" data-weights='{"mind": 2, "witnessing": 1}' value="0"><span>I think about it endlessly</span></label><label class="quiz-opt" for="q4_1"><input type="radio" id="q4_1" name="q4" data-weights='{"imagination": 1, "sleep": 1, "movement": 1}' value="1"><span>I push it away or distract myself</span></label><label class="quiz-opt" for="q4_2"><input type="radio" id="q4_2" name="q4" data-weights='{"heart": 2, "sensory": 1}' value="2"><span>I let myself feel it fully</span></label><label class="quiz-opt" for="q4_3"><input type="radio" id="q4_3" name="q4" data-weights='{"witnessing": 3}' value="3"><span>I try to watch it from outside</span></label><label class="quiz-opt" for="q4_4"><input type="radio" id="q4_4" name="q4" data-weights='{"void": 2, "negation": 1}' value="4"><span>I want the self that suffers to dissolve</span></label></div></fieldset>
+<fieldset class="quiz-q" data-qi="5"><legend><span class="quiz-step">Question 6 of 8</span> How do you feel about emptiness, silence, the unknown?</legend><div class="quiz-opts"><label class="quiz-opt" for="q5_0"><input type="radio" id="q5_0" name="q5" data-weights='{"sensory": 1, "heart": 1, "sound": 1}' value="0"><span>Frightening — I want to fill it</span></label><label class="quiz-opt" for="q5_1"><input type="radio" id="q5_1" name="q5" data-weights='{"void": 2, "sleep": 1}' value="1"><span>Peaceful — feels like home</span></label><label class="quiz-opt" for="q5_2"><input type="radio" id="q5_2" name="q5" data-weights='{"witnessing": 2, "light": 1}' value="2"><span>Curious but cautious — I want a guide</span></label><label class="quiz-opt" for="q5_3"><input type="radio" id="q5_3" name="q5" data-weights='{"tantra": 1, "light": 1, "imagination": 1}' value="3"><span>I prefer richness, colour, energy</span></label><label class="quiz-opt" for="q5_4"><input type="radio" id="q5_4" name="q5" data-weights='{"breath": 1, "centering": 2}' value="4"><span>I have not really tasted it</span></label></div></fieldset>
+<fieldset class="quiz-q" data-qi="6"><legend><span class="quiz-step">Question 7 of 8</span> What dissolves &quot;you&quot; most easily, even briefly?</legend><div class="quiz-opts"><label class="quiz-opt" for="q6_0"><input type="radio" id="q6_0" name="q6" data-weights='{"sound": 3}' value="0"><span>Music or chanting</span></label><label class="quiz-opt" for="q6_1"><input type="radio" id="q6_1" name="q6" data-weights='{"light": 2, "void": 1}' value="1"><span>A vast view: sky, ocean, mountain</span></label><label class="quiz-opt" for="q6_2"><input type="radio" id="q6_2" name="q6" data-weights='{"movement": 3}' value="2"><span>A long walk, a run, dance</span></label><label class="quiz-opt" for="q6_3"><input type="radio" id="q6_3" name="q6" data-weights='{"tantra": 2, "heart": 1}' value="3"><span>A lover&#x27;s touch or gaze</span></label><label class="quiz-opt" for="q6_4"><input type="radio" id="q6_4" name="q6" data-weights='{"sleep": 3}' value="4"><span>Falling asleep</span></label><label class="quiz-opt" for="q6_5"><input type="radio" id="q6_5" name="q6" data-weights='{"negation": 2, "mind": 1}' value="5"><span>A piercing question with no answer</span></label></div></fieldset>
+<fieldset class="quiz-q" data-qi="7"><legend><span class="quiz-step">Question 8 of 8</span> Tonight, before sleep, what would feel right?</legend><div class="quiz-opts"><label class="quiz-opt" for="q7_0"><input type="radio" id="q7_0" name="q7" data-weights='{"breath": 3}' value="0"><span>Counting breaths</span></label><label class="quiz-opt" for="q7_1"><input type="radio" id="q7_1" name="q7" data-weights='{"imagination": 2, "light": 1}' value="1"><span>Imagining myself as light filling the room</span></label><label class="quiz-opt" for="q7_2"><input type="radio" id="q7_2" name="q7" data-weights='{"void": 2, "light": 1}' value="2"><span>Watching the dark behind closed eyes</span></label><label class="quiz-opt" for="q7_3"><input type="radio" id="q7_3" name="q7" data-weights='{"centering": 2, "sleep": 1}' value="3"><span>Feeling the body sink, layer by layer</span></label><label class="quiz-opt" for="q7_4"><input type="radio" id="q7_4" name="q7" data-weights='{"sound": 2, "mind": 1}' value="4"><span>Silently saying one word until it dissolves</span></label><label class="quiz-opt" for="q7_5"><input type="radio" id="q7_5" name="q7" data-weights='{"death": 2, "negation": 1}' value="5"><span>Letting go of being someone</span></label></div></fieldset>
+    <div class="quiz-actions">
+      <button type="button" class="quiz-btn" id="quiz-submit">See my technique &rarr;</button>
+      <button type="button" class="quiz-btn quiz-btn-ghost" id="quiz-reset">Reset</button>
+    </div>
+    <p class="quiz-hint" id="quiz-hint" aria-live="polite"></p>
+  </form>
+  <div class="quiz-result" id="quiz-result" aria-live="polite" hidden></div>
+  <script id="quiz-category-meta" type="application/json">{"breath": {"display": "Breath", "rep_num": 1, "rep_short": "Watch the gap between two breaths", "rep_anchor": "sutra-1", "about_anchor": "about-breath"}, "centering": {"display": "Centering", "rep_num": 13, "rep_short": "Concentrate totally on one object", "rep_anchor": "sutra-13", "about_anchor": "about-centering"}, "sound": {"display": "Sound & Mantra", "rep_num": 38, "rep_short": "Feel yourself in the center of sounds", "rep_anchor": "sutra-38", "about_anchor": "about-sound"}, "light": {"display": "Light & Gazing", "rep_num": 33, "rep_short": "Look into the limitless sky", "rep_anchor": "sutra-33", "about_anchor": "about-light"}, "witnessing": {"display": "Witnessing", "rep_num": 22, "rep_short": "Look at your past, disidentified", "rep_anchor": "sutra-22", "about_anchor": "about-witnessing"}, "negation": {"display": "Self-Inquiry", "rep_num": 56, "rep_short": "Think of the world as an illusion", "rep_anchor": "sutra-56", "about_anchor": "about-negation"}, "void": {"display": "Emptiness & Void", "rep_num": 23, "rep_short": "Feel an object and become it", "rep_anchor": "sutra-23", "about_anchor": "about-void"}, "sensory": {"display": "The Senses", "rep_num": 11, "rep_short": "Close your senses, become stone-like", "rep_anchor": "sutra-11", "about_anchor": "about-sensory"}, "movement": {"display": "Movement", "rep_num": 99, "rep_short": "Expand in all directions", "rep_anchor": "sutra-99", "about_anchor": "about-movement"}, "sleep": {"display": "Sleep & Dream", "rep_num": 9, "rep_short": "Lie down as dead. Stare without blinking. Suck something and become the sucking.", "rep_anchor": "sutra-9", "about_anchor": "about-sleep"}, "tantra": {"display": "Tantric Union", "rep_num": 10, "rep_short": "Become the caress", "rep_anchor": "sutra-10", "about_anchor": "about-tantra"}, "heart": {"display": "Heart & Devotion", "rep_num": 29, "rep_short": "Devote yourself", "rep_anchor": "sutra-29", "about_anchor": "about-heart"}, "death": {"display": "Death Contemplation", "rep_num": 79, "rep_short": "Focus on fire", "rep_anchor": "sutra-79", "about_anchor": "about-death"}, "imagination": {"display": "Imagination", "rep_num": 81, "rep_short": "Everything converges in your being", "rep_anchor": "sutra-81", "about_anchor": "about-imagination"}, "mind": {"display": "Mind & Thought", "rep_num": 62, "rep_short": "Use mind as the door to meditation", "rep_anchor": "sutra-62", "about_anchor": "about-mind"}}</script>
 </section>
-<section id="safety">
-  <h2>Safety &amp; Cautions Index</h2>
-  <p>Specific cautions across the 15 categories. Read these before choosing a technique.</p>
-  <div class="safety-block">
-    <h3>Cardiovascular conditions</h3>
-    <ul>
-      <li>Avoid <strong>Light Tech #1</strong> (light rays up the spine with sustained energy buildup).</li>
-      <li>Avoid <strong>breath retention</strong> in any technique &mdash; modify by allowing soft breath to flow.</li>
-      <li>Avoid <strong>prolonged loud chanting</strong> (Sound Tech #5, intense AUM).</li>
-      <li>Avoid <strong>intense kundalini-rising</strong> practices &mdash; favour gentle gradual variants.</li>
-    </ul>
-    <h3>Pregnancy</h3>
-    <ul>
-      <li>Avoid <strong>intense breath techniques</strong> with retention or rapid breathing.</li>
-      <li>Avoid <strong>deep pelvic-floor energy work</strong> and forceful kundalini practices.</li>
-      <li>Favour gentle techniques: sky-gazing, witnessing, heart, sound (soft).</li>
-    </ul>
-    <h3>Recent surgery or acute injury</h3>
-    <ul>
-      <li>Avoid <strong>pain-as-doorway</strong> (Centering Tech #21) until acute injury is medically cleared.</li>
-      <li>Avoid intense postural techniques (boat pose / unsupported sitting) if joints/spine are healing.</li>
-    </ul>
-    <h3>Severe mental-health conditions</h3>
-    <ul>
-      <li>For psychosis, severe PTSD, dissociative disorders, or active suicidal ideation, <strong>consult a qualified professional</strong> before any practice.</li>
-      <li>Avoid: <strong>Void Tech #1</strong> (deprivation), <strong>Death Tech #1</strong> (fire dissolution), <strong>Imagination Tech #1</strong> (formless), and any technique involving identity dissolution.</li>
-      <li>Favour grounding techniques: heart-space, palming, sensory awareness, fresh-seeing.</li>
-    </ul>
-    <h3>Glaucoma and eye conditions</h3>
-    <ul>
-      <li>Avoid <strong>closing the seven openings</strong> (Centering Tech #5) &mdash; involves pressure on eyeballs.</li>
-      <li>Modify <strong>palming</strong> (Sensory Tech #7) to feather-light contact only; do not press.</li>
-    </ul>
-    <h3>Vertigo and motion sickness</h3>
-    <ul>
-      <li>Avoid <strong>Centering Tech #2</strong> (vehicle swaying) and any spinning practices.</li>
-    </ul>
-    <h3>History of dissociation</h3>
-    <ul>
-      <li>Build a foundation with <strong>grounding</strong> practices (sensory, breath, heart) before attempting void or dissolution work.</li>
-      <li>Always end sessions with body-grounding: feel the feet, the breath, the room.</li>
-    </ul>
-    <p class="safety-final">When in doubt, choose the gentler technique.</p>
-  </div>
-</section>
+
+
 <section id="about">
   <h2>About</h2>
   <div class="about-block">
@@ -2539,761 +2609,6 @@ html{scroll-padding-top:80px}
 
 </section>
 
-<section id="about">
-  <p class="part-divider">About These Techniques · Category Overviews</p>
-  <p style="text-align:center;color:var(--ink-faint);font-style:italic;
-            font-family:var(--sans);font-size:.92rem;max-width:44rem;margin:0 auto 2rem">
-    The 112 sutras have traditionally been clustered by what kind of doorway they
-    use — breath, sound, looking, etc. Tap any group below to read its overview,
-    safety notes and "how to begin" guidance before practising.
-  </p>
-  
-<details class="about-card" id="about-breath">
-  <summary><strong>The Techniques for Breath</strong>
-    <span class="card-meta">sutras 1–8 · 8 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-    
-    <h3>The Techniques for Breath</h3>
-    <p class="lede">
-      Of the 112 meditation methods Shiva gave to Devi, the first nine
-      arrive through the breath — because the breath is the one bridge
-      that touches both the body and the formless, both this moment and
-      whatever lies beyond it.
-    </p>
-    <p class="meta">8 techniques &middot; ~10 min read &middot; works fully offline</p>
-
-    <details class="about-block">
-      <summary>About these techniques</summary>
-      <div class="about-body">
-        <p>These eight techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-        <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The eight techniques here are the breath-based sutras &mdash; the doorway most teachers consider the most accessible to a modern mind.</p>
-      </div>
-    </details>
-
-    <aside class="howto-block">
-      <h3>How to use this page</h3>
-      <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-      <p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
-    </aside>
-
-    <aside class="beginner-block">
-      <h3>New to meditation?</h3>
-      <p>Start with <a href="#sutra-1">Technique 1 &mdash; watching the gap after the in-breath</a>. It is beginner-level and requires no prior practice. Spend 10 minutes a day for 21 days. Then return for what comes next.</p>
-    </aside>
-
-    <details class="glossary-block">
-      <summary>Glossary &mdash; unfamiliar terms?</summary>
-      <div class="glossary-body">
-        <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-        <dl>
-          <dt>Vigyan Bhairav Tantra</dt>
-          <dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-          <dt>Shiva</dt>
-          <dd>In this text, the name for the divine consciousness &mdash; not a personal god, but the underlying awareness the techniques aim to recognise.</dd>
-          <dt>Devi</dt>
-          <dd>The questioner in the dialogue &mdash; representing the seeker who asks how to know the divine.</dd>
-          <dt>prana</dt>
-          <dd>Sanskrit for "life force" &mdash; the subtle vitality carried by breath, considered prior to and more fundamental than the physical air.</dd>
-          <dt>third eye</dt>
-          <dd>The point between the eyebrows, traditionally associated with the pineal gland. In tantra, the seat of inner vision.</dd>
-          <dt>pineal gland</dt>
-          <dd>A small endocrine gland in the brain near the third-eye point. Regulates melatonin and circadian rhythm.</dd>
-          <dt>sahasrar</dt>
-          <dd>Sanskrit for "thousand-petalled" &mdash; the crown chakra at the top of the head, considered the highest energy centre.</dd>
-          <dt>samadhi</dt>
-          <dd>A deep meditative state of unification; absorption beyond ordinary self-consciousness.</dd>
-          <dt>vagal tone</dt>
-          <dd>A measure of activity in the vagus nerve; higher vagal tone correlates with calmness and parasympathetic dominance.</dd>
-          <dt>default mode network</dt>
-          <dd>A network of brain regions active when you are mind-wandering or ruminating. Quiets in deep meditation.</dd>
-          <dt>Pythagoras</dt>
-          <dd>Greek philosopher (~570 BCE). Tradition holds he travelled to Egypt, trained in this third-eye technique, and seeded Western mysticism with it.</dd>
-          <dt>Wilhelm Reich</dt>
-          <dd>Austrian psychoanalyst (1897&ndash;1957) who proposed "orgone energy" &mdash; a Western parallel to prana.</dd>
-        </dl>
-      </div>
-    </details>
-
-    <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
-
-    
-  </header></div>
-</details>
-<details class="about-card" id="about-sleep">
-  <summary><strong>The Techniques for Sleep &amp;amp; Dream</strong>
-    <span class="card-meta">sutras 9–55 · 2 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Sleep &amp; Dream</h3>
-  <p class="lede">Five techniques that use the sleep transition, rhythmic movement, intense sensation, and bodily dissolution as doorways to conscious sleep. The threshold between waking and sleeping is a portal &mdash; cross it with awareness intact and you discover the immortal witness.</p>
-  <p class="meta">5 techniques &middot; ~8 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These five techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The sleep and dream sutras form the tenth major category &mdash; using the sleep transition, death-like stillness, rhythmic movement, and dissolution to maintain awareness through the threshold where most people lose consciousness.</p>
-      <p>These techniques approach awakening through the nightly miracle of sleep. Every night you cross from waking to sleeping &mdash; from somebody to nobody, from self to no-self. Usually this happens unconsciously. These techniques teach you to cross that threshold WITH awareness. When you can sleep consciously, death holds no mystery &mdash; death is simply the final sleep.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>Key principle:</strong> These sleep techniques work at the TRANSITION point &mdash; the hypnagogic threshold. The moment between waking and sleeping is the most vulnerable, most open, most magical moment of the day. These techniques teach you to STAY AWARE through it.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to sleep meditation?</h3>
-    <p>Start with <a href="#sutra-9">Technique 1 &mdash; lie down as dead</a> or Technique 5 &mdash; body dissolving into elements. Both are done lying in bed, require no special preparation, and produce tangible results quickly. Practise every night for 21 nights.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>hypnagogic</dt><dd>The transitional state between wakefulness and sleep &mdash; characterised by dream-like imagery, body numbness, and reduced critical thinking. The key portal these techniques exploit.</dd>
-        <dt>shavasana</dt><dd>Literally &ldquo;corpse pose&rdquo; in yoga &mdash; lying flat on the back, completely still, like a dead body. The foundation of Technique 1.</dd>
-        <dt>conscious sleep</dt><dd>Maintaining awareness while the body and mind enter sleep. The witness remains &mdash; you know you are sleeping while you sleep. Also called yoga nidra.</dd>
-        <dt>yoga nidra</dt><dd>&ldquo;Yogic sleep&rdquo; &mdash; a state of conscious deep sleep where awareness persists without content. The deepest rest possible while remaining aware.</dd>
-        <dt>dissolution</dt><dd>The feeling of the body&rsquo;s boundaries dissolving &mdash; melting back into the elements (earth, water, fire, air, space) from which it arose.</dd>
-        <dt>witness</dt><dd>The pure awareness that observes all states &mdash; waking, dreaming, sleeping &mdash; without being affected by any of them. What you truly are.</dd>
-        <dt>hypnagogic imagery</dt><dd>Spontaneous visual patterns, faces, landscapes that appear at the threshold of sleep. Signs that the transition is happening.</dd>
-        <dt>death posture</dt><dd>Lying completely still with no muscular engagement &mdash; mimicking a corpse to trigger the body&rsquo;s sleep mechanisms while maintaining mental alertness.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; these techniques are best done at bedtime and are inherently safe. If sleep disturbance occurs, reduce intensity and return to normal sleep hygiene for a few days before resuming. The goal is not insomnia but CONSCIOUS sleep.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-tantra">
-  <summary><strong>The Techniques for Tantric Union</strong>
-    <span class="card-meta">sutras 10–95 · 6 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Tantric Union</h3>
-  <p class="lede">Four techniques that use desire, sexual energy, embrace, and reunion as doorways to transcendence. Tantra does not reject desire &mdash; it transforms desire into a vehicle. The fire that usually burns downward is turned upward into awakening.</p>
-  <p class="meta">4 techniques &middot; ~8 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These four techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The tantra sutras form the eleventh major category &mdash; using sexual energy, embrace, memory of union, and the joy of reunion as vehicles for transformation.</p>
-      <p>These techniques are revolutionary because they do not ask you to suppress desire. Instead, they ask you to bring TOTAL AWARENESS to desire. When awareness meets desire, desire becomes a ladder rather than a trap. The same energy that creates biological life can create spiritual rebirth.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>Key principle:</strong> These tantra techniques use desire AS the path, not against it. Total awareness brought to desire transforms it. You are not suppressing anything &mdash; you are illuminating everything.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to tantric meditation?</h3>
-    <p>Start with <a href="#sutra-50">Technique 4 &mdash; joyously seeing a long-absent friend</a> or <a href="#sutra-49">Technique 3 &mdash; remembering union</a>. Both can be practised alone and require no partner. They build the capacity for awareness-in-feeling that the deeper techniques require.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>tantra</dt><dd>The path that uses desire as a vehicle for transformation. Rather than rejecting the world, tantra embraces it totally and through total embrace, transcends it.</dd>
-        <dt>kundalini</dt><dd>The coiled energy at the base of the spine. When awakened through awareness, it rises through the energy centres (chakras) toward the crown, producing states of expanded consciousness.</dd>
-        <dt>sexual energy</dt><dd>Not merely physical arousal but the life-force itself in its most concentrated form. The same energy that creates biological life can, when redirected through awareness, create spiritual awakening.</dd>
-        <dt>sublimation</dt><dd>Transforming gross energy into subtle energy without suppression. Not fighting desire but raising its frequency through awareness until it becomes bliss.</dd>
-        <dt>maithuna</dt><dd>Sacred sexual union &mdash; lovemaking performed as a meditation, with total awareness, where both partners dissolve into each other and through each other into the divine.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. These techniques require maturity, respect for oneself and any partner, and genuine meditative intent. They are not about pleasure-seeking but about transformation through awareness.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-sensory">
-  <summary><strong>The Techniques for the Senses</strong>
-    <span class="card-meta">sutras 11–64 · 8 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for the Senses</h3>
-  <p class="lede">Eight techniques that transform the senses from sources of distraction into doorways of awakening. Osho insists: the senses are not the enemy &mdash; they are the bridge. Use them totally, and they dissolve into awareness itself.</p>
-  <p class="meta">8 techniques &middot; ~12 min read &middot; works fully offline</p>
-
-
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These eight techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The sensory sutras form the eighth major category &mdash; using taste, touch, sight, the shock of natural gaps, and the freshness of beginner&rsquo;s mind to bypass the thinking layer and arrive directly at presence.</p>
-      <p>Tantra&rsquo;s fundamental insight: the senses are NOT obstacles to meditation. They are the most immediate doorways to it. Every other spiritual path says &ldquo;close the senses, withdraw.&rdquo; Tantra says &ldquo;USE the senses so totally that only awareness remains.&rdquo; These eight techniques demonstrate exactly how.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>Key principle:</strong> The senses are doorways, NOT distractions. Osho emphasises this repeatedly. Every tradition that tells you to suppress the senses creates internal war. These techniques create internal peace by USING the senses as bridges to awareness.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to sensory meditation?</h3>
-    <p>Start with <a href="#sutra-12">Technique 64 &mdash; become the taste</a> or <a href="#sutra-63">Technique 69 &mdash; touch eyeballs as feathers</a>. Both are gentle, require nothing special, and produce results within days. Spend 21 days with one before exploring further.</p>
-  </aside>
-
-
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>sensory awareness</dt><dd>Using the five senses as meditation doorways rather than sources of distraction &mdash; the core tantric approach to the body.</dd>
-        <dt>tantra</dt><dd>A spiritual path that uses the world rather than rejecting it. The body, senses, and desires become vehicles for awakening rather than obstacles.</dd>
-        <dt>beginner&rsquo;s mind</dt><dd>Shoshin in Zen &mdash; seeing without preconceptions. Looking at everything as if for the first time, with fresh wonder and no accumulated knowledge filtering perception.</dd>
-        <dt>proprioception</dt><dd>The body&rsquo;s sense of its own position and movement in space &mdash; the &ldquo;sixth sense&rdquo; that lets you know where your limbs are without looking.</dd>
-        <dt>interoception</dt><dd>The sense of the body&rsquo;s internal states: hunger, heartbeat, temperature, gut feelings. The bridge between body and consciousness.</dd>
-        <dt>vagus nerve</dt><dd>The longest cranial nerve, connecting the brain to the heart, lungs, and gut. Explains why gentle eye-touch opens the heart &mdash; they share this neural pathway.</dd>
-        <dt>palming</dt><dd>A yogic technique of covering the eyes gently with the palms to rest them, release tension, and activate the parasympathetic nervous system.</dd>
-        <dt>gap</dt><dd>A moment of no-thought between two thoughts or sensations &mdash; the door to awareness. Natural gaps occur during sneezing, fright, orgasm, and sudden shock.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. These techniques work with ordinary sensory experience; they are safe for all levels when practised with awareness.</p>
-
-
-  
-</header></div>
-</details>
-<details class="about-card" id="about-centering">
-  <summary><strong>The Techniques for Centering</strong>
-    <span class="card-meta">sutras 13–21 · 9 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Centering</h3>
-  <p class="lede">Ten techniques that bring awareness to the still point within the body &mdash; the spine, the navel, the heart-space, the middle between any two opposites. The centre is always present; these methods simply show you where to look.</p>
-  <p class="meta">10 techniques &middot; ~12 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These ten techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. These centering sutras come from the body-awareness and posture chapters &mdash; the techniques that use the physical form as a doorway to the formless.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to centering?</h3>
-    <p>Start with <a href="#sutra-16">Technique 4 &mdash; feel awareness filling your spine</a>. It is the most iconic centering sutra and needs no special posture. Spend 20 minutes a day for 21 days. Then return for what comes next.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>centering</dt><dd>The act of bringing awareness to a still point inside the body or mind &mdash; a location where movement pauses and the witness can rest.</dd>
-        <dt>sushumna</dt><dd>The central energy channel running along the spinal cord in yogic anatomy. When prana flows through it, one enters a state of balance.</dd>
-        <dt>hara</dt><dd>The Japanese term (tanden in Chinese) for the energy centre two inches below the navel &mdash; the body's gravitational and vital centre.</dd>
-        <dt>chakra</dt><dd>Literally "wheel" &mdash; an intersection of energy channels in the subtle body. The seven main chakras correspond to the spine from base to crown.</dd>
-        <dt>kundalini</dt><dd>Dormant energy said to rest at the base of the spine. When awakened, it rises through the sushumna toward the crown.</dd>
-        <dt>witness</dt><dd>The observing awareness behind all experience &mdash; the "I" that watches thoughts, sensations, and emotions without being any of them.</dd>
-        <dt>samadhi</dt><dd>A deep meditative state of unification; absorption beyond ordinary self-consciousness.</dd>
-        <dt>proprioception</dt><dd>The body's internal sense of its own position and movement &mdash; the "sixth sense" that knows where your limbs are without looking.</dd>
-        <dt>interoception</dt><dd>The sense of the internal state of the body &mdash; heartbeat, gut feeling, breath, temperature. Key to embodied awareness.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-witnessing">
-  <summary><strong>The Techniques for Witnessing</strong>
-    <span class="card-meta">sutras 22–67 · 12 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Witnessing</h3>
-  <p class="lede">Ten techniques that use the observer itself as the doorway &mdash; watching desire, watching sleep, watching satisfaction, watching the watcher. The witness is the oldest meditation in existence: simply step back and see. What sees cannot be seen; what knows cannot be known. That which remains when all objects dissolve is you.</p>
-  <p class="meta">10 techniques &middot; ~16 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These ten techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The witnessing sutras form the fifth major category &mdash; using the observer, the watcher, the awareness-behind-experience as the direct path to self-realisation.</p>
-      <p>Witnessing is the most universal meditation technique. Every tradition has a version of it: Buddhist vipassana, Gurdjieff&rsquo;s self-remembering, Zen&rsquo;s &ldquo;just sitting,&rdquo; Advaita&rsquo;s self-inquiry. These ten sutras offer different angles of entry into the same essential practice: stepping back from experience to discover what remains.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>The witnessing path is subtle:</strong> These techniques don&rsquo;t produce fireworks. They produce silence. The sign of progress is not dramatic experience but the quiet disappearance of suffering.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to witnessing meditation?</h3>
-    <p>Start with <a href="#sutra-24">Technique 2 &mdash; wherever satisfaction is found</a> or <a href="#sutra-59">Technique 9 &mdash; as waves come with water</a>. Both are gentle, positive, and accessible to anyone. Spend 20&ndash;40 minutes a day for 21 days. Then return for what comes next.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>witness</dt><dd>The observing awareness behind all experience &mdash; that which sees thoughts, emotions, and sensations without being any of them.</dd>
-        <dt>self-remembering</dt><dd>Gurdjieff&rsquo;s term for non-verbal awareness of one&rsquo;s own being &mdash; feeling &ldquo;I am&rdquo; without thinking it.</dd>
-        <dt>Gurdjieff</dt><dd>20th century mystic (1866&ndash;1949) who used this sutra as the basis of his entire school of &ldquo;the Fourth Way.&rdquo;</dd>
-        <dt>double-arrowed awareness</dt><dd>Attention simultaneously on the object AND on the one who is aware &mdash; seeing the flower AND feeling the seer.</dd>
-        <dt>psychodrama</dt><dd>Therapeutic technique of re-enacting emotions in a safe container &mdash; expressing anger, grief, or desire without a real target.</dd>
-        <dt>equanimity</dt><dd>Balanced awareness that neither grasps pleasure nor rejects pain &mdash; the still point between attraction and aversion.</dd>
-        <dt>hypnagogia</dt><dd>The threshold state between waking and sleep &mdash; when external perception fades but sleep has not yet arrived.</dd>
-        <dt>non-duality</dt><dd>The recognition that subject and object are one undivided field &mdash; there is no separate knower apart from the knowing.</dd>
-        <dt>turiya</dt><dd>The fourth state beyond waking, dreaming, and sleeping &mdash; pure awareness that witnesses all three without being any of them.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. Witnessing techniques are generally safe for all levels but can surface suppressed emotions. If overwhelm arises, ground through your body, breathe normally, and return to ordinary activity.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-void">
-  <summary><strong>The Techniques for Emptiness &amp;amp; Void</strong>
-    <span class="card-meta">sutras 23–112 · 9 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Emptiness &amp; Void</h3>
-  <p class="lede">Eight techniques that use emptiness, surrender, exhaustion, and dissolution as doorways to the void. Shunyata is not nothingness &mdash; it is pregnant emptiness, the womb from which all existence arises and returns.</p>
-  <p class="meta">8 techniques &middot; ~10 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These eight techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The void and emptiness sutras form the seventh major category &mdash; using deprivation, exhaustion, devotion, sky-gazing, and the investigation of identity to dissolve the ego into the pregnant emptiness that underlies all things.</p>
-      <p>These techniques approach awakening through subtraction rather than addition. Where other categories build something (light, sound, centering), these techniques REMOVE everything until only the void remains. The void is not frightening &mdash; it is the most peaceful, the most liberating, the most total state available to consciousness.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>Key principle:</strong> These void techniques work by REMOVAL, not by addition. You are not creating emptiness &mdash; you are discovering it was always there, hidden behind identifications, desires, and knowledge.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to void meditation?</h3>
-    <p>Start with <a href="#sutra-85">Technique 6 &mdash; without support, sit on buttocks</a> or <a href="#sutra-110">Technique 8 &mdash; looking into blue sky</a>. Both are simple, physical, and produce quick results. Spend 20&ndash;40 minutes a day for 21 days. Then return for the deeper techniques.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>void</dt><dd>Shunyata &mdash; not nothingness but pregnant emptiness, full of potential. The ground from which all forms arise and to which all forms return.</dd>
-        <dt>shunyata</dt><dd>Buddhist term for emptiness &mdash; the absence of inherent existence in all things. Not nihilistic void but liberating spaciousness.</dd>
-        <dt>original face</dt><dd>Zen koan: &ldquo;What was your face before your parents were born?&rdquo; Points to the primordial awareness prior to all conditioning and identity.</dd>
-        <dt>Dynamic Meditation</dt><dd>Osho&rsquo;s cathartic method in five stages: chaotic breathing, emotional expression, jumping with &ldquo;Hoo!&rdquo;, sudden freeze, and celebration. Exhausts the ego through intensity.</dd>
-        <dt>centering</dt><dd>Finding the still point within the body &mdash; the axis around which all movement happens but which itself never moves.</dd>
-        <dt>ego-dissolution</dt><dd>The temporary or permanent loss of the sense of being a separate self. Not psychosis but liberation &mdash; awareness remains, but the fictional &ldquo;I&rdquo; disappears.</dd>
-        <dt>neti-neti</dt><dd>&ldquo;Not this, not this&rdquo; &mdash; the Upanishadic method of stripping away all identifications until only the unidentifiable witness remains.</dd>
-        <dt>surrender</dt><dd>Releasing the ego&rsquo;s grip &mdash; not passivity but active letting-go. The ego cannot surrender itself; surrender happens when effort is exhausted.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. The void is not dangerous but the ego may resist intensely. If existential anxiety arises, ground through your body and breath. This is natural resistance, not a sign to stop.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-heart">
-  <summary><strong>The Techniques for Heart &amp;amp; Devotion</strong>
-    <span class="card-meta">sutras 29–98 · 4 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Heart &amp; Devotion</h3>
-  <p class="lede">Five techniques that use the heart &mdash; love, devotion, music, feeling, and eternity &mdash; as doorways to the divine. The heart knows what the mind cannot grasp: that love is not something you DO but something you ARE when the defences drop.</p>
-  <p class="meta">5 techniques &middot; ~8 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These five techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The heart and devotion sutras form the twelfth major category &mdash; using love, surrender, music, feeling, and the eternal present moment to dissolve the ego through the heart rather than through the mind.</p>
-      <p>These techniques approach awakening through LOVE rather than understanding. Where other categories use the mind (inquiry, witnessing, negation), these techniques bypass the mind entirely and go straight to the heart. The heart does not need to understand in order to open &mdash; it only needs to feel. And feeling, when it is total, IS enlightenment.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>Key principle:</strong> These heart techniques work through FEELING, not through understanding. The mind wants to analyse love; the heart wants to DROWN in it. Let yourself drown. Analysis can come later (or never &mdash; the heart doesn&rsquo;t need it).</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to heart meditation?</h3>
-    <p>Start with <a href="#sutra-90">Technique 3 &mdash; feel love filling you from all sides</a> or <a href="#sutra-98">Technique 4 &mdash; enter music totally</a>. Both are immediately accessible, require no belief system, and produce warmth and opening quickly. Spend 20&ndash;30 minutes a day for 21 days.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>devotion</dt><dd>Total self-giving toward a beloved (person, God, existence). Not dependence but the heart&rsquo;s way of dissolving the ego through love.</dd>
-        <dt>bhakti</dt><dd>The yoga of devotion &mdash; the path to the divine through love rather than knowledge (jnana) or action (karma).</dd>
-        <dt>heart centre</dt><dd>The energetic centre in the middle of the chest (anahata chakra) &mdash; the seat of love, compassion, and feeling in the subtle body.</dd>
-        <dt>surrender</dt><dd>Releasing the ego&rsquo;s grip &mdash; not passivity but active letting-go. The heart&rsquo;s natural movement when it truly loves.</dd>
-        <dt>bhajan</dt><dd>Devotional song &mdash; music designed to open the heart and dissolve the singer into the feeling of love or worship.</dd>
-        <dt>eternity</dt><dd>Not endless time but TIMELESSNESS &mdash; the quality of THIS moment when it is fully inhabited. The heart lives in eternity; the mind lives in time.</dd>
-        <dt>divine love</dt><dd>Love without object or condition &mdash; the overflowing quality of the heart when it has been filled to capacity. Not directed at anyone; simply radiating in all directions.</dd>
-        <dt>ego-dissolution</dt><dd>The temporary or permanent loss of the sense of being a separate self. In heart techniques, this happens through love rather than inquiry.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; heart techniques may release strong emotions (tears, grief, ecstasy). This is natural and healthy. Let emotions flow without acting on them. If emotional intensity becomes overwhelming, ground through the body and breath, then return to the heart gently.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-light">
-  <summary><strong>The Techniques for Light &amp;amp; Gazing</strong>
-    <span class="card-meta">sutras 33–78 · 13 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Light &amp; Gazing</h3>
-  <p class="lede">Ten techniques that use inner light, outer darkness, fire, sky, and the luminosity of awareness itself as doorways to the divine. Light is consciousness made visible; follow it inward and you become the source.</p>
-  <p class="meta">10 techniques &middot; ~14 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These ten techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The light and gazing sutras form the fourth major category &mdash; using inner luminosity, outer darkness, fire, sky-gazing, and the radiance of pure attention to dissolve the boundary between seer and seen.</p>
-      <p>These techniques span the full spectrum: from visualising light rising through the spine, to staring into a black night, to realising that awareness itself is luminous. Some are gentle beginner practices; others are among the most powerful and potentially overwhelming in the entire tantra.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>Critical safety note:</strong> Techniques 1, 2, and 5 involve powerful energy work. Never leave these incomplete mid-session. Always bring the energy to the crown and release. Read all cautions before beginning.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to light meditation?</h3>
-    <p>Start with <a href="#sutra-36">Technique 4 &mdash; the clear sky</a> or <a href="#sutra-74">Technique 9 &mdash; wherever attention alights</a>. Both require nothing special and are safe for all levels. Spend 20&ndash;40 minutes a day for 21 days. Then return for what comes next.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>sahasrar</dt><dd>The thousand-petalled lotus at the crown of the head &mdash; the highest energy centre in the yogic system. When kundalini reaches here, the individual dissolves into the cosmic.</dd>
-        <dt>chakra</dt><dd>An energy centre in the subtle body. The seven main chakras run along the spine from base (muladhara) to crown (sahasrar).</dd>
-        <dt>kundalini</dt><dd>The dormant energy said to lie coiled at the base of the spine. When awakened, it rises through the chakras toward the crown.</dd>
-        <dt>sushumna</dt><dd>The central energy channel running along the spine through which kundalini rises. Flanked by ida (left/lunar) and pingala (right/solar).</dd>
-        <dt>prana</dt><dd>Life-force energy. Breath is its grossest form; light and attention are subtler forms. All techniques ultimately work with prana.</dd>
-        <dt>third eye</dt><dd>The ajna chakra, located between the eyebrows. Associated with insight, inner vision, and the dissolution of duality.</dd>
-        <dt>turiya</dt><dd>The fourth state &mdash; beyond waking, dreaming, and deep sleep. Pure awareness that witnesses all three states without being any of them.</dd>
-        <dt>Essenes</dt><dd>An ancient Jewish mystical sect (c. 200 BCE &ndash; 100 CE) that, according to Osho, experienced God as absolute darkness &mdash; the formless, the void before creation.</dd>
-        <dt>aura</dt><dd>The subtle luminous field said to surround living beings. In these techniques, imagining the body as an aura of light helps dissolve the sense of solidity.</dd>
-        <dt>prakriti</dt><dd>Nature or matter in Sankhya philosophy &mdash; the manifest world as distinguished from purusha (pure consciousness). The fire technique burns prakriti to reveal purusha.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. Some techniques in this category can produce intense experiences. If you feel overwhelmed, open your eyes, ground through your feet, and breathe normally.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-sound">
-  <summary><strong>The Techniques for Sound &amp;amp; Mantra</strong>
-    <span class="card-meta">sutras 37–47 · 11 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Sound &amp; Mantra</h3>
-  <p class="lede">Eight techniques that use sound &mdash; spoken, heard, imagined, or fading &mdash; as a bridge from the noisy mind to the silent centre. Sound is the subtlest form of matter; follow it inward and it dissolves into pure awareness.</p>
-  <p class="meta">8 techniques &middot; ~10 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These eight techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The sound and mantra sutras form the third major category &mdash; using vibration, resonance, and the dying echo of a tone to carry the mind from word to wordlessness.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to sound meditation?</h3>
-    <p>Start with <a href="#sutra-38">Technique 2 &mdash; bathe in the centre of sound</a>. It requires nothing but ears and a willingness to listen without labelling. Spend 20 minutes a day for 21 days. Then return for what comes next.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>AUM (Om)</dt><dd>The primordial sound in Indian tradition &mdash; composed of A, U, M representing creation, sustenance, and dissolution. Considered the sound of the universe itself.</dd>
-        <dt>mantra</dt><dd>A word or phrase repeated to focus the mind. In tantra, the vibration matters more than the meaning.</dd>
-        <dt>nada</dt><dd>Sanskrit for "sound" &mdash; specifically the inner, unstruck sound heard in deep meditation (anahad nada).</dd>
-        <dt>anahad</dt><dd>"Unstruck" &mdash; sound that arises without two things striking each other. The inner hum of existence itself.</dd>
-        <dt>soundfulness</dt><dd>Osho's term for the state where you become so merged with sound that the listener disappears &mdash; only sound remains.</dd>
-        <dt>overtone</dt><dd>A harmonic frequency above the fundamental tone. When you chant AUM, multiple overtones resonate in skull and chest cavities.</dd>
-        <dt>vagus nerve</dt><dd>The longest cranial nerve, connecting brain to gut. Stimulated by humming, chanting, and slow exhales &mdash; activates the rest-and-digest response.</dd>
-        <dt>cymatics</dt><dd>The study of visible sound vibration. Demonstrates how frequencies create geometric patterns in matter.</dd>
-        <dt>default mode network</dt><dd>Brain regions active during mind-wandering. Quiets during focused attention and deep listening.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-negation">
-  <summary><strong>The Techniques for Self-Inquiry</strong>
-    <span class="card-meta">sutras 56–87 · 7 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Self-Inquiry</h3>
-  <p class="lede">Six techniques that use negation, expansion, and the turning of awareness back upon itself to dissolve false identifications and reveal what you truly are. These are the &ldquo;Who am I?&rdquo; methods &mdash; stripping away everything you are NOT until only the unnameable remains.</p>
-  <p class="meta">6 techniques &middot; ~8 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These six techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The self-inquiry sutras form the sixth major category &mdash; using negation, expansion beyond the body, and the &ldquo;subjective mood&rdquo; to discover awareness prior to all content.</p>
-      <p>These techniques are the most philosophical in the tantra &mdash; they work not through visualisation or energy but through direct seeing. The method is simple: if you can observe it, you are not it. What remains when all observed objects are negated? That is the subject &mdash; that is you.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>These techniques are deceptively simple. The mind will say &ldquo;I understand&rdquo; after reading them once. Understanding is not the same as experiencing. Do the practice daily &mdash; <em>feeling</em>, not thinking.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to self-inquiry?</h3>
-    <p>Start with <a href="#sutra-82">Technique 96 &mdash; the heart-space</a>. It is the gentlest entry point, requiring nothing but attention and a comfortable seat. Spend 20 minutes a day for 21 days. Then explore the more demanding negation techniques.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>neti-neti</dt><dd>Sanskrit for &ldquo;not this, not this&rdquo; &mdash; the method of negation. Whatever can be pointed to or described is negated as &ldquo;not the self,&rdquo; until only the unnameable subject remains.</dd>
-        <dt>self-inquiry</dt><dd>Turning attention toward the source of &ldquo;I&rdquo; rather than toward objects. The quintessential question: &ldquo;Who am I?&rdquo;</dd>
-        <dt>subjective mood</dt><dd>Remaining rooted in awareness rather than lost in objects. Seeing the seer, not just the seen.</dd>
-        <dt>no-thingness</dt><dd>Not blankness, not emptiness as a concept, but the living space prior to all things &mdash; the container in which objects appear and disappear.</dd>
-        <dt>heart-space</dt><dd>The cavity between the armpits &mdash; the seat of peace in tantra. Not the physical heart but the energetic centre of stillness.</dd>
-        <dt>pervading</dt><dd>Expanding awareness beyond body boundaries in all directions simultaneously, dissolving the sense of being located in one place.</dd>
-        <dt>Ramana Maharshi</dt><dd>20th century Indian sage (1879&ndash;1950) who taught &ldquo;Who am I?&rdquo; as the direct path to self-realisation &mdash; the quintessential self-inquiry method.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. Self-inquiry can sometimes trigger existential discomfort as familiar identifications dissolve. This is normal and temporary. Ground through the body if needed.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-mind">
-  <summary><strong>The Techniques for Mind &amp;amp; Thought</strong>
-    <span class="card-meta">sutras 62–111 · 9 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-
-<h3>The Techniques for Mind &amp; Thought</h3>
-<p class="lede">
-These techniques use the mind's own machinery against itself &mdash; desire, wandering, doubt, naming, knowing. Instead of fighting thought, they redirect your attention to the gaps, the roots, and the watcher behind the watched. The mind dissolves not by suppression but by being fully seen.
-</p>
-<p class="meta">7 techniques &middot; ~12 min read &middot; works fully offline</p>
-
-<details class="about-block">
-<summary>About these techniques</summary>
-<div class="about-body">
-<p>These seven techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-<p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. Unlike most of the 112, the techniques here don't ask you to fight the mind. They use the mind's own movements &mdash; desire, wandering, naming, knowing &mdash; as the doorway.</p>
-</div>
-</details>
-
-<aside class="howto-block">
-<h3>How to use this page</h3>
-<p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don't shop, don't switch, don't combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-<p>If on day 7 you think it isn't working &mdash; that <em>is</em> the work. Stay.</p>
-</aside>
-
-<aside class="beginner-block">
-<h3>New to meditation?</h3>
-<p>Start with <a href="#sutra-89">Technique 3 &mdash; "wherever your mind is wandering, this"</a>. It is the easiest sutra in all 112. It cannot fail; every moment of distraction noticed is a moment of practice. Try it for 21 days, then return for what comes next.</p>
-</aside>
-
-<details class="glossary-block">
-<summary>Glossary &mdash; unfamiliar terms?</summary>
-<div class="glossary-body">
-<p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-<dl>
-<dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-<dt>Tantra</dt><dd>Literally "method" or "technique" &mdash; a non-fighting approach that uses life energies (desire, sex, emotion) as doorways rather than enemies.</dd>
-<dt>ego</dt><dd>In this context, not arrogance but the constructed sense of being a separate "me" &mdash; the narrative self that meditation gradually dissolves.</dd>
-<dt>nirvana</dt><dd>Sanskrit for "extinguishing" &mdash; the cessation of the false self, often translated as "liberation."</dd>
-<dt>moksha</dt><dd>Sanskrit for "liberation" &mdash; release from the cycle of identification and suffering.</dd>
-<dt>sansara</dt><dd>The world of ordinary experience and identification, contrasted with moksha.</dd>
-<dt>samadhi</dt><dd>A deep meditative state of unification; absorption beyond ordinary self-consciousness.</dd>
-<dt>shunya</dt><dd>Sanskrit for "void" or "emptiness" &mdash; the central concept in Buddhist philosophy.</dd>
-<dt>atma</dt><dd>Sanskrit for "self" or "soul" &mdash; the inner essence Hindus consider eternal.</dd>
-<dt>brahma</dt><dd>Sanskrit for "the absolute" &mdash; the impersonal ground of being in Hindu philosophy.</dd>
-<dt>default mode network</dt><dd>A network of brain regions active when mind-wandering; modern neuroscience considers it the substrate of the "narrative self."</dd>
-<dt>ACT</dt><dd>Acceptance and Commitment Therapy &mdash; a modern psychotherapy using cognitive defusion and present-moment awareness.</dd>
-<dt>MBSR</dt><dd>Mindfulness-Based Stress Reduction &mdash; Jon Kabat-Zinn's clinical adaptation of meditation for stress, pain, and anxiety.</dd>
-<dt>90-second rule</dt><dd>Jill Bolte Taylor's observation: the neurochemical wave of an emotion clears within ~90 seconds. Anything longer is re-triggering through thought.</dd>
-<dt>Gurdjieff</dt><dd>G.I. Gurdjieff (1866&ndash;1949) &mdash; Russian-Armenian teacher who introduced "self-remembering" to the West.</dd>
-<dt>Krishnamurti</dt><dd>J. Krishnamurti (1895&ndash;1986) &mdash; Indian teacher who emphasised choiceless awareness and rejected formal techniques.</dd>
-</dl>
-</div>
-</details>
-
-<p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind.</p>
-
-
-</header></div>
-</details>
-<details class="about-card" id="about-death">
-  <summary><strong>The Techniques for Death Contemplation</strong>
-    <span class="card-meta">sutras 79–80 · 2 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Death Contemplation</h3>
-  <p class="lede">Four techniques that use death &mdash; its fire, its certainty, its edge &mdash; as doorways to the deathless. To contemplate death is not morbid; it is the most radical act of liberation. Only by facing death fully do you discover what cannot die.</p>
-  <p class="meta">4 techniques &middot; ~8 min read &middot; works fully offline</p>
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These four techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The death contemplation sutras form the thirteenth major category &mdash; using the fire of cremation, the expansion of spirit, the certainty of impermanence, and the edge of happening as vehicles for recognising the deathless.</p>
-      <p>Every spiritual tradition includes death meditation. Buddhism has maranasati. Tibet has the bardo teachings. Stoics had memento mori. These techniques are Shiva&rsquo;s contribution: not philosophical reflection on death but EXPERIENTIAL rehearsal. You die before you die &mdash; and discover that what remains is beyond death.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>Key principle:</strong> These death techniques work by confrontation, not avoidance. You face death so completely that you discover what is deathless. The fear of death dissolves not through denial but through total exploration.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to death meditation?</h3>
-    <p>Start with Technique 3 &mdash; the certainty that the impermanent shall pass or <a href="#sutra-79">Technique 1 &mdash; fire rising through your form</a>. Both are accessible and produce clear results. Spend 20&ndash;30 minutes daily for 21 days. Then return for the subtler techniques.</p>
-  </aside>
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>maranasati</dt><dd>Buddhist death contemplation practice &mdash; mindfulness of death, used to overcome complacency and bring urgency to spiritual practice.</dd>
-        <dt>impermanence</dt><dd>Anicca in Pali &mdash; the fundamental truth that all conditioned things arise, change, and pass away. Nothing composite lasts.</dd>
-        <dt>deathless</dt><dd>Amrita in Sanskrit &mdash; that which cannot die. Not the body, not the mind, but the awareness in which both appear and disappear.</dd>
-        <dt>bardo</dt><dd>Tibetan concept: the gap between death and rebirth. More broadly, any transitional state between one condition and the next. The space of pure potential.</dd>
-        <dt>witness</dt><dd>The awareness that remains when the body dissolves. Not a person, not an entity, but pure knowing &mdash; that which sees all things come and go while itself remaining unchanged.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. Death meditation can bring up strong emotions. If grief, fear, or existential anxiety becomes overwhelming, ground through your body and breath, or pause practice and return later. This is natural material surfacing for release.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-imagination">
-  <summary><strong>The Techniques for Imagination</strong>
-    <span class="card-meta">sutras 81–102 · 8 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Imagination</h3>
-  <p class="lede">Six techniques that use imagination &mdash; not fantasy, but the creative faculty that stretches the mind beyond its limits &mdash; as doorways to the formless. Imagination exhausts itself trying to grasp the ungraspable, and in that failure, truth reveals itself.</p>
-  <p class="meta">6 techniques &middot; ~8 min read &middot; works fully offline</p>
-
-
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These six techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The imagination sutras form the fourteenth major category &mdash; using the creative faculty of the mind not to build fantasy but to exhaust itself against the formless, the paradoxical, and the unnameable.</p>
-      <p>These techniques approach awakening through imagination&rsquo;s OWN failure. Imagination cannot grasp the formless, cannot hold paradox, cannot survive semantic satiation. In each technique, imagination is asked to do the impossible &mdash; and in its failure, the door opens to that which lies beyond the mind&rsquo;s reach.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>Key principle:</strong> These imagination techniques work by stretching the mind to its breaking point. You are not creating images for their own sake &mdash; you are using the ATTEMPT to imagine the unimaginable as the doorway. The failure of imagination IS the success of meditation.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to imagination meditation?</h3>
-    <p>Start with <a href="#sutra-92">Technique 4 &mdash; infinitely spacious place</a> or <a href="#sutra-96">Technique 6 &mdash; enter your name</a>. Both are accessible, produce tangible results quickly, and build confidence for the subtler techniques. Spend 20&ndash;30 minutes a day for 21 days. Then return for the paradox and formlessness work.</p>
-  </aside>
-
-
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>imagination</dt><dd>Not fantasy but the creative faculty that can stretch the mind beyond its limits &mdash; used here as a tool for transcendence, not escapism.</dd>
-        <dt>formless</dt><dd>That which has no shape &mdash; cannot be imagined but can be experienced. The mind always creates form; the formless is what remains when form-making exhausts itself.</dd>
-        <dt>paradox</dt><dd>Holding two contradictions simultaneously to break the mind&rsquo;s binary logic. The mind cannot hold &ldquo;both and neither&rdquo; &mdash; it short-circuits into silence.</dd>
-        <dt>am-ness</dt><dd>The raw feeling of existence prior to all qualities. Not &ldquo;I am something&rdquo; but pure &ldquo;I AM&rdquo; &mdash; being without description.</dd>
-        <dt>spaciousness</dt><dd>The inner correlate of outer space &mdash; the mind&rsquo;s natural state when objects are removed. Not emptiness as lack but emptiness as freedom.</dd>
-        <dt>semantic satiation</dt><dd>The psychological phenomenon of a word losing meaning through repetition. When a name becomes pure sound, the naming faculty of mind breaks.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. Imagination techniques can sometimes produce unusual mental states. If disorientation persists after practice, ground through your body and breath. This is the mind releasing its grip, not a sign to stop.</p>
-  
-</header></div>
-</details>
-<details class="about-card" id="about-movement">
-  <summary><strong>The Techniques for Movement</strong>
-    <span class="card-meta">sutras 99–108 · 4 techniques</span></summary>
-  <div class="about-card-body"><header class="hero">
-  
-  <h3>The Techniques for Movement</h3>
-  <p class="lede">Five techniques that use the movement of consciousness &mdash; not physical movement but the shift of awareness from the isolated self into the universal, from the bounded body into infinite space. These are techniques of expansion, dissolving, and the ultimate freedom of realising you are everywhere.</p>
-  <p class="meta">5 techniques &middot; ~8 min read &middot; works fully offline</p>
-
-  <details class="about-block">
-    <summary>About these techniques</summary>
-    <div class="about-body">
-      <p>These five techniques are drawn from the <em>Vigyan Bhairav Tantra</em>, a Sanskrit text dated to roughly 5,000 years ago, in which Shiva tells his consort Devi 112 ways to recognise the divine within ordinary life.</p>
-      <p>Osho (1931&ndash;1990), an Indian mystic, gave a series of talks unpacking each one; that material was published as <em>The Book of Secrets</em>. The movement sutras form the ninth major category &mdash; but &ldquo;movement&rdquo; here does not mean physical motion. It means the movement of consciousness itself: expanding beyond the body, dissolving the isolated self, entering the space of pure awareness.</p>
-      <p>These techniques range from empathic identification with others (feeling another&rsquo;s consciousness as your own) to the absolute stillness of entering supportless, eternal space. They represent a progression: from recognising consciousness in others, to seeing it as the only thing that exists, to releasing the body, to releasing thought, and finally to entering the groundless ground of being itself.</p>
-    </div>
-  </details>
-  <aside class="howto-block">
-    <h3>How to use this page</h3>
-    <p><strong>Pick ONE technique. Practise it for 21 days.</strong> Don&rsquo;t shop, don&rsquo;t switch, don&rsquo;t combine. Twenty-one days is the threshold the book itself recommends &mdash; long enough for resistance to surface, peak, and pass.</p>
-    <p>If on day 7 you think it isn&rsquo;t working &mdash; that <em>is</em> the work. Stay.</p>
-    <p><strong>Note on &ldquo;movement&rdquo;:</strong> In this category, movement refers to the movement of consciousness, not necessarily physical movement. These are techniques of inner expansion &mdash; consciousness moving beyond its habitual boundaries into its true unlimited nature.</p>
-  </aside>
-  <aside class="beginner-block">
-    <h3>New to movement meditation?</h3>
-    <p>Start with <a href="#sutra-99">Technique 1 &mdash; feel the consciousness of each person</a> or <a href="#sutra-107">Technique 3 &mdash; toss attachment for body aside</a>. Both are accessible for beginners and produce tangible results within days. Spend 20&ndash;30 minutes a day for 21 days. Then return for what comes next.</p>
-  </aside>
-
-  <details class="glossary-block">
-    <summary>Glossary &mdash; unfamiliar terms?</summary>
-    <div class="glossary-body">
-      <p style="font-size:.85rem;color:var(--ink-faint);margin:.4rem 0 0">Underlined words below are also marked inline; hover or tap them anywhere on the page for a quick definition.</p>
-      <dl>
-        <dt>Vigyan Bhairav Tantra</dt><dd>A ~5,000-year-old Sanskrit text presented as a dialogue between Shiva and Devi, listing 112 meditation techniques.</dd>
-        <dt>consciousness</dt><dd>The one awareness that animates all forms &mdash; not personal mind or intellect, but the universal &ldquo;I am&rdquo; that looks through every pair of eyes.</dd>
-        <dt>monism</dt><dd>The philosophical position that only one substance exists. In tantra, that substance is consciousness &mdash; appearing as many forms but remaining one.</dd>
-        <dt>disidentification</dt><dd>Loosening the grip of &ldquo;I am this body/mind/role.&rdquo; Not rejecting the body but recognising you are more than it.</dd>
-        <dt>bodylessness</dt><dd>The experiential state of not being localized in the physical form &mdash; feeling awareness as spread throughout space rather than confined to a body.</dd>
-        <dt>supportless</dt><dd>Awareness that needs no ground, no reason, no basis &mdash; it IS the ground. The ultimate freedom of needing nothing to stand on.</dd>
-        <dt>space</dt><dd>Not physical emptiness but the infinite field in which all experience appears. Awareness itself experienced as boundless space.</dd>
-        <dt>joy</dt><dd>The natural state of consciousness when it recognises its own unlimited nature &mdash; not pleasure (which depends on objects) but causeless being.</dd>
-      </dl>
-    </div>
-  </details>
-  <p class="disclaimer">Practise on your own discretion &mdash; adjust each technique to your own body and mind. These techniques work with identity and boundary dissolution; if you experience disorientation, ground yourself by feeling your body and surroundings.</p>
-  
-</header></div>
-</details>
-</section>
-
 <section id="chapters">
   <p class="part-divider">The 112 Techniques · In Osho's Book Order</p>
   
@@ -3301,8 +2616,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 3 · Sutras 1–4 · 4 techniques</div>
     <h2>Breath – A Bridge to the Universe</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-breath">breath</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Before practising any breath technique, Osho asks you to drop the seeker&#x27;s mistake. Truth is not a future goal - it is already the case, and you already are it. The mind, however, only operates in past or future; the present has no room for it to move. So as long as you are seeking - even seeking liberation or no-desire - you keep missing what is already here. Shiva therefore gives techniques without any philosophical preamble, because the mind would only turn the philosophy into another goal. The four breath sutras are simple turnings of attention back into this moment.</p>
+<blockquote class="chapter-intro-quote"><p>You cannot seek truth. You can find it, but you cannot seek it. The very seeking is the hindrance.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-1" data-tech="1">
     <div class="technique-head">
       <span>Sutra 1 of 112</span>
@@ -3627,8 +2946,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 5 · Sutras 5–9 · 5 techniques</div>
     <h2>Five Techniques of Attentiveness</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-breath">breath</a> · <a href="#about-sleep">sleep</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with Pythagoras, who was refused entry to an Egyptian mystery school until he completed forty days of fasting and conscious breathing. Afterwards he said his centre had moved from intellect to feeling - from concept to actual experience. The same Indian method now appears in Shiva&#x27;s first sutra: focus attention between the eyebrows, on the dormant third eye (the pineal gland). Osho says this point is magnetic - it pulls attention into itself effortlessly. Once attention settles there, you stop being identified with anger or desire and start watching thoughts pass like clouds in the sky. As he puts it</p>
+<blockquote class="chapter-intro-quote"><p>For the third eye, attention is food. It has been hungry for lives and lives.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-5" data-tech="5">
     <div class="technique-head">
       <span>Sutra 5 of 112</span>
@@ -4000,8 +3323,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 7 · Sutras 10–12 · 3 techniques</div>
     <h2>Techniques to Put You at Ease</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-sensory">sensory</a> · <a href="#about-tantra">tantra</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho frames these techniques by saying we all have a centre but live off it, and this off-centre living is the root of every tension. He sketches four types: the &quot;normal&quot; person with a fixed identity, who is really dead inside; the artist, liquid and swinging between madness and ecstasy; the permanently mad, gone outside completely; and the Buddha, who has returned home. The Buddha still eats, sleeps and feels heat, but always in this moment, with no projection into tomorrow. Wherever there is becoming, there is tension; wherever there is pure being, there is ease.</p>
+<blockquote class="chapter-intro-quote"><p>The normal man is really a dead man, living between these two points.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-10" data-tech="10">
   <div class="technique-head"><span>Sutra 10 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-10">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Tantric Union &middot; <strong>Tags:</strong> while &middot; caressed &middot; sweet &middot; princess</div>
@@ -4084,8 +3411,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 9 · Sutras 13–14 · 2 techniques</div>
     <h2>Techniques for Centering</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-centering">centering</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho says we are all born with a centre but completely forget it. We can live without knowing it, but not without it. Without that knowing, life feels rootless - what Sartre called &quot;thrownness,&quot; the alien sense that one has been hurled into a foreign world. If you live as thrown, anguish follows; if you sense yourself as grown organically, like a tree, bliss follows. A child first lives rooted in the navel (the hara), then drifts to the heart, then to the head, losing the original ground. These centering sutras are devices to take consciousness back.</p>
+<blockquote class="chapter-intro-quote"><p>Bliss is the result of an organic unity with the universe, and anguish the result of an enmity.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-13" data-tech="13">
   <div class="technique-head"><span>Sutra 13 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-13">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> concentration &middot; single-point &middot; body &middot; piercing</div>
@@ -4152,8 +3483,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 11 · Sutras 15–17 · 3 techniques</div>
     <h2>Techniques to Penetrate the Inner</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-centering">centering</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho diagnoses the basic human condition as living on the circumference of a circle that has no centre. We have a &quot;without&quot; but no real &quot;within&quot; - even when physically alone, we are inwardly crowded with images of other people. So all our talk of going inside is hollow: the words have meaning only intellectually, because we have never actually been there. These three techniques - closing the senses with the hands, dropping into the heart, hovering in the middle of opposites - are devices to pierce that crowded circumference and finally enter.</p>
+<blockquote class="chapter-intro-quote"><p>Man is as if he is a circle without a centre.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-15" data-tech="15">
   <div class="technique-head"><span>Sutra 15 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-15">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> head &middot; seal &middot; sound &middot; inner listening</div>
@@ -4261,8 +3596,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 13 · Sutras 18–21 · 4 techniques</div>
     <h2>Inner Centering</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-centering">centering</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho explains that the body has two dimensions: outward through the senses, where consciousness meets matter, and inward through centering, where the same reality appears as non-matter. The seer is always behind the eyes; close the senses and the seer remains. But the inner centre can never be approached head-on. Like happiness in play or music, it is always a by-product - appearing only when you forget the goal and absorb yourself in some other act. These techniques therefore never tell you to seek the centre; they ask you to look lovingly at an object, sit on the buttocks, sway gently - and let the centre arrive on its own.</p>
+<blockquote class="chapter-intro-quote"><p>Whatsoever is beautiful, whatsoever is eternal is so delicate that if you try to grab it directly it is destroyed.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-18" data-tech="18">
   <div class="technique-head"><span>Sutra 18 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-18">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Centering &middot; <strong>Tags:</strong> look &middot; lovingly &middot; object &middot; another</div>
@@ -4394,8 +3733,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 15 · Sutras 22–24 · 3 techniques</div>
     <h2>Seeing the Past as a Dream</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-void">void</a> · <a href="#about-witnessing">witnessing</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho borrows from Gurdjieff that identification is the only real sin - and these sutras attack it directly. We were children once and are no longer, yet we still merge with the memory rather than watching it like a film. The move, Osho says, is to begin with the past: see your childhood as a dream and you suddenly notice that what is present today will also become a dream tomorrow. The witness itself is never inside time. He cites Rousseau&#x27;s Confessions as a man who admitted every sin except being identified with them.</p>
+<blockquote class="chapter-intro-quote"><p>Anything that you can look at as a witness is a dream.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-22" data-tech="22">
   <div class="technique-head"><span>Sutra 22 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-22">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Witnessing &middot; <strong>Tags:</strong> attention &middot; place &middot; where &middot; seeing</div>
@@ -4494,8 +3837,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 17 · Sutras 25–27 · 3 techniques</div>
     <h2>Several Stop Techniques</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-void">void</a> · <a href="#about-witnessing">witnessing</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho splits life into two balances - being and doing. Being is already the case; doing and having are achievements piled around it like a circumference. Most people live entirely on that circumference and never touch the centre. These &quot;stop&quot; sutras attack it directly. Gurdjieff borrowed the same method from Tibetan lamas (who got it from Vigyan Bhairav): in the middle of dance, freeze. The body still has momentum to continue, but you don&#x27;t cooperate. In that sudden gap, the body and the watcher inside it split apart, and for an instant you actually see yourself. The smallest adjustment ruins it.</p>
+<blockquote class="chapter-intro-quote"><p>Whatsoever you have is not your being, and whatsoever you do is not your being.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-25" data-tech="25">
   <div class="technique-head"><span>Sutra 25 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-25">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Death Contemplation &middot; <strong>Tags:</strong> intuition &middot; stopping &middot; death-of-expectation</div>
@@ -4622,8 +3969,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 19 · Sutras 28–29 · 2 techniques</div>
     <h2>A Technique for the Intellectual and a Technique for the Feeling Type</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-heart">heart</a> · <a href="#about-void">void</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Tantra&#x27;s diagnosis here is radical: the mind is not sick - the mind is the sickness. Western psychology assumes the average mind is healthy and only treats deviations from the norm; it tries to readjust the genius back to average. Osho says this misses the point - the average mind is itself &quot;normally ill,&quot; just commonly enough that no one notices. The body, since it is always dying, can never be perfectly healthy; only relatively. The mind is the same: structurally a bridge between matter and spirit, dying and deathless, so it is bound to be tense. Curing it from inside is impossible. The only move is transcendence.</p>
+<blockquote class="chapter-intro-quote"><p>It is not that you are tense within, but rather, you are the tension.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-28" data-tech="28">
   <div class="technique-head"><span>Sutra 28 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-28">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Emptiness &amp; Void &middot; <strong>Tags:</strong> deprivation &middot; transcend &middot; letting-go &middot; weakness &middot; surrender</div>
@@ -4707,8 +4058,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 21 · Sutras 30–32 · 3 techniques</div>
     <h2>Three Looking Techniques</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-sensory">sensory</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Before these three sutras Osho lingers on the eyes themselves. Of all the body, the eyes are the least bodily - a meeting point where matter comes closest to the consciousness behind it. The hand, the heart, no other organ comes that near. Because of that proximity, a single attentive jump from the eyes can land you at the source. These techniques use that bridge: closing the eyes to see your inner being in detail, looking at a bowl without registering the sides or material, or seeing an ordinary face as if for the very first time. The point is not what you look at but the quality of the looking.</p>
+<blockquote class="chapter-intro-quote"><p>A single jump from the eyes can lead you to the source.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-30" data-tech="30">
   <div class="technique-head"><span>Sutra 30 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-30">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> The Senses &middot; <strong>Tags:</strong> eyes &middot; closed &middot; inner &middot; detail</div>
@@ -4825,8 +4180,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 23 · Sutras 33–36 · 4 techniques</div>
     <h2>Several More Looking Methods</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-light">light</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho sets up a clean diagram before these sutras: consciousness sits at the centre, the senses sit on the boundary, and objects lie beyond it. The senses are a doorway that opens both ways - outward to the world, or inward to the centre - and the distance is the same. Quoting Zen master Bokuju, he says nirvana is no farther away than the marketplace. We turn outward only because bodily needs pull us out; nothing yet pulls us in. The need to move inward must first be created, and Osho says it is born from one thing - the awareness of one&#x27;s own death. Animals see others die; only a human can see himself dying. As he puts it</p>
+<blockquote class="chapter-intro-quote"><p>If you are not aware of death, you have not yet become man.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-33" data-tech="33">
   <div class="technique-head"><span>Sutra 33 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-33">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Emptiness &amp; Void &middot; <strong>Tags:</strong> sky &middot; blue &middot; serenity &middot; beyond-clouds &middot; simplicity</div>
@@ -4951,8 +4310,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 25 · Sutras 37–38 · 2 techniques</div>
     <h2>From Words to Pure Words to Being</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-sound">sound</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens by noting that Sartre titled his autobiography simply &quot;Words&quot; - and that, he says, is the autobiography of every human being. We are stuffed with words from waking to sleeping. The self, however, lives below, behind, around the mind - never inside it. The mistake is identification: we believe we are the mind, and that single error is the root of every misery. Why do we identify so deeply? Because thinking has been the human survival weapon, against animals, nature, and other people. The proof is simple - call someone&#x27;s body ill and they shrug; call their mind ill and they take offense. These sound techniques begin to unhook us from words.</p>
+<blockquote class="chapter-intro-quote"><p>You are filled with words, and this process of words continues the whole day, even in the mind.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-37" data-tech="37">
   <div class="technique-head"><span>Sutra 37 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-37">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> letters &middot; feeling &middot; dissolution &middot; freedom</div>
@@ -5025,8 +4388,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 27 · Sutras 39–41 · 3 techniques</div>
     <h2>Soundlessness, Soundfulness and Total Awareness</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-sound">sound</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho threads modern physics into Tantra here. Just as physicists now postulate anti-matter - a hole of nothingness behind every dense object - Tantra has always said anti-sound, silence, sits just behind every sound. They are two faces of one coin. Sound can therefore be used as a doorway into soundlessness, mind into no-mind. He notes the two schools: Sankhya (and J. Krishnamurti) insists mind cannot be used at all, only seen through; Yoga and Tantra insist mind must be used - but negatively, as a springboard that weakens itself. These chants of &quot;Aum&quot; work on the second principle.</p>
+<blockquote class="chapter-intro-quote"><p>Wherever there is sound, just behind it there is silence.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-39" data-tech="39">
   <div class="technique-head"><span>Sutra 39 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-39">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> AUM &middot; chanting &middot; merging &middot; vibration</div>
@@ -5132,8 +4499,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 29 · Sutras 42–44 · 3 techniques</div>
     <h2>Methods for the Dropping of Mind</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-sound">sound</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Tantra, Osho says, refuses the religious split between this world (sansara) and liberation (moksha). The two are not contradictory; the ultimate is hidden inside the immediate, here and now. The mind, however, is a prism: it divides whatever passes through it, and it cannot do otherwise - that is its nature. So a no-mind approach is needed to perceive wholeness. Because Tantra denies division, total acceptance becomes possible, and acceptance alone produces real relaxation. Religions that brand the world or the body as sin only generate guilt, neurosis and seriousness. Osho says every religion has an outer life-denying face and an inner esoteric core that, when healthy, is always tantric.</p>
+<blockquote class="chapter-intro-quote"><p>Unless you accept the world totally, you cannot be at ease within.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-42" data-tech="42">
   <div class="technique-head"><span>Sutra 42 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-42">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> fading &middot; feeling &middot; heart &middot; passage</div>
@@ -5226,8 +4597,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 31 · Sutras 45–47 · 3 techniques</div>
     <h2>From Sound to Inner Silence</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-sound">sound</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho sharpens the difference between philosophy, science and Tantra here. Philosophy thinks about ultimate truth; science discovers what is. Tantra is also a science, but its territory is the inner - a subjective experiment rather than speculation. The very word tantra, he points out, means technique, and so this book contains no doctrine, only one hundred and twelve experiments. He warns against chasing the ultimate: it is hidden inside the immediate, and by reaching past the immediate you lose both. He tells the joke of a priest asking the dying Mulla Nasruddin about the Trinity - and concludes</p>
+<blockquote class="chapter-intro-quote"><p>All philosophy is like this: it is asking puzzles while you are dying.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-45" data-tech="45">
   <div class="technique-head"><span>Sutra 45 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-45">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Sound &amp; Mantra &middot; <strong>Tags:</strong> AH &middot; exhale &middot; release &middot; death &middot; spontaneity</div>
@@ -5327,8 +4702,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 33 · Sutras 48–52 · 5 techniques</div>
     <h2>The Spirituality of the Tantric Sex Act</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-heart">heart</a> · <a href="#about-sensory">sensory</a> · <a href="#about-tantra">tantra</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Freud said man is born neurotic; Osho calls this only half true. The newborn is born real, with feeling intact - society then drives the split. To be loved by his parents the child must suppress what he feels and fit a code, and slowly the feeling self is buried under the thinking self. Once split, even our love becomes head-talk. Real needs (love, contact) get replaced by symbolic ones (food, fame, attention from crowds). These tantric sutras - including the famous one on sex - work as instruments of reunion, returning a person to the feeling centre. Sex, properly approached, can throw you back into wholeness, which is why it opens this set.</p>
+<blockquote class="chapter-intro-quote"><p>Even when you say that you feel, you only think that you feel.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-48" data-tech="48">
   <div class="technique-head"><span>Sutra 48 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-48">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Tantric Union &middot; <strong>Tags:</strong> sex &middot; fire &middot; beginning &middot; awareness &middot; energy</div>
@@ -5537,8 +4916,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 35 · Sutras 53–56 · 4 techniques</div>
     <h2>Turning Inward toward the Real</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-negation">negation</a> · <a href="#about-sleep">sleep</a> · <a href="#about-witnessing">witnessing</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens this set with a striking diagnosis: civilization is a training in becoming unreal. The child is born undivided - body and mind are two aspects of one being - but education imposes the split, and from then on we identify with the head and treat the body as slave or enemy. The damage runs deeper than we realise. Where, he asks, does your body actually end? If the sun stopped tomorrow, you would die today; without the air around you, you stop in seconds. So your body has no fixed boundary - it stretches to the limits of the universe. These four sutras work to dissolve the head-centred identity and let you feel that wider, real self.</p>
+<blockquote class="chapter-intro-quote"><p>Civilization is a training in how to become unreal.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-53" data-tech="53">
   <div class="technique-head"><span>Sutra 53 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-53">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Witnessing &middot; <strong>Tags:</strong> self-remembering &middot; presence &middot; awareness &middot; Gurdjieff &middot; being</div>
@@ -5706,8 +5089,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 37 · Sutras 57–60 · 4 techniques</div>
     <h2>Techniques to Witness the Flux-like Film of Life</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-witnessing">witnessing</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with the image: the original mind is a mirror, always pure, but covered with dust from many lifetimes of travel. The East and the West differ here. Christianity claims something happened to being itself - sin. The East says no, nothing has happened; the being remains untouched, only dust collected. So you are not condemned, only identified with the dust - your memories, knowledge and past. The capacity to know is pure; what you know is dust. Buddha left every teacher who pointed at some future liberation and finally found it by simply staying with this moment. These four techniques work the same way: they wipe the mirror, but only if used with understanding rather than mechanically.</p>
+<blockquote class="chapter-intro-quote"><p>Knowing is your purity, knowledge is dust.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-57" data-tech="57">
   <div class="technique-head"><span>Sutra 57 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-57">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Witnessing &middot; <strong>Tags:</strong> desire &middot; witness &middot; cyclone &middot; centre &middot; equanimity</div>
@@ -5865,8 +5252,12 @@ These techniques use the mind's own machinery against itself &mdash; desire, wan
   <header class="chapter-head">
     <div class="eyebrow">Chapter 39 · Sutras 61–63 · 3 techniques</div>
     <h2>From the Wave to the Cosmic Ocean</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-mind">mind</a> · <a href="#about-sensory">sensory</a> · <a href="#about-void">void</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Quoting Sri Aurobindo - &quot;the whole life is yoga&quot; - Osho stresses that meditation cannot be a part-time activity. Either it has happened to you and pervades everything, or it has not. You cannot meditate for an hour in the morning and then live mechanically for the rest of the day; that, he says, isn&#x27;t meditation at all, just an exercise. Meditation is more like a second breathing: just as you breathe air without effort while walking or sleeping, you start breathing consciousness once meditation has truly arrived. It becomes the quality of your being. These three sutras therefore turn ordinary moments - wandering attention, sensory clarity, the universe&#x27;s own pulse - into doorways.</p>
+<blockquote class="chapter-intro-quote"><p>Either it is - and when it is you are wholly in it - or it is not.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-61" data-tech="61">
   <div class="technique-head"><span>Sutra 61 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-61">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Witnessing &middot; <strong>Tags:</strong> waves &middot; universal &middot; oneness &middot; movement &middot; flow</div>
@@ -6030,8 +5421,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 41 · Sutras 64–65 · 2 techniques</div>
     <h2>Tantric Methods for Awareness and NonJudgment</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-negation">negation</a> · <a href="#about-sensory">sensory</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho frames these techniques with a paradox: you have to attain what you already are. Sansara and nirvana, the world and liberation, are not two places but two attitudes toward the same reality. The methods can therefore be very simple. The catch is the ego: it craves difficulty, because only difficulty offers it the trophy of conquest. Anything easy feels insulting, so the mind dismisses simple techniques even when they work. Spiritual awakening is not a causal event needing time; it is more like waking from sleep - first disorientation, then sudden recognition. These eight sutras cultivate that growing alertness.</p>
+<blockquote class="chapter-intro-quote"><p>You are already the person you long to be, you are already where you want to reach.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-64" data-tech="64">
   <div class="technique-head"><span>Sutra 64 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-64">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Senses &middot; <strong>Tags:</strong> sneeze &middot; fright &middot; gaps &middot; shock &middot; continuous-awareness</div>
@@ -6123,8 +5518,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 43 · Sutras 66–67 · 2 techniques</div>
     <h2>Finding the Changeless through the Changing</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-witnessing">witnessing</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho draws on Northrope to contrast two minds. The Western mind hunts the &quot;theoretical component&quot; - the causal levers by which nature can be predicted and controlled. The Eastern mind hunts the &quot;aesthetic component&quot; - how to participate in nature, how to dissolve into it. He calls science a relationship of hatred and religion a relationship of love. Tantra is purely Eastern: a love effort. He gives a vivid example - when Hillary climbed Everest, Western papers said &quot;conquered&quot;; a Zen monastery&#x27;s wall paper said &quot;Everest has been befriended.&quot; Approached as conquest, existence shows only dead matter; approached as participation, the same existence reveals life.</p>
+<blockquote class="chapter-intro-quote"><p>If you approach it through analysis, it appears material; if you approach it through participation, it appears as life.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-66" data-tech="66">
   <div class="technique-head"><span>Sutra 66 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-66">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Witnessing &middot; <strong>Tags:</strong> unsame &middot; friend &middot; stranger &middot; honor</div>
@@ -6183,8 +5582,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 45 · Sutras 68–69 · 2 techniques</div>
     <h2>Remaining with the Real</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-negation">negation</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with a Hui-neng question: you are alive, you are conscious - why don&#x27;t you know who you are? You must have built a barrier. The good news, he says, is that nothing positive needs to be done; the barrier just has to be seen. And the barrier is the dreaming mind - the past constantly interpreting whatever happens now. When you listen, you don&#x27;t really hear; you hear your own commentary. Look at a flower and the word &quot;beautiful&quot; steps between you and it. These two sutras - the hen mothering her chicks, the many suns reflected in water - are about settling back into reality without interpretation.</p>
+<blockquote class="chapter-intro-quote"><p>You are not hearing me; you are hearing yourself, because simultaneously you are interpreting.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-68" data-tech="68">
   <div class="technique-head"><span>Sutra 68 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-68">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Self-Inquiry &middot; <strong>Tags:</strong> mothers &middot; chicks &middot; mother &middot; particular</div>
@@ -6243,8 +5646,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 47 · Sutras 70–72 · 3 techniques</div>
     <h2>Tantric Meditation Using Light</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-light">light</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Before these light techniques Osho redraws the map of human possibility. There are three kinds of people, he says: the normal, the abnormal, and the supernormal. Western psychology, born in the clinic, has only studied the abnormal - the person who has fallen below the norm - and so the whole of Freud&#x27;s framework rests on sick patients. Eastern psychology watches a different population: the supernormal, the person who has gone beyond the norm. Both deviate from average, but one downward and one upward. Tantra exists to map that upward direction, and these three sutras - light rising the spine, lightning between centres, the cosmos as translucent presence - belong to that ascent.</p>
+<blockquote class="chapter-intro-quote"><p>One who is supernormal is abnormal because he is more healthy than any normal human being.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-70" data-tech="70">
   <div class="technique-head"><span>Sutra 70 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-70">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> spine &middot; chakras &middot; light &middot; energy &middot; visualization</div>
@@ -6365,8 +5772,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 49 · Sutras 73–75 · 3 techniques</div>
     <h2>Conscious Doing</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-light">light</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with a piercing observation: when he looks into people&#x27;s eyes, no one is really there - they exist absently. This absence, he says, is the root of all human suffering. Whatever you do, if done with full presence, becomes ecstasy; if done in absence, becomes hell. So there are two kinds of seeker - one obsessed with what to do, one focused on how to be. Only the second is on the right path. He retells Buddha turning back a man who wanted to serve the world: &quot;You cannot do anything because you are not. First be.&quot; These three sutras (the clear summer sky, space absorbed in your head, knowing yourself as light) bring you to presence rather than to action.</p>
+<blockquote class="chapter-intro-quote"><p>Hell means your absence.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-73" data-tech="73">
   <div class="technique-head"><span>Sutra 73 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-73">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> sky &middot; clarity &middot; emptiness &middot; open &middot; staring</div>
@@ -6484,8 +5895,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 51 · Sutras 76–78 · 3 techniques</div>
     <h2>Coming Back to Existence</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-light">light</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with a folk joke: a village postmaster meets a &quot;Doctor of Philosophy&quot; and replies, &quot;I have never heard of any case of this disease here.&quot; The joke, he says, is nearer to the truth than we think - philosophy is a kind of disease, abstract thinking that moves in circles and never lands. Science and religion both reach answers because both rest on experiment; only philosophy speculates without experimenting and concludes nothing. Religion is the deeper science because the experimenter himself is the experiment. The warning is sharp: the mind will gladly turn even meditation into another topic to think &quot;about.&quot; Don&#x27;t read about meditation - do it.</p>
+<blockquote class="chapter-intro-quote"><p>Life&#x27;s problems can be solved only when you become deeply rooted in existence.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-76" data-tech="76">
   <div class="technique-head"><span>Sutra 76 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-76">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Light &amp; Gazing &middot; <strong>Tags:</strong> darkness &middot; night &middot; form &middot; formlessness &middot; surrender</div>
@@ -6601,8 +6016,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 53 · Sutras 79–81 · 3 techniques</div>
     <h2>From Death to Deathlessness</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-death">death</a> · <a href="#about-imagination">imagination</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">All enlightened ones, Osho says, agree on one thing only: the ego is the single barrier between you and reality. Trying to drop it is unnecessary - it is a shadow of inattention; bring light to it and it disappears like darkness in a lit room. He gives a usable test: when you are truly silent inside, you exist but no &quot;I&quot; is felt. The instant you fall into anger or desire, the I crystallises again. The ego is the past mind organising itself at the periphery of consciousness - memory pretending to be a self. That is why love and meditation, both ego-dissolving, are the same phenomenon.</p>
+<blockquote class="chapter-intro-quote"><p>If you know love, there is no need to know God - you have known him already.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-79" data-tech="79">
   <div class="technique-head"><span>Sutra 79 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-79">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Death Contemplation &middot; <strong>Tags:</strong> fire &middot; burning &middot; ashes &middot; deathless</div>
@@ -6708,8 +6127,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 55 · Sutras 82–83 · 2 techniques</div>
     <h2>Only the Unreal Dissolves</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-negation">negation</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with an anecdote: a small-town mayor finds out that the priest, the gas-station attendant and the barber all think he is a bum - yet the mayor himself believes he holds the office for its honour. That, he says, is exactly the ego&#x27;s situation. Only you take your ego seriously; for everyone else it is irrelevant, and reality itself cannot support it because reality is one and the ego pretends to be separate. So we avoid reality, build a glasshouse of dreams, and live inside it. Deep sleep, where the I disappears, is why mornings feel fresh; dream-filled nights leave you tired because the I persists.</p>
+<blockquote class="chapter-intro-quote"><p>You are just a wave. The wave comes and goes; the ocean is not worried about it.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-82" data-tech="82">
   <div class="technique-head"><span>Sutra 82 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-82">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Emptiness &amp; Void &middot; <strong>Tags:</strong> identification &middot; organs &middot; felt-sense &middot; body &middot; ownership</div>
@@ -6796,8 +6219,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 57 · Sutras 84–85 · 2 techniques</div>
     <h2>You Are Everywhere</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-void">void</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with a folk story: an old doctor, told of a patient choking on a billiard ball, says &quot;tickle him with a feather&quot; - the patient laughs, the ball flies out. The doctor&#x27;s rule of life is &quot;when you don&#x27;t know what to do, do something.&quot; That rule, Osho says, is fatal for meditation. The mind is the most delicate mechanism in existence; mixing techniques or modifying them is dangerous, and a wrong move is hard to undo. These methods are revolutionary - shortcuts that compress millions of evolutionary years into a single jump. The first sutra targets body-attachment. You&#x27;ve been embodied for so many lives that you only really know yourself as a body; anything else is borrowed reading.</p>
+<blockquote class="chapter-intro-quote"><p>Non-doing will be more beneficial to you than any doing.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-84" data-tech="84">
   <div class="technique-head"><span>Sutra 84 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-84">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Movement &middot; <strong>Tags:</strong> bodyless &middot; everywhere &middot; joy &middot; disidentification &middot; expansion</div>
@@ -6884,8 +6311,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 59 · Sutras 86–87 · 2 techniques</div>
     <h2>Watch from the Hill</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-imagination">imagination</a> · <a href="#about-negation">negation</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho describes man as Janus-faced: animal in his past, divine in his potential future, living as a tense step between the two. Whatever side you satisfy, the other side rebels. He illustrates with a joke - a Jaguar enthusiast finds heaven has beautiful highways but allows no cars, while hell has cars but no highways. That, says Osho, is our predicament exactly. Religions take sides - they fight the animal for the divine - and so create the very split they pretend to heal. Tantra refuses both sides and only watches. By staying in the present, neither shamed by the past nor reaching for the future, the duality dissolves into a third position.</p>
+<blockquote class="chapter-intro-quote"><p>Tantra is in the present. It is neither past nor future.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-86" data-tech="86">
   <div class="technique-head"><span>Sutra 86 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-86">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Imagination &middot; <strong>Tags:</strong> suppose &middot; contemplate &middot; something &middot; beyond</div>
@@ -6945,8 +6376,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 61 · Sutras 88–89 · 2 techniques</div>
     <h2>Techniques to Become One with the Whole</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-mind">mind</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with Lord Mancroft cutting a speech short because his house is literally on fire. Then the punchline: your house too is on fire, but you don&#x27;t seem the least bit flustered. Death is approaching every moment, life is shrinking, but the mind whispers there&#x27;s plenty of time. He tells the devil&#x27;s parable to drive the point home: in a hellish recession, the most cunning disciple proposed not to deny religion or hell but only to convince humans that &quot;there is no hurry&quot; - and from that day hell has had an overpopulation problem. Without crisis-level urgency, no technique can work. Understanding must become action; mere acquaintance is useless.</p>
+<blockquote class="chapter-intro-quote"><p>Your house is also on fire, but you don&#x27;t even seem a little flustered.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-88" data-tech="88">
   <div class="technique-head"><span>Sutra 88 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-88">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Witnessing &middot; <strong>Tags:</strong> knower &middot; known &middot; unity &middot; consciousness &middot; non-duality</div>
@@ -7019,8 +6454,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 63 · Sutras 90–91 · 2 techniques</div>
     <h2>Start Creating Yourself</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-heart">heart</a> · <a href="#about-imagination">imagination</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with a joke - a stranger at the back of a dull church is mistaken for a board member; he replies he must be the most bored man there. From the joke he turns serious: boredom is uniquely human. Animals feel pain but not anguish; for them suffering is momentary, an accident on the periphery, never the centre. Only humans carry pain forward into a constant wound, and only humans commit suicide. Aristotle called man the rational animal, but rationality is only a matter of degree - boredom is the cleaner definition. Hope is what stops most people from suicide; he tells the prime-minister-and-flying-horse story to show how a thin &quot;maybe&quot; keeps people dragging on. These techniques aim past hope, at real celebration.</p>
+<blockquote class="chapter-intro-quote"><p>Animals can be in pain, but they are not in suffering.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-90" data-tech="90">
   <div class="technique-head"><span>Sutra 90 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-90">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Senses &middot; <strong>Tags:</strong> eyes &middot; touch &middot; feather &middot; subtle &middot; heart-opening</div>
@@ -7095,8 +6534,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 65 · Sutras 92–93 · 2 techniques</div>
     <h2>Destroy the Limits</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-imagination">imagination</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho draws a sharp distinction: life is not a problem, it is a mystery. Science treats life as a problem and applies the mind to it; religion treats it as a mystery and asks for your whole self. A problem can be solved; a mystery can only be lived. That is why a brilliant scientist can be a fool in his own life - the mind sharpens within his speciality but cannot meet the wider mystery, which requires the whole. Religion has no answers, only doorways. These two short sutras - placing mind-stuff in fineness above, below and in the heart, and feeling some part of your form as limitlessly spacious - open one such doorway.</p>
+<blockquote class="chapter-intro-quote"><p>Life is not a problem but a mystery.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-92" data-tech="92">
   <div class="technique-head"><span>Sutra 92 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-92">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Imagination &middot; <strong>Tags:</strong> mind &middot; stuff &middot; inexpressible &middot; fineness</div>
@@ -7155,8 +6598,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 67 · Sutras 94–95 · 2 techniques</div>
     <h2>Go Beyond Mind and Matter</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-tantra">tantra</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho frames these techniques with a long-running philosophical fight: is mind or matter the basic stuff of the universe? Materialists like Charvak, Epicurus and Marx pick matter; idealists like the Vedantins pick mind. Modern physics has dissolved both - Eddington said the universe looks more like a thought than a thing. Tantra has always taken a third position: matter and mind are two forms of an unnamed X. The practical payoff is that you can enter reality through either door - Hatha Yoga works through the body, Raja Yoga through the mind, and Tantra uses both. This is why Shiva&#x27;s techniques sometimes ask you to do something physical and sometimes only to imagine. For Tantra, even imagination is real.</p>
+<blockquote class="chapter-intro-quote"><p>Even imagination is a mode of reality because the mind is a manifestation of reality.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-94" data-tech="94">
   <div class="technique-head"><span>Sutra 94 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-94">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Sleep &amp; Dream &middot; <strong>Tags:</strong> dissolution &middot; cosmic &middot; sleep &middot; letting-go</div>
@@ -7230,8 +6677,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 69 · Sutras 96–97 · 2 techniques</div>
     <h2>You Are Unknown to Yourself</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-imagination">imagination</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with a stark statement: man is born alone and dies alone, and aloneness is therefore his basic reality - society is only accidental. Yet between birth and death we live so completely in others that the self we know is just labels they have given us: a name, a reputation, a moral image. No one is really known to themselves. That, he says, is the root of human anxiety, and no theory about &quot;soul eternal&quot; can cure it because that knowledge too is borrowed. He turns to Mahavira, who lived twelve years silent and naked in the forest - the real nakedness, Osho says, was the stripping of every social label. These two sutras open the same door.</p>
+<blockquote class="chapter-intro-quote"><p>Aloneness is his basic reality; society is just accidental.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-96" data-tech="96">
   <div class="technique-head"><span>Sutra 96 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-96">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Imagination &middot; <strong>Tags:</strong> vast-space &middot; openness &middot; no-landmarks &middot; mind-pressure-ends</div>
@@ -7306,8 +6757,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 71 · Sutras 98–99 · 2 techniques</div>
     <h2>Forget the Periphery</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-heart">heart</a> · <a href="#about-movement">movement</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho describes the surface of life as a cyclone - but the cyclone isn&#x27;t life itself; deep down there is a silent centre. The trouble is identification with the surface, which keeps us mad. He tells the Sufi story: a fakir clings all night to a branch over what he believes is a bottomless abyss; when his frozen hands finally fail and he drops, he lands on solid ground just below. The whole ordeal was unnecessary. That, Osho says, is our condition exactly - we cling to the periphery, terrified of an inner abyss that is in fact the ground of our being. Tantra is letting go of the surface and falling backwards into oneself.</p>
+<blockquote class="chapter-intro-quote"><p>Meditation is the deepest sleep. It is total relaxation plus something more.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-98" data-tech="98">
   <div class="technique-head"><span>Sutra 98 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-98">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Self-Inquiry &middot; <strong>Tags:</strong> heart-space &middot; armpits &middot; peace &middot; pervading &middot; centering</div>
@@ -7394,8 +6849,12 @@ Wherever your mind is wandering, internally or externally, at this very place, t
   <header class="chapter-head">
     <div class="eyebrow">Chapter 73 · Sutras 100–101 · 2 techniques</div>
     <h2>Fear of Transformation Goes Deep</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-mind">mind</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho confronts a hard fact: many are interested in meditation, very few are transformed by it. The reason, he says, is fear - the fear of transformation, which is essentially the fear of death. The old self must go before the new can come, and we don&#x27;t really want that. So the mind cunningly manufactures a superficial interest, lots of reading and discussing, while the real intensity is missing. The trick: even a wrong method works if you are deeply involved, and the right method fails if you are only deceiving yourself. He tells the Mulla story - the schoolhouse is on fire and Mulla is praying for rain, calling that &quot;doing something.&quot; Prayer too can become a hideout.</p>
+<blockquote class="chapter-intro-quote"><p>You want to be transformed, but simultaneously you want to remain the old.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-100" data-tech="100">
 <div class="technique-head">
 <span>Sutra 100 of 112</span>
@@ -7534,8 +6993,12 @@ The appreciation of objects and subjects is the same for an enlightened as for a
   <header class="chapter-head">
     <div class="eyebrow">Chapter 75 · Sutras 102–105 · 4 techniques</div>
     <h2>Seek the Rhythm of Opposites</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-imagination">imagination</a> · <a href="#about-mind">mind</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho opens with a Walt Whitman line: &quot;I contradict myself because I am big, because I contain all the opposites.&quot; The same, he says, can be said of Shiva and of Tantra. Tantra is the search for the rhythm of opposites: male and female, day and night, positive and negative, life and death. The river of life flows between two banks that look contradictory but together hold one current. That is why these one hundred and twelve techniques are so different and sometimes even diametrically opposed - they are not wrong; they are different banks for different temperaments. These four sutras work that way, weaving inner and outer, desire and silence, particular and universal into one rhythm.</p>
+<blockquote class="chapter-intro-quote"><p>Tantra is the search for the rhythm of opposites.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-102" data-tech="102">
   <div class="technique-head"><span>Sutra 102 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-102">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Death Contemplation &middot; <strong>Tags:</strong> spirit &middot; within-without &middot; universe &middot; spiritualization</div>
@@ -7660,8 +7123,12 @@ The appreciation of objects and subjects is the same for an enlightened as for a
   <header class="chapter-head">
     <div class="eyebrow">Chapter 77 · Sutras 106–108 · 3 techniques</div>
     <h2>Become Each Being</h2>
-    <p class="chapter-meta">From thematic group: <a href="#about-movement">movement</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho roots these techniques in a single insight: existence is one, but self-consciousness gives each of us the false feeling of being a separate centre, and that false separation is the source of every anxiety, every fear of death. In deep sleep we lose this separation and merge back into the whole - that is why mornings feel reborn. Samadhi, he says, is just sleep done consciously: Buddha goes nightly to the same source you visit in dreamless sleep, only he goes awake. The ego, like an eggshell, has its protective use early on, but eventually it must dissolve to let the inner being sprout. These three sutras - feeling each consciousness as your own, becoming each being - work directly to crack that shell.</p>
+<blockquote class="chapter-intro-quote"><p>Hindus have always believed that samadhi is conscious sleep.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-106" data-tech="106">
   <div class="technique-head"><span>Sutra 106 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-106">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Movement &middot; <strong>Tags:</strong> empathy &middot; becoming-others &middot; consciousness &middot; compassion &middot; dissolving-self</div>
@@ -7774,8 +7241,12 @@ The appreciation of objects and subjects is the same for an enlightened as for a
   <header class="chapter-head">
     <div class="eyebrow">Chapter 79 · Sutras 109–112 · 4 techniques</div>
     <h2>The Philosophy of Emptiness</h2>
-    <p class="chapter-meta">From thematic groups: <a href="#about-mind">mind</a> · <a href="#about-void">void</a></p>
   </header>
+  <aside class="chapter-intro" aria-label="Osho's framing for this chapter">
+<div class="chapter-intro-eyebrow">Osho's framing</div>
+<p class="chapter-intro-body">Osho closes the book with the most delicate techniques of all - those of emptiness. He explains that Buddha used these very four sutras for his bhikkhus, and was so badly misunderstood that Buddhism was uprooted from Indian soil. Buddha denied God, denied soul, denied any substantial goal - not because he was an atheist, but to clear the ground for total emptiness. Earlier masters had told seekers to &quot;be desireless&quot; while still dangling moksha as the prize, which Osho calls a basic contradiction. Buddha removed even the prize so desirelessness could finally be real. The result is not nothing - it is a vacant room in which existence can speak.</p>
+<blockquote class="chapter-intro-quote"><p>You can enter the truth only when you are totally empty.</p><cite>— Osho</cite></blockquote>
+</aside>
   <article class="technique" id="sutra-109" data-tech="109">
   <div class="technique-head"><span>Sutra 109 of 112</span><button class="fav-btn" aria-label="Favourite" data-fav="sutra-109">&#9825;</button></div>
   <div class="tags"><strong>Category:</strong> Emptiness &amp; Void &middot; <strong>Tags:</strong> suppose &middot; passive &middot; form &middot; empty</div>
@@ -9278,6 +8749,133 @@ Sweet hearted one, meditate on knowing and not-knowing, existing and not-existin
       saveFavs(favs);
     });
   });
+
+  /* 8-question quiz: score across the 15 categories, recommend a sutra */
+  var quizForm   = document.getElementById('quiz-form');
+  var quizMetaEl = document.getElementById('quiz-category-meta');
+  if (quizForm && quizMetaEl) {
+    var meta;
+    try { meta = JSON.parse(quizMetaEl.textContent || '{}'); }
+    catch(e) { meta = {}; }
+    var submitBtn = document.getElementById('quiz-submit');
+    var resetBtn  = document.getElementById('quiz-reset');
+    var hintEl    = document.getElementById('quiz-hint');
+    var resultEl  = document.getElementById('quiz-result');
+    var totalQs   = quizForm.querySelectorAll('fieldset.quiz-q').length;
+
+    function answeredCount(){
+      var c = 0;
+      for (var i = 0; i < totalQs; i++) {
+        if (quizForm.querySelector('input[name="q' + i + '"]:checked')) c++;
+      }
+      return c;
+    }
+
+    function score(){
+      var totals = {};
+      var picks = quizForm.querySelectorAll('input[type="radio"]:checked');
+      picks.forEach(function(inp){
+        var w;
+        try { w = JSON.parse(inp.getAttribute('data-weights') || '{}'); }
+        catch(e) { w = {}; }
+        Object.keys(w).forEach(function(k){
+          totals[k] = (totals[k] || 0) + w[k];
+        });
+      });
+      // Sort categories by score descending; preserve a stable order on ties.
+      var ranked = Object.keys(totals).map(function(k){
+        return {slug: k, score: totals[k]};
+      }).sort(function(a, b){
+        return b.score - a.score;
+      });
+      return ranked;
+    }
+
+    function renderResult(ranked){
+      if (!ranked.length) {
+        resultEl.hidden = true;
+        return;
+      }
+      var top = ranked[0];
+      var info = meta[top.slug];
+      if (!info) {
+        resultEl.hidden = true;
+        return;
+      }
+      var html = '';
+      html += '<div class="result-eyebrow">Your recommended starting place</div>';
+      html += '<h3>Sutra ' + info.rep_num + ' — ' + escapeHtml(info.rep_short) + '</h3>';
+      html += '<p class="result-cat">Category: <strong>' + escapeHtml(info.display) + '</strong> · '
+            + 'score ' + top.score + '</p>';
+      html += '<a class="result-cta" href="#' + info.rep_anchor + '">Read this technique &rarr;</a>';
+
+      // Show up to 2 runners-up if they have non-zero score
+      var runners = ranked.slice(1, 4).filter(function(r){
+        return r.score > 0 && meta[r.slug];
+      });
+      if (runners.length) {
+        var parts = runners.map(function(r){
+          var m = meta[r.slug];
+          return '<a href="#' + m.rep_anchor + '">'
+               + escapeHtml(m.display) + ' (sutra ' + m.rep_num + ')</a>';
+        });
+        html += '<div class="runners-up"><strong>Also worth exploring:</strong> '
+              + parts.join(' · ') + '</div>';
+      }
+
+      resultEl.innerHTML = html;
+      resultEl.hidden = false;
+      // Smooth-scroll the result into view.
+      resultEl.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+
+    function escapeHtml(s){
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    if (submitBtn) submitBtn.addEventListener('click', function(){
+      var done = answeredCount();
+      if (done < totalQs) {
+        hintEl.textContent = 'Please answer all '
+          + totalQs + ' questions (you\u2019ve answered '
+          + done + ').';
+        // Find the first unanswered question and focus it.
+        for (var i = 0; i < totalQs; i++) {
+          if (!quizForm.querySelector('input[name="q' + i + '"]:checked')) {
+            var fs = quizForm.querySelector('fieldset[data-qi="' + i + '"]');
+            if (fs) fs.scrollIntoView({behavior:'smooth', block:'center'});
+            break;
+          }
+        }
+        resultEl.hidden = true;
+        return;
+      }
+      hintEl.textContent = '';
+      renderResult(score());
+    });
+
+    if (resetBtn) resetBtn.addEventListener('click', function(){
+      quizForm.reset();
+      hintEl.textContent = '';
+      resultEl.hidden = true;
+      resultEl.innerHTML = '';
+      // Scroll back to the start of the quiz so the next attempt feels fresh.
+      var quizSec = document.getElementById('quiz');
+      if (quizSec) quizSec.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+
+    // Live-update hint as the user picks options.
+    quizForm.addEventListener('change', function(){
+      var done = answeredCount();
+      if (done === totalQs) {
+        hintEl.textContent = 'All ' + totalQs + ' answered \u2014 click "See my technique".';
+      } else {
+        hintEl.textContent = '';
+      }
+    });
+  }
 })();
 </script>
 </body>

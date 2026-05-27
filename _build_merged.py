@@ -5,14 +5,17 @@ in Osho's book order.
 
 Structure of the output:
   1.  Cover / master TOC
-  2.  Preface              (= important-first-access-this.html  body)
-  3.  About these techniques  (14 thematic intros, collapsible)
-  4.  The 38 Osho chapters in order, each a section containing:
+  2.  Preface              (= important-first-access-this.html body, with
+                            the situation matcher, random button and safety
+                            index stripped; an 8-question quiz inserted in
+                            place of the random button)
+  3.  The 39 Osho chapters in order, each a section containing:
          · chapter title  (from canonical_112_sutras.json)
+         · Osho's framing for the chapter  (from _chapter_intros.json)
          · the 2..9 sutras in that chapter, in canonical order,
            with full commentary preserved from the thematic files
-  5.  Appendix — Self-Discovery (= find-yourself.html body)
-  6.  Footer
+  4.  Appendix — Self-Discovery (= find-yourself.html body)
+  5.  Footer
 
 Output: vigyan-bhairav-tantra-complete-book.html
 """
@@ -21,6 +24,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 OUT  = ROOT / 'vigyan-bhairav-tantra-complete-book.html'
+
+# ──────────────────────────────────────────────────────────────────────
+# 0.  Load chapter intros (paraphrased framings of each Osho chapter)
+# ──────────────────────────────────────────────────────────────────────
+chapter_intros_data = json.loads(
+    (ROOT / '_chapter_intros.json').read_text(encoding='utf-8')
+)
+chapter_intros = {c['chapter']: c for c in chapter_intros_data['chapters']}
 
 # ──────────────────────────────────────────────────────────────────────
 # 1.  Load canonical sutras
@@ -208,6 +219,18 @@ preface_raw = (ROOT / 'important-first-access-this.html').read_text(encoding='ut
 preface_body = BODY_RE.search(preface_raw).group(1)
 preface_body = SCRIPT_RE.sub('', preface_body)
 
+# Strip the three sections we no longer want in the merged book:
+#   - the "Find a technique by what's happening in your life" matcher
+#   - the "I can't decide — surprise me" random button
+#   - the "Safety & Cautions Index" (its content lives in the disclaimer
+#     and in each technique's own caution block already)
+# We replace `random` with an 8-question quiz section further below.
+for _strip_id in ('matcher', 'random', 'safety'):
+    preface_body = re.sub(
+        rf'<section\s+id="{_strip_id}"[^>]*>.*?</section>',
+        '', preface_body, flags=re.DOTALL,
+    )
+
 selfdisc_raw = (ROOT / 'vigyan-bhairav-find-yourself.html').read_text(encoding='utf-8')
 selfdisc_body = BODY_RE.search(selfdisc_raw).group(1)
 selfdisc_body = SCRIPT_RE.sub('', selfdisc_body)
@@ -290,10 +313,238 @@ def slug_chapter(label: str) -> str:
     return s[:60]
 
 
+# ──────────────────────────────────────────────────────────────────────
+# 4c.  Build the 8-question recommendation quiz.
+# Each option carries weights for some of the 15 categories. The category
+# with the highest summed weight wins, and we recommend a representative
+# sutra from that category (preferring an iconic hand-picked sutra when
+# it is present in that category, otherwise falling back to the lowest
+# canonical number in the slug).
+# ──────────────────────────────────────────────────────────────────────
+
+# Friendly display name + iconic sutra preference per slug.
+CATEGORY_DISPLAY = {
+    'breath':      'Breath',
+    'centering':   'Centering',
+    'sound':       'Sound & Mantra',
+    'light':       'Light & Gazing',
+    'witnessing':  'Witnessing',
+    'negation':    'Self-Inquiry',
+    'void':        'Emptiness & Void',
+    'sensory':     'The Senses',
+    'movement':    'Movement',
+    'sleep':       'Sleep & Dream',
+    'tantra':      'Tantric Union',
+    'heart':       'Heart & Devotion',
+    'death':       'Death Contemplation',
+    'imagination': 'Imagination',
+    'mind':        'Mind & Thought',
+}
+
+# Iconic sutras per category, by canonical number. If a preferred number
+# is not actually present in that category, we fall back to the lowest
+# canonical number in the slug.
+PREFERRED_SUTRA = {
+    'breath':      1,    # the gap between two breaths
+    'centering':   27,   # lotus thread in the spinal column
+    'sound':       38,   # intone "aum" slowly
+    'light':       29,   # light rays from center to center up the spine
+    'witnessing':  84,   # look into the blue sky beyond clouds
+    'negation':    71,   # toss attachment for body aside
+    'void':        58,   # before desire and before knowing
+    'sensory':     22,   # while being caressed, enter the caress
+    'movement':    24,   # in a moving vehicle, sway rhythmically
+    'sleep':       75,   # at the point of sleep
+    'tantra':      75,   # at the start of sexual union, attentive on the fire
+    'heart':       12,   # devotion frees
+    'death':       54,   # focus on fire rising through your form
+    'imagination': 49,   # five-coloured circles of the peacock tail
+    'mind':        61,   # let mind be before thought
+}
+
+# Build slug -> {nums: [...], rep_num: int, rep_short: str}
+sutras_by_slug: dict = {}
+for t in all_techs:
+    sutras_by_slug.setdefault(t['slug'], []).append(t['canonical'])
+
+short_by_num = {s['num']: s['short'] for s in canonical}
+
+def representative(slug):
+    nums = sorted(sutras_by_slug.get(slug, []))
+    if not nums:
+        return None
+    pref = PREFERRED_SUTRA.get(slug)
+    n = pref if pref in nums else nums[0]
+    return n
+
+# 8-question quiz definition. Each option's weights sum to ~3.
+QUIZ_QUESTIONS = [
+    {
+        'q': 'When you sit down to meditate, what comes most naturally?',
+        'options': [
+            ('Following my breath',                              {'breath': 3}),
+            ('Sitting still and feeling the body inside',        {'centering': 2, 'sensory': 1}),
+            ('Watching thoughts pass by',                        {'witnessing': 2, 'mind': 1}),
+            ('Listening — to silence or to a sound',             {'sound': 3}),
+            ("I can't sit still — I want to move",               {'movement': 2, 'breath': 1}),
+        ],
+    },
+    {
+        'q': 'Which sense pulls you in most strongly?',
+        'options': [
+            ('Touch — texture, warmth, contact',                 {'sensory': 2, 'tantra': 1}),
+            ('Sight — light, colour, beauty',                    {'light': 2, 'imagination': 1}),
+            ('Hearing — music, voices, silence',                 {'sound': 3}),
+            ('The feel of breath itself',                        {'breath': 3}),
+            ('None — I live mostly in my head',                  {'mind': 2, 'witnessing': 1}),
+        ],
+    },
+    {
+        'q': "What's the deepest reason you came here?",
+        'options': [
+            ('Less anxiety, more calm',                          {'breath': 2, 'centering': 1}),
+            ('More love, more connection',                       {'heart': 2, 'tantra': 1}),
+            ('Insight — to see what is actually true',           {'witnessing': 2, 'negation': 1}),
+            ('Rest, surrender, letting go',                      {'sleep': 2, 'void': 1}),
+            ('To feel alive, present, awake',                    {'sensory': 2, 'movement': 1}),
+        ],
+    },
+    {
+        'q': 'How do you feel about the body?',
+        'options': [
+            ('It is the doorway I trust most',                   {'centering': 2, 'sensory': 1}),
+            ('It is a vehicle for energy',                       {'tantra': 2, 'breath': 1}),
+            ('I forget it is there',                             {'mind': 2, 'imagination': 1}),
+            ('A burden I would like to transcend',               {'death': 2, 'void': 1}),
+            ('I am at war with it',                              {'heart': 1, 'tantra': 1, 'negation': 1}),
+        ],
+    },
+    {
+        'q': 'When something painful arises inside, what happens?',
+        'options': [
+            ('I think about it endlessly',                       {'mind': 2, 'witnessing': 1}),
+            ('I push it away or distract myself',                {'imagination': 1, 'sleep': 1, 'movement': 1}),
+            ('I let myself feel it fully',                       {'heart': 2, 'sensory': 1}),
+            ('I try to watch it from outside',                   {'witnessing': 3}),
+            ('I want the self that suffers to dissolve',         {'void': 2, 'negation': 1}),
+        ],
+    },
+    {
+        'q': 'How do you feel about emptiness, silence, the unknown?',
+        'options': [
+            ('Frightening — I want to fill it',                  {'sensory': 1, 'heart': 1, 'sound': 1}),
+            ('Peaceful — feels like home',                       {'void': 2, 'sleep': 1}),
+            ('Curious but cautious — I want a guide',            {'witnessing': 2, 'light': 1}),
+            ('I prefer richness, colour, energy',                {'tantra': 1, 'light': 1, 'imagination': 1}),
+            ('I have not really tasted it',                      {'breath': 1, 'centering': 2}),
+        ],
+    },
+    {
+        'q': 'What dissolves "you" most easily, even briefly?',
+        'options': [
+            ('Music or chanting',                                {'sound': 3}),
+            ('A vast view: sky, ocean, mountain',                {'light': 2, 'void': 1}),
+            ('A long walk, a run, dance',                        {'movement': 3}),
+            ('A lover\'s touch or gaze',                         {'tantra': 2, 'heart': 1}),
+            ('Falling asleep',                                   {'sleep': 3}),
+            ('A piercing question with no answer',               {'negation': 2, 'mind': 1}),
+        ],
+    },
+    {
+        'q': 'Tonight, before sleep, what would feel right?',
+        'options': [
+            ('Counting breaths',                                 {'breath': 3}),
+            ('Imagining myself as light filling the room',       {'imagination': 2, 'light': 1}),
+            ('Watching the dark behind closed eyes',             {'void': 2, 'light': 1}),
+            ('Feeling the body sink, layer by layer',            {'centering': 2, 'sleep': 1}),
+            ('Silently saying one word until it dissolves',      {'sound': 2, 'mind': 1}),
+            ('Letting go of being someone',                      {'death': 2, 'negation': 1}),
+        ],
+    },
+]
+
+def build_quiz_html():
+    blocks = []
+    for qi, q in enumerate(QUIZ_QUESTIONS):
+        opts = []
+        for oi, (label, weights) in enumerate(q['options']):
+            wjson = json.dumps(weights)
+            inp_id = f'q{qi}_{oi}'
+            opts.append(
+                f'<label class="quiz-opt" for="{inp_id}">'
+                f'<input type="radio" id="{inp_id}" name="q{qi}" '
+                f'data-weights=\'{wjson}\' value="{oi}">'
+                f'<span>{html.escape(label)}</span></label>'
+            )
+        blocks.append(
+            f'<fieldset class="quiz-q" data-qi="{qi}">'
+            f'<legend><span class="quiz-step">Question {qi+1} of {len(QUIZ_QUESTIONS)}</span> '
+            f'{html.escape(q["q"])}</legend>'
+            f'<div class="quiz-opts">{"".join(opts)}</div>'
+            f'</fieldset>'
+        )
+    return '\n'.join(blocks)
+
+# Per-category data the JS will use to render the recommendation.
+quiz_category_meta = {}
+for slug, display in CATEGORY_DISPLAY.items():
+    n = representative(slug)
+    if n is None:
+        continue
+    quiz_category_meta[slug] = {
+        'display': display,
+        'rep_num': n,
+        'rep_short': short_by_num.get(n, ''),
+        'rep_anchor': f'sutra-{n}',
+        'about_anchor': f'about-{slug}',
+    }
+
+QUIZ_HTML = f'''
+<section id="quiz">
+  <h2>Find your starting technique &mdash; an 8-question quiz</h2>
+  <p>Answer all eight honestly. The quiz will recommend one of the 112
+  techniques that fits the way you already meet life. You can re-take it as
+  often as you like.</p>
+  <form id="quiz-form" class="quiz-block" novalidate>
+    {build_quiz_html()}
+    <div class="quiz-actions">
+      <button type="button" class="quiz-btn" id="quiz-submit">See my technique &rarr;</button>
+      <button type="button" class="quiz-btn quiz-btn-ghost" id="quiz-reset">Reset</button>
+    </div>
+    <p class="quiz-hint" id="quiz-hint" aria-live="polite"></p>
+  </form>
+  <div class="quiz-result" id="quiz-result" aria-live="polite" hidden></div>
+  <script id="quiz-category-meta" type="application/json">{json.dumps(quiz_category_meta)}</script>
+</section>'''
+
+# Inject the quiz inside the preface, after the categories section
+# (which is the natural place for the recommendation flow).
+if '</section>' in preface_body and 'id="categories"' in preface_body:
+    # Find the close of the categories section and insert the quiz after it.
+    cats_close_pat = re.compile(
+        r'(<section\s+id="categories"[^>]*>.*?</section>)', re.DOTALL,
+    )
+    m = cats_close_pat.search(preface_body)
+    if m:
+        preface_body = (preface_body[:m.end()] + '\n' + QUIZ_HTML
+                        + preface_body[m.end():])
+    else:
+        preface_body = preface_body + '\n' + QUIZ_HTML
+else:
+    preface_body = preface_body + '\n' + QUIZ_HTML
+
+
+def slug_chapter(label: str) -> str:
+    s = re.sub(r'[\r\n]+', ' ', label).strip()
+    s = re.sub(r'^\d+\.\s*', '', s)
+    s = re.sub(r'[^A-Za-z0-9]+', '-', s).strip('-').lower()
+    return s[:60]
+
+
 # Master TOC ----------------------------------------------------------
 toc_items = []
 toc_items.append('<li><a href="#preface">Preface — Important: First Access This</a></li>')
-toc_items.append('<li><a href="#about">About These Techniques (Category Overviews)</a></li>')
+toc_items.append('<li><a href="#quiz">Find your starting technique (8-question quiz)</a></li>')
 toc_items.append('<li class="toc-section">The 112 Techniques (in Osho\'s book order)</li>')
 for ch in chapters:
     cid = 'ch-' + slug_chapter(ch['chapter'])
@@ -307,25 +558,64 @@ for ch in chapters:
 toc_items.append('<li><a href="#self-discovery">Appendix — Find Your Path (Self-Discovery)</a></li>')
 TOC_HTML = '<ol class="master-toc">' + '\n'.join(toc_items) + '</ol>'
 
-# About-These-Techniques section: 14 collapsible cards ----------------
-about_cards = []
-for th in themes:
-    nums = th['covers']
-    cid = f"about-{th['slug']}"
-    rng = f"sutra {nums[0]}" if len(nums) == 1 else f"sutras {nums[0]}–{nums[-1]}"
-    inner = th['hero_html']
-    # the inner hero has its own <h1>, which we want demoted to h3 in this overview
-    inner = re.sub(r'<h1\b', '<h3', inner, count=1)
-    inner = re.sub(r'</h1>', '</h3>', inner, count=1)
-    about_cards.append(f'''
-<details class="about-card" id="{cid}">
-  <summary><strong>{html.escape(th['title'])}</strong>
-    <span class="card-meta">{rng} · {th['count']} techniques</span></summary>
-  <div class="about-card-body">{inner}</div>
-</details>''')
+# About-These-Techniques cards are intentionally not built. The
+# "About These Techniques · Category Overviews" section was removed from
+# the merged book per the project plan; the per-category hero blocks are
+# left in their standalone thematic HTML files.
 
 
 # Chapter sections ---------------------------------------------------
+def render_chapter_intro(ch_num: str, ch_title: str) -> str:
+    """Return the styled chapter-intro HTML block for the given chapter,
+    or '' if no intro exists for it.
+
+    The intro JSON has one entry per sutra-discourse chapter (the odd-
+    numbered chapters 3, 5, ..., 79). Each summary already embeds one
+    short attributed quote inline; we split it out into a styled
+    blockquote so the framing reads cleanly.
+    """
+    try:
+        n = int(ch_num)
+    except (ValueError, TypeError):
+        return ''
+    entry = chapter_intros.get(n)
+    if not entry:
+        return ''
+    summary = entry.get('summary', '').strip()
+    quote   = entry.get('quote', '').strip()
+
+    # Split the summary so the inline attributed quote becomes a callout.
+    framing = summary
+    if quote and quote in summary:
+        # Split on the segment that introduces the quote.
+        # Typical pattern: '... As Osho puts it: "QUOTE"'
+        before_quote = summary.split(quote)[0]
+        # Trim the trailing ': "', the words "As Osho puts it" etc.
+        framing = re.sub(
+            r'\s*(?:As Osho (?:puts it|says|notes|frames it|bluntly notes)[^"]*?)?[":\s]*$',
+            '', before_quote,
+        ).strip()
+        if not framing:
+            framing = before_quote.strip()
+
+    framing_html = html.escape(framing).replace('\n', '<br>') if framing else ''
+    quote_html   = html.escape(quote) if quote else ''
+
+    parts = ['<aside class="chapter-intro" aria-label="Osho\'s framing for this chapter">']
+    parts.append('<div class="chapter-intro-eyebrow">Osho\'s framing</div>')
+    if framing_html:
+        parts.append(f'<p class="chapter-intro-body">{framing_html}</p>')
+    if quote_html:
+        parts.append(
+            '<blockquote class="chapter-intro-quote">'
+            f'<p>{quote_html}</p>'
+            '<cite>— Osho</cite>'
+            '</blockquote>'
+        )
+    parts.append('</aside>')
+    return '\n'.join(parts)
+
+
 chapter_sections = []
 for ch in chapters:
     cid   = 'ch-' + slug_chapter(ch['chapter'])
@@ -342,18 +632,19 @@ for ch in chapters:
             else f"Sutras {nums[0]}–{nums[-1]}")
     inner_techs = '\n'.join(t['html'] for t in ch['techs'])
 
-    # Which thematic files do these techniques come from?
-    contributing = sorted({t['slug'] for t in ch['techs']})
-    contrib_links = ' · '.join(
-        f'<a href="#about-{s}">{s}</a>' for s in contributing
-    )
+    # Note: the "From thematic groups: ..." line that used to live here is
+    # removed — its anchors targeted the per-category overview cards which
+    # are no longer part of the merged book.
+
+    intro_block = render_chapter_intro(ch_num, ch_title)
+
     chapter_sections.append(f'''
 <section class="chapter" id="{cid}">
   <header class="chapter-head">
     <div class="eyebrow">Chapter {ch_num} · {rng} · {len(nums)} technique{'s' if len(nums)!=1 else ''}</div>
     <h2>{html.escape(ch_title)}</h2>
-    <p class="chapter-meta">From thematic group{'s' if len(contributing)!=1 else ''}: {contrib_links}</p>
   </header>
+  {intro_block}
   {inner_techs}
   <p class="back-to-top"><a href="#top">↑ Back to top</a></p>
 </section>''')
@@ -457,6 +748,121 @@ html{scroll-padding-top:80px}
 #preface .disclaimer-block{
   background:var(--bg-card);border:1px solid #c44;border-radius:8px;
   padding:1.5rem;margin:1rem 0}
+
+/* === chapter-intro (Osho's framing) === */
+.chapter-intro{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;
+  padding:1.4rem 1.6rem;margin:0 0 2.5rem;
+  border-left:3px solid var(--accent);
+}
+.chapter-intro-eyebrow{
+  font-family:var(--sans);font-size:.7rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:.7rem;
+  font-weight:600;
+}
+.chapter-intro-body{
+  font-family:var(--serif);font-size:1.02rem;line-height:1.7;
+  color:var(--ink-soft);margin:0 0 1rem;
+}
+.chapter-intro-quote{
+  margin:1rem 0 0;padding:.9rem 1.2rem;
+  border-left:3px solid var(--accent-soft);background:transparent;
+  font-style:italic;font-family:var(--serif);font-size:1.05rem;
+  line-height:1.6;color:var(--ink);
+}
+.chapter-intro-quote p{margin:0 0 .4rem}
+.chapter-intro-quote cite{
+  display:block;font-style:normal;font-family:var(--sans);
+  font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);
+}
+@media print{
+  .chapter-intro{break-inside:avoid;border-color:#888}
+}
+
+/* === quiz === */
+#quiz{margin:3rem 0}
+#quiz .quiz-block{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;
+  padding:1.5rem 1.6rem;margin-top:1rem;
+}
+.quiz-q{
+  border:0;border-top:1px solid var(--rule);
+  padding:1.4rem 0 0;margin:1.4rem 0 0;
+}
+.quiz-q:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.quiz-q legend{
+  font-family:var(--serif);font-size:1.08rem;line-height:1.45;
+  color:var(--ink);padding:0;margin-bottom:.9rem;
+}
+.quiz-step{
+  display:block;font-family:var(--sans);font-size:.7rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+  margin-bottom:.3rem;font-weight:600;
+}
+.quiz-opts{display:flex;flex-direction:column;gap:.45rem}
+.quiz-opt{
+  display:flex;gap:.7rem;align-items:flex-start;
+  padding:.6rem .8rem;border:1px solid var(--rule);border-radius:6px;
+  cursor:pointer;font-family:var(--sans);font-size:.93rem;line-height:1.4;
+  color:var(--ink-soft);transition:border-color .15s, background .15s;
+}
+.quiz-opt:hover{border-color:var(--accent-soft);color:var(--ink)}
+.quiz-opt input{margin-top:.25rem;accent-color:var(--accent)}
+.quiz-opt:has(input:checked){
+  border-color:var(--accent);background:var(--accent-soft);color:var(--ink);
+}
+.quiz-actions{
+  display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.6rem;
+  padding-top:1.4rem;border-top:1px solid var(--rule);
+}
+.quiz-btn{
+  background:var(--accent);color:#fff;border:0;border-radius:6px;
+  padding:.7rem 1.2rem;font-family:var(--sans);font-size:.9rem;
+  font-weight:600;cursor:pointer;letter-spacing:.02em;
+}
+.quiz-btn:hover{filter:brightness(1.1)}
+.quiz-btn-ghost{
+  background:transparent;color:var(--ink-soft);
+  border:1px solid var(--rule);
+}
+.quiz-btn-ghost:hover{color:var(--accent);border-color:var(--accent-soft)}
+.quiz-hint{
+  margin:1rem 0 0;font-family:var(--sans);font-size:.85rem;
+  color:#c44;min-height:1.2em;
+}
+.quiz-result{
+  margin-top:1.5rem;padding:1.5rem 1.6rem;background:var(--bg-card);
+  border:1px solid var(--accent-soft);border-radius:8px;
+  border-left:3px solid var(--accent);
+}
+.quiz-result .result-eyebrow{
+  font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);font-weight:600;
+}
+.quiz-result h3{
+  font-family:var(--serif);font-size:1.35rem;margin:.4rem 0 .8rem;color:var(--ink);
+}
+.quiz-result .result-cat{
+  font-family:var(--sans);font-size:.85rem;color:var(--ink-faint);
+  margin:0 0 1rem;
+}
+.quiz-result .result-cta{
+  display:inline-block;background:var(--accent);color:#fff;
+  text-decoration:none;padding:.65rem 1.1rem;border-radius:6px;
+  font-family:var(--sans);font-size:.9rem;font-weight:600;margin-top:.5rem;
+}
+.quiz-result .result-cta:hover{filter:brightness(1.1)}
+.quiz-result .runners-up{
+  margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--rule);
+  font-family:var(--sans);font-size:.82rem;color:var(--ink-faint);
+}
+.quiz-result .runners-up strong{color:var(--ink-soft);font-weight:600}
+@media(max-width:600px){
+  #quiz .quiz-block{padding:1.2rem 1rem}
+  .quiz-q legend{font-size:1rem}
+  .quiz-opt{font-size:.9rem}
+}
 </style>'''
 
 JS = r'''
@@ -519,6 +925,133 @@ JS = r'''
       saveFavs(favs);
     });
   });
+
+  /* 8-question quiz: score across the 15 categories, recommend a sutra */
+  var quizForm   = document.getElementById('quiz-form');
+  var quizMetaEl = document.getElementById('quiz-category-meta');
+  if (quizForm && quizMetaEl) {
+    var meta;
+    try { meta = JSON.parse(quizMetaEl.textContent || '{}'); }
+    catch(e) { meta = {}; }
+    var submitBtn = document.getElementById('quiz-submit');
+    var resetBtn  = document.getElementById('quiz-reset');
+    var hintEl    = document.getElementById('quiz-hint');
+    var resultEl  = document.getElementById('quiz-result');
+    var totalQs   = quizForm.querySelectorAll('fieldset.quiz-q').length;
+
+    function answeredCount(){
+      var c = 0;
+      for (var i = 0; i < totalQs; i++) {
+        if (quizForm.querySelector('input[name="q' + i + '"]:checked')) c++;
+      }
+      return c;
+    }
+
+    function score(){
+      var totals = {};
+      var picks = quizForm.querySelectorAll('input[type="radio"]:checked');
+      picks.forEach(function(inp){
+        var w;
+        try { w = JSON.parse(inp.getAttribute('data-weights') || '{}'); }
+        catch(e) { w = {}; }
+        Object.keys(w).forEach(function(k){
+          totals[k] = (totals[k] || 0) + w[k];
+        });
+      });
+      // Sort categories by score descending; preserve a stable order on ties.
+      var ranked = Object.keys(totals).map(function(k){
+        return {slug: k, score: totals[k]};
+      }).sort(function(a, b){
+        return b.score - a.score;
+      });
+      return ranked;
+    }
+
+    function renderResult(ranked){
+      if (!ranked.length) {
+        resultEl.hidden = true;
+        return;
+      }
+      var top = ranked[0];
+      var info = meta[top.slug];
+      if (!info) {
+        resultEl.hidden = true;
+        return;
+      }
+      var html = '';
+      html += '<div class="result-eyebrow">Your recommended starting place</div>';
+      html += '<h3>Sutra ' + info.rep_num + ' — ' + escapeHtml(info.rep_short) + '</h3>';
+      html += '<p class="result-cat">Category: <strong>' + escapeHtml(info.display) + '</strong> · '
+            + 'score ' + top.score + '</p>';
+      html += '<a class="result-cta" href="#' + info.rep_anchor + '">Read this technique &rarr;</a>';
+
+      // Show up to 2 runners-up if they have non-zero score
+      var runners = ranked.slice(1, 4).filter(function(r){
+        return r.score > 0 && meta[r.slug];
+      });
+      if (runners.length) {
+        var parts = runners.map(function(r){
+          var m = meta[r.slug];
+          return '<a href="#' + m.rep_anchor + '">'
+               + escapeHtml(m.display) + ' (sutra ' + m.rep_num + ')</a>';
+        });
+        html += '<div class="runners-up"><strong>Also worth exploring:</strong> '
+              + parts.join(' · ') + '</div>';
+      }
+
+      resultEl.innerHTML = html;
+      resultEl.hidden = false;
+      // Smooth-scroll the result into view.
+      resultEl.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+
+    function escapeHtml(s){
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    if (submitBtn) submitBtn.addEventListener('click', function(){
+      var done = answeredCount();
+      if (done < totalQs) {
+        hintEl.textContent = 'Please answer all '
+          + totalQs + ' questions (you\u2019ve answered '
+          + done + ').';
+        // Find the first unanswered question and focus it.
+        for (var i = 0; i < totalQs; i++) {
+          if (!quizForm.querySelector('input[name="q' + i + '"]:checked')) {
+            var fs = quizForm.querySelector('fieldset[data-qi="' + i + '"]');
+            if (fs) fs.scrollIntoView({behavior:'smooth', block:'center'});
+            break;
+          }
+        }
+        resultEl.hidden = true;
+        return;
+      }
+      hintEl.textContent = '';
+      renderResult(score());
+    });
+
+    if (resetBtn) resetBtn.addEventListener('click', function(){
+      quizForm.reset();
+      hintEl.textContent = '';
+      resultEl.hidden = true;
+      resultEl.innerHTML = '';
+      // Scroll back to the start of the quiz so the next attempt feels fresh.
+      var quizSec = document.getElementById('quiz');
+      if (quizSec) quizSec.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+
+    // Live-update hint as the user picks options.
+    quizForm.addEventListener('change', function(){
+      var done = answeredCount();
+      if (done === totalQs) {
+        hintEl.textContent = 'All ' + totalQs + ' answered \u2014 click "See my technique".';
+      } else {
+        hintEl.textContent = '';
+      }
+    });
+  }
 })();
 </script>'''
 
@@ -553,18 +1086,10 @@ PREFACE = f'''
   {preface_body}
 </section>'''
 
-# About-Section --------------------------------------------------------
-ABOUT = f'''
-<section id="about">
-  <p class="part-divider">About These Techniques · Category Overviews</p>
-  <p style="text-align:center;color:var(--ink-faint);font-style:italic;
-            font-family:var(--sans);font-size:.92rem;max-width:44rem;margin:0 auto 2rem">
-    The 112 sutras have traditionally been clustered by what kind of doorway they
-    use — breath, sound, looking, etc. Tap any group below to read its overview,
-    safety notes and "how to begin" guidance before practising.
-  </p>
-  {''.join(about_cards)}
-</section>'''
+# About-Section is intentionally removed: per the project plan, the
+# "About These Techniques · Category Overviews" section is no longer part
+# of the merged book. The category-overview cards previously generated
+# from each thematic file's hero are not rendered.
 
 # Body of all chapters -------------------------------------------------
 CHAPTERS = f'''
@@ -591,7 +1116,7 @@ FOOTER = '''
 </footer>'''
 
 merged_body = '\n'.join([PROGRESS, CONTROLS, '<main>',
-                         COVER, PREFACE, ABOUT, CHAPTERS, SELF,
+                         COVER, PREFACE, CHAPTERS, SELF,
                          '</main>', FOOTER, JS])
 
 # Build final document -------------------------------------------------
