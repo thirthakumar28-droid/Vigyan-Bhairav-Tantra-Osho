@@ -34,6 +34,18 @@ chapter_intros_data = json.loads(
 chapter_intros = {c['chapter']: c for c in chapter_intros_data['chapters']}
 
 # ──────────────────────────────────────────────────────────────────────
+# 0b.  Load chapter Q&A pulls (one paraphrased Q&A per even chapter,
+#      keyed by `follows_chapter` so we can attach each pull to the
+#      corresponding odd chapter section in the merged book).
+# ──────────────────────────────────────────────────────────────────────
+_qa_path = ROOT / '_chapter_qa.json'
+if _qa_path.exists():
+    chapter_qa_data = json.loads(_qa_path.read_text(encoding='utf-8'))
+    chapter_qa = {q['follows_chapter']: q for q in chapter_qa_data.get('qa', [])}
+else:
+    chapter_qa = {}
+
+# ──────────────────────────────────────────────────────────────────────
 # 1.  Load canonical sutras
 # ──────────────────────────────────────────────────────────────────────
 canonical = json.loads((ROOT / 'canonical_112_sutras.json').read_text(encoding='utf-8'))
@@ -610,7 +622,14 @@ def render_chapter_intro(ch_num: str, ch_title: str) -> str:
             quotes = [legacy_quote]
 
     parts = ['<aside class="chapter-intro" aria-label="Osho\'s framing for this chapter">']
-    parts.append('<div class="chapter-intro-eyebrow">Osho\'s framing</div>')
+    parts.append(
+        '<button type="button" class="chapter-intro-toggle" '
+        'aria-expanded="false" aria-controls="ci-body-' + str(n) + '">'
+        '<span class="chapter-intro-eyebrow">Osho\'s framing</span>'
+        '<span class="chapter-intro-toggle-indicator" aria-hidden="true"></span>'
+        '</button>'
+    )
+    parts.append(f'<div class="chapter-intro-content" id="ci-body-{n}">')
     for para in paragraphs:
         para_html = html.escape(para.strip()).replace('\n', '<br>')
         if para_html:
@@ -626,7 +645,80 @@ def render_chapter_intro(ch_num: str, ch_title: str) -> str:
             '<cite>— Osho</cite>'
             '</blockquote>'
         )
+    parts.append('</div>')
     parts.append('</aside>')
+    return '\n'.join(parts)
+
+
+def render_chapter_qa(ch_num) -> str:
+    """Return the styled Q&A callout HTML for the odd chapter ``ch_num``,
+    using the entry from _chapter_qa.json whose ``follows_chapter`` equals
+    that number, or '' if no entry exists.
+
+    The callout is rendered as a native HTML <details> element so that
+    no JavaScript is required to expand or collapse it — it works for
+    every reader regardless of platform, browser or accessibility
+    setting. The summary line shows the eyebrow + the paraphrased
+    question; expanding reveals the answer paragraphs and quotes.
+
+    Inserted at the end of each odd-chapter section, just before the
+    "↑ Back to top" link, so a reader who has just finished the
+    chapter's techniques sees the question that the original audience
+    actually asked about them.
+    """
+    try:
+        n = int(ch_num)
+    except (ValueError, TypeError):
+        return ''
+    entry = chapter_qa.get(n)
+    if not entry:
+        return ''
+
+    question_text = (entry.get('question_paraphrase') or '').strip()
+    paragraphs = entry.get('answer_paragraphs') or []
+    quotes = entry.get('answer_quotes') or []
+    even_chapter = entry.get('chapter')
+    title_hint = (entry.get('title_hint') or '').strip()
+
+    if not question_text or not paragraphs:
+        return ''
+
+    # The eyebrow tells the reader where this Q&A came from in the
+    # original book: chapter N+1 (the Q&A session immediately following
+    # the chapter they just read).
+    eyebrow_bits = ['From the next session\u2019s Q&A']
+    if even_chapter is not None:
+        eyebrow_bits.append(f'Chapter {even_chapter}')
+    if title_hint:
+        eyebrow_bits.append(title_hint)
+    eyebrow_text = ' \u00b7 '.join(eyebrow_bits)
+
+    parts = [
+        '<details class="chapter-qa">',
+        '<summary class="chapter-qa-summary">',
+        f'<span class="chapter-qa-eyebrow">{html.escape(eyebrow_text)}</span>',
+        f'<span class="chapter-qa-question">{html.escape(question_text)}</span>',
+        '<span class="chapter-qa-toggle-indicator" aria-hidden="true"></span>',
+        '</summary>',
+        '<div class="chapter-qa-content">',
+    ]
+    for para in paragraphs:
+        para_html = html.escape(para.strip()).replace('\n', '<br>')
+        if para_html:
+            parts.append(f'<p class="chapter-qa-body">{para_html}</p>')
+    for q in quotes:
+        q_clean = q.strip()
+        if not q_clean:
+            continue
+        q_html = html.escape(q_clean)
+        parts.append(
+            '<blockquote class="chapter-qa-quote">'
+            f'<p>{q_html}</p>'
+            '<cite>\u2014 Osho</cite>'
+            '</blockquote>'
+        )
+    parts.append('</div>')
+    parts.append('</details>')
     return '\n'.join(parts)
 
 
@@ -651,6 +743,7 @@ for ch in chapters:
     # are no longer part of the merged book.
 
     intro_block = render_chapter_intro(ch_num, ch_title)
+    qa_block    = render_chapter_qa(ch_num)
 
     chapter_sections.append(f'''
 <section class="chapter" id="{cid}">
@@ -660,6 +753,7 @@ for ch in chapters:
   </header>
   {intro_block}
   {inner_techs}
+  {qa_block}
   <p class="back-to-top"><a href="#top">↑ Back to top</a></p>
 </section>''')
 
@@ -769,11 +863,40 @@ html{scroll-padding-top:80px}
   padding:1.6rem 1.8rem;margin:0 0 2.5rem;
   border-left:3px solid var(--accent);
 }
+/* The toggle button doubles as the eyebrow on every viewport. On desktop
+   it is non-interactive (we set pointer-events:none via the JS-collapse
+   class below, see html:not(.js-mobile-collapse)) so it reads as plain
+   typography; on mobile it becomes a tap target with an indicator. */
+.chapter-intro-toggle{
+  display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+  width:100%;background:transparent;border:0;padding:0;margin:0 0 .9rem;
+  cursor:default;text-align:left;color:inherit;font:inherit;
+}
 .chapter-intro-eyebrow{
   font-family:var(--sans);font-size:.7rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--accent);margin-bottom:.9rem;
+  text-transform:uppercase;color:var(--accent);
   font-weight:600;
 }
+.chapter-intro-toggle-indicator{
+  display:none;
+  flex:0 0 auto;
+  width:1.4rem;height:1.4rem;border-radius:999px;
+  border:1px solid var(--accent-soft);
+  position:relative;color:var(--accent);
+  transition:transform .25s ease;
+}
+.chapter-intro-toggle-indicator::before,
+.chapter-intro-toggle-indicator::after{
+  content:'';position:absolute;background:currentColor;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.chapter-intro-toggle-indicator::before{width:.6rem;height:1px}
+.chapter-intro-toggle-indicator::after{width:1px;height:.6rem;
+  transition:transform .25s ease}
+.chapter-intro-toggle[aria-expanded="true"] .chapter-intro-toggle-indicator::after{
+  transform:translate(-50%,-50%) scaleY(0);
+}
+.chapter-intro-content{display:block}
 .chapter-intro-body{
   font-family:var(--serif);font-size:1.02rem;line-height:1.75;
   color:var(--ink-soft);margin:0 0 1rem;
@@ -792,8 +915,133 @@ html{scroll-padding-top:80px}
   font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
   color:var(--ink-faint);
 }
+/* Mobile collapse — only when JS detected the device on load. The class
+   is applied to <html> by the inline pre-paint script in the body. We
+   gate the collapse rules on this class so that no-JS users (and
+   desktop) always see the framing fully expanded.
+
+   The default behaviour under `html.js-mobile-collapse` is COLLAPSED
+   (display:none on the content). The content is then revealed only
+   when the toggle's aria-expanded becomes "true". This lets us avoid
+   FOUC: the pre-paint script flips the html class before any
+   chapter-intro is painted, so on mobile with JS the content never
+   shows expanded first. */
+html.js-mobile-collapse .chapter-intro-toggle{
+  cursor:pointer;
+}
+html.js-mobile-collapse .chapter-intro-toggle-indicator{
+  display:inline-block;
+}
+html.js-mobile-collapse .chapter-intro-toggle:hover .chapter-intro-toggle-indicator,
+html.js-mobile-collapse .chapter-intro-toggle:focus-visible .chapter-intro-toggle-indicator{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--accent-soft);
+}
+html.js-mobile-collapse .chapter-intro-content{
+  display:none;
+}
+html.js-mobile-collapse .chapter-intro-toggle[aria-expanded="true"] + .chapter-intro-content{
+  display:block;
+}
+html.js-mobile-collapse .chapter-intro:has(.chapter-intro-toggle[aria-expanded="false"]){
+  /* Tighten the spacing when collapsed so the chapter spine reads cleanly. */
+  padding-bottom:1.1rem;margin-bottom:1.6rem;
+}
 @media print{
   .chapter-intro{break-inside:avoid;border-color:#888}
+  .chapter-intro-content{display:block !important}
+  .chapter-intro-toggle-indicator{display:none !important}
+}
+
+/* === chapter-qa (paraphrased Q&A pull from the next session) ===
+   Native <details> element so it works without JavaScript on every
+   browser. Visually echoes .chapter-intro but sits at the bottom of
+   the chapter section as a quieter, opt-in companion block.   */
+.chapter-qa{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;
+  padding:0;margin:2.5rem 0 1rem;
+  border-left:3px solid var(--accent-soft);
+}
+.chapter-qa[open]{
+  border-left-color:var(--accent);
+}
+.chapter-qa-summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:flex-start;gap:.85rem;
+  padding:1.05rem 1.4rem;
+  font-family:var(--serif);
+  color:var(--ink);
+  user-select:none;
+}
+.chapter-qa-summary::-webkit-details-marker{display:none}
+.chapter-qa-summary::marker{content:''}
+.chapter-qa-summary > *{flex:0 1 auto}
+.chapter-qa-summary{flex-wrap:wrap}
+.chapter-qa-eyebrow{
+  flex:1 0 100%;
+  font-family:var(--sans);font-size:.7rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);
+  font-weight:600;margin-bottom:.45rem;line-height:1.45;
+}
+.chapter-qa-question{
+  flex:1 1 auto;
+  font-family:var(--serif);font-style:italic;font-size:1rem;
+  line-height:1.55;color:var(--ink-soft);
+}
+.chapter-qa-toggle-indicator{
+  flex:0 0 auto;
+  width:1.4rem;height:1.4rem;border-radius:999px;
+  border:1px solid var(--accent-soft);
+  position:relative;color:var(--accent);
+  margin-top:.15rem;
+  transition:transform .25s ease, border-color .15s, box-shadow .15s;
+}
+.chapter-qa-toggle-indicator::before,
+.chapter-qa-toggle-indicator::after{
+  content:'';position:absolute;background:currentColor;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.chapter-qa-toggle-indicator::before{width:.6rem;height:1px}
+.chapter-qa-toggle-indicator::after{width:1px;height:.6rem;
+  transition:transform .25s ease}
+.chapter-qa[open] > .chapter-qa-summary .chapter-qa-toggle-indicator::after{
+  transform:translate(-50%,-50%) scaleY(0);
+}
+.chapter-qa-summary:hover .chapter-qa-toggle-indicator,
+.chapter-qa-summary:focus-visible .chapter-qa-toggle-indicator{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--accent-soft);
+}
+.chapter-qa-content{
+  padding:0 1.4rem 1.3rem;
+  border-top:1px solid var(--rule);
+  margin-top:.2rem;
+}
+.chapter-qa-body{
+  font-family:var(--serif);font-size:1rem;line-height:1.75;
+  color:var(--ink-soft);margin:1.05rem 0 0;
+}
+.chapter-qa-quote{
+  margin:1rem 0 0;padding:.85rem 1.15rem;
+  border-left:3px solid var(--accent-soft);background:transparent;
+  font-style:italic;font-family:var(--serif);font-size:1.02rem;
+  line-height:1.6;color:var(--ink);
+}
+.chapter-qa-quote + .chapter-qa-quote{margin-top:.7rem}
+.chapter-qa-quote p{margin:0 0 .4rem}
+.chapter-qa-quote cite{
+  display:block;font-style:normal;font-family:var(--sans);
+  font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);
+}
+@media (max-width:600px){
+  .chapter-qa-summary{padding:.95rem 1.05rem}
+  .chapter-qa-content{padding:0 1.05rem 1.1rem}
+}
+@media print{
+  .chapter-qa{break-inside:avoid;border-color:#888}
+  .chapter-qa-content{display:block !important}
+  .chapter-qa-toggle-indicator{display:none !important}
 }
 
 /* === quiz === */
@@ -942,6 +1190,49 @@ JS = r'''
     });
   });
 
+  /* chapter-intro toggle — only active on mobile (js-mobile-collapse on <html>).
+     A pre-paint inline script in the body has already added the class
+     when the device is mobile-width, so the CSS hides the content from
+     the very first paint. Here we re-sync aria-expanded on every load
+     and on resize so screen readers report the right state on both
+     desktop (always expanded) and mobile (starts collapsed). */
+  var MOBILE_BREAKPOINT_PX = 768;
+  function isMobileWidth(){
+    return window.matchMedia('(max-width: ' + MOBILE_BREAKPOINT_PX + 'px)').matches;
+  }
+  function applyChapterIntroMode(){
+    var mobile = isMobileWidth();
+    document.documentElement.classList.toggle('js-mobile-collapse', mobile);
+    document.querySelectorAll('button.chapter-intro-toggle').forEach(function(btn){
+      // On desktop the button is decorative; aria-expanded should report
+      // the visible state (expanded). On mobile we honour whatever the
+      // user has already set; only intros that were never touched start
+      // collapsed.
+      if (!mobile) {
+        btn.setAttribute('aria-expanded', 'true');
+      } else if (!btn.dataset.userToggled) {
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+  applyChapterIntroMode();
+  // Debounce resize so we don't thrash the DOM on continuous drag.
+  var resizeTimer = null;
+  window.addEventListener('resize', function(){
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(applyChapterIntroMode, 120);
+  });
+
+  document.querySelectorAll('button.chapter-intro-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      // Only respond on mobile — on desktop the button is decorative.
+      if (!isMobileWidth()) return;
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      btn.dataset.userToggled = '1';
+    });
+  });
+
   /* 8-question quiz: score across the 15 categories, recommend a sutra */
   var quizForm   = document.getElementById('quiz-form');
   var quizMetaEl = document.getElementById('quiz-category-meta');
@@ -1072,6 +1363,24 @@ JS = r'''
 </script>'''
 
 PROGRESS = '<div class="progress" id="progress" aria-hidden="true"></div>'
+
+# Inline pre-paint script: tag <html> with `js-mobile-collapse` BEFORE
+# the body is painted, so on mobile the CSS rule
+# `html.js-mobile-collapse .chapter-intro-content { display: none }`
+# fires from the very first paint and users never see expanded chapter
+# intros that then collapse. Desktop and no-JS users never get the
+# class, so the same content remains visible to them.
+# This script intentionally uses no async/defer attributes and does not
+# depend on the DOM being ready.
+PRE_PAINT_JS = '''<script>
+(function(){
+  try {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      document.documentElement.classList.add('js-mobile-collapse');
+    }
+  } catch(e) { /* never block paint on a JS error */ }
+})();
+</script>'''
 CONTROLS = '''
 <button class="toc-toggle" id="toc-toggle" aria-label="Open table of contents">
   ☰&nbsp; Contents
@@ -1131,7 +1440,7 @@ FOOTER = '''
   <p><a href="#top" style="color:var(--accent)">↑ Return to top</a></p>
 </footer>'''
 
-merged_body = '\n'.join([PROGRESS, CONTROLS, '<main>',
+merged_body = '\n'.join([PRE_PAINT_JS, PROGRESS, CONTROLS, '<main>',
                          COVER, PREFACE, CHAPTERS, SELF,
                          '</main>', FOOTER, JS])
 
