@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="near-black">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Important first reading — the master index, disclaimer, situation matcher, safety guide, and gateway to all 15 categories of Osho's Vigyan Bhairav Tantra.">
 <title>Important · First Access This — Vigyan Bhairav Tantra</title>
 <style>
-:root{--bg:#f4ede0;--bg-card:#faf4e8;--bg-soft:#ede4d2;--ink:#2d2419;--ink-soft:#5a4a35;--ink-faint:#8a7958;--rule:#d9cdb2;--accent:#b8860b;--accent-soft:#e8c876;--sutra-bg:#f8efd9;--warn-bg:#fef0e0;--warn-border:#c25a1a;--warn-ink:#7a3210;--shadow:0 1px 0 rgba(60,42,15,.04),0 8px 24px -12px rgba(60,42,15,.12);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-html[data-theme="dark"]{--bg:#1a1612;--bg-card:#221d17;--bg-soft:#2a241c;--ink:#e8dec8;--ink-soft:#b8aa8c;--ink-faint:#7a6e58;--rule:#3a3328;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#2a221a;--warn-bg:#2a1a0e;--warn-border:#d97a3a;--warn-ink:#e8b890;--shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5)}
+:root,html[data-theme="near-black"]{--bg:#0a0a0a;--bg-card:#131313;--bg-soft:#1a1a1a;--ink:#f0f0f0;--ink-soft:#c0c0c0;--ink-faint:#808080;--rule:#2a2a2a;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#1a1a1a;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}html[data-theme="pure-black"]{--bg:#000000;--bg-card:#0a0a0a;--bg-soft:#141414;--ink:#ffffff;--ink-soft:#d0d0d0;--ink-faint:#888888;--rule:#222222;--accent:#e6b347;--accent-soft:#b8860b;--sutra-bg:#0a0a0a;--shadow:0 1px 0 rgba(0,0,0,.5),0 8px 24px -12px rgba(0,0,0,.8)}
+
 *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:6rem}
 .controls{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:.4rem;background:var(--bg-card);padding:.4rem;border-radius:999px;border:1px solid var(--rule);box-shadow:var(--shadow);font-family:var(--sans)}
@@ -76,15 +76,7 @@ footer .tagline{font-family:var(--serif);font-size:1rem;font-style:italic;color:
 <nav class="controls" aria-label="Reading controls">
   <button id="theme-btn" aria-label="Toggle dark mode" title="Theme">&#9789;</button>
   <button id="print-btn" aria-label="Print this page" title="Print">&#128424;</button>
-</nav>
-<main>
-<header class="hero">
-  <div class="eyebrow">Index &middot; Master Reference</div>
-  <h1>Vigyan Bhairav Tantra</h1>
-  <p class="lede">112 meditation techniques distilled by Osho &mdash; find the one that's yours.</p>
-  <p class="intro">This is the entry point to a 15-file collection covering all 112 techniques from the <em>Vigyan Bhairav Tantra</em>, an ancient Sanskrit text in which Shiva offers Devi 112 ways to recognise the divine in ordinary life. Each file is a self-contained guide, working fully offline. Before you open any technique, please read this page completely &mdash; especially the disclaimer and safety sections below.</p>
-</header>
-<section class="disclaimer-block" id="disclaimer">
+</nav><section class="disclaimer-block" id="disclaimer">
   <h2>Critical Disclaimer &mdash; Read Before Practising</h2>
   <p><strong>Practise at your own discretion and responsibility.</strong></p>
   <p>These are <strong>contemplative practices, not medical or psychological treatment</strong>. They are not a substitute for professional mental-health care, therapy, or medical advice. If you have any serious health condition, consult a qualified professional before beginning.</p>
@@ -298,21 +290,17 @@ footer .tagline{font-family:var(--serif);font-size:1rem;font-style:italic;color:
     <p>Read this page first. Take the disclaimer and safety sections seriously. Use the situation matcher above, browse the category grid, or simply press the random button if you trust your intuition. When you find a technique that resonates, <strong>commit to 21 days</strong>. Don't shop. Don't switch. The discipline is the work.</p>
   </div>
 </section>
+</main>
+
 <footer>
   <p class="tagline">112 techniques &middot; 15 categories &middot; 1 self &middot; &infin; doorways</p>
   <p>Vigyan Bhairav Tantra &middot; transmitted by Osho &middot; distilled here for daily practice.</p>
   <p>Works fully offline. No external dependencies.</p>
 </footer>
-</main>
 <script>
 (function(){
   'use strict';
-  const html=document.documentElement;
-  const themeBtn=document.getElementById('theme-btn');
-  const stored=localStorage.getItem('vbt-theme');
-  if(stored)html.setAttribute('data-theme',stored);
-  else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
-  themeBtn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next)});
+  const html=document.documentElement;const themeBtn=document.getElementById('theme-btn');const stored=localStorage.getItem('vbt-theme');const initial=stored==='pure-black'?'pure-black':'near-black';html.setAttribute('data-theme',initial);function setBtn(t){themeBtn.textContent=t==='pure-black'?'\u25CF':'\u25CB';themeBtn.setAttribute('aria-label','Theme: '+(t==='pure-black'?'Pure Black':'Near Black')+' \u2014 click to toggle');themeBtn.title=themeBtn.getAttribute('aria-label');}setBtn(initial);themeBtn.addEventListener('click',()=>{const cur=html.getAttribute('data-theme');const next=cur==='near-black'?'pure-black':'near-black';html.setAttribute('data-theme',next);localStorage.setItem('vbt-theme',next);setBtn(next);});
   document.getElementById('print-btn').addEventListener('click',()=>window.print());
   const MATCH_DATA={
     anxious:{title:"For anxiety and overthinking",body:"<p>Mind operates by movement; anxiety is mind moving too fast. The remedy is not to stop the mind but to redirect attention to its background.</p><p><strong>Try:</strong></p><ul><li><a href='vigyan-bhairav-mind-techniques.html'>Mind &amp; Thought</a> &mdash; especially watching the gap between thoughts</li><li><a href='vigyan-bhairav-witnessing-techniques.html'>Witnessing</a> &mdash; remain in the subjective mood, not lost in things</li><li><a href='vigyan-bhairav-light-techniques.html#t4'>Sky-gazing</a> &mdash; the cleanest entry; lie down, look at the cloudless sky, become it</li></ul>"},
