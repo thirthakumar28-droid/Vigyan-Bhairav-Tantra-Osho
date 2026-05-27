@@ -1,4 +1,5 @@
 epub_extracted/
+.epub_work/
 *.epub
 .DS_Store
 .audit_workspace/
