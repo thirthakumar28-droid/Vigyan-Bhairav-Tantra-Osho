@@ -2328,6 +2328,30 @@ footer a{color:var(--ink-soft)}
     };
     const techRanked = scoreTechniques(prof);
 
+    /* ===== SAFETY HARD-GATE (research dossier §4/§7: safety overrides fit) =====
+       The adverse-effects literature (Korn; AIHCP; PubMed on yoga-nidra) shows
+       intense dissolving / void / fire practices can harm a dysregulated system.
+       So a technique that is unsafe for the user's nervous-system state — or too
+       intense given a dysregulated state or thin data — can NEVER be the PRIMARY
+       pick. It is demoted below every safe option, regardless of how well it fits
+       on temperament. This is the hardest constraint in the instrument. */
+    const dysregulated = (primaryNerv === 'dorsal' || primaryNerv === 'sympathetic');
+    const isUnsafeFirst = (t)=> t.nervBad.includes(primaryNerv) || (t.intensity >= 3 && (dysregulated || coverage < 0.7));
+    const safeRanked = techRanked.filter(r=>!isUnsafeFirst(r.t));
+    const gatedRanked = safeRanked.length ? safeRanked.concat(techRanked.filter(r=>isUnsafeFirst(r.t))) : techRanked;
+
+    /* ===== HONEST PER-MATCH CONFIDENCE (dossier §7) =====
+       High only when several INDEPENDENT axes converge on the same technique AND
+       it clears the field. A win on a single signal is reported as tentative,
+       never as a confident prescription. */
+    const matchGap = (gatedRanked[0].score) - ((gatedRanked[1]||{score:0}).score);
+    const matchConvergence = gatedRanked[0].reasons.length; /* distinct axes that agree */
+    let matchConf, matchConfWhy;
+    if(matchConvergence >= 4 && matchGap >= 10 && coverage >= 0.8 && pathMargin >= 15){ matchConf='Very high'; matchConfWhy='four or more independent dimensions of you converge on this one, on near-complete answers with a clear dominant path'; }
+    else if(matchConvergence >= 3 && matchGap >= 6 && coverage >= 0.7 && pathMargin >= 8){ matchConf='High'; matchConfWhy='three independent dimensions agree, it leads the alternatives clearly, and your profile is well-defined'; }
+    else if(matchConvergence >= 2 && coverage >= 0.5){ matchConf='Moderate'; matchConfWhy='a couple of dimensions agree, but the alternatives below are close — treat them as equally worth trying'; }
+    else { matchConf='Exploratory'; matchConfWhy='this rests on thin data or a single signal, so treat it as one good door among several, not a verdict — answer more questions to sharpen it'; }
+
     /* PATH card */
     const pInfo = PATH_INFO[primaryPath];
     document.getElementById('rc-path-title').innerHTML = pInfo.label + '<span class="confidence-pill">' + confLabel + ' confidence</span>';
@@ -2380,7 +2404,7 @@ footer a{color:var(--ink-soft)}
     document.getElementById('rc-dosha-desc').innerHTML = '<strong>' + dInfo.label + '.</strong> ' + dInfo.desc + ' <em>What you need:</em> ' + dInfo.need;
 
     /* TECH RECOMMENDATIONS — scored against the FULL profile */
-    const topPick = techRanked[0];
+    const topPick = gatedRanked[0];
     const reasonHtml = (r)=> r.length ? '<ul class="clean" style="margin:.5rem 0 .2rem">' + r.slice(0,4).map(x=>'<li style="font-size:.86rem">' + x + '</li>').join('') + '</ul>' : '';
     /* keep a `main` object in the old shape for the 21-day plan below */
     const main = {name:topPick.t.title, file:topPick.t.file, anchor:topPick.t.anchor, why:topPick.t.blurb, level:topPick.t.level};
@@ -2398,16 +2422,24 @@ footer a{color:var(--ink-soft)}
     /* alternates: next best that are NOT the same file as the top pick, to give range */
     const alternates = [];
     const seenFiles = {}; seenFiles[topPick.t.file] = 1;
-    for(let i=1;i<techRanked.length && alternates.length<4;i++){
-      const e = techRanked[i];
+    for(let i=1;i<gatedRanked.length && alternates.length<4;i++){
+      const e = gatedRanked[i];
       if(seenFiles[e.t.file] && alternates.length>=2) continue;
       seenFiles[e.t.file] = 1; alternates.push(e);
     }
+    document.getElementById('rc-tech-title').innerHTML = 'Your Top Recommendation<span class="confidence-pill">' + matchConf + ' match</span>';
+    const safetyDemoted = isUnsafeFirst(topPick.t) ? '' :
+      (techRanked[0] && isUnsafeFirst(techRanked[0].t) && techRanked[0].t.id !== topPick.t.id
+        ? '<p style="font-family:var(--sans);font-size:.84rem;color:var(--ink-soft);background:var(--bg-soft);border-left:3px solid var(--warn-c,#c66);padding:.7rem .9rem;border-radius:4px;margin:.2rem 0 .8rem">A more intense practice scored higher on temperament alone, but your nervous-system state makes it the wrong <em>first</em> medicine, so it has been set aside for now. Safety comes before fit. It may become right later.</p>'
+        : '');
     document.getElementById('rc-tech-main').innerHTML =
+      safetyDemoted +
       techCard(topPick, true) +
+      '<p style="font-family:var(--sans);font-size:.84rem;color:var(--ink-soft);font-style:italic;margin:.6rem 0 0">Match confidence: <strong style="font-style:normal;color:var(--accent)">' + matchConf + '</strong> &mdash; ' + matchConfWhy + '.</p>' +
       '<h4 style="font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:1.5rem 0 .6rem;font-weight:600">Other strong matches for you</h4>' +
       alternates.map(e=>techCard(e,false)).join('') +
-      '<p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);font-style:italic;margin-top:1rem">' + confNote + '</p>';
+      '<p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);font-style:italic;margin-top:1rem">' + confNote + '</p>' +
+      '<p style="font-family:var(--sans);font-size:.78rem;color:var(--ink-faint);margin-top:.8rem;line-height:1.55">This is the strongest of several reasonable doors, not a verdict. Built from the four-yogas, gunas and dosha traditions, cross-checked against nervous-system safety research (see <em>_pathfinding_research.md</em>). Try your top pick for about 21 days, and let your own experience overrule the quiz.</p>';
 
     /* SITUATIONAL — personalised: lead with what YOU actually flagged */
     const intentRanked = Object.keys(totals.intent).filter(k=>NEED_TECH[k]).sort((a,b)=>(totals.intent[b]||0)-(totals.intent[a]||0));
@@ -2530,6 +2562,7 @@ footer a{color:var(--ink-soft)}
       primary: {path:primaryPath, energy:primaryEnergy, dosha:primaryDosha, guna:primaryGuna, nerv:primaryNerv, attach:primaryAttach},
       secondary: {path:secondaryPath, energy:secondaryEnergy},
       confidence: confLabel,
+      matchConfidence: matchConf,
       topTech: {name:topPick.t.title.replace(/<[^>]+>/g,''), file:topPick.t.file, anchor:topPick.t.anchor, why:topPick.t.blurb.replace(/<[^>]+>/g,''), reasons:topPick.reasons.map(x=>x.replace(/<[^>]+>/g,''))},
       alternates: alternates.map(e=>({name:e.t.title.replace(/<[^>]+>/g,''), file:e.t.file, anchor:e.t.anchor})),
       situations: sitKeys.map(k=>({label:NEED_TECH[k].label.replace(/<[^>]+>/g,''), tech:NEED_TECH[k].tech.replace(/<[^>]+>/g,''), file:NEED_TECH[k].file, anchor:NEED_TECH[k].anchor, flagged:(totals.intent[k]||0)>0}))
