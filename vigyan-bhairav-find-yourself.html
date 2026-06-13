@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="en" data-theme="near-black">
 <head>
 <meta charset="UTF-8">
@@ -7,6 +7,8 @@
 <title>Find Yourself, Then Find Your Meditation &mdash; The Mirror &middot; Vigyan Bhairav Tantra</title>
 <style>
 :root,html[data-theme="near-black"]{--bg:#0a0a0a;--bg-card:#131313;--bg-soft:#1a1a1a;--ink:#f0f0f0;--ink-soft:#c0c0c0;--ink-faint:#808080;--rule:#2a2a2a;--accent:#d4a13c;--accent-soft:#a87c1a;--sutra-bg:#1a1a1a;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Apple Garamond",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}html[data-theme="pure-black"]{--bg:#000000;--bg-card:#0a0a0a;--bg-soft:#141414;--ink:#ffffff;--ink-soft:#d0d0d0;--ink-faint:#888888;--rule:#222222;--accent:#e6b347;--accent-soft:#b8860b;--sutra-bg:#0a0a0a;--shadow:0 1px 0 rgba(0,0,0,.5),0 8px 24px -12px rgba(0,0,0,.8)}
+/* dimension accent colours used by the result bars & situation cards (shared across themes) */
+:root,html[data-theme="near-black"],html[data-theme="pure-black"]{--karma-c:#cf7d33;--bhakti-c:#cc5a82;--jnana-c:#5e93cf;--raja-c:#a07ed1;--body-c:#cf7d33;--mind-c:#5e93cf;--heart-c:#cc5a82;--energy-c:#a07ed1;--sattva-c:#6fb094;--rajas-c:#d68f3e;--tamas-c:#828794;--vata-c:#6f9bd1;--pitta-c:#d56b40;--kapha-c:#6fb094;--warn-c:#d9803f;--warn-bg:#2a1d12;--warn-border:#a8631f;--warn-ink:#f0d9c0;--ok-c:#6fb094}
 
 *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.7;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease;padding-bottom:8rem}
@@ -1149,6 +1151,97 @@ footer a{color:var(--ink-soft)}
   <div class="saved-mini" data-saved-for="q56"></div>
 </section>
 
+<details class="opt-deep" style="margin:1.6rem 0;background:var(--sutra-bg);border:2px dashed var(--accent-soft);border-radius:8px;padding:.4rem 1.2rem 1rem">
+  <summary style="cursor:pointer;font-family:var(--sans);font-weight:600;letter-spacing:.04em;color:var(--accent);padding:.9rem 0;font-size:.95rem;list-style:none">+ Deep-research layer &mdash; 7 optional questions for a higher-confidence result</summary>
+  <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-soft);font-style:italic;margin:.2rem 0 1rem;line-height:1.55">Entirely optional. Your portrait works without these &mdash; but they probe the dimensions that decide whether a practice will <em>heal</em> or <em>overwhelm</em> you (your nervous-system baseline, your attachment pattern, how you take in the world). Answer honestly, not aspirationally. Each one meaningfully sharpens the match.</p>
+
+  <section class="qsection">
+    <div class="qmeta"><span>Optional 1 of 7 &middot; nervous system</span><span class="opttag">single</span></div>
+    <h3 class="qsection-h">Most days, before anything happens, what is your body&rsquo;s baseline?</h3>
+    <div class="qhint">Not your best day or worst day. The hum underneath, most of the time.</div>
+    <ul class="qoptions">
+      <li><label><input type="radio" name="q60" value="v" data-scores="nervous:ventral:4,gunas:sattva:1"><span><strong>Mostly settled and open</strong> &mdash; I can rest, connect, and focus without much effort. <span class="ex">e.g., my default is &ldquo;okay&rdquo;; I come back to calm fairly easily.</span></span></label></li>
+      <li><label><input type="radio" name="q60" value="s" data-scores="nervous:sympathetic:4,doshas:vata:1,gunas:rajas:1"><span><strong>Mostly switched-on / braced</strong> &mdash; a low engine always running, hard to fully relax. <span class="ex">e.g., wired-and-tired; my shoulders live near my ears.</span></span></label></li>
+      <li><label><input type="radio" name="q60" value="d" data-scores="nervous:dorsal:4,gunas:tamas:1,doshas:kapha:1"><span><strong>Mostly flat / heavy / far away</strong> &mdash; muted, foggy, going through motions. <span class="ex">e.g., I&rsquo;m present but not really here; everything is behind glass.</span></span></label></li>
+      <li><label><input type="radio" name="q60" value="sw" data-scores="nervous:sympathetic:2,nervous:dorsal:2,doshas:vata:1"><span><strong>It swings hard</strong> &mdash; wired then crashed, with little in between. <span class="ex">e.g., I&rsquo;m either 100% on or completely offline.</span></span></label></li>
+    </ul>
+  </section>
+
+  <section class="qsection">
+    <div class="qmeta"><span>Optional 2 of 7 &middot; nervous system</span><span class="opttag">single</span></div>
+    <h3 class="qsection-h">When you sit down and try to do absolutely nothing, what actually happens?</h3>
+    <ul class="qoptions">
+      <li><label><input type="radio" name="q61" value="ok" data-scores="nervous:ventral:3,gunas:sattva:1"><span><strong>I can settle into it within a few minutes.</strong></span></label></li>
+      <li><label><input type="radio" name="q61" value="buzz" data-scores="nervous:sympathetic:3,doshas:vata:2"><span><strong>I get restless, buzzy, need to move or check something.</strong> <span class="ex">e.g., a low panic, like I&rsquo;m wasting time.</span></span></label></li>
+      <li><label><input type="radio" name="q61" value="emo" data-scores="nervous:sympathetic:1,energy:heart:1,intent:grief:1"><span><strong>Feelings I&rsquo;ve been outrunning start to surface.</strong></span></label></li>
+      <li><label><input type="radio" name="q61" value="sleep" data-scores="nervous:dorsal:3,gunas:tamas:1,doshas:kapha:1"><span><strong>I get drowsy, foggy, or fall asleep.</strong></span></label></li>
+      <li><label><input type="radio" name="q61" value="void" data-scores="nervous:dorsal:2,intent:disconnect:1"><span><strong>I go blank / numb / strangely far from myself.</strong></span></label></li>
+    </ul>
+  </section>
+
+  <section class="qsection">
+    <div class="qmeta"><span>Optional 3 of 7 &middot; attachment</span><span class="opttag">single</span></div>
+    <h3 class="qsection-h">In close relationships, your most honest default is&hellip;</h3>
+    <div class="qhint">What you actually do, not what you know is healthy.</div>
+    <ul class="qoptions">
+      <li><label><input type="radio" name="q62" value="sec" data-scores="attach:secure:4,nervous:ventral:1"><span><strong>I can be close and also be myself</strong> &mdash; closeness doesn&rsquo;t frighten me much. <span class="ex">e.g., I trust people will come back; I don&rsquo;t panic or wall off.</span></span></label></li>
+      <li><label><input type="radio" name="q62" value="anx" data-scores="attach:anxious:4,nervous:sympathetic:1"><span><strong>I worry about losing them</strong> &mdash; I need reassurance, I read into silences. <span class="ex">e.g., an unanswered text can hijack my whole afternoon.</span></span></label></li>
+      <li><label><input type="radio" name="q62" value="av" data-scores="attach:avoidant:4,nervous:dorsal:1"><span><strong>I keep a quiet distance</strong> &mdash; I value independence, closeness can feel like pressure. <span class="ex">e.g., I pull back when things get too intimate.</span></span></label></li>
+      <li><label><input type="radio" name="q62" value="dis" data-scores="attach:disorg:4,nervous:sympathetic:1,nervous:dorsal:1"><span><strong>I want closeness and fear it at once</strong> &mdash; push and pull. <span class="ex">e.g., I crave it, then sabotage it, then crave it again.</span></span></label></li>
+    </ul>
+  </section>
+
+  <section class="qsection">
+    <div class="qmeta"><span>Optional 4 of 7 &middot; attachment</span><span class="opttag">single</span></div>
+    <h3 class="qsection-h">Surrender &mdash; to a practice, a teacher, a person, the unknown &mdash; feels&hellip;</h3>
+    <ul class="qoptions">
+      <li><label><input type="radio" name="q63" value="safe" data-scores="attach:secure:3,path:bhakti:1"><span><strong>Possible and even sweet</strong>, with someone or something I trust.</span></label></li>
+      <li><label><input type="radio" name="q63" value="cling" data-scores="attach:anxious:3,path:bhakti:1"><span><strong>Like relief</strong> &mdash; I&rsquo;d hand the wheel over quickly, maybe too quickly.</span></label></li>
+      <li><label><input type="radio" name="q63" value="no" data-scores="attach:avoidant:3,path:jnana:1,path:raja:1"><span><strong>Threatening</strong> &mdash; I&rsquo;d rather find my own way and keep control.</span></label></li>
+      <li><label><input type="radio" name="q63" value="terr" data-scores="attach:disorg:3,nervous:sympathetic:1"><span><strong>Both magnetic and terrifying.</strong></span></label></li>
+    </ul>
+  </section>
+
+  <section class="qsection">
+    <div class="qmeta"><span>Optional 5 of 7 &middot; sensory orientation</span><span class="opttag">single</span></div>
+    <h3 class="qsection-h">When a memory or idea is vivid, it mostly comes to you as&hellip;</h3>
+    <ul class="qoptions">
+      <li><label><input type="radio" name="q64" value="vis" data-scores="sensory:visual:4"><span><strong>Images</strong> &mdash; I see it. <span class="ex">e.g., I think in pictures, maps, scenes.</span></span></label></li>
+      <li><label><input type="radio" name="q64" value="aud" data-scores="sensory:auditory:4"><span><strong>Sounds or words</strong> &mdash; I hear it, an inner voice or music. <span class="ex">e.g., songs and phrases loop in my head.</span></span></label></li>
+      <li><label><input type="radio" name="q64" value="kin" data-scores="sensory:kinesthetic:4,energy:body:1"><span><strong>Sensations</strong> &mdash; I feel it in my body. <span class="ex">e.g., I get a gut feeling, a tightness, a pull.</span></span></label></li>
+      <li><label><input type="radio" name="q64" value="con" data-scores="sensory:conceptual:4,energy:mind:1"><span><strong>Concepts</strong> &mdash; abstract, wordless understanding. <span class="ex">e.g., I just &ldquo;know&rdquo; the shape of it without image or sound.</span></span></label></li>
+    </ul>
+  </section>
+
+  <section class="qsection">
+    <div class="qmeta"><span>Optional 6 of 7 &middot; what you need now</span><span class="multitag">multi-select &middot; pick all that are true</span></div>
+    <h3 class="qsection-h">Right now, in this season of your life, which of these are genuinely true?</h3>
+    <div class="qhint">This directly steers your &ldquo;for specific situations&rdquo; recommendations. Be honest about the present, not the ideal.</div>
+    <ul class="qoptions">
+      <li><label><input type="checkbox" name="q65" value="anx" data-scores="intent:anxiety:3" data-multi="8"><span><strong>My mind races; I overthink and worry.</strong></span></label></li>
+      <li><label><input type="checkbox" name="q65" value="sleep" data-scores="intent:sleep:3" data-multi="8"><span><strong>I struggle with sleep / a busy night-mind.</strong></span></label></li>
+      <li><label><input type="checkbox" name="q65" value="anger" data-scores="intent:anger:3" data-multi="8"><span><strong>I get reactive / angry more than I&rsquo;d like.</strong></span></label></li>
+      <li><label><input type="checkbox" name="q65" value="disconnect" data-scores="intent:disconnect:3" data-multi="8"><span><strong>I feel cut off from my body.</strong></span></label></li>
+      <li><label><input type="checkbox" name="q65" value="focus" data-scores="intent:focus:3" data-multi="8"><span><strong>My attention is scattered; I can&rsquo;t focus.</strong></span></label></li>
+      <li><label><input type="checkbox" name="q65" value="stuck" data-scores="intent:stuck:3,gunas:tamas:1" data-multi="8"><span><strong>I feel stuck, numb, heavy, or low.</strong></span></label></li>
+      <li><label><input type="checkbox" name="q65" value="grief" data-scores="intent:grief:3" data-multi="8"><span><strong>I&rsquo;m grieving, or I&rsquo;ve gone numb to feeling.</strong></span></label></li>
+      <li><label><input type="checkbox" name="q65" value="love" data-scores="intent:love:3" data-multi="8"><span><strong>I long for love / deeper connection.</strong></span></label></li>
+    </ul>
+  </section>
+
+  <section class="qsection">
+    <div class="qmeta"><span>Optional 7 of 7 &middot; capacity</span><span class="opttag">single</span></div>
+    <h3 class="qsection-h">How much unbroken stillness can you honestly tolerate today?</h3>
+    <div class="qhint">Not your goal &mdash; your current ceiling. This protects you from being handed too much too soon.</div>
+    <ul class="qoptions">
+      <li><label><input type="radio" name="q66" value="lo" data-scores="nervous:sympathetic:2,doshas:vata:1,intent:focus:1"><span><strong>A minute or two before I need to move.</strong></span></label></li>
+      <li><label><input type="radio" name="q66" value="mid" data-scores="nervous:ventral:1,gunas:sattva:1"><span><strong>Five to ten minutes if I&rsquo;m honest.</strong></span></label></li>
+      <li><label><input type="radio" name="q66" value="hi" data-scores="nervous:ventral:3,gunas:sattva:2,path:raja:1"><span><strong>I can already sit quietly for a long while.</strong></span></label></li>
+      <li><label><input type="radio" name="q66" value="numb" data-scores="nervous:dorsal:2,gunas:tamas:1"><span><strong>I can sit still, but I tend to go numb or check out.</strong></span></label></li>
+    </ul>
+  </section>
+</details>
+
 <section class="qsection recap" id="recap-5">
   <div class="qmeta"><span>Recap &middot; Section 5</span></div>
   <h3 class="qsection-h">Your relationships and connections</h3>
@@ -1238,8 +1331,15 @@ footer a{color:var(--ink-soft)}
   <p id="rc-dosha-desc">&mdash;</p>
 </div>
 
+<div class="result-card" id="rc-nervous">
+  <span class="label">5 &middot; Your Nervous System &amp; Attachment</span>
+  <h3>The safety gate &mdash; what heals vs. overwhelms</h3>
+  <div class="sub">Drawn from how stress actually lands in you. Polyvagal state (settled / activated / shutdown) and attachment colouring decide whether a given practice will steady you or destabilise you &mdash; the single most-ignored factor in matching a person to a meditation.</div>
+  <div id="rc-nervous-body">&mdash;</div>
+</div>
+
 <div class="result-card primary" id="rc-tech">
-  <span class="label">5 &middot; The One Technique</span>
+  <span class="label">6 &middot; The One Technique</span>
   <h3 id="rc-tech-title">Your Top Recommendation</h3>
   <div class="sub">From your full profile, this is the single technique with the best odds of fitting you.</div>
   <div id="rc-tech-main"></div>
@@ -1250,19 +1350,19 @@ footer a{color:var(--ink-soft)}
 </div>
 
 <div class="result-card" id="rc-strengths">
-  <span class="label">6 &middot; Your Strengths and Growth Edges</span>
+  <span class="label">7 &middot; Your Strengths and Growth Edges</span>
   <h3>What you bring &mdash; and what is calling for attention</h3>
   <div id="rc-strengths-body"></div>
 </div>
 
 <div class="result-card primary" id="rc-21">
-  <span class="label">7 &middot; Your 21-Day Starter Practice</span>
+  <span class="label">8 &middot; Your 21-Day Starter Practice</span>
   <h3 id="rc-21-title">&mdash;</h3>
   <div id="rc-21-body"></div>
 </div>
 
 <div class="result-card" id="rc-save">
-  <span class="label">8 &middot; Save / Print / Download</span>
+  <span class="label">9 &middot; Save / Print / Download</span>
   <h3>Take this with you</h3>
   <p>Your answers and results are stored locally in your browser. To keep them somewhere safer:</p>
   <div style="margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap">
@@ -1900,7 +2000,13 @@ footer a{color:var(--ink-soft)}
       energy: {body:0, mind:0, heart:0, energy:0},
       gunas: {sattva:0, rajas:0, tamas:0},
       doshas: {vata:0, pitta:0, kapha:0},
-      attach: {secure:0, anxious:0, avoidant:0, disorg:0}
+      attach: {secure:0, anxious:0, avoidant:0, disorg:0},
+      /* polyvagal autonomic baseline — Porges: ventral (regulated/social), sympathetic (activated/fight-flight), dorsal (shutdown/freeze) */
+      nervous: {ventral:0, sympathetic:0, dorsal:0},
+      /* sensory / learning orientation — how this person best takes the world in */
+      sensory: {kinesthetic:0, auditory:0, visual:0, conceptual:0},
+      /* what this person actually needs help with right now (drives situational + tie-breaks) */
+      intent: {sleep:0, anxiety:0, anger:0, disconnect:0, focus:0, stuck:0, joy:0, grief:0, love:0, ego:0}
     };
     /* walk all checked inputs (radio + checkbox) and parse data-scores */
     document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked').forEach(inp=>{
@@ -1941,6 +2047,57 @@ footer a{color:var(--ink-soft)}
     /* e: 1=feeling (bhakti) 7=clarity (jnana) */
     if(sld.e >= 5){ totals.path.jnana += (sld.e-4); totals.energy.mind += (sld.e-4); }
     else if(sld.e <= 3){ totals.path.bhakti += (4-sld.e); totals.energy.heart += (4-sld.e); }
+
+    /* ============ DERIVED DIMENSIONS ============ */
+    /* Read directly from saved answers so these populate even without the optional layer.
+       Polyvagal mapping grounded in Porges: activation->sympathetic, shutdown->dorsal, connection/settledness->ventral. */
+    const A = answers || {};
+    const bump = (axis,key,n)=>{ if(totals[axis] && totals[axis][key]!=null) totals[axis][key]+=n; };
+
+    /* nervous system — from how stress actually lands */
+    const stressMap = {
+      q3:  {a:['sympathetic',3], b:['dorsal',3], c:['ventral',2], d:['sympathetic',2], e:['dorsal',1], f:['dorsal',3]},
+      q29: {act:['sympathetic',3], with:['dorsal',3], reach:['ventral',2], anal:['sympathetic',2], body:['dorsal',1], numb:['dorsal',3]}
+    };
+    Object.keys(stressMap).forEach(q=>{ const v=A[q]; const m=stressMap[q][v]; if(m) bump('nervous',m[0],m[1]); });
+    /* sleep texture (q22) tells autonomic baseline */
+    if(A.q22==='vata'||A.q22==='anx') bump('nervous','sympathetic',2);
+    if(A.q22==='kapha') bump('nervous','dorsal',2);
+    if(A.q22==='pitta') bump('nervous','sympathetic',1);
+    /* phone & numbing patterns */
+    if(A.q27==='addict') { bump('nervous','sympathetic',1); bump('nervous','dorsal',1); }
+    if(A.q24==='numb'||A.q24==='sleep') bump('nervous','dorsal',2);
+    if(A.q24==='move') bump('nervous','sympathetic',1);
+    /* secure attachment & "I don't fear it" death answer read as ventral capacity */
+    if((totals.attach.secure||0) >= 3) bump('nervous','ventral',2);
+    if(A.q50==='none') bump('nervous','ventral',1);
+    /* high tamas reads dorsal; high rajas reads sympathetic; high sattva reads ventral */
+    bump('nervous','dorsal', (totals.gunas.tamas||0)*0.4);
+    bump('nervous','sympathetic', (totals.gunas.rajas||0)*0.25);
+    bump('nervous','ventral', (totals.gunas.sattva||0)*0.3);
+
+    /* sensory / learning orientation — chiefly from how they learn (q5) and energy channel */
+    const learnMap = {a:'kinesthetic', b:'conceptual', c:'auditory', d:'visual', e:'kinesthetic'};
+    if(learnMap[A.q5]) bump('sensory',learnMap[A.q5],3);
+    bump('sensory','kinesthetic', (totals.energy.body||0)*0.4);
+    bump('sensory','conceptual', (totals.energy.mind||0)*0.4);
+    if(A.q28 && Array.isArray(A.q28) && A.q28.length) bump('sensory','auditory', Math.min(A.q28.length,3));
+    if(A.q26 && Array.isArray(A.q26) && A.q26.length) bump('sensory','visual', Math.min(A.q26.length,2));
+
+    /* intent — what they actually want help with, from the honest probes */
+    const fixMap = {anx:'anxiety', anger:'anger', lazy:'stuck', lone:'love', addict:'stuck', bod:'disconnect', feel:'grief', mem:'focus', crit:'anger', none:''};
+    if(fixMap[A.q55]) bump('intent',fixMap[A.q55],3);
+    const fearMap = {bored:'stuck', empty:'anxiety', feel:'grief', lose:'anxiety', wrong:'anxiety', weird:'disconnect', time:'focus'};
+    if(fearMap[A.q48]) bump('intent',fearMap[A.q48],2);
+    if(A.q51==='crisis'){ bump('intent','anxiety',2); bump('intent','grief',1); }
+    if(A.q51==='meaning'||A.q51==='self') bump('intent','ego',1);
+    if(Array.isArray(A.q31) && A.q31.length>=3) bump('intent','anger',2);
+    if(A.q3==='b'||A.q3==='f'||A.q29==='with'||A.q29==='numb') bump('intent','stuck',1);
+    if(A.q22==='vata'||A.q22==='anx'||A.q22==='varies') bump('intent','sleep',2);
+    if(A.q7==='c'||A.q7==='e'||A.q55==='bod') bump('intent','disconnect',2);
+    if(A.q35==='never'||A.q32==='cant'||A.q6==='c') bump('intent','grief',1);
+    if((totals.energy.heart||0) > (totals.energy.mind||0) && (totals.path.bhakti||0)>=4) bump('intent','love',1);
+
     return totals;
   }
 
@@ -2006,46 +2163,113 @@ footer a{color:var(--ink-soft)}
     tamas: {label:'Tamas &mdash; inertia', desc:'heaviness, density, dullness'}
   };
 
-  /* Technique recommendations bound to specific files & anchors */
-  const TECH_LIBRARY = {
-    karma: [
-      {name:'Conscious Movement &mdash; the body as gateway', file:'vigyan-bhairav-movement-techniques.html', anchor:'#t1', why:'Your body needs to be MET first; sitting comes later. Conscious movement gives the doer in you something to do, while teaching the witness to ride along.', level:'Beginner-friendly'},
-      {name:'Centering between two opposites', file:'vigyan-bhairav-centering-techniques.html', anchor:'#t1', why:'For doers, the still point is found between extremes &mdash; not by avoiding action, but by finding the centre INSIDE it.', level:'Foundational'},
-      {name:'Tantric union &mdash; the act made sacred', file:'vigyan-bhairav-tantra-techniques.html', anchor:'#t1', why:'A path for the embodied who refuse to leave the body behind to awaken.', level:'Intermediate'}
-    ],
-    bhakti: [
-      {name:'Permeate the Joy', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t4', why:'When joy arises, become it. For hearts who feel deeply, this technique uses your strongest channel as the doorway.', level:'Beginner-friendly'},
-      {name:'Listen with the inner ear &mdash; sound as devotion', file:'vigyan-bhairav-sound-techniques.html', anchor:'#t1', why:'For hearts that respond to music, the sacred sound becomes the meditation; the devotee disappears into the listening.', level:'Foundational'},
-      {name:'Heart as a lotus &mdash; opening practice', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t1', why:'Direct work with the heart-centre. You will recognise the territory immediately.', level:'Beginner-friendly'}
-    ],
-    jnana: [
-      {name:'Self-inquiry &mdash; who am I?', file:'vigyan-bhairav-negation-techniques.html', anchor:'#t1', why:'The classical Jnana practice. Refuse every answer the mind hands back, until the questioner is itself exposed as a thought.', level:'Foundational'},
-      {name:'Witnessing the gap between thoughts', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t1', why:'For sharp minds: catch the silence between two thoughts, and inquiry deepens automatically.', level:'Foundational'},
-      {name:'Investigate the source of consciousness', file:'vigyan-bhairav-mind-techniques.html', anchor:'#t1', why:'A direct, philosophical practice for the inquirer who refuses to take answers on faith.', level:'Intermediate'}
-    ],
-    raja: [
-      {name:'Sky gazing &mdash; the boundless witness', file:'vigyan-bhairav-light-techniques.html', anchor:'#t1', why:'Your nature already wants to dissolve into space. This technique gives that pull a place to go.', level:'Beginner-friendly'},
-      {name:'Centering &mdash; rest at the still point', file:'vigyan-bhairav-centering-techniques.html', anchor:'#t1', why:'For witnesses, the still point is already familiar; this practice strengthens it.', level:'Foundational'},
-      {name:'Breath gap &mdash; the natural pause', file:'vigyan-bhairav-breath-techniques.html', anchor:'#t1', why:'The space between in-breath and out-breath is the doorway. For the contemplative, this opens fast.', level:'Beginner-friendly'}
-    ]
-  };
+  /* ===== Human-readable labels for reason strings ===== */
+  const PATH_NAME = {karma:'Karma (action)', bhakti:'Bhakti (devotion)', jnana:'Jnana (inquiry)', raja:'Raja (witnessing)'};
+  const NERV_NAME = {ventral:'settled / socially-engaged', sympathetic:'activated / fight-or-flight', dorsal:'shut-down / freeze'};
+  const NEED_NAME = {sleep:'sleep & a racing night-mind', anxiety:'anxiety / overthinking', anger:'anger & reactivity', disconnect:'reconnecting with the body', focus:'scattered attention', stuck:'stuckness / numbness', joy:'amplifying joy', grief:'grief & feeling again', love:'love & connection', ego:'seeing through the &ldquo;I&rdquo;'};
 
-  /* Situational recommendations &mdash; mapped by need rather than path */
-  const SITUATIONAL = {
-    sleep:{label:'For trouble sleeping / racing mind at night', file:'vigyan-bhairav-sleep-techniques.html', anchor:'#t1',
-      tech:'Sleep-Threshold Awareness', why:'The technique uses the moment between waking and sleeping &mdash; your most natural meditation window. Especially good for Vata-leaning sleepers and overthinkers.'},
-    anxiety:{label:'For anxiety / overthinking / spiralling thoughts', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t1',
-      tech:'Witness the gap', why:'Anxiety lives in identification with thought. The witnessing practice creates a tiny gap; inside the gap, the spiral cannot continue.'},
-    disconnect:{label:'For when you feel disconnected from your body', file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t1',
-      tech:'Sensory anchoring &mdash; back to the body', why:'Returns awareness through the senses to the body without forcing or fighting. A gentle re-entry.'},
-    anger:{label:'For when you feel angry / triggered / reactive', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t6',
-      tech:'Be undisturbed in extreme desire', why:'Don&rsquo;t suppress the anger; don&rsquo;t act it out. Stay with it as pure energy without identification. The technique transforms heat into clarity.'},
-    joy:{label:'For when you want to amplify joy', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t4',
-      tech:'Permeate the Joy', why:'When joy arises, instead of grasping it or distrusting it, become it. The technique lets joy widen until there is no one left to be joyful.'},
-    focus:{label:'For when you can&rsquo;t focus / scattered attention', file:'vigyan-bhairav-mind-techniques.html', anchor:'#t1',
-      tech:'Single-pointed attention &mdash; the still mind', why:'Brings the scattered mind to one point, not by force but by giving it something it loves to attend to. Restores focus without strain.'},
-    stuck:{label:'For when you feel stuck / numb / depressed', file:'vigyan-bhairav-movement-techniques.html', anchor:'#t1',
-      tech:'Conscious movement &mdash; wake the body', why:'Stuckness lives in tamas (inertia). Movement is the only thing that lifts it cleanly. Start with the body; the rest follows.'}
+  /* ============================================================
+     TECHNIQUE CATALOG — every entry points to a REAL technique
+     anchor that exists in this repo. Tags drive the scorer.
+     intensity 1 (gentle) .. 3 (strong / needs stability first)
+     ============================================================ */
+  const TECH_CATALOG = [
+    /* ---- Breath ---- */
+    {id:'brt1', file:'vigyan-bhairav-breath-techniques.html', anchor:'#t1', title:'The gap between two breaths', blurb:'Rest attention in the tiny pause after the in-breath, before it turns out. The doorway Buddha used.', level:'Beginner-friendly', intensity:1, path:['raja','jnana'], energy:['energy','mind'], liftsGuna:null, doshaGood:['vata','pitta'], doshaBad:[], nervGood:['ventral','sympathetic'], nervBad:[], needs:['anxiety','focus']},
+    {id:'brt6', file:'vigyan-bhairav-breath-techniques.html', anchor:'#t6', title:'Attention in the gap, during activity', blurb:'Keep awareness in the breath-gap while you work and move. Life becomes a drama you act in, fully, without being swallowed.', level:'Foundational', intensity:1, path:['karma'], energy:['body'], liftsGuna:null, doshaGood:['pitta','kapha'], doshaBad:[], nervGood:['sympathetic','ventral'], nervBad:[], needs:['disconnect','focus']},
+    {id:'brt5', file:'vigyan-bhairav-breath-techniques.html', anchor:'#t5', title:'Attention between the eyebrows', blurb:'Gather the breath-essence at the third eye and let it shower as light. Sharp, potent — purity of mind matters here.', level:'Intermediate', intensity:2, path:['jnana','raja'], energy:['mind'], liftsGuna:null, doshaGood:[], doshaBad:['pitta'], nervGood:['ventral'], nervBad:['dorsal'], needs:['focus']},
+    {id:'brt8', file:'vigyan-bhairav-breath-techniques.html', anchor:'#t8', title:'Devotion at the breath junctions', blurb:'Rest at the turning points of breath with reverence — the body breathed by the divine, not by you.', level:'Foundational', intensity:1, path:['bhakti'], energy:['heart','energy'], liftsGuna:null, doshaGood:['vata','pitta'], doshaBad:[], nervGood:['ventral'], nervBad:[], needs:['love']},
+    /* ---- Sound ---- */
+    {id:'snd9', file:'vigyan-bhairav-sound-techniques.html', anchor:'#t9', title:'A word ending in &ldquo;ah&rdquo;', blurb:'Intone a word that ends in &ldquo;ah&rdquo; and ride the out-breath into the gap. The exhale is a small death; it relaxes the whole system.', level:'Beginner-friendly', intensity:1, path:['bhakti','raja'], energy:['energy','heart'], liftsGuna:null, doshaGood:['vata','pitta'], doshaBad:[], nervGood:['sympathetic','dorsal','ventral'], nervBad:[], needs:['anxiety','sleep']},
+    {id:'snd3', file:'vigyan-bhairav-sound-techniques.html', anchor:'#t3', title:'Intone AUM, slowly', blurb:'Sound AUM aloud, then softer, until sound dissolves into soundlessness. Chanting tones the system and lifts heaviness.', level:'Beginner-friendly', intensity:1, path:['bhakti','karma'], energy:['heart','body'], liftsGuna:'tamas', doshaGood:['kapha'], doshaBad:[], nervGood:['dorsal','ventral'], nervBad:[], needs:['stuck']},
+    {id:'snd5', file:'vigyan-bhairav-sound-techniques.html', anchor:'#t5', title:'The central sound of music', blurb:'Listening to a stringed instrument, hear the one composite sound beneath the notes. The devotee disappears into the listening.', level:'Foundational', intensity:1, path:['bhakti'], energy:['heart'], liftsGuna:null, doshaGood:['vata','pitta'], doshaBad:[], nervGood:['ventral'], nervBad:[], needs:['joy','grief']},
+    {id:'snd2', file:'vigyan-bhairav-sound-techniques.html', anchor:'#t2', title:'Bathe in the centre of sound', blurb:'Feel yourself the still centre toward which all sound flows. In the soundless centre, you are.', level:'Foundational', intensity:1, path:['raja'], energy:['energy'], liftsGuna:null, doshaGood:['vata'], doshaBad:[], nervGood:['ventral','sympathetic'], nervBad:[], needs:['anxiety']},
+    /* ---- Light & gazing ---- */
+    {id:'lgt1', file:'vigyan-bhairav-light-techniques.html', anchor:'#t1', title:'Sky-gazing &mdash; the boundless witness', blurb:'Look into the open blue beyond the clouds and let the emptiness mirror inward. The cleanest entry for the contemplative.', level:'Beginner-friendly', intensity:1, path:['raja','jnana'], energy:['energy'], liftsGuna:null, doshaGood:['pitta','vata'], doshaBad:[], nervGood:['ventral','sympathetic'], nervBad:[], needs:['anxiety','stuck']},
+    {id:'lgt5', file:'vigyan-bhairav-light-techniques.html', anchor:'#t5', title:'Light rising up the spine', blurb:'Raise light from centre to centre up the vertebrae. Powerful kundalini work — only on a stable, well-grounded system.', level:'Advanced', intensity:3, path:['raja','karma'], energy:['energy','body'], liftsGuna:'tamas', doshaGood:['kapha'], doshaBad:['pitta','vata'], nervGood:['ventral'], nervBad:['dorsal','sympathetic'], needs:[]},
+    /* ---- Witnessing ---- */
+    {id:'wit5', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t5', title:'Self-remembering', blurb:'While doing anything — seeing, tasting, walking — quietly feel &ldquo;I am.&rdquo; Not the words; the felt sense behind them.', level:'Foundational', intensity:1, path:['jnana','raja','karma'], energy:['mind','energy'], liftsGuna:null, doshaGood:['vata','pitta','kapha'], doshaBad:[], nervGood:['ventral','sympathetic'], nervBad:[], needs:['disconnect','focus']},
+    {id:'wit7', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t7', title:'Be undisturbed in extreme desire', blurb:'In the grip of anger or craving, neither suppress nor act — stay at the still centre of the cyclone. Heat becomes clarity.', level:'Intermediate', intensity:2, path:['jnana','raja'], energy:['mind'], liftsGuna:'rajas', doshaGood:['pitta'], doshaBad:[], nervGood:['ventral'], nervBad:['dorsal'], needs:['anger']},
+    {id:'wit6', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t6', title:'Wherever satisfaction is found, become it', blurb:'Catch each small contentment and fill it out. Retrains a mind addicted to the negative; lifts heaviness from the inside.', level:'Beginner-friendly', intensity:1, path:['bhakti','karma'], energy:['heart'], liftsGuna:'tamas', doshaGood:['kapha','vata'], doshaBad:[], nervGood:['dorsal','ventral'], nervBad:[], needs:['stuck','joy']},
+    {id:'wit8', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t8', title:'See the world as a play', blurb:'Look on the whole show as a juggling, a picture-show. Seriousness is the dust; lightness clears it.', level:'Foundational', intensity:1, path:['jnana'], energy:['mind'], liftsGuna:'rajas', doshaGood:['pitta','vata'], doshaBad:[], nervGood:['ventral','sympathetic'], nervBad:[], needs:['anxiety','stuck']},
+    {id:'wit9', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t9', title:'Stay in the middle, neither pleasure nor pain', blurb:'Rest attention exactly between the opposites until the pendulum of mind stops. Buddha&rsquo;s middle way.', level:'Intermediate', intensity:2, path:['jnana','raja'], energy:['mind'], liftsGuna:'rajas', doshaGood:['pitta'], doshaBad:[], nervGood:['ventral'], nervBad:[], needs:['anger','anxiety']},
+    /* ---- Self-inquiry / negation ---- */
+    {id:'neg5', file:'vigyan-bhairav-negation-techniques.html', anchor:'#t5', title:'Feel &mdash; my thought, my I-ness &mdash; me', blurb:'Drop from thinking into feeling, then watch: is a single thought actually yours? The &ldquo;I&rdquo; loosens at its root.', level:'Intermediate', intensity:2, path:['jnana'], energy:['mind'], liftsGuna:null, doshaGood:['pitta'], doshaBad:[], nervGood:['ventral'], nervBad:['dorsal'], needs:['ego']},
+    {id:'neg7', file:'vigyan-bhairav-negation-techniques.html', anchor:'#t7', title:'&ldquo;I am&rdquo; &mdash; known illimitably', blurb:'Begin from the bare fact of existing and let it widen past every boundary. Inquiry that opens rather than tightens.', level:'Intermediate', intensity:2, path:['jnana','raja'], energy:['mind','energy'], liftsGuna:null, doshaGood:['vata','pitta'], doshaBad:[], nervGood:['ventral'], nervBad:['dorsal'], needs:['ego']},
+    /* ---- Void / emptiness ---- */
+    {id:'voi2', file:'vigyan-bhairav-void-techniques.html', anchor:'#t2', title:'Roam until exhausted, then drop', blurb:'Move until the body genuinely empties, then fall to the ground and let the dropping be total. Discharge, then stillness.', level:'Foundational', intensity:2, path:['karma'], energy:['body'], liftsGuna:'tamas', doshaGood:['kapha'], doshaBad:[], nervGood:['sympathetic'], nervBad:['dorsal'], needs:['stuck','anger']},
+    {id:'voi3', file:'vigyan-bhairav-void-techniques.html', anchor:'#t3', title:'At the instant of deprivation, transcend', blurb:'As strength or knowing drains away, instead of clutching, let go through the opening. A strong dissolving practice.', level:'Advanced', intensity:3, path:['raja','jnana'], energy:['energy'], liftsGuna:null, doshaGood:[], doshaBad:['vata'], nervGood:['ventral'], nervBad:['dorsal','sympathetic'], needs:['ego']},
+    /* ---- Senses ---- */
+    {id:'sen6', file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t6', title:'Become the taste', blurb:'Eating or drinking, slow down and become the taste itself, until it fills the whole body. The simplest way home to the senses.', level:'Beginner-friendly', intensity:1, path:['karma','bhakti'], energy:['body'], liftsGuna:null, doshaGood:['vata','pitta','kapha'], doshaBad:[], nervGood:['ventral','sympathetic','dorsal'], nervBad:[], needs:['disconnect']},
+    {id:'sen7', file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t7', title:'Rest in the aware sense', blurb:'When a sense is vividly alive — a sound, a touch — stay in the awareness, not the object. Re-entry to the body without force.', level:'Foundational', intensity:1, path:['karma','raja'], energy:['body','energy'], liftsGuna:null, doshaGood:['vata'], doshaBad:[], nervGood:['ventral','sympathetic','dorsal'], nervBad:[], needs:['disconnect','focus']},
+    {id:'sen5', file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t5', title:'See as if for the first time', blurb:'Look at a familiar face or object as though you had never seen it. Wonder dissolves the film of the old.', level:'Beginner-friendly', intensity:1, path:['bhakti','jnana'], energy:['heart','body'], liftsGuna:'tamas', doshaGood:['kapha','vata'], doshaBad:[], nervGood:['dorsal','ventral'], nervBad:[], needs:['stuck','joy']},
+    /* ---- Sleep ---- */
+    {id:'slp2', file:'vigyan-bhairav-sleep-techniques.html', anchor:'#t2', title:'Awareness at the edge of sleep', blurb:'Catch the gap where waking has gone and sleep has not yet come. Your most natural nightly meditation window.', level:'Beginner-friendly', intensity:1, path:['raja'], energy:['energy'], liftsGuna:null, doshaGood:['vata','pitta'], doshaBad:[], nervGood:['ventral','sympathetic'], nervBad:[], needs:['sleep','anxiety']},
+    /* ---- Tantric union ---- */
+    {id:'tan2', file:'vigyan-bhairav-tantra-techniques.html', anchor:'#t2', title:'Stay in the fire, not the embers', blurb:'In union, remain in the warm beginning rather than rushing to release. The body kept sacred becomes a doorway.', level:'Intermediate', intensity:2, path:['karma','bhakti'], energy:['body','heart'], liftsGuna:null, doshaGood:['pitta','kapha'], doshaBad:[], nervGood:['ventral'], nervBad:['dorsal'], needs:['love','disconnect']},
+    /* ---- Heart & devotion ---- */
+    {id:'hrt1', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t1', title:'Devotion frees', blurb:'Let love itself — for a person, a presence, the open sky — be the whole practice. The shortest sutra; the heart&rsquo;s direct road.', level:'Beginner-friendly', intensity:1, path:['bhakti'], energy:['heart'], liftsGuna:null, doshaGood:['vata','pitta','kapha'], doshaBad:[], nervGood:['ventral'], nervBad:[], needs:['love','grief']},
+    {id:'hrt2', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t2', title:'Permeate the joy', blurb:'When joy arises — seeing a long-absent friend — don&rsquo;t grasp it; become it, until no one is left to be joyful.', level:'Beginner-friendly', intensity:1, path:['bhakti'], energy:['heart'], liftsGuna:'tamas', doshaGood:['vata','kapha'], doshaBad:[], nervGood:['ventral','dorsal'], nervBad:[], needs:['joy']},
+    {id:'hrt4', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t4', title:'Peace pervading the heart', blurb:'In an easy posture, let a great peace gradually fill the space between the armpits. Gentle, grounding, safe.', level:'Beginner-friendly', intensity:1, path:['bhakti','raja'], energy:['heart'], liftsGuna:null, doshaGood:['vata','pitta'], doshaBad:[], nervGood:['ventral','sympathetic','dorsal'], nervBad:[], needs:['grief','anxiety']},
+    /* ---- Centering ---- */
+    {id:'cen2', file:'vigyan-bhairav-centering-techniques.html', anchor:'#t2', title:'The thread of light in the spine', blurb:'Place attention in the fine nerve at the centre of the spinal column. Grounds the body-oriented and steadies a scattered system.', level:'Foundational', intensity:2, path:['karma','raja'], energy:['body'], liftsGuna:null, doshaGood:['vata'], doshaBad:[], nervGood:['ventral'], nervBad:[], needs:['disconnect','focus']},
+    {id:'cen5', file:'vigyan-bhairav-centering-techniques.html', anchor:'#t5', title:'Unminding mind, keep in the middle', blurb:'After anger, don&rsquo;t swing to repentance; rest exactly in the middle until mind dissolves. Buddha&rsquo;s razor.', level:'Intermediate', intensity:2, path:['jnana'], energy:['mind'], liftsGuna:'rajas', doshaGood:['pitta'], doshaBad:[], nervGood:['ventral'], nervBad:[], needs:['anger']},
+    {id:'cen6', file:'vigyan-bhairav-centering-techniques.html', anchor:'#t6', title:'Look lovingly at one object', blurb:'Rest a loving gaze on a single thing and stay — the blessing waits in the middle of the object.', level:'Beginner-friendly', intensity:1, path:['bhakti'], energy:['heart'], liftsGuna:null, doshaGood:['vata','pitta'], doshaBad:[], nervGood:['ventral'], nervBad:[], needs:['focus','love']},
+    /* ---- Mind ---- */
+    {id:'mnd1', file:'vigyan-bhairav-mind-techniques.html', anchor:'#t1', title:'Wherever the mind wanders &mdash; this', blurb:'Don&rsquo;t fight the wandering mind; wherever it lands, drop into that very point. The ordinary mind itself becomes the door.', level:'Foundational', intensity:1, path:['jnana','raja'], energy:['mind'], liftsGuna:null, doshaGood:['vata','pitta'], doshaBad:[], nervGood:['ventral','sympathetic'], nervBad:[], needs:['focus','anxiety']},
+    /* ---- Imagination ---- */
+    {id:'img6', file:'vigyan-bhairav-imagination-techniques.html', anchor:'#t6', title:'Abide in endless space', blurb:'Imagine a place endlessly spacious, clear of all things — and there the pressure of mind ends.', level:'Foundational', intensity:1, path:['raja'], energy:['energy','mind'], liftsGuna:null, doshaGood:['pitta'], doshaBad:[], nervGood:['ventral'], nervBad:[], needs:['anxiety','stuck']},
+    /* ---- Death contemplation ---- */
+    {id:'dth1', file:'vigyan-bhairav-death-techniques.html', anchor:'#t1', title:'Fire rising through the form', blurb:'See fire rise from the toes until the whole body is ash but not you. A profound death-rehearsal — strong stuff.', level:'Advanced', intensity:3, path:['jnana','raja'], energy:['energy'], liftsGuna:null, doshaGood:[], doshaBad:['vata'], nervGood:['ventral'], nervBad:['dorsal','sympathetic'], needs:['ego']}
+  ];
+
+  /* Score every catalogued technique against the full profile.
+     prof carries percent maps + the top key of each axis + raw intent. */
+  function scoreTechniques(prof){
+    return TECH_CATALOG.map(t=>{
+      let s = 0; const reasons = [];
+      /* PATH — strongest signal (preserves the path-led design) */
+      t.path.forEach(p=>{ s += (prof.path[p]||0) * 1.0; });
+      if(t.path.includes(prof.topPath)){ s += 14; reasons.push('fits your ' + PATH_NAME[prof.topPath] + ' nature'); }
+      else if(t.path.includes(prof.secPath)){ s += 5; }
+      /* ENERGY channel */
+      t.energy.forEach(e=>{ s += (prof.energy[e]||0) * 0.7; });
+      if(t.energy.includes(prof.topEnergy)){ s += 9; reasons.push('works through your ' + prof.topEnergy + '-dominant channel'); }
+      /* GUNA — reward techniques that lift the user's EXCESS guna (tamas/rajas) */
+      if(t.liftsGuna && t.liftsGuna === prof.topGuna && prof.topGuna !== 'sattva'){
+        s += 11; reasons.push('counters your high ' + t.liftsGuna + (t.liftsGuna==='tamas' ? ' (heaviness)' : ' (fire)'));
+      }
+      /* DOSHA — body's baseline; heal vs. aggravate */
+      if(t.doshaGood.includes(prof.topDosha)){ s += 7; reasons.push('suits your ' + prof.topDosha + ' constitution'); }
+      if(t.doshaBad.includes(prof.topDosha)){ s -= 16; }
+      /* NERVOUS SYSTEM — the safety gate (Porges) */
+      if(t.nervGood.includes(prof.topNerv)){ s += 10; reasons.push('safe for your ' + NERV_NAME[prof.topNerv] + ' nervous-system state'); }
+      if(t.nervBad.includes(prof.topNerv)){ s -= 22; }
+      /* intense practices are wrong first medicine for a dysregulated system */
+      if(t.intensity >= 3 && (prof.topNerv === 'dorsal' || prof.topNerv === 'sympathetic')) s -= 12;
+      if(t.intensity >= 3 && prof.coverage < 0.7) s -= 4; /* don't hand a beginner the strong stuff on thin data */
+      /* INTENT — what they actually came for */
+      t.needs.forEach(n=>{ const w = prof.intent[n] || 0; if(w > 0){ s += w * 5; if(w >= 2) reasons.push('addresses what you came for: ' + NEED_NAME[n]); } });
+      /* small nudge: sensory orientation toward kinesthetic favours body practices */
+      if(prof.topSensory === 'kinesthetic' && t.energy.includes('body')) s += 3;
+      if(prof.topSensory === 'auditory' && /sound|breath/.test(t.file)) s += 3;
+      if(prof.topSensory === 'visual' && /light|imagination/.test(t.file)) s += 3;
+      return {t:t, score:s, reasons:Array.from(new Set(reasons))};
+    }).sort((a,b)=> b.score - a.score);
+  }
+
+  /* Need -> technique map for the personalised situational block (anchors verified correct). */
+  const NEED_TECH = {
+    sleep:{label:'When sleep won&rsquo;t come / the night-mind races', file:'vigyan-bhairav-sleep-techniques.html', anchor:'#t2', tech:'Awareness at the edge of sleep', why:'Uses the gap where waking dissolves and sleep has not yet arrived &mdash; your most natural nightly window. Gentle for an activated or Vata-leaning system.'},
+    anxiety:{label:'When anxious / overthinking / spiralling', file:'vigyan-bhairav-breath-techniques.html', anchor:'#t1', tech:'The gap between two breaths', why:'Anxiety rides the breath. Resting in the natural pause gives the spiral nowhere to continue &mdash; without forcing the mind quiet.'},
+    anger:{label:'When angry / triggered / reactive', file:'vigyan-bhairav-witnessing-techniques.html', anchor:'#t7', tech:'Be undisturbed in extreme desire', why:'Neither suppress the heat nor act it out. Stay at the still centre of the cyclone and the energy converts into clarity.'},
+    disconnect:{label:'When you feel disconnected from your body', file:'vigyan-bhairav-sensory-techniques.html', anchor:'#t6', tech:'Become the taste', why:'The senses are the shortest road home. Becoming the taste of food or drink returns you to the body without force or fight.'},
+    focus:{label:'When attention is scattered', file:'vigyan-bhairav-mind-techniques.html', anchor:'#t1', tech:'Wherever the mind wanders &mdash; this', why:'Rather than fighting the wandering mind, you drop into wherever it lands. The restless mind itself becomes the doorway.'},
+    stuck:{label:'When you feel stuck / numb / heavy', file:'vigyan-bhairav-sound-techniques.html', anchor:'#t3', tech:'Intone AUM, slowly', blurbAnchor:true, why:'Stuckness is tamas (inertia). Sound and vibration lift it cleanly &mdash; add fire before you add stillness.'},
+    joy:{label:'When you want to deepen joy', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t2', tech:'Permeate the joy', why:'When joy arises, don&rsquo;t grasp it or distrust it &mdash; become it, until it widens past the one who is enjoying.'},
+    grief:{label:'When grieving / unable to feel', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t4', tech:'Peace pervading the heart', why:'Let a gradual peace fill the heart-space. Safe and grounding when grief is close; it lets feeling return at its own pace.'},
+    love:{label:'When you long for love / connection', file:'vigyan-bhairav-heart-techniques.html', anchor:'#t1', tech:'Devotion frees', why:'Let love itself be the practice. Kept wide and undefended rather than collapsed onto one object, devotion is the heart&rsquo;s direct road.'},
+    ego:{label:'When you want to see through the &ldquo;I&rdquo;', file:'vigyan-bhairav-negation-techniques.html', anchor:'#t5', tech:'Feel &mdash; my thought, my I-ness &mdash; me', why:'Drop from thinking into feeling and watch whether a single thought is truly yours. The &ldquo;I&rdquo; loosens at the root.'}
   };
 
   /* =================== RENDER RESULTS =================== */
@@ -2068,9 +2292,45 @@ footer a{color:var(--ink-soft)}
     const primaryDosha = doshaRanked[0];
     const primaryGuna = gunaRanked[0];
 
+    /* ===== derived axes: nervous system, attachment, sensory ===== */
+    const nervousPct = pcts(totals.nervous);
+    const attachPct  = pcts(totals.attach);
+    const sensoryPct = pcts(totals.sensory);
+    const nervRanked = rankByValueDesc(nervousPct);
+    const attachRanked = rankByValueDesc(attachPct);
+    const sensoryRanked = rankByValueDesc(sensoryPct);
+    const primaryNerv = nervRanked[0];
+    const primaryAttach = attachRanked[0];
+    const primarySensory = sensoryRanked[0];
+
+    /* ===== coverage + confidence ===== */
+    const OPTIONAL_IDS = ['q60','q61','q62','q63','q64','q65','q66'];
+    const optCount = OPTIONAL_IDS.filter(id=>{ const v = answers[id]; return (typeof v==='string'&&v.length)||(Array.isArray(v)&&v.length); }).length;
+    const coverage = Math.min(1, countAnswered() / TOTAL_QUESTIONS);
+    const pathMargin = (pathPct[pathRanked[0]]||0) - (pathPct[pathRanked[1]]||0);
+    const energyMargin = (energyPct[energyRanked[0]]||0) - (energyPct[energyRanked[1]]||0);
+    const confScore = coverage*55 + Math.min(pathMargin,25) + Math.min(energyMargin,12) + Math.min(optCount*2.5,12);
+    let confLabel;
+    if(confScore >= 80) confLabel = 'Very high';
+    else if(confScore >= 62) confLabel = 'High';
+    else if(confScore >= 42) confLabel = 'Moderate';
+    else confLabel = 'Tentative';
+    const confNote = 'Confidence: <strong>' + confLabel + '</strong> &mdash; based on ' + Math.round(coverage*100) + '% of questions answered' +
+      (optCount>0 ? ', ' + optCount + ' deep-research question' + (optCount>1?'s':'') : '') +
+      ', and a ' + (pathMargin>=20?'clear':pathMargin>=8?'workable':'narrow') + ' margin between your top paths.' +
+      (confLabel==='Tentative' || confLabel==='Moderate' ? ' Answer more questions &mdash; especially the optional deep-research set &mdash; to sharpen this.' : '');
+
+    /* ===== full multidimensional profile + ranked techniques ===== */
+    const prof = {
+      path:pathPct, energy:energyPct, gunas:gunaPct, doshas:doshaPct, nervous:nervousPct, intent:totals.intent,
+      topPath:primaryPath, secPath:secondaryPath, topEnergy:primaryEnergy, topGuna:primaryGuna,
+      topDosha:primaryDosha, topNerv:primaryNerv, topSensory:primarySensory, coverage:coverage
+    };
+    const techRanked = scoreTechniques(prof);
+
     /* PATH card */
     const pInfo = PATH_INFO[primaryPath];
-    document.getElementById('rc-path-title').innerHTML = pInfo.label + '<span class="confidence-pill">' + pathPct[primaryPath] + '% match</span>';
+    document.getElementById('rc-path-title').innerHTML = pInfo.label + '<span class="confidence-pill">' + confLabel + ' confidence</span>';
     document.getElementById('rc-path-sub').textContent = 'Primary: ' + primaryPath + ' &middot; Secondary: ' + secondaryPath;
     const pathLabels = {karma:'Karma',bhakti:'Bhakti',jnana:'Jnana',raja:'Raja'};
     document.getElementById('rc-path-bars').innerHTML = ['karma','bhakti','jnana','raja'].map(k=>(
@@ -2119,40 +2379,79 @@ footer a{color:var(--ink-soft)}
     )).join('');
     document.getElementById('rc-dosha-desc').innerHTML = '<strong>' + dInfo.label + '.</strong> ' + dInfo.desc + ' <em>What you need:</em> ' + dInfo.need;
 
-    /* TECH RECOMMENDATIONS */
-    const lib = TECH_LIBRARY[primaryPath];
-    const main = lib[0];
+    /* TECH RECOMMENDATIONS — scored against the FULL profile */
+    const topPick = techRanked[0];
+    const reasonHtml = (r)=> r.length ? '<ul class="clean" style="margin:.5rem 0 .2rem">' + r.slice(0,4).map(x=>'<li style="font-size:.86rem">' + x + '</li>').join('') + '</ul>' : '';
+    /* keep a `main` object in the old shape for the 21-day plan below */
+    const main = {name:topPick.t.title, file:topPick.t.file, anchor:topPick.t.anchor, why:topPick.t.blurb, level:topPick.t.level};
+    const fileNameOf = (f)=> f.replace('vigyan-bhairav-','').replace('-techniques.html','');
+    const techCard = (entry, primary)=>{
+      const t = entry.t;
+      return '<div class="tech-rec"' + (primary?' style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent-soft) inset"':'') + '>' +
+        '<span class="lvl">' + t.level + '</span>' +
+        '<h5><a href="' + t.file + t.anchor + '">' + t.title + '</a></h5>' +
+        '<p class="why">' + t.blurb + '</p>' +
+        (primary ? '<div style="font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase;margin-top:.6rem;font-weight:600">Why this fits you</div>' + reasonHtml(entry.reasons) : '') +
+        '<p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-faint);margin-top:.4rem">In: <a href="' + t.file + '">' + fileNameOf(t.file) + ' techniques</a></p>' +
+        '</div>';
+    };
+    /* alternates: next best that are NOT the same file as the top pick, to give range */
+    const alternates = [];
+    const seenFiles = {}; seenFiles[topPick.t.file] = 1;
+    for(let i=1;i<techRanked.length && alternates.length<4;i++){
+      const e = techRanked[i];
+      if(seenFiles[e.t.file] && alternates.length>=2) continue;
+      seenFiles[e.t.file] = 1; alternates.push(e);
+    }
     document.getElementById('rc-tech-main').innerHTML =
-      '<div class="tech-rec">' +
-      '<span class="lvl">' + main.level + '</span>' +
-      '<h5><a href="' + main.file + main.anchor + '">' + main.name + '</a></h5>' +
-      '<p class="why">' + main.why + '</p>' +
-      '<p style="font-family:var(--sans);font-size:.84rem;color:var(--ink-faint);margin-top:.4rem">In: <a href="' + main.file + '">' + main.file.replace('vigyan-bhairav-','').replace('-techniques.html','') + ' techniques</a></p>' +
-      '</div>' +
-      '<h4 style="font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:1.5rem 0 .6rem;font-weight:600">More from your primary path</h4>' +
-      lib.slice(1).map(t=>(
-        '<div class="tech-rec">' +
-        '<span class="lvl">' + t.level + '</span>' +
-        '<h5><a href="' + t.file + t.anchor + '">' + t.name + '</a></h5>' +
-        '<p class="why">' + t.why + '</p></div>'
-      )).join('') +
-      /* secondary path bonus */
-      '<h4 style="font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:1.5rem 0 .6rem;font-weight:600">From your secondary path (after 21 days)</h4>' +
-      TECH_LIBRARY[secondaryPath].slice(0, 1).map(t=>(
-        '<div class="tech-rec">' +
-        '<span class="lvl">' + t.level + '</span>' +
-        '<h5><a href="' + t.file + t.anchor + '">' + t.name + '</a></h5>' +
-        '<p class="why">' + t.why + '</p></div>'
-      )).join('');
+      techCard(topPick, true) +
+      '<h4 style="font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:1.5rem 0 .6rem;font-weight:600">Other strong matches for you</h4>' +
+      alternates.map(e=>techCard(e,false)).join('') +
+      '<p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);font-style:italic;margin-top:1rem">' + confNote + '</p>';
 
-    /* SITUATIONAL */
-    const sitKeys = ['sleep','anxiety','disconnect','anger','joy','focus','stuck'];
+    /* SITUATIONAL — personalised: lead with what YOU actually flagged */
+    const intentRanked = Object.keys(totals.intent).filter(k=>NEED_TECH[k]).sort((a,b)=>(totals.intent[b]||0)-(totals.intent[a]||0));
+    const flagged = intentRanked.filter(k=>(totals.intent[k]||0) > 0);
+    /* always show a useful spread: your flagged needs first, then fill from a sensible default order */
+    const defaultOrder = ['anxiety','sleep','anger','disconnect','focus','stuck','joy','grief','love','ego'];
+    const sitKeys = [];
+    flagged.forEach(k=>{ if(sitKeys.length<6 && sitKeys.indexOf(k)<0) sitKeys.push(k); });
+    defaultOrder.forEach(k=>{ if(sitKeys.length<6 && sitKeys.indexOf(k)<0) sitKeys.push(k); });
+    const sitClass = {sleep:'sleep',anxiety:'anxiety',anger:'anger',disconnect:'disconnect',focus:'focus',stuck:'stuck',joy:'joy',grief:'joy',love:'joy',ego:'focus'};
     document.getElementById('rc-tech-sits').innerHTML = sitKeys.map(k=>{
-      const s = SITUATIONAL[k];
-      return '<div class="sit ' + k + '"><div class="when ' + k + '">' + s.label + '</div>' +
-        '<div class="what"><a href="' + s.file + s.anchor + '">' + s.tech + '</a> &middot; <a href="' + s.file + '">in ' + s.file.replace('vigyan-bhairav-','').replace('-techniques.html','') + '</a></div>' +
+      const s = NEED_TECH[k]; const cls = sitClass[k] || 'focus';
+      const youFlag = (totals.intent[k]||0) > 0 ? ' <span style="font-size:.62rem;letter-spacing:.12em;background:var(--accent);color:#fff;padding:.1rem .45rem;border-radius:999px;vertical-align:middle">YOU FLAGGED THIS</span>' : '';
+      return '<div class="sit ' + cls + '"><div class="when ' + cls + '">' + s.label + youFlag + '</div>' +
+        '<div class="what"><a href="' + s.file + s.anchor + '">' + s.tech + '</a> &middot; <a href="' + s.file + '">in ' + fileNameOf(s.file) + '</a></div>' +
         '<div class="why">' + s.why + '</div></div>';
     }).join('');
+
+    /* NERVOUS SYSTEM + ATTACHMENT card (newly activated dimensions) */
+    const nervEl = document.getElementById('rc-nervous-body');
+    if(nervEl){
+      const nervInfo = {
+        ventral:{name:'Ventral / settled', desc:'Your baseline tends toward a regulated, socially-engaged state &mdash; the ground from which almost any practice can grow. This is the safest constitution for meditation; you can explore widely.'},
+        sympathetic:{name:'Sympathetic / activated', desc:'You tend to run mobilised &mdash; fight-or-flight, fast, driven, sometimes wired-and-tired. Begin with practices that discharge and down-shift (exhale-led sound, movement, the breath-gap) before long silent sitting, which can amplify activation.'},
+        dorsal:{name:'Dorsal / shut-down', desc:'Under load you tend toward freeze, numbness, collapse. Do NOT start with empty, void, or long-still practices &mdash; they deepen the shutdown. Begin with gentle activation: sound, the senses, a little movement, warmth, joy.'}
+      };
+      const attInfo = {
+        secure:'Secure &mdash; you can lean on a practice (or a teacher) without losing yourself. Devotional and relational techniques are safe ground for you.',
+        anxious:'Anxious-leaning &mdash; watch the pull to turn a technique or teacher into reassurance. Your medicine is steady, self-held practice; let devotion be wide, not clinging.',
+        avoidant:'Avoidant-leaning &mdash; you may prefer to do this alone and distrust surrender. Honour that, but let heart and sensory practices gently re-open what inquiry alone keeps at arm&rsquo;s length.',
+        disorg:'Mixed / unsettled &mdash; safety first. Favour grounding, body-based, gentle practices; avoid intense dissolution work until the ground feels steadier (ideally with support).'
+      };
+      const ni = nervInfo[primaryNerv] || nervInfo.ventral;
+      nervEl.innerHTML =
+        '<div style="margin-bottom:1rem">' +
+        ['ventral','sympathetic','dorsal'].map(k=>(
+          '<div class="bar-row"><div class="lbl">' + (k==='ventral'?'Settled':k==='sympathetic'?'Activated':'Shutdown') + '</div>' +
+          '<div class="bar"><div class="fill" style="width:' + nervousPct[k] + '%;background:' + (k==='ventral'?'var(--heart-c,#7a9)':k==='sympathetic'?'var(--warn-c,#c66)':'var(--vata-c,#69c)') + '"></div></div>' +
+          '<div class="pct">' + nervousPct[k] + '%</div></div>'
+        )).join('') + '</div>' +
+        '<p><strong>' + ni.name + '.</strong> ' + ni.desc + '</p>' +
+        '<p style="font-family:var(--sans);font-size:.9rem;color:var(--ink-soft);margin-top:.8rem"><strong style="color:var(--ink)">Attachment colouring:</strong> ' + (attInfo[primaryAttach]||attInfo.secure) + '</p>' +
+        '<p style="font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);font-style:italic;margin-top:.6rem">Polyvagal framing after Stephen Porges; attachment after Bowlby &amp; Ainsworth. These shape which practices heal vs. overwhelm &mdash; not your worth, and not fixed.</p>';
+    }
 
     /* AVOID */
     const avoidMap = {
@@ -2165,7 +2464,10 @@ footer a{color:var(--ink-soft)}
     if(primaryDosha === 'vata') avoidExtra = ' Also: avoid pure void and long unstructured silent retreats &mdash; they will scatter, not settle, your already-mobile system.';
     if(primaryDosha === 'pitta') avoidExtra = ' Also: avoid intense fiery breath practices and extended concentration &mdash; they fuel your inner driver.';
     if(primaryDosha === 'kapha') avoidExtra = ' Also: avoid long passive sitting and sleep-based techniques &mdash; you need fire, not more rest.';
-    document.getElementById('rc-tech-avoid').innerHTML = avoidMap[primaryPath] + avoidExtra;
+    let nervAvoid = '';
+    if(primaryNerv === 'dorsal') nervAvoid = ' <strong>Most important for you:</strong> your system leans toward shutdown, so emptiness, void, fire and long-still practices are the wrong first medicine &mdash; they deepen the freeze. Begin with sound, the senses, warmth, gentle movement, and joy.';
+    else if(primaryNerv === 'sympathetic') nervAvoid = ' <strong>Most important for you:</strong> your system runs activated, so begin with down-shifting practices (the exhale-led &ldquo;ah&rdquo;, the breath-gap, movement that discharges) before long silent sitting, which can amplify the wiring.';
+    document.getElementById('rc-tech-avoid').innerHTML = avoidMap[primaryPath] + avoidExtra + nervAvoid;
 
     /* STRENGTHS / GROWTH */
     const strengthMap = {
@@ -2224,9 +2526,13 @@ footer a{color:var(--ink-soft)}
     writeJSON(RESULTS_KEY, {
       timestamp: new Date().toISOString(),
       totals: totals,
-      pcts: {path:pathPct, energy:energyPct, gunas:gunaPct, doshas:doshaPct},
-      primary: {path:primaryPath, energy:primaryEnergy, dosha:primaryDosha, guna:primaryGuna},
-      secondary: {path:secondaryPath, energy:secondaryEnergy}
+      pcts: {path:pathPct, energy:energyPct, gunas:gunaPct, doshas:doshaPct, nervous:nervousPct, attach:attachPct},
+      primary: {path:primaryPath, energy:primaryEnergy, dosha:primaryDosha, guna:primaryGuna, nerv:primaryNerv, attach:primaryAttach},
+      secondary: {path:secondaryPath, energy:secondaryEnergy},
+      confidence: confLabel,
+      topTech: {name:topPick.t.title.replace(/<[^>]+>/g,''), file:topPick.t.file, anchor:topPick.t.anchor, why:topPick.t.blurb.replace(/<[^>]+>/g,''), reasons:topPick.reasons.map(x=>x.replace(/<[^>]+>/g,''))},
+      alternates: alternates.map(e=>({name:e.t.title.replace(/<[^>]+>/g,''), file:e.t.file, anchor:e.t.anchor})),
+      situations: sitKeys.map(k=>({label:NEED_TECH[k].label.replace(/<[^>]+>/g,''), tech:NEED_TECH[k].tech.replace(/<[^>]+>/g,''), file:NEED_TECH[k].file, anchor:NEED_TECH[k].anchor, flagged:(totals.intent[k]||0)>0}))
     });
 
     document.getElementById('results').classList.add('show');
@@ -2268,16 +2574,30 @@ footer a{color:var(--ink-soft)}
       ['vata','pitta','kapha'].forEach(k=>{ s += '  ' + k + ': ' + doshaPct[k] + '%\n'; });
       s += '  Primary: ' + r.primary.dosha + '\n\n';
 
-      const main = TECH_LIBRARY[r.primary.path][0];
+      if(r.pcts.nervous){
+        s += '--- NERVOUS SYSTEM (polyvagal) ---\n';
+        s += '  settled/ventral: ' + r.pcts.nervous.ventral + '%  activated/sympathetic: ' + r.pcts.nervous.sympathetic + '%  shutdown/dorsal: ' + r.pcts.nervous.dorsal + '%\n';
+        s += '  Primary state: ' + (r.primary.nerv || '-') + '\n';
+      }
+      if(r.primary.attach){ s += '  Attachment leaning: ' + r.primary.attach + '\n'; }
+      if(r.confidence){ s += '  Match confidence: ' + r.confidence + '\n'; }
+      s += '\n';
+
+      const main = r.topTech || {name:'(see page)', file:'', anchor:'', why:'', reasons:[]};
       s += '--- YOUR 21-DAY STARTER TECHNIQUE ---\n';
       s += '  ' + main.name + '\n';
       s += '  File: ' + main.file + main.anchor + '\n';
-      s += '  Why: ' + main.why.replace(/<[^>]+>/g,'') + '\n\n';
+      if(main.why) s += '  Why: ' + main.why + '\n';
+      (main.reasons||[]).forEach(rs=>{ s += '    - ' + rs + '\n'; });
+      if(r.alternates && r.alternates.length){
+        s += '  Other strong matches:\n';
+        r.alternates.forEach(a=>{ s += '    \u2192 ' + a.name + ' (' + a.file + a.anchor + ')\n'; });
+      }
+      s += '\n';
 
       s += '--- SITUATIONAL RECOMMENDATIONS ---\n';
-      Object.keys(SITUATIONAL).forEach(k=>{
-        const sit = SITUATIONAL[k];
-        s += '  ' + sit.label + ':\n';
+      (r.situations || []).forEach(sit=>{
+        s += '  ' + sit.label + (sit.flagged ? '  [you flagged this]' : '') + ':\n';
         s += '    \u2192 ' + sit.tech + ' (' + sit.file + sit.anchor + ')\n';
       });
       s += '\n';
